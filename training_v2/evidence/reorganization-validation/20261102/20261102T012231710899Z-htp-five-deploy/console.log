@@ -1,0 +1,15 @@
+before: exit 0
+owned-directory: exit 0
+runtime-version: exit 0
+model-status-classification: exit 0
+model-hash-classification: exit 0
+model-status-detection: exit 0
+model-hash-detection: exit 0
+model-status-pose: exit 0
+model-hash-pose: exit 0
+model-status-gesture: exit 0
+model-hash-gesture: exit 0
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+after: exit 0
+MODELS_DEPLOYED_NOT_TESTED C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\evidence\20261102T012232Z-3935d

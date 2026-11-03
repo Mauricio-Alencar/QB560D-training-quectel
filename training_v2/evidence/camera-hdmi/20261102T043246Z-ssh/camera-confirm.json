@@ -1,0 +1,6 @@
+{
+  "transport": "SSH",
+  "host_key_verified": true,
+  "command": "hostname; uptime; lsusb; v4l2-ctl --list-devices; v4l2-ctl -d /dev/video0 --all; v4l2-ctl -d /dev/video0 --list-formats-ext; sha256sum /opt/qb560d-training-payload/media/captured/frame.jpg; ls -lt /opt/qb560d-training-payload/evidence | head -n 14",
+  "exit_code": 0
+}

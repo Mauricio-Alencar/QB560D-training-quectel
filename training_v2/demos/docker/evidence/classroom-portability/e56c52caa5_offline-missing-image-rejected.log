@@ -1,0 +1,3 @@
+docker: Error response from daemon: No such image: qb560d-telemetry:1.0.0
+
+Run 'docker run --help' for more information

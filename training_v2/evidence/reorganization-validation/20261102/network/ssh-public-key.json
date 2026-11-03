@@ -1,0 +1,4 @@
+{
+  "command": "cat /etc/ssh/ssh_host_ed25519_key.pub; nmcli --colors no -g IP4.ADDRESS device show wlan0",
+  "exit_code": 0
+}

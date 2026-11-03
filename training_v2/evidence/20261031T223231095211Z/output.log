@@ -1,0 +1,4 @@
+{"status": "ok"}{"application": "qb560d-training", "version": "1.0.0", "machine": "aarch64", "system_uptime_s": 2511.56, "process_uptime_s": 1.215}
+RESULT: APPLICATION_HTTP_PASS
+
+__QB560D_EXIT__=0

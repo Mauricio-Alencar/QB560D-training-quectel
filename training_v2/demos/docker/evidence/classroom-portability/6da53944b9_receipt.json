@@ -1,0 +1,17 @@
+{
+  "command": "sh /opt/qb560d-docker-demo/target/demo.sh run",
+  "exit_code": 0,
+  "timed_out": false,
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "1"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "host_utc": "2026-11-01T16:14:42.104622+00:00"
+}

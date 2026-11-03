@@ -1,0 +1,37 @@
+{
+  "detections": [
+    {
+      "class_id": 17,
+      "label": "dog",
+      "score": 0.675201416015625,
+      "box_yxyx": [
+        0.1941448450088501,
+        0.1894773244857788,
+        0.8440554141998291,
+        0.7682939171791077
+      ]
+    }
+  ],
+  "task": "detection",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+  "input_image_sha256": "473d5ab0bfa0cf17ca35706eeba82223566dd95ed37e3fe09beb4a38effd931e",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 153,
+    "execute_us": [
+      7133.0,
+      4884.0,
+      4699.0
+    ]
+  },
+  "comparison_to_original_tflite_cpu": {
+    "passed": true,
+    "criterion": "No person at score >=0.5 in CPU and evaluated backend",
+    "actual_person_count": 0,
+    "reference_person_count": 0
+  },
+  "passed": true,
+  "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+}

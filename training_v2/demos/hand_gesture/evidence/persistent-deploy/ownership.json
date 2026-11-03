@@ -1,0 +1,38 @@
+{
+  "package": "update_QIART-hand-gesture",
+  "runtime_version": "2.51.40.260930",
+  "files": [
+    {
+      "path": "models/canned_gesture_classifier.dlc",
+      "sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"
+    },
+    {
+      "path": "models/hand_landmark_detector.dlc",
+      "sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"
+    },
+    {
+      "path": "models/metadata.json",
+      "sha256": "9f87cd52303554231735a5199c65c1d31f246a71468dea4fac3359fd581d5af2"
+    },
+    {
+      "path": "models/palm_detector.dlc",
+      "sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"
+    },
+    {
+      "path": "images/pointing_up.jpg",
+      "sha256": "f4a701316b63dd8fa56e622f2b3042766369ccc189f0d89513f803cd985b993b"
+    },
+    {
+      "path": "images/thumbs_down.jpg",
+      "sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9"
+    },
+    {
+      "path": "images/thumbs_up.jpg",
+      "sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba"
+    },
+    {
+      "path": "images/victory.jpg",
+      "sha256": "6ac265f3ace6a6c4ac4a9079b63fcce4ab6517272afb1e430857f55ef324fde6"
+    }
+  ]
+}

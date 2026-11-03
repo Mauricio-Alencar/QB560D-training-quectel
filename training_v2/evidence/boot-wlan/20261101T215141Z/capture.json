@@ -1,0 +1,65 @@
+{
+  "host_utc": "2026-11-01T22:34:41.619169+00:00",
+  "scope": "Read-only boot/WLAN capture; no manual WLAN activation",
+  "checks": [
+    {
+      "name": "identity",
+      "exit_code": 0,
+      "log": "identity.log"
+    },
+    {
+      "name": "boot",
+      "exit_code": 0,
+      "log": "boot.log"
+    },
+    {
+      "name": "network",
+      "exit_code": 0,
+      "log": "network.log"
+    },
+    {
+      "name": "wlan-profile",
+      "exit_code": 0,
+      "log": "wlan-profile.log"
+    },
+    {
+      "name": "wlan-check",
+      "exit_code": 0,
+      "log": "wlan-check.log"
+    },
+    {
+      "name": "persistence",
+      "exit_code": 0,
+      "log": "persistence.log"
+    },
+    {
+      "name": "activity",
+      "exit_code": 0,
+      "log": "activity.log"
+    },
+    {
+      "name": "thermal",
+      "exit_code": 0,
+      "log": "thermal.log"
+    }
+  ],
+  "failed_units": [
+    "avahi-daemon.service",
+    "camera_cgroup.service",
+    "chg-policy.service",
+    "dnsmasq.service",
+    "fs-scrub-daemon.service",
+    "ip6tables.service",
+    "ipacmdiag.service",
+    "iptables.service",
+    "qcmap_wlan.service",
+    "qti_pppd.service",
+    "thermal-engine.service"
+  ],
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

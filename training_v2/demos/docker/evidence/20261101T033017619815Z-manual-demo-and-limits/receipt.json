@@ -1,0 +1,6 @@
+{
+  "command": "sh /opt/qb560d-docker-demo/target/demo.sh run && sh /opt/qb560d-docker-demo/target/docker.sh exec qb560d-docker-demo python3 -c \"from pathlib import Path; print(Path(\\\"/sys/fs/cgroup/memory/memory.limit_in_bytes\\\").read_text()); print(Path(\\\"/sys/fs/cgroup/pids/pids.max\\\").read_text())\" && sh /opt/qb560d-docker-demo/target/demo.sh logs && sh /opt/qb560d-docker-demo/target/demo.sh stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:30:26.994585+00:00"
+}

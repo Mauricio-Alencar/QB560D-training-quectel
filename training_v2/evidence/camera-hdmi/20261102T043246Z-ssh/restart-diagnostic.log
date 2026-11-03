@@ -1,0 +1,25 @@
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 12:36:51 CST. --
+Nov 02 12:36:02 qcs6490-odk systemd[1]: Stopping Init-display Service...
+Nov 02 12:36:02 qcs6490-odk init_qti_display[53637]: Stopping Weston
+Nov 02 12:36:02 qcs6490-odk systemd[1]: init_display.service: Succeeded.
+Nov 02 12:36:02 qcs6490-odk systemd[1]: Stopped Init-display Service.
+Nov 02 12:36:02 qcs6490-odk systemd[1]: Started Init-display Service.
+Nov 02 12:36:02 qcs6490-odk init_qti_display[53649]: WESTON INITIALIZATION STARTUP
+
+WESTON
+  53657 weston          weston --log=logcat --config=/etc/xdg/weston/weston.ini
+  53666 weston-keyboard /usr/libexec/weston-keyboard
+  53667 weston-desktop- /usr/libexec/weston-desktop-shell
+
+LOG
+
+PROPERTY
+true
+
+DEFAULTS
+
+ACTIVE VTS
+3
+
+DISPLAY STATE
+enabled

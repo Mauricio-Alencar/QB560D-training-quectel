@@ -1,0 +1,4 @@
+{
+  "command": "printf %s ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmltcG9ydCBqc29uCnA9UGF0aCgnL29wdC9xYjU2MGQtYWktaHRwMjUxJykKYXNzZXJ0IHAucmVzb2x2ZSgpPT1wCmFzc2VydCAocC8nLm93bmVyLmpzb24nKS5pc19maWxlKCkgYW5kIGpzb24ubG9hZHMoKHAvJy5vd25lci5qc29uJykucmVhZF90ZXh0KCkpLmdldCgncGFja2FnZScpPT0ncWI1NjBkLWFpLWh0cDI1MS12MScsICdQcmVwYXJlIHRoZSBpc29sYXRlZCBIVFAgcnVudGltZSBmaXJzdCcKcHJpbnQoJ1JFQ09HTklaRURfSFRQX0RJUkVDVE9SWScp | base64 -d | python3",
+  "exit_code": 0
+}

@@ -1,0 +1,272 @@
+{
+  "recorded_at_host_utc": "2026-11-01T02:12:25.026775+00:00",
+  "model_inference": "PASS_REFERENCE_IMAGE_HTP",
+  "source_model": "MobileNet V1 from the original reviewed TFLite; converted to a separate INT8 DLC",
+  "model_hashes": {
+    "tflite_cpu": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "tflite_gpu": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "snpe_cpu_fixed": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+    "htp": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359"
+  },
+  "snpe_htp_runtime": {
+    "result": "INFERENCE_EXECUTED_DSP_PROFILE_CONFIRMED",
+    "version": "2.26.0.240827110523_99241",
+    "model_loaded": true
+  },
+  "sessions_per_backend": 3,
+  "runs_per_session": 50,
+  "warmup_per_session": 10,
+  "median_of_session_medians_ms": {
+    "tflite_cpu": 25.564674999259296,
+    "tflite_gpu": 10.323996000806801,
+    "snpe_cpu_fixed": 6.748010499904922,
+    "htp": 1.1296250004306785
+  },
+  "speedup_same_dlc_cpu_over_htp": 5.973673119249476,
+  "latency_ratio_tflite_cpu_over_htp": 22.63111651168535,
+  "timing_scope": "invoke/ExecuteITensors only; excludes preprocessing, output copies, rendering, compilation and ADB",
+  "cpu_thread_policy": {
+    "tflite_cpu": "2 threads",
+    "snpe_cpu_fixed": "SNPE runtime default"
+  },
+  "profile": {
+    "dsp_entries": 34,
+    "cpu_entries": 0,
+    "includes_input_output_entries": true,
+    "file": "htp-profile.txt",
+    "timing_sessions_profiling": "off; detailed placement collected in a separate run"
+  },
+  "correctness": [
+    {
+      "session": 1,
+      "backend": "tflite_gpu",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.00390625,
+      "mean_abs_vs_tflite_cpu": 7.804695087543223e-06,
+      "max_abs_vs_same_dlc_cpu": 0.00390625
+    },
+    {
+      "session": 1,
+      "backend": "snpe_cpu_fixed",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0078125,
+      "mean_abs_vs_tflite_cpu": 1.5609390175086446e-05,
+      "max_abs_vs_same_dlc_cpu": 0.0
+    },
+    {
+      "session": 1,
+      "backend": "htp",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0234375,
+      "mean_abs_vs_tflite_cpu": 4.292582525522448e-05,
+      "max_abs_vs_same_dlc_cpu": 0.015625
+    },
+    {
+      "session": 2,
+      "backend": "tflite_gpu",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.00390625,
+      "mean_abs_vs_tflite_cpu": 7.804695087543223e-06,
+      "max_abs_vs_same_dlc_cpu": 0.00390625
+    },
+    {
+      "session": 2,
+      "backend": "snpe_cpu_fixed",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0078125,
+      "mean_abs_vs_tflite_cpu": 1.5609390175086446e-05,
+      "max_abs_vs_same_dlc_cpu": 0.0
+    },
+    {
+      "session": 2,
+      "backend": "htp",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0234375,
+      "mean_abs_vs_tflite_cpu": 4.292582525522448e-05,
+      "max_abs_vs_same_dlc_cpu": 0.015625
+    },
+    {
+      "session": 3,
+      "backend": "tflite_gpu",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.00390625,
+      "mean_abs_vs_tflite_cpu": 7.804695087543223e-06,
+      "max_abs_vs_same_dlc_cpu": 0.00390625
+    },
+    {
+      "session": 3,
+      "backend": "snpe_cpu_fixed",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0078125,
+      "mean_abs_vs_tflite_cpu": 1.5609390175086446e-05,
+      "max_abs_vs_same_dlc_cpu": 0.0
+    },
+    {
+      "session": 3,
+      "backend": "htp",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0234375,
+      "mean_abs_vs_tflite_cpu": 4.292582525522448e-05,
+      "max_abs_vs_same_dlc_cpu": 0.015625
+    }
+  ],
+  "accuracy_scope": "Top-1 agreement on the supplied image; full numerical differences reported. Not a dataset accuracy benchmark. DLC quantization/runtime differ from the TFLite baselines.",
+  "records": [
+    {
+      "session": 1,
+      "backend": "tflite_cpu",
+      "name": "session_1_tflite_cpu",
+      "result": "target/session_1_tflite_cpu/classification/1793499126822042805.json",
+      "median_ms": 22.337214500112168,
+      "p95_ms": 24.473262750507274,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 1,
+      "backend": "tflite_gpu",
+      "name": "session_1_tflite_gpu",
+      "result": "target/session_1_tflite_gpu/classification/1793499128353098498.json",
+      "median_ms": 10.009228999479092,
+      "p95_ms": 10.328782350552501,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 1,
+      "backend": "snpe_cpu_fixed",
+      "name": "session_1_snpe_cpu_fixed",
+      "result": "target/session_1_snpe_cpu_fixed/result.json",
+      "median_ms": 6.739391500559577,
+      "p95_ms": 7.619752100617916,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.87890625
+      }
+    },
+    {
+      "session": 1,
+      "backend": "htp",
+      "name": "session_1_htp",
+      "result": "target/session_1_htp/result.json",
+      "median_ms": 1.1293650004517986,
+      "p95_ms": 1.1896442496436066,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.86328125
+      }
+    },
+    {
+      "session": 2,
+      "backend": "htp",
+      "name": "session_2_htp",
+      "result": "target/session_2_htp/result.json",
+      "median_ms": 1.1355890001141233,
+      "p95_ms": 1.195129200550582,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.86328125
+      }
+    },
+    {
+      "session": 2,
+      "backend": "snpe_cpu_fixed",
+      "name": "session_2_snpe_cpu_fixed",
+      "result": "target/session_2_snpe_cpu_fixed/result.json",
+      "median_ms": 6.748010499904922,
+      "p95_ms": 7.620868799676828,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.87890625
+      }
+    },
+    {
+      "session": 2,
+      "backend": "tflite_gpu",
+      "name": "session_2_tflite_gpu",
+      "result": "target/session_2_tflite_gpu/classification/1793499134667314853.json",
+      "median_ms": 10.402410501228587,
+      "p95_ms": 10.622530049658963,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 2,
+      "backend": "tflite_cpu",
+      "name": "session_2_tflite_cpu",
+      "result": "target/session_2_tflite_cpu/classification/1793499136761724848.json",
+      "median_ms": 25.872258999697806,
+      "p95_ms": 34.09916480031825,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 3,
+      "backend": "tflite_cpu",
+      "name": "session_3_tflite_cpu",
+      "result": "target/session_3_tflite_cpu/classification/1793499138855705785.json",
+      "median_ms": 25.564674999259296,
+      "p95_ms": 34.91337235082028,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 3,
+      "backend": "tflite_gpu",
+      "name": "session_3_tflite_gpu",
+      "result": "target/session_3_tflite_gpu/classification/1793499140421653379.json",
+      "median_ms": 10.323996000806801,
+      "p95_ms": 10.854516000745207,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 3,
+      "backend": "snpe_cpu_fixed",
+      "name": "session_3_snpe_cpu_fixed",
+      "result": "target/session_3_snpe_cpu_fixed/result.json",
+      "median_ms": 6.76129050043528,
+      "p95_ms": 7.604664150130702,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.87890625
+      }
+    },
+    {
+      "session": 3,
+      "backend": "htp",
+      "name": "session_3_htp",
+      "result": "target/session_3_htp/result.json",
+      "median_ms": 1.1296250004306785,
+      "p95_ms": 1.1901623999619915,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.86328125
+      }
+    }
+  ]
+}

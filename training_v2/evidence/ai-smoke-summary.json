@@ -1,0 +1,27 @@
+[
+  {
+    "demo": "classification",
+    "exit_code": 0,
+    "scope": "preparation computer CPU, not QB560D"
+  },
+  {
+    "demo": "detection",
+    "exit_code": 0,
+    "scope": "preparation computer CPU, not QB560D"
+  },
+  {
+    "demo": "pose",
+    "exit_code": 0,
+    "scope": "preparation computer CPU, not QB560D"
+  },
+  {
+    "demo": "gesture",
+    "exit_code": 0,
+    "scope": "preparation computer CPU, not QB560D"
+  },
+  {
+    "demo": "segmentation",
+    "exit_code": 0,
+    "scope": "preparation computer CPU, not QB560D"
+  }
+]

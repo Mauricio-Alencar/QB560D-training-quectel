@@ -1,0 +1,14 @@
+{
+  "files_copied_from_extraction": [
+    "provision_target\\evidence\\20261102T014218040194Z-inspect",
+    "provision_target\\evidence\\20261102T014233441663Z-apply",
+    "provision_target\\evidence\\20261102T014809299070Z-inspect",
+    "provision_target\\evidence\\20261102T014824293227Z-apply",
+    "provision_target\\evidence\\20261102T015554673109Z-inspect",
+    "provision_target\\evidence\\20261102T015609496441Z-apply",
+    "provision_target\\evidence\\20261102T020621596666Z-inspect",
+    "provision_target\\evidence\\20261102T020636044805Z-apply",
+    "provision_target\\evidence\\20261102T020818679338Z-verify"
+  ],
+  "paths_relative_to": "training_v2"
+}

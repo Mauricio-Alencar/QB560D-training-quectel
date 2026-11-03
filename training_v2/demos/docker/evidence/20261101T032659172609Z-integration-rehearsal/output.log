@@ -1,0 +1,8 @@
+{
+  "result": "PASS_THREE_SESSIONS_AND_OFFLINE_DEPLOY",
+  "checks": 61,
+  "summary": "/opt/qb560d-docker-demo/evidence/rehearsal-20261101T032659Z/summary.json",
+  "error": null
+}
+
+__DOCKER_DEMO_EXIT__=0

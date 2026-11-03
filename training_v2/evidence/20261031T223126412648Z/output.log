@@ -1,0 +1,5 @@
+QB560D-EU training application 1.0.0
+kernel=5.4.219-perf architecture=aarch64
+RESULT: NATIVE_COMPILE_PASS
+
+__QB560D_EXIT__=0

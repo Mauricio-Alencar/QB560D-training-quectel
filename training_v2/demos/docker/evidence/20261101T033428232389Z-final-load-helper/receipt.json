@@ -1,0 +1,6 @@
+{
+  "command": "sh /opt/qb560d-docker-demo/target/demo.sh load && sh /opt/qb560d-docker-demo/target/docker.sh ps -a --format \"{{.Names}} {{.Status}}\"; systemctl is-active qb560d-docker-demo.service",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:34:29.749300+00:00"
+}

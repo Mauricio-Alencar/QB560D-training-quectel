@@ -1,0 +1,172 @@
+WORKSHOP: RECONHECIMENTO DE GESTOS NA QB560D-EU
+QAIRT 2.51.40.260930, Ubuntu AArch64, QCM6490, HTP v68
+
+OBJETIVO
+Baixar um modelo pronto do Qualcomm AI Hub, enviá-lo à caixa e reconhecer
+sete gestos em fotos. As três redes executam na caixa pelo QNN/HTP.
+O computador prepara as imagens, recorta a mão e interpreta as saídas.
+Esta é uma demo de imagem estática e uma mão por vez, sem câmera ao vivo.
+
+1. ESCOLHA DO MODELO
+Abra https://huggingface.co/qualcomm/MediaPipe-Hand-Gesture-Recognition
+Escolha o pacote QNN DLC, precisão w8a8, release v0.65.0.
+O script abaixo já usa esse endereço fixo. Não escolha Android, contexto
+binário de outro SoC ou TFLite para este roteiro.
+
+O ZIP tem três redes prontas:
+  palm_detector.dlc             localiza a palma
+  hand_landmark_detector.dlc    estima 21 pontos da mão
+  canned_gesture_classifier.dlc classifica o gesto
+
+O pacote foi compilado com QAIRT 2.50.0.260828221209 e foi ensaiado aqui
+com o runtime 2.51.40.260930230134. Não há etapa de treinamento ou conversão.
+O download usado neste roteiro é público e não exige token do AI Hub.
+
+2. PREPARAÇÃO DO PARTICIPANTE, NO WINDOWS
+Tenha o pacote completo do treinamento, Python 3.12 x64 com pip/venv, ADB, driver
+USB da caixa e cabo de dados. Internet é necessária para o primeiro download.
+Abra PowerShell na raiz training_v2 e execute:
+
+  powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1 -InstallPython
+  $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+    $adb = (Resolve-Path tools/platform-tools/adb.exe).Path
+  & $adb devices -l
+
+Resultado esperado: uma caixa no estado device. O roteiro usa NumPy e Pillow.
+Não precisa de PyTorch, TensorFlow, Docker, WSL ou compilador de modelos.
+Se o ADB estiver em outro lugar, passe --adb CAMINHO nos comandos da demo.
+Com várias caixas, passe --serial SERIAL. O script recusa escolher uma ao acaso.
+
+3. AMBIENTE PERSISTENTE NA CAIXA
+Na caixa já preparada, o runtime está em:
+  /opt/qairt-isolated/2.51.40.260930
+
+Em uma NOVA caixa com o mesmo BSP, o instrutor prepara antes da aula:
+  & $py runtimes/qairt_2_51/update_qairt.py download
+  & $py runtimes/qairt_2_51/update_qairt.py stage
+  & $py runtimes/qairt_2_51/update_qairt.py test --runs 5
+
+Na caixa atual, pule download/stage do runtime. Ela já passou nesse teste.
+stage exige destino novo e recusa sobrescrever uma instalação existente.
+O diretório /opt fica em ext4 persistente. Nenhum reboot foi feito neste ensaio.
+O pacote configura as bibliotecas por processo, mantendo o runtime do BSP.
+
+4. DOWNLOAD DO MODELO E DAS FOTOS, NO HOST
+Depois, com $py e $adb definidos a partir da raiz training_v2:
+  $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+  Set-Location demos/hand_gesture
+  & $py download_gesture.py
+
+Resultado esperado:
+  assets/models/mediapipe_hand_gesture-qnn_dlc-w8a8/ contém os três DLCs
+  assets/images/ contém as fotos
+  assets/sources.lock.json registra os endereços e hashes
+
+O script verifica o pacote fixado. Com o cache completo, pode rodar sem Internet.
+
+5. DEPLOY PARA /opt
+  & $py gesture_demo.py deploy
+
+Resultado esperado: Demo installed at
+  /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture
+
+Os DLCs ficam em models/ e as fotos em images/ dentro dessa pasta.
+Repetir deploy verifica os arquivos já enviados. Não substitui as libs do BSP.
+
+6. PRIMEIRA INFERÊNCIA NA NPU
+  & $py gesture_demo.py run --image assets/images/thumbs_up.jpg --backend htp
+
+Resultado esperado: prediction = Thumb_Up, score observado 0.8203125.
+O terminal mostra a pasta de evidências. Abra prediction.png nessa pasta
+para ver o gesto reconhecido e os pontos da mão. result.json guarda os valores.
+
+O programa envia tensores por ADB, executa cada DLC com libQnnHtp.so e recolhe
+as saídas. Cada rede tem log de inferência e profile.csv com eventos/ciclos HTP.
+Não há fallback automático para CPU se o HTP falhar.
+
+7. SETE GESTOS, SETE FOTOS
+  & $py gesture_demo.py test-all
+
+O padrão é HTP. A bateria compara a classe real com a esperada e cria summary.json.
+Uma divergência faz o comando terminar com erro para chamar atenção ao resultado.
+
+Foto                    Gesto esperado        Descrição para o público
+closed_fist.jpg          Closed_Fist           punho fechado
+full_open_palm.png       Open_Palm             palma aberta
+pointing_up.jpg          Pointing_Up           indicador para cima
+thumbs_down.jpg          Thumb_Down            polegar para baixo
+thumbs_up.jpg            Thumb_Up              polegar para cima
+test_victory.jpg         Victory               indicador e médio em V
+iloveyou.jpg             ILoveYou              polegar, indicador e mínimo abertos
+
+Para testar uma foto específica, troque somente o arquivo:
+  & $py gesture_demo.py run --image assets/images/test_victory.jpg --backend htp
+
+Para uma foto do participante:
+  & $py gesture_demo.py run --image C:/fotos/meu_gesto.jpg --backend htp
+
+Use uma mão bem iluminada, dedos e pulso visíveis, gesto frontal e espaço
+ao redor da mão. O modelo pode errar em outras fotos. None significa mão com
+gesto não reconhecido. No_hand significa que a detecção/presença não passou
+pelos limiares. Nenhuma dessas respostas equivale a uma falha do runtime.
+
+8. CPU E EVIDÊNCIA DO HTP
+  & $py gesture_demo.py run --image assets/images/thumbs_up.jpg --backend cpu
+  & $py gesture_demo.py test-all --backend both
+
+CPU executa com libQnnCpu.so. As classes e os números podem diferir do HTP.
+A validação desta revisão teve 7/7 rótulos esperados no HTP e 0/7 na CPU com
+este pacote w8a8. A causa da divergência numérica da CPU não foi determinada.
+Por isso, test-all --backend both termina com erro e preserva a comparação.
+Para a demonstração dos sete gestos, use o caminho HTP validado. Confira os
+números finais em demos/hand_gesture/RESULTADOS_GESTOS.txt e evidence/final-seven-both/.
+Não use a soma dos tempos das redes como FPS ou latência do aplicativo:
+transferência USB, pré-processamento e inicialização são etapas adicionais.
+
+9. PATHS QUE O INSTRUTOR DEVE CONHECER
+  executáveis   /opt/qairt-isolated/2.51.40.260930/bin
+  libs ARM64    /opt/qairt-isolated/2.51.40.260930/lib
+  libs DSP      /opt/qairt-isolated/2.51.40.260930/dsp
+  modelos       /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/models
+  testes alvo   /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs
+  testes host   demos/hand_gesture/evidence
+
+O script já configura LD_LIBRARY_PATH e ADSP_LIBRARY_PATH corretamente.
+Não é necessário acrescentar variáveis globais ao Windows ou à caixa.
+As referências /tmp em evidências antigas descrevem os ensaios anteriores.
+
+10. PROBLEMAS COMUNS
+  Sem device no ADB: confira driver, cabo, alimentação e autorização USB.
+  Ownership/checksum falhou: confirme que esta caixa recebeu o pacote correto.
+  HTP falhou: mantenha o log e confira BSP/FastRPC/CDSP v68. Não misture libs
+    2.12, 2.21 e 2.51 na mesma execução.
+  Foto própria sem mão: melhore enquadramento/luz e use primeiro a foto validada.
+  Classe divergente: confira result.json e prediction.png. Não altere o rótulo
+    esperado para esconder um erro. As tentativas originais ficam preservadas.
+
+FONTES E CRÉDITOS
+Modelo, metadados e código de referência:
+https://huggingface.co/qualcomm/MediaPipe-Hand-Gesture-Recognition
+https://github.com/qualcomm/ai-hub-models/tree/main/src/qai_hub_models/models/mediapipe_hand_gesture
+ZIP fixado:
+https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-qnn_dlc-w8a8.zip
+Fotos de apontar, positivo e negativo: exemplos oficiais Google MediaPipe.
+Foto de vitória: testdata Google MediaPipe, https://storage.googleapis.com/mediapipe-assets/victory.jpg
+Palma aberta: Eyefive45, Right Hand Palm.png, CC BY-SA 4.0.
+https://commons.wikimedia.org/wiki/File:Right_Hand_Palm.png
+Punho fechado: Cedar Tree, Closed fist.jpg, CC BY-SA 4.0.
+https://commons.wikimedia.org/wiki/File:Closed_fist.jpg
+ILY: Rodasmith, ASL ILY@Side-PalmForward.jpg, CC BY-SA 4.0.
+https://commons.wikimedia.org/wiki/File:ASL_ILY@Side-PalmForward.jpg
+Licença das três fotos: https://creativecommons.org/licenses/by-sa/4.0/
+As fotos originais estão preservadas. prediction.png acrescenta a anotação
+do experimento e mantém o crédito/licença da foto. Outros exemplos e tentativas
+estão identificados pelos URLs/hashes em assets/sources.lock.json.
+
+REVALIDAÇÃO DE 01/11/2026 NO FIRMWARE COM LOGIN
+BSP QDPA_Ubuntu20.04.003.51.303 V01: test-all --backend htp passou 7/7,
+com 21 execuções de grafo e ciclos HTP positivos. Evidência em
+demos/hand_gesture/evidence/fw-20261101/summary.json. O script descobre o ADB
+no pacote Docker e pede a senha Linux root sem guardá-la. Com várias
+caixas, use --transport-id ID. Caminhos longos dos resultados no Windows
+usam o formato local estendido. O backend validado continua sendo HTP.

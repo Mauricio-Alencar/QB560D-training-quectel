@@ -1,0 +1,12 @@
+{
+  "label": "working-plan-after-fixes",
+  "script": "provision_target\\provision.py",
+  "args": [
+    "plan"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 0.328,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T020938541015Z-working-plan-after-fixes\\console.log"
+}

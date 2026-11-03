@@ -1,0 +1,117 @@
+ENABLE SAVED WLAN PROFILE
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     qb560d-training-wlan
+IP4.ADDRESS[1]:                         192.168.0.26/24
+IP4.GATEWAY:                            192.168.0.1
+default via 100.65.195.62 dev rmnet_data0  metric 500 
+default via 192.168.0.1 dev wlan0  proto dhcp  metric 600 
+100.65.195.60/30 dev rmnet_data0  proto kernel  scope link  src 100.65.195.62 
+192.168.0.0/24 dev wlan0  proto kernel  scope link  src 192.168.0.26  metric 600 
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+
+SSH CONFIGURATION
+Include /etc/ssh/sshd_config.d/*.conf
+ListenAddress 127.0.0.1
+PermitRootLogin yes
+PasswordAuthentication yes
+active
+inactive
+
+SSH PUBLIC HOST KEY
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFUbYmcp+J3rlr5VA422KbaoiLsGgvwugOHJVPs8fOg root@07f5d17c3082
+
+DRM CONNECTORS
+
+CONNECTOR /sys/class/drm/card0-DP-1
+status:
+disconnected
+enabled:
+disabled
+modes:
+dpms:
+On
+EDID_BASE64:
+
+CONNECTOR /sys/class/drm/card0-DSI-1
+status:
+connected
+enabled:
+enabled
+modes:
+1920x1080x60x148500vid
+dpms:
+On
+EDID_BASE64:
+AP///////wBEbQEAAQAAABsQAQOAMBx4Cg3JoFdHmCcSSEwAAAABAQEBAQEBAQEBAQEBAQEBAjqA
+GHE4LUBYLEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBs
+dDk2MTEgdmlkZW8gAJQ=
+
+CONNECTOR /sys/class/drm/card0-Virtual-1
+status:
+connected
+enabled:
+disabled
+modes:
+4096x2160
+4096x2160
+2560x1600
+2560x1600
+1920x1440
+1856x1392
+1792x1344
+2048x1152
+1920x1200
+1920x1200
+1920x1080
+1600x1200
+1680x1050
+1680x1050
+1400x1050
+1400x1050
+1600x900
+1280x1024
+1440x900
+1440x900
+1280x960
+1366x768
+1366x768
+1360x768
+1280x800
+1280x800
+1280x768
+1280x768
+1280x720
+1024x768
+800x600
+800x600
+848x480
+640x480
+dpms:
+On
+EDID_BASE64:
+
+FRAMEBUFFERS
+
+WESTON
+   3592 weston
+   3737 weston-keyboard
+   3738 weston-desktop-
+inactive
+inactive
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 04:04:22 CST. --
+-- No entries --
+
+DISPLAY CONFIGURATION
+/etc/xdg/weston/weston.ini
+[core]
+backend=sdm-backend.so
+idle-time=0
+[shell]
+[output]
+name=DSI-1
+mode=on
+transform=normal
+
+DISPLAY KERNEL EVENTS
+

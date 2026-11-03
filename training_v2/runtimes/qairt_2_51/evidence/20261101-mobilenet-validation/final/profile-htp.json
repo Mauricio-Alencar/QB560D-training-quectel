@@ -1,0 +1,5 @@
+{
+  "command": "env LD_LIBRARY_PATH=/tmp/update-qiart-251-mobilenet-validation/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu ADSP_LIBRARY_PATH='/tmp/update-qiart-251-mobilenet-validation/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib' /tmp/update-qiart-251-mobilenet-validation/bin/qnn-profile-viewer --input_log /tmp/update-qiart-251-mobilenet-validation/results/20261101T023303018418Z/htp/qnn-profiling-data_0.log --output /tmp/update-qiart-251-mobilenet-validation/results/20261101T023303018418Z/htp/profile.csv",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:33:04.136599+00:00"
+}

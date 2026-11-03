@@ -1,0 +1,270 @@
+INFO: Created TensorFlow Lite delegate for GPU.
+INFO: Initialized OpenCL-based API.
+INFO: Created 1 GPU delegate kernels.
+{
+  "inputs": [
+    {
+      "name": "sub_2",
+      "shape": [
+        1,
+        353,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "float_heatmaps",
+      "shape": [
+        1,
+        23,
+        17,
+        17
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "float_short_offsets",
+      "shape": [
+        1,
+        23,
+        17,
+        34
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "float_mid_offsets",
+      "shape": [
+        1,
+        23,
+        17,
+        64
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "float_segments",
+      "shape": [
+        1,
+        23,
+        17,
+        1
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "keypoints_yxs": [
+    [
+      0.40594426768359654,
+      0.45890945033804453,
+      0.9832110707505526
+    ],
+    [
+      0.39713896300232104,
+      0.4709672092927569,
+      0.9796495639132509
+    ],
+    [
+      0.4006732746156687,
+      0.46051014258239986,
+      0.9456501225261795
+    ],
+    [
+      0.404375946217826,
+      0.49613905869105446,
+      0.9619523438362293
+    ],
+    [
+      0.41023987075762436,
+      0.448748766680172,
+      0.5634304633083551
+    ],
+    [
+      0.46257730043643597,
+      0.542311948561019,
+      0.9952916252888455
+    ],
+    [
+      0.4634055692818617,
+      0.4536412235363912,
+      0.9839584461511958
+    ],
+    [
+      0.49067558310187237,
+      0.6227070772114431,
+      0.9419247204526788
+    ],
+    [
+      0.47871174420580986,
+      0.3939741910199711,
+      0.8614385221279803
+    ],
+    [
+      0.47505586613339,
+      0.6864969296678031,
+      0.7887645962445883
+    ],
+    [
+      0.46882416506326907,
+      0.3344668970961515,
+      0.7867389135796753
+    ],
+    [
+      0.6067543164866505,
+      0.5190848042528917,
+      0.7367026107335491
+    ],
+    [
+      0.6095730292560696,
+      0.4631543678996164,
+      0.8047779550595394
+    ],
+    [
+      0.47468252830397306,
+      0.620480190223293,
+      0.07480638658856696
+    ],
+    [
+      0.4907981126909553,
+      0.3848575154167205,
+      0.06173776216082329
+    ],
+    [
+      0.46194429978432805,
+      0.6959782092023916,
+      0.02217683355070736
+    ],
+    [
+      0.4582967197591117,
+      0.6830035888731247,
+      0.034546967451289066
+    ]
+  ],
+  "visible_keypoints": 13,
+  "decoder": "single_person_heatmap_argmax",
+  "demo_id": "D2-07",
+  "backend": "GPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+  "image_sha256": "6f65b8ee312035361e50e4da43d7f6a1d01dd3c416d013257553ba256597d606",
+  "runs": 3,
+  "warmup": 1,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 15.039805000924389,
+  "inference_ms_p95": 15.09005649950268,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "sub_2",
+        "shape": [
+          1,
+          353,
+          257,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "float_heatmaps",
+        "shape": [
+          1,
+          23,
+          17,
+          17
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "float_short_offsets",
+        "shape": [
+          1,
+          23,
+          17,
+          34
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "float_mid_offsets",
+        "shape": [
+          1,
+          23,
+          17,
+          64
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "float_segments",
+        "shape": [
+          1,
+          23,
+          17,
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)

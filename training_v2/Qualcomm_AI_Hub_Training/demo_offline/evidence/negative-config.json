@@ -1,0 +1,7 @@
+{
+  "case": "isolated_missing_configuration",
+  "exit_code": 2,
+  "output": "ACCOUNT_NOT_CONFIGURED: execute configure primeiro.",
+  "real_account_modified": false,
+  "network_job_submitted": false
+}

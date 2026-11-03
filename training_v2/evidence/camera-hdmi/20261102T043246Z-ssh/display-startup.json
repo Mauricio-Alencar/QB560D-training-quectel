@@ -1,0 +1,6 @@
+{
+  "command": "systemctl cat init_display.service; systemctl show init_display.service -p ExecStart -p FragmentPath; journalctl -b -u init_display.service --no-pager -n 90; printf '\\nWESTON FILES\\n'; for p in $(pidof weston); do printf 'PID %s CWD ' \"$p\"; readlink /proc/$p/cwd; ls -l /proc/$p/fd/ | head -n 45; done; printf '\\nWAYLAND OUTPUTS\\n'; if command -v weston-info >/dev/null; then timeout 10 env XDG_RUNTIME_DIR=/run/user/root WAYLAND_DISPLAY=wayland-0 weston-info 2>&1 | head -n 95; fi",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

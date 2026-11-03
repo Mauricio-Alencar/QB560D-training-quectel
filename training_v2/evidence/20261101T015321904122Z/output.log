@@ -1,0 +1,1177 @@
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 0, option - 0
+[USER_INFO] Checking signed PD session
+[USER_INFO] [QNN_CPU] CpuBackend creation start
+[USER_INFO] [QNN_CPU] CpuBackend creation end
+[USER_INFO] SNPEBuilder Runtime - 0, Profiling Level - 0, Execution Priority - 0, User Buffer - 0, Debug Mode - 0, CPU Fallback - 0, Init Cache - 0, CPU Fixed Point Mode - 0
+[USER_INFO] Attempting regular HTP cache based init
+[USER_INFO] No change in input dimensions so no resizing of network is required.
+[USER_INFO] No validation cache record found. Validating network and renewing validation cache
+     8.8ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+     8.8ms [VERBOSE] Validating Inputs.
+
+     8.8ms [VERBOSE] Validating Input[0] of ID 4.
+
+     8.8ms [VERBOSE] Validating Input[1] of ID 5.
+
+     8.9ms [VERBOSE] Validating Input[2] of ID 6.
+
+     8.9ms [VERBOSE] Validating Params.
+
+     8.9ms [VERBOSE] Validating Param[0]: stride.
+
+     8.9ms [VERBOSE] Validating Param[1]: pad_amount.
+
+     8.9ms [VERBOSE] Validating Param[2]: group.
+
+     8.9ms [VERBOSE] Validating Param[3]: dilation.
+
+     8.9ms [VERBOSE] Validating Outputs.
+
+     8.9ms [VERBOSE] Validating Output[0] of ID 7.
+
+     9.1ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+     9.1ms [VERBOSE] Validating Inputs.
+
+     9.2ms [VERBOSE] Validating Input[0] of ID 7.
+
+     9.2ms [VERBOSE] Validating Input[1] of ID 11.
+
+     9.2ms [VERBOSE] Validating Input[2] of ID 12.
+
+     9.2ms [VERBOSE] Validating Params.
+
+     9.2ms [VERBOSE] Validating Param[0]: stride.
+
+     9.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+     9.3ms [VERBOSE] Validating Param[2]: dilation.
+
+     9.3ms [VERBOSE] Validating Outputs.
+
+     9.3ms [VERBOSE] Validating Output[0] of ID 13.
+
+     9.3ms [VERBOSE] Validating tensor 7 and 13 have the same Datatype.
+
+     9.4ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+     9.5ms [VERBOSE] Validating Inputs.
+
+     9.5ms [VERBOSE] Validating Input[0] of ID 13.
+
+     9.5ms [VERBOSE] Validating Input[1] of ID 17.
+
+     9.5ms [VERBOSE] Validating Input[2] of ID 18.
+
+     9.5ms [VERBOSE] Validating Params.
+
+     9.5ms [VERBOSE] Validating Param[0]: stride.
+
+     9.6ms [VERBOSE] Validating Param[1]: pad_amount.
+
+     9.6ms [VERBOSE] Validating Param[2]: group.
+
+     9.6ms [VERBOSE] Validating Param[3]: dilation.
+
+     9.6ms [VERBOSE] Validating Outputs.
+
+     9.7ms [VERBOSE] Validating Output[0] of ID 19.
+
+     9.8ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+     9.8ms [VERBOSE] Validating Inputs.
+
+     9.8ms [VERBOSE] Validating Input[0] of ID 19.
+
+     9.8ms [VERBOSE] Validating Input[1] of ID 23.
+
+     9.9ms [VERBOSE] Validating Input[2] of ID 24.
+
+     9.9ms [VERBOSE] Validating Params.
+
+     9.9ms [VERBOSE] Validating Param[0]: stride.
+
+     9.9ms [VERBOSE] Validating Param[1]: pad_amount.
+
+     9.9ms [VERBOSE] Validating Param[2]: dilation.
+
+     9.9ms [VERBOSE] Validating Outputs.
+
+     9.9ms [VERBOSE] Validating Output[0] of ID 25.
+
+     9.9ms [VERBOSE] Validating tensor 19 and 25 have the same Datatype.
+
+    10.1ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    10.1ms [VERBOSE] Validating Inputs.
+
+    10.2ms [VERBOSE] Validating Input[0] of ID 25.
+
+    10.2ms [VERBOSE] Validating Input[1] of ID 29.
+
+    10.2ms [VERBOSE] Validating Input[2] of ID 30.
+
+    10.2ms [VERBOSE] Validating Params.
+
+    10.2ms [VERBOSE] Validating Param[0]: stride.
+
+    10.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    10.3ms [VERBOSE] Validating Param[2]: group.
+
+    10.3ms [VERBOSE] Validating Param[3]: dilation.
+
+    10.3ms [VERBOSE] Validating Outputs.
+
+    10.3ms [VERBOSE] Validating Output[0] of ID 31.
+
+    10.4ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    10.5ms [VERBOSE] Validating Inputs.
+
+    10.5ms [VERBOSE] Validating Input[0] of ID 31.
+
+    10.5ms [VERBOSE] Validating Input[1] of ID 35.
+
+    10.5ms [VERBOSE] Validating Input[2] of ID 36.
+
+    10.5ms [VERBOSE] Validating Params.
+
+    10.6ms [VERBOSE] Validating Param[0]: stride.
+
+    10.6ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    10.6ms [VERBOSE] Validating Param[2]: dilation.
+
+    10.6ms [VERBOSE] Validating Outputs.
+
+    10.6ms [VERBOSE] Validating Output[0] of ID 37.
+
+    10.6ms [VERBOSE] Validating tensor 31 and 37 have the same Datatype.
+
+    10.8ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    10.9ms [VERBOSE] Validating Inputs.
+
+    10.9ms [VERBOSE] Validating Input[0] of ID 37.
+
+    10.9ms [VERBOSE] Validating Input[1] of ID 41.
+
+    10.9ms [VERBOSE] Validating Input[2] of ID 42.
+
+    10.9ms [VERBOSE] Validating Params.
+
+    11.0ms [VERBOSE] Validating Param[0]: stride.
+
+    11.0ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    11.0ms [VERBOSE] Validating Param[2]: group.
+
+    11.0ms [VERBOSE] Validating Param[3]: dilation.
+
+    11.1ms [VERBOSE] Validating Outputs.
+
+    11.1ms [VERBOSE] Validating Output[0] of ID 43.
+
+    11.2ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    11.2ms [VERBOSE] Validating Inputs.
+
+    11.3ms [VERBOSE] Validating Input[0] of ID 43.
+
+    11.3ms [VERBOSE] Validating Input[1] of ID 47.
+
+    11.3ms [VERBOSE] Validating Input[2] of ID 48.
+
+    11.3ms [VERBOSE] Validating Params.
+
+    11.3ms [VERBOSE] Validating Param[0]: stride.
+
+    11.3ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    11.3ms [VERBOSE] Validating Param[2]: dilation.
+
+    11.3ms [VERBOSE] Validating Outputs.
+
+    11.4ms [VERBOSE] Validating Output[0] of ID 49.
+
+    11.4ms [VERBOSE] Validating tensor 43 and 49 have the same Datatype.
+
+    11.7ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    11.8ms [VERBOSE] Validating Inputs.
+
+    11.8ms [VERBOSE] Validating Input[0] of ID 49.
+
+    11.8ms [VERBOSE] Validating Input[1] of ID 53.
+
+    11.8ms [VERBOSE] Validating Input[2] of ID 54.
+
+    11.8ms [VERBOSE] Validating Params.
+
+    11.9ms [VERBOSE] Validating Param[0]: stride.
+
+    11.9ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    11.9ms [VERBOSE] Validating Param[2]: group.
+
+    11.9ms [VERBOSE] Validating Param[3]: dilation.
+
+    11.9ms [VERBOSE] Validating Outputs.
+
+    11.9ms [VERBOSE] Validating Output[0] of ID 55.
+
+    12.1ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    12.1ms [VERBOSE] Validating Inputs.
+
+    12.1ms [VERBOSE] Validating Input[0] of ID 55.
+
+    12.1ms [VERBOSE] Validating Input[1] of ID 59.
+
+    12.2ms [VERBOSE] Validating Input[2] of ID 60.
+
+    12.2ms [VERBOSE] Validating Params.
+
+    12.2ms [VERBOSE] Validating Param[0]: stride.
+
+    12.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    12.2ms [VERBOSE] Validating Param[2]: dilation.
+
+    12.2ms [VERBOSE] Validating Outputs.
+
+    12.3ms [VERBOSE] Validating Output[0] of ID 61.
+
+    12.3ms [VERBOSE] Validating tensor 55 and 61 have the same Datatype.
+
+    12.7ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    12.7ms [VERBOSE] Validating Inputs.
+
+    12.7ms [VERBOSE] Validating Input[0] of ID 61.
+
+    12.7ms [VERBOSE] Validating Input[1] of ID 65.
+
+    12.7ms [VERBOSE] Validating Input[2] of ID 66.
+
+    12.8ms [VERBOSE] Validating Params.
+
+    12.8ms [VERBOSE] Validating Param[0]: stride.
+
+    12.8ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    12.8ms [VERBOSE] Validating Param[2]: group.
+
+    12.8ms [VERBOSE] Validating Param[3]: dilation.
+
+    12.8ms [VERBOSE] Validating Outputs.
+
+    12.8ms [VERBOSE] Validating Output[0] of ID 67.
+
+    13.0ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    13.0ms [VERBOSE] Validating Inputs.
+
+    13.0ms [VERBOSE] Validating Input[0] of ID 67.
+
+    13.0ms [VERBOSE] Validating Input[1] of ID 71.
+
+    13.1ms [VERBOSE] Validating Input[2] of ID 72.
+
+    13.1ms [VERBOSE] Validating Params.
+
+    13.1ms [VERBOSE] Validating Param[0]: stride.
+
+    13.1ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    13.1ms [VERBOSE] Validating Param[2]: dilation.
+
+    13.1ms [VERBOSE] Validating Outputs.
+
+    13.2ms [VERBOSE] Validating Output[0] of ID 73.
+
+    13.2ms [VERBOSE] Validating tensor 67 and 73 have the same Datatype.
+
+    13.8ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    13.8ms [VERBOSE] Validating Inputs.
+
+    13.9ms [VERBOSE] Validating Input[0] of ID 73.
+
+    13.9ms [VERBOSE] Validating Input[1] of ID 77.
+
+    13.9ms [VERBOSE] Validating Input[2] of ID 78.
+
+    13.9ms [VERBOSE] Validating Params.
+
+    13.9ms [VERBOSE] Validating Param[0]: stride.
+
+    13.9ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    14.0ms [VERBOSE] Validating Param[2]: group.
+
+    14.0ms [VERBOSE] Validating Param[3]: dilation.
+
+    14.0ms [VERBOSE] Validating Outputs.
+
+    14.0ms [VERBOSE] Validating Output[0] of ID 79.
+
+    14.2ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    14.2ms [VERBOSE] Validating Inputs.
+
+    14.2ms [VERBOSE] Validating Input[0] of ID 79.
+
+    14.2ms [VERBOSE] Validating Input[1] of ID 83.
+
+    14.2ms [VERBOSE] Validating Input[2] of ID 84.
+
+    14.3ms [VERBOSE] Validating Params.
+
+    14.3ms [VERBOSE] Validating Param[0]: stride.
+
+    14.3ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    14.3ms [VERBOSE] Validating Param[2]: dilation.
+
+    14.3ms [VERBOSE] Validating Outputs.
+
+    14.3ms [VERBOSE] Validating Output[0] of ID 85.
+
+    14.3ms [VERBOSE] Validating tensor 79 and 85 have the same Datatype.
+
+    15.6ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    15.6ms [VERBOSE] Validating Inputs.
+
+    15.6ms [VERBOSE] Validating Input[0] of ID 85.
+
+    15.6ms [VERBOSE] Validating Input[1] of ID 89.
+
+    15.6ms [VERBOSE] Validating Input[2] of ID 90.
+
+    15.6ms [VERBOSE] Validating Params.
+
+    15.7ms [VERBOSE] Validating Param[0]: stride.
+
+    15.7ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    15.7ms [VERBOSE] Validating Param[2]: group.
+
+    15.7ms [VERBOSE] Validating Param[3]: dilation.
+
+    15.7ms [VERBOSE] Validating Outputs.
+
+    15.7ms [VERBOSE] Validating Output[0] of ID 91.
+
+    15.9ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    15.9ms [VERBOSE] Validating Inputs.
+
+    15.9ms [VERBOSE] Validating Input[0] of ID 91.
+
+    15.9ms [VERBOSE] Validating Input[1] of ID 95.
+
+    15.9ms [VERBOSE] Validating Input[2] of ID 96.
+
+    16.0ms [VERBOSE] Validating Params.
+
+    16.0ms [VERBOSE] Validating Param[0]: stride.
+
+    16.0ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    16.0ms [VERBOSE] Validating Param[2]: dilation.
+
+    16.0ms [VERBOSE] Validating Outputs.
+
+    16.1ms [VERBOSE] Validating Output[0] of ID 97.
+
+    16.1ms [VERBOSE] Validating tensor 91 and 97 have the same Datatype.
+
+[USER_INFO] Checking signed PD session
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant Type=Conv2d at pos=1 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=2 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant Type=Conv2d at pos=3 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=4 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant Type=Conv2d at pos=5 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=6 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant Type=Conv2d at pos=7 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=8 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant Type=Conv2d at pos=9 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=10 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant Type=Conv2d at pos=11 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=12 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant Type=Conv2d at pos=13 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=14 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant Type=Conv2d at pos=15 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=16 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant Type=Conv2d at pos=17 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=18 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant Type=Conv2d at pos=19 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=20 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant Type=Conv2d at pos=21 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=22 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant Type=Conv2d at pos=23 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=24 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant Type=Conv2d at pos=25 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant Type=DepthWiseConv2d at pos=26 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant Type=Conv2d at pos=27 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant Type=Pool at pos=28 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant Type=Conv2d at pos=29 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd.nchw Type=Transpose at pos=30 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/Logits/SpatialSqueeze_prequant Type=Reshape at pos=31 successful for runtime=CPU
+[USER_INFO] Validation for Op=MobilenetV1/Predictions/Reshape_1_prequant Type=Softmax at pos=32 successful for runtime=CPU
+[USER_VERBOSE] Added network input transition for input
+[USER_VERBOSE] Added network output transition for MobilenetV1/Predictions/Reshape_1
+[USER_INFO] Total Subnets Count: 1
+[USER_INFO] Subnet Partition
+  Subnet 0 | CPU | Index [0:32)
+    Inputs:
+      input (Itensor -> CPU)
+    Outputs:
+      MobilenetV1/Predictions/Reshape_1 (CPU -> Itensor)
+
+[USER_INFO] Building network with the following user config:
+[Config]==============================================
+   Debug Mode:                  false
+   Cpu Fallback:                false
+   Unconsumed tensor as output: false
+   Init cache:                  false
+   Half Float Network:          true
+   Timeout:                     0
+   IOMode:                      Itensor
+   Profiling Level:             Off
+   Execution Priority:          Normal
+   Runtime List:                [ cpu_float32 ]
+   Graph Names:                 {  }
+   [Platform Config]----------------------------------
+      Type:                     Unknown
+      Options:                  ""
+   [GPU Config]---------------------------------------
+      Half Float Math:          false
+      Half Float Storage:       false
+      Kernl Storage Location:   
+   [DSP Config]---------------------------------------
+      VTCM Override:            0
+      Optimization Level:       0
+      Cache Compatibility Mode: Permissive
+      Memory Limit Hint(Mb):    0
+   [CPU Config]---------------------------------------
+      Fixed Point Mode:         false
+[USER_INFO] [QNN_CPU] QnnContext create start
+[USER_INFO] [QNN_CPU] QnnContext create end
+[USER_INFO] Created ctx=0x344b47014bbcdc9b for Graph Id=0 backend=CPU SNPE Id=0x2e8f97c0
+[USER_INFO] [QNN_CPU] CpuGraph creation start
+[USER_INFO] [QNN_CPU] CpuGraph creation end
+[USER_INFO] [QNN_CPU] QnnGraph create end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+    17.2ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    17.3ms [VERBOSE] Validating Inputs.
+
+    17.3ms [VERBOSE] Validating Input[0] of ID 97.
+
+    17.3ms [VERBOSE] Validating Input[1] of ID 101.
+
+    17.3ms [VERBOSE] Validating Input[2] of ID 102.
+
+    17.3ms [VERBOSE] Validating Params.
+
+    17.4ms [VERBOSE] Validating Param[0]: stride.
+
+    17.4ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    17.4ms [VERBOSE] Validating Param[2]: group.
+
+    17.4ms [VERBOSE] Validating Param[3]: dilation.
+
+    17.4ms [VERBOSE] Validating Outputs.
+
+    17.4ms [VERBOSE] Validating Output[0] of ID 103.
+
+    17.6ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    17.6ms [VERBOSE] Validating Inputs.
+
+    17.7ms [VERBOSE] Validating Input[0] of ID 103.
+
+    17.7ms [VERBOSE] Validating Input[1] of ID 107.
+
+    17.7ms [VERBOSE] Validating Input[2] of ID 108.
+
+    17.7ms [VERBOSE] Validating Params.
+
+    17.7ms [VERBOSE] Validating Param[0]: stride.
+
+    17.7ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    17.8ms [VERBOSE] Validating Param[2]: dilation.
+
+    17.8ms [VERBOSE] Validating Outputs.
+
+    17.8ms [VERBOSE] Validating Output[0] of ID 109.
+
+    17.8ms [VERBOSE] Validating tensor 103 and 109 have the same Datatype.
+
+    19.0ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    19.1ms [VERBOSE] Validating Inputs.
+
+    19.1ms [VERBOSE] Validating Input[0] of ID 109.
+
+    19.1ms [VERBOSE] Validating Input[1] of ID 113.
+
+    19.1ms [VERBOSE] Validating Input[2] of ID 114.
+
+    19.1ms [VERBOSE] Validating Params.
+
+    19.2ms [VERBOSE] Validating Param[0]: stride.
+
+    19.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    19.2ms [VERBOSE] Validating Param[2]: group.
+
+    19.2ms [VERBOSE] Validating Param[3]: dilation.
+
+    19.2ms [VERBOSE] Validating Outputs.
+
+    19.2ms [VERBOSE] Validating Output[0] of ID 115.
+
+    19.5ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    19.5ms [VERBOSE] Validating Inputs.
+
+    19.6ms [VERBOSE] Validating Input[0] of ID 115.
+
+    19.6ms [VERBOSE] Validating Input[1] of ID 119.
+
+    19.6ms [VERBOSE] Validating Input[2] of ID 120.
+
+    19.6ms [VERBOSE] Validating Params.
+
+    19.6ms [VERBOSE] Validating Param[0]: stride.
+
+    19.6ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    19.7ms [VERBOSE] Validating Param[2]: dilation.
+
+    19.7ms [VERBOSE] Validating Outputs.
+
+    19.7ms [VERBOSE] Validating Output[0] of ID 121.
+
+    19.7ms [VERBOSE] Validating tensor 115 and 121 have the same Datatype.
+
+    20.9ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    20.9ms [VERBOSE] Validating Inputs.
+
+    20.9ms [VERBOSE] Validating Input[0] of ID 121.
+
+    21.0ms [VERBOSE] Validating Input[1] of ID 125.
+
+    21.0ms [VERBOSE] Validating Input[2] of ID 126.
+
+    21.0ms [VERBOSE] Validating Params.
+
+    21.0ms [VERBOSE] Validating Param[0]: stride.
+
+    21.0ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    21.1ms [VERBOSE] Validating Param[2]: group.
+
+    21.1ms [VERBOSE] Validating Param[3]: dilation.
+
+    21.1ms [VERBOSE] Validating Outputs.
+
+    21.1ms [VERBOSE] Validating Output[0] of ID 127.
+
+    21.3ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    21.3ms [VERBOSE] Validating Inputs.
+
+    21.4ms [VERBOSE] Validating Input[0] of ID 127.
+
+    21.4ms [VERBOSE] Validating Input[1] of ID 131.
+
+    21.4ms [VERBOSE] Validating Input[2] of ID 132.
+
+    21.4ms [VERBOSE] Validating Params.
+
+    21.4ms [VERBOSE] Validating Param[0]: stride.
+
+    21.4ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    21.5ms [VERBOSE] Validating Param[2]: dilation.
+
+    21.5ms [VERBOSE] Validating Outputs.
+
+    21.5ms [VERBOSE] Validating Output[0] of ID 133.
+
+    21.5ms [VERBOSE] Validating tensor 127 and 133 have the same Datatype.
+
+    22.6ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    22.7ms [VERBOSE] Validating Inputs.
+
+    22.7ms [VERBOSE] Validating Input[0] of ID 133.
+
+    22.7ms [VERBOSE] Validating Input[1] of ID 137.
+
+    22.7ms [VERBOSE] Validating Input[2] of ID 138.
+
+    22.8ms [VERBOSE] Validating Params.
+
+    22.8ms [VERBOSE] Validating Param[0]: stride.
+
+    22.8ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    22.8ms [VERBOSE] Validating Param[2]: group.
+
+    22.8ms [VERBOSE] Validating Param[3]: dilation.
+
+    22.9ms [VERBOSE] Validating Outputs.
+
+    22.9ms [VERBOSE] Validating Output[0] of ID 139.
+
+    23.0ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    23.1ms [VERBOSE] Validating Inputs.
+
+    23.1ms [VERBOSE] Validating Input[0] of ID 139.
+
+    23.1ms [VERBOSE] Validating Input[1] of ID 143.
+
+    23.1ms [VERBOSE] Validating Input[2] of ID 144.
+
+    23.1ms [VERBOSE] Validating Params.
+
+    23.2ms [VERBOSE] Validating Param[0]: stride.
+
+    23.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    23.2ms [VERBOSE] Validating Param[2]: dilation.
+
+    23.2ms [VERBOSE] Validating Outputs.
+
+    23.2ms [VERBOSE] Validating Output[0] of ID 145.
+
+    23.2ms [VERBOSE] Validating tensor 139 and 145 have the same Datatype.
+
+    25.0ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    25.0ms [VERBOSE] Validating Inputs.
+
+    25.0ms [VERBOSE] Validating Input[0] of ID 145.
+
+    25.0ms [VERBOSE] Validating Input[1] of ID 149.
+
+    25.0ms [VERBOSE] Validating Input[2] of ID 150.
+
+    25.0ms [VERBOSE] Validating Params.
+
+    25.0ms [VERBOSE] Validating Param[0]: stride.
+
+    25.0ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    25.1ms [VERBOSE] Validating Param[2]: group.
+
+    25.1ms [VERBOSE] Validating Param[3]: dilation.
+
+    25.1ms [VERBOSE] Validating Outputs.
+
+    25.1ms [VERBOSE] Validating Output[0] of ID 151.
+
+    25.2ms [VERBOSE] Validating Op Type DepthWiseConv2d == DepthWiseConv2d.
+
+    25.2ms [VERBOSE] Validating Inputs.
+
+    25.2ms [VERBOSE] Validating Input[0] of ID 151.
+
+    25.2ms [VERBOSE] Validating Input[1] of ID 155.
+
+    25.2ms [VERBOSE] Validating Input[2] of ID 156.
+
+    25.2ms [VERBOSE] Validating Params.
+
+    25.2ms [VERBOSE] Validating Param[0]: stride.
+
+    25.2ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    25.2ms [VERBOSE] Validating Param[2]: dilation.
+
+    25.2ms [VERBOSE] Validating Outputs.
+
+    25.2ms [VERBOSE] Validating Output[0] of ID 157.
+
+    25.2ms [VERBOSE] Validating tensor 151 and 157 have the same Datatype.
+
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+    26.9ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    26.9ms [VERBOSE] Validating Inputs.
+
+    26.9ms [VERBOSE] Validating Input[0] of ID 157.
+
+    26.9ms [VERBOSE] Validating Input[1] of ID 161.
+
+    26.9ms [VERBOSE] Validating Input[2] of ID 162.
+
+    26.9ms [VERBOSE] Validating Params.
+
+    26.9ms [VERBOSE] Validating Param[0]: stride.
+
+    26.9ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    26.9ms [VERBOSE] Validating Param[2]: group.
+
+    26.9ms [VERBOSE] Validating Param[3]: dilation.
+
+    26.9ms [VERBOSE] Validating Outputs.
+
+    27.0ms [VERBOSE] Validating Output[0] of ID 163.
+
+    27.0ms [VERBOSE] Validating Op Type PoolAvg2d == PoolAvg2d.
+
+    27.0ms [VERBOSE] Validating Inputs.
+
+    27.0ms [VERBOSE] Validating Input[0] of ID 163.
+
+    27.0ms [VERBOSE] Validating Params.
+
+    27.1ms [VERBOSE] Validating Param[0]: filter_size.
+
+    27.1ms [VERBOSE] Validating Param[1]: stride.
+
+    27.1ms [VERBOSE] Validating Param[2]: pad_amount.
+
+    27.1ms [VERBOSE] Validating Outputs.
+
+    27.1ms [VERBOSE] Validating Output[0] of ID 167.
+
+    27.1ms [VERBOSE] Validating tensor 163 and 167 have the same Datatype.
+
+    27.1ms [VERBOSE] Validating Params.
+
+    27.1ms [VERBOSE] Validating Param[4]: count_pad_for_edges.
+
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : DepthWiseConv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+    28.7ms [VERBOSE] Validating Op Type Conv2d == Conv2d.
+
+    28.8ms [VERBOSE] Validating Inputs.
+
+    28.8ms [VERBOSE] Validating Input[0] of ID 167.
+
+    28.8ms [VERBOSE] Validating Input[1] of ID 171.
+
+    28.8ms [VERBOSE] Validating Input[2] of ID 172.
+
+    28.8ms [VERBOSE] Validating Params.
+
+    28.8ms [VERBOSE] Validating Param[0]: stride.
+
+    28.8ms [VERBOSE] Validating Param[1]: pad_amount.
+
+    28.8ms [VERBOSE] Validating Param[2]: group.
+
+    28.8ms [VERBOSE] Validating Param[3]: dilation.
+
+    28.8ms [VERBOSE] Validating Outputs.
+
+    28.8ms [VERBOSE] Validating Output[0] of ID 173.
+
+    28.9ms [VERBOSE] Validating Op Type Transpose == Transpose.
+
+    28.9ms [VERBOSE] Validating Inputs.
+
+    28.9ms [VERBOSE] Validating Input[0] of ID 173.
+
+    28.9ms [VERBOSE] Validating Params.
+
+    28.9ms [VERBOSE] Validating Param[0]: perm.
+
+    28.9ms [VERBOSE] Validating Outputs.
+
+    28.9ms [VERBOSE] Validating Output[0] of ID 175.
+
+    28.9ms [VERBOSE] Validating tensor 173 and 175 have the same Datatype.
+
+    28.9ms [VERBOSE] Validating tensor 173 and 175 have the same Rank.
+
+    29.0ms [VERBOSE] Validating Op Type Reshape == Reshape.
+
+    29.0ms [VERBOSE] Validating Inputs.
+
+    29.0ms [VERBOSE] Validating Input[0] of ID 175.
+
+    29.0ms [VERBOSE] Validating Params.
+
+    29.0ms [VERBOSE] Validating Outputs.
+
+    29.0ms [VERBOSE] Validating Output[0] of ID 176.
+
+    29.1ms [VERBOSE] Validating Op Type Softmax == Softmax.
+
+    29.1ms [VERBOSE] Validating Inputs.
+
+    29.1ms [VERBOSE] Validating Input[0] of ID 176.
+
+    29.1ms [VERBOSE] Validating Params.
+
+    29.1ms [VERBOSE] Validating Param[0]: axis.
+
+    29.1ms [VERBOSE] Validating Param[1]: beta.
+
+    29.1ms [VERBOSE] Validating Outputs.
+
+    29.1ms [VERBOSE] Validating Output[0] of ID 177.
+
+    29.1ms [VERBOSE] Validating tensor 176 and 177 have the same Shape.
+
+    29.1ms [VERBOSE] Validating tensor 176 and 177 have the same Rank.
+
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : PoolAvg2d	Node-Name : MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Conv2d	Node-Name : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Transpose	Node-Name : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd.nchw
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Reshape	Node-Name : MobilenetV1/Logits/SpatialSqueeze_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode start
+[USER_VERBOSE] [QNN_CPU] validate	Node-Type : Softmax	Node-Name : MobilenetV1/Predictions/Reshape_1_prequant
+[USER_VERBOSE] [QNN_CPU] QnnGraph addnode end
+[USER_INFO] No valid context cache found for graph (CPU subnet #0). Creating graph from scratch
+[USER_INFO] [QNN_CPU] QnnGraph finalize start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd.nchw start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd.nchw end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/SpatialSqueeze_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Logits/SpatialSqueeze_prequant end
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Predictions/Reshape_1_prequant start
+[USER_VERBOSE] [QNN_CPU] CpuGraph:: finalize Node-Type : MobilenetV1/Predictions/Reshape_1_prequant end
+[USER_INFO] [QNN_CPU] QnnGraph finalize end
+[USER_INFO] SNPE execute with TensorMap
+[USER_INFO] [QNN_CPU] QnnGraph execute start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : PoolAvg2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : PoolAvg2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Transpose start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Transpose end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Reshape start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Reshape end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Softmax start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::execute Node-Type : Softmax end
+[USER_INFO] [QNN_CPU] QnnGraph execute end
+{
+  "backend_requested": "cpu",
+  "runtime_order": [
+    "cpu"
+  ],
+  "cpu_retry": false,
+  "runtime_version": "2.26.0.240827110523_99241",
+  "library": "/tmp/qb560d-training/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+  "model_sha256": "3f2d29718529b53fc7725acca5e736d8fb90b2734767a88d3c324a9808323bf7",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "input_mode": "normalized",
+  "input_name": "input",
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "profiling": "off",
+  "runs": 1,
+  "warmup": 0,
+  "inference_ms_median": 44.36166300001787,
+  "inference_ms_p95": 44.36166300001787,
+  "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+  "top3": [
+    {
+      "class_id": 155,
+      "score": 1.0
+    },
+    {
+      "class_id": 329,
+      "score": 0.0
+    },
+    {
+      "class_id": 342,
+      "score": 0.0
+    }
+  ],
+  "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+}
+[USER_INFO] SNPE DeInit Phase
+[USER_INFO] Cleaning up cluster manager instance resources
+[USER_INFO] Backend Mgr ~Dtor called for backend CPU
+[USER_INFO] Cleaning up Context handle=0x344b47014bbcdc9b for Graph Id=0 backend=CPU SNPE Id=0x2e8f97c0
+[USER_INFO] [QNN_CPU] QnnContext Free start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : DepthWiseConv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : PoolAvg2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : PoolAvg2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Conv2d end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Transpose start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Transpose end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Reshape start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Reshape end
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Softmax start
+[USER_VERBOSE] [QNN_CPU] CpuGraph::free Node-Type : Softmax end
+[USER_INFO] [QNN_CPU] QnnContext Free end
+[USER_INFO] Done Cleaning up Context handle=0x344b47014bbcdc9b for Graph Id=0 backend=CPU SNPE Id=0x2e8f97c0
+[USER_INFO] BackendTerminate triggered
+[USER_INFO] [QNN_CPU] QnnBackend Free start
+[USER_INFO] [QNN_CPU] QnnBackend Free end
+
+__QB560D_EXIT__=0

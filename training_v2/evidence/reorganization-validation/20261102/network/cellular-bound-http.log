@@ -1,0 +1,47 @@
+Interface and policy
+14: rmnet_data0@rmnet_ipa0: <UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+14: rmnet_data0@rmnet_ipa0: <UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN group default qlen 1000
+    inet 100.84.199.38/30 scope global rmnet_data0
+       valid_lft forever preferred_lft forever
+default via 192.168.0.1 dev wlan0  proto dhcp  metric 600 
+100.84.199.36/30 dev rmnet_data0  proto kernel  scope link  src 100.84.199.38 
+181.213.132.2 via 192.168.0.1 dev wlan0  proto static  metric 600 
+181.213.132.3 via 192.168.0.1 dev wlan0  proto static  metric 600 
+192.168.0.0/24 dev wlan0  proto kernel  scope link  src 192.168.0.26  metric 600 
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+broadcast 100.84.199.36 dev rmnet_data0  table local  proto kernel  scope link  src 100.84.199.38 
+local 100.84.199.38 dev rmnet_data0  table local  proto kernel  scope host  src 100.84.199.38 
+broadcast 100.84.199.39 dev rmnet_data0  table local  proto kernel  scope link  src 100.84.199.38 
+broadcast 127.0.0.0 dev lo  table local  proto kernel  scope link  src 127.0.0.1 
+local 127.0.0.0/8 dev lo  table local  proto kernel  scope host  src 127.0.0.1 
+local 127.0.0.1 dev lo  table local  proto kernel  scope host  src 127.0.0.1 
+broadcast 127.255.255.255 dev lo  table local  proto kernel  scope link  src 127.0.0.1 
+broadcast 192.168.0.0 dev wlan0  table local  proto kernel  scope link  src 192.168.0.26 
+local 192.168.0.26 dev wlan0  table local  proto kernel  scope host  src 192.168.0.26 
+broadcast 192.168.0.255 dev wlan0  table local  proto kernel  scope link  src 192.168.0.26 
+broadcast 192.168.225.0 dev bridge0  table local  proto kernel  scope link  src 192.168.225.1 
+local 192.168.225.1 dev bridge0  table local  proto kernel  scope host  src 192.168.225.1 
+broadcast 192.168.225.255 dev bridge0  table local  proto kernel  scope link  src 192.168.225.1 
+0:	from all lookup local 
+32766:	from all lookup main 
+32767:	from all lookup default 
+1.1.1.1 via 192.168.0.1 dev wlan0  src 192.168.0.26 
+    cache 
+
+Before
+RX=0
+TX=0
+ICMP_SKIPPED: installed ping lacks interface binding (-I). No unbound fallback.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   577    0   577    0     0   1160      0 --:--:-- --:--:-- --:--:--  1160
+HTTP=200 total_s=0.497017
+
+After
+RX=5902
+TX=1681
+DNS_NOTE: curl may resolve through the system resolver. This is not an isolated cellular DNS test.
+ICMP_RESULT: SKIPPED_UNSUPPORTED
+RESULT: HTTP_PASS_ICMP_NOT_TESTED

@@ -1,0 +1,3 @@
+# The training manifests pin exact file bytes, including original line endings.
+# Preserve those bytes on add/checkout on both Windows and Linux.
+* -text

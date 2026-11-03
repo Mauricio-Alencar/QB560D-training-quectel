@@ -1,0 +1,5 @@
+{
+  "command": "echo aW1wb3J0IG9zCmFzc2VydCBub3Qgb3MucGF0aC5sZXhpc3RzKCcvdG1wL3VwZGF0ZS1xaWFydC0yNTEtY2xlYW51cC1wcm9iZS0yMDI2MTEwMVQwMjM1MDAnKQpwcmludCgnRElTUE9TQUJMRV9QUk9CRV9SRU1PVkVEJyk= | base64 -d | /usr/bin/python3",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:35:01.481975+00:00"
+}

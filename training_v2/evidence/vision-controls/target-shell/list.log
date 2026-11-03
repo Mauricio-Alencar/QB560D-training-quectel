@@ -1,0 +1,11 @@
+burger-classification classification burger.jpg
+full-body-detection detection pose.jpg
+no-person-detection detection cat.jpg
+full-body-pose pose pose.jpg
+standing-full-body-pose pose male_full_height_hands.jpg
+occluded-pose pose pose_lower_body_occluded.png
+closed-fist gesture fist.jpg
+no-hand gesture burger.jpg
+person-segmentation segmentation pose.jpg
+standing-boundary-segmentation segmentation male_full_height_hands.jpg
+no-person-segmentation segmentation cat.jpg

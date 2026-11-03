@@ -1,0 +1,1056 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-net-run",
+      "component": "qairt",
+      "sha256": "a83db1cd0a565853aeff050c194f9995fa502e9ff2a605aac2c0dfbc8b8cc68e",
+      "bytes": 7568304
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-platform-validator",
+      "component": "qairt",
+      "sha256": "94df6f6b82122e5d4609b55b423bb1c30b17f3fe67b0c03f8053909ca7710c30",
+      "bytes": 526768
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-profile-viewer",
+      "component": "qairt",
+      "sha256": "3109bb3bc3552b39f732c8de4c5977de1c2f0efef004c14099f242194d1e95e7",
+      "bytes": 264304
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/snpe-net-run",
+      "component": "qairt",
+      "sha256": "4d2ce30b5db903cbb9bcc55103cf1df647ddbc7e80ac928a07cea59c50e3b03d",
+      "bytes": 1698072
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+      "component": "qairt",
+      "sha256": "690b86a0cb2674c7e2dd0d08cf9e3f570dd60f01cf3f79cde22999dc080f9465",
+      "bytes": 30108664
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSnpeHtpV68Stub.so",
+      "component": "qairt",
+      "sha256": "419da6ee3cc010324c4bffb2cdcba519f6bf2c11ea8125029446bc45a6f509cb",
+      "bytes": 497608
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSnpeHtpV68CalculatorStub.so",
+      "component": "qairt",
+      "sha256": "ff82a38dbfd0f312bb6ccdbc2183ef9d5022caa9fa5fd8edea3b43fe24ea0e94",
+      "bytes": 10160
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnCpu.so",
+      "component": "qairt",
+      "sha256": "6e23f5c49d1a701b9e517862b1648931cc15408d62c9d2cd0c9ad608217257df",
+      "bytes": 7967992
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtp.so",
+      "component": "qairt",
+      "sha256": "e43aa2b62131e50ede9b0d50c68a2335ef49f96bf12663357c7f32169bea8dc8",
+      "bytes": 4603064
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnSystem.so",
+      "component": "qairt",
+      "sha256": "d6f5b34d130c49b5cdc656855dc782917a2d79de8876102fef9fc8f8e611c781",
+      "bytes": 5529896
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpV68Stub.so",
+      "component": "qairt",
+      "sha256": "b9cb0d20e29858fd86974be0c5d6b25fdc790815094ab16aae1eef7a936cc4a0",
+      "bytes": 497608
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpV68CalculatorStub.so",
+      "component": "qairt",
+      "sha256": "2e63e6563e3875d6dc9b0c7ccf5c0c235726cae49505175e8a617a2626baae53",
+      "bytes": 10160
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpPrepare.so",
+      "component": "qairt",
+      "sha256": "a0275664dc1e9fc15fde4c5e9a9f1b7ffcca480743c1fc199b5eed1c832c704c",
+      "bytes": 90840472
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpNetRunExtensions.so",
+      "component": "qairt",
+      "sha256": "15efaa08e12a2791b7438a34989df863837e7182ebc52578cc1d3f9e0ef16494",
+      "bytes": 853984
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnModelDlc.so",
+      "component": "qairt",
+      "sha256": "c2f256c20dfde9b0372065ce892af788ed975cd80d6ea9d2b01c86ea202ec96c",
+      "bytes": 5278400
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnIr.so",
+      "component": "qairt",
+      "sha256": "6fd0e760f71a7d66695d0ea8d2d31dcd14ac4003950bea8a09be848737d7e6d9",
+      "bytes": 3324600
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libcalculator.so",
+      "component": "qairt",
+      "sha256": "9733c4d4417382fea51638af84a4bd4c96388c82cff514f6605db497943725a0",
+      "bytes": 10160
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libSnpeHtpV68Skel.so",
+      "component": "qairt",
+      "sha256": "fab399bcbfdb47c203c2a851776b88c4f522e2c2031d1a11c1697c0ee1ddc582",
+      "bytes": 13487520
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libQnnHtpV68Skel.so",
+      "component": "qairt",
+      "sha256": "f659d93d893aea52a63d02418cf653fca47452ac56814a39f7efed5269d1ff28",
+      "bytes": 12992744
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libQnnHtpV68.so",
+      "component": "qairt",
+      "sha256": "8191e546b81bd767f5ffd1a0fec66857f0d28c6f3b8c8229342878c2f0f2d20b",
+      "bytes": 13453508
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libCalculator_skel.so",
+      "component": "qairt",
+      "sha256": "5e0b27938732a6676c493d5eda779731ff1f6104cfda27e816701a0025e23103",
+      "bytes": 5656
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/LICENSE.pdf",
+      "component": "qairt",
+      "sha256": "ec1dccfdcba5c6e64126e84199b8362bf4999107bfa567ebe831dbb4c461692b",
+      "bytes": 147577
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/QAIRT_ReleaseNotes.txt",
+      "component": "qairt",
+      "sha256": "89eb1a4b4f28543b857d80c98f0c33399bf8d0d44b76457dd84bcb728b03ae67",
+      "bytes": 279098
+    },
+    {
+      "path": "runtimes/qairt_2_51/cache/sdk/qairt/2.51.40.260930/sdk.yaml",
+      "component": "qairt",
+      "sha256": "eae99681f04c6e15c478ce0d5fe6bdab9c8d15f23c6c2977ed7509a192fd3576",
+      "bytes": 976
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/mobilenet_v2-qnn_dlc-w8a8.zip",
+      "component": "qairt",
+      "sha256": "9bd10c231bed605a0e859bedc44e50d3cb354b0902b2b931ec2ac75d8b86d270",
+      "bytes": 3780811
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/dog.jpg",
+      "component": "qairt",
+      "sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+      "bytes": 661378
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/dog_float32_nhwc.raw",
+      "component": "qairt",
+      "sha256": "677bc9fa94a9cc9114bf61695e660a2e4896b7e1fa433e947786d18ffd79dff4",
+      "bytes": 602112
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/imagenet_classes.txt",
+      "component": "qairt",
+      "sha256": "1f386e0d1cb6e28b9c2dac651c3dea6801e98ad1b41a14ce6bb1a093d72069f5",
+      "bytes": 10472
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/aihub-model-source.py.txt",
+      "component": "qairt",
+      "sha256": "66f795301b48a08eb20d4f897ce042725738ab69292a9399308938ab68ebc177",
+      "bytes": 6708
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/aihub-preprocessing-source.py.txt",
+      "component": "qairt",
+      "sha256": "6aa60a4bf99b2f43a19e5f492bc0ead19e90394144a6891175a0670c51d9d00a",
+      "bytes": 27552
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/model/mobilenet_v2-qnn_dlc-w8a8/labels.txt",
+      "component": "qairt",
+      "sha256": "e697a491aa735cc6c2aaf982f8e86e8fc7b0a1ea7750a2cc6a2bdfc1e109012f",
+      "bytes": 10473
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/model/mobilenet_v2-qnn_dlc-w8a8/metadata.json",
+      "component": "qairt",
+      "sha256": "953a7dc260bcc67099d6e1ecbe79b05cd89ebff040a5bd540c69d3eb176a8753",
+      "bytes": 1532
+    },
+    {
+      "path": "runtimes/qairt_2_51/assets/model/mobilenet_v2-qnn_dlc-w8a8/mobilenet_v2.dlc",
+      "component": "qairt",
+      "sha256": "dcd7a540b072558ff98f5c460823048e2c785a5a8c3566a6b477bfef4e97c6c5",
+      "bytes": 4674640
+    },
+    {
+      "path": "demos/docker/app/Dockerfile",
+      "component": "docker",
+      "sha256": "af3045cb52e0f5a344f613e72c3adaff4e123049e69011ccb2f31a5ec7470eb5",
+      "bytes": 560
+    },
+    {
+      "path": "demos/docker/app/telemetry.py",
+      "component": "docker",
+      "sha256": "dd05013a59d12af859c67adb0f84857a9055f243c05373f9ec7ff2c9c68a6dac",
+      "bytes": 1470
+    },
+    {
+      "path": "demos/docker/target/build.sh",
+      "component": "docker",
+      "sha256": "3dcf1478539d707bbbb5986cdebc946301c3df9cfaf8997490e32bdb8d2da43e",
+      "bytes": 1010
+    },
+    {
+      "path": "demos/docker/target/check_http.py",
+      "component": "docker",
+      "sha256": "60fb62834ed456602f9d1926a63b6ea140a94f9be6e1895bd89cb41adffdfa51",
+      "bytes": 735
+    },
+    {
+      "path": "demos/docker/target/daemon.sh",
+      "component": "docker",
+      "sha256": "ad890ec6ce4d0d63b693bf7beda45f9e4d782cbdb62d2b228cf65a89beddb309",
+      "bytes": 165
+    },
+    {
+      "path": "demos/docker/target/demo.sh",
+      "component": "docker",
+      "sha256": "0d110242c4f3e197547037e281b2eec8a7ce2e56d1be9cb44e098782ccd39f43",
+      "bytes": 2054
+    },
+    {
+      "path": "demos/docker/target/docker.sh",
+      "component": "docker",
+      "sha256": "0bd0fd2286ba0d7379c811eb8fe3f955d62c8faffbf2cd4b21739faeef943326",
+      "bytes": 185
+    },
+    {
+      "path": "demos/docker/target/install.sh",
+      "component": "docker",
+      "sha256": "9ce7205adc1a70efe8566616bc347590857b8256ffc55634800fad5738ac752c",
+      "bytes": 1306
+    },
+    {
+      "path": "demos/docker/target/preflight.sh",
+      "component": "docker",
+      "sha256": "6a9c9a5e2df666bfa31375f5d5596428a174d376a41aac552b5033f73ce8bbc0",
+      "bytes": 1494
+    },
+    {
+      "path": "demos/docker/target/rehearse.py",
+      "component": "docker",
+      "sha256": "d5ad89cacd76d50868dc340ffa5fd3036e36c19725156a216f82263bd1006b0f",
+      "bytes": 8174
+    },
+    {
+      "path": "demos/docker/config/base-image.txt",
+      "component": "docker",
+      "sha256": "95123aca2ddf06f27130d25cf0e82c3f8ac1943ba4ae24651d96e99bb09d84d1",
+      "bytes": 79
+    },
+    {
+      "path": "demos/docker/config/daemon.json",
+      "component": "docker",
+      "sha256": "b01349829b53edf286fc2bf020b4ac2e4f883c07d9035dce7b022724d184f777",
+      "bytes": 502
+    },
+    {
+      "path": "demos/docker/config/qb560d-docker-demo.service",
+      "component": "docker",
+      "sha256": "345b91d9774fb20a49a65a76de09f7348d936306f420a1c5c4fa4d0c1431f3ad",
+      "bytes": 315
+    },
+    {
+      "path": "demos/docker/offline/image.lock.json",
+      "component": "docker",
+      "sha256": "ce4cdf8dedd17de108b5decdbcabf9d22cd9fc53f518cdb3d709ea03b114e3b3",
+      "bytes": 723
+    },
+    {
+      "path": "demos/docker/offline/image.sha256",
+      "component": "docker",
+      "sha256": "add38a208c5058fd2e70deda654fb0b18da2998ca8bffff998e7ffb643a93439",
+      "bytes": 117
+    },
+    {
+      "path": "demos/docker/offline/runtime.lock.json",
+      "component": "docker",
+      "sha256": "665442dbf8f2cc9f472ea444036118d679b02ed19a3a94c6468a1998e1da25d1",
+      "bytes": 710
+    },
+    {
+      "path": "demos/docker/offline/runtime.sha256",
+      "component": "docker",
+      "sha256": "57a2cb0154a9fffc9303e2666118ad59e428b71b72cb396a2aff1a6cf2481a1f",
+      "bytes": 209
+    },
+    {
+      "path": "demos/docker/offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz",
+      "component": "docker",
+      "sha256": "cd0c23929d9b698a1e824d1f735cad94112c9eeef6e9e1b60648e13ccc638550",
+      "bytes": 47037664
+    },
+    {
+      "path": "demos/docker/offline/runtime/buildx-v0.38.1.linux-arm64",
+      "component": "docker",
+      "sha256": "3b83b3731916ba433feccaaa689fe5bcdc81c641d92c8e6c2ea865dfa141c97a",
+      "bytes": 63766690
+    },
+    {
+      "path": "demos/docker/offline/runtime/docker-29.9.2.tgz",
+      "component": "docker",
+      "sha256": "873b3e0207857c3b2f28392fb922f3ea6efe37620c16d4d4aaf2fef409c90b73",
+      "bytes": 77953959
+    },
+    {
+      "path": "target/ai.sh",
+      "component": "training",
+      "sha256": "a05dd085f90b66a10ae06db436e52965f97218e48bf5e87c8e1009657a91c511",
+      "bytes": 854
+    },
+    {
+      "path": "target/application.sh",
+      "component": "training",
+      "sha256": "fdee83a225945306cd279a291dc4c8f9f4d3859f5e74a7a46c47cfe166a36ca1",
+      "bytes": 4342
+    },
+    {
+      "path": "target/camera.sh",
+      "component": "training",
+      "sha256": "b5bde9b1727ccff5221fd509e5ff299b62db975b1613f5eb40900c2760f5de76",
+      "bytes": 2306
+    },
+    {
+      "path": "target/common.sh",
+      "component": "training",
+      "sha256": "426e9746f6274ab8702341356324e9777227dd283c8c163f0bd2b68911bfc9d3",
+      "bytes": 883
+    },
+    {
+      "path": "target/diagnostics.sh",
+      "component": "training",
+      "sha256": "e3500865003c994439da166273c9ac1eba654902f9a34f871d28b3ce61d0aaab",
+      "bytes": 1042
+    },
+    {
+      "path": "target/docker.sh",
+      "component": "training",
+      "sha256": "e39148f22080ce6f540deaab943739224bcfe9de28360617817332afdaf59a95",
+      "bytes": 577
+    },
+    {
+      "path": "target/network.sh",
+      "component": "training",
+      "sha256": "0500f19a1699db88faca87bdc6287ee9c10ef50f14e56b5f04b87cdd12b7ecf0",
+      "bytes": 1210
+    },
+    {
+      "path": "target/performance.sh",
+      "component": "training",
+      "sha256": "27a4fe0a973b0b1ae639de5ee8a897315f6c4511e4df731b48170a092f627e10",
+      "bytes": 1586
+    },
+    {
+      "path": "target/preflight.sh",
+      "component": "training",
+      "sha256": "d12f16de42ae5c0056904755a63f2caccedb0e5023b88477b6b75579f955531c",
+      "bytes": 2130
+    },
+    {
+      "path": "target/qnn.sh",
+      "component": "training",
+      "sha256": "71f93ba7b3b43e7faa23c76119201df7e10237eb92c90066662f18358ca51df7",
+      "bytes": 1090
+    },
+    {
+      "path": "target/rehearse_application.py",
+      "component": "training",
+      "sha256": "f2c7632987bf4ef49a572f4938abd0d7210f89655e43fba850e85d03a732816f",
+      "bytes": 2229
+    },
+    {
+      "path": "target/unpack_pillow.py",
+      "component": "training",
+      "sha256": "2042e9cdedc06d4f5b9687a0a0874ae568dca2a067b5d8fe78b5e02439655013",
+      "bytes": 1928
+    },
+    {
+      "path": "target/wlan.sh",
+      "component": "training",
+      "sha256": "752cfb85bc708d359b684318826293f9077dc105aad8f9c61664d71f0e06486f",
+      "bytes": 1445
+    },
+    {
+      "path": "target/wlan_owner.py",
+      "component": "training",
+      "sha256": "d5205401013aafba4177e71b5739e665001f5d91154af69daffc5e4d08a0b53d",
+      "bytes": 2226
+    },
+    {
+      "path": "config/lab.env.example",
+      "component": "training",
+      "sha256": "46c676462e1c1e64e08a0e41f145fb800ef2be43cd16fffead2de95a5705c970",
+      "bytes": 227
+    },
+    {
+      "path": "config/release-evidence.json",
+      "component": "training",
+      "sha256": "f4a95e0f6d880e25580ac3151a0988acb66359edceb8e3aff0659a81f3ef12c4",
+      "bytes": 89474
+    },
+    {
+      "path": "app/qb560d-hello.c",
+      "component": "training",
+      "sha256": "934393e9721f6fd7405ff50b76ff6779fd8f6350f653fbd1126abe0c8ba94e12",
+      "bytes": 286
+    },
+    {
+      "path": "app/qb560d-training.service",
+      "component": "training",
+      "sha256": "697aca46e3381cd777d93533c85f4de7c1b361a0815e166a42671d1aec72c36a",
+      "bytes": 359
+    },
+    {
+      "path": "app/telemetry.py",
+      "component": "training",
+      "sha256": "dd05013a59d12af859c67adb0f84857a9055f243c05373f9ec7ff2c9c68a6dac",
+      "bytes": 1470
+    },
+    {
+      "path": "ai/c_api_backend.py",
+      "component": "training",
+      "sha256": "1e3cbcabe98989abbab912916c7dc1ee3a0b2132b47db37c5f59c31195485cea",
+      "bytes": 10336
+    },
+    {
+      "path": "ai/fetch_models.py",
+      "component": "training",
+      "sha256": "bb1e61757df2aa7bc5aaf676c890292dfac06779ffd676ddf117253e46a5fbd4",
+      "bytes": 3534
+    },
+    {
+      "path": "ai/htp_target.py",
+      "component": "training",
+      "sha256": "b727fb480c1784fe19bedc65d6c27528a95191695140cb2462a5b98f5de34412",
+      "bytes": 16854
+    },
+    {
+      "path": "ai/inspect_models.py",
+      "component": "training",
+      "sha256": "8da689a55c540992a8c4b7d003c9568b5a25db08586ff96e06455b812deac5b5",
+      "bytes": 824
+    },
+    {
+      "path": "ai/probe_snpe.py",
+      "component": "training",
+      "sha256": "c03e0dbcf3dce1ae7846fb8e9387b580665db1618fca61e66208c80657dda702",
+      "bytes": 4028
+    },
+    {
+      "path": "ai/profiles.json",
+      "component": "training",
+      "sha256": "771af2a609a63aa5089fc6d3b0f5e3bb5ea33de78493556cb8d54307b0525c14",
+      "bytes": 2200
+    },
+    {
+      "path": "ai/requirements-target.txt",
+      "component": "training",
+      "sha256": "e56648f40a5b677871fe5f9ed97241b878cd963c49947bf604eb2e8c113eb4ce",
+      "bytes": 288
+    },
+    {
+      "path": "ai/run_demo.py",
+      "component": "training",
+      "sha256": "b9fb4c2d74fca2aafa86316b6bc454d161a4f1891f3bdd07d27fe9a2b758a903",
+      "bytes": 13542
+    },
+    {
+      "path": "ai/run_snpe.py",
+      "component": "training",
+      "sha256": "b6f16bdf463d00e2a662df9e53d33747c8f84e18f836c43877dbcd51f9e21088",
+      "bytes": 13419
+    },
+    {
+      "path": "ai/run_tensor.py",
+      "component": "training",
+      "sha256": "40ffba39b1e361153445c927dd23560d0903019e640c268758023412aeaa339f",
+      "bytes": 3325
+    },
+    {
+      "path": "ai/workbench.py",
+      "component": "training",
+      "sha256": "bfdd91bd6137675360548586f8932ba50dae79e23310c5f175bef99b8b67b95c",
+      "bytes": 5508
+    },
+    {
+      "path": "models/aihub_tiny_6a569f3f9ea3.tflite",
+      "component": "training",
+      "sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "bytes": 1992
+    },
+    {
+      "path": "models/coco_labels.txt",
+      "component": "training",
+      "sha256": "c7e79c855f73cbba9f33d649d60e1676eb0a974021a41696d1ac0d4b7f7e0211",
+      "bytes": 665
+    },
+    {
+      "path": "models/deeplabv3.tflite",
+      "component": "training",
+      "sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "bytes": 2779264
+    },
+    {
+      "path": "models/hand_landmark_lite.tflite",
+      "component": "training",
+      "sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "bytes": 2071408
+    },
+    {
+      "path": "models/imagenet_labels.txt",
+      "component": "training",
+      "sha256": "536feacc519de3d418de26b2effb4d75694a8c4c0063e36499a46fa8061e2da9",
+      "bytes": 10484
+    },
+    {
+      "path": "models/mobilenet_v1.tflite",
+      "component": "training",
+      "sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "bytes": 4276352
+    },
+    {
+      "path": "models/mobilenet_v1_snpe_int8.dlc",
+      "component": "training",
+      "sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+      "bytes": 4336696
+    },
+    {
+      "path": "models/models.lock.json",
+      "component": "training",
+      "sha256": "f35ded8a3333a1e0735319cca92f102c2fc2e823fc4e8d45d7eb8a16a0fb5d5a",
+      "bytes": 1813
+    },
+    {
+      "path": "models/posenet.tflite",
+      "component": "training",
+      "sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "bytes": 5048148
+    },
+    {
+      "path": "models/snpe-model.origin.json",
+      "component": "training",
+      "sha256": "578fd9928e33700ab63b707f1949a7fef52aaf6d8e8ed580ee760b8b14ae60c6",
+      "bytes": 982
+    },
+    {
+      "path": "models/ssd_mobilenet_v1.tflite",
+      "component": "training",
+      "sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "bytes": 4183312
+    },
+    {
+      "path": "models/workbench_demo.onnx",
+      "component": "training",
+      "sha256": "d80d174228cefcf0e09dd344c102379dc03c4348ed13c9a09ac728ee61b31b5b",
+      "bytes": 701
+    },
+    {
+      "path": "models/workbench_expected.npy",
+      "component": "training",
+      "sha256": "66117d1e99a6df5521c584c124b994ae3afb58d9e717cec7dc5a00122a190e2e",
+      "bytes": 144
+    },
+    {
+      "path": "models/workbench_input.npy",
+      "component": "training",
+      "sha256": "0de682b953928cdbd2ff44af3dda2b1fc3fc107054d8f1337e4a8335ae8fe65f",
+      "bytes": 12416
+    },
+    {
+      "path": "media/grace_hopper.jpg",
+      "component": "training",
+      "sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+      "bytes": 61306
+    },
+    {
+      "path": "media/right_hands.jpg",
+      "component": "training",
+      "sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f",
+      "bytes": 54887
+    },
+    {
+      "path": "media/sources.json",
+      "component": "training",
+      "sha256": "0ca072f45e75e0d42f05e47210a5d34fc779a633ba6ae0040f8f4c31219881ad",
+      "bytes": 205
+    },
+    {
+      "path": "media/controls/burger.jpg",
+      "component": "training",
+      "sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+      "bytes": 30300
+    },
+    {
+      "path": "media/controls/cases.json",
+      "component": "training",
+      "sha256": "7c020f4f696530a0dc58babe5923697daf14b62e6061c6b2ed7bf49fadcf5fb7",
+      "bytes": 1854
+    },
+    {
+      "path": "media/controls/cat.jpg",
+      "component": "training",
+      "sha256": "2533197401eebe9410ea4d063f86c43fbd2666f3e8165a38aca155c0d09c21be",
+      "bytes": 32362
+    },
+    {
+      "path": "media/controls/fist.jpg",
+      "component": "training",
+      "sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+      "bytes": 71355
+    },
+    {
+      "path": "media/controls/LICENSE-MEDIAPIPE.txt",
+      "component": "training",
+      "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+      "bytes": 12331
+    },
+    {
+      "path": "media/controls/LICENSE-TFJS.txt",
+      "component": "training",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357
+    },
+    {
+      "path": "media/controls/male_full_height_hands.jpg",
+      "component": "training",
+      "sha256": "8a7fe5be8b90d6078b09913ca28f7e5d342f8d3cde856ab4e3327d2970b887f8",
+      "bytes": 55658
+    },
+    {
+      "path": "media/controls/pose.jpg",
+      "component": "training",
+      "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+      "bytes": 44100
+    },
+    {
+      "path": "media/controls/pose_lower_body_occluded.png",
+      "component": "training",
+      "sha256": "1f02ac8dd8b7223f678d90bb6af31059c0fe593f02f4e8916530e2676b0fc18d",
+      "bytes": 289589
+    },
+    {
+      "path": "media/controls/sources.json",
+      "component": "training",
+      "sha256": "ffa901e58916150c7ec273c4ffb72d9b184e058f55249442110bbbbe41fffda4",
+      "bytes": 2065
+    },
+    {
+      "path": "media/controls/tfjs_pose.jpg",
+      "component": "training",
+      "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+      "bytes": 44100
+    },
+    {
+      "path": "wheelhouse/pillow-10.4.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "component": "training",
+      "sha256": "b15e02e9bb4c21e39876698abf233c8c579127986f8207200bc8a8f6bb27acf2",
+      "bytes": 4330810
+    },
+    {
+      "path": "wheelhouse/wheels.lock.json",
+      "component": "training",
+      "sha256": "e2d1d9b2e1cee23d46a902678b8b127cc5b5f808c71836c237a9dc09c7ac73ce",
+      "bytes": 244
+    },
+    {
+      "path": "demos/hand_gesture/assets/gesture-qnn_dlc-w8a8.zip",
+      "component": "gesture",
+      "sha256": "2b46cb6867df8e677f5c70372ba7f00f1538d5c17b94b7d8d0f8f1ef1477df91",
+      "bytes": 4478240
+    },
+    {
+      "path": "demos/hand_gesture/assets/model_card.md.txt",
+      "component": "gesture",
+      "sha256": "de2796c7356356a4d16e63211f15dbf617fa56b4cb4bab4b812922c561ad3214",
+      "bytes": 31991
+    },
+    {
+      "path": "demos/hand_gesture/assets/official_sample_notebook.ipynb.txt",
+      "component": "gesture",
+      "sha256": "a5723f6fa34cd35ca2b469165cbc1f45c1aa6249050ec46134e8fe5fabde963d",
+      "bytes": 12667
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_app.py.txt",
+      "component": "gesture",
+      "sha256": "f34fce362e112ec3691c10bd785545be4e281460030800e0d6f2cf5f693a2120",
+      "bytes": 21594
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_boxes.py.txt",
+      "component": "gesture",
+      "sha256": "f8139b5123a0841ea71fc1cbfbd852c2ea9a92cb6193c62969e9135a9e867d7c",
+      "bytes": 20974
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_hand_model.py.txt",
+      "component": "gesture",
+      "sha256": "8632f1aeddd43cc9d1c772b94aa0536163f22c81a2ce54b64e0870afa8a5e08b",
+      "bytes": 11083
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_mediapipe_app.py.txt",
+      "component": "gesture",
+      "sha256": "7b869aaeaa0272b7b407c9f3af41d945ac3a1e135267bf6c834459d8ae1145d3",
+      "bytes": 33036
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_mediapipe_utils.py.txt",
+      "component": "gesture",
+      "sha256": "1f0b13bbc1eff2417d6b14c2f47f8f37cb92ac2c167438a67e6bba890d63cee6",
+      "bytes": 6497
+    },
+    {
+      "path": "demos/hand_gesture/assets/reference_model.py.txt",
+      "component": "gesture",
+      "sha256": "9b9855532bf33c74224b97a44cb87086fed9fe7d1761cc88aee52472a7b29d3c",
+      "bytes": 34368
+    },
+    {
+      "path": "demos/hand_gesture/assets/sources.lock.json",
+      "component": "gesture",
+      "sha256": "cb364c086ef861b3da648d7311d60dab6b67f62e97302c82871ae9c502e58652",
+      "bytes": 6248
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/closed_fist.jpg",
+      "component": "gesture",
+      "sha256": "0e9b6332547e6fd3ba39be1dd5d10d3710eaf44d8217a5bedde8bcb803475fc9",
+      "bytes": 1958469
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/full_open_palm.png",
+      "component": "gesture",
+      "sha256": "2456fd263914f7b6c9109edc5056d994c7ca140fad3c567d2edf0f5422a42e22",
+      "bytes": 8179354
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/iloveyou.jpg",
+      "component": "gesture",
+      "sha256": "24dd7901df3ec8de7ba2cbf801e36d6bfc8264f4a8d9d2e231e320289fdce593",
+      "bytes": 760980
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/open_palm.jpg",
+      "component": "gesture",
+      "sha256": "0bc2f3caef9dce603ea7c18ad3f0f033896dc6a11b03b3bb2105c1cfd93b68db",
+      "bytes": 88905
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/pointing_up.jpg",
+      "component": "gesture",
+      "sha256": "f4a701316b63dd8fa56e622f2b3042766369ccc189f0d89513f803cd985b993b",
+      "bytes": 36757
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/test_fist.jpg",
+      "component": "gesture",
+      "sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+      "bytes": 71355
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/test_fist.png",
+      "component": "gesture",
+      "sha256": "4397b3d3f590c88a8de7d21c08d73a0df4a97fd93f92cbd086eef37fd246daaa",
+      "bytes": 207870
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/test_right_hands.jpg",
+      "component": "gesture",
+      "sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f",
+      "bytes": 54887
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/test_victory.jpg",
+      "component": "gesture",
+      "sha256": "84cb8853e3df614e0cb5c93a25e3e2f38ea5e4f92fd428ee7d867ed3479d5764",
+      "bytes": 69362
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/thumbs_down.jpg",
+      "component": "gesture",
+      "sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+      "bytes": 46651
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/thumbs_up.jpg",
+      "component": "gesture",
+      "sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba",
+      "bytes": 28894
+    },
+    {
+      "path": "demos/hand_gesture/assets/images/victory.jpg",
+      "component": "gesture",
+      "sha256": "6ac265f3ace6a6c4ac4a9079b63fcce4ab6517272afb1e430857f55ef324fde6",
+      "bytes": 19125
+    },
+    {
+      "path": "demos/hand_gesture/assets/licenses/MEDIAPIPE_LICENSE.txt",
+      "component": "gesture",
+      "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+      "bytes": 12331
+    },
+    {
+      "path": "demos/hand_gesture/assets/licenses/MODEL_LICENSE_POINTER.txt",
+      "component": "gesture",
+      "sha256": "3fb02eea5325a8c50fc8e493059f51a2df600a9edd4bd683e626ef3b1b026019",
+      "bytes": 123
+    },
+    {
+      "path": "demos/hand_gesture/assets/licenses/QAI_HUB_MODELS_LICENSE.txt",
+      "component": "gesture",
+      "sha256": "1935f1927570e99e49d0f2f48b3d1e918c1a78d65d4d6f00e89c7c0bf9d4ddaf",
+      "bytes": 1501
+    },
+    {
+      "path": "demos/hand_gesture/assets/models/mediapipe_hand_gesture-qnn_dlc-w8a8/canned_gesture_classifier.dlc",
+      "component": "gesture",
+      "sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d",
+      "bytes": 454520
+    },
+    {
+      "path": "demos/hand_gesture/assets/models/mediapipe_hand_gesture-qnn_dlc-w8a8/hand_landmark_detector.dlc",
+      "component": "gesture",
+      "sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c",
+      "bytes": 3973064
+    },
+    {
+      "path": "demos/hand_gesture/assets/models/mediapipe_hand_gesture-qnn_dlc-w8a8/metadata.json",
+      "component": "gesture",
+      "sha256": "9f87cd52303554231735a5199c65c1d31f246a71468dea4fac3359fd581d5af2",
+      "bytes": 5134
+    },
+    {
+      "path": "demos/hand_gesture/assets/models/mediapipe_hand_gesture-qnn_dlc-w8a8/palm_detector.dlc",
+      "component": "gesture",
+      "sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b",
+      "bytes": 2793248
+    },
+    {
+      "path": "provision_target/cache/iperf-3.22.tar.gz",
+      "component": "network-and-python",
+      "sha256": "1c0d0fb02c52626111d6e132db80edfbf27bbaff8bd9245df2a371dcb0b35a92",
+      "bytes": 849295
+    },
+    {
+      "path": "provision_target/cache/iproute2_5.5.0-1ubuntu1_arm64.deb",
+      "component": "network-and-python",
+      "sha256": "0f0e4d950ed2b71ad5813ac77868999b6d154b1a41aa73a43d57ecdf1a1f9150",
+      "bytes": 834768
+    },
+    {
+      "path": "provision_target/cache/numpy-1.24.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "component": "network-and-python",
+      "sha256": "a5425b114831d1e77e4b5d812b69d11d962e104095a5b9c3b641a218abcc050e",
+      "bytes": 14039616
+    },
+    {
+      "path": "wheelhouse/pillow-10.4.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "component": "network-and-python",
+      "sha256": "b15e02e9bb4c21e39876698abf233c8c579127986f8207200bc8a8f6bb27acf2",
+      "bytes": 4330810
+    },
+    {
+      "path": "provision_target/adb_session.py",
+      "component": "installer",
+      "sha256": "83cc4cefa5b1fb38be5e3c19c6a2df46e0caa7e0049a07b453a083dd7f1d66d0",
+      "bytes": 236
+    },
+    {
+      "path": "provision_target/inspect_device.py",
+      "component": "installer",
+      "sha256": "c708ab5cec8336a50833b6e9b6057c7247dcb7595ef88e47330f82721dd11b4a",
+      "bytes": 1860
+    },
+    {
+      "path": "provision_target/inventory_target.py",
+      "component": "installer",
+      "sha256": "7bc177fadd0996a4ffd903fe98e35588ab7f91a3a28be6815aa749a2d5dd78b5",
+      "bytes": 7988
+    },
+    {
+      "path": "provision_target/provision.py",
+      "component": "installer",
+      "sha256": "c35284f8450b2da46ead2053b6b3774e1ede78ccc9b322f6940c72e71edc3820",
+      "bytes": 18023
+    },
+    {
+      "path": "provision_target/target_install.py",
+      "component": "installer",
+      "sha256": "59f4758d17a4764c2dbf76bc863fb8d5b27875f45c53ffa511a10808739ebe60",
+      "bytes": 7224
+    },
+    {
+      "path": "provision_target/test_provision.py",
+      "component": "installer",
+      "sha256": "cfee5b59d8143bfaa985faa4e48d7f9a0ef5f08d9ad2a8b1fab657facbce3e2d",
+      "bytes": 9467
+    },
+    {
+      "path": "provision_target/write_report.py",
+      "component": "installer",
+      "sha256": "346e9bc68e75b82fe1c9d14ae350ecbf87e3d7044dee4d4ef79b943134a70037",
+      "bytes": 8089
+    },
+    {
+      "path": "runtimes/qairt_2_51/analyze_results.py",
+      "component": "installer",
+      "sha256": "b48c4fc783c27217299a1dae95d6b8e62d2fafceeda6004767398e19cda8e380",
+      "bytes": 6056
+    },
+    {
+      "path": "runtimes/qairt_2_51/audit_persistent.py",
+      "component": "installer",
+      "sha256": "6752c82764cf7551d27a8f533ac51141fc3a15a55b0ac52d2ae4d584a0ac6ab7",
+      "bytes": 2021
+    },
+    {
+      "path": "runtimes/qairt_2_51/cleanup_target.py",
+      "component": "installer",
+      "sha256": "6898ea97e9ea816c76de425f704d687f5313b55d3d2f67f92882e0c52fda78dd",
+      "bytes": 808
+    },
+    {
+      "path": "runtimes/qairt_2_51/collect_profiles.py",
+      "component": "installer",
+      "sha256": "834c3a626544a5f3d56a681724e03bedb6eb7b79ad3488cc856b4449e293f93e",
+      "bytes": 1046
+    },
+    {
+      "path": "runtimes/qairt_2_51/download_assets.py",
+      "component": "installer",
+      "sha256": "5c3d9c4838f15c05284b1400889f8fd1264a1a47f8e72181f1489931d9d5676c",
+      "bytes": 2171
+    },
+    {
+      "path": "runtimes/qairt_2_51/finalize_package.py",
+      "component": "installer",
+      "sha256": "2364fda716221f7647e3d65d2ea0c4f75dfb733567ed03f4140fa8883af3ee3c",
+      "bytes": 137
+    },
+    {
+      "path": "runtimes/qairt_2_51/prepare_input.py",
+      "component": "installer",
+      "sha256": "4cf8747b0e803904255b941e394bd42cee195e6998ecbc5d311b957c2bd099f4",
+      "bytes": 1723
+    },
+    {
+      "path": "runtimes/qairt_2_51/probe_runtime.py",
+      "component": "installer",
+      "sha256": "2c84e72597a117d6793210461a454d9700997e3a581adeb8efd141da7c756288",
+      "bytes": 544
+    },
+    {
+      "path": "runtimes/qairt_2_51/refresh_reports.py",
+      "component": "installer",
+      "sha256": "3b96d1801d8b59f079cbaf9698a597626d014de62ec23e967a8fdb8f477b6400",
+      "bytes": 4728
+    },
+    {
+      "path": "runtimes/qairt_2_51/sdk_download.py",
+      "component": "installer",
+      "sha256": "b24b92caf911ac398a941d4a2e7f5b50ca0f24d23b60bfa0af061912bf96dde3",
+      "bytes": 4033
+    },
+    {
+      "path": "runtimes/qairt_2_51/update_qairt.py",
+      "component": "installer",
+      "sha256": "d0f6d523e8e579665aa5fd58d31fd79bcdc1b88e765c331b5fa21e65c2bec393",
+      "bytes": 14523
+    },
+    {
+      "path": "runtimes/qairt_2_51/verify_reversibility.py",
+      "component": "installer",
+      "sha256": "8732cfea4c713d038daa2a6c76f7b22e3260fd11b94653ff6b332dfffc45f23f",
+      "bytes": 1726
+    },
+    {
+      "path": "demos/hand_gesture/download_gesture.py",
+      "component": "installer",
+      "sha256": "e6b4cdace4ad50c14b4abd1d171fbf61520e235703dc4a09f7a607d3c009fa6a",
+      "bytes": 4317
+    },
+    {
+      "path": "demos/hand_gesture/geometry.py",
+      "component": "installer",
+      "sha256": "d4480ec952570ecc5b5f197cf49f4e10ab8a34f1c70ef66ba7fa655074ba03db",
+      "bytes": 4036
+    },
+    {
+      "path": "demos/hand_gesture/gesture_demo.py",
+      "component": "installer",
+      "sha256": "69afd637b022aedb3d6c2e33640f717dc4ff7bd8186d8ef917bc88d446258ddd",
+      "bytes": 11499
+    },
+    {
+      "path": "provision_target/sources.lock.json",
+      "component": "installer-metadata",
+      "sha256": "33bca6b25cbaee1b28010b622e30f73706821327f56240e3c084b693ee098963",
+      "bytes": 1176
+    },
+    {
+      "path": "runtimes/qairt_2_51/versions.lock.json",
+      "component": "installer-metadata",
+      "sha256": "2f518dc0e36038f28106a5833c769ede8f3fa248e66503347b8f54444b199375",
+      "bytes": 7143
+    },
+    {
+      "path": "demos/hand_gesture/assets.lock.json",
+      "component": "installer-metadata",
+      "sha256": "6c008ab2032570c10b88d189603bcd47b0f6e183f68636ac3f1c4c6c8f065023",
+      "bytes": 6248
+    },
+    {
+      "path": "host/adb_transport.py",
+      "component": "host-support",
+      "sha256": "1d4883d068102c06539d20be1302171dcce76219a419059a3c9c5826476cbd65",
+      "bytes": 13518
+    },
+    {
+      "path": "host/provision_session.py",
+      "component": "host-support",
+      "sha256": "f8e2ded8cfd55e31764395df3777d032044e8ec848fbbe38ce404fa4d3f4a914",
+      "bytes": 6306
+    },
+    {
+      "path": "provision_target/setup_host.ps1",
+      "component": "host-support",
+      "sha256": "7601ff6fff611a78a42985705470e5452bbb5a92ee80964852fb9189877d2068",
+      "bytes": 5834
+    },
+    {
+      "path": "runtimes/qairt_2_51/requirements-host.txt",
+      "component": "host-support",
+      "sha256": "e32056a5263b5972e789540468f3d3e1e8e2d1649d21ef65e814317727be4897",
+      "bytes": 28
+    }
+  ],
+  "total_bytes": 470093741
+}

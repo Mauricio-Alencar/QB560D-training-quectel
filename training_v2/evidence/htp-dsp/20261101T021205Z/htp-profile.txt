@@ -1,0 +1,70 @@
+Log File Created: Sat Oct 31 23:12:23 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793499143795047 Steady Clock Timestamp: 11419882624
+Software library version: 2.26.0.240827110523_99241
+------------------------------------------------------------
+
+SNPE Create Statistics:
+----------------------------------------
+  Load: 87 us
+  Deserialize: 446 us
+  Create: 247164 us
+
+  Init: 250348 us
+  De-Init: 8215 us
+
+  Create Network(s): 238648 us
+  RPC Init Time: 5696 us
+  Snpe Accelerator Init Time: 4661 us
+  Accelerator Init Time: 4570 us
+
+SNPE Execute Statistics (Averaged):
+----------------------------------------
+  Total Inference Time: 3400 us
+  Forward Propagate Time: 3295 us
+  RPC Execute Time: 3046 us
+  Snpe Accelerator Time: 2011 us
+  Num times yield occurred: 0
+  Accelerator Time: 735 us
+
+  Per-Subnet Execution Times: 
+  ------------------------------
+    Subnet 0 (DSP) : 1053217 cycles
+
+  Per-Layer Execution Times: 
+  ------------------------------
+    0: Input OpId_2 (cycles) : 0 cycles : DSP
+    1: MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles) : 150407 cycles : DSP
+    2: MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_28 (cycles) : 28561 cycles : DSP
+    3: MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_34 (cycles) : 8156 cycles : DSP
+    4: MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_41 (cycles) : 90661 cycles : DSP
+    5: MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_47 (cycles) : 7438 cycles : DSP
+    6: MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_54 (cycles) : 29273 cycles : DSP
+    7: MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_60 (cycles) : 14270 cycles : DSP
+    8: MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_67 (cycles) : 60476 cycles : DSP
+    9: MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_73 (cycles) : 13174 cycles : DSP
+    10: MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_80 (cycles) : 63180 cycles : DSP
+    11: MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_86 (cycles) : 17760 cycles : DSP
+    12: MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_93 (cycles) : 43858 cycles : DSP
+    13: MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_99 (cycles) : 9737 cycles : DSP
+    14: MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_106 (cycles) : 22828 cycles : DSP
+    15: MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_112 (cycles) : 30388 cycles : DSP
+    16: MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_119 (cycles) : 14875 cycles : DSP
+    17: MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_125 (cycles) : 23602 cycles : DSP
+    18: MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_132 (cycles) : 15514 cycles : DSP
+    19: MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_138 (cycles) : 17996 cycles : DSP
+    20: MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_145 (cycles) : 13749 cycles : DSP
+    21: MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_151 (cycles) : 26906 cycles : DSP
+    22: MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_158 (cycles) : 12462 cycles : DSP
+    23: MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_164 (cycles) : 17686 cycles : DSP
+    24: MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_171 (cycles) : 52815 cycles : DSP
+    25: MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_177 (cycles) : 12458 cycles : DSP
+    26: MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_184 (cycles) : 18227 cycles : DSP
+    27: MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_190 (cycles) : 26277 cycles : DSP
+    28: MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_195 (cycles) : 149952 cycles : DSP
+    29: MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_203 (cycles) : 37789 cycles : DSP
+    30: MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd.nchw:OpId_206 (cycles) : 0 cycles : DSP
+    31: MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_207 (cycles) : 2180 cycles : DSP
+    32: MobilenetV1/Predictions/Reshape_1_prequant:OpId_208 (cycles) : 15006 cycles : DSP
+    33: Output OpId_3 (cycles) : 5556 cycles : DSP
+

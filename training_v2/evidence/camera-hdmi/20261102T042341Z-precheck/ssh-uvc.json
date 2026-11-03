@@ -1,0 +1,4 @@
+{
+  "command": "ss -lntp | head -n 25; ps -eo pid,comm,args | grep -Ei 'sshd|dropbear' | grep -v grep || true; systemctl list-unit-files --no-pager | grep -Ei 'ssh|dropbear|weston' || true; for f in /proc/config.gz /boot/config-$(uname -r); do if [ -f \"$f\" ]; then case \"$f\" in *.gz) zcat \"$f\";; *) cat \"$f\";; esac | grep -E 'CONFIG_USB_VIDEO_CLASS|CONFIG_MEDIA_USB_SUPPORT|CONFIG_VIDEO_V4L2'; fi; done; gst-inspect-1.0 waylandsink 2>/dev/null | head -n 18; ls -l /run/user/0/wayland* /run/wayland* 2>/dev/null || true",
+  "exit_code": 0
+}

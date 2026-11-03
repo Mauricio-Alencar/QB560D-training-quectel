@@ -1,0 +1,101 @@
+{
+  "detections": [
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.82421875,
+      "box_yxyx": [
+        0.351614773273468,
+        0.2719726264476776,
+        0.9715642333030701,
+        0.7610664367675781
+      ]
+    }
+  ],
+  "demo_id": "D2-06",
+  "backend": "CPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+  "image_sha256": "5abff5f522149fe1eb206e59a0c85923ccd6d452c3e8189ddb8288e2bdb7b905",
+  "runs": 1,
+  "warmup": 0,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 54.932342000029166,
+  "inference_ms_p95": 54.932342000029166,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "normalized_input_image_tensor",
+        "shape": [
+          1,
+          300,
+          300,
+          3
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.0078125,
+          128
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "TFLite_Detection_PostProcess",
+        "shape": [
+          1,
+          10,
+          4
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "TFLite_Detection_PostProcess:1",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "TFLite_Detection_PostProcess:2",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "TFLite_Detection_PostProcess:3",
+        "shape": [
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}

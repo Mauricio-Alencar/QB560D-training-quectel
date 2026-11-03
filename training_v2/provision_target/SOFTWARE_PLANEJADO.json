@@ -1,0 +1,139 @@
+{
+  "installation_executed": true,
+  "installation_status": "INSTALL_AND_VALIDATION_PASSED",
+  "installation_evidence": "evidence/20261101T164740178626Z-apply/result.json",
+  "current_state_basis": "The current_state fields below describe the original firmware inventory before provisioning; installed versions are the planned_version values validated by the apply evidence.",
+  "software": [
+    {
+      "software": "iperf3",
+      "planned_version": "3.22",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-workshop/tools/iperf3-3.22",
+      "source": "https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz",
+      "method": "Native build with existing GCC/Make; --without-openssl; SHA256 pinned"
+    },
+    {
+      "software": "ss (iproute2)",
+      "planned_version": "5.5.0-1ubuntu1",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-workshop/tools/ss-5.5.0",
+      "source": "https://ports.ubuntu.com/ubuntu-ports/pool/main/i/iproute2/iproute2_5.5.0-1ubuntu1_arm64.deb",
+      "method": "Extract ss/copyright only; no dpkg installation or replacement of ip"
+    },
+    {
+      "software": "NumPy",
+      "planned_version": "1.24.4",
+      "current_state": "global 1.17.4 retained",
+      "destination": "/opt/qb560d-training-payload/.python-deps",
+      "source": "PyPI pinned CP38/AArch64 wheel",
+      "method": "Private wheel extraction; no target pip or global Python replacement"
+    },
+    {
+      "software": "Pillow",
+      "planned_version": "10.4.0",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-training-payload/.python-deps",
+      "source": "PyPI pinned CP38/AArch64 wheel",
+      "method": "Private wheel extraction; no target pip or global Python replacement"
+    },
+    {
+      "software": "Docker Engine/CLI",
+      "planned_version": "29.9.2",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-docker-demo",
+      "source": "demos/docker/offline/runtime.lock.json",
+      "method": "Official static runtime; private daemon, socket and Docker unit"
+    },
+    {
+      "software": "containerd and ctr/shim",
+      "planned_version": "2.4.2",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-docker-demo",
+      "source": "demos/docker/offline/runtime.lock.json",
+      "method": "Official static runtime; private daemon, socket and Docker unit"
+    },
+    {
+      "software": "runc",
+      "planned_version": "1.5.2",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-docker-demo",
+      "source": "demos/docker/offline/runtime.lock.json",
+      "method": "Official static runtime; private daemon, socket and Docker unit"
+    },
+    {
+      "software": "docker-init / docker-proxy",
+      "planned_version": "bundled with Docker 29.9.2",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-docker-demo",
+      "source": "demos/docker/offline/runtime.lock.json",
+      "method": "Official static runtime; private daemon, socket and Docker unit"
+    },
+    {
+      "software": "Docker Buildx",
+      "planned_version": "v0.38.1",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-docker-demo",
+      "source": "demos/docker/offline/runtime.lock.json",
+      "method": "Official static runtime; private daemon, socket and Docker unit"
+    },
+    {
+      "software": "Telemetry OCI image",
+      "planned_version": "qb560d-telemetry:1.0.0",
+      "current_state": "absent",
+      "destination": "Docker private image storage",
+      "source": "demos/docker/offline/image.lock.json",
+      "method": "Offline docker load; image includes its own Python/Linux userland"
+    },
+    {
+      "software": "QAIRT/QNN/SNPE",
+      "planned_version": "2.51.40.260930230134",
+      "current_state": "SNPE 2.21 and legacy 2.12 retained; QNN 2.51 absent",
+      "destination": "/opt/qairt-isolated/2.51.40.260930",
+      "source": "update_QIART/versions.lock.json",
+      "method": "Parallel installation, per-process library paths, HTP v68"
+    },
+    {
+      "software": "Native training payload",
+      "planned_version": "current locked repository revision",
+      "current_state": "absent",
+      "destination": "/opt/qb560d-training-payload",
+      "source": "bundle-manifest.json",
+      "method": "Sources, five TFLite models, media, example config, wheels"
+    },
+    {
+      "software": "MobileNet V2 QNN DLC",
+      "planned_version": "v0.65.0 w8a8",
+      "current_state": "absent",
+      "destination": "/opt/qairt-isolated/2.51.40.260930/model",
+      "source": "update_QIART/versions.lock.json",
+      "method": "Precompiled DLC; CPU/HTP validation after installation"
+    },
+    {
+      "software": "MediaPipe hand gesture DLCs",
+      "planned_version": "v0.65.0 w8a8, three graphs",
+      "current_state": "absent",
+      "destination": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture",
+      "source": "update_QIART/hand_gesture/assets.lock.json",
+      "method": "Precompiled DLCs and selected photos; HTP validation after installation"
+    }
+  ],
+  "system_packages_replaced": [],
+  "outside_opt_changes": [
+    "/etc/systemd/system/qb560d-docker-demo.service",
+    "Start Docker training service, not enable at boot",
+    "Set UTC from host if target clock differs by more than five minutes"
+  ],
+  "existing_reused": [
+    "Ubuntu, kernel, glibc, Python, gcc/g++, make, systemd/journald, curl, ip/ping, GStreamer/V4L2, TFLite C API, FastRPC/OpenCL"
+  ],
+  "not_required_on_target": [
+    "pip/venv",
+    "PyTorch",
+    "TensorFlow Python",
+    "ONNX Runtime",
+    "OpenCV Python",
+    "Git",
+    "CMake",
+    "Docker Compose"
+  ]
+}

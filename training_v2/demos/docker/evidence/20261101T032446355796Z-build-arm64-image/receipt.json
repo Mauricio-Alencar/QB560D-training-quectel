@@ -1,0 +1,6 @@
+{
+  "command": "sh /opt/qb560d-docker-demo/target/build.sh",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:25:22.194357+00:00"
+}

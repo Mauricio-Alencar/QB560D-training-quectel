@@ -1,0 +1,49 @@
+Result=exit-code
+ExecMainStatus=255
+Requires=system.slice sysinit.target dbus.socket avahi-daemon.socket
+Wants=
+Before=multi-user.target shutdown.target
+After=system.slice sysinit.target dbus.socket avahi-daemon.socket systemd-journa
+ld.socket basic.target
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/avahi-daemon.service
+# /lib/systemd/system/avahi-daemon.service
+# This file is part of avahi.
+#
+# avahi is free software; you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# avahi is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+# License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with avahi; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+# USA.
+
+[Unit]
+Description=Avahi mDNS/DNS-SD Stack
+Requires=avahi-daemon.socket
+
+[Service]
+--More---- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:43 CST. --
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Found user 'avahi' (UID 114) and group 'avahi' (GID 123).
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Starting Avahi mDNS/DNS-SD Stack...
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Successfully dropped root privileges.
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: avahi-daemon 0.7 starting up.
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Successfully called chroot().
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Successfully dropped remaining capabilities.
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3326]: chroot.c: open() failed: No such file or directory
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Failed to open /etc/resolv.conf: Invalid argument
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: No service file found in /etc/avahi/services.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: avahi-daemon.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: Failed to create server: No suitable network protocol available
+Nov 02 06:23:53 qcs6490-odk avahi-daemon[3205]: avahi-daemon 0.7 exiting.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: avahi-daemon.service: Failed with result 'exit-code'.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Failed to start Avahi mDNS/DNS-SD Stack.
+

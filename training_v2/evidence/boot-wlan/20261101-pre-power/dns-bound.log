@@ -1,0 +1,7 @@
+{"iface": "wlan0", "server": "192.168.0.1", "error": "timed out"}
+{"iface": "wlan0", "server": "181.213.132.2", "reply_bytes": 61, "rcode": 0, "answer_count": 2, "seconds": 0.0318341700003657}
+{"iface": "wlan0", "server": "1.1.1.1", "reply_bytes": 61, "rcode": 0, "answer_count": 2, "seconds": 0.0848049810010707}
+{"iface": "rmnet_data0", "server": "192.168.0.1", "error": "timed out"}
+{"iface": "rmnet_data0", "server": "181.213.132.2", "error": "timed out"}
+{"iface": "rmnet_data0", "server": "1.1.1.1", "reply_bytes": 61, "rcode": 0, "answer_count": 2, "seconds": 0.08645335099936347}
+

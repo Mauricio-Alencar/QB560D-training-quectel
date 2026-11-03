@@ -1,0 +1,19 @@
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     qb560d-training-wlan
+IP4.ADDRESS[1]:                         192.168.0.26/24
+IP4.GATEWAY:                            192.168.0.1
+IP4.DNS[1]:                             181.213.132.2
+IP4.DNS[2]:                             181.213.132.3
+35: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 3000
+    inet 192.168.0.26/24 brd 192.168.0.255 scope global noprefixroute dynamic wlan0
+       valid_lft 2089sec preferred_lft 2089sec
+default via 100.65.195.62 dev rmnet_data0  metric 500 
+default via 192.168.0.1 dev wlan0  proto dhcp  metric 600 
+100.65.195.60/30 dev rmnet_data0  proto kernel  scope link  src 100.65.195.62 
+192.168.0.0/24 dev wlan0  proto kernel  scope link  src 192.168.0.26  metric 600 
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+NTPSynchronized=yes
+TimeUSec=Mon 2026-11-02 05:29:33 CST
+active
+active
+

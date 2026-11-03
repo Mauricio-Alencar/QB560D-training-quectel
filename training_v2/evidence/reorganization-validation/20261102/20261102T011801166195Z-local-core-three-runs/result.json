@@ -1,0 +1,15 @@
+{
+  "label": "local-core-three-runs",
+  "script": "host\\rehearse_local.py",
+  "args": [
+    "--repeat",
+    "3",
+    "--unit-label",
+    "Reference-reorganized"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 1,
+  "timed_out": false,
+  "seconds": 63.687,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T011801166195Z-local-core-three-runs\\console.log"
+}

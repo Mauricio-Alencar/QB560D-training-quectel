@@ -1,0 +1,5 @@
+{
+  "command": "cd /tmp/qairt-isolated-20261101T020546Z\n/usr/bin/g++ -std=c++17 -O2 -I/tmp/qairt-isolated-20261101T020546Z/include/QNN /tmp/qairt-isolated-20261101T020546Z/tiny_graph.cpp -ldl -o /tmp/qairt-isolated-20261101T020546Z/bin/tiny_graph",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:13:44.864604+00:00"
+}

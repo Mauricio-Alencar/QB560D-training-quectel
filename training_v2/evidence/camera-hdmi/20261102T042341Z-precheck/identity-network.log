@@ -1,0 +1,9 @@
+uid=0(root) gid=0(root) groups=0(root)
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+mainversion=QDPA_Ubuntu20.04.003.51.303
+subversion=V01
+35: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 3000
+    inet 192.168.0.26/24 brd 192.168.0.255 scope global noprefixroute dynamic wlan0
+       valid_lft 2527sec preferred_lft 2527sec
+inactive
+256 SHA256:xpSldx2cTLnsMnsFtLYSYY69ZMah04Bu6aH79iWpTd8 root@07f5d17c3082 (ED25519)

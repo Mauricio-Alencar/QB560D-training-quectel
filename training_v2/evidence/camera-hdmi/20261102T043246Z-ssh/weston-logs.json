@@ -1,0 +1,6 @@
+{
+  "transport": "SSH",
+  "host_key_verified": true,
+  "command": "systemctl --no-pager --full status weston 2>&1 || true; journalctl -b _COMM=weston --no-pager -n 100 2>&1; printf '\\nDISPLAY SERVICES\\n'; systemctl list-units --all --no-pager | grep -Ei 'weston|display|surface|sdm|composer' || true; printf '\\nLOGCAT\\n'; if command -v logcat >/dev/null; then logcat -d -t 600 2>/dev/null | grep -Ei 'lt9611|hdmi|edid|hpd|weston|sdm|display' | tail -n 100; fi",
+  "exit_code": 0
+}

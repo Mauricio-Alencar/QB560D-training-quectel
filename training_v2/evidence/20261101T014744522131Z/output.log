@@ -1,0 +1,65 @@
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 2, option - 2
+[USER_INFO] Checking unsigned PD session
+[USER_INFO] QnnDsp <I> QnnHtpLog_create started.
+[USER_WARNING] QnnDsp <W> Initializing HtpProvider
+[USER_VERBOSE] QnnDsp <V> Creating default router
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC create
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the router
+[USER_ERROR] QnnDsp <E> Dsp startup: Unsupported SoC model (SnapdragonModel): 35
+[USER_ERROR] QnnDsp <E> Htp startup on load failed
+[USER_ERROR] QnnDsp <E> Unable to load Remote symbols 4000
+[USER_VERBOSE] QnnDsp <V> Async property not supported. Skipping setup async threads
+[USER_VERBOSE] QnnDsp <V> Detected Snapdragon SOC SM7325 with 5 SOCs
+[USER_VERBOSE] QnnDsp <V> Allocating PlatformInfo struct size 120
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the log registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the graph registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the context registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the device registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the tensor counter
+[USER_VERBOSE] QnnDsp <V> HTP: setting isExitCalled to false
+[USER_VERBOSE] QnnDsp <V> HTP: initializing mem registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing mmap registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing graphId registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing debugFactory
+[USER_VERBOSE] QnnDsp <V> HTP: constructing bundle
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC isPrepareLibLoaded
+[USER_ERROR] QnnDsp <E> Dsp startup: Unsupported SoC model (SnapdragonModel): 35
+[USER_ERROR] QnnDsp <E> Htp startup on load failed
+[USER_ERROR] QnnDsp <E> Failed to init support HTP features
+[USER_INFO] QnnDsp <I> Applying log level 4 to 0 devices
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC initializeNativeOpValidatorLogs
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+[USER_VERBOSE] QnnDsp <V> HTP Prepare backend not loaded
+[USER_INFO] QnnDsp <I> QnnHtpLog_create exit.
+[USER_INFO] QnnDsp <I> QnnHtpBackend_create started. backend = 0xad132930
+[USER_VERBOSE] QnnDsp <V> Backend handle created: 1
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC isPrepareLibLoaded
+[USER_INFO] QnnDsp <I> QnnHtpBackend_create done successfully. backend = 0xad132930
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo started.
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo done. status 0x0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create started
+[USER_VERBOSE] QnnDsp <V> Create device with id 0x1
+[USER_VERBOSE] QnnDsp <V> Validating device config 0x2c5e070
+[USER_VERBOSE] QnnDsp <V> Setting device config 0x2c5e070 via router
+[USER_WARNING] QnnDsp <W> HTP arch will be deprecated, please set SoC id instead.
+[USER_ERROR] QnnDsp <E> Unsupported HTP arch 68 from device custom config
+[USER_ERROR] QnnDsp <E> Failed to parse custom config: 14001
+[USER_ERROR] QnnDsp <E> Failed to parse platform config: 14001
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create done. status 0x36b1
+[USER_ERROR] error code = 15001; QnnBackend_DeviceCreate() failed; QNN_DEVICE_ERROR_INVALID_CONFIG: Invalid config values
+Traceback (most recent call last):
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 210, in <module>
+    main()
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 175, in main
+    engine = Snpe(library, model, args.backend, output, {'off': 0, 'basic': 1, 'detailed': 2}[args.profiling])
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 74, in __init__
+    raise RuntimeError('Requested SNPE runtime is unavailable; no CPU retry')
+RuntimeError: Requested SNPE runtime is unavailable; no CPU retry
+[USER_VERBOSE] QnnDsp <V> Final cleanup: free backend id 0x1
+[USER_WARNING] QnnDsp <W> Backend 1 free cleanup called during process exit
+[USER_VERBOSE] QnnDsp <V> Terminated backend 0x1 successfully in backendLifecycleManager
+[USER_WARNING] QnnDsp <W> qnnOpPackageManager: hexagon unload op package function pointer is nullptr!
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC tryUnLoadPrepare
+
+__QB560D_EXIT__=1

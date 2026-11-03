@@ -1,0 +1,242 @@
+---
+library_name: pytorch
+license: apache-2.0
+tags:
+- backbone
+- real_time
+- android
+pipeline_tag: image-classification
+
+---
+
+![](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/web-assets/model_demo.png)
+
+# MobileNet-v2: Optimized for Qualcomm Devices
+
+MobileNetV2 is a machine learning model that can classify images from the Imagenet dataset. It can also be used as a backbone in building more complex models for specific use cases.
+
+This is based on the implementation of MobileNet-v2 found [here](https://github.com/tonylins/pytorch-mobilenet-v2/tree/master).
+This repository contains pre-exported model files optimized for Qualcomm® devices. You can use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mobilenet_v2) library to export with custom configurations. More details on model performance across various devices, can be found [here](#performance-summary).
+
+Qualcomm AI Hub Models uses [Qualcomm AI Hub Workbench](https://workbench.aihub.qualcomm.com) to compile, profile, and evaluate this model. [Sign up](https://myaccount.qualcomm.com/signup) to run these models on a hosted Qualcomm® device.
+
+## Getting Started
+There are two ways to deploy this model on your device:
+
+### Option 1: Download Pre-Exported Models
+
+Below are pre-exported model assets ready for deployment.
+
+| Runtime | Precision | Chipset | SDK Versions | Download |
+|---|---|---|---|---|
+| ONNX | float | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-onnx-float.zip)
+| ONNX | w8a16 | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-onnx-w8a16.zip)
+| ONNX | w8a16_mixed_int16 | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-onnx-w8a16_mixed_int16.zip)
+| ONNX | w8a8 | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-onnx-w8a8.zip)
+| QNN_DLC | float | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-float.zip)
+| QNN_DLC | w8a16 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a16.zip)
+| QNN_DLC | w8a16_mixed_int16 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a16_mixed_int16.zip)
+| QNN_DLC | w8a8 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a8.zip)
+| TFLITE | float | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-tflite-float.zip)
+| TFLITE | w8a8 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-tflite-w8a8.zip)
+
+For more device-specific assets and performance metrics, visit **[MobileNet-v2 on Qualcomm® AI Hub](https://aihub.qualcomm.com/models/mobilenet_v2)**.
+
+
+### Option 2: Export with Custom Configurations
+
+Use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mobilenet_v2) Python library to compile and export the model with your own:
+- Custom weights (e.g., fine-tuned checkpoints)
+- Custom input shapes
+- Target device and runtime configurations
+
+This option is ideal if you need to customize the model beyond the default configuration provided here.
+
+See our repository for [MobileNet-v2 on GitHub](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mobilenet_v2) for usage instructions.
+
+## Model Details
+
+**Model Type:** Model_use_case.image_classification
+
+**Model Stats:**
+- Input resolution: 224x224
+- Model checkpoint: Imagenet
+- Model size (float): 13.3 MB
+- Model size (w8a16): 4.39 MB
+- Number of parameters: 3.49M
+
+## Performance Summary
+| Model | Runtime | Precision | Chipset | Inference Time (ms) | Peak Memory Range (MB) | Primary Compute Unit
+|---|---|---|---|---|---|---
+| MobileNet-v2 | ONNX | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.284 ms | 0 - 33 MB | NPU
+| MobileNet-v2 | ONNX | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.335 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | ONNX | float | Snapdragon® X2 Elite | 0.306 ms | 2 - 2 MB | NPU
+| MobileNet-v2 | ONNX | float | Snapdragon® X Elite | 0.626 ms | 8 - 8 MB | NPU
+| MobileNet-v2 | ONNX | float | Snapdragon® 8 Gen 3 Mobile | 0.42 ms | 0 - 55 MB | NPU
+| MobileNet-v2 | ONNX | float | Snapdragon® 8 Gen 1 Mobile | 0.829 ms | 1 - 60 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® Dragonwing™ IQ-8275 | 0.856 ms | 0 - 4 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.627 ms | 0 - 9 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® QCS8450 | 0.829 ms | 1 - 60 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® Dragonwing™ IQ-9075 | 0.844 ms | 1 - 4 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® Dragonwing™ IQ-X7181 | 0.626 ms | 8 - 8 MB | NPU
+| MobileNet-v2 | ONNX | float | Qualcomm® Dragonwing™ Q-8750 | 0.335 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.226 ms | 0 - 41 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® 8 Elite For Galaxy Mobile | 0.273 ms | 0 - 41 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® X2 Elite | 0.253 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® X Elite | 0.561 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® 8 Gen 3 Mobile | 0.378 ms | 0 - 56 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® 8 Gen 1 Mobile | 0.646 ms | 0 - 61 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ QCS6490 | 1.811 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ IQ-8275 | 0.627 ms | 0 - 4 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.556 ms | 0 - 6 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® QCS8450 | 0.646 ms | 0 - 61 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ IQ-9075 | 0.694 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ IQ-X7181 | 0.561 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ Q-6690 | 2.736 ms | 0 - 146 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ Q-7790 | 0.616 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Qualcomm® Dragonwing™ Q-8750 | 0.273 ms | 0 - 41 MB | NPU
+| MobileNet-v2 | ONNX | w8a16 | Snapdragon® 7 Gen 4 Mobile | 0.616 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.262 ms | 0 - 43 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® 8 Elite For Galaxy Mobile | 0.319 ms | 0 - 41 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® X2 Elite | 0.291 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® X Elite | 0.634 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® 8 Gen 3 Mobile | 0.427 ms | 0 - 57 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-8275 | 0.654 ms | 0 - 4 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.617 ms | 0 - 7 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-9075 | 0.74 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-X7181 | 0.634 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-6690 | 3.753 ms | 0 - 147 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-7790 | 0.702 ms | 0 - 147 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-8750 | 0.319 ms | 0 - 41 MB | NPU
+| MobileNet-v2 | ONNX | w8a16_mixed_int16 | Snapdragon® 7 Gen 4 Mobile | 0.702 ms | 0 - 147 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.25 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.283 ms | 0 - 43 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® X2 Elite | 0.326 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® X Elite | 0.454 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.326 ms | 0 - 55 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.507 ms | 0 - 58 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.064 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.514 ms | 0 - 4 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.461 ms | 0 - 6 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® QCS8450 | 0.507 ms | 0 - 58 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.581 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.454 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.408 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.376 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.283 ms | 0 - 43 MB | NPU
+| MobileNet-v2 | ONNX | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.376 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.344 ms | 1 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.442 ms | 1 - 33 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® X2 Elite | 0.461 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® X Elite | 1.051 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® 8 Gen 3 Mobile | 0.598 ms | 0 - 53 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Snapdragon® 8 Gen 1 Mobile | 1.58 ms | 0 - 60 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-8275 | 1.028 ms | 1 - 4 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.907 ms | 1 - 2 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® SA8775P | 1.215 ms | 1 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® SA8650P | 1.215 ms | 1 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® SA8255P | 1.215 ms | 1 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® QCS8450 | 1.58 ms | 0 - 60 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-9075 | 1.092 ms | 3 - 5 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-X7181 | 1.051 ms | 1 - 1 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® Dragonwing™ Q-8750 | 0.442 ms | 1 - 33 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® SA7255P | 2.718 ms | 1 - 34 MB | NPU
+| MobileNet-v2 | QNN_DLC | float | Qualcomm® SA8295P | 1.377 ms | 0 - 32 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.292 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® 8 Elite For Galaxy Mobile | 0.376 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® X2 Elite | 0.43 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® X Elite | 0.94 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® 8 Gen 3 Mobile | 0.561 ms | 5 - 54 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® 8 Gen 1 Mobile | 0.946 ms | 0 - 51 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ QCS6490 | 2.385 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ IQ-8275 | 0.843 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.801 ms | 0 - 4 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® SA8650P | 1.005 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® SA8255P | 1.005 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® QCS8450 | 0.946 ms | 0 - 51 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ IQ-9075 | 0.903 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ IQ-X7181 | 0.94 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ Q-6690 | 3.393 ms | 0 - 141 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ Q-7790 | 0.839 ms | 0 - 140 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® Dragonwing™ Q-8750 | 0.376 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® SA7255P | 1.765 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Qualcomm® SA8295P | 1.171 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16 | Snapdragon® 7 Gen 4 Mobile | 0.839 ms | 0 - 140 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.32 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® 8 Elite For Galaxy Mobile | 0.417 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® X2 Elite | 0.455 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® X Elite | 1.003 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® 8 Gen 3 Mobile | 0.617 ms | 0 - 49 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-8275 | 0.899 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.863 ms | 0 - 2 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® SA8650P | 1.056 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® SA8255P | 1.056 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-9075 | 0.947 ms | 2 - 5 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ IQ-X7181 | 1.003 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-6690 | 4.673 ms | 0 - 142 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-7790 | 0.929 ms | 0 - 142 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® Dragonwing™ Q-8750 | 0.417 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Qualcomm® SA7255P | 1.95 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a16_mixed_int16 | Snapdragon® 7 Gen 4 Mobile | 0.929 ms | 0 - 142 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.187 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.221 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® X2 Elite | 0.274 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® X Elite | 0.539 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.313 ms | 0 - 47 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.493 ms | 0 - 49 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.325 ms | 0 - 2 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.468 ms | 0 - 3 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.441 ms | 0 - 2 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® SA8650P | 0.6 ms | 0 - 38 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® SA8255P | 0.6 ms | 0 - 38 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® QCS8450 | 0.493 ms | 0 - 49 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.509 ms | 2 - 4 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.539 ms | 0 - 0 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.738 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.466 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.221 ms | 0 - 39 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® SA7255P | 1.008 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Qualcomm® SA8295P | 0.679 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | QNN_DLC | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.466 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | TFLITE | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.34 ms | 0 - 38 MB | NPU
+| MobileNet-v2 | TFLITE | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.455 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | TFLITE | float | Snapdragon® 8 Gen 3 Mobile | 0.601 ms | 0 - 57 MB | NPU
+| MobileNet-v2 | TFLITE | float | Snapdragon® 8 Gen 1 Mobile | 1.571 ms | 0 - 63 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® Dragonwing™ IQ-8275 | 1.033 ms | 0 - 11 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.908 ms | 0 - 26 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® SA8775P | 1.21 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® SA8650P | 1.21 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® SA8255P | 1.21 ms | 0 - 40 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® QCS8450 | 1.571 ms | 0 - 63 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® Dragonwing™ IQ-9075 | 1.092 ms | 0 - 11 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® Dragonwing™ Q-8750 | 0.455 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® SA7255P | 2.638 ms | 0 - 37 MB | NPU
+| MobileNet-v2 | TFLITE | float | Qualcomm® SA8295P | 1.38 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.186 ms | 0 - 36 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.212 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.293 ms | 0 - 48 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.466 ms | 0 - 56 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.087 ms | 0 - 8 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.628 ms | 0 - 7 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.408 ms | 0 - 2 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® SA8650P | 0.592 ms | 0 - 38 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® SA8255P | 0.592 ms | 0 - 38 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® QCS8450 | 0.466 ms | 0 - 56 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.519 ms | 0 - 6 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.633 ms | 0 - 35 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.414 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.212 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Qualcomm® SA8295P | 0.662 ms | 0 - 34 MB | NPU
+| MobileNet-v2 | TFLITE | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.414 ms | 0 - 34 MB | NPU
+
+## License
+* The license for the original implementation of MobileNet-v2 can be found
+  [here](https://github.com/tonylins/pytorch-mobilenet-v2/blob/master/LICENSE).
+
+## References
+* [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
+* [Source Model Implementation](https://github.com/tonylins/pytorch-mobilenet-v2/tree/master)
+
+## Community
+* Join [our AI Hub Slack community](https://aihub.qualcomm.com/community/slack) to collaborate, post questions and learn more about on-device AI.
+* For questions or feedback please [reach out to us](mailto:ai-hub-support@qti.qualcomm.com).

@@ -1,0 +1,30 @@
+Result=exit-code
+ExecMainStatus=1
+Requires=sysinit.target system.slice
+Wants=network-pre.target
+Before=multi-user.target network-pre.target shutdown.target
+After=sysinit.target basic.target systemd-journald.socket system.slice
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/iptables.service
+# /lib/systemd/system/iptables.service
+[Unit]
+Description=IPv4 Packet Filtering Framework
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/iptables-restore -w -- /etc/iptables/iptables.rules
+ExecReload=/usr/sbin/iptables-restore -w -- /etc/iptables/iptables.rules
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:43 CST. --
+Nov 02 06:23:53 qcs6490-odk iptables-restore[3248]: Can't open /etc/iptables/iptables.rules: No such file or directory
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Starting IPv4 Packet Filtering Framework...
+Nov 02 06:23:53 qcs6490-odk systemd[1]: iptables.service: Main process exited, code=exited, status=1/FAILURE
+Nov 02 06:23:53 qcs6490-odk systemd[1]: iptables.service: Failed with result 'exit-code'.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Failed to start IPv4 Packet Filtering Framework.
+

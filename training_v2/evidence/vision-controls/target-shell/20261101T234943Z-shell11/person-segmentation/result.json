@@ -1,0 +1,32 @@
+{
+  "foreground_fraction": 0.0311284046692607,
+  "class_fractions": {
+    "background": 0.9688715953307393,
+    "person": 0.0311284046692607
+  },
+  "case": "person-segmentation",
+  "task": "segmentation",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+  "source_image_sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+  "prepared_tensor_sha256": "1adbf6c91e9adc80825ea84d1f9c04a603cbdf0bb99de56e9b2489b3f8a79fde",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 210,
+    "execute_us": [
+      19833.0,
+      10138.0,
+      11626.0
+    ]
+  },
+  "comparison_to_saved_cpu": {
+    "passed": true,
+    "person_mask_iou": 0.75,
+    "criterion": "Person-mask IoU >=0.70 versus saved original CPU"
+  },
+  "passed": true,
+  "execution_location": "All preparation, CNN inference, decoding, NMS/rules and rendering on target",
+  "cpu_reference": "Saved original TFLite CPU output; no live CPU inference",
+  "scope": "Functional controls on reviewed images. No dataset accuracy or latency benchmark."
+}

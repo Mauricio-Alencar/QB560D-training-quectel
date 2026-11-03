@@ -1,0 +1,4 @@
+{
+  "command": "cd / && sh /opt/qb560d-training-payload/aihub-offline-reorg20261102/run_target.sh gpu",
+  "exit_code": 0
+}

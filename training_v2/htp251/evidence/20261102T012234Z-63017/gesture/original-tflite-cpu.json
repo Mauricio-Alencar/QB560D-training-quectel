@@ -1,0 +1,4 @@
+{
+  "command": "sh /opt/qb560d-training-payload/target/ai.sh gesture --image /opt/qb560d-ai-htp251/runs/r0264b5e15dfd48/input.png --output /opt/qb560d-ai-htp251/runs/r0264b5e15dfd48/reference --runs 1 --warmup 0 --vendor-c-api",
+  "exit_code": 0
+}

@@ -1,0 +1,4 @@
+{
+  "command": "sha256sum /etc/NetworkManager/system-connections/qb560d-training-wlan.nmconnection",
+  "exit_code": 0
+}

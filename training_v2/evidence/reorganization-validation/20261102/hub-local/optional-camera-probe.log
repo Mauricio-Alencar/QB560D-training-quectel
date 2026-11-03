@@ -1,0 +1,1 @@
+CONFIG_REQUIRED: Camera node absent; inspect the sensor and BSP camera source

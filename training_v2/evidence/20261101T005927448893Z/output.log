@@ -1,0 +1,8 @@
+104.20.23.154   STREAM example.com
+104.20.23.154   DGRAM  
+1.1.1.1 via 192.168.0.1 dev wlan0  src 192.168.0.11 
+    cache 
+HTTPS_STATUS=200
+NTPSynchronized=yes
+
+__QB560D_EXIT__=0

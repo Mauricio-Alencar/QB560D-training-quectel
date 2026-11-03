@@ -1,0 +1,2 @@
+Device: Dragonwing RB3 Gen 2 Vision Kit
+Execution location: Qualcomm-hosted device, not local QB560D-EU.

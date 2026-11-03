@@ -1,0 +1,13 @@
+Logging started for program DebugLog on host qcs6490-odk at Sun Nov 01 2026 10:21:46.842380 (this log file is /tmp/qb560d-training/evidence/rebuild_check_dsp/DebugLog.00.txt)
+10:21:46.864532562 [USER_WARNING:DNN_RUNTIME] DEFAULT:0 QnnDsp <W> Initializing HtpProvider
+10:21:46.865189702 [USER_WARNING:DNN_RUNTIME] DEFAULT:1 QnnDsp <W> Function not called, PrepareLib isn't loaded!
+10:21:46.865249598 [USER_WARNING:DNN_RUNTIME] DEFAULT:2 QnnDsp <W> HTP arch will be deprecated, please set SoC id instead.
+10:21:46.970255427 [USER_WARNING:DNN_RUNTIME] DEFAULT:3 QnnDsp <W> Function not called, PrepareLib isn't loaded!
+10:21:46.971045588 [USER_WARNING:DL_CACHING] DEFAULT:4 Cannot perform accelerated HTP init without a valid and complete cache record
+10:21:46.979176838 [USER_WARNING:DL_CACHING] DEFAULT:5 Nothing to validate: No valid graph cache detected
+10:21:46.979502361 [USER_WARNING:DNN_RUNTIME] DEFAULT:6 QnnDsp <W> Power config id [0] is either invalid or already destroyed
+10:21:46.981052684 [USER_WARNING:DNN_RUNTIME] DEFAULT:7 QnnDsp <W> PrepareLibLoader Loading libSnpeHtpPrepare.so
+10:21:47.447839942 [USER_WARNING:DNN_RUNTIME] DEFAULT:8 QnnDsp <W> Backend 1 free cleanup called during process exit
+10:21:47.448144735 [USER_WARNING:DNN_RUNTIME] DEFAULT:9 QnnDsp <W> qnnOpPackageManager: hexagon unload op package function pointer is nullptr!
+10:21:47.448146454 [USER_WARNING:DNN_RUNTIME] DEFAULT:10 QnnDsp <W> Function not called, PrepareLib isn't loaded!
+Logging stopped at Sun Nov 01 2026 10:21:47.484197

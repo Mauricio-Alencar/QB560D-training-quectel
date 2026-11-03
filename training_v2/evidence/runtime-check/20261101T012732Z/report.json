@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-11-01 01:27:32 UTC",
+  "method": "Live ADB transport 2; SNPE C API Snpe_Util_GetLibraryVersion, isolated Python processes",
+  "device": {
+    "product": "qcm6490-Ubuntu",
+    "kernel": "5.4.219-perf",
+    "architecture": "aarch64",
+    "os": "Ubuntu 20.04.3 LTS"
+  },
+  "snpe_libraries": [
+    {
+      "path": "/usr/lib/libSNPE.so",
+      "version": "2.21.0.240401120655_85612",
+      "version_query_succeeded": true
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+      "version": "2.12.0.230626174329_59328",
+      "version_query_succeeded": true,
+      "htp_probe": {
+        "runtime": "DSP_FIXED8_TF",
+        "check": "UNSIGNEDPD_CHECK",
+        "available": true,
+        "last_error": "",
+        "scope": "Runtime availability only; no inference executed"
+      }
+    }
+  ],
+  "older_copies": {
+    "paths": [
+      "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so"
+    ],
+    "version_not_confirmed": true,
+    "reason": "First directory contains incompatible libc for Python; second lacks C version API symbol."
+  },
+  "inventory": {
+    "scope": "find /usr /opt /home /tmp, maxdepth 8, file-name search",
+    "not_found": [
+      "snpe-net-run",
+      "snpe-onnx-to-dlc",
+      "snpe-tflite-to-dlc",
+      "qnn-net-run",
+      "libQnn*.so",
+      "*.dlc"
+    ],
+    "already_present": [
+      "/tmp/qb560d-training/models/mobilenet_v1.tflite",
+      "/tmp/qb560d-training/models/ssd_mobilenet_v1.tflite"
+    ]
+  },
+  "demo": {
+    "name": "MobileNet V2: classify a single 224x224 RGB image and print top 5 ImageNet labels",
+    "source": "https://aihub.qualcomm.com/models/mobilenet_v2",
+    "compatibility": "Candidate based on AI Hub model source; not a verified ready-to-run AI Hub DLC for installed SNPE 2.12/2.21.",
+    "required_for_snpe212": [
+      "Convert source model with a matching SNPE 2.12 SDK and record preprocessing/layout",
+      "Provide matching aarch64 Linux executor",
+      "Validate CPU output then quantized HTP v68 unsigned execution"
+    ],
+    "latest_hub_docs": "https://workbench.aihub.qualcomm.com/docs/hub/release_notes.html",
+    "current_hub_documented_qairt": "2.51; 2.45 remains available per October 12 2026 release notes",
+    "caution": "Current QNN DLC download is not evidence of compatibility with legacy installed SNPE runtime; no cloud job submitted or model inference executed."
+  },
+  "raw_htp_probe": "{\"library\": \"/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so\", \"version\": \"2.12.0.230626174329_59328\", \"runtime\": \"DSP_FIXED8_TF\", \"check\": \"UNSIGNEDPD_CHECK\", \"available\": true, \"last_error\": \"\", \"scope\": \"Runtime availability only; no model inference\"}\r\r\n/prj/qct/webtech_hyd/pcgbait/projects/zsnpe_waipio/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc\r\r\n/prj/qct/webtech_hyd/pcgbait/projects/zsnpe_waipio/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc\r\r\n\r\r\nexit_code=0\r\r\n"
+}

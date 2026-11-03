@@ -1,0 +1,14 @@
+{
+  "result": "FAIL",
+  "checks": 46,
+  "summary": "/opt/qb560d-docker-demo/evidence/rehearsal-20261102T012441Z/summary.json",
+  "error": "RuntimeError('archive-checksum: sha256sum: offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz: No such file or directory\\noffline/images/qb560d-telemetry-1.0.0-arm64.tar.gz: FAILED open or read\\nsha256sum: WARNING: 1 listed file could not be read\\n')"
+}
+Traceback (most recent call last):
+  File "/opt/qb560d-docker-demo/target/rehearse.py", line 114, in <module>
+    command(['sha256sum', '-c', str(ROOT / 'offline/image.sha256')], 'archive-checksum')
+  File "/opt/qb560d-docker-demo/target/rehearse.py", line 28, in command
+    raise RuntimeError(label + ': ' + text[-2000:])
+RuntimeError: archive-checksum: sha256sum: offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz: No such file or directory
+offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz: FAILED open or read
+sha256sum: WARNING: 1 listed file could not be read

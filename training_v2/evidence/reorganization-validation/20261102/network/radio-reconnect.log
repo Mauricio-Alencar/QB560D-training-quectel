@@ -1,0 +1,7 @@
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/4)
+172.66.147.243  STREAM example.com
+172.66.147.243  DGRAM  
+1.1.1.1 via 192.168.0.1 dev wlan0  src 192.168.0.26 
+    cache 
+HTTPS_STATUS=200
+NTPSynchronized=yes

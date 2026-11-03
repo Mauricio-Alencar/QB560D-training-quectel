@@ -1,0 +1,42 @@
+{
+  "public_pdfs": [
+    {
+      "file": "apresentacoes/01_Introduction_to_Edge_AI_CVPR2025.pdf",
+      "sha256_matches": true,
+      "pages": 11
+    },
+    {
+      "file": "apresentacoes/02_Model_Deployment_for_Edge_AI_CVPR2025.pdf",
+      "sha256_matches": true,
+      "pages": 97
+    },
+    {
+      "file": "apresentacoes/03_Accelerating_Edge_AI_with_Qualcomm_AI_Hub_CVPR2025.pdf",
+      "sha256_matches": true,
+      "pages": 29
+    },
+    {
+      "file": "apresentacoes/04_Qualcomm_AI_driven_Multimedia_Embedded_Vision_Summit_2025.pdf",
+      "sha256_matches": true,
+      "pages": 21
+    }
+  ],
+  "total_pages": 158,
+  "qai_hub_sdk": "0.57.0; API signatures inspected locally",
+  "hosted_jobs": "PASS:compile and inference/profile succeeded",
+  "tiny_numpy_reference": "PASS: matched ONNX ReferenceEvaluator, rtol=1e-5 atol=1e-6",
+  "local_mobilenet_gpu": "PASS: three sessions per backend; evidence linked in guide",
+  "local_aihub_artifact": "PASS_CPU_AND_GPU: same TFLite hash, runtime2.8.4, OpenCL log confirmed",
+  "wlan": "PASS: DNS/HTTPS; NTP synchronized; NetworkManager owns wlan0; boot not tested",
+  "htp_runtime": "PASS: isolated SNPE 2.26 Ubuntu/HTP v68 unsigned PD; 34 DSP profile entries and zero CPU",
+  "mobilenet_htp": "PASS_REFERENCE_IMAGE: three sessions x 50 runs; same-DLC CPU 6.748 ms / HTP 1.130 ms; maximum probability difference 4/256; dataset accuracy not evaluated",
+  "tflite_hexagon_dsp": "FAILED: delegate initialization; no CPU retry",
+  "htp_evidence": "../training_v2/evidence/htp-dsp/20261101T021205Z/summary.json",
+  "account_api": "PASS:77 hosted devices returned",
+  "current_workbench_run": "evidence/tiny-gpu-20261101-171619",
+  "recorded_contingency": "AVAILABLE:106-second H264 replay of validated logs, Portuguese captions, no audio, no live screen capture",
+  "hosted_correctness": "PASS max_abs_error4.00543212890625e-05",
+  "hosted_profile": "4 GPU entries,0 CPU entries; estimated217us,100-sample median694.5us",
+  "offline_payload": "PASS:CPU/GPU in owned target directory,6 hashes verified",
+  "current_completion": "evidence/tiny-gpu-20261101-171619/completion-observation.json"
+}

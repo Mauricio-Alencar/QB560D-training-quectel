@@ -1,0 +1,26 @@
+[
+  {
+    "name": "iperf-3.22.tar.gz",
+    "url": "https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz",
+    "sha256": "1c0d0fb02c52626111d6e132db80edfbf27bbaff8bd9245df2a371dcb0b35a92",
+    "version": "3.22",
+    "verification": "SHA256 published by ESnet",
+    "bytes": 849295
+  },
+  {
+    "name": "iproute2_5.5.0-1ubuntu1_arm64.deb",
+    "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/i/iproute2/iproute2_5.5.0-1ubuntu1_arm64.deb",
+    "sha256": "0f0e4d950ed2b71ad5813ac77868999b6d154b1a41aa73a43d57ecdf1a1f9150",
+    "version": "5.5.0-1ubuntu1",
+    "verification": "HTTPS origin, local SHA256 pin; only ss will be extracted",
+    "bytes": 834768
+  },
+  {
+    "name": "numpy-1.24.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+    "url": "https://files.pythonhosted.org/packages/25/6f/2586a50ad72e8dbb1d8381f837008a0321a3516dfd7cb57fc8cf7e4bb06b/numpy-1.24.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+    "sha256": "a5425b114831d1e77e4b5d812b69d11d962e104095a5b9c3b641a218abcc050e",
+    "version": "1.24.4",
+    "verification": "SHA256 published in PyPI version metadata",
+    "bytes": 14039616
+  }
+]

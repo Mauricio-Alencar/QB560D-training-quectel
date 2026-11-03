@@ -1,0 +1,4 @@
+{
+  "command": "for n in /sys/class/drm/card*-*; do [ -d \"$n\" ] || continue; printf '\\nCONNECTOR %s\\n' \"$n\"; for f in status enabled modes; do if [ -r \"$n/$f\" ]; then printf '%s: ' \"$f\"; cat \"$n/$f\"; fi; done; if [ -r \"$n/edid\" ]; then printf 'edid_bytes: '; wc -c < \"$n/edid\"; fi; done; ls -l /dev/dri 2>/dev/null || true; for c in modetest kmsprint weston gst-launch-1.0 v4l2-ctl ffmpeg; do command -v \"$c\" || true; done; ps -eo pid,comm,args | grep -Ei 'weston|Xorg|wayland|qmmf|camera' | grep -v grep || true; loginctl list-sessions --no-legend 2>/dev/null || true",
+  "exit_code": 0
+}

@@ -1,0 +1,19 @@
+{
+  "label": "qairt251-comparative-benchmark",
+  "script": "host\\benchmark_htp251.py",
+  "args": [
+    "--sessions",
+    "3",
+    "--runs",
+    "50",
+    "--warmup",
+    "10",
+    "--evidence",
+    "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\evidence\\reorganization-validation\\20261102\\benchmark"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 148.281,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012825854606Z-qairt251-comparative-benchmark\\console.log"
+}

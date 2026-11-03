@@ -1,0 +1,392 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/r718fbeead43246/htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 03:59:39 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793563179901119 Steady Clock Timestamp: 4415560272
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 324036 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 147179 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 176286 us
+    Backend (RPC (finalize) time): 2783 us
+    Backend (QNN accelerator (finalize) time): 2565 us
+    Backend (Accelerator (finalize) time): 2410 us
+    Backend (QNN (finalize) time): 176188 us
+        Graph Preparation Initializing: 430 us
+        Graph Optimizations: 123708 us
+        Post Graph Optimization: 4108 us
+        Graph Sequencing for Target: 13749 us
+        VTCM Allocation: 3805 us
+        Parallelization Optimization: 1746 us
+        Finalizing Graph Sequence: 2305 us
+        Completion: 208 us
+
+De-Init Stats:
+--------------
+    NetRun: 7381 us
+    Backend (RPC (deinit) time): 1722 us
+    Backend (QNN Accelerator (deinit) time): 1548 us
+    Backend (Accelerator (deinit) time): 1523 us
+    Backend (QNN (deinit) time): 7207 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 215.5947 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 3424 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 3092 us
+    Backend (QNN accelerator (execute) time): 2803 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2461 us
+    Backend (Time for HVX + HMX power on and acquire): 2575 us
+    Backend (Accelerator (execute) time (cycles)): 1210365 cycles
+        Input OpId_2 (cycles): 0 cycles
+        model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D:OpId_21 (cycles): 0 cycles
+        Relu6__1612:OpId_24 (cycles): 155498 cycles
+        model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D:OpId_36 (cycles): 0 cycles
+        Relu6__1614:OpId_37 (cycles): 44729 cycles
+        model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1:OpId_49 (cycles): 7451 cycles
+        model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D:OpId_57 (cycles): 0 cycles
+        Relu6__1617:OpId_60 (cycles): 10685 cycles
+        model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D:OpId_72 (cycles): 0 cycles
+        Relu6__1619:OpId_73 (cycles): 103331 cycles
+        model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1:OpId_85 (cycles): 4079 cycles
+        model_1/model/max_pooling2d/MaxPool:OpId_91 (cycles): 46524 cycles
+        model_1/model/add/add:OpId_93 (cycles): 15114 cycles
+        model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D:OpId_100 (cycles): 0 cycles
+        Relu6__1622:OpId_103 (cycles): 4763 cycles
+        model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise:OpId_115 (cycles): 0 cycles
+        Relu6__1624:OpId_116 (cycles): 41914 cycles
+        model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1:OpId_128 (cycles): 6751 cycles
+        model_1/model/add_1/add:OpId_131 (cycles): 15290 cycles
+        model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D:OpId_138 (cycles): 0 cycles
+        Relu6__1627:OpId_141 (cycles): 4423 cycles
+        model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise:OpId_153 (cycles): 0 cycles
+        Relu6__1629:OpId_154 (cycles): 148350 cycles
+        model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1:OpId_166 (cycles): 1946 cycles
+        model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D:OpId_174 (cycles): 0 cycles
+        Relu6__1632:OpId_177 (cycles): 2689 cycles
+        model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise:OpId_189 (cycles): 0 cycles
+        Relu6__1634:OpId_190 (cycles): 73514 cycles
+        model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1:OpId_202 (cycles): 4842 cycles
+        model_1/model/add_2/add:OpId_205 (cycles): 4070 cycles
+        model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D:OpId_212 (cycles): 0 cycles
+        Relu6__1637:OpId_215 (cycles): 2508 cycles
+        model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise:OpId_227 (cycles): 0 cycles
+        Relu6__1639:OpId_228 (cycles): 29539 cycles
+        model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1:OpId_240 (cycles): 1617 cycles
+        model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D:OpId_248 (cycles): 0 cycles
+        Relu6__1642:OpId_251 (cycles): 3139 cycles
+        model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise:OpId_263 (cycles): 0 cycles
+        Relu6__1644:OpId_264 (cycles): 19140 cycles
+        model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1:OpId_276 (cycles): 3056 cycles
+        model_1/model/add_3/add:OpId_279 (cycles): 3240 cycles
+        model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D:OpId_286 (cycles): 0 cycles
+        Relu6__1647:OpId_289 (cycles): 3366 cycles
+        model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise:OpId_301 (cycles): 0 cycles
+        Relu6__1649:OpId_302 (cycles): 13503 cycles
+        model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1:OpId_314 (cycles): 3399 cycles
+        model_1/model/add_4/add:OpId_317 (cycles): 3495 cycles
+        model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D:OpId_324 (cycles): 0 cycles
+        Relu6__1652:OpId_327 (cycles): 2959 cycles
+        model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise:OpId_339 (cycles): 0 cycles
+        Relu6__1654:OpId_340 (cycles): 37997 cycles
+        model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1:OpId_352 (cycles): 3091 cycles
+        model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D:OpId_360 (cycles): 0 cycles
+        Relu6__1657:OpId_363 (cycles): 4372 cycles
+        model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise:OpId_375 (cycles): 0 cycles
+        Relu6__1659:OpId_376 (cycles): 50254 cycles
+        model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1:OpId_388 (cycles): 3822 cycles
+        model_1/model/add_5/add:OpId_391 (cycles): 2477 cycles
+        model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D:OpId_398 (cycles): 0 cycles
+        Relu6__1662:OpId_401 (cycles): 4146 cycles
+        model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise:OpId_413 (cycles): 0 cycles
+        Relu6__1664:OpId_414 (cycles): 50279 cycles
+        model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1:OpId_426 (cycles): 4019 cycles
+        model_1/model/add_6/add:OpId_429 (cycles): 2556 cycles
+        model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D:OpId_436 (cycles): 0 cycles
+        Relu6__1667:OpId_439 (cycles): 3822 cycles
+        model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise:OpId_451 (cycles): 0 cycles
+        Relu6__1669:OpId_452 (cycles): 82364 cycles
+        model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1:OpId_464 (cycles): 1876 cycles
+        model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D:OpId_472 (cycles): 0 cycles
+        Relu6__1672:OpId_475 (cycles): 3471 cycles
+        model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_487 (cycles): 0 cycles
+        Relu6__1674:OpId_488 (cycles): 35156 cycles
+        model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1:OpId_500 (cycles): 3067 cycles
+        model_1/model/add_7/add:OpId_503 (cycles): 934 cycles
+        model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D:OpId_510 (cycles): 0 cycles
+        Relu6__1677:OpId_513 (cycles): 3490 cycles
+        model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_525 (cycles): 0 cycles
+        Relu6__1679:OpId_526 (cycles): 34863 cycles
+        model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1:OpId_538 (cycles): 3637 cycles
+        model_1/model/add_8/add:OpId_541 (cycles): 918 cycles
+        model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D:OpId_548 (cycles): 0 cycles
+        Relu6__1682:OpId_551 (cycles): 3555 cycles
+        model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_563 (cycles): 0 cycles
+        Relu6__1684:OpId_564 (cycles): 35889 cycles
+        model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1:OpId_576 (cycles): 3603 cycles
+        model_1/model/add_9/add:OpId_579 (cycles): 937 cycles
+        model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D:OpId_586 (cycles): 0 cycles
+        Relu6__1687:OpId_589 (cycles): 3882 cycles
+        model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise:OpId_601 (cycles): 0 cycles
+        Relu6__1689:OpId_602 (cycles): 8897 cycles
+        model_1/model/global_average_pooling2d/Mean:OpId_612 (cycles): 24423 cycles
+        model_1/model/global_average_pooling2d/Mean_0123:OpId_616 (cycles): 0 cycles
+        model_1/model/global_average_pooling2d/Mean_Squeeze__2185:OpId_617 (cycles): 1449 cycles
+        model_1/model/conv_handflag/MatMul;model_1/model/conv_handflag/BiasAdd_Gemm__1700:OpId_620 (cycles): 802 cycles
+        Identity_Gemm__1699:OpId_624 (cycles): 906 cycles
+        Identity_1:OpId_626 (cycles): 1519 cycles
+        Output OpId_3 (cycles): 2948 cycles
+    Backend (Accelerator (execute) time): 1431 us
+    Backend (Accelerator (execute excluding wait) time): 758 us
+    Backend (QNN (execute) time): 3363 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 2863 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 2511 us
+    Backend (QNN accelerator (execute) time): 2246 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2225 us
+    Backend (Time for HVX + HMX power on and acquire): 1475 us
+    Backend (Accelerator (execute) time (cycles)): 1152497 cycles
+        Input OpId_2 (cycles): 0 cycles
+        model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D:OpId_21 (cycles): 0 cycles
+        Relu6__1612:OpId_24 (cycles): 139130 cycles
+        model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D:OpId_36 (cycles): 0 cycles
+        Relu6__1614:OpId_37 (cycles): 43541 cycles
+        model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1:OpId_49 (cycles): 7646 cycles
+        model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D:OpId_57 (cycles): 0 cycles
+        Relu6__1617:OpId_60 (cycles): 10697 cycles
+        model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D:OpId_72 (cycles): 0 cycles
+        Relu6__1619:OpId_73 (cycles): 100491 cycles
+        model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1:OpId_85 (cycles): 3879 cycles
+        model_1/model/max_pooling2d/MaxPool:OpId_91 (cycles): 44324 cycles
+        model_1/model/add/add:OpId_93 (cycles): 13055 cycles
+        model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D:OpId_100 (cycles): 0 cycles
+        Relu6__1622:OpId_103 (cycles): 4659 cycles
+        model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise:OpId_115 (cycles): 0 cycles
+        Relu6__1624:OpId_116 (cycles): 41856 cycles
+        model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1:OpId_128 (cycles): 6786 cycles
+        model_1/model/add_1/add:OpId_131 (cycles): 15366 cycles
+        model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D:OpId_138 (cycles): 0 cycles
+        Relu6__1627:OpId_141 (cycles): 4500 cycles
+        model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise:OpId_153 (cycles): 0 cycles
+        Relu6__1629:OpId_154 (cycles): 142146 cycles
+        model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1:OpId_166 (cycles): 1920 cycles
+        model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D:OpId_174 (cycles): 0 cycles
+        Relu6__1632:OpId_177 (cycles): 2649 cycles
+        model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise:OpId_189 (cycles): 0 cycles
+        Relu6__1634:OpId_190 (cycles): 72840 cycles
+        model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1:OpId_202 (cycles): 4074 cycles
+        model_1/model/add_2/add:OpId_205 (cycles): 4142 cycles
+        model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D:OpId_212 (cycles): 0 cycles
+        Relu6__1637:OpId_215 (cycles): 2523 cycles
+        model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise:OpId_227 (cycles): 0 cycles
+        Relu6__1639:OpId_228 (cycles): 28637 cycles
+        model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1:OpId_240 (cycles): 1653 cycles
+        model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D:OpId_248 (cycles): 0 cycles
+        Relu6__1642:OpId_251 (cycles): 3054 cycles
+        model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise:OpId_263 (cycles): 0 cycles
+        Relu6__1644:OpId_264 (cycles): 13014 cycles
+        model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1:OpId_276 (cycles): 3157 cycles
+        model_1/model/add_3/add:OpId_279 (cycles): 3227 cycles
+        model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D:OpId_286 (cycles): 0 cycles
+        Relu6__1647:OpId_289 (cycles): 2914 cycles
+        model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise:OpId_301 (cycles): 0 cycles
+        Relu6__1649:OpId_302 (cycles): 12827 cycles
+        model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1:OpId_314 (cycles): 3435 cycles
+        model_1/model/add_4/add:OpId_317 (cycles): 3408 cycles
+        model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D:OpId_324 (cycles): 0 cycles
+        Relu6__1652:OpId_327 (cycles): 2926 cycles
+        model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise:OpId_339 (cycles): 0 cycles
+        Relu6__1654:OpId_340 (cycles): 37543 cycles
+        model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1:OpId_352 (cycles): 3079 cycles
+        model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D:OpId_360 (cycles): 0 cycles
+        Relu6__1657:OpId_363 (cycles): 3764 cycles
+        model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise:OpId_375 (cycles): 0 cycles
+        Relu6__1659:OpId_376 (cycles): 50260 cycles
+        model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1:OpId_388 (cycles): 3819 cycles
+        model_1/model/add_5/add:OpId_391 (cycles): 2563 cycles
+        model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D:OpId_398 (cycles): 0 cycles
+        Relu6__1662:OpId_401 (cycles): 3839 cycles
+        model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise:OpId_413 (cycles): 0 cycles
+        Relu6__1664:OpId_414 (cycles): 50269 cycles
+        model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1:OpId_426 (cycles): 4039 cycles
+        model_1/model/add_6/add:OpId_429 (cycles): 2409 cycles
+        model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D:OpId_436 (cycles): 0 cycles
+        Relu6__1667:OpId_439 (cycles): 3829 cycles
+        model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise:OpId_451 (cycles): 0 cycles
+        Relu6__1669:OpId_452 (cycles): 74835 cycles
+        model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1:OpId_464 (cycles): 1877 cycles
+        model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D:OpId_472 (cycles): 0 cycles
+        Relu6__1672:OpId_475 (cycles): 3462 cycles
+        model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_487 (cycles): 0 cycles
+        Relu6__1674:OpId_488 (cycles): 35090 cycles
+        model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1:OpId_500 (cycles): 3071 cycles
+        model_1/model/add_7/add:OpId_503 (cycles): 933 cycles
+        model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D:OpId_510 (cycles): 0 cycles
+        Relu6__1677:OpId_513 (cycles): 3505 cycles
+        model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_525 (cycles): 0 cycles
+        Relu6__1679:OpId_526 (cycles): 34836 cycles
+        model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1:OpId_538 (cycles): 3622 cycles
+        model_1/model/add_8/add:OpId_541 (cycles): 958 cycles
+        model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D:OpId_548 (cycles): 0 cycles
+        Relu6__1682:OpId_551 (cycles): 3617 cycles
+        model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_563 (cycles): 0 cycles
+        Relu6__1684:OpId_564 (cycles): 35811 cycles
+        model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1:OpId_576 (cycles): 3622 cycles
+        model_1/model/add_9/add:OpId_579 (cycles): 932 cycles
+        model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D:OpId_586 (cycles): 0 cycles
+        Relu6__1687:OpId_589 (cycles): 3379 cycles
+        model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise:OpId_601 (cycles): 0 cycles
+        Relu6__1689:OpId_602 (cycles): 8857 cycles
+        model_1/model/global_average_pooling2d/Mean:OpId_612 (cycles): 18730 cycles
+        model_1/model/global_average_pooling2d/Mean_0123:OpId_616 (cycles): 0 cycles
+        model_1/model/global_average_pooling2d/Mean_Squeeze__2185:OpId_617 (cycles): 914 cycles
+        model_1/model/conv_handflag/MatMul;model_1/model/conv_handflag/BiasAdd_Gemm__1700:OpId_620 (cycles): 802 cycles
+        Identity_Gemm__1699:OpId_624 (cycles): 909 cycles
+        Identity_1:OpId_626 (cycles): 894 cycles
+        Output OpId_3 (cycles): 1952 cycles
+    Backend (Accelerator (execute) time): 1330 us
+    Backend (Accelerator (execute excluding wait) time): 746 us
+    Backend (QNN (execute) time): 2811 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 4476 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 4147 us
+    Backend (QNN accelerator (execute) time): 3825 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2784 us
+    Backend (Time for HVX + HMX power on and acquire): 4761 us
+    Backend (Accelerator (execute) time (cycles)): 1257719 cycles
+        Input OpId_2 (cycles): 0 cycles
+        model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D:OpId_21 (cycles): 0 cycles
+        Relu6__1612:OpId_24 (cycles): 167127 cycles
+        model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D:OpId_36 (cycles): 0 cycles
+        Relu6__1614:OpId_37 (cycles): 45813 cycles
+        model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1:OpId_49 (cycles): 7526 cycles
+        model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D:OpId_57 (cycles): 0 cycles
+        Relu6__1617:OpId_60 (cycles): 10550 cycles
+        model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D:OpId_72 (cycles): 0 cycles
+        Relu6__1619:OpId_73 (cycles): 105460 cycles
+        model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1:OpId_85 (cycles): 4240 cycles
+        model_1/model/max_pooling2d/MaxPool:OpId_91 (cycles): 47419 cycles
+        model_1/model/add/add:OpId_93 (cycles): 15642 cycles
+        model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D:OpId_100 (cycles): 0 cycles
+        Relu6__1622:OpId_103 (cycles): 4817 cycles
+        model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise:OpId_115 (cycles): 0 cycles
+        Relu6__1624:OpId_116 (cycles): 42200 cycles
+        model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1:OpId_128 (cycles): 6728 cycles
+        model_1/model/add_1/add:OpId_131 (cycles): 15082 cycles
+        model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D:OpId_138 (cycles): 0 cycles
+        Relu6__1627:OpId_141 (cycles): 4429 cycles
+        model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise:OpId_153 (cycles): 0 cycles
+        Relu6__1629:OpId_154 (cycles): 153144 cycles
+        model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1:OpId_166 (cycles): 1849 cycles
+        model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D:OpId_174 (cycles): 0 cycles
+        Relu6__1632:OpId_177 (cycles): 2603 cycles
+        model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise:OpId_189 (cycles): 0 cycles
+        Relu6__1634:OpId_190 (cycles): 74210 cycles
+        model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1:OpId_202 (cycles): 4048 cycles
+        model_1/model/add_2/add:OpId_205 (cycles): 4076 cycles
+        model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D:OpId_212 (cycles): 0 cycles
+        Relu6__1637:OpId_215 (cycles): 2511 cycles
+        model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise:OpId_227 (cycles): 0 cycles
+        Relu6__1639:OpId_228 (cycles): 31548 cycles
+        model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1:OpId_240 (cycles): 1604 cycles
+        model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D:OpId_248 (cycles): 0 cycles
+        Relu6__1642:OpId_251 (cycles): 3084 cycles
+        model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise:OpId_263 (cycles): 0 cycles
+        Relu6__1644:OpId_264 (cycles): 29425 cycles
+        model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1:OpId_276 (cycles): 3026 cycles
+        model_1/model/add_3/add:OpId_279 (cycles): 3131 cycles
+        model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D:OpId_286 (cycles): 0 cycles
+        Relu6__1647:OpId_289 (cycles): 2853 cycles
+        model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise:OpId_301 (cycles): 0 cycles
+        Relu6__1649:OpId_302 (cycles): 13254 cycles
+        model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1:OpId_314 (cycles): 3362 cycles
+        model_1/model/add_4/add:OpId_317 (cycles): 3410 cycles
+        model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D:OpId_324 (cycles): 0 cycles
+        Relu6__1652:OpId_327 (cycles): 2910 cycles
+        model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise:OpId_339 (cycles): 0 cycles
+        Relu6__1654:OpId_340 (cycles): 37629 cycles
+        model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1:OpId_352 (cycles): 3083 cycles
+        model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D:OpId_360 (cycles): 0 cycles
+        Relu6__1657:OpId_363 (cycles): 5593 cycles
+        model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise:OpId_375 (cycles): 0 cycles
+        Relu6__1659:OpId_376 (cycles): 50333 cycles
+        model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1:OpId_388 (cycles): 3793 cycles
+        model_1/model/add_5/add:OpId_391 (cycles): 2391 cycles
+        model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D:OpId_398 (cycles): 0 cycles
+        Relu6__1662:OpId_401 (cycles): 4751 cycles
+        model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise:OpId_413 (cycles): 0 cycles
+        Relu6__1664:OpId_414 (cycles): 50384 cycles
+        model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1:OpId_426 (cycles): 4032 cycles
+        model_1/model/add_6/add:OpId_429 (cycles): 2609 cycles
+        model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D:OpId_436 (cycles): 0 cycles
+        Relu6__1667:OpId_439 (cycles): 3847 cycles
+        model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise:OpId_451 (cycles): 0 cycles
+        Relu6__1669:OpId_452 (cycles): 86882 cycles
+        model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1:OpId_464 (cycles): 1887 cycles
+        model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D:OpId_472 (cycles): 0 cycles
+        Relu6__1672:OpId_475 (cycles): 3490 cycles
+        model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_487 (cycles): 0 cycles
+        Relu6__1674:OpId_488 (cycles): 35362 cycles
+        model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1:OpId_500 (cycles): 3058 cycles
+        model_1/model/add_7/add:OpId_503 (cycles): 931 cycles
+        model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D:OpId_510 (cycles): 0 cycles
+        Relu6__1677:OpId_513 (cycles): 3490 cycles
+        model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_525 (cycles): 0 cycles
+        Relu6__1679:OpId_526 (cycles): 34989 cycles
+        model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1:OpId_538 (cycles): 3647 cycles
+        model_1/model/add_8/add:OpId_541 (cycles): 905 cycles
+        model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D:OpId_548 (cycles): 0 cycles
+        Relu6__1682:OpId_551 (cycles): 3570 cycles
+        model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise:OpId_563 (cycles): 0 cycles
+        Relu6__1684:OpId_564 (cycles): 36038 cycles
+        model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1:OpId_576 (cycles): 3590 cycles
+        model_1/model/add_9/add:OpId_579 (cycles): 952 cycles
+        model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D:OpId_586 (cycles): 0 cycles
+        Relu6__1687:OpId_589 (cycles): 4910 cycles
+        model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise:OpId_601 (cycles): 0 cycles
+        Relu6__1689:OpId_602 (cycles): 8902 cycles
+        model_1/model/global_average_pooling2d/Mean:OpId_612 (cycles): 29126 cycles
+        model_1/model/global_average_pooling2d/Mean_0123:OpId_616 (cycles): 0 cycles
+        model_1/model/global_average_pooling2d/Mean_Squeeze__2185:OpId_617 (cycles): 2667 cycles
+        model_1/model/conv_handflag/MatMul;model_1/model/conv_handflag/BiasAdd_Gemm__1700:OpId_620 (cycles): 800 cycles
+        Identity_Gemm__1699:OpId_624 (cycles): 905 cycles
+        Identity_1:OpId_626 (cycles): 1957 cycles
+        Output OpId_3 (cycles): 4135 cycles
+    Backend (Accelerator (execute) time): 1608 us
+    Backend (Accelerator (execute excluding wait) time): 783 us
+    Backend (QNN (execute) time): 4407 us

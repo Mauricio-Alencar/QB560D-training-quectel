@@ -1,0 +1,141 @@
+{
+  "host_utc": "20261101T195327804932Z",
+  "server": null,
+  "port": 5201,
+  "source_url": "https://lg.serversp.com.br/",
+  "interface": "rmnet_data0",
+  "seconds": 1,
+  "parallel_streams": 1,
+  "requested_rounds": 1,
+  "rounds": [
+    {
+      "phase": "negative",
+      "round": 1,
+      "server": "127.0.0.1",
+      "port": 55765,
+      "interface": "lo",
+      "seconds_per_direction": 1,
+      "parallel_streams": 1,
+      "runner_hashes": {
+        "common.sh": "426e9746f6274ab8702341356324e9777227dd283c8c163f0bd2b68911bfc9d3",
+        "performance.sh": "27a4fe0a973b0b1ae639de5ee8a897315f6c4511e4df731b48170a092f627e10"
+      },
+      "addresses": {
+        "argv": [
+          "ip",
+          "-4",
+          "-o",
+          "addr",
+          "show",
+          "dev",
+          "lo"
+        ],
+        "exit_code": 0,
+        "output": "1: lo    inet 127.0.0.1/8 scope host lo\\       valid_lft forever preferred_lft forever\n"
+      },
+      "local_ips": [
+        "127.0.0.1"
+      ],
+      "route": {
+        "argv": [
+          "ip",
+          "-4",
+          "route",
+          "get",
+          "127.0.0.1"
+        ],
+        "exit_code": 0,
+        "output": "local 127.0.0.1 dev lo  src 127.0.0.1 \n    cache <local> \n"
+      },
+      "route_bound": {
+        "argv": [
+          "ip",
+          "-4",
+          "route",
+          "get",
+          "127.0.0.1",
+          "oif",
+          "lo"
+        ],
+        "exit_code": 0,
+        "output": "local 127.0.0.1 dev lo  src 127.0.0.1 \n    cache <local> \n"
+      },
+      "target_utc_before": {
+        "argv": [
+          "date",
+          "-u",
+          "+%Y-%m-%dT%H:%M:%SZ"
+        ],
+        "exit_code": 0,
+        "output": "2026-11-01T19:53:42Z\n"
+      },
+      "load_before": "2.46 2.89 2.87 1/685 7102",
+      "cpu_load": {
+        "argv": [
+          "ps",
+          "-eo",
+          "pid,comm,pcpu",
+          "--sort=-pcpu"
+        ],
+        "exit_code": 0,
+        "output": "    PID COMMAND         %CPU\n   7087 bash            12.0\n   3592 weston           2.4\n   6377 kworker/u16:2-d  0.6\n   5393 kworker/u16:1-m  0.5\n   6056 kworker/u16:3-d  0.5\n   6474 kworker/u17:2-d  0.5\n   5911 kworker/u16:4-d  0.3\n   5980 kworker/u16:0-r  0.3\n     10 ksoftirqd/0      0.2\n    401 systemd-journal  0.2\n      1 systemd          0.1\n   3801 adbd             0.1\n   7076 login            0.1"
+      },
+      "before": {
+        "rx": 14458,
+        "tx": 14458
+      },
+      "errors": [
+        "uplink: unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused",
+        "downlink: unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused"
+      ],
+      "runner_exit_code": 1,
+      "exit_code": 1,
+      "elapsed_seconds": 0.036768016000223724,
+      "after": {
+        "rx": 14658,
+        "tx": 14658
+      },
+      "load_after": "2.46 2.89 2.87 2/685 7120",
+      "target_utc_after": {
+        "argv": [
+          "date",
+          "-u",
+          "+%Y-%m-%dT%H:%M:%SZ"
+        ],
+        "exit_code": 0,
+        "output": "2026-11-01T19:53:42Z\n"
+      },
+      "counter_delta": {
+        "rx": 200,
+        "tx": 200
+      },
+      "uplink": {
+        "start": {
+          "connected": [],
+          "version": "iperf 3.22",
+          "system_info": "Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64"
+        },
+        "intervals": [],
+        "end": {},
+        "error": "unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused"
+      },
+      "downlink": {
+        "start": {
+          "connected": [],
+          "version": "iperf 3.22",
+          "system_info": "Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64"
+        },
+        "intervals": [],
+        "end": {},
+        "error": "unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused"
+      }
+    }
+  ],
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "passed": true
+}

@@ -1,0 +1,5 @@
+{
+  "command": "echo aW1wb3J0IGpzb24sb3MKcD0nL3RtcC91cGRhdGUtcWlhcnQtMjUxLW1vYmlsZW5ldC12YWxpZGF0aW9uJwphc3NlcnQgb3MucGF0aC5yZWFscGF0aChwKT09cCwgJ1VuZXhwZWN0ZWQgcmVtb3RlIHN5bWxpbmsnCm89anNvbi5sb2FkKG9wZW4ocCsnL293bmVyc2hpcC5qc29uJykpCmFzc2VydCBvWydwYWNrYWdlJ109PSd1cGRhdGVfUUlBUlQnIGFuZCBvWyd2ZXJzaW9uJ109PScyLjUxLjQwLjI2MDkzMCcgYW5kIG9bJ3JlbW90ZSddPT1wLCAnT3duZXJzaGlwIG1pc21hdGNoJwpwcmludCgnT1dORVJTSElQX09LJyk= | base64 -d | /usr/bin/python3",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:29:45.925412+00:00"
+}

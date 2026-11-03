@@ -1,0 +1,30 @@
+Result=exit-code
+ExecMainStatus=1
+Requires=system.slice sysinit.target
+Wants=network-pre.target
+Before=multi-user.target shutdown.target network-pre.target
+After=sysinit.target system.slice basic.target systemd-journald.socket
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/ip6tables.service
+# /lib/systemd/system/ip6tables.service
+[Unit]
+Description=IPv6 Packet Filtering Framework
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/ip6tables-restore -w -- /etc/iptables/ip6tables.rules
+ExecReload=/usr/sbin/ip6tables-restore -w -- /etc/iptables/ip6tables.rules
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:39 CST. --
+Nov 02 02:44:50 qcs6490-odk ip6tables-restore[3237]: Can't open /etc/iptables/ip6tables.rules: No such file or directory
+Nov 02 02:44:50 qcs6490-odk systemd[1]: Starting IPv6 Packet Filtering Framework...
+Nov 02 02:44:50 qcs6490-odk systemd[1]: ip6tables.service: Main process exited, code=exited, status=1/FAILURE
+Nov 02 02:44:50 qcs6490-odk systemd[1]: ip6tables.service: Failed with result 'exit-code'.
+Nov 02 02:44:50 qcs6490-odk systemd[1]: Failed to start IPv6 Packet Filtering Framework.
+

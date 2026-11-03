@@ -1,0 +1,127 @@
+{
+  "url": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.51.40.260930/v2.51.40.260930.zip",
+  "archive_bytes": 2972704136,
+  "transferred_bytes": 3128058,
+  "members": [
+    {
+      "member": "qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-net-run",
+      "bytes": 7568304,
+      "sha256": "a83db1cd0a565853aeff050c194f9995fa502e9ff2a605aac2c0dfbc8b8cc68e"
+    },
+    {
+      "member": "qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-platform-validator",
+      "bytes": 526768,
+      "sha256": "94df6f6b82122e5d4609b55b423bb1c30b17f3fe67b0c03f8053909ca7710c30"
+    },
+    {
+      "member": "qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/qnn-profile-viewer",
+      "bytes": 264304,
+      "sha256": "3109bb3bc3552b39f732c8de4c5977de1c2f0efef004c14099f242194d1e95e7"
+    },
+    {
+      "member": "qairt/2.51.40.260930/bin/aarch64-ubuntu-gcc9.4/snpe-net-run",
+      "bytes": 1698072,
+      "sha256": "4d2ce30b5db903cbb9bcc55103cf1df647ddbc7e80ac928a07cea59c50e3b03d"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libcalculator.so",
+      "bytes": 10160,
+      "sha256": "9733c4d4417382fea51638af84a4bd4c96388c82cff514f6605db497943725a0"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnCpu.so",
+      "bytes": 7967992,
+      "sha256": "6e23f5c49d1a701b9e517862b1648931cc15408d62c9d2cd0c9ad608217257df"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtp.so",
+      "bytes": 4603064,
+      "sha256": "e43aa2b62131e50ede9b0d50c68a2335ef49f96bf12663357c7f32169bea8dc8"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpNetRunExtensions.so",
+      "bytes": 853984,
+      "sha256": "15efaa08e12a2791b7438a34989df863837e7182ebc52578cc1d3f9e0ef16494"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpPrepare.so",
+      "bytes": 90840472,
+      "sha256": "a0275664dc1e9fc15fde4c5e9a9f1b7ffcca480743c1fc199b5eed1c832c704c"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpV68CalculatorStub.so",
+      "bytes": 10160,
+      "sha256": "2e63e6563e3875d6dc9b0c7ccf5c0c235726cae49505175e8a617a2626baae53"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnHtpV68Stub.so",
+      "bytes": 497608,
+      "sha256": "b9cb0d20e29858fd86974be0c5d6b25fdc790815094ab16aae1eef7a936cc4a0"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnIr.so",
+      "bytes": 3324600,
+      "sha256": "6fd0e760f71a7d66695d0ea8d2d31dcd14ac4003950bea8a09be848737d7e6d9"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnModelDlc.so",
+      "bytes": 5278400,
+      "sha256": "c2f256c20dfde9b0372065ce892af788ed975cd80d6ea9d2b01c86ea202ec96c"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libQnnSystem.so",
+      "bytes": 5529896,
+      "sha256": "d6f5b34d130c49b5cdc656855dc782917a2d79de8876102fef9fc8f8e611c781"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+      "bytes": 30108664,
+      "sha256": "690b86a0cb2674c7e2dd0d08cf9e3f570dd60f01cf3f79cde22999dc080f9465"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSnpeHtpV68CalculatorStub.so",
+      "bytes": 10160,
+      "sha256": "ff82a38dbfd0f312bb6ccdbc2183ef9d5022caa9fa5fd8edea3b43fe24ea0e94"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/aarch64-ubuntu-gcc9.4/libSnpeHtpV68Stub.so",
+      "bytes": 497608,
+      "sha256": "419da6ee3cc010324c4bffb2cdcba519f6bf2c11ea8125029446bc45a6f509cb"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libCalculator_skel.so",
+      "bytes": 5656,
+      "sha256": "5e0b27938732a6676c493d5eda779731ff1f6104cfda27e816701a0025e23103"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libQnnHtpV68.so",
+      "bytes": 13453508,
+      "sha256": "8191e546b81bd767f5ffd1a0fec66857f0d28c6f3b8c8229342878c2f0f2d20b"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libQnnHtpV68Skel.so",
+      "bytes": 12992744,
+      "sha256": "f659d93d893aea52a63d02418cf653fca47452ac56814a39f7efed5269d1ff28"
+    },
+    {
+      "member": "qairt/2.51.40.260930/lib/hexagon-v68/unsigned/libSnpeHtpV68Skel.so",
+      "bytes": 13487520,
+      "sha256": "fab399bcbfdb47c203c2a851776b88c4f522e2c2031d1a11c1697c0ee1ddc582"
+    },
+    {
+      "member": "qairt/2.51.40.260930/LICENSE.pdf",
+      "bytes": 147577,
+      "sha256": "ec1dccfdcba5c6e64126e84199b8362bf4999107bfa567ebe831dbb4c461692b"
+    },
+    {
+      "member": "qairt/2.51.40.260930/QAIRT_ReleaseNotes.txt",
+      "bytes": 279098,
+      "sha256": "89eb1a4b4f28543b857d80c98f0c33399bf8d0d44b76457dd84bcb728b03ae67"
+    },
+    {
+      "member": "qairt/2.51.40.260930/sdk.yaml",
+      "bytes": 976,
+      "sha256": "eae99681f04c6e15c478ce0d5fe6bdab9c8d15f23c6c2977ed7509a192fd3576"
+    }
+  ]
+}

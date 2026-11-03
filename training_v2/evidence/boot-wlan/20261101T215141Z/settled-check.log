@@ -1,0 +1,28 @@
+ad79661b-5a87-49cb-a330-1fcb1c5c9dbb
+85.24 599.44
+Startup finished in 2.869s (kernel) + 1min 13.594s (userspace) = 1min 16.464s 
+multi-user.target reached after 52.697s in userspace
+avahi-daemon.service       loaded failed failed Avahi mDNS/DNS-SD Stack         
+camera_cgroup.service      loaded failed failed Create Camera Cgroup Service    
+chg-policy.service         loaded failed failed Charger Policy Service          
+dhcpd6.service             loaded failed failed DHCPv6 Server Daemon            
+dnsmasq.service            loaded failed failed dnsmasq - A lightweight DHCP an…
+fs-scrub-daemon.service    loaded failed failed fs-scrub-daemon Service         
+init_post_boot.service     loaded failed failed QTI Post Boot Service           
+ip6tables.service          loaded failed failed IPv6 Packet Filtering Framework 
+ipacmdiag.service          loaded failed failed start IPA configuration manager…
+iptables.service           loaded failed failed IPv4 Packet Filtering Framework 
+lunch-make-scripts.service loaded failed failed lunch make scripts              
+qcmap_wlan.service         loaded failed failed WLAN service                    
+qti_pppd.service           loaded failed failed qti_ppp service                 
+thermal-engine.service     loaded failed failed Thermal Engine Service          
+No jobs running.
+NTPSynchronized=yes
+TimeUSec=Mon 2026-11-02 06:35:42 CST
+172.66.147.243  STREAM example.com
+172.66.147.243  DGRAM  
+1.1.1.1 via 192.168.0.1 dev wlan0  src 192.168.0.26 
+    cache 
+HTTPS_STATUS=200
+NTPSynchronized=yes
+

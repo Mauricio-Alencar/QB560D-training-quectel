@@ -1,0 +1,5 @@
+{
+  "command": "cd /tmp/qairt-isolated-20261101T020546Z\n/bin/sh -n /tmp/qairt-isolated-20261101T020546Z/repeat_htp.sh\n/bin/sh -n /tmp/qairt-isolated-20261101T020546Z/cleanup_test.sh\ncat /tmp/qairt-isolated-20261101T020546Z/test-ownership.json",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:15:59.469398+00:00"
+}

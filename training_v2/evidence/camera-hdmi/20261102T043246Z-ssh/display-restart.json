@@ -1,0 +1,6 @@
+{
+  "command": "printf 'BEFORE\\n'; pidof weston; systemctl is-active init_display.service; systemctl restart init_display.service; printf 'AFTER\\n'; systemctl is-active init_display.service; pidof weston; ls -l /run/user/root/wayland-0; cat /sys/class/drm/card0-DSI-1/status; cat /sys/class/drm/card0-DSI-1/enabled",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

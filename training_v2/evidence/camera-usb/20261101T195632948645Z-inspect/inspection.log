@@ -1,0 +1,32 @@
+USB TREE
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/0p, 5000M
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=dummy_hcd/1p, 480M
+
+ROLE SWITCHES
+/sys/class/usb_role/a600000.ssusb-role-switch/role: none
+/sys/class/typec/port0/data_role: host [device]
+
+USB DEVICE ATTRIBUTES
+/sys/bus/usb/devices/usb1 idVendor=1d6b
+idProduct=0002
+product=Dummy host controller
+authorized=1
+/sys/bus/usb/devices/usb2 idVendor=1d6b
+idProduct=0002
+product=xHCI Host Controller
+authorized=1
+/sys/bus/usb/devices/usb3 idVendor=1d6b
+idProduct=0003
+product=xHCI Host Controller
+authorized=1
+
+UVC DRIVER
+/sys/bus/usb/drivers/uvcvideo
+CONFIG_MEDIA_USB_SUPPORT=y
+CONFIG_USB_VIDEO_CLASS=y
+CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y
+CONFIG_USB_XHCI_HCD=y
+
+USB KERNEL EVENTS
+

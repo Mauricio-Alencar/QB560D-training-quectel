@@ -1,0 +1,4 @@
+{
+  "command": "command -v logger; command -v systemd-cat; ls -l /dev/log /run/systemd/journal/dev-log /run/systemd/journal/socket; systemctl is-active systemd-journald; logger -t qb560d-training reorg-syslog-probe; printf 'reorg-native-probe\\n' | systemd-cat -t qb560d-training; sleep 2; journalctl -t qb560d-training -n 12 --no-pager; journalctl -u systemd-journald -n 5 --no-pager",
+  "exit_code": 0
+}

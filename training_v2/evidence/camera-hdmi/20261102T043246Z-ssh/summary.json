@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-02",
+  "board": "QB560D-EU",
+  "bsp": "QDPA_Ubuntu20.04.003.51.303 V01",
+  "kernel": "5.4.219-perf",
+  "transport": "SSH over WLAN",
+  "host_key_verified": true,
+  "camera": {
+    "usb_id": "1224:2a25",
+    "driver": "uvcvideo",
+    "capture_node": "/dev/video0",
+    "capture_result": "CAMERA_FRAME_CAPTURED",
+    "capture_source": "operator-provided console; subsequent SHA256 directly verified over SSH",
+    "image_sha256": "6448ccd130036faf7d14e79903553c638c014cb87756ff264519ee857f88074c",
+    "cpu_inference": {
+      "source": "operator-provided JSON in chat",
+      "model": "SSD MobileNet V1 quantized",
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "runtime": "vendor_tflite_c_api 2.8.4",
+      "warmup": 3,
+      "runs": 20,
+      "threads": 2,
+      "inference_ms_median": 35.612691501228255,
+      "inference_ms_p95": 36.73962549928547,
+      "timing_scope": "interpreter.invoke only",
+      "detections": [],
+      "semantic_acceptance": "PENDING_PHOTO_REVIEW"
+    }
+  },
+  "hdmi": {
+    "initial_operator_observation": "no signal; same cable/input work with notebook",
+    "drm_output": "DSI-1",
+    "logical_mode": "1920x1080 at 60 Hz",
+    "dp_output": "DP-1 disconnected",
+    "bridge": "lt9611uxd at I2C 2-0041",
+    "edid_descriptor": "lt9611 video; generic bridge EDID is not verified external monitor identification",
+    "actions": [
+      "read-only inventories/logs",
+      "restart init_display.service",
+      "30-second synthetic bars test",
+      "operator HDMI removal/reconnection",
+      "20-second live UVC preview"
+    ],
+    "bars_before_replug": {
+      "pipeline_exit_code": 0,
+      "duration_s": 30.067954406,
+      "operator_observation": "still no signal"
+    },
+    "after_replug": {
+      "source": "operator confirmation in chat",
+      "result": "IMAGE_VISIBLE"
+    },
+    "hotplug_watch": {
+      "file": "hotplug-watch.json",
+      "samples": 90,
+      "change_detected": false,
+      "operator_action_timestamp_synchronized": false,
+      "interpretation": "Cannot infer absence of electrical hotplug event from this recording"
+    },
+    "root_cause": "NOT_ISOLATED",
+    "power_on_acceptance": "NOT_TESTED_FOR_THIS_HDMI_SETUP"
+  },
+  "joint_preview": {
+    "log": "camera-hdmi-preview.log",
+    "receipt": "camera-hdmi-preview.json",
+    "pipeline_exit_code": 0,
+    "duration_s": 20.590170359,
+    "frames_requested": 500,
+    "caps": "YUY2 640x480 at 25/1",
+    "operator_confirmation": "live webcam image visible on HDMI",
+    "video_saved": false,
+    "ai_inference_per_frame": false
+  },
+  "persistent_config_files_changed": false,
+  "firmware_changed_by_this_diagnostic": false,
+  "i2c_registers_written_by_this_diagnostic": false,
+  "remaining": [
+    "Semantic review of captured photo/detections",
+    "HDMI after physical power-on with monitor connected",
+    "Repeat acceptance per event unit"
+  ]
+}

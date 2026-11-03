@@ -1,0 +1,193 @@
+{
+  "completed_at_utc": "2026-11-01T02:15:24.832092+00:00",
+  "result": "PASS_FOR_ISOLATED_RUNTIME_SMOKE_TEST",
+  "version": "2.51.40.260930230134",
+  "public_sdk_version": "2.51.40.260930",
+  "release_source": "https://github.com/qualcomm/qai-appbuilder/releases/tag/v2.51.40",
+  "public_download_confirmed_without_credentials": true,
+  "device": {
+    "soc": "QCM6490",
+    "os": "Ubuntu 20.04.3 LTS",
+    "kernel": "5.4.219-perf",
+    "glibc": "2.31",
+    "htp": "v68"
+  },
+  "remote_test_directory": "/tmp/qairt-isolated-20261101T020546Z",
+  "remote_disk_usage": "185 MB",
+  "isolation": {
+    "original_library_hashes": {
+      "/usr/lib/libSNPE.so": {
+        "before": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165",
+        "after": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165",
+        "unchanged": true
+      },
+      "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so": {
+        "before": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c",
+        "after": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c",
+        "unchanged": true
+      },
+      "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so": {
+        "before": "a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72",
+        "after": "a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72",
+        "unchanged": true
+      },
+      "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so": {
+        "before": "579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6",
+        "after": "579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6",
+        "unchanged": true
+      }
+    },
+    "global_path_changed": false,
+    "global_ld_library_path_changed": false,
+    "system_configuration_changed": false,
+    "bsp_or_firmware_replaced": false,
+    "existing_model_or_training_directory_modified": false,
+    "test_processes_remaining": false
+  },
+  "snpe_runtime_probes": {
+    "version": {
+      "library": "/tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+      "version": "2.51.40.260930230134",
+      "scope": "Version/runtime availability only; no model inference",
+      "loaded_ai_libraries": [
+        "7f9435f000-7f95fd7000 r-xp 00000000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7f95fd7000-7f95fe6000 ---p 01c78000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7f95fe6000-7f96020000 r--p 01c77000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7f96020000-7f96026000 rw-p 01cb1000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so"
+      ]
+    },
+    "cpu": {
+      "library": "/tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+      "version": "2.51.40.260930230134",
+      "scope": "Version/runtime availability only; no model inference",
+      "runtime": "cpu",
+      "check": "NORMAL_CHECK",
+      "available": true,
+      "last_error": "",
+      "loaded_ai_libraries": [
+        "7fbab25000-7fbc79d000 r-xp 00000000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fbc79d000-7fbc7ac000 ---p 01c78000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fbc7ac000-7fbc7e6000 r--p 01c77000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fbc7e6000-7fbc7ec000 rw-p 01cb1000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so"
+      ]
+    },
+    "gpu": {
+      "library": "/tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+      "version": "2.51.40.260930230134",
+      "scope": "Version/runtime availability only; no model inference",
+      "runtime": "gpu",
+      "check": "NORMAL_CHECK",
+      "available": true,
+      "last_error": "",
+      "loaded_ai_libraries": [
+        "7fa53bc000-7fa7034000 r-xp 00000000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fa7034000-7fa7043000 ---p 01c78000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fa7043000-7fa707d000 r--p 01c77000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fa707d000-7fa7083000 rw-p 01cb1000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so"
+      ]
+    },
+    "dsp": {
+      "library": "/tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+      "version": "2.51.40.260930230134",
+      "scope": "Version/runtime availability only; no model inference",
+      "runtime": "dsp",
+      "check": "UNSIGNEDPD_CHECK",
+      "available": true,
+      "last_error": "",
+      "loaded_ai_libraries": [
+        "7fb61c1000-7fb6238000 r-xp 00000000 08:06 737671                         /tmp/qairt-isolated-20261101T020546Z/lib/libSnpeHtpV68Stub.so",
+        "7fb6238000-7fb6248000 ---p 00077000 08:06 737671                         /tmp/qairt-isolated-20261101T020546Z/lib/libSnpeHtpV68Stub.so",
+        "7fb6248000-7fb624a000 r--p 00077000 08:06 737671                         /tmp/qairt-isolated-20261101T020546Z/lib/libSnpeHtpV68Stub.so",
+        "7fb624a000-7fb624b000 rw-p 00079000 08:06 737671                         /tmp/qairt-isolated-20261101T020546Z/lib/libSnpeHtpV68Stub.so",
+        "7fb6509000-7fb8181000 r-xp 00000000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fb8181000-7fb8190000 ---p 01c78000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fb8190000-7fb81ca000 r--p 01c77000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so",
+        "7fb81ca000-7fb81d0000 rw-p 01cb1000 08:06 737669                         /tmp/qairt-isolated-20261101T020546Z/lib/libSNPE.so"
+      ]
+    }
+  },
+  "qnn_official_dsp_diagnostic": {
+    "passed": true,
+    "evidence": "04-qnn-htp-diagnostic.log",
+    "test": "DSP calculator via FastRPC; exact sum function passed",
+    "limitation": "FastRPC library version query not implemented; diagnostic reports Library Version Not Found."
+  },
+  "qnn_graph_test": {
+    "model": "Single ElementWiseAdd operation; uint8 affine quantization scale=1 offset=0; shape [1,1,1,4]",
+    "cpu": {
+      "backend": "CPU",
+      "operation": "ElementWiseAdd",
+      "input_a": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "input_b": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "output": [
+        11,
+        22,
+        33,
+        44
+      ],
+      "expected": [
+        11,
+        22,
+        33,
+        44
+      ],
+      "pass": true,
+      "cpu_fallback": false
+    },
+    "htp": {
+      "backend": "HTP",
+      "operation": "ElementWiseAdd",
+      "input_a": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "input_b": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "output": [
+        11,
+        22,
+        33,
+        44
+      ],
+      "expected": [
+        11,
+        22,
+        33,
+        44
+      ],
+      "pass": true,
+      "cpu_fallback": false
+    },
+    "explicit_backend": "libQnnHtp.so",
+    "qnn_cpu_library_loaded_in_htp_process": false,
+    "accelerator_profiling_present": true,
+    "htp_all_api_stages_and_cleanup_succeeded": true,
+    "evidence": "10-tiny-graph-htp.log",
+    "benchmark": false
+  },
+  "warnings": [
+    "SNPE availability probe emitted undefined m_mutex handle messages during process teardown despite true availability and exit 0.",
+    "QNN HTP emitted unexpected GraphHtpSettings option 66 and optional SetBufName/HTP extension warnings; graph finalize/execute/cleanup returned 0 and output was exact."
+  ],
+  "scope": "Confirms the new runtime loads, identifies CPU/GPU/HTP, passes DSP diagnostics and executes a minimal graph on real HTP. Does not validate MobileNet, a current AI Hub DLC, production stability or performance speedup.",
+  "reversibility": {
+    "method": "Delete only the owned remote test directory using cleanup_test.sh after collecting evidence. No system rollback required because system libraries/configuration were not replaced.",
+    "temporary": true
+  }
+}

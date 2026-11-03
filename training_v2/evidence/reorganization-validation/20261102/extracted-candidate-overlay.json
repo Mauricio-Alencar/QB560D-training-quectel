@@ -1,0 +1,81 @@
+{
+  "status": "VALIDATION_CANDIDATE_NOT_FROZEN",
+  "files": [
+    {
+      "path": "ai/workbench.py",
+      "original_sha256": "bfdd91bd6137675360548586f8932ba50dae79e23310c5f175bef99b8b67b95c",
+      "candidate_sha256": "bfdd91bd6137675360548586f8932ba50dae79e23310c5f175bef99b8b67b95c"
+    },
+    {
+      "path": "target/diagnostics.sh",
+      "original_sha256": "e3500865003c994439da166273c9ac1eba654902f9a34f871d28b3ce61d0aaab",
+      "candidate_sha256": "e3500865003c994439da166273c9ac1eba654902f9a34f871d28b3ce61d0aaab"
+    },
+    {
+      "path": "demos/docker/target/rehearse.py",
+      "original_sha256": "d5ad89cacd76d50868dc340ffa5fd3036e36c19725156a216f82263bd1006b0f",
+      "candidate_sha256": "d5ad89cacd76d50868dc340ffa5fd3036e36c19725156a216f82263bd1006b0f"
+    },
+    {
+      "path": "host/adb_transport.py",
+      "original_sha256": "1d4883d068102c06539d20be1302171dcce76219a419059a3c9c5826476cbd65",
+      "candidate_sha256": "1d4883d068102c06539d20be1302171dcce76219a419059a3c9c5826476cbd65"
+    },
+    {
+      "path": "host/provision_session.py",
+      "original_sha256": "4d8e98e02bea6b04f528bb06323d7b7acf1984dbae5f67d30a49faa7ac7ee5f8",
+      "candidate_sha256": "f8e2ded8cfd55e31764395df3777d032044e8ec848fbbe38ce404fa4d3f4a914"
+    },
+    {
+      "path": "runtimes/qairt_2_51/analyze_results.py",
+      "original_sha256": "b48c4fc783c27217299a1dae95d6b8e62d2fafceeda6004767398e19cda8e380",
+      "candidate_sha256": "b48c4fc783c27217299a1dae95d6b8e62d2fafceeda6004767398e19cda8e380"
+    },
+    {
+      "path": "runtimes/qairt_2_51/update_qairt.py",
+      "original_sha256": "1038bba08f1f13ab92fe06c399b920526db888dd9054ac3a183fd1ac04684f22",
+      "candidate_sha256": "d0f6d523e8e579665aa5fd58d31fd79bcdc1b88e765c331b5fa21e65c2bec393"
+    },
+    {
+      "path": "demos/hand_gesture/gesture_demo.py",
+      "original_sha256": "da28f601c43b5e94e1f37df3744332828a11e0db4b931b9c389aad93ef094032",
+      "candidate_sha256": "69afd637b022aedb3d6c2e33640f717dc4ff7bd8186d8ef917bc88d446258ddd"
+    },
+    {
+      "path": "tests/test_adb_transfer.py",
+      "original_sha256": "dda51f4060140e7a9c7e3a8f7d11221f1fb763b903e3c5360fed330487329de2",
+      "candidate_sha256": "99633b988e9df0a73a477248a0602b0f10afe1b7570dce1c8f4fb1a9ceedd81f"
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "7c92c29aa83a1b97b24de4a6c124adac360b3404574fd2a2c85671f3282ba73c",
+      "candidate_sha256": "7c92c29aa83a1b97b24de4a6c124adac360b3404574fd2a2c85671f3282ba73c"
+    },
+    {
+      "path": "docs/DAY1.md",
+      "original_sha256": "2ec46578200ef6d80f7050f328231e63aa82568204d28c169cd031043856eee0",
+      "candidate_sha256": "2ec46578200ef6d80f7050f328231e63aa82568204d28c169cd031043856eee0"
+    },
+    {
+      "path": "docs/HTP_DSP.md",
+      "original_sha256": "9930438917b1eb31d3a17b8f162df94c482fc821ac764be7f85f3b488b0a03f3",
+      "candidate_sha256": "9930438917b1eb31d3a17b8f162df94c482fc821ac764be7f85f3b488b0a03f3"
+    },
+    {
+      "path": "docs/CELLULAR_RIL.md",
+      "original_sha256": "226baa1347713cae985c6087ed9ff75d122851717d7281c501f9b753cc5045d6",
+      "candidate_sha256": "226baa1347713cae985c6087ed9ff75d122851717d7281c501f9b753cc5045d6"
+    },
+    {
+      "path": "docs/VALIDACAO_POS_REORGANIZACAO.md",
+      "original_sha256": "5f779a22f16e4fe887c7d4f3a4a3ed078b2186be37045735cf84c1c54490aad8",
+      "candidate_sha256": "7f04a297724e267874fc14f865ec3e804910ab00be5b320b213c52516d42ebc9"
+    },
+    {
+      "path": "Qualcomm_AI_Hub_Training/GUIA_DEPLOY_AIBOX.md",
+      "original_sha256": "83d25ad6354d4cee6bd781d82ca684e0b67e5dcfd95e49daf4cfae094814c20e",
+      "candidate_sha256": "83d25ad6354d4cee6bd781d82ca684e0b67e5dcfd95e49daf4cfae094814c20e"
+    }
+  ],
+  "dist_archive_preserved": true
+}

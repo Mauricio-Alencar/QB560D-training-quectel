@@ -1,0 +1,218 @@
+{
+  "result": "FUNCTIONAL_NETWORK_PASS_WITH_RIL_SETUP_WARNING",
+  "started_host_utc": "2026-11-02T01:34:11.468632+00:00",
+  "records": [
+    {
+      "label": "before",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "before.log"
+    },
+    {
+      "label": "profile-hash-before",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "profile-hash-before.log"
+    },
+    {
+      "label": "manual-ril-bringup",
+      "passed": false,
+      "log": "ril-session.json",
+      "data_call_active": true,
+      "setup_api_return": -4
+    },
+    {
+      "label": "cellular-bound-http",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "cellular-bound-http.log"
+    },
+    {
+      "label": "wlan-coexistence-check",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "wlan-coexistence-check.log"
+    },
+    {
+      "label": "iperf-cellular-1",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "iperf-cellular-1.log"
+    },
+    {
+      "label": "iperf-cellular-2",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "iperf-cellular-2.log"
+    },
+    {
+      "label": "iperf-cellular-3",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "iperf-cellular-3.log"
+    },
+    {
+      "label": "iperf-failed-endpoint",
+      "exit_code": 1,
+      "expected": 1,
+      "passed": true,
+      "log": "iperf-failed-endpoint.log"
+    },
+    {
+      "label": "wlan-disconnected",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "wlan-disconnected.log"
+    },
+    {
+      "label": "radio-off",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "radio-off.log"
+    },
+    {
+      "label": "radio-on",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "radio-on.log"
+    },
+    {
+      "label": "radio-reconnect",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "radio-reconnect.log"
+    },
+    {
+      "label": "profile-hash-after",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "profile-hash-after.log"
+    },
+    {
+      "label": "after",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "after.log"
+    },
+    {
+      "label": "ssh-public-key",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "ssh-public-key.log"
+    }
+  ],
+  "radio_preferences_changed": false,
+  "apn_changed": false,
+  "data_teardown_tested": false,
+  "sim_output": "QLRIL_GetIccCardStatus ret = 0\ncard_state(e.g. 0:absent; 1:present;): 1\nuniversal_pin_state(e.g. 0:unknown;): 0\ngsm_umts_subscription_app_index: 0\ncdma_subscription_app_index: -1\nims_subscription_app_index: 1\nnum_applications: 2\napp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): 2\napp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): 5\naid_ptr: a0000000871002ff55f00189000001ff\napp_label_ptr: 00000000\npin1_replaced: 0\npin1(e.g. 1:Enable not verified, 2:Enable verified): 3\npin2(e.g. 3:Disabled, 4:Enable blocked): 1\napp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): 0\napp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): 0\npin1(e.g. 1:Enable not verified, 2:Enable verified): 0\npin2(e.g. 3:Disabled, 4:Enable blocked): 0\n\nPlease input cmd index (-1: exit, 0: help):",
+  "registration_output": "response[0] is registration state 0-5,e.g 1:Registered, 2: Not registered\nresponse[1] is LAC if registered or NULL if not\nresponse[2] is CID if registered or NULL if not\nresponse[3] indicates the available data radio technology, e.g 3:UMTS, 14:LTE, 20:NR5G\nvalid values as defined by RIL_RadioTechnology.\nresponse[5] The maximum number of simultaneous Data Calls that can be established\nFor more information refer to RIL_REQUEST_DATA_REGISTRATION_STATE in ril.h\nresponse[0]:1\nresponse[2]:0825cd01\nresponse[3]:14\nresponse[5]:20\nresponse[6]:38250\nresponse[7]:364\nresponse[8]:136695041\n\nPlease input cmd index (-1: exit, 0: help):",
+  "registration": 1,
+  "reported_rat": 14,
+  "active_session_before": false,
+  "default_71d_activation_executed": true,
+  "activation_output": "QLRIL_SetupDataCall failed with return:-4\n\nPlease input cmd index (-1: exit, 0: help):",
+  "data_call_output": "QLRIL_GetDataCallList success return items: 1\nGetDataCallList response:\nstatus:0, retry:-1, call_id:0, active:up\ntype:IP, ifname:rmnet_data0, addresses:100.84.199.38/30, dnses:189.40.198.90 189.40.198.91\ngateways:100.84.199.37, pcscf:, mtu:1500\n\n\nPlease input cmd index (-1: exit, 0: help):",
+  "interface": "rmnet_data0",
+  "serving_cell_output": "AT command response:\nAT+QENG=\"servingcell\"\n\n+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),825CD01(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),956A(tac),-98(rsrp),-10(rsrq),-67(rssi),13(sinr),-\n\nOK\n\nPlease input AT command(-1: exit):",
+  "iperf_rounds": [
+    {
+      "uplink_mbps": 16.565315834841385,
+      "downlink_mbps": 22.43704934975179,
+      "connections": [
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 58838,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ],
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 37050,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ]
+      ],
+      "target_evidence": "/opt/qb560d-training-payload/evidence/iperf-20261102T093420-44653"
+    },
+    {
+      "uplink_mbps": 15.620609854138625,
+      "downlink_mbps": 24.429136037949426,
+      "connections": [
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 58916,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ],
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 34700,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ]
+      ],
+      "target_evidence": "/opt/qb560d-training-payload/evidence/iperf-20261102T093442-44688"
+    },
+    {
+      "uplink_mbps": 16.984397127948508,
+      "downlink_mbps": 28.308477699321852,
+      "connections": [
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 42024,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ],
+        [
+          {
+            "socket": 4,
+            "local_host": "100.84.199.38",
+            "local_port": 49422,
+            "remote_host": "103.230.142.1",
+            "remote_port": 5201
+          }
+        ]
+      ],
+      "target_evidence": "/opt/qb560d-training-payload/evidence/iperf-20261102T093505-44721"
+    }
+  ],
+  "saved_wlan_profile_unchanged": true,
+  "ssh_ip": "192.168.0.26",
+  "nr_confirmed": false,
+  "finished_host_utc": "2026-11-02T01:35:49.077161+00:00",
+  "setup_api_return": -4,
+  "setup_api_passed": false,
+  "functional_network_result": "PASS_WLAN_CELLULAR_AND_IPERF",
+  "overall_result": "FUNCTIONAL_NETWORK_PASS_WITH_RIL_SETUP_WARNING",
+  "iperf_median_ul_mbps": 16.565315834841385,
+  "iperf_median_dl_mbps": 24.429136037949426
+}

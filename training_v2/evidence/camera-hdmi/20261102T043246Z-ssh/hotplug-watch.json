@@ -1,0 +1,818 @@
+{
+  "transport": "SSH",
+  "host_key_verified": true,
+  "exit_code": 0,
+  "stderr": "",
+  "samples": [
+    {
+      "elapsed_s": 0.0,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 1.003,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 2.008,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 3.012,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 4.015,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 5.022,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 6.029,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 7.036,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 8.042,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 9.049,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 10.056,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 11.061,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 12.067,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 13.072,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 14.078,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 15.085,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 16.092,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 17.099,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 18.107,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 19.113,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 20.119,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 21.127,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 22.135,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 23.141,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 24.147,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 25.152,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 26.16,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 27.166,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 28.173,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 29.179,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 30.186,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 31.193,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 32.199,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 33.205,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 34.213,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 35.219,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 36.225,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 37.232,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 38.24,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 39.247,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 40.253,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 41.261,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 42.268,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 43.274,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 44.28,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 45.288,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 46.294,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 47.3,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 48.308,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 49.316,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 50.322,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 51.328,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 52.336,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 53.343,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 54.349,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 55.355,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 56.363,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 57.371,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 58.377,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 59.385,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 60.392,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 61.398,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 62.404,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 63.412,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 64.418,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 65.425,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 66.431,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 67.438,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 68.446,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 69.453,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 70.459,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 71.467,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 72.474,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 73.481,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 74.488,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 75.496,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 76.502,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 77.509,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 78.516,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 79.522,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 80.528,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 81.534,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 82.541,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 83.548,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 84.554,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 85.561,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 86.567,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 87.573,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 88.58,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    },
+    {
+      "elapsed_s": 89.586,
+      "status": "connected",
+      "enabled": "enabled",
+      "edid_sha256": "599c21f4c89c48595c4ec8ea3615c12451de1d2ace746b6f2999689091759beb",
+      "bridge_irq": [
+        "335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq"
+      ]
+    }
+  ]
+}

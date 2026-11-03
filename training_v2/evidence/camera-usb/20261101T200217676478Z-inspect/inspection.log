@@ -1,0 +1,24 @@
+NETWORK ADDRESSES
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+13: bridge0    inet 192.168.225.1/24 brd 192.168.225.255 scope global bridge0\       valid_lft forever preferred_lft forever
+14: rmnet_data0    inet 100.65.195.62/30 scope global rmnet_data0\       valid_lft forever preferred_lft forever
+
+WLAN PROFILE
+GENERAL.STATE:                          20 (unavailable)
+GENERAL.CONNECTION:                     --
+connection.id:                          qb560d-training-wlan
+connection.interface-name:              wlan0
+connection.autoconnect:                 yes
+ipv4.route-metric:                      600
+
+SSH SERVICE
+inactive
+inactive
+LISTEN    0         4096                     *:22                     *:*        users:(("systemd",pid=1,fd=56))                                                
+Missing privilege separation directory: /run/sshd
+
+SSH PUBLIC HOST KEYS
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHuCqinQ1BhVh6i9SngKYmOhI1KnxcZ63OdldCbbUeqB3hpn/cijbfTZvTBIaSJq8K2UUdqJp8FHhW+7zgsV44A= root@07f5d17c3082
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFUbYmcp+J3rlr5VA422KbaoiLsGgvwugOHJVPs8fOg root@07f5d17c3082
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3acOxN5/xubasuQwMelwH65/IZ4JM+887JBTNfiU+vb9I3idGII+ktn/001uMLldRnHyfN2tTjJXMqrKULP4o4saTjdYExw7dd8bY8Kalc8d7HoROzZ25AmTnRD7r4hxQVNgxAHRgJ+dr+9XRRG/vNW1XyjTxgo8hmbm7u+aUO6dnZXuA9FqhafYldUFa+1mO/dM1aX93gy68wCJdd7GqbLHNf9GlkXAqsCBARvoV0w71QaCJp0Mb5H+QtDl/FSf4SKWDws5aZBl/7oK4eIVyYyWUr7aPTUlS8d20ujb/Jsp8K0OTDvvo5eMAKRa/vDlP2ArYLva3ZkAYpcQ5XgzMATBGcgCXpXtdic0TazVKc//fLfXzTOs99iVOWK4h1+pKrrHvyupLG4eVbWrOjRMWyK2o11YWfx+EfWiZs14Ob7XprSXhAjQ2E03jL/O1Z7gNDWmOUx9xvpteIQZS1GDDEcDuPYDN90n0yE9W9nWyttQJQoWYr0txWr5RbIr5WBs= root@07f5d17c3082
+

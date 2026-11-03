@@ -1,0 +1,16 @@
+
+DESCRIPTION:
+QNN-platform-validator is a tool to check the capabilities of a device.
+------------
+ARGUMENTS:
+-------------------
+  --backend <BACKEND>   Specify the backend to validate. <BACKEND> : gpu, dsp, all
+  --coreVersion         Query the backend core descriptor. 
+  --libVersion          Query the backend core library API.
+  --testBackend         Run diagnostic tests on the specified backend.
+  --targetPath <DIR>    The directory to save output to. Defaults to /data/local/tmp/platformValidator/output
+  --debug               Turn on verbose logging.
+  --help                Show this help message.
+
+
+__QAIRT_ISOLATED_EXIT__=0

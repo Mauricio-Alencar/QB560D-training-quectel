@@ -1,0 +1,55 @@
+/prj/qct/webtech_hyd18/mlg_user_admin/qaisw_source_repo/qaisw_repo_release/snpe_src/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+[USER_WARNING] QnnDsp <W> Initializing HtpProvider
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+[USER_WARNING] QnnDsp <W> HTP arch will be deprecated, please set SoC id instead.
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+[USER_WARNING] Cannot perform accelerated HTP init without a valid and complete cache record
+[USER_WARNING] Nothing to validate: No valid graph cache detected
+[USER_WARNING] QnnDsp <W> Power config id [0] is either invalid or already destroyed
+[USER_WARNING] QnnDsp <W> PrepareLibLoader Loading libSnpeHtpPrepare.so
+{
+  "backend_requested": "dsp",
+  "runtime_order": [
+    "dsp"
+  ],
+  "cpu_retry": false,
+  "runtime_version": "2.26.0.240827110523_99241",
+  "library": "/tmp/qb560d-training/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+  "model_sha256": "b4a0cf4aa65f445fe5cb15d586c5e28d05d115b4179058ffc15d48c3414a4ff7",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "input_mode": "pixels",
+  "input_name": "input",
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "profiling": "detailed",
+  "runs": 5,
+  "warmup": 3,
+  "inference_ms_median": 1.7117329989559948,
+  "inference_ms_p95": 1.7428796007152414,
+  "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+  "top3": [
+    {
+      "class_id": 653,
+      "score": 0.8046875
+    },
+    {
+      "class_id": 907,
+      "score": 0.06640625
+    },
+    {
+      "class_id": 466,
+      "score": 0.0234375
+    }
+  ],
+  "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+}
+[USER_WARNING] QnnDsp <W> Backend 1 free cleanup called during process exit
+[USER_WARNING] QnnDsp <W> qnnOpPackageManager: hexagon unload op package function pointer is nullptr!
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+/prj/qct/webtech_hyd18/mlg_user_admin/qaisw_source_repo/qaisw_repo_release/snpe_src/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+
+__QB560D_EXIT__=0

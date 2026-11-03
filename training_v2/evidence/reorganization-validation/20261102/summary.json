@@ -1,0 +1,79 @@
+{
+  "status": "VALIDATED_WITH_RIL_SETUP_WARNING",
+  "at_host_utc": "2026-11-02T02:17:56.157257+00:00",
+  "scope": "One reference QB560D-EU, BSP QDPA_Ubuntu20.04.003.51.303 V01, kernel 5.4.219-perf",
+  "frozen": false,
+  "waiting_for": "User OK of slides before final package generation/freeze",
+  "provisioning": "inspect + offline prepare + plan + apply + standalone verify passed in the working tree and the independent corrected extraction",
+  "fresh_host": "Python 3.12.10; new venv; offline NumPy 2.3.5 and Pillow 12.3.0",
+  "application_systemd": "Three cycles passed; logging corrected and revalidated",
+  "docker": {
+    "result": "PASS_THREE_SESSIONS_AND_OFFLINE_DEPLOY",
+    "checks": 61
+  },
+  "htp_251": {
+    "five_demos_passed": true,
+    "gesture_extension_passed": "7/7",
+    "mobilenet_v2_cpu_htp_passed": true,
+    "vision_cpu_gpu_htp_cases": 11,
+    "vision_backend_combinations_passed": 33,
+    "target_only_htp_cases_passed": 11,
+    "comparative_benchmark_sessions_passed": 45
+  },
+  "legacy_snpe226": {
+    "sessions_passed": 12,
+    "dsp_profile_entries": 34,
+    "cpu_profile_entries": 0
+  },
+  "aihub": "New hosted compile/inference/profile, same artifact on local CPU/GPU, separate offline kit and missing-account negative control passed",
+  "network": {
+    "functional_data_path": "PASS",
+    "setup_api_return": -4,
+    "setup_api_passed": false,
+    "nr_confirmed": false,
+    "median_ul_mbps": 16.565315834841385,
+    "median_dl_mbps": 24.429136037949426
+  },
+  "ssh_scp": "PASS with ADB-pinned host key and strict checking",
+  "tests": {
+    "host-unit-tests": 23,
+    "provision-unit-tests": 14,
+    "long-path-regression-tests": 4
+  },
+  "runtime_integrity": {
+    "passed": true,
+    "files": 48
+  },
+  "optional_camera": "CONFIG_REQUIRED exit 78; capture node absent; no new frame validated",
+  "not_repeated": [
+    "Physical power-cycle cold boot",
+    "Physical USB-C removal/USB-A and HDMI comparison",
+    "Per-box event acceptance",
+    "Timed two-day classroom rehearsal"
+  ],
+  "slides": {
+    "file": "slides/QB560D_EU_Training.pptx",
+    "count_at_extracted_validation": 108,
+    "sha256_at_extracted_validation": "6e5fb832cd7abd6285f364532379181d494a21cfb76a58799c2eb4e6c9245f9e",
+    "current_count": 115,
+    "current_sha256": "e7c2f66778a476ce0a3199b80e10fb85518fc2a1735d40c9574fb96d855796a6",
+    "manual_changes_detected": true,
+    "latest_cli_and_path_checks_passed": true,
+    "edited_by_validation": false,
+    "awaiting_user_slide_approval": true
+  },
+  "distribution": {
+    "existing_archive_preserved": true,
+    "sha256": "60cf520050f352abcbe72fe09cd9e86844792dba666b02d4698532790449e8e1",
+    "contains_current_corrections": false,
+    "final_zip_to_be_regenerated_after_slide_ok": true
+  },
+  "corrections": [
+    "UTF-8 Workbench progress output",
+    "Native journald event submission",
+    "Docker checksum working directory",
+    "Shared short-path ADB transfer for provisioning and extended-path MobileNet analysis",
+    "Current /opt and offline SNPE226 guide paths"
+  ],
+  "credentials_included": false
+}

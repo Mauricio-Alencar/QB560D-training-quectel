@@ -1,0 +1,19 @@
+
+DEVICE /sys/bus/i2c/devices/2-002b
+lrwxrwxrwx 1 root root 0 Jun 18  2024 /sys/bus/i2c/devices/2-002b -> ../../../devices/platform/soc/990000.i2c/i2c-2/2-002b
+lt9611
+/sys/devices/platform/soc/990000.i2c/i2c-2/2-002b/driver
+qcom,lt9611
+
+DEVICE /sys/bus/i2c/devices/2-0041
+lrwxrwxrwx 1 root root 0 Jun 18  2024 /sys/bus/i2c/devices/2-0041 -> ../../../devices/platform/soc/990000.i2c/i2c-2/2-0041
+lt9611uxd
+/sys/bus/i2c/drivers/lt9611uxd
+lontium,lt9611uxd
+
+KERNEL
+
+INTERRUPTS
+ 70:    1290504          0          0          0          0          0          0          0     GICv3 115 Level     msm_drm
+335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq
+375:          0          0          0          0          0          0          0          0       sde   4 Edge      dsi_ctrl

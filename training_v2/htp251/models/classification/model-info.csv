@@ -1,0 +1,376 @@
+DLC info of: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\models\classification\model.w8a16.dlc
+""
+Model Version: 
+""
+Model Copyright: 
+""
+"Converter command: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\sdk251-host\qairt\2.51.40.260930\bin\x86_64-windows-msvc\qairt-converter; adjust_nms_features_dims=True; export_format=DLC_DEFAULT; dump_exported_onnx=False; align_matmul_ranks=True; backend=HTP; io_config=; enable_tensor_deduplication=False; apply_masked_softmax=uncompressed; disable_batchnorm_folding=False; converter_op_package_lib=; batch=None; calc_static_encodings=False; dump_custom_io_config_template=; copyright_file=None; multi_time_steps_gru=False; custom_op_config_paths=None; debug=-1; defer_loading=False; match_caffe_ssd_to_tf=False; disable_dynamic_16_bit_weights=False; define_symbol=None; lora_weight_list=None; desired_io_layout=[]; disable_defer_loading=True; disable_match_lstms=False; disable_preserve_io=False; disable_qnn_op_config_validation=False; input_type=[]; quantizer_log_level=LogLevel.NONE; keep_disconnected_nodes=False; disable_transform_tracking=False; dry_run=None; dump_pass_trace_info=False; dumpIR=False; enable_experimental_feature=[]; dump_inferred_model=False; validate_models=False; no_optimization=False; dump_io_config_template=; dump_ir=; float_bitwidth=32; dump_ir_optimizer_config_template=False; dump_optimization_pass_mode_config=False; dump_relay=None; dump_value_info=False; input_dim=None; enable_Layout_Transform_v1=False; enable_framework_trace=False; use_onnx_relay=False; enable_match_gathernd=False; float_bias_bitwidth=0; pack_4_bit_weights=False; enable_match_topk=False; ir_optimizer_config=; enable_rope_fusion=False; force_prune_cast_ops=False; expand_gru_op_structure=True; expand_sparse_op_structure=False; expand_lstm_op_structure=False; extract_color_transform=True; gguf_config=None; handle_gather_negative_indices=True; inject_cast_for_gather=True; input_dtype=[['input', 'float32']]; input_encoding=[]; input_layout=[['input', 'NHWC']]; keep_int64_inputs=False; keep_quant_nodes=False; unroll_gru_time_steps=True; model_version=None; multi_time_steps_lstm=False; no_simplification=True; onnx_summary=False; optimization_pass_mode=ir_optimizer_mainline; optimization_pass_mode_config=; out_names=[]; perform_sequence_construct_optimizer=False; output_layout=[]; package_name=None; packed_masked_softmax_inputs=[]; packed_max_seq=1; partial_graph_input_name=None; perform_axes_to_spatial_first_order=False; perform_layout_transformation=True; prepare_inputs_as_params=False; preprocess_roi_pool_inputs=True; preserve_io=[['layout']]; preserve_io_datatype=[]; preserve_onnx_output_order=False; pytorch_custom_op_lib=; quant_updatable_mode=None; quantization_overrides=; quantizer_log=None; remove_unused_inputs=False; saved_model_signature_key=serving_default; saved_model_tag=serve; show_unconsumed_nodes=False; signature_name=; skip_validation=False; tf_summary=False; soc_model=; squash_box_decoder=True; transforms_metadata=None; unroll_lstm_time_steps=True; use_convert_quantization_nodes=False; use_quantize_v2=False; user_custom_io=[]"
+""
+Quantizer command: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\sdk251-host\qairt\2.51.40.260930\bin\x86_64-windows-msvc\qairt-quantizer; act_bitwidth=16; act_quantizer=tf; percentile_calibration_value=99.99; backend=HTP; act_quantizer_calibration=min-max; float_fallback=False; input_list=C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\calibration\classification\input_list.txt; restrict_quantization_steps=[]; algorithms=[]; act_quantizer_schema=asymmetric; soc_model=; adjust_bias_encoding=False; use_per_channel_quantization=False; keep_weights_quantized=False; dump_encoding_json=False; bias_bitwidth=32; calc_static_encodings=False; config_file=None; debug=-1; disable_dynamic_16_bit_weights=False; float_bitwidth=32; dump_ir=; dump_ir_optimizer_config_template=False; use_native_output_files=False; dump_optimization_pass_mode_config=False; include_data_invariant_ops=False; dump_pass_trace_info=False; use_per_row_quantization=False; enable_per_row_quantized_bias=False; export_stripped_dlc=False; pack_4_bit_weights=False; ir_optimizer_config=; float_bias_bitwidth=0; ignore_encodings=False; quantizer_log=None; param_quantizer_calibration=min-max; op_package_lib=; optimization_pass_mode=ir_optimizer_mainline; optimization_pass_mode_config=; param_quantizer=None; param_quantizer_schema=asymmetric; preserve_io_datatype=[]; quantizer_log_level=LogLevel.NONE; use_aimet_quantizer=False; use_dynamic_16_bit_weights=True; use_native_input_files=False; use_quantize_v2=False; weights_bitwidth=8
+""
+DLC created with converter version: 2.51.40.260930230134
+Info of graph: model.float
+Id,Name,Type,Inputs,Outputs,Out Dims,Runtimes,Parameters
+0,MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant,Conv2d,"input (data type: uFxp_8; tensor dimension: [1,224,224,3]; tensor type: APP_WRITE) [NW Input]","MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant__150_DequantizeLinear__430:0 (data type: uFxp_8; tensor dimension: [1,112,112,32]; tensor type: NATIVE)",1x112x112x32,A D G C,"input encoding : bitwidth 8, min -1.000000000000, max 0.992187500000, scale 0.007812500000, offset -128.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_0/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,3,32]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_0/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -3.295828580856, max 2.269974708557, scale 0.021826678887, offset -151.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -366190.906250000000, max 366190.906250000000, scale 0.000170520929, offset 0.000000000000"
+,,,,,,,"MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant__150_DequantizeLinear__430:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 1], [0, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [2, 2]"
+,,,,,,,param count: 896 (0.0215%)
+,,,,,,,MACs per inference: 10M (1.91%)
+1,MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant__150_DequantizeLinear__430:0 (data type: uFxp_8; tensor dimension: [1,112,112,32]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant__159_DequantizeLinear__436:0 (data type: uFxp_8; tensor dimension: [1,112,112,32]; tensor type: NATIVE)",1x112x112x32,A D G C,"MobilenetV1/MobilenetV1/Conv2d_1_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -32.141906738281, max 42.368873596191, scale 0.292199134827, offset -110.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_1_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,32]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -14763951.000000000000, max 14763951.000000000000, scale 0.006875000428, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant__159_DequantizeLinear__436:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 3M (0.635%)
+2,MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant__159_DequantizeLinear__436:0 (data type: uFxp_8; tensor dimension: [1,112,112,32]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant__166_DequantizeLinear__448:0 (data type: uFxp_8; tensor dimension: [1,112,112,64]; tensor type: NATIVE)",1x112x112x64,A D G C,"MobilenetV1/MobilenetV1/Conv2d_1_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -3.680934906006, max 4.076407432556, scale 0.030420949683, offset -121.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_1_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,32,64]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -1537079.875000000000, max 1537079.875000000000, scale 0.000715758593, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [64]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant__166_DequantizeLinear__448:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 2k (0.0506%)
+,,,,,,,MACs per inference: 25M (4.52%)
+3,MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant__166_DequantizeLinear__448:0 (data type: uFxp_8; tensor dimension: [1,112,112,64]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant__175_DequantizeLinear__438:0 (data type: uFxp_8; tensor dimension: [1,56,56,64]; tensor type: NATIVE)",1x56x56x64,A D G C,"MobilenetV1/MobilenetV1/Conv2d_2_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -52.360469818115, max 50.346607208252, scale 0.402772843838, offset -130.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_2_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,64]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -20350912.000000000000, max 20350912.000000000000, scale 0.009476631880, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [64]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant__175_DequantizeLinear__438:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 1], [0, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 1M (0.318%)
+4,MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant__175_DequantizeLinear__438:0 (data type: uFxp_8; tensor dimension: [1,56,56,64]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant__182_DequantizeLinear__432:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)",1x56x56x128,A D G C,"MobilenetV1/MobilenetV1/Conv2d_2_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.575410723686, max 2.287375211716, scale 0.015148180537, offset -104.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_2_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,64,128]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -765392.375000000000, max 765392.375000000000, scale 0.000356413599, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [128]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant__182_DequantizeLinear__432:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 8k (0.199%)
+,,,,,,,MACs per inference: 25M (4.52%)
+5,MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant__182_DequantizeLinear__432:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant__191_DequantizeLinear__455:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)",1x56x56x128,A D G C,"MobilenetV1/MobilenetV1/Conv2d_3_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -9.685968399048, max 5.751043796539, scale 0.060537301004, offset -160.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_3_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,128]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -3058769.250000000000, max 3058769.250000000000, scale 0.001424350427, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [128]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant__191_DequantizeLinear__455:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 3M (0.635%)
+6,MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant__191_DequantizeLinear__455:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant__198_DequantizeLinear__442:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)",1x56x56x128,A D G C,"MobilenetV1/MobilenetV1/Conv2d_3_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.293013095856, max 2.214628696442, scale 0.013755458407, offset -94.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_3_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,128,128]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -695022.312500000000, max 695022.312500000000, scale 0.000323644985, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [128]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant__198_DequantizeLinear__442:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 16k (0.396%)
+,,,,,,,MACs per inference: 51M (9.03%)
+7,MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant__198_DequantizeLinear__442:0 (data type: uFxp_8; tensor dimension: [1,56,56,128]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant__207_DequantizeLinear__447:0 (data type: uFxp_8; tensor dimension: [1,28,28,128]; tensor type: NATIVE)",1x28x28x128,A D G C,"MobilenetV1/MobilenetV1/Conv2d_4_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -2.061243534088, max 2.212066173553, scale 0.016758076847, offset -123.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_4_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,128]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -846735.687500000000, max 846735.687500000000, scale 0.000394292030, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [128]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant__207_DequantizeLinear__447:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 1], [0, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 903k (0.159%)
+8,MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant__207_DequantizeLinear__447:0 (data type: uFxp_8; tensor dimension: [1,28,28,128]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant__214_DequantizeLinear__450:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)",1x28x28x256,A D G C,"MobilenetV1/MobilenetV1/Conv2d_4_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.147878885269, max 0.790592074394, scale 0.007601846941, offset -151.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_4_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,128,256]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -384098.656250000000, max 384098.656250000000, scale 0.000178859875, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant__214_DequantizeLinear__450:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 33k (0.791%)
+,,,,,,,MACs per inference: 25M (4.52%)
+9,MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant__214_DequantizeLinear__450:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant__223_DequantizeLinear__449:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)",1x28x28x256,A D G C,"MobilenetV1/MobilenetV1/Conv2d_5_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -5.296129703522, max 5.172964096069, scale 0.041055269539, offset -129.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_5_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,256]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -2074400.375000000000, max 2074400.375000000000, scale 0.000965967949, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant__223_DequantizeLinear__449:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 1M (0.318%)
+10,MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant__223_DequantizeLinear__449:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant__230_DequantizeLinear__444:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)",1x28x28x256,A D G C,"MobilenetV1/MobilenetV1/Conv2d_5_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.784656941891, max 0.855404675007, scale 0.006431614049, offset -122.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_5_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,256,256]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -324970.281250000000, max 324970.281250000000, scale 0.000151326080, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant__230_DequantizeLinear__444:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 65k (1.58%)
+,,,,,,,MACs per inference: 51M (9.03%)
+11,MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant__230_DequantizeLinear__444:0 (data type: uFxp_8; tensor dimension: [1,28,28,256]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant__239_DequantizeLinear__452:0 (data type: uFxp_8; tensor dimension: [1,14,14,256]; tensor type: NATIVE)",1x14x14x256,A D G C,"MobilenetV1/MobilenetV1/Conv2d_6_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.642216682434, max 1.790285468102, scale 0.013460792601, offset -122.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_6_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,256]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -680133.687500000000, max 680133.687500000000, scale 0.000316711928, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant__239_DequantizeLinear__452:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 1], [0, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 451k (0.0794%)
+12,MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant__239_DequantizeLinear__452:0 (data type: uFxp_8; tensor dimension: [1,14,14,256]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant__246_DequantizeLinear__443:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_6_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.999663054943, max 1.338998198509, scale 0.009171220474, offset -109.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_6_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,256,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -463394.437500000000, max 463394.437500000000, scale 0.000215784850, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant__246_DequantizeLinear__443:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 131k (3.15%)
+,,,,,,,MACs per inference: 25M (4.52%)
+13,MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant__246_DequantizeLinear__443:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant__255_DequantizeLinear__435:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_7_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -4.875387668610, max 4.542974948883, scale 0.036934755743, offset -132.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_7_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -1866203.125000000000, max 1866203.125000000000, scale 0.000869018550, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant__255_DequantizeLinear__435:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 903k (0.159%)
+14,MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant__255_DequantizeLinear__435:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant__262_DequantizeLinear__451:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_7_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.742006540298, max 0.609505414963, scale 0.005300046876, offset -140.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_7_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -267795.562500000000, max 267795.562500000000, scale 0.000124702026, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant__262_DequantizeLinear__451:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 262k (6.29%)
+,,,,,,,MACs per inference: 51M (9.03%)
+15,MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant__262_DequantizeLinear__451:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant__271_DequantizeLinear__456:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_8_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -4.005327224731, max 6.860188007355, scale 0.042609862983, offset -94.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_8_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -2152949.500000000000, max 2152949.500000000000, scale 0.001002545236, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant__271_DequantizeLinear__456:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 903k (0.159%)
+16,MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant__271_DequantizeLinear__456:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant__278_DequantizeLinear__437:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_8_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.630337238312, max 0.635300517082, scale 0.004963285290, offset -127.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_8_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -250780.015625000000, max 250780.015625000000, scale 0.000116778545, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant__278_DequantizeLinear__437:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 262k (6.29%)
+,,,,,,,MACs per inference: 51M (9.03%)
+17,MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant__278_DequantizeLinear__437:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant__287_DequantizeLinear__445:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_9_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -3.601575136185, max 3.629934072495, scale 0.028358859941, offset -127.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_9_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -1432888.625000000000, max 1432888.625000000000, scale 0.000667240762, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant__287_DequantizeLinear__445:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 903k (0.159%)
+18,MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant__287_DequantizeLinear__445:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant__294_DequantizeLinear__433:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_9_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.691609740257, max 1.289968729019, scale 0.007770895958, offset -89.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_9_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -392640.218750000000, max 392640.218750000000, scale 0.000182837350, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant__294_DequantizeLinear__433:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 262k (6.29%)
+,,,,,,,MACs per inference: 51M (9.03%)
+19,MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant__294_DequantizeLinear__433:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant__303_DequantizeLinear__441:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_10_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -3.260146141052, max 2.943863153458, scale 0.024329448119, offset -134.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_10_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -1229294.500000000000, max 1229294.500000000000, scale 0.000572434859, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant__303_DequantizeLinear__441:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 903k (0.159%)
+20,MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant__303_DequantizeLinear__441:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant__310_DequantizeLinear__429:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_10_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.956206381321, max 1.506749510765, scale 0.009658650495, offset -99.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_10_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -488022.812500000000, max 488022.812500000000, scale 0.000227253331, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant__310_DequantizeLinear__429:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 262k (6.29%)
+,,,,,,,MACs per inference: 51M (9.03%)
+21,MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant__310_DequantizeLinear__429:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant__319_DequantizeLinear__434:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_11_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -2.052881956100, max 2.885654926300, scale 0.019366811961, offset -106.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_11_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -978547.312500000000, max 978547.312500000000, scale 0.000455671601, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant__319_DequantizeLinear__434:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 903k (0.159%)
+22,MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant__319_DequantizeLinear__434:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant__326_DequantizeLinear__453:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)",1x14x14x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_11_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.833390057087, max 0.555593371391, scale 0.005446993746, offset -153.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_11_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -275220.375000000000, max 275220.375000000000, scale 0.000128159474, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant__326_DequantizeLinear__453:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 262k (6.29%)
+,,,,,,,MACs per inference: 51M (9.03%)
+23,MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant__326_DequantizeLinear__453:0 (data type: uFxp_8; tensor dimension: [1,14,14,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant__335_DequantizeLinear__440:0 (data type: uFxp_8; tensor dimension: [1,7,7,512]; tensor type: NATIVE)",1x7x7x512,A D G C,"MobilenetV1/MobilenetV1/Conv2d_12_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.987284958363, max 1.010791778564, scale 0.007835594937, offset -126.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_12_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,512]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -395909.281250000000, max 395909.281250000000, scale 0.000184359626, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [512]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant__335_DequantizeLinear__440:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 1], [0, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 225k (0.0397%)
+24,MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant__335_DequantizeLinear__440:0 (data type: uFxp_8; tensor dimension: [1,7,7,512]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant__342_DequantizeLinear__454:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)",1x7x7x1024,A D G C,"MobilenetV1/MobilenetV1/Conv2d_12_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.063299894333, max 1.022403717041, scale 0.008179229684, offset -130.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_12_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,512,1024]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -413272.093750000000, max 413272.093750000000, scale 0.000192444815, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [1024]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant__342_DequantizeLinear__454:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 525k (12.6%)
+,,,,,,,MACs per inference: 25M (4.52%)
+25,MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant,DepthWiseConv2d,"MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant__342_DequantizeLinear__454:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)","MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant__351_DequantizeLinear__439:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)",1x7x7x1024,A D G C,"MobilenetV1/MobilenetV1/Conv2d_13_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -26.621717453003, max 5.551448345184, scale 0.126169279218, offset -211.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_13_depthwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [3,3,1,1024]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_Fold_bias_dequant encoding : bitwidth 32, min -6374957.500000000000, max 6374957.500000000000, scale 0.002968570916, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [1024]; tensor type: STATIC),,,,"MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant__351_DequantizeLinear__439:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 451k (0.0794%)
+26,MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant,Conv2d,"MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant__351_DequantizeLinear__439:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)","MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant__362_DequantizeLinear__431:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)",1x7x7x1024,A D G C,"MobilenetV1/MobilenetV1/Conv2d_13_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -1.714574456215, max 2.887704372406, scale 0.018048152328, offset -95.000000000000"
+,,,"MobilenetV1/MobilenetV1/Conv2d_13_pointwise/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,1024,1024]; tensor type: STATIC)",,,,"MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_Fold_bias_dequant encoding : bitwidth 32, min -911919.312500000000, max 911919.312500000000, scale 0.000424645521, offset 0.000000000000"
+,,,MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_Fold_bias_dequant (data type: sFxp_32; tensor dimension: [1024]; tensor type: STATIC),,,,"MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant__362_DequantizeLinear__431:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_Fold_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1M (25.2%)
+,,,,,,,MACs per inference: 51M (9.03%)
+27,MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant,Pool,"MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant__362_DequantizeLinear__431:0 (data type: uFxp_8; tensor dimension: [1,7,7,1024]; tensor type: NATIVE)","MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant__368_DequantizeLinear__446:0 (data type: uFxp_8; tensor dimension: [1,1,1,1024]; tensor type: NATIVE)",1x1x1x1024,A D G C,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant__368_DequantizeLinear__446:0 encoding : bitwidth 8, min 0.000000000000, max 5.999761581421, scale 0.023528477177, offset 0.000000000000"
+,,,,,,,count_pad_for_edges: False
+,,,,,,,"filter_size: [7, 7]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,pool_type: PoolAvg2d
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 50k (0.00882%)
+28,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant,Conv2d,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant__368_DequantizeLinear__446:0 (data type: uFxp_8; tensor dimension: [1,1,1,1024]; tensor type: NATIVE)","MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd (data type: uFxp_8; tensor dimension: [1,1,1,1001]; tensor type: NATIVE)",1x1x1x1001,A D G C,"MobilenetV1/Logits/Conv2d_1c_1x1/weights_quant/FakeQuantWithMinMaxVars_dequant encoding : bitwidth 8, min -0.369008481503, max 0.902574777603, scale 0.004986600950, offset -74.000000000000"
+,,,"MobilenetV1/Logits/Conv2d_1c_1x1/weights_quant/FakeQuantWithMinMaxVars_dequant (data type: uFxp_8; tensor dimension: [1,1,1024,1001]; tensor type: STATIC)",,,,"MobilenetV1/Logits/Conv2d_1c_1x1/Conv2D_bias_dequant encoding : bitwidth 32, min -251958.078125000000, max 251958.078125000000, scale 0.000117327123, offset 0.000000000000"
+,,,MobilenetV1/Logits/Conv2d_1c_1x1/Conv2D_bias_dequant (data type: sFxp_32; tensor dimension: [1001]; tensor type: STATIC),,,,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd encoding : bitwidth 8, min -10.962548255920, max 31.392753601074, scale 0.166099220514, offset -66.000000000000"
+,,,,,,,bias_op_name: MobilenetV1/Logits/Conv2d_1c_1x1/Conv2D_bias_dequant
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1M (24.6%)
+,,,,,,,MACs per inference: 1M (0.18%)
+29,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123,Transpose,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd (data type: uFxp_8; tensor dimension: [1,1,1,1001]; tensor type: NATIVE)","MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123 (data type: uFxp_8; tensor dimension: [1,1001,1,1]; tensor type: NATIVE)",1x1001x1x1,A D G C,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123 encoding : bitwidth 8, min -10.962548255920, max 31.392753601074, scale 0.166099220514, offset -66.000000000000"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"perm: [0, 3, 1, 2]"
+30,MobilenetV1/Logits/SpatialSqueeze_prequant,Reshape,"MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123 (data type: uFxp_8; tensor dimension: [1,1001,1,1]; tensor type: NATIVE)","MobilenetV1/Logits/SpatialSqueeze_dequant (data type: uFxp_8; tensor dimension: [1,1001]; tensor type: NATIVE)",1x1001,A D G C,"MobilenetV1/Logits/SpatialSqueeze_dequant encoding : bitwidth 8, min -10.962548255920, max 31.392753601074, scale 0.166099220514, offset -66.000000000000"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"shape: [1, 1001]"
+31,MobilenetV1/Predictions/Reshape_1_prequant,Softmax,"MobilenetV1/Logits/SpatialSqueeze_dequant (data type: uFxp_8; tensor dimension: [1,1001]; tensor type: NATIVE)","MobilenetV1/Predictions/Reshape_1 (data type: uFxp_8; tensor dimension: [1,1001]; tensor type: APP_READ)",1x1001,A D G C,"MobilenetV1/Predictions/Reshape_1 encoding : bitwidth 8, min 0.000000000000, max 0.996093750000, scale 0.003906250000, offset 0.000000000000"
+,,,,,,,axis: 1
+,,,,,,,beta: 1
+,,,,,,,packageName: qti.aisw
+Note: The supported runtimes column assumes a processor target of Snapdragon 855
+Key : A:AIP
+      D:DSP
+      G:GPU
+      C:CPU
+""
+Input Name,Dimensions,Type,Encoding Info
+input,"1,224,224,3",uFxp_8,"bitwidth 8, min -1.000000000000, max 0.992187500000, scale 0.007812500000, offset -128.000000000000"
+Output Name,Dimensions,Type,Encoding Info
+MobilenetV1/Predictions/Reshape_1,"1,1001",uFxp_8,"bitwidth 8, min 0.000000000000, max 0.996093750000, scale 0.003906250000, offset 0.000000000000"
+Total parameters: 4172457 (15 MB assuming single precision float. This does not represent the actual memory requirement for the model. It provides a rough estimate of the contribution from the parameters 4xNo of Params in bytes)
+Total MACs per inference: 568M (100%)
+"Ops used by Graph: Conv2d, DepthWiseConv2d, Pool, Reshape, Softmax, Transpose"
+Est. Steady-State Memory Needed to Run: 28.6 MiB
+""
+------------------------------------------------------------
+Cache Info:
+------------------------------------------------------------

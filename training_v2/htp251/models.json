@@ -1,0 +1,396 @@
+{
+  "runtime_version": "2.51.40.260930",
+  "models": {
+    "classification": {
+      "dlc": "models/classification/model.w8a16.dlc",
+      "dlc_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+      "onnx_sha256": "d1d9feb53de34ce54a35fb46cdd9deffc988cd40c6fb14a043249b22d7a1538e",
+      "input_name": "input",
+      "outputs": [
+        {
+          "name": "MobilenetV1/Predictions/Reshape_1",
+          "shape": [
+            1,
+            1001
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.00390625,
+            0
+          ]
+        }
+      ],
+      "requested_precision": "w8a16",
+      "encoding_note": "Source Q/DQ encodings retained when present; inspect model-info.csv for actual tensor types.",
+      "source_model": "mobilenet_v1.tflite",
+      "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "calibration_samples": 5,
+      "conversion_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-converter",
+        "-i",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\classification\\model.onnx",
+        "-o",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\classification\\model.float.dlc",
+        "--source_model_input_layout",
+        "input",
+        "NHWC",
+        "--source_model_input_datatype",
+        "input",
+        "float32",
+        "--onnx_skip_simplification",
+        "--onnx_disable_defer_loading"
+      ],
+      "quantization_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-quantizer",
+        "--input_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\classification\\model.float.dlc",
+        "--input_list",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\calibration\\classification\\input_list.txt",
+        "--output_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\classification\\model.w8a16.dlc",
+        "--weights_bitwidth",
+        "8",
+        "--act_bitwidth",
+        "16",
+        "--bias_bitwidth",
+        "32"
+      ]
+    },
+    "detection": {
+      "dlc": "models/detection_requant/model.w8a16.dlc",
+      "dlc_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+      "onnx_sha256": "36a0ccb45d2b78627a4a8c5ff338b1b79aee45a9a96e4ce094beae1f1688de3c",
+      "input_name": "normalized_input_image_tensor",
+      "outputs": [
+        {
+          "name": "Squeeze",
+          "shape": [
+            1,
+            1917,
+            4
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.07902787625789642,
+            191
+          ]
+        },
+        {
+          "name": "convert_scores",
+          "shape": [
+            1,
+            1917,
+            91
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.00390625,
+            0
+          ]
+        }
+      ],
+      "requested_precision": "w8a16",
+      "encoding_note": "Source Q/DQ encodings retained when present; inspect model-info.csv for actual tensor types.",
+      "source_model": "ssd_mobilenet_v1.tflite",
+      "source_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "calibration_samples": 5,
+      "conversion_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-converter",
+        "-i",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\detection_requant\\model.onnx",
+        "-o",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\detection_requant\\model.float.dlc",
+        "--source_model_input_layout",
+        "normalized_input_image_tensor",
+        "NHWC",
+        "--source_model_input_datatype",
+        "normalized_input_image_tensor",
+        "float32",
+        "--onnx_skip_simplification",
+        "--onnx_disable_defer_loading",
+        "--source_model_output_layout",
+        "Squeeze",
+        "NFC",
+        "--desired_output_layout",
+        "Squeeze",
+        "NFC",
+        "--source_model_output_layout",
+        "convert_scores",
+        "NFC",
+        "--desired_output_layout",
+        "convert_scores",
+        "NFC"
+      ],
+      "quantization_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-quantizer",
+        "--input_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\detection_requant\\model.float.dlc",
+        "--input_list",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\calibration\\detection\\input_list.txt",
+        "--output_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\detection_requant\\model.w8a16.dlc",
+        "--weights_bitwidth",
+        "8",
+        "--act_bitwidth",
+        "16",
+        "--bias_bitwidth",
+        "32"
+      ],
+      "input_mode": "pixels_float32"
+    },
+    "gesture": {
+      "dlc": "models/gesture/model.w8a16.dlc",
+      "dlc_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
+      "onnx_sha256": "1fc13ea2a32a2da5ff8c9004cfcc4d36e4fab5f545da0cd51d7edcb781dbf8dd",
+      "input_name": "input_1",
+      "outputs": [
+        {
+          "name": "Identity",
+          "shape": [
+            1,
+            63
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "Identity_1",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "requested_precision": "w8a16",
+      "encoding_note": "Source Q/DQ encodings retained when present; inspect model-info.csv for actual tensor types.",
+      "source_model": "hand_landmark_lite.tflite",
+      "source_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "calibration_samples": 9,
+      "conversion_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-converter",
+        "-i",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\gesture\\model.onnx",
+        "-o",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\gesture\\model.float.dlc",
+        "--source_model_input_layout",
+        "input_1",
+        "NHWC",
+        "--source_model_input_datatype",
+        "input_1",
+        "float32",
+        "--onnx_skip_simplification",
+        "--onnx_disable_defer_loading"
+      ],
+      "quantization_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-quantizer",
+        "--input_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\gesture\\model.float.dlc",
+        "--input_list",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\calibration\\gesture\\input_list.txt",
+        "--output_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\gesture\\model.w8a16.dlc",
+        "--weights_bitwidth",
+        "8",
+        "--act_bitwidth",
+        "16",
+        "--bias_bitwidth",
+        "32"
+      ]
+    },
+    "pose": {
+      "dlc": "models/pose/model.w8a16.dlc",
+      "dlc_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
+      "onnx_sha256": "f74aed7f6144f8f3f03892da192d8a7eb595b9986885f4063aad9257855fb354",
+      "input_name": "sub_2",
+      "outputs": [
+        {
+          "name": "float_heatmaps",
+          "shape": [
+            1,
+            23,
+            17,
+            17
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "float_short_offsets",
+          "shape": [
+            1,
+            23,
+            17,
+            34
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "requested_precision": "w8a16",
+      "encoding_note": "Source Q/DQ encodings retained when present; inspect model-info.csv for actual tensor types.",
+      "source_model": "posenet.tflite",
+      "source_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "calibration_samples": 5,
+      "conversion_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-converter",
+        "-i",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\pose\\model.onnx",
+        "-o",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\pose\\model.float.dlc",
+        "--source_model_input_layout",
+        "sub_2",
+        "NHWC",
+        "--source_model_input_datatype",
+        "sub_2",
+        "float32",
+        "--onnx_skip_simplification",
+        "--onnx_disable_defer_loading",
+        "--source_model_output_layout",
+        "float_heatmaps",
+        "NHWC",
+        "--desired_output_layout",
+        "float_heatmaps",
+        "NHWC",
+        "--source_model_output_layout",
+        "float_short_offsets",
+        "NHWC",
+        "--desired_output_layout",
+        "float_short_offsets",
+        "NHWC"
+      ],
+      "quantization_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-quantizer",
+        "--input_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\pose\\model.float.dlc",
+        "--input_list",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\calibration\\pose\\input_list.txt",
+        "--output_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\pose\\model.w8a16.dlc",
+        "--weights_bitwidth",
+        "8",
+        "--act_bitwidth",
+        "16",
+        "--bias_bitwidth",
+        "32"
+      ]
+    },
+    "segmentation": {
+      "dlc": "models/segmentation/model.w8a16.dlc",
+      "dlc_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+      "onnx_sha256": "3dfde851c30887f79c8690b6c65c1371f38cf9e72bb44a51e4c97588974da7e6",
+      "input_name": "sub_7",
+      "outputs": [
+        {
+          "name": "ResizeBilinear_3",
+          "shape": [
+            1,
+            257,
+            257,
+            21
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "requested_precision": "w8a16",
+      "encoding_note": "Source Q/DQ encodings retained when present; inspect model-info.csv for actual tensor types.",
+      "source_model": "deeplabv3.tflite",
+      "source_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "calibration_samples": 5,
+      "conversion_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-converter",
+        "-i",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\segmentation\\model.onnx",
+        "-o",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\segmentation\\model.float.dlc",
+        "--source_model_input_layout",
+        "sub_7",
+        "NHWC",
+        "--source_model_input_datatype",
+        "sub_7",
+        "float32",
+        "--onnx_skip_simplification",
+        "--onnx_disable_defer_loading",
+        "--source_model_output_layout",
+        "ResizeBilinear_3",
+        "NHWC",
+        "--desired_output_layout",
+        "ResizeBilinear_3",
+        "NHWC"
+      ],
+      "quantization_command": [
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\.build\\qairt251-py312\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\host\\qairt251_entry.py",
+        "qairt-quantizer",
+        "--input_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\segmentation\\model.float.dlc",
+        "--input_list",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\calibration\\segmentation\\input_list.txt",
+        "--output_dlc",
+        "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\models\\segmentation\\model.w8a16.dlc",
+        "--weights_bitwidth",
+        "8",
+        "--act_bitwidth",
+        "16",
+        "--bias_bitwidth",
+        "32"
+      ]
+    }
+  },
+  "failures": {}
+}

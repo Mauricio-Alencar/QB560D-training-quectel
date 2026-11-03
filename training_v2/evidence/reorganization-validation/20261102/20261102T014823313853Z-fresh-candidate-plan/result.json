@@ -1,0 +1,12 @@
+{
+  "label": "fresh-candidate-plan",
+  "script": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\provision.py",
+  "args": [
+    "plan"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 0.281,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T014823313853Z-fresh-candidate-plan\\console.log"
+}

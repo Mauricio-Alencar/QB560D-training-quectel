@@ -1,0 +1,117 @@
+Mon Jun 17 22:17:48 UTC 2024
+  File: /opt/qb560d-workshop/build/iperf-3.22/configure
+  Size: 607046    	Blocks: 1192       IO Block: 4096   regular file
+Device: 806h/2054d	Inode: 501214      Links: 1
+Access: (0775/-rwxrwxr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 02:47:02.000000000 +0800
+Modify: 2026-09-30 02:47:02.000000000 +0800
+Change: 2024-06-18 06:15:45.669999997 +0800
+ Birth: -
+  File: /opt/qb560d-workshop/build/iperf-3.22/config.log
+  Size: 5456      	Blocks: 16         IO Block: 4096   regular file
+Device: 806h/2054d	Inode: 501310      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2024-06-18 06:15:45.789999997 +0800
+Modify: 2024-06-18 06:15:46.029999997 +0800
+Change: 2024-06-18 06:15:46.029999997 +0800
+ Birth: -
+MAINTAINER_MODE_TRUE=''
+MAKEINFO=''
+MANIFEST_TOOL=''
+MKDIR_P=''
+NM=''
+NMEDIT=''
+OBJDUMP=''
+OBJEXT=''
+OPENSSL_INCLUDES=''
+OPENSSL_LDFLAGS=''
+OPENSSL_LIBS=''
+OTOOL64=''
+OTOOL=''
+PACKAGE=''
+PACKAGE_BUGREPORT='https://github.com/esnet/iperf'
+PACKAGE_NAME='iperf'
+PACKAGE_STRING='iperf 3.22'
+PACKAGE_TARNAME='iperf'
+PACKAGE_URL='https://software.es.net/iperf/'
+PACKAGE_VERSION='3.22'
+PATH_SEPARATOR=':'
+PKG_CONFIG=''
+PTHREAD_CC=''
+PTHREAD_CFLAGS=''
+PTHREAD_CXX=''
+PTHREAD_LIBS=''
+RANLIB=''
+SED=''
+SET_MAKE=''
+SHELL='/bin/sh'
+STRIP=''
+VERSION=''
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE=''
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE=''
+am__include=''
+am__isrc=''
+am__leading_dot=''
+am__nodep=''
+am__quote=''
+am__rm_f_notfound=''
+am__tar=''
+am__tar_ignore_stderr=''
+am__untar=''
+am__xargs_n=''
+ax_pthread_config=''
+bindir='${exec_prefix}/bin'
+build=''
+build_alias=''
+build_cpu=''
+build_os=''
+build_vendor=''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='NONE'
+host=''
+host_alias=''
+host_cpu=''
+host_os=''
+host_vendor=''
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/opt/qb560d-workshop/tools/iperf3-3.22'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "iperf"
+#define PACKAGE_TARNAME "iperf"
+#define PACKAGE_VERSION "3.22"
+#define PACKAGE_STRING "iperf 3.22"
+#define PACKAGE_BUGREPORT "https://github.com/esnet/iperf"
+#define PACKAGE_URL "https://software.es.net/iperf/"
+
+configure: exit

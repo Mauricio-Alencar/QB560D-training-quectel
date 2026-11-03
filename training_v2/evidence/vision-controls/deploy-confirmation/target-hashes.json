@@ -1,0 +1,13 @@
+{
+  "burger.jpg": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+  "cases.json": "7c020f4f696530a0dc58babe5923697daf14b62e6061c6b2ed7bf49fadcf5fb7",
+  "cat.jpg": "2533197401eebe9410ea4d063f86c43fbd2666f3e8165a38aca155c0d09c21be",
+  "fist.jpg": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+  "LICENSE-MEDIAPIPE.txt": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+  "LICENSE-TFJS.txt": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+  "male_full_height_hands.jpg": "8a7fe5be8b90d6078b09913ca28f7e5d342f8d3cde856ab4e3327d2970b887f8",
+  "pose.jpg": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+  "pose_lower_body_occluded.png": "1f02ac8dd8b7223f678d90bb6af31059c0fe593f02f4e8916530e2676b0fc18d",
+  "sources.json": "ffa901e58916150c7ec273c4ffb72d9b184e058f55249442110bbbbe41fffda4",
+  "tfjs_pose.jpg": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b"
+}

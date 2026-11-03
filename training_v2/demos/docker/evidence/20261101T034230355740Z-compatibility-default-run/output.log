@@ -1,0 +1,28 @@
+28de5b01124bb35a7715c8fbedb50a57a186e1ecb618c136fc9c84c08f792767
+{
+  "/health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 16830.3,
+      "process_uptime_s": 3.021
+    }
+  },
+  "/missing": {
+    "http": 404,
+    "body": null
+  }
+}
+Flag --time has been deprecated, use --timeout instead
+qb560d-docker-demo
+qb560d-docker-demo
+
+__DOCKER_DEMO_EXIT__=0

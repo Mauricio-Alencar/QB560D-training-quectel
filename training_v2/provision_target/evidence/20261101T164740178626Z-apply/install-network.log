@@ -1,0 +1,15 @@
+	linux-vdso.so.1 (0x0000007f84912000)
+	libselinux.so.1 => /lib/aarch64-linux-gnu/libselinux.so.1 (0x0000007f84841000)
+	libmnl.so.0 => /lib/aarch64-linux-gnu/libmnl.so.0 (0x0000007f8482b000)
+	libbsd.so.0 => /lib/aarch64-linux-gnu/libbsd.so.0 (0x0000007f84804000)
+	libcap.so.2 => /lib/aarch64-linux-gnu/libcap.so.2 (0x0000007f847ed000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007f8467a000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007f848e2000)
+	libpcre2-8.so.0 => /lib/aarch64-linux-gnu/libpcre2-8.so.0 (0x0000007f845ec000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000007f845d8000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000007f845a7000)
+
+ss utility, iproute2-ss200127
+iperf 3.22 (cJSON 1.7.15)
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64
+Optional features available: CPU affinity setting, IPv6 flow label, TCP congestion algorithm setting, sendfile / zerocopy, socket pacing, bind to device, support IPv4 don't fragment, POSIX threads, GSO/GRO support

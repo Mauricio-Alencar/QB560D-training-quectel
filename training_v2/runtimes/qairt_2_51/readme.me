@@ -1,0 +1,227 @@
+# QAIRT 2.51 — instalação persistente em /opt e demos
+
+O runtime QAIRT fica em runtimes/qairt_2_51. A demo de gestos fica em demos/hand_gesture.
+
+## Estado desta revisão
+
+VALIDADO em uma QB560D-EU / QCM6490 / HTP v68, com Ubuntu 20.04.3 LTS,
+kernel 5.4.219-perf, AArch64 e glibc 2.31. Não foi feita atualização global.
+
+Runtime: QAIRT/QNN/SNPE 2.51.40.260930230134, distribuição pública 2.51.40.260930.
+Modelo: MobileNet V2 w8a8 oficial do Qualcomm AI Hub, release v0.65.0.
+O DLC foi gerado com QAIRT 2.50.0.260828221209 e validado no runtime 2.51.40.
+Imagem: cachorro do exemplo PyTorch Hub. Classe esperada: Samoyed, índice 258.
+Ensaio em 31/10/2026, America/Sao_Paulo; as pastas de evidência usam UTC, 20261101.
+
+| Backend | Inferências/saídas salvas | Top-1 | Softmax top-1 | Média do perfil |
+| --- | --- | --- | --- | --- |
+| CPU | 5 / 5 | Samoyed | 85,8701% | 26,5458 ms |
+| HTP/NPU | 5 / 5 | Samoyed | 75,5413% | 5,0214 ms |
+
+As cinco saídas são bit a bit iguais DENTRO de cada backend. O HTP registrou cinco
+eventos de execução no acelerador e 340 eventos por operador com ciclos positivos.
+O comando HTP seleciona somente libQnnHtp.so, sem configurar fallback CPU.
+
+CPU e HTP NÃO produziram vetores numericamente equivalentes: diferença máxima
+absoluta dos logits 2,87494278; diferença máxima entre probabilidades ~0,103288.
+A classe principal coincide nesta imagem. Isso não certifica acurácia em um dataset.
+Os tempos são informativos, sem aquecimento ou controle de frequência/carga/temperatura;
+não representam FPS de câmera ou benchmark controlado de ganho de desempenho.
+
+As bibliotecas originais SNPE 2.12/2.21 mantiveram os mesmos hashes. Não alteramos
+PATH global, ldconfig, serviços, BSP, firmware, /etc ou /tmp/qb560d-training.
+A instalação ativa é /opt/qairt-isolated/2.51.40.260930, em filesystem ext4
+persistente, com execução permitida. A cópia e os testes em /opt já foram feitos.
+Não foi necessário reiniciar a caixa. Sobrevivência a reboot não foi ensaiada.
+Os caminhos /tmp nos logs anteriores pertencem somente ao histórico.
+A cópia /tmp/update-qiart-251-mobilenet-validation foi removida após a validação
+em /opt. Os resultados anteriores continuam preservados no host.
+
+Resultado principal:
+evidence/persistent-20261101/mobilenet/results.json
+evidence/persistent-20261101/mobilenet/RESULTADOS.txt
+
+Gestos: demos/hand_gesture/gesture_demo.py e GUIA_WORKSHOP_HAND_GESTURE.txt.
+O caminho HTP passou nas sete fotos finais. O pacote w8a8 de gestos não foi
+aceito para CPU: 0/7 rótulos esperados, embora os grafos executados tenham exit 0.
+Veja demos/hand_gesture/RESULTADOS_GESTOS.txt para os casos, falhas e limitações.
+
+## Conteúdo
+
+- update_qairt.py: entrada principal. Sem argumentos, somente mostra o plano.
+- sdk_download.py: extrai componentes do ZIP oficial por intervalos HTTP, com CRC.
+- download_assets.py: baixa DLC, foto, labels e snapshots das referências.
+- prepare_input.py: prepara a imagem conforme o contrato do AI Hub.
+- collect_profiles.py / analyze_results.py: profiling, comparação e relatório.
+- cleanup_target.py: remove apenas uma árvore identificada e criada pelo pacote.
+- verify_reversibility.py: ensaio opcional de remoção em uma pasta descartável.
+- versions.lock.json: tamanhos e SHA-256 da combinação ensaiada.
+- requirements-host.txt: versões usadas de NumPy/Pillow.
+- cache/sdk/: executores/bibliotecas ARM64 Ubuntu e Hexagon v68, licença e release notes.
+- cache/payload/: cópia gerada para envio, sem alterar a instalação de sistema.
+- assets/: modelo, metadados, labels, foto e tensor de entrada.
+- evidence/: comandos, exit codes, saídas, perfis e snapshots antes/depois.
+
+O pacote é independente de training_v2. O SDK completo tem ~3 GB; o downloader
+seleciona 24 arquivos em vez de baixar tudo. Reserve ~500 MB no host e 300 MiB no alvo.
+A licença Qualcomm está em cache/sdk/qairt/2.51.40.260930/LICENSE.pdf.
+
+## Requisitos
+
+Host: Windows x64, Python 3.12 x64 com pip/venv, ADB (ensaiado 37.0.1), driver USB
+adequado e Internet no primeiro download. NumPy 2.3.5 e Pillow 12.3.0 foram usados.
+No target: Ubuntu AArch64, glibc 2.31 ou mais nova, FastRPC/CDSP compatível com HTP v68,
+python3, sh, base64, chmod, timeout e uma pasta com escrita/execução permitidas.
+A validação se limita à unidade/BSP descrita; outras caixas devem passar pelo roteiro.
+
+Para esta demo não é necessário instalar PyTorch, TensorFlow, conversores ONNX,
+Yocto, Docker ou WSL no host. O DLC já está pronto. Os downloads usados são públicos,
+sem conta/API token do AI Hub. /opt exige permissão de escrita, geralmente root.
+
+## 1. Preparar o host
+
+Abra PowerShell na raiz training_v2:
+
+    powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1 -InstallPython
+    $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+    $adb = (Resolve-Path tools/platform-tools/adb.exe).Path
+    & $adb version
+    & $adb devices -l
+
+Não é necessário ativar o venv. O script exige uma caixa autorizada; com várias,
+informe --serial SERIAL. O transport ID é descoberto novamente em cada comando.
+
+## 2. Planejar e baixar, sem escrever na caixa
+
+    & $py runtimes/qairt_2_51/update_qairt.py
+    & $py runtimes/qairt_2_51/update_qairt.py download
+
+A ação padrão plan não chama ADB. download escreve somente no host, verifica CRC
+e hashes fixados e prepara o tensor. Com o cache presente, use:
+
+    & $py runtimes/qairt_2_51/update_qairt.py download --offline
+
+Se um hash divergir, pare e revise a origem. Não regenere o lock apenas para
+contornar uma divergência. O pacote fixa esta revisão; não atualiza para latest.
+
+## 3. Inventário, somente leitura
+
+    & $py runtimes/qairt_2_51/update_qairt.py inspect --adb $adb
+
+Confira arquitetura, OS, glibc e hashes. Bibliotecas ausentes em outra caixa são
+registradas como null; não é necessário ter SNPE antigo para usar a árvore paralela.
+
+## 4. Criar uma instalação PARALELA e reversível
+
+Exemplo para nova caixa/pasta:
+
+    & $py runtimes/qairt_2_51/update_qairt.py stage --adb $adb
+
+O script exige pasta nova, recusa sobrescrita, symlinks e destinos de sistema.
+Cria ownership.json e manifesto de arquivos. Não executa apt, ldconfig ou gravação
+de firmware. As bibliotecas são selecionadas por processo com LD_LIBRARY_PATH
+e ADSP_LIBRARY_PATH; nenhum arquivo de ambiente global é editado.
+
+O destino padrão, já validado nesta caixa, é:
+
+    & $py runtimes/qairt_2_51/update_qairt.py stage --adb $adb --remote /opt/qairt-isolated/2.51.40.260930
+
+Na caixa atual, pule stage e use test: stage recusa sobrescrever a instalação.
+Não use /data nesta imagem: foi observado com noexec. Os destinos /tmp continuam
+aceitos apenas para testes descartáveis e remoção de instalações históricas.
+
+## 5. Executar CPU e HTP e gerar evidências
+
+    & $py runtimes/qairt_2_51/update_qairt.py test --adb $adb --runs 5
+
+test confere ownership e hashes dos arquivos enviados, registra os originais,
+executa o mesmo DLC/tensor com libQnnCpu.so e libQnnHtp.so, guarda todas as saídas,
+extrai profiling, recolhe resultados e compara os hashes originais após o ensaio.
+A análise exige top-1 Samoyed nas saídas e eventos/ciclos de acelerador no HTP.
+Não há tentativa automática de executar o caminho HTP em CPU se ele falhar.
+
+Cada teste cria uma pasta UTC nova em evidence/. Os comandos têm timeout.
+Para escolher o diretório, use --evidence PASTA_NOVA. Uma tentativa anterior não
+deve ser sobrescrita. O resultado contém a diferença numérica, mesmo com top-1 igual.
+
+## 6. Contrato de imagem/modelo
+
+- Entrada DLC: image_tensor uint8 [1,224,224,3], escala 0.003918204456567764, zero point 0.
+- Pré-processamento: RGB, menor lado 256, center crop 224, pixels/255.
+- Arquivo de entrada: float32 little-endian NHWC; qnn-net-run converte à quantização.
+- Não aplique mean/std novamente: a rede oficial contém a normalização ImageNet.
+- Saída DLC: class_logits uint8 [1,1000], escala 0.13067921996116638, zero point 76.
+- qnn-net-run grava logits desquantizados float32; softmax é aplicado no host.
+- SHA-256 do tensor: 677bc9fa94a9cc9114bf61695e660a2e4896b7e1fa433e947786d18ffd79dff4.
+- SHA-256 do DLC e dos componentes: versions.lock.json.
+
+## 7. Reverter removendo só a árvore isolada
+
+Depois de coletar os resultados:
+
+    & $py runtimes/qairt_2_51/update_qairt.py remove --adb $adb
+
+O comando exige propriedade, manifesto e caminho resolvido correto. Recusa remover
+a árvore enquanto há qnn-net-run usando-a. Nenhum rollback do BSP é necessário.
+A remoção inclui as demos e resultados dessa árvore em /opt. Só use se quiser
+desinstalá-la. O teste de remoção ocorreu em uma pasta descartável, antes da
+instalação persistente. Teste opcional de preparação do instrutor: & $py runtimes/qairt_2_51/verify_reversibility.py.
+
+## Paths para novas demos
+
+    QAIRT_ROOT=/opt/qairt-isolated/2.51.40.260930
+    executáveis: $QAIRT_ROOT/bin
+    bibliotecas ARM64: $QAIRT_ROOT/lib
+    bibliotecas DSP v68: $QAIRT_ROOT/dsp
+    MobileNet: $QAIRT_ROOT/model/mobilenet_v2.dlc
+    gestos: $QAIRT_ROOT/demos/hand_gesture/models
+    resultados de gestos: $QAIRT_ROOT/demos/hand_gesture/runs
+
+Em uma sessão adb shell, para executar comandos manualmente:
+
+    export QAIRT_ROOT=/opt/qairt-isolated/2.51.40.260930
+    export LD_LIBRARY_PATH="$QAIRT_ROOT/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu"
+    export ADSP_LIBRARY_PATH="$QAIRT_ROOT/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib"
+    "$QAIRT_ROOT/bin/qnn-net-run" --version
+
+Use caminho absoluto do executável. Os scripts configuram essas variáveis por
+processo. Não é preciso editar .bashrc, PATH global ou substituir libs em /usr/lib.
+
+## 8. Histórico completo
+
+- Runtime smoke anterior: CPU/HTP executaram Add e SNPE reconheceu CPU/GPU/HTP;
+  cópia em evidence/runtime-smoke-20261101T020546Z/.
+- Download/cache do pacote: 24 componentes SDK e lock conferidos.
+- Staging: versão correta e hashes originais preservados; stage-result.json.
+- attempt-01: CPU executou; HTP falhou na inicialização, exit 28.
+- attempt-02: CPU/HTP executaram; uma saída salva por backend.
+- final: cinco inferências e cinco saídas por backend, top-1 consistente.
+- overwrite-refused: pasta existente recusada antes de enviar arquivos.
+- Destino /usr/lib: recusado pelo validador local antes de chamar ADB.
+- Remoção em pasta descartável: passou; evidence/reversibility/.
+- Resumo consolidado: validation-summary.json e RESULTADOS_VALIDACAO.txt.
+
+Na tentativa 01, --platform_options unsignedPD:ON estava no comando QNN e o backend
+não inicializou. A opção foi removida do comando final, que passou. Os logs/códigos
+da primeira falha foram preservados.
+
+## Fontes
+
+SDK: https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.51.40.260930/v2.51.40.260930.zip
+Release: https://github.com/qualcomm/qai-appbuilder/releases/tag/v2.51.40
+Modelo: https://huggingface.co/qualcomm/MobileNet-v2
+DLC: https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a8.zip
+Contrato: https://github.com/qualcomm/ai-hub-models/blob/main/src/qai_hub_models/models/templates/imagenet_classifier/model.py
+Pré-processamento: https://github.com/qualcomm/ai-hub-models/blob/main/src/qai_hub_models/utils/image_processing.py
+Foto: https://raw.githubusercontent.com/pytorch/hub/master/images/dog.jpg
+
+Uma nova versão de SDK/modelo exige revisão, novo lock e nova validação.
+
+
+## ADB no firmware do treinamento que exige login
+
+Os comandos de shell e push/pull reutilizam o helper autenticado compartilhado em host/adb_transport.py. O pacote completo inclui o cliente ADB Windows em tools/platform-tools; --adb permite escolher outro. O usuário padrão é root; a senha é pedida sem eco, uma vez por processo, e não é gravada em scripts ou argumentos. --transport-id seleciona uma caixa quando o serial ? se repete. Um login manual em outro adb shell não autentica o processo deste utilitário.
+
+## Revalidação no BSP atual — 01/11/2026
+
+BSP QDPA_Ubuntu20.04.003.51.303 V01, kernel build 02/04/2026: o comando test passou com o login root e ADB descoberto automaticamente. Evidência: evidence/fw-20261101-v2/test-run.json. Cinco inferências e cinco saídas por backend; Samoyed no top-1 CPU/HTP. Os scores continuam diferentes e os tempos não são benchmark controlado. Bibliotecas originais preservadas. O payload nativo atual fica em /opt/qb560d-training-payload; este runtime mantém a árvore isolada /opt/qairt-isolated/2.51.40.260930.

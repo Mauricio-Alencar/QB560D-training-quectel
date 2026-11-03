@@ -1,0 +1,39 @@
+{
+  "top3": [
+    {
+      "class_id": 653,
+      "label": "military uniform",
+      "score": 0.87109375
+    },
+    {
+      "class_id": 907,
+      "label": "Windsor tie",
+      "score": 0.05078125
+    },
+    {
+      "class_id": 466,
+      "label": "bulletproof vest",
+      "score": 0.01171875
+    }
+  ],
+  "task": "classification",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+  "input_image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 99,
+    "execute_us": [
+      3335.0,
+      2271.0,
+      2167.0
+    ]
+  },
+  "comparison_to_original_tflite_cpu": {
+    "passed": true,
+    "criterion": "same top-1 as original TFLite CPU"
+  },
+  "passed": true,
+  "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+}

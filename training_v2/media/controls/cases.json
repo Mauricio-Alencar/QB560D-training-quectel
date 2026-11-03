@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "id": "burger-classification",
+      "task": "classification",
+      "image": "burger.jpg",
+      "expected": "cheeseburger"
+    },
+    {
+      "id": "full-body-detection",
+      "task": "detection",
+      "image": "pose.jpg",
+      "expected": "person"
+    },
+    {
+      "id": "no-person-detection",
+      "task": "detection",
+      "image": "cat.jpg",
+      "expected": "no_person"
+    },
+    {
+      "id": "full-body-pose",
+      "task": "pose",
+      "image": "pose.jpg",
+      "expected": "full_body"
+    },
+    {
+      "id": "standing-full-body-pose",
+      "task": "pose",
+      "image": "male_full_height_hands.jpg",
+      "expected": "full_body"
+    },
+    {
+      "id": "occluded-pose",
+      "task": "pose",
+      "image": "pose_lower_body_occluded.png",
+      "expected": "occluded"
+    },
+    {
+      "id": "closed-fist",
+      "task": "gesture",
+      "image": "fist.jpg",
+      "crop": [
+        52,
+        42,
+        310,
+        300
+      ],
+      "expected": "closed_fist"
+    },
+    {
+      "id": "no-hand",
+      "task": "gesture",
+      "image": "burger.jpg",
+      "crop": [
+        77,
+        0,
+        402,
+        325
+      ],
+      "expected": "no_hand"
+    },
+    {
+      "id": "person-segmentation",
+      "task": "segmentation",
+      "image": "pose.jpg",
+      "expected": "person"
+    },
+    {
+      "id": "standing-boundary-segmentation",
+      "task": "segmentation",
+      "image": "male_full_height_hands.jpg",
+      "expected": "person"
+    },
+    {
+      "id": "no-person-segmentation",
+      "task": "segmentation",
+      "image": "cat.jpg",
+      "expected": "no_person"
+    }
+  ],
+  "scope": "Prepared public reference controls; no event-specific photos were supplied. No dataset accuracy claim."
+}

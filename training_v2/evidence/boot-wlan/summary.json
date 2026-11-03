@@ -1,0 +1,17 @@
+{
+  "status": "PASS_COLD_BOOT_PERSISTENCE_AND_WLAN",
+  "reviewed_at_host_utc": "2026-11-01T22:40:14.990120+00:00",
+  "cold_boot": "PASS_ONE_OPERATOR_PHYSICAL_CYCLE",
+  "wlan_after_boot": "PASS_AUTOMATIC_DHCP_DNS_HTTPS",
+  "seconds_to_root_shell": 13.93800000000192,
+  "seconds_to_wlan": 29.01599999999962,
+  "systemd_startup_seconds": 76.464,
+  "ntp": "No initially; yes in settled follow-up",
+  "failed_unit_count": 14,
+  "new_failed_units": [],
+  "bsp_failures_remain": true,
+  "review": "evidence/boot-wlan/20261101T215141Z/review.json",
+  "service_analysis": "docs/BOOT_WLAN.md",
+  "timing_limit": "Operator presses Enter after energizing; includes manual reaction offset. ADB polling period up to 1 second plus login.",
+  "scope": "One physical cold cycle on this unit/BSP; per-box and classroom acceptance still required."
+}

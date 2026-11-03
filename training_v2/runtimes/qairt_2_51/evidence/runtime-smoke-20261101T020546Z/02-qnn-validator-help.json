@@ -1,0 +1,5 @@
+{
+  "command": "cd /tmp/qairt-isolated-20261101T020546Z\nenv LD_LIBRARY_PATH=/tmp/qairt-isolated-20261101T020546Z/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu ADSP_LIBRARY_PATH='/tmp/qairt-isolated-20261101T020546Z/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib' /tmp/qairt-isolated-20261101T020546Z/bin/qnn-platform-validator --help",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:09:30.010608+00:00"
+}

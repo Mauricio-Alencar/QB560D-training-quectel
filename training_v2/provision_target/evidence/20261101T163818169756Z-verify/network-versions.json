@@ -1,0 +1,4 @@
+{
+  "command": ". /opt/qb560d-workshop/env.sh\niperf3 --version\niperf3 --help | grep -- --bind-dev\nss -V\nss -lnt",
+  "exit_code": 1
+}

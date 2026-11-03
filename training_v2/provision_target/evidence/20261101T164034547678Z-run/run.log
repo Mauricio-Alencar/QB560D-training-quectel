@@ -1,0 +1,94 @@
+Mon Jun 17 22:18:36 UTC 2024
+date is hashed (/usr/bin/date)
+/usr/bin/date
+ADSP_LIBRARY_PATH=/root/lib/;/system/lib/rfsa/adsp/;system/vendor/lib/rfsa/adsp/;/dsp
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+HOME=/root
+HUSHLOGIN=FALSE
+LANG=C.UTF-8
+LC_ALL=C
+LD_LIBRARY_PATH=/root/lib/:$LD_LIBRARY_PATH
+LOGNAME=root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+MAIL=/var/mail/root
+MOTD_SHOWN=pam
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PWD=/root
+SHELL=/bin/bash
+SHLVL=1
+TERM=dumb
+USER=root
+XDG_RUNTIME_DIR=/run/user/0
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=39
+XDG_SESSION_TYPE=tty
+_=/usr/bin/env
+systemd+    3170       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root        4491       1  0 04:29 ?        00:00:00 /usr/bin/time_daemon
+root       19414   19405  0 06:18 pts/0    00:00:00 sh -e -c date -u; command -V date; readlink -f /bin/date; env | sort; ps -ef | grep -E "timesync|chrony|ntp|time_daemon"; systemctl list-units --type=service --state=running --no-pager
+root       19420   19414  0 06:18 pts/0    00:00:00 grep -E timesync|chrony|ntp|time_daemon
+  UNIT                        LOAD   ACTIVE SUB     DESCRIPTION                 
+  adbd.service                loaded active running adbd Service                
+  adsprpcd.service            loaded active running adsprpc Service             
+  adsprpcd_audiopd.service    loaded active running adsprpc Service             
+  application-migration.se... loaded active running Application Migration Ser...
+  atfwd_quectel.service       loaded active running start_atfwd_daemon_quec     
+  cdsprpcd.service            loaded active running cdsprpc Service             
+  cron.service                loaded active running Regular background progra...
+  dbus.service                loaded active running D-Bus System Message Bus    
+  dhcpcd.service              loaded active running DHCP Client Daemon          
+  diag-reboot-app.service     loaded active running diagrebootapp service       
+  diag-router.service         loaded active running diag-router Service         
+  earlyinit-logd.service      loaded active running Logd logging Service        
+  getty@tty1.service          loaded active running Getty on tty1               
+  gstd.service                loaded active running GSTreamer Daemon            
+  imud.service                loaded active running imud Service                
+  init_sys_mss.service        loaded active running Modem Init Service          
+  ipacm_perf.service          loaded active running start IPA configuration m...
+  leprop.service              loaded active running leprop Service              
+  ModemManager.service        loaded active running Modem Manager               
+  netmgrd.service             loaded active running Netmgrd Service             
+  networkd-dispatcher.service loaded active running Dispatcher daemon for sys...
+  NetworkManager.service      loaded active running Network Manager             
+  pdmapper.service            loaded active running pdmapper for database que...
+  pm-service.service          loaded active running pm-service                  
+  polkit.service              loaded active running Authorization Manager       
+  port_bridge.service         loaded active running Port bridge Service         
+  pulseaudio.service          loaded active running PulseAudio Sound Service    
+  qb560d-docker-demo.service  loaded active running QB560D isolated Docker tr...
+  QCMAP_ConnectionManagerd... loaded active running QCMAP connectionManager s...
+  qcrild.service              loaded active running qcrild service              
+  qcrild2.service             loaded active running qcrild2 service             
+  ql-network-manager.service  loaded active running ql network manager          
+  ql-ota.service              loaded active running ql ota                      
+  qlrild.service              loaded active running qlrild service              
+  qmmf-server.service         loaded active running QMMF Server Service         
+  qrtr_ns.service             loaded active running qrtr-ns Service             
+  qti_system_daemon.service   loaded active running qti system daemon Service   
+  qtid.service                loaded active running qti service                 
+  reboot-daemon.service       loaded active running reboot-daemon service       
+  rmt_storage.service         loaded active running Remote Storage Service      
+  sensors-see-daemon.service  loaded active running Sensors Daemon Service      
+  serial-getty@hvc0.service   loaded active running Serial Getty on hvc0        
+  servicemanager.service      loaded active running Service manager Service     
+  sound-manager.service       loaded active running sound manager               
+  sscrpcd.service             loaded active running sscrpcd Service             
+  start_cnss_daemon.service   loaded active running start cnss daemon           
+  systemd-journald.service    loaded active running Journal Service             
+  systemd-logind.service      loaded active running Login Service               
+  systemd-networkd.service    loaded active running Network Service             
+  systemd-resolved.service    loaded active running Network Name Resolution     
+  systemd-timesyncd.service   loaded active running Network Time Synchronization
+  systemd-udevd.service       loaded active running udev Kernel Device Manager  
+  tftp_server.service         loaded active running Staring tftp server         
+  tftpd-hpa.service           loaded active running LSB: HPA's tftp server      
+  time_serviced.service       loaded active running time serviced Service       
+  usbd.service                loaded active running USB daemon Service          
+  user@0.service              loaded active running User Manager for UID 0      
+  wpa_supplicant.service      loaded active running WPA supplicant              
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+58 loaded units listed.

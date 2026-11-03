@@ -1,0 +1,206 @@
+{
+  "backend": "gpu",
+  "passed": true,
+  "runtime": "TFLite BSP 2.8.4",
+  "median_ms": 15.006480499323516,
+  "p95_ms": 15.84318409950356,
+  "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+  "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+  "result": {
+    "keypoints_yxs": [
+      [
+        0.38597223373715667,
+        0.5217145778789595,
+        0.998901312363451
+      ],
+      [
+        0.31377152072809233,
+        0.6007389818184107,
+        0.9997960128612026
+      ],
+      [
+        0.3188350798388041,
+        0.4312164704623389,
+        0.9992971400198009
+      ],
+      [
+        0.38602589885506344,
+        0.703087647137475,
+        0.996488086215923
+      ],
+      [
+        0.3779033155684431,
+        0.3272349602517451,
+        0.9807542508038651
+      ],
+      [
+        0.7067966393640966,
+        0.8810117049903721,
+        0.9582758131555027
+      ],
+      [
+        0.6923826287893668,
+        0.1589581994231109,
+        0.9662161678848749
+      ],
+      [
+        0.8191114910601218,
+        -0.001029557059247206,
+        0.1781805678318817
+      ],
+      [
+        0.8480649440214248,
+        0.05152777104062329,
+        0.41562010025146195
+      ],
+      [
+        0.8938136735651379,
+        -0.006945153618601045,
+        0.24265125111525046
+      ],
+      [
+        0.9006192501813765,
+        -0.009915986413621717,
+        0.4032072652832642
+      ],
+      [
+        0.6449467683311224,
+        0.008032969463660096,
+        0.22678275691172273
+      ],
+      [
+        1.013017650366505,
+        0.13822948886262768,
+        0.26463268095936193
+      ],
+      [
+        0.6649846490314256,
+        0.014098723110985664,
+        0.08860559425299776
+      ],
+      [
+        0.6538695046314099,
+        0.040526443882211174,
+        0.09406398572866066
+      ],
+      [
+        0.9072473735545917,
+        -0.0034068512081636064,
+        0.026105854724907483
+      ],
+      [
+        0.9119019373280468,
+        0.004704846482332579,
+        0.028790306071006824
+      ]
+    ],
+    "visible_keypoints": 7,
+    "decoder": "single_person_heatmap_argmax",
+    "demo_id": "D2-07",
+    "backend": "GPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+    "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+    "runs": 50,
+    "warmup": 10,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 15.006480499323516,
+    "inference_ms_p95": 15.84318409950356,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "sub_2",
+          "shape": [
+            1,
+            353,
+            257,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "float_heatmaps",
+          "shape": [
+            1,
+            23,
+            17,
+            17
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 1,
+          "name": "float_short_offsets",
+          "shape": [
+            1,
+            23,
+            17,
+            34
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 2,
+          "name": "float_mid_offsets",
+          "shape": [
+            1,
+            23,
+            17,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 3,
+          "name": "float_segments",
+          "shape": [
+            1,
+            23,
+            17,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ]
+    },
+    "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+    "runtime_version": "2.8.4"
+  },
+  "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+  "task": "pose",
+  "session": 2,
+  "runs": 50,
+  "warmup": 10,
+  "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+  "comparison_to_tflite_cpu": {
+    "passed": true,
+    "median_visible_joint_distance": 3.9780553200838973e-08,
+    "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+  }
+}

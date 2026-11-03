@@ -1,0 +1,25 @@
+gesture-qnn_dlc-w8a8.zip 4478240
+reference_app.py.txt 21594
+reference_model.py.txt 34368
+reference_mediapipe_app.py.txt 33036
+reference_mediapipe_utils.py.txt 6497
+reference_hand_model.py.txt 11083
+reference_boxes.py.txt 20974
+official_sample_notebook.ipynb.txt 12667
+model_card.md.txt 31991
+images/thumbs_down.jpg 46651
+images/victory.jpg 19125
+images/thumbs_up.jpg 28894
+images/pointing_up.jpg 36757
+images/test_fist.jpg 71355
+images/test_fist.png 207870
+images/test_right_hands.jpg 54887
+images/test_victory.jpg 69362
+images/iloveyou.jpg 760980
+images/open_palm.jpg 88905
+images/full_open_palm.png 8179354
+images/closed_fist.jpg 1958469
+MODEL_MEMBER mediapipe_hand_gesture-qnn_dlc-w8a8/metadata.json 5134
+MODEL_MEMBER mediapipe_hand_gesture-qnn_dlc-w8a8/canned_gesture_classifier.dlc 454520
+MODEL_MEMBER mediapipe_hand_gesture-qnn_dlc-w8a8/hand_landmark_detector.dlc 3973064
+MODEL_MEMBER mediapipe_hand_gesture-qnn_dlc-w8a8/palm_detector.dlc 2793248

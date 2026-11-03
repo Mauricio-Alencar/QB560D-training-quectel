@@ -1,0 +1,6 @@
+{
+  "command": "systemctl is-active qb560d-docker-demo.service; sh /opt/qb560d-docker-demo/target/docker.sh ps -a --format \"{{.Names}}\"; curl --interface wlan0 --fail --connect-timeout 8 --max-time 20 -I https://example.com; ip -4 route show dev wlan0",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:44:49.229113+00:00"
+}

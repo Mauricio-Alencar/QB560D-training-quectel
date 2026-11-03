@@ -1,0 +1,27 @@
+{
+  "result": "FAIL",
+  "started_host_utc": "2026-11-02T01:32:13.503180+00:00",
+  "records": [
+    {
+      "label": "before",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "before.log"
+    },
+    {
+      "label": "profile-hash-before",
+      "exit_code": 0,
+      "expected": 0,
+      "passed": true,
+      "log": "profile-hash-before.log"
+    }
+  ],
+  "radio_preferences_changed": false,
+  "apn_changed": false,
+  "data_teardown_tested": false,
+  "sim_output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mQLRIL_GetIccCardStatus ret = \u001b[1m0\n\u001b[0m\u001b[1m\u001b[34mcard_state(e.g. 0:absent; 1:present;): \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34muniversal_pin_state(e.g. 0:unknown;): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mgsm_umts_subscription_app_index: \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mcdma_subscription_app_index: \u001b[1m\u001b[32m-1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mims_subscription_app_index: \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mnum_applications: \u001b[1m\u001b[32m2\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): \u001b[1m\u001b[32m2\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): \u001b[1m\u001b[32m5\u001b[1m\n\u001b[0m\u001b[1m\u001b[34maid_ptr: \u001b[1m\u001b[32ma0000000871002ff55f00189000001ff\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_label_ptr: \u001b[1m\u001b[32m00000000\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1_replaced: \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1(e.g. 1:Enable not verified, 2:Enable verified): \u001b[1m\u001b[32m3\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin2(e.g. 3:Disabled, 4:Enable blocked): \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1(e.g. 1:Enable not verified, 2:Enable verified): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin2(e.g. 3:Disabled, 4:Enable blocked): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):",
+  "registration_output": "\u001b[1m\u001b[0m\u001b[1m\u001b[34mresponse[0] is registration state 0-5,e.g 1:Registered, 2: Not registered\nresponse[1] is LAC if registered or NULL if not\nresponse[2] is CID if registered or NULL if not\nresponse[3] indicates the available data radio technology, e.g 3:UMTS, 14:LTE, 20:NR5G\nvalid values as defined by RIL_RadioTechnology.\nresponse[5] The maximum number of simultaneous Data Calls that can be established\nFor more information refer to RIL_REQUEST_DATA_REGISTRATION_STATE in ril.h\u001b[1m\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m0]:1\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m2]:0825cd01\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m3]:14\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m5]:20\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m6]:38250\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m7]:364\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m8]:136695041\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):",
+  "active_session_before": false,
+  "finished_host_utc": "2026-11-02T01:32:17.570039+00:00"
+}

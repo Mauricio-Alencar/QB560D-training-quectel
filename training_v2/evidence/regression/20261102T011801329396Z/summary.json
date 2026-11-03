@@ -1,0 +1,196 @@
+{
+  "host_utc": "2026-11-02T01:18:01.329396+00:00",
+  "unit_label": "Reference-reorganized",
+  "remote": "/opt/qb560d-training-payload",
+  "result": "FAIL_LOCAL_CORE_DEMOS",
+  "checks": [
+    {
+      "label": "D1-01-inventory",
+      "exit_code": 0,
+      "log": "D1-01-inventory.log",
+      "required": true
+    },
+    {
+      "label": "D1-02-boot-observation",
+      "exit_code": 0,
+      "log": "D1-02-boot-observation.log",
+      "required": false
+    },
+    {
+      "label": "D1-03-logger",
+      "exit_code": 1,
+      "log": "D1-03-logger.log",
+      "required": true
+    },
+    {
+      "label": "D2-00-model-hashes",
+      "exit_code": 0,
+      "log": "D2-00-model-hashes.log",
+      "required": true
+    },
+    {
+      "label": "D2-00-private-Pillow",
+      "exit_code": 0,
+      "log": "D2-00-private-Pillow.log",
+      "required": true
+    },
+    {
+      "label": "D2-00-model-contracts",
+      "exit_code": 0,
+      "log": "D2-00-model-contracts.log",
+      "required": true
+    },
+    {
+      "label": "D2-01-native-C",
+      "exit_code": 0,
+      "log": "D2-01-native-C.log",
+      "required": true
+    },
+    {
+      "label": "D2-01-http-1",
+      "exit_code": 0,
+      "log": "D2-01-http-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-02-systemd-1",
+      "exit_code": 0,
+      "log": "D2-02-systemd-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-05-classification-1",
+      "exit_code": 0,
+      "log": "D2-05-classification-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-06-detection-1",
+      "exit_code": 0,
+      "log": "D2-06-detection-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-07-pose-1",
+      "exit_code": 0,
+      "log": "D2-07-pose-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-08-gesture-1",
+      "exit_code": 0,
+      "log": "D2-08-gesture-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-09-segmentation-1",
+      "exit_code": 0,
+      "log": "D2-09-segmentation-1.log",
+      "required": true
+    },
+    {
+      "label": "D2-01-http-2",
+      "exit_code": 0,
+      "log": "D2-01-http-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-02-systemd-2",
+      "exit_code": 0,
+      "log": "D2-02-systemd-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-05-classification-2",
+      "exit_code": 0,
+      "log": "D2-05-classification-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-06-detection-2",
+      "exit_code": 0,
+      "log": "D2-06-detection-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-07-pose-2",
+      "exit_code": 0,
+      "log": "D2-07-pose-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-08-gesture-2",
+      "exit_code": 0,
+      "log": "D2-08-gesture-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-09-segmentation-2",
+      "exit_code": 0,
+      "log": "D2-09-segmentation-2.log",
+      "required": true
+    },
+    {
+      "label": "D2-01-http-3",
+      "exit_code": 0,
+      "log": "D2-01-http-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-02-systemd-3",
+      "exit_code": 0,
+      "log": "D2-02-systemd-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-05-classification-3",
+      "exit_code": 0,
+      "log": "D2-05-classification-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-06-detection-3",
+      "exit_code": 0,
+      "log": "D2-06-detection-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-07-pose-3",
+      "exit_code": 0,
+      "log": "D2-07-pose-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-08-gesture-3",
+      "exit_code": 0,
+      "log": "D2-08-gesture-3.log",
+      "required": true
+    },
+    {
+      "label": "D2-09-segmentation-3",
+      "exit_code": 0,
+      "log": "D2-09-segmentation-3.log",
+      "required": true
+    }
+  ],
+  "excluded": [
+    "cellular",
+    "iperf3",
+    "cold boot",
+    "hosted AI Hub job",
+    "camera",
+    "GPU/HTP use their comparison runners"
+  ],
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "4"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "ai_outputs": "ai/"
+}

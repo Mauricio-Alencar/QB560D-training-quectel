@@ -1,0 +1,7 @@
+qnn-net-run pid:6331
+qnn-net-run build version: v2.51.40.260930230134
+qnn-net-run log level is : QNN_LOG_LEVEL_INFO
+Processing inference input(s):
+input_1 -> /opt/qb560d-ai-htp251/runs/r12c877baab8e4d/input.raw
+Composing Graphs
+Graph Prepare failure

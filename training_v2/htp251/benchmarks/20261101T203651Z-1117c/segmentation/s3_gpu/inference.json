@@ -1,0 +1,4 @@
+{
+  "command": "/usr/bin/timeout 240s sh /opt/qb560d-training-payload/target/ai.sh segmentation --image /opt/qb560d-ai-htp251/runs/ba435b575513a4a/input.png --output /opt/qb560d-ai-htp251/runs/ba435b575513a4a/s3_gpu --backend gpu --vendor-c-api --threads 2 --runs 50 --warmup 10",
+  "exit_code": 0
+}

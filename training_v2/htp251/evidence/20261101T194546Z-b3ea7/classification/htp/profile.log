@@ -1,0 +1,200 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/r628eefc00d2146/htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 03:46:28 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793562388998824 Steady Clock Timestamp: 3624657976
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 258116 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 138901 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 118588 us
+    Backend (RPC (finalize) time): 2524 us
+    Backend (QNN accelerator (finalize) time): 2310 us
+    Backend (Accelerator (finalize) time): 2157 us
+    Backend (QNN (finalize) time): 118484 us
+        Graph Preparation Initializing: 442 us
+        Graph Optimizations: 84633 us
+        Post Graph Optimization: 2502 us
+        Graph Sequencing for Target: 7930 us
+        VTCM Allocation: 2183 us
+        Parallelization Optimization: 924 us
+        Finalizing Graph Sequence: 1287 us
+        Completion: 95 us
+
+De-Init Stats:
+--------------
+    NetRun: 5847 us
+    Backend (RPC (deinit) time): 1440 us
+    Backend (QNN Accelerator (deinit) time): 1258 us
+    Backend (Accelerator (deinit) time): 1232 us
+    Backend (QNN (deinit) time): 5706 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 273.4980 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 2627 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 2378 us
+    Backend (QNN accelerator (execute) time): 2106 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2488 us
+    Backend (Time for HVX + HMX power on and acquire): 2615 us
+    Backend (Accelerator (execute) time (cycles)): 828404 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 104408 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 26407 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 10442 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 75311 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 7194 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 28083 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 14241 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 40501 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 8728 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 29499 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 17958 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 43897 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 9469 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 12098 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 17107 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 13499 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 18428 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 14108 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 18926 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 13813 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 19172 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 14150 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 18067 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 48109 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 9359 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 7773 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 48100 cycles
+        MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles): 41029 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles): 89056 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles): 0 cycles
+        MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles): 1123 cycles
+        MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles): 5824 cycles
+        Output OpId_3 (cycles): 2515 cycles
+    Backend (Accelerator (execute) time): 1252 us
+    Backend (Accelerator (execute excluding wait) time): 581 us
+    Backend (QNN (execute) time): 2543 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 2259 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 1942 us
+    Backend (QNN accelerator (execute) time): 1679 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2254 us
+    Backend (Time for HVX + HMX power on and acquire): 1520 us
+    Backend (Accelerator (execute) time (cycles)): 749947 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 100398 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 24405 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 10866 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 72958 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 7142 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 28050 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 13847 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 40460 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 8739 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 20877 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 17769 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 39058 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 9335 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 12043 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 17139 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 14188 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 17218 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 13996 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 19773 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 16002 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 20130 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 14535 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 19334 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 32902 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 9332 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 7615 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 47398 cycles
+        MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles): 6239 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles): 83722 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles): 0 cycles
+        MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles): 350 cycles
+        MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles): 3398 cycles
+        Output OpId_3 (cycles): 729 cycles
+    Backend (Accelerator (execute) time): 1144 us
+    Backend (Accelerator (execute excluding wait) time): 561 us
+    Backend (QNN (execute) time): 2160 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 3351 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 3171 us
+    Backend (QNN accelerator (execute) time): 2890 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2818 us
+    Backend (Time for HVX + HMX power on and acquire): 4838 us
+    Backend (Accelerator (execute) time (cycles)): 931647 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 109779 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 27438 cycles
+        MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 9900 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 77053 cycles
+        MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 7080 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 28031 cycles
+        MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 13916 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 40581 cycles
+        MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 8732 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 42869 cycles
+        MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 17821 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 47526 cycles
+        MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 9017 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 12024 cycles
+        MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 17074 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 11924 cycles
+        MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 17244 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 11667 cycles
+        MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 17471 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 11239 cycles
+        MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 17605 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 11864 cycles
+        MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 17437 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 59923 cycles
+        MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 9348 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 7985 cycles
+        MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 55426 cycles
+        MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles): 99854 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles): 98682 cycles
+        MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles): 0 cycles
+        MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles): 1751 cycles
+        MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles): 8729 cycles
+        Output OpId_3 (cycles): 4657 cycles
+    Backend (Accelerator (execute) time): 1432 us
+    Backend (Accelerator (execute excluding wait) time): 600 us
+    Backend (QNN (execute) time): 3289 us

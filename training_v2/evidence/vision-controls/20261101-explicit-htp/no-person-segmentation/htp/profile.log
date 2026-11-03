@@ -1,0 +1,425 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/r3423d2a9cbcc49/htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 07:14:04 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793574844737699 Steady Clock Timestamp: 2387292801
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 1034989 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 147381 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 887406 us
+    Backend (RPC (finalize) time): 4588 us
+    Backend (QNN accelerator (finalize) time): 4336 us
+    Backend (Accelerator (finalize) time): 4159 us
+    Backend (QNN (finalize) time): 887211 us
+        Graph Preparation Initializing: 421 us
+        Graph Optimizations: 186954 us
+        Post Graph Optimization: 12793 us
+        Graph Sequencing for Target: 600239 us
+        VTCM Allocation: 20108 us
+        Parallelization Optimization: 5606 us
+        Finalizing Graph Sequence: 7118 us
+        Completion: 640 us
+
+De-Init Stats:
+--------------
+    NetRun: 15009 us
+    Backend (RPC (deinit) time): 6108 us
+    Backend (QNN Accelerator (deinit) time): 5885 us
+    Backend (Accelerator (deinit) time): 5850 us
+    Backend (QNN (deinit) time): 14569 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 13.3167 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 11647 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 10484 us
+    Backend (QNN accelerator (execute) time): 10044 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 3120 us
+    Backend (Time for HVX + HMX power on and acquire): 3163 us
+    Backend (Accelerator (execute) time (cycles)): 5288410 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV2/Conv/Relu6:OpId_21 (cycles): 0 cycles
+        Relu6__2188:OpId_24 (cycles): 174520 cycles
+        MobilenetV2/expanded_conv/depthwise/Relu6:OpId_36 (cycles): 0 cycles
+        Relu6__2190:OpId_37 (cycles): 54903 cycles
+        MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm:OpId_49 (cycles): 9150 cycles
+        MobilenetV2/expanded_conv_1/expand/Relu6:OpId_57 (cycles): 0 cycles
+        Relu6__2193:OpId_60 (cycles): 13886 cycles
+        MobilenetV2/expanded_conv_1/depthwise/Relu6:OpId_72 (cycles): 0 cycles
+        Relu6__2195:OpId_73 (cycles): 219463 cycles
+        MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm:OpId_85 (cycles): 5609 cycles
+        MobilenetV2/expanded_conv_2/expand/Relu6:OpId_93 (cycles): 0 cycles
+        Relu6__2198:OpId_96 (cycles): 7305 cycles
+        MobilenetV2/expanded_conv_2/depthwise/Relu6:OpId_108 (cycles): 0 cycles
+        Relu6__2200:OpId_109 (cycles): 70090 cycles
+        MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm:OpId_121 (cycles): 8362 cycles
+        MobilenetV2/expanded_conv_2/add:OpId_124 (cycles): 25056 cycles
+        MobilenetV2/expanded_conv_3/expand/Relu6:OpId_131 (cycles): 0 cycles
+        Relu6__2203:OpId_134 (cycles): 6692 cycles
+        MobilenetV2/expanded_conv_3/depthwise/Relu6:OpId_146 (cycles): 0 cycles
+        Relu6__2205:OpId_147 (cycles): 89652 cycles
+        MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm:OpId_159 (cycles): 2503 cycles
+        MobilenetV2/expanded_conv_4/expand/Relu6:OpId_167 (cycles): 0 cycles
+        Relu6__2208:OpId_170 (cycles): 2573 cycles
+        MobilenetV2/expanded_conv_4/depthwise/Relu6:OpId_182 (cycles): 0 cycles
+        Relu6__2210:OpId_183 (cycles): 21038 cycles
+        MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm:OpId_195 (cycles): 4682 cycles
+        MobilenetV2/expanded_conv_4/add:OpId_198 (cycles): 7646 cycles
+        MobilenetV2/expanded_conv_5/expand/Relu6:OpId_205 (cycles): 0 cycles
+        Relu6__2213:OpId_208 (cycles): 2396 cycles
+        MobilenetV2/expanded_conv_5/depthwise/Relu6:OpId_220 (cycles): 0 cycles
+        Relu6__2215:OpId_221 (cycles): 21600 cycles
+        MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm:OpId_233 (cycles): 4217 cycles
+        MobilenetV2/expanded_conv_5/add:OpId_236 (cycles): 7522 cycles
+        MobilenetV2/expanded_conv_6/expand/Relu6:OpId_243 (cycles): 0 cycles
+        Relu6__2218:OpId_246 (cycles): 2543 cycles
+        MobilenetV2/expanded_conv_6/depthwise/Relu6:OpId_258 (cycles): 0 cycles
+        Relu6__2220:OpId_259 (cycles): 21736 cycles
+        MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm:OpId_271 (cycles): 4506 cycles
+        MobilenetV2/expanded_conv_7/expand/Relu6:OpId_279 (cycles): 0 cycles
+        Relu6__2223:OpId_282 (cycles): 5168 cycles
+        MobilenetV2/expanded_conv_7/depthwise/Relu6:OpId_294 (cycles): 0 cycles
+        Relu6__2225:OpId_295 (cycles): 235239 cycles
+        MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm:OpId_307 (cycles): 5100 cycles
+        MobilenetV2/expanded_conv_7/add:OpId_310 (cycles): 7533 cycles
+        MobilenetV2/expanded_conv_8/expand/Relu6:OpId_317 (cycles): 0 cycles
+        Relu6__2228:OpId_320 (cycles): 5358 cycles
+        MobilenetV2/expanded_conv_8/depthwise/Relu6:OpId_332 (cycles): 0 cycles
+        Relu6__2230:OpId_333 (cycles): 225448 cycles
+        MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm:OpId_345 (cycles): 5082 cycles
+        MobilenetV2/expanded_conv_8/add:OpId_348 (cycles): 7499 cycles
+        MobilenetV2/expanded_conv_9/expand/Relu6:OpId_355 (cycles): 0 cycles
+        Relu6__2233:OpId_358 (cycles): 5466 cycles
+        MobilenetV2/expanded_conv_9/depthwise/Relu6:OpId_370 (cycles): 0 cycles
+        Relu6__2235:OpId_371 (cycles): 225511 cycles
+        MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm:OpId_383 (cycles): 5228 cycles
+        MobilenetV2/expanded_conv_9/add:OpId_386 (cycles): 7364 cycles
+        MobilenetV2/expanded_conv_10/expand/Relu6:OpId_393 (cycles): 0 cycles
+        Relu6__2238:OpId_396 (cycles): 5350 cycles
+        MobilenetV2/expanded_conv_10/depthwise/Relu6:OpId_408 (cycles): 0 cycles
+        Relu6__2240:OpId_409 (cycles): 225653 cycles
+        MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm:OpId_421 (cycles): 9500 cycles
+        MobilenetV2/expanded_conv_11/expand/Relu6:OpId_429 (cycles): 0 cycles
+        Relu6__2243:OpId_432 (cycles): 12172 cycles
+        MobilenetV2/expanded_conv_11/depthwise/Relu6:OpId_444 (cycles): 0 cycles
+        Relu6__2245:OpId_445 (cycles): 336901 cycles
+        MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm:OpId_457 (cycles): 13550 cycles
+        MobilenetV2/expanded_conv_11/add:OpId_460 (cycles): 14114 cycles
+        MobilenetV2/expanded_conv_12/expand/Relu6:OpId_467 (cycles): 0 cycles
+        Relu6__2248:OpId_470 (cycles): 12475 cycles
+        MobilenetV2/expanded_conv_12/depthwise/Relu6:OpId_482 (cycles): 0 cycles
+        Relu6__2250:OpId_483 (cycles): 337233 cycles
+        MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm:OpId_495 (cycles): 13701 cycles
+        MobilenetV2/expanded_conv_12/add:OpId_498 (cycles): 13745 cycles
+        MobilenetV2/expanded_conv_13/expand/Relu6:OpId_505 (cycles): 0 cycles
+        Relu6__2253:OpId_508 (cycles): 11527 cycles
+        MobilenetV2/expanded_conv_13/depthwise/Relu6:OpId_520 (cycles): 0 cycles
+        Relu6__2255:OpId_521 (cycles): 334214 cycles
+        MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm:OpId_533 (cycles): 24172 cycles
+        MobilenetV2/expanded_conv_14/expand/Relu6:OpId_541 (cycles): 0 cycles
+        Relu6__2258:OpId_544 (cycles): 28972 cycles
+        MobilenetV2/expanded_conv_14/depthwise/Relu6:OpId_556 (cycles): 0 cycles
+        Relu6__2260:OpId_557 (cycles): 198614 cycles
+        MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm:OpId_569 (cycles): 34432 cycles
+        MobilenetV2/expanded_conv_14/add:OpId_572 (cycles): 35048 cycles
+        MobilenetV2/expanded_conv_15/expand/Relu6:OpId_579 (cycles): 0 cycles
+        Relu6__2263:OpId_582 (cycles): 34813 cycles
+        MobilenetV2/expanded_conv_15/depthwise/Relu6:OpId_594 (cycles): 0 cycles
+        Relu6__2265:OpId_595 (cycles): 195416 cycles
+        MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm:OpId_607 (cycles): 34392 cycles
+        MobilenetV2/expanded_conv_15/add:OpId_610 (cycles): 19510 cycles
+        MobilenetV2/expanded_conv_16/expand/Relu6:OpId_617 (cycles): 0 cycles
+        Relu6__2268:OpId_620 (cycles): 34321 cycles
+        MobilenetV2/expanded_conv_16/depthwise/Relu6:OpId_632 (cycles): 0 cycles
+        Relu6__2270:OpId_633 (cycles): 234641 cycles
+        MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm:OpId_645 (cycles): 60491 cycles
+        aspp0/Relu:OpId_653 (cycles): 0 cycles
+        Relu__2275:OpId_656 (cycles): 29787 cycles
+        AvgPool2D/AvgPool:OpId_666 (cycles): 43196 cycles
+        image_pooling/Relu:OpId_674 (cycles): 0 cycles
+        Relu__2273:OpId_677 (cycles): 1015 cycles
+        Resize__2546:OpId_684 (cycles): 78370 cycles
+        concat:OpId_688 (cycles): 0 cycles
+        concat_projection/Relu:OpId_695 (cycles): 0 cycles
+        Relu__2277:OpId_698 (cycles): 97377 cycles
+        logits/semantic/BiasAdd:OpId_710 (cycles): 7015 cycles
+        Resize__2556:OpId_713 (cycles): 0 cycles
+        Resize__2560:OpId_717 (cycles): 196466 cycles
+        Output OpId_3 (cycles): 1032563 cycles
+    Backend (Accelerator (execute) time): 4565 us
+    Backend (Accelerator (execute excluding wait) time): 3715 us
+    Backend (QNN (execute) time): 11441 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 8670 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 7544 us
+    Backend (QNN accelerator (execute) time): 7115 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2974 us
+    Backend (Time for HVX + HMX power on and acquire): 1905 us
+    Backend (Accelerator (execute) time (cycles)): 5335395 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV2/Conv/Relu6:OpId_21 (cycles): 0 cycles
+        Relu6__2188:OpId_24 (cycles): 170406 cycles
+        MobilenetV2/expanded_conv/depthwise/Relu6:OpId_36 (cycles): 0 cycles
+        Relu6__2190:OpId_37 (cycles): 54709 cycles
+        MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm:OpId_49 (cycles): 9278 cycles
+        MobilenetV2/expanded_conv_1/expand/Relu6:OpId_57 (cycles): 0 cycles
+        Relu6__2193:OpId_60 (cycles): 13598 cycles
+        MobilenetV2/expanded_conv_1/depthwise/Relu6:OpId_72 (cycles): 0 cycles
+        Relu6__2195:OpId_73 (cycles): 221539 cycles
+        MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm:OpId_85 (cycles): 5478 cycles
+        MobilenetV2/expanded_conv_2/expand/Relu6:OpId_93 (cycles): 0 cycles
+        Relu6__2198:OpId_96 (cycles): 7021 cycles
+        MobilenetV2/expanded_conv_2/depthwise/Relu6:OpId_108 (cycles): 0 cycles
+        Relu6__2200:OpId_109 (cycles): 69872 cycles
+        MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm:OpId_121 (cycles): 8408 cycles
+        MobilenetV2/expanded_conv_2/add:OpId_124 (cycles): 25293 cycles
+        MobilenetV2/expanded_conv_3/expand/Relu6:OpId_131 (cycles): 0 cycles
+        Relu6__2203:OpId_134 (cycles): 6653 cycles
+        MobilenetV2/expanded_conv_3/depthwise/Relu6:OpId_146 (cycles): 0 cycles
+        Relu6__2205:OpId_147 (cycles): 90436 cycles
+        MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm:OpId_159 (cycles): 2460 cycles
+        MobilenetV2/expanded_conv_4/expand/Relu6:OpId_167 (cycles): 0 cycles
+        Relu6__2208:OpId_170 (cycles): 2581 cycles
+        MobilenetV2/expanded_conv_4/depthwise/Relu6:OpId_182 (cycles): 0 cycles
+        Relu6__2210:OpId_183 (cycles): 20927 cycles
+        MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm:OpId_195 (cycles): 5008 cycles
+        MobilenetV2/expanded_conv_4/add:OpId_198 (cycles): 7836 cycles
+        MobilenetV2/expanded_conv_5/expand/Relu6:OpId_205 (cycles): 0 cycles
+        Relu6__2213:OpId_208 (cycles): 2217 cycles
+        MobilenetV2/expanded_conv_5/depthwise/Relu6:OpId_220 (cycles): 0 cycles
+        Relu6__2215:OpId_221 (cycles): 21547 cycles
+        MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm:OpId_233 (cycles): 4323 cycles
+        MobilenetV2/expanded_conv_5/add:OpId_236 (cycles): 7350 cycles
+        MobilenetV2/expanded_conv_6/expand/Relu6:OpId_243 (cycles): 0 cycles
+        Relu6__2218:OpId_246 (cycles): 2673 cycles
+        MobilenetV2/expanded_conv_6/depthwise/Relu6:OpId_258 (cycles): 0 cycles
+        Relu6__2220:OpId_259 (cycles): 21687 cycles
+        MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm:OpId_271 (cycles): 4656 cycles
+        MobilenetV2/expanded_conv_7/expand/Relu6:OpId_279 (cycles): 0 cycles
+        Relu6__2223:OpId_282 (cycles): 5312 cycles
+        MobilenetV2/expanded_conv_7/depthwise/Relu6:OpId_294 (cycles): 0 cycles
+        Relu6__2225:OpId_295 (cycles): 238897 cycles
+        MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm:OpId_307 (cycles): 5115 cycles
+        MobilenetV2/expanded_conv_7/add:OpId_310 (cycles): 7236 cycles
+        MobilenetV2/expanded_conv_8/expand/Relu6:OpId_317 (cycles): 0 cycles
+        Relu6__2228:OpId_320 (cycles): 5372 cycles
+        MobilenetV2/expanded_conv_8/depthwise/Relu6:OpId_332 (cycles): 0 cycles
+        Relu6__2230:OpId_333 (cycles): 230179 cycles
+        MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm:OpId_345 (cycles): 5088 cycles
+        MobilenetV2/expanded_conv_8/add:OpId_348 (cycles): 7929 cycles
+        MobilenetV2/expanded_conv_9/expand/Relu6:OpId_355 (cycles): 0 cycles
+        Relu6__2233:OpId_358 (cycles): 5635 cycles
+        MobilenetV2/expanded_conv_9/depthwise/Relu6:OpId_370 (cycles): 0 cycles
+        Relu6__2235:OpId_371 (cycles): 232848 cycles
+        MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm:OpId_383 (cycles): 5214 cycles
+        MobilenetV2/expanded_conv_9/add:OpId_386 (cycles): 7503 cycles
+        MobilenetV2/expanded_conv_10/expand/Relu6:OpId_393 (cycles): 0 cycles
+        Relu6__2238:OpId_396 (cycles): 5370 cycles
+        MobilenetV2/expanded_conv_10/depthwise/Relu6:OpId_408 (cycles): 0 cycles
+        Relu6__2240:OpId_409 (cycles): 230816 cycles
+        MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm:OpId_421 (cycles): 9571 cycles
+        MobilenetV2/expanded_conv_11/expand/Relu6:OpId_429 (cycles): 0 cycles
+        Relu6__2243:OpId_432 (cycles): 12137 cycles
+        MobilenetV2/expanded_conv_11/depthwise/Relu6:OpId_444 (cycles): 0 cycles
+        Relu6__2245:OpId_445 (cycles): 341438 cycles
+        MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm:OpId_457 (cycles): 13492 cycles
+        MobilenetV2/expanded_conv_11/add:OpId_460 (cycles): 14184 cycles
+        MobilenetV2/expanded_conv_12/expand/Relu6:OpId_467 (cycles): 0 cycles
+        Relu6__2248:OpId_470 (cycles): 12332 cycles
+        MobilenetV2/expanded_conv_12/depthwise/Relu6:OpId_482 (cycles): 0 cycles
+        Relu6__2250:OpId_483 (cycles): 345363 cycles
+        MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm:OpId_495 (cycles): 13697 cycles
+        MobilenetV2/expanded_conv_12/add:OpId_498 (cycles): 13762 cycles
+        MobilenetV2/expanded_conv_13/expand/Relu6:OpId_505 (cycles): 0 cycles
+        Relu6__2253:OpId_508 (cycles): 11393 cycles
+        MobilenetV2/expanded_conv_13/depthwise/Relu6:OpId_520 (cycles): 0 cycles
+        Relu6__2255:OpId_521 (cycles): 343722 cycles
+        MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm:OpId_533 (cycles): 23213 cycles
+        MobilenetV2/expanded_conv_14/expand/Relu6:OpId_541 (cycles): 0 cycles
+        Relu6__2258:OpId_544 (cycles): 28923 cycles
+        MobilenetV2/expanded_conv_14/depthwise/Relu6:OpId_556 (cycles): 0 cycles
+        Relu6__2260:OpId_557 (cycles): 197765 cycles
+        MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm:OpId_569 (cycles): 34393 cycles
+        MobilenetV2/expanded_conv_14/add:OpId_572 (cycles): 33649 cycles
+        MobilenetV2/expanded_conv_15/expand/Relu6:OpId_579 (cycles): 0 cycles
+        Relu6__2263:OpId_582 (cycles): 35747 cycles
+        MobilenetV2/expanded_conv_15/depthwise/Relu6:OpId_594 (cycles): 0 cycles
+        Relu6__2265:OpId_595 (cycles): 195006 cycles
+        MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm:OpId_607 (cycles): 34331 cycles
+        MobilenetV2/expanded_conv_15/add:OpId_610 (cycles): 20492 cycles
+        MobilenetV2/expanded_conv_16/expand/Relu6:OpId_617 (cycles): 0 cycles
+        Relu6__2268:OpId_620 (cycles): 30605 cycles
+        MobilenetV2/expanded_conv_16/depthwise/Relu6:OpId_632 (cycles): 0 cycles
+        Relu6__2270:OpId_633 (cycles): 238622 cycles
+        MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm:OpId_645 (cycles): 59681 cycles
+        aspp0/Relu:OpId_653 (cycles): 0 cycles
+        Relu__2275:OpId_656 (cycles): 29846 cycles
+        AvgPool2D/AvgPool:OpId_666 (cycles): 44335 cycles
+        image_pooling/Relu:OpId_674 (cycles): 0 cycles
+        Relu__2273:OpId_677 (cycles): 1025 cycles
+        Resize__2546:OpId_684 (cycles): 77625 cycles
+        concat:OpId_688 (cycles): 0 cycles
+        concat_projection/Relu:OpId_695 (cycles): 0 cycles
+        Relu__2277:OpId_698 (cycles): 97290 cycles
+        logits/semantic/BiasAdd:OpId_710 (cycles): 6913 cycles
+        Resize__2556:OpId_713 (cycles): 0 cycles
+        Resize__2560:OpId_717 (cycles): 194903 cycles
+        Output OpId_3 (cycles): 1041470 cycles
+    Backend (Accelerator (execute) time): 4504 us
+    Backend (Accelerator (execute excluding wait) time): 3735 us
+    Backend (QNN (execute) time): 8450 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 17583 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 16338 us
+    Backend (QNN accelerator (execute) time): 15879 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 3361 us
+    Backend (Time for HVX + HMX power on and acquire): 5628 us
+    Backend (Accelerator (execute) time (cycles)): 5332619 cycles
+        Input OpId_2 (cycles): 0 cycles
+        MobilenetV2/Conv/Relu6:OpId_21 (cycles): 0 cycles
+        Relu6__2188:OpId_24 (cycles): 180254 cycles
+        MobilenetV2/expanded_conv/depthwise/Relu6:OpId_36 (cycles): 0 cycles
+        Relu6__2190:OpId_37 (cycles): 54633 cycles
+        MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm:OpId_49 (cycles): 8800 cycles
+        MobilenetV2/expanded_conv_1/expand/Relu6:OpId_57 (cycles): 0 cycles
+        Relu6__2193:OpId_60 (cycles): 13541 cycles
+        MobilenetV2/expanded_conv_1/depthwise/Relu6:OpId_72 (cycles): 0 cycles
+        Relu6__2195:OpId_73 (cycles): 221659 cycles
+        MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm:OpId_85 (cycles): 5202 cycles
+        MobilenetV2/expanded_conv_2/expand/Relu6:OpId_93 (cycles): 0 cycles
+        Relu6__2198:OpId_96 (cycles): 7076 cycles
+        MobilenetV2/expanded_conv_2/depthwise/Relu6:OpId_108 (cycles): 0 cycles
+        Relu6__2200:OpId_109 (cycles): 69862 cycles
+        MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm:OpId_121 (cycles): 8102 cycles
+        MobilenetV2/expanded_conv_2/add:OpId_124 (cycles): 25450 cycles
+        MobilenetV2/expanded_conv_3/expand/Relu6:OpId_131 (cycles): 0 cycles
+        Relu6__2203:OpId_134 (cycles): 6410 cycles
+        MobilenetV2/expanded_conv_3/depthwise/Relu6:OpId_146 (cycles): 0 cycles
+        Relu6__2205:OpId_147 (cycles): 90551 cycles
+        MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm:OpId_159 (cycles): 2159 cycles
+        MobilenetV2/expanded_conv_4/expand/Relu6:OpId_167 (cycles): 0 cycles
+        Relu6__2208:OpId_170 (cycles): 2281 cycles
+        MobilenetV2/expanded_conv_4/depthwise/Relu6:OpId_182 (cycles): 0 cycles
+        Relu6__2210:OpId_183 (cycles): 20962 cycles
+        MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm:OpId_195 (cycles): 3751 cycles
+        MobilenetV2/expanded_conv_4/add:OpId_198 (cycles): 7608 cycles
+        MobilenetV2/expanded_conv_5/expand/Relu6:OpId_205 (cycles): 0 cycles
+        Relu6__2213:OpId_208 (cycles): 2206 cycles
+        MobilenetV2/expanded_conv_5/depthwise/Relu6:OpId_220 (cycles): 0 cycles
+        Relu6__2215:OpId_221 (cycles): 21351 cycles
+        MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm:OpId_233 (cycles): 4030 cycles
+        MobilenetV2/expanded_conv_5/add:OpId_236 (cycles): 7702 cycles
+        MobilenetV2/expanded_conv_6/expand/Relu6:OpId_243 (cycles): 0 cycles
+        Relu6__2218:OpId_246 (cycles): 2206 cycles
+        MobilenetV2/expanded_conv_6/depthwise/Relu6:OpId_258 (cycles): 0 cycles
+        Relu6__2220:OpId_259 (cycles): 21436 cycles
+        MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm:OpId_271 (cycles): 4159 cycles
+        MobilenetV2/expanded_conv_7/expand/Relu6:OpId_279 (cycles): 0 cycles
+        Relu6__2223:OpId_282 (cycles): 4878 cycles
+        MobilenetV2/expanded_conv_7/depthwise/Relu6:OpId_294 (cycles): 0 cycles
+        Relu6__2225:OpId_295 (cycles): 239830 cycles
+        MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm:OpId_307 (cycles): 4813 cycles
+        MobilenetV2/expanded_conv_7/add:OpId_310 (cycles): 7726 cycles
+        MobilenetV2/expanded_conv_8/expand/Relu6:OpId_317 (cycles): 0 cycles
+        Relu6__2228:OpId_320 (cycles): 5101 cycles
+        MobilenetV2/expanded_conv_8/depthwise/Relu6:OpId_332 (cycles): 0 cycles
+        Relu6__2230:OpId_333 (cycles): 232045 cycles
+        MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm:OpId_345 (cycles): 4776 cycles
+        MobilenetV2/expanded_conv_8/add:OpId_348 (cycles): 7731 cycles
+        MobilenetV2/expanded_conv_9/expand/Relu6:OpId_355 (cycles): 0 cycles
+        Relu6__2233:OpId_358 (cycles): 5064 cycles
+        MobilenetV2/expanded_conv_9/depthwise/Relu6:OpId_370 (cycles): 0 cycles
+        Relu6__2235:OpId_371 (cycles): 230759 cycles
+        MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm:OpId_383 (cycles): 4918 cycles
+        MobilenetV2/expanded_conv_9/add:OpId_386 (cycles): 7730 cycles
+        MobilenetV2/expanded_conv_10/expand/Relu6:OpId_393 (cycles): 0 cycles
+        Relu6__2238:OpId_396 (cycles): 5062 cycles
+        MobilenetV2/expanded_conv_10/depthwise/Relu6:OpId_408 (cycles): 0 cycles
+        Relu6__2240:OpId_409 (cycles): 232366 cycles
+        MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm:OpId_421 (cycles): 9313 cycles
+        MobilenetV2/expanded_conv_11/expand/Relu6:OpId_429 (cycles): 0 cycles
+        Relu6__2243:OpId_432 (cycles): 12152 cycles
+        MobilenetV2/expanded_conv_11/depthwise/Relu6:OpId_444 (cycles): 0 cycles
+        Relu6__2245:OpId_445 (cycles): 346072 cycles
+        MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm:OpId_457 (cycles): 13587 cycles
+        MobilenetV2/expanded_conv_11/add:OpId_460 (cycles): 14370 cycles
+        MobilenetV2/expanded_conv_12/expand/Relu6:OpId_467 (cycles): 0 cycles
+        Relu6__2248:OpId_470 (cycles): 12342 cycles
+        MobilenetV2/expanded_conv_12/depthwise/Relu6:OpId_482 (cycles): 0 cycles
+        Relu6__2250:OpId_483 (cycles): 343668 cycles
+        MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm:OpId_495 (cycles): 13714 cycles
+        MobilenetV2/expanded_conv_12/add:OpId_498 (cycles): 13882 cycles
+        MobilenetV2/expanded_conv_13/expand/Relu6:OpId_505 (cycles): 0 cycles
+        Relu6__2253:OpId_508 (cycles): 11440 cycles
+        MobilenetV2/expanded_conv_13/depthwise/Relu6:OpId_520 (cycles): 0 cycles
+        Relu6__2255:OpId_521 (cycles): 339044 cycles
+        MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm:OpId_533 (cycles): 24498 cycles
+        MobilenetV2/expanded_conv_14/expand/Relu6:OpId_541 (cycles): 0 cycles
+        Relu6__2258:OpId_544 (cycles): 28994 cycles
+        MobilenetV2/expanded_conv_14/depthwise/Relu6:OpId_556 (cycles): 0 cycles
+        Relu6__2260:OpId_557 (cycles): 199298 cycles
+        MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm:OpId_569 (cycles): 34452 cycles
+        MobilenetV2/expanded_conv_14/add:OpId_572 (cycles): 36252 cycles
+        MobilenetV2/expanded_conv_15/expand/Relu6:OpId_579 (cycles): 0 cycles
+        Relu6__2263:OpId_582 (cycles): 35039 cycles
+        MobilenetV2/expanded_conv_15/depthwise/Relu6:OpId_594 (cycles): 0 cycles
+        Relu6__2265:OpId_595 (cycles): 194935 cycles
+        MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm:OpId_607 (cycles): 34417 cycles
+        MobilenetV2/expanded_conv_15/add:OpId_610 (cycles): 17826 cycles
+        MobilenetV2/expanded_conv_16/expand/Relu6:OpId_617 (cycles): 0 cycles
+        Relu6__2268:OpId_620 (cycles): 41187 cycles
+        MobilenetV2/expanded_conv_16/depthwise/Relu6:OpId_632 (cycles): 0 cycles
+        Relu6__2270:OpId_633 (cycles): 224388 cycles
+        MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm:OpId_645 (cycles): 62447 cycles
+        aspp0/Relu:OpId_653 (cycles): 0 cycles
+        Relu__2275:OpId_656 (cycles): 29811 cycles
+        AvgPool2D/AvgPool:OpId_666 (cycles): 44185 cycles
+        image_pooling/Relu:OpId_674 (cycles): 0 cycles
+        Relu__2273:OpId_677 (cycles): 1013 cycles
+        Resize__2546:OpId_684 (cycles): 78865 cycles
+        concat:OpId_688 (cycles): 0 cycles
+        concat_projection/Relu:OpId_695 (cycles): 0 cycles
+        Relu__2277:OpId_698 (cycles): 97145 cycles
+        logits/semantic/BiasAdd:OpId_710 (cycles): 7025 cycles
+        Resize__2556:OpId_713 (cycles): 0 cycles
+        Resize__2560:OpId_717 (cycles): 196405 cycles
+        Output OpId_3 (cycles): 1030663 cycles
+    Backend (Accelerator (execute) time): 4723 us
+    Backend (Accelerator (execute excluding wait) time): 3723 us
+    Backend (QNN (execute) time): 17413 us

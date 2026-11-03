@@ -1,0 +1,1472 @@
+
+PLATFORM
+uid=0(root) gid=0(root) groups=0(root),1004,1007,1011,1015(sdcard),1028,3001,3002,3003(inet),3006
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Mon Dec 1 02:47:45 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+NAME="Ubuntu"
+VERSION="20.04.3 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.3 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+glibc 2.31
+Sun Nov  1 03:20:47 UTC 2026
+
+FILESYSTEMS
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G  8.5G   12G  44% /
+/dev/root        20G  8.5G   12G  44% /
+/dev/root        20G  8.5G   12G  44% /
+/dev/root        20G  8.5G   12G  44% /
+nodev	sysfs
+nodev	tmpfs
+nodev	bdev
+nodev	proc
+nodev	cgroup
+nodev	cgroup2
+nodev	cpuset
+nodev	devtmpfs
+nodev	binfmt_misc
+nodev	configfs
+nodev	debugfs
+nodev	tracefs
+nodev	securityfs
+nodev	sockfs
+nodev	bpf
+nodev	pipefs
+nodev	ramfs
+nodev	rpc_pipefs
+nodev	devpts
+	ext3
+	ext2
+	ext4
+	vfat
+	msdos
+nodev	nfs
+nodev	nfsd
+	fuseblk
+nodev	fuse
+nodev	fusectl
+nodev	overlay
+nodev	incremental-fs
+	f2fs
+	erofs
+nodev	mqueue
+	btrfs
+nodev	pstore
+nodev	functionfs
+/dev/sda6 on / type ext4 (rw,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=3739112k,nr_inodes=934778,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+/dev/sda12 on /data type ext4 (rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered)
+
+CGROUPS
+#subsys_name	hierarchy	num_cgroups	enabled
+cpuset	10	1	1
+cpu	2	1	1
+cpuacct	2	1	1
+blkio	4	1	1
+memory	5	473	1
+devices	3	144	1
+freezer	6	1	1
+net_cls	9	1	1
+perf_event	7	1	1
+net_prio	9	1	1
+pids	8	146	1
+10:cpuset:/
+9:net_cls,net_prio:/
+8:pids:/system.slice/adbd.service
+7:perf_event:/
+6:freezer:/
+5:memory:/system.slice/adbd.service
+4:blkio:/
+3:devices:/system.slice/adbd.service
+2:cpu,cpuacct:/
+1:name=systemd:/system.slice/adbd.service
+0::/system.slice/adbd.service
+drwxr-xr-x 13 root root 340 Jun 18  2024 /sys/fs/cgroup
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/blkio
+lrwxrwxrwx  1 root root  11 Jun 18  2024 /sys/fs/cgroup/cpu -> cpu,cpuacct
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/cpu,cpuacct
+lrwxrwxrwx  1 root root  11 Jun 18  2024 /sys/fs/cgroup/cpuacct -> cpu,cpuacct
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/cpuset
+dr-xr-xr-x  5 root root   0 Jun 18  2024 /sys/fs/cgroup/devices
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/freezer
+dr-xr-xr-x  5 root root   0 Jun 18  2024 /sys/fs/cgroup/memory
+lrwxrwxrwx  1 root root  16 Jun 18  2024 /sys/fs/cgroup/net_cls -> net_cls,net_prio
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/net_cls,net_prio
+lrwxrwxrwx  1 root root  16 Jun 18  2024 /sys/fs/cgroup/net_prio -> net_cls,net_prio
+dr-xr-xr-x  2 root root   0 Jun 18  2024 /sys/fs/cgroup/perf_event
+dr-xr-xr-x  5 root root   0 Jun 18  2024 /sys/fs/cgroup/pids
+dr-xr-xr-x  5 root root   0 Jun 18  2024 /sys/fs/cgroup/systemd
+dr-xr-xr-x  5 root root   0 Jun 18  2024 /sys/fs/cgroup/unified
+
+TOOLS
+/usr/bin/apt-get
+/usr/bin/dpkg
+/usr/bin/curl
+/usr/bin/tar
+/usr/bin/gzip
+/usr/bin/sha256sum
+/usr/sbin/iptables
+/usr/sbin/modprobe
+/usr/bin/mount
+/usr/bin/unshare
+
+PACKAGES
+The following packages are missing the list control file in the
+database, they need to be reinstalled:
+ accountsservice      query and manipulate user account information
+ acl                  access control list - utilities
+ adwaita-icon-theme-full default icon theme of GNOME
+ apg                  Automated Password Generator - Standalone version
+ apport               automatically generate crash reports for debugging
+ apport-symptoms      symptom scripts for apport
+ aptdaemon            transaction based package management service
+ aptdaemon-data       data files for clients
+ aspell               GNU Aspell spell-checker
+ aspell-en            English dictionary for GNU Aspell
+ avahi-daemon         Avahi mDNS/DNS-SD daemon
+ avahi-utils          Avahi browsing, publishing and discovery utilities
+ bind9-host           DNS Lookup Utility
+ bind9-libs:arm64     Shared Libraries used by BIND 9
+ bluez                Bluetooth tools and daemons
+ bolt                 system daemon to manage thunderbolt 3 devices
+ bsdmainutils         collection of more utilities from FreeBSD
+ bubblewrap           setuid wrapper for unprivileged chroot and namespace mani
+ cheese-common        Common files for the Cheese tool to take pictures and vid
+ chrome-gnome-shell   GNOME Shell extensions integration for web browsers
+ clang                C, C++ and Objective-C compiler (LLVM based)
+ clang-10             C, C++ and Objective-C compiler
+ clang-tidy           clang-based C++ linter tool
+ clang-tidy-10        clang-based C++ linter tool
+ clang-tools-10       clang-based tools for C/C++ developments
+ colord               system service to manage device colour profiles -- system
+ colord-data          system service to manage device colour profiles -- data f
+ cracklib-runtime     runtime support for password checker library cracklib2
+ cups-pk-helper       PolicyKit helper to configure cups with fine-grained priv
+ dbus-x11             simple interprocess messaging system (X11 deps)
+ dconf-cli            simple configuration storage system - utilities
+ desktop-file-utils   Utilities for .desktop files
+ dialog               Displays user-friendly dialog boxes from shell scripts
+ dictionaries-common  spelling dictionaries - common utilities
+ docbook-xml          standard XML documentation system for software and system
+ dosfstools           utilities for making and checking MS-DOS FAT filesystems
+ eject                ejects CDs and operates CD-Changers under Linux
+ emacsen-common       Common facilities for all emacsen
+ enchant-2            Wrapper for various spell checker engines (binary program
+ evolution-data-server evolution database backend server
+ evolution-data-server-common architecture independent files for Evolution Data
+ firefox              Safe and easy web browser from Mozilla
+ fonts-cantarell      sans serif font family designed for on-screen readability
+ fonts-wqy-zenhei     "WenQuanYi Zen Hei" A Hei-Ti Style (sans-serif) Chinese f
+ fprintd              D-Bus daemon for fingerprint reader access
+ fuse                 Filesystem in Userspace
+ gcr                  GNOME crypto services (daemon and tools)
+ gdb                  GNU Debugger
+ gdbserver            GNU Debugger (remote server)
+ gdisk                GPT fdisk text-mode partitioning tool
+ gdm3                 GNOME Display Manager
+ gedit                official text editor of the GNOME desktop environment
+ gedit-common         official text editor of the GNOME desktop environment (su
+ geoclue-2.0          geoinformation service
+ gettext-base         GNU Internationalization utilities for the base system
+ gir1.2-accountsservice-1.0 GObject introspection data for AccountService
+ gir1.2-gck-1:arm64   GObject introspection data for the GCK library
+ gir1.2-gcr-3:arm64   GObject introspection data for the GCR library
+ gir1.2-gdesktopenums-3.0:arm64 GObject introspection for GSettings desktop-wide sche
+ gir1.2-gdm-1.0:arm64 GObject introspection data for the GNOME Display Manager
+ gir1.2-geoclue-2.0:arm64 convenience library to interact with geoinformation servi
+ gir1.2-gnomebluetooth-1.0:arm64 Introspection data for GnomeBluetooth
+ gir1.2-gnomedesktop-3.0:arm64 Introspection data for GnomeDesktop
+ gir1.2-graphene-1.0:arm64 library of graphic data types (introspection files)
+ gir1.2-gtksource-4:arm64 gir files for the GTK+ syntax highlighting widget
+ gir1.2-gweather-3.0:arm64 GObject introspection data for the GWeather library
+ gir1.2-handy-0.0:arm64 GObject introspection files for libhandy
+ gir1.2-ibus-1.0:arm64 Intelligent Input Bus - introspection data
+ gir1.2-json-1.0:arm64 GLib JSON manipulation library (introspection data)
+ gir1.2-keybinder-3.0 registers global key bindings for applications - Gtk+3 - 
+ gir1.2-mutter-6:arm64 GObject introspection data for Mutter
+ gir1.2-nm-1.0:arm64  GObject introspection data for the libnm library
+ gir1.2-nma-1.0:arm64 GObject introspection data for libnma
+ gir1.2-notify-0.7:arm64 sends desktop notifications to a notification daemon (Int
+ gir1.2-packagekitglib-1.0 GObject introspection data for the PackageKit GLib l
+ gir1.2-peas-1.0:arm64 Application plugin library (introspection files)
+ gir1.2-polkit-1.0    GObject introspection data for PolicyKit
+ gir1.2-rsvg-2.0:arm64 gir files for renderer library for SVG files
+ gir1.2-secret-1:arm64 Secret store (GObject-Introspection)
+ gir1.2-soup-2.4:arm64 GObject introspection data for the libsoup HTTP library
+ gir1.2-upowerglib-1.0:arm64 GObject introspection data for upower
+ gir1.2-vte-2.91:arm64 GObject introspection data for the VTE library
+ gjs                  Mozilla-based javascript bindings for the GNOME platform
+ gkbd-capplet         GNOME control center tools for libgnomekbd
+ gnome-accessibility-themes High Contrast GTK+ 2 theme and icons
+ gnome-control-center utilities to configure the GNOME desktop
+ gnome-control-center-data configuration applets for GNOME - data files
+ gnome-control-center-faces utilities to configure the GNOME desktop - faces im
+ gnome-desktop3-data  Common files for GNOME desktop apps
+ gnome-keyring        GNOME keyring services (daemon and tools)
+ gnome-keyring-pkcs11:arm64 GNOME keyring module for the PKCS#11 module loading libra
+ gnome-menus          GNOME implementation of the freedesktop menu specificatio
+ gnome-online-accounts service to manage online accounts for the GNOME desktop
+ gnome-session        GNOME Session Manager - GNOME 3 session
+ gnome-session-bin    GNOME Session Manager - Minimal runtime
+ gnome-session-common GNOME Session Manager - common files
+ gnome-settings-daemon daemon handling the GNOME session settings
+ gnome-settings-daemon-common daemon handling the GNOME session settings - comm
+ gnome-shell          graphical shell for the GNOME desktop
+ gnome-shell-common   common files for the GNOME graphical shell
+ gnome-shell-extension-autohidetopbar GNOME shell automatic topbar hider
+ gnome-shell-extension-prefs tool to enable / disable GNOME Shell extensions
+ gnome-startup-applications Startup Applications manager for GNOME
+ gnome-terminal       GNOME terminal emulator application
+ gnome-terminal-data  Data files for the GNOME terminal emulator
+ gnome-themes-extra:arm64 Adwaita GTK+ 2 theme — engine
+ gnome-themes-extra-data Adwaita GTK+ 2 theme — common files
+ gnome-tweaks         tool to adjust advanced configuration settings for GNOME
+ gnome-user-docs      GNOME user docs
+ groff-base           GNU troff text-formatting system (base system components)
+ gstreamer1.0-clutter-3.0:arm64 Clutter PLugin for GStreamer 1.0
+ gtk2-engines-pixbuf:arm64 pixbuf-based theme for GTK 2
+ gvfs:arm64           userspace virtual filesystem - GIO module
+ gvfs-backends        userspace virtual filesystem - backends
+ gvfs-common          userspace virtual filesystem - common data files
+ gvfs-daemons         userspace virtual filesystem - servers
+ gvfs-libs:arm64      userspace virtual filesystem - private libraries
+ hostapd              IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator
+ hunspell-en-us       English_american dictionary for hunspell
+ ibus                 Intelligent Input Bus - core
+ ibus-data            Intelligent Input Bus - data files
+ ibus-gtk:arm64       Intelligent Input Bus - GTK2 support
+ ibus-gtk3:arm64      Intelligent Input Bus - GTK3 support
+ iio-sensor-proxy     IIO sensors to D-Bus proxy
+ im-config            Input method configuration framework
+ ippusbxd             Daemon for IPP USB printer support
+ iptables             administration tools for packet filtering and NAT
+ language-selector-common Language selector for Ubuntu
+ language-selector-gnome Language selector for Ubuntu
+ libaccountsservice0:arm64 query and manipulate user account information - shared li
+ libamtk-5-0:arm64    Actions, Menus and Toolbars Kit for GTK+
+ libamtk-5-common     Actions, Menus and Toolbars Kit for GTK+ - architecture-i
+ libappindicator3-1   Application Indicators
+ libappstream4:arm64  Library to access AppStream services
+ libarchive13:arm64   Multi-format archive and compression library (shared libr
+ libaspell15:arm64    GNU Aspell spell-checker runtime library
+ libatasmart4:arm64   ATA S.M.A.R.T. reading and parsing library
+ libauthen-sasl-perl  Authen::SASL - SASL Authentication framework
+ libavahi-core7:arm64 Avahi's embeddable mDNS/DNS-SD library
+ libavahi-glib1:arm64 Avahi GLib integration library
+ libbabeltrace1:arm64 Babeltrace conversion libraries
+ libblkid-dev:arm64   block device ID library - headers and static libraries
+ libblockdev-crypto2:arm64 Crypto plugin for libblockdev
+ libblockdev-fs2:arm64 file system plugin for libblockdev
+ libblockdev-loop2:arm64 Loop device plugin for libblockdev
+ libblockdev-part-err2:arm64 Partition error utility functions for libblockdev
+ libblockdev-part2:arm64 Partitioning plugin for libblockdev
+ libblockdev-swap2:arm64 Swap plugin for libblockdev
+ libblockdev-utils2:arm64 Utility functions for libblockdev
+ libblockdev2:arm64   Library for manipulating block devices
+ libbluetooth3:arm64  Library to use the BlueZ Linux Bluetooth stack
+ libc6-arm64-cross    GNU C Library: Shared libraries (for cross-compiling)
+ libc6-dbg:arm64      GNU C Library: detached debugging symbols
+ libcamel-1.2-62:arm64 Evolution MIME message handling library
+ libcanberra-gtk3-0:arm64 GTK+ 3.0 helper for playing widget event sounds with libc
+ libcanberra-gtk3-module:arm64 translates GTK3 widgets signals to event sounds
+ libcanberra-pulse:arm64 PulseAudio backend for libcanberra
+ libcdio-cdda2:arm64  library to read and control digital audio CDs
+ libcdio-paranoia2:arm64 library to read digital audio CDs with error correction
+ libcheese-gtk25:arm64 tool to take pictures and videos from your webcam - widge
+ libcheese8:arm64     tool to take pictures and videos from your webcam - base 
+ libclang-common-10-dev Clang library - Common development package
+ libclang-cpp10       C++ interface to the Clang library
+ libclang1-10         C interface to the Clang library
+ libclang1-8          C interface to the Clang library
+ libclutter-1.0-0:arm64 Open GL based interactive canvas library
+ libclutter-1.0-common Open GL based interactive canvas library (common files)
+ libclutter-gst-3.0-0:arm64 Open GL based interactive canvas library GStreamer elemen
+ libclutter-gtk-1.0-0:arm64 Open GL based interactive canvas library GTK+ widget
+ libcogl-common       Object oriented GL/GLES Abstraction/Utility Layer (common
+ libcogl-pango20:arm64 Object oriented GL/GLES Abstraction/Utility Layer
+ libcogl-path20:arm64 Object oriented GL/GLES Abstraction/Utility Layer
+ libcogl20:arm64      Object oriented GL/GLES Abstraction/Utility Layer
+ libcolord-gtk1:arm64 GTK+ convenience library for interacting with colord
+ libcolorhug2:arm64   library to access the ColorHug colourimeter -- runtime
+ libcrack2:arm64      pro-active password checker library
+ libcue2:arm64        CUE Sheet Parser Library
+ libdata-dump-perl    Perl module to help dump data structures
+ libdbusmenu-glib4:arm64 library for passing menus over DBus
+ libdbusmenu-gtk3-4:arm64 library for passing menus over DBus - GTK+ version
+ libdee-1.0-4:arm64   Model to synchronize multiple instances over DBus - share
+ libdw1:arm64         library that provides access to the DWARF debug informati
+ libebackend-1.2-10:arm64 Utility library for evolution data servers
+ libebook-1.2-20:arm64 Client library for evolution address books
+ libebook-contacts-1.2-3:arm64 Client library for evolution contacts books
+ libecal-2.0-1:arm64  Client library for evolution calendars
+ libedata-book-1.2-26:arm64 Backend library for evolution address books
+ libedata-cal-2.0-1:arm64 Backend library for evolution calendars
+ libedataserver-1.2-24:arm64 Utility library for evolution data servers
+ libedataserverui-1.2-2:arm64 Utility library for evolution data servers
+ libegl-dev:arm64     Vendor neutral GL dispatch library -- EGL development fil
+ libenchant-2-2:arm64 Wrapper library for various spell checker engines (runtim
+ libencode-locale-perl utility to determine the locale encoding
+ libexempi8:arm64     library to parse XMP metadata (Library)
+ libexiv2-27:arm64    EXIF/IPTC/XMP metadata manipulation library
+ libffi-dev:arm64     Foreign Function Interface library (development files)
+ libfile-basedir-perl Perl module to use the freedesktop basedir specification
+ libfile-desktopentry-perl Perl module to handle freedesktop .desktop files
+ libfile-listing-perl module to parse directory listings
+ libfile-mimeinfo-perl Perl module to determine file types
+ libfont-afm-perl     Font::AFM - Interface to Adobe Font Metrics files
+ libfontenc1:arm64    X11 font encoding library
+ libfprint-2-2:arm64  async fingerprint library of fprint project, shared libra
+ libfuse2:arm64       Filesystem in Userspace (library)
+ libgail-common:arm64 GNOME Accessibility Implementation Library -- common modu
+ libgail18:arm64      GNOME Accessibility Implementation Library -- shared libr
+ libgc1c2:arm64       conservative garbage collector for C and C++
+ libgck-1-0:arm64     Glib wrapper library for PKCS#11 - runtime
+ libgcr-base-3-1:arm64 Library for Crypto related tasks
+ libgcr-ui-3-1:arm64  Library for Crypto UI related tasks
+ libgd3:arm64         GD Graphics Library
+ libgdata-common      Library for accessing GData webservices - common data fil
+ libgdata22:arm64     Library for accessing GData webservices - shared librarie
+ libgdm1              GNOME Display Manager (shared library)
+ libgee-0.8-2:arm64   GObject based collection and utility library
+ libgeoclue-2-0:arm64 convenience library to interact with geoinformation servi
+ libgeocode-glib0:arm64 geocoding and reverse geocoding GLib library using Nomina
+ libgexiv2-2:arm64    GObject-based wrapper around the Exiv2 library
+ libgjs0g:arm64       Mozilla-based javascript bindings for the GNOME platform
+ libgl-dev:arm64      Vendor neutral GL dispatch library -- GL development file
+ libglib2.0-bin       Programs for the GLib library
+ libglib2.0-dev:arm64 Development files for the GLib library
+ libglib2.0-dev-bin   Development utilities for the GLib library
+ libglu1-mesa:arm64   Mesa OpenGL utility library (GLU)
+ libglu1-mesa-dev:arm64 Mesa OpenGL utility library -- development files
+ libglx-dev:arm64     Vendor neutral GL dispatch library -- GLX development fil
+ libgnome-autoar-0-0:arm64 Archives integration support for GNOME
+ libgnome-bluetooth13:arm64 GNOME Bluetooth tools - support library
+ libgnome-desktop-3-19:arm64 Utility library for loading .desktop files - runtime fil
+ libgnomekbd-common   GNOME library to manage keyboard configuration - common f
+ libgnomekbd8:arm64   GNOME library to manage keyboard configuration - shared l
+ libgoa-1.0-0b:arm64  library for GNOME Online Accounts
+ libgoa-1.0-common    library for GNOME Online Accounts - common files
+ libgoa-backend-1.0-1:arm64 backend library for GNOME Online Accounts
+ libgpgme11:arm64     GPGME - GnuPG Made Easy (library)
+ libgphoto2-6:arm64   gphoto2 digital camera library
+ libgphoto2-l10n      gphoto2 digital camera library - localized messages
+ libgphoto2-port12:arm64 gphoto2 digital camera port library
+ libgsf-1-114:arm64   Structured File Library - runtime version
+ libgsf-1-common      Structured File Library - common files
+ libgsound0:arm64     small library for playing system sounds
+ libgspell-1-2:arm64  spell-checking library for GTK+ applications
+ libgspell-1-common   libgspell architecture-independent files
+ libgtk2.0-0:arm64    GTK graphical user interface library - old version
+ libgtk2.0-bin        programs for the GTK graphical user interface library
+ libgtk2.0-common     common files for the GTK graphical user interface library
+ libgtksourceview-4-0:arm64 shared libraries for the GTK+ syntax highlighting widget
+ libgtksourceview-4-common common files for the GTK+ syntax highlighting widget
+ libgtop-2.0-11:arm64 gtop system monitoring library (shared)
+ libgtop2-common      gtop system monitoring library (common)
+ libgupnp-av-1.0-2    Audio/Visual utility library for GUPnP
+ libgupnp-dlna-2.0-3  DLNA utility library for GUPnP
+ libgusb2:arm64       GLib wrapper around libusb1
+ libgweather-3-16:arm64 GWeather shared library
+ libgweather-common   GWeather common files
+ libgxps2:arm64       handling and rendering XPS documents (library)
+ libhandy-0.0-0:arm64 Library with GTK widgets for mobile phones
+ libharfbuzz-icu0:arm64 OpenType text shaping engine ICU backend
+ libhtml-form-perl    module that represents an HTML form element
+ libhtml-format-perl  module for transforming HTML into various formats
+ libhtml-parser-perl  collection of modules that parse HTML text documents
+ libhtml-tagset-perl  data tables pertaining to HTML
+ libhtml-tree-perl    Perl module to represent and create HTML syntax trees
+ libhttp-cookies-perl HTTP cookie jars
+ libhttp-daemon-perl  simple http server class
+ libhttp-date-perl    module of date conversion routines
+ libhttp-message-perl perl interface to HTTP style messages
+ libhttp-negotiate-perl implementation of content negotiation
+ libhunspell-1.7-0:arm64 spell checker and morphological analyzer (shared library)
+ libhyphen0:arm64     ALTLinux hyphenation library - shared library
+ libibus-1.0-5:arm64  Intelligent Input Bus - shared library
+ libical3:arm64       iCalendar library implementation in C (runtime)
+ libieee1284-3:arm64  cross-platform library for parallel port access
+ libimobiledevice6:arm64 Library for communicating with iPhone and other Apple dev
+ libio-html-perl      open an HTML file with automatic charset detection
+ libio-socket-ssl-perl Perl module implementing object oriented interface to SS
+ libio-stringy-perl   modules for I/O on in-core objects (strings/arrays)
+ libip6tc2:arm64      netfilter libip6tc library
+ libipc-system-simple-perl Perl module to run commands simply, with detailed di
+ libjavascriptcoregtk-4.0-18:arm64 JavaScript engine library from WebKitGTK
+ libkeybinder-3.0-0:arm64 registers global key bindings for applications - Gtk+3
+ libkf5syntaxhighlighting-data Syntax highlighting Engine - translations
+ libkf5syntaxhighlighting5 Syntax highlighting Engine
+ libldb2:arm64        LDAP-like embedded database - shared library
+ libllvm10:arm64      Modular compiler and toolchain technologies, runtime libr
+ libllvm8:arm64       Modular compiler and toolchain technologies, runtime libr
+ liblmdb0:arm64       Lightning Memory-Mapped Database shared library
+ liblwp-mediatypes-perl module to guess media type for a file or a URL
+ liblwp-protocol-https-perl HTTPS driver for LWP::UserAgent
+ libmailtools-perl    modules to manipulate email in perl programs
+ libmaxminddb0:arm64  IP geolocation database library
+ libmbim-glib4:arm64  Support library to use the MBIM protocol
+ libmbim-proxy        Proxy to communicate with MBIM ports
+ libmediaart-2.0-0:arm64 media art extraction and cache management library
+ libmm-glib0:arm64    D-Bus service for managing modems - shared libraries
+ libmount-dev:arm64   device mounting library - headers and static libraries
+ libmozjs-68-0:arm64  SpiderMonkey JavaScript library
+ libmtp-common        Media Transfer Protocol (MTP) common files
+ libmtp-runtime       Media Transfer Protocol (MTP) runtime tools
+ libmtp9:arm64        Media Transfer Protocol (MTP) library
+ libmutter-6-0:arm64  window manager library from the Mutter window manager
+ libnautilus-extension1a:arm64 libraries for nautilus components - runtime version
+ libncurses-dev:arm64 developer's libraries for ncurses
+ libndp0:arm64        Library for Neighbor Discovery Protocol
+ libnet-dbus-perl     Perl extension for the DBus bindings
+ libnet-http-perl     module providing low-level HTTP connection client
+ libnet-smtp-ssl-perl Perl module providing SSL support to Net::SMTP
+ libnet-ssleay-perl   Perl module for Secure Sockets Layer (SSL)
+ libnewt0.52:arm64    Not Erik's Windowing Toolkit - text mode windowing with s
+ libnfs13:arm64       NFS client library (shared library)
+ libnftnl11:arm64     Netfilter nftables userspace API library
+ libnm0:arm64         GObject-based client library for NetworkManager
+ libnma0:arm64        library for wireless and mobile dialogs (libnm version)
+ libnotify4:arm64     sends desktop notifications to a notification daemon
+ libnss-mdns:arm64    NSS module for Multicast DNS name resolution
+ libntfs-3g883        read/write NTFS driver for FUSE (runtime library)
+ libobjc-9-dev:arm64  Runtime library for GNU Objective-C applications (develop
+ libobjc4:arm64       Runtime library for GNU Objective-C applications
+ libomp-10-dev        LLVM OpenMP runtime - dev package
+ libomp5-10:arm64     LLVM OpenMP runtime
+ libpackagekit-glib2-18:arm64 Library for accessing PackageKit using GLib
+ libpam-fprintd:arm64 PAM module for fingerprint authentication through fprintd
+ libpam-gnome-keyring:arm64 PAM module to unlock the GNOME keyring upon login
+ libparted-fs-resize0:arm64 disk partition manipulator - shared FS resizing library
+ libparted2:arm64     disk partition manipulator - shared library
+ libpci3:arm64        PCI utilities (shared library)
+ libpcre2-dev:arm64   New Perl Compatible Regular Expression Library - developm
+ libpcre2-posix2:arm64 New Perl Compatible Regular Expression Library - posix-co
+ libpcre3-dev:arm64   Old Perl 5 Compatible Regular Expression Library - develo
+ libpcsclite1:arm64   Middleware to access a smart card using PC/SC (library)
+ libpeas-1.0-0:arm64  Application plugin library
+ libpeas-common       Application plugin library (common files)
+ libpfm4:arm64        Library to program the performance monitoring events
+ libphonenumber7:arm64 parsing/formatting/validating phone numbers
+ libplist3:arm64      Library for handling Apple binary and XML property lists
+ libpolkit-agent-1-0:arm64 PolicyKit Authentication Agent API
+ libpolkit-gobject-1-0:arm64 PolicyKit Authorization API
+ libprotobuf17:arm64  protocol buffers C++ library
+ libpulse-dev:arm64   PulseAudio client development headers and libraries
+ libpulse-mainloop-glib0:arm64 PulseAudio client libraries (glib support)
+ libpulsedsp:arm64    PulseAudio OSS pre-load library
+ libpwquality-common  library for password quality checking and generation (dat
+ libpwquality1:arm64  library for password quality checking and generation
+ libqbscore1.13:arm64 Qbs core library
+ libqmi-glib5:arm64   Support library to use the Qualcomm MSM Interface (QMI) p
+ libqmi-proxy         Proxy to communicate with QMI ports
+ libqt5concurrent5:arm64 Qt 5 concurrent module
+ libqt5designer5:arm64 Qt 5 designer module
+ libqt5designercomponents5:arm64 Qt 5 Designer components module
+ libqt5help5:arm64    Qt 5 help module
+ libqt5multimedia5:arm64 Qt 5 Multimedia module
+ libqt5multimediagsttools5:arm64 GStreamer tools for  Qt 5 Multimedia module
+ libqt5multimediaquick5:arm64 Qt 5 Multimedia Quick module
+ libqt5multimediawidgets5:arm64 Qt 5 Multimedia Widgets module
+ libqt5opengl5-dev:arm64 Qt 5 OpenGL library development files
+ libqt5positioning5:arm64 Qt Positioning module
+ libqt5printsupport5:arm64 Qt 5 print support module
+ libqt5qml5:arm64     Qt 5 QML module
+ libqt5quick5:arm64   Qt 5 Quick library
+ libqt5quickparticles5:arm64 Qt 5 Quick particles module
+ libqt5quickshapes5:arm64 Qt 5 Quick Shapes module
+ libqt5quicktest5:arm64 Qt 5 Quick Test library
+ libqt5quickwidgets5:arm64 Qt 5 Quick Widgets library
+ libqt5script5:arm64  Qt 5 script module
+ libqt5sensors5:arm64 Qt Sensors module
+ libqt5serialport5:arm64 Qt 5 serial port support
+ libqt5sql5:arm64     Qt 5 SQL module
+ libqt5sql5-sqlite:arm64 Qt 5 SQLite 3 database driver
+ libqt5test5:arm64    Qt 5 test module
+ libqt5webchannel5:arm64 Web communication library for Qt
+ libqt5webkit5:arm64  Web content engine library for Qt
+ libqt5xmlpatterns5:arm64 Qt 5 XML patterns module
+ libraw19:arm64       raw image decoder library
+ librygel-core-2.6-2:arm64 GNOME UPnP/DLNA services - core library
+ librygel-db-2.6-2:arm64 GNOME UPnP/DLNA services - db library
+ librygel-renderer-2.6-2:arm64 GNOME UPnP/DLNA services - renderer library
+ librygel-server-2.6-2:arm64 GNOME UPnP/DLNA services - server library
+ libsane:arm64        API library for scanners
+ libsane-common       API library for scanners -- documentation and support fil
+ libsecret-1-0:arm64  Secret store
+ libsecret-common     Secret store (common files)
+ libselinux1-dev:arm64 SELinux development headers
+ libsepol1-dev:arm64  SELinux binary policy manipulation library and developmen
+ libsmbclient:arm64   shared library for communication with SMB/CIFS servers
+ libsnapd-glib1:arm64 GLib snapd library
+ libsnmp-base         SNMP configuration script, MIBs and documentation
+ libsnmp35:arm64      SNMP (Simple Network Management Protocol) library
+ libstartup-notification0:arm64 library for program launch feedback (shared library)
+ libstemmer0d:arm64   Snowball stemming algorithms for use in Information Retri
+ libtalloc2:arm64     hierarchical pool based memory allocator
+ libteamdctl0:arm64   library for communication with `teamd` process
+ libtepl-4-0:arm64    Text editor library for GTK
+ libtevent0:arm64     talloc-based event loop library - shared library
+ libtext-iconv-perl   module to convert between character sets in Perl
+ libtie-ixhash-perl   Perl module to order associative arrays
+ libtimedate-perl     collection of modules to manipulate date/time information
+ libtinfo-dev:arm64   transitional package for libncurses-dev
+ libtotem-plparser-common Totem Playlist Parser library - common files
+ libtotem-plparser18:arm64 Totem Playlist Parser library - runtime files
+ libtracker-control-2.0-0:arm64 library to control/monitor tracker miners
+ libtracker-miner-2.0-0:arm64 tracker data miner library
+ libtracker-sparql-2.0-0:arm64 metadata database, indexer and search tool - library
+ libtry-tiny-perl     module providing minimalistic try/catch
+ libuchardet0:arm64   universal charset detection library - shared library
+ libudisks2-0:arm64   GObject based library to access udisks2
+ libunity-protocol-private0:arm64 binding to get places into the launcher - private l
+ libunity-scopes-json-def-desktop binding to get places into the launcher - des
+ libunity9:arm64      binding to get places into the launcher - shared library
+ libunwind8:arm64     library to determine the call-chain of a program - runtim
+ libupower-glib3:arm64 abstraction for power management - shared library
+ liburi-perl          module to manipulate and access URI strings
+ libusbmuxd6:arm64    USB multiplexor daemon for iPhone and iPod Touch devices 
+ libuv1:arm64         asynchronous event notification library - runtime library
+ libvolume-key1       Library for manipulating storage encryption keys and pass
+ libvte-2.91-0:arm64  Terminal emulator widget for GTK+ 3.0 - runtime files
+ libvte-2.91-common   Terminal emulator widget for GTK+ 3.0 - common files
+ libwbclient0:arm64   Samba winbind client library
+ libwebkit2gtk-4.0-37:arm64 Web content engine library for GTK
+ libwebpdemux2:arm64  Lossy compression of digital photographic images.
+ libwhoopsie-preferences0 Ubuntu error tracker submission settings - shared lib
+ libwhoopsie0:arm64   Ubuntu error tracker submission - shared library
+ libwoff1:arm64       library for converting fonts to WOFF 2.0
+ libwww-perl          simple and consistent interface to the world-wide web
+ libwww-robotrules-perl database of robots.txt-derived permissions
+ libx11-dev:arm64     X11 client-side library (development headers)
+ libx11-protocol-perl Perl module for the X Window System Protocol, version 11
+ libxau-dev:arm64     X11 authorisation library (development headers)
+ libxaw7:arm64        X11 Athena Widget library
+ libxcb-res0:arm64    X C Binding, res extension
+ libxcb-xv0:arm64     X C Binding, xv extension
+ libxcb1-dev:arm64    X C Binding, development files
+ libxdmcp-dev:arm64   X11 authorisation library (development headers)
+ libxext-dev:arm64    X11 miscellaneous extensions library (development headers
+ libxfont2:arm64      X11 font rasterisation library
+ libxklavier16:arm64  X Keyboard Extension high-level API
+ libxml-parser-perl   Perl module for parsing XML files
+ libxml-twig-perl     Perl module for processing huge XML documents in tree mod
+ libxml-xpathengine-perl re-usable XPath engine for DOM-like trees
+ libxmu6:arm64        X11 miscellaneous utility library
+ libxpm4:arm64        X11 pixmap library
+ libxslt1.1:arm64     XSLT 1.0 processing library - runtime library
+ libxtables12:arm64   netfilter xtables library
+ libxxf86dga1:arm64   X11 Direct Graphics Access extension library
+ libyelp0:arm64       Library for the GNOME help browser
+ libz3-4:arm64        theorem prover from Microsoft Research - runtime librarie
+ libz3-dev:arm64      theorem prover from Microsoft Research - development file
+ llvm-10              Modular compiler and toolchain technologies
+ llvm-10-dev          Modular compiler and toolchain technologies, libraries an
+ llvm-10-runtime      Modular compiler and toolchain technologies, IR interpret
+ llvm-10-tools        Modular compiler and toolchain technologies, tools
+ lsof                 utility to list open files
+ man-db               tools for reading manual pages
+ mobile-broadband-provider-info database of mobile broadband service providers
+ modemmanager         D-Bus service for managing modems
+ mousetweaks          mouse accessibility enhancements for the GNOME desktop
+ mutter               Example window manager using GNOME's window manager libra
+ mutter-common        shared files for the Mutter window manager
+ nautilus             file manager and graphical shell for GNOME
+ nautilus-data        data files for nautilus
+ nautilus-extension-gnome-terminal GNOME terminal emulator application - Nautil
+ network-manager      network management framework (daemon and userspace tools)
+ network-manager-gnome network management framework (GNOME frontend)
+ network-manager-pptp network management framework (PPTP plugin core)
+ ntfs-3g              read/write NTFS driver for FUSE
+ p11-kit              p11-glue utilities
+ p11-kit-modules:arm64 p11-glue proxy and trust modules
+ packagekit           Provides a package management service
+ packagekit-tools     Provides PackageKit command-line tools
+ parted               disk partition manipulator
+ pci.ids              PCI ID Repository
+ perl-openssl-defaults:arm64 version compatibility baseline for Perl OpenSSL packages
+ pinentry-gnome3      GNOME 3 PIN or pass-phrase entry dialog for GnuPG
+ pkg-config           manage compile and link flags for libraries
+ policykit-1          framework for managing administrative policies and privil
+ ppp                  Point-to-Point Protocol (PPP) - daemon
+ pptp-linux           Point-to-Point Tunneling Protocol (PPTP) Client
+ pulseaudio           PulseAudio sound server
+ pulseaudio-module-bluetooth Bluetooth module for PulseAudio sound server
+ pulseaudio-utils     Command line tools for the PulseAudio sound server
+ python-apt-common    Python interface to libapt-pkg (locales)
+ python3-apport       Python 3 library for Apport crash report handling
+ python3-apt          Python 3 interface to libapt-pkg
+ python3-aptdaemon    Python 3 module for the server and client of aptdaemon
+ python3-aptdaemon.gtk3widgets Python 3 GTK+ 3 widgets to run an aptdaemon clie
+ python3-blinker      fast, simple object-to-object and broadcast signaling lib
+ python3-cairo:arm64  Python3 bindings for the Cairo vector graphics library
+ python3-cffi-backend Foreign Function Interface for Python 3 calling C code - 
+ python3-configobj    simple but powerful config file reader and writer for Pyt
+ python3-cryptography Python library exposing cryptographic recipes and primiti
+ python3-cups         Python3 bindings for CUPS
+ python3-cupshelpers  Python utility modules around the CUPS printing system
+ python3-defer        Small framework for asynchronous programming (Python 3)
+ python3-entrypoints  Discover and load entry points from installed packages (P
+ python3-gi-cairo     Python 3 Cairo bindings for the GObject library
+ python3-httplib2     comprehensive HTTP client library written for Python3
+ python3-ibus-1.0     Intelligent Input Bus - introspection overrides for Pytho
+ python3-jwt          Python 3 implementation of JSON Web Token
+ python3-keyring      store and access your passwords safely - Python 3 version
+ python3-launchpadlib Launchpad web services client library (Python 3)
+ python3-lazr.restfulclient client for lazr.restful-based web services (Python 
+ python3-lazr.uri     library for parsing, manipulating, and generating URIs
+ python3-ldb          Python 3 bindings for LDB
+ python3-macaroonbakery Higher-level macaroon operations for Python 3
+ python3-nacl         Python bindings to libsodium (Python 3)
+ python3-oauthlib     generic, spec-compliant implementation of OAuth for Pytho
+ python3-problem-report Python 3 library to handle problem reports
+ python3-protobuf     Python 3 bindings for protocol buffers
+ python3-psutil       module providing convenience functions for managing proce
+ python3-pymacaroons  Macaroon library for Python 3
+ python3-requests-unixsocket Use requests to talk HTTP via a UNIX domain socket
+ python3-rfc3339      parser and generator of RFC 3339-compliant timestamps (Py
+ python3-secretstorage Python module for storing secrets - Python 3.x version
+ python3-simplejson   simple, fast, extensible JSON encoder/decoder for Python 
+ python3-systemd      Python 3 bindings for systemd
+ python3-talloc:arm64 hierarchical pool based memory allocator - Python3 bindin
+ python3-tz           Python3 version of the Olson timezone database
+ python3-wadllib      Python 3 library for navigating WADL files
+ qbs-common           Qbs static files
+ qdoc-qt5             Qt 5 qdoc tool
+ qhelpgenerator-qt5   Qt 5 qhelpgenerator tool
+ qml-module-qtgraphicaleffects:arm64 Qt 5 Graphical Effects module
+ qml-module-qtqml-models2:arm64 Qt 5 Models2 QML module
+ qml-module-qtquick-controls:arm64 Qt 5 Quick Controls QML module
+ qml-module-qtquick-layouts:arm64 Qt 5 Quick Layouts QML module
+ qml-module-qtquick-window2:arm64 Qt 5 window 2 QML module
+ qml-module-qtquick2:arm64 Qt 5 Qt Quick 2 QML module
+ qmlscene             Qt 5 QML scene viewer
+ qt3d5-doc            Qt 3D documentation
+ qt5-assistant        Qt 5 Assistant
+ qt5-default:arm64    Qt 5 development defaults package
+ qt5-doc              Qt 5 API Documentation
+ qt5-qmake:arm64      Qt 5 qmake Makefile generator tool
+ qt5-qmake-bin        Qt 5 qmake Makefile generator tool — binary file
+ qt5-qmltooling-plugins:arm64 Qt 5 qmltooling plugins
+ qtattributionsscanner-qt5 Qt 5 qtattributionsscanner tool
+ qtbase5-dev:arm64    Qt 5 base development files
+ qtbase5-dev-tools    Qt 5 base development programs
+ qtbase5-doc          Qt 5 base documentation
+ qtcharts5-doc        Qt charts QCH documentation
+ qtchooser            Wrapper to select between Qt development binary versions
+ qtconnectivity5-doc  Qt 5 Connectivity documentation
+ qtcreator            integrated development environment (IDE) for Qt
+ qtcreator-data       application data for Qt Creator IDE
+ qtcreator-doc        documentation for Qt Creator IDE
+ qtdatavisualization5-doc Qt 5 Data Visualization documentation
+ qtdeclarative5-dev:arm64 Qt 5 declarative development files
+ qtdeclarative5-dev-tools Qt 5 declarative development programs
+ qtdeclarative5-doc   Qt 5 declarative documentation
+ qtgraphicaleffects5-doc Qt 5 graphical effects documentation
+ qtlocation5-doc      Qt 5 Location and Positioning QCH documentation
+ qtmultimedia5-dev:arm64 APIs for multimedia functionality - development files
+ qtmultimedia5-doc    Qt 5 multimedia documentation
+ qtnetworkauth5-doc   online account access for Qt apps - documentation
+ qtquickcontrols2-5-doc Qt 5 Quick Controls 2 documentation
+ qtquickcontrols5-doc Qt 5 Quick Controls documentation
+ qtscript5-doc        Qt 5 script documentation
+ qtscxml5-doc         Qt SCXML QCH documentation
+ qtsensors5-doc       Qt 5 Sensors documentation
+ qtserialbus5-doc     Qt serialbus serial bus access QCH documentation
+ qtserialport5-doc    Qt 5 serial port documentation
+ qtsvg5-doc           Qt 5 SVG documentation
+ qttools5-dev-tools   Qt 5 development tools
+ qttools5-doc         Qt 5 tools documentation
+ qtvirtualkeyboard5-doc Qt 5 Virtual Keyboard documentation
+ qtwayland5-doc       Qt 5 Wayland Compositor documentation
+ qtwebchannel5-doc    Web communication library for Qt - Documentation
+ qtwebengine5-doc     Qt 5 webengine documentation
+ qtwebsockets5-doc    Qt 5 Web Sockets documentation
+ qtwebview5-doc       display web content in a QML application - Documentation
+ qtx11extras5-doc     Qt 5 X11 extras documentation
+ qtxmlpatterns5-dev-tools Qt 5 XML patterns development programs
+ qtxmlpatterns5-doc   Qt 5 XML patterns documentation
+ rtkit                Realtime Policy and Watchdog Daemon
+ rygel                GNOME UPnP/DLNA services
+ samba-libs:arm64     Samba core libraries
+ sane-utils           API library for scanners -- utilities
+ session-migration    Tool to migrate in user session settings
+ sgml-base            SGML infrastructure and SGML catalog file support
+ sgml-data            common SGML and XML data
+ shotwell             digital photo organizer
+ shotwell-common      digital photo organizer - common files
+ sudo                 Provide limited super user privileges to specific users
+ switcheroo-control   D-Bus service to check the availability of dual-GPU
+ system-config-printer graphical interface to configure the printing system
+ system-config-printer-common backend and the translation files for system-conf
+ system-config-printer-udev Utilities to detect and configure printers automati
+ terminator           multiple GNOME terminals in one window
+ tracker              metadata database, indexer and search tool
+ tracker-extract      metadata database, indexer and search tool - metadata ext
+ tracker-miner-fs     metadata database, indexer and search tool - filesystem i
+ ubuntu-docs          Ubuntu Desktop Guide
+ ubuntu-wallpapers    Ubuntu Wallpapers
+ ubuntu-wallpapers-focal Ubuntu 20.04 Wallpapers
+ udisks2              D-Bus service to access and manipulate storage devices
+ update-inetd         inetd configuration file updater
+ upower               abstraction for power management
+ usb-modeswitch       mode switching tool for controlling "flip flop" USB devic
+ usb-modeswitch-data  mode switching data for usb-modeswitch
+ usbmuxd              USB multiplexor daemon for iPhone and iPod Touch devices
+ uuid-dev:arm64       Universally Unique ID library - headers and static librar
+ wamerican            American English dictionary words for /usr/share/dict
+ whoopsie-preferences System preferences for error reporting
+ wpasupplicant        client support for WPA and WPA2 (IEEE 802.11i)
+ x11-utils            X11 utilities
+ x11-xkb-utils        X11 XKB utilities
+ x11-xserver-utils    X server utilities
+ x11proto-core-dev    transitional dummy package
+ x11proto-dev         X11 extension protocols and auxiliary headers
+ x11proto-xext-dev    transitional dummy package
+ xdg-dbus-proxy       filtering D-Bus proxy
+ xdg-utils            desktop integration utilities from freedesktop.org
+ xfonts-base          standard fonts for X
+ xfonts-encodings     Encodings for X.Org fonts
+ xfonts-utils         X Window System font utility programs
+ xinit                X server initialisation tool
+ xml-core             XML infrastructure and XML catalog file support
+ xorg-sgml-doctools   Common tools for building X.Org SGML documentation
+ xserver-common       common files used by various X servers
+ xserver-xephyr       nested X server
+ xserver-xorg         X.Org X server
+ xserver-xorg-core    Xorg X server - core server
+ xserver-xorg-input-all X.Org X server -- input driver metapackage
+ xserver-xorg-input-libinput X.Org X server -- libinput input driver
+ xserver-xorg-input-wacom X.Org X server -- Wacom input driver
+ xserver-xorg-legacy  setuid root Xorg server wrapper
+ xserver-xorg-video-all X.Org X server -- output driver metapackage
+ xserver-xorg-video-amdgpu X.Org X server -- AMDGPU display driver
+ xserver-xorg-video-ati X.Org X server -- AMD/ATI display driver wrapper
+ xserver-xorg-video-fbdev X.Org X server -- fbdev display driver
+ xserver-xorg-video-nouveau X.Org X server -- Nouveau display driver
+ xserver-xorg-video-radeon X.Org X server -- AMD/ATI Radeon display driver
+ xserver-xorg-video-vesa X.Org X server -- VESA display driver
+ xul-ext-ubufox       Ubuntu modifications for Firefox
+ xwayland             Xwayland X server
+ yaru-theme-gnome-shell Yaru GNOME Shell desktop theme from the Ubuntu Communit
+ yelp                 Help browser for GNOME
+ yelp-xsl             XSL stylesheets for the yelp help browser
+ zenity               Display graphical dialog boxes from shell scripts
+ zenity-common        Display graphical dialog boxes from shell scripts (common
+ zlib1g-dev:arm64     compression library - development
+
+The following packages are missing the md5sums control file in the
+database, they need to be reinstalled:
+ accountsservice      query and manipulate user account information
+ acl                  access control list - utilities
+ adwaita-icon-theme-full default icon theme of GNOME
+ apg                  Automated Password Generator - Standalone version
+ apport               automatically generate crash reports for debugging
+ apport-symptoms      symptom scripts for apport
+ aptdaemon            transaction based package management service
+ aptdaemon-data       data files for clients
+ aspell               GNU Aspell spell-checker
+ aspell-en            English dictionary for GNU Aspell
+ avahi-daemon         Avahi mDNS/DNS-SD daemon
+ avahi-utils          Avahi browsing, publishing and discovery utilities
+ bind9-host           DNS Lookup Utility
+ bind9-libs:arm64     Shared Libraries used by BIND 9
+ bluez                Bluetooth tools and daemons
+ bolt                 system daemon to manage thunderbolt 3 devices
+ bsdmainutils         collection of more utilities from FreeBSD
+ bubblewrap           setuid wrapper for unprivileged chroot and namespace mani
+ cheese-common        Common files for the Cheese tool to take pictures and vid
+ chrome-gnome-shell   GNOME Shell extensions integration for web browsers
+ clang                C, C++ and Objective-C compiler (LLVM based)
+ clang-10             C, C++ and Objective-C compiler
+ clang-tidy           clang-based C++ linter tool
+ clang-tidy-10        clang-based C++ linter tool
+ clang-tools-10       clang-based tools for C/C++ developments
+ colord               system service to manage device colour profiles -- system
+ colord-data          system service to manage device colour profiles -- data f
+ cracklib-runtime     runtime support for password checker library cracklib2
+ cups-pk-helper       PolicyKit helper to configure cups with fine-grained priv
+ dbus-x11             simple interprocess messaging system (X11 deps)
+ dconf-cli            simple configuration storage system - utilities
+ desktop-file-utils   Utilities for .desktop files
+ dialog               Displays user-friendly dialog boxes from shell scripts
+ dictionaries-common  spelling dictionaries - common utilities
+ docbook-xml          standard XML documentation system for software and system
+ dosfstools           utilities for making and checking MS-DOS FAT filesystems
+ eject                ejects CDs and operates CD-Changers under Linux
+ emacsen-common       Common facilities for all emacsen
+ enchant-2            Wrapper for various spell checker engines (binary program
+ evolution-data-server evolution database backend server
+ evolution-data-server-common architecture independent files for Evolution Data
+ firefox              Safe and easy web browser from Mozilla
+ fonts-cantarell      sans serif font family designed for on-screen readability
+ fonts-wqy-zenhei     "WenQuanYi Zen Hei" A Hei-Ti Style (sans-serif) Chinese f
+ fprintd              D-Bus daemon for fingerprint reader access
+ fuse                 Filesystem in Userspace
+ gcr                  GNOME crypto services (daemon and tools)
+ gdb                  GNU Debugger
+ gdbserver            GNU Debugger (remote server)
+ gdisk                GPT fdisk text-mode partitioning tool
+ gdm3                 GNOME Display Manager
+ gedit                official text editor of the GNOME desktop environment
+ gedit-common         official text editor of the GNOME desktop environment (su
+ geoclue-2.0          geoinformation service
+ gettext-base         GNU Internationalization utilities for the base system
+ gir1.2-accountsservice-1.0 GObject introspection data for AccountService
+ gir1.2-gck-1:arm64   GObject introspection data for the GCK library
+ gir1.2-gcr-3:arm64   GObject introspection data for the GCR library
+ gir1.2-gdesktopenums-3.0:arm64 GObject introspection for GSettings desktop-wide sche
+ gir1.2-gdm-1.0:arm64 GObject introspection data for the GNOME Display Manager
+ gir1.2-geoclue-2.0:arm64 convenience library to interact with geoinformation servi
+ gir1.2-gnomebluetooth-1.0:arm64 Introspection data for GnomeBluetooth
+ gir1.2-gnomedesktop-3.0:arm64 Introspection data for GnomeDesktop
+ gir1.2-graphene-1.0:arm64 library of graphic data types (introspection files)
+ gir1.2-gtksource-4:arm64 gir files for the GTK+ syntax highlighting widget
+ gir1.2-gweather-3.0:arm64 GObject introspection data for the GWeather library
+ gir1.2-handy-0.0:arm64 GObject introspection files for libhandy
+ gir1.2-ibus-1.0:arm64 Intelligent Input Bus - introspection data
+ gir1.2-json-1.0:arm64 GLib JSON manipulation library (introspection data)
+ gir1.2-keybinder-3.0 registers global key bindings for applications - Gtk+3 - 
+ gir1.2-mutter-6:arm64 GObject introspection data for Mutter
+ gir1.2-nm-1.0:arm64  GObject introspection data for the libnm library
+ gir1.2-nma-1.0:arm64 GObject introspection data for libnma
+ gir1.2-notify-0.7:arm64 sends desktop notifications to a notification daemon (Int
+ gir1.2-packagekitglib-1.0 GObject introspection data for the PackageKit GLib l
+ gir1.2-peas-1.0:arm64 Application plugin library (introspection files)
+ gir1.2-polkit-1.0    GObject introspection data for PolicyKit
+ gir1.2-rsvg-2.0:arm64 gir files for renderer library for SVG files
+ gir1.2-secret-1:arm64 Secret store (GObject-Introspection)
+ gir1.2-soup-2.4:arm64 GObject introspection data for the libsoup HTTP library
+ gir1.2-upowerglib-1.0:arm64 GObject introspection data for upower
+ gir1.2-vte-2.91:arm64 GObject introspection data for the VTE library
+ gjs                  Mozilla-based javascript bindings for the GNOME platform
+ gkbd-capplet         GNOME control center tools for libgnomekbd
+ gnome-accessibility-themes High Contrast GTK+ 2 theme and icons
+ gnome-control-center utilities to configure the GNOME desktop
+ gnome-control-center-data configuration applets for GNOME - data files
+ gnome-control-center-faces utilities to configure the GNOME desktop - faces im
+ gnome-desktop3-data  Common files for GNOME desktop apps
+ gnome-keyring        GNOME keyring services (daemon and tools)
+ gnome-keyring-pkcs11:arm64 GNOME keyring module for the PKCS#11 module loading libra
+ gnome-menus          GNOME implementation of the freedesktop menu specificatio
+ gnome-online-accounts service to manage online accounts for the GNOME desktop
+ gnome-session        GNOME Session Manager - GNOME 3 session
+ gnome-session-bin    GNOME Session Manager - Minimal runtime
+ gnome-session-common GNOME Session Manager - common files
+ gnome-settings-daemon daemon handling the GNOME session settings
+ gnome-settings-daemon-common daemon handling the GNOME session settings - comm
+ gnome-shell          graphical shell for the GNOME desktop
+ gnome-shell-common   common files for the GNOME graphical shell
+ gnome-shell-extension-autohidetopbar GNOME shell automatic topbar hider
+ gnome-shell-extension-prefs tool to enable / disable GNOME Shell extensions
+ gnome-startup-applications Startup Applications manager for GNOME
+ gnome-terminal       GNOME terminal emulator application
+ gnome-terminal-data  Data files for the GNOME terminal emulator
+ gnome-themes-extra:arm64 Adwaita GTK+ 2 theme — engine
+ gnome-themes-extra-data Adwaita GTK+ 2 theme — common files
+ gnome-tweaks         tool to adjust advanced configuration settings for GNOME
+ gnome-user-docs      GNOME user docs
+ groff-base           GNU troff text-formatting system (base system components)
+ gstreamer1.0-clutter-3.0:arm64 Clutter PLugin for GStreamer 1.0
+ gtk2-engines-pixbuf:arm64 pixbuf-based theme for GTK 2
+ gvfs:arm64           userspace virtual filesystem - GIO module
+ gvfs-backends        userspace virtual filesystem - backends
+ gvfs-common          userspace virtual filesystem - common data files
+ gvfs-daemons         userspace virtual filesystem - servers
+ gvfs-libs:arm64      userspace virtual filesystem - private libraries
+ hostapd              IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator
+ hunspell-en-us       English_american dictionary for hunspell
+ ibus                 Intelligent Input Bus - core
+ ibus-data            Intelligent Input Bus - data files
+ ibus-gtk:arm64       Intelligent Input Bus - GTK2 support
+ ibus-gtk3:arm64      Intelligent Input Bus - GTK3 support
+ iio-sensor-proxy     IIO sensors to D-Bus proxy
+ im-config            Input method configuration framework
+ ippusbxd             Daemon for IPP USB printer support
+ iptables             administration tools for packet filtering and NAT
+ language-selector-common Language selector for Ubuntu
+ language-selector-gnome Language selector for Ubuntu
+ libaccountsservice0:arm64 query and manipulate user account information - shared li
+ libamtk-5-0:arm64    Actions, Menus and Toolbars Kit for GTK+
+ libamtk-5-common     Actions, Menus and Toolbars Kit for GTK+ - architecture-i
+ libappindicator3-1   Application Indicators
+ libappstream4:arm64  Library to access AppStream services
+ libarchive13:arm64   Multi-format archive and compression library (shared libr
+ libaspell15:arm64    GNU Aspell spell-checker runtime library
+ libatasmart4:arm64   ATA S.M.A.R.T. reading and parsing library
+ libauthen-sasl-perl  Authen::SASL - SASL Authentication framework
+ libavahi-core7:arm64 Avahi's embeddable mDNS/DNS-SD library
+ libavahi-glib1:arm64 Avahi GLib integration library
+ libbabeltrace1:arm64 Babeltrace conversion libraries
+ libblkid-dev:arm64   block device ID library - headers and static libraries
+ libblockdev-crypto2:arm64 Crypto plugin for libblockdev
+ libblockdev-fs2:arm64 file system plugin for libblockdev
+ libblockdev-loop2:arm64 Loop device plugin for libblockdev
+ libblockdev-part-err2:arm64 Partition error utility functions for libblockdev
+ libblockdev-part2:arm64 Partitioning plugin for libblockdev
+ libblockdev-swap2:arm64 Swap plugin for libblockdev
+ libblockdev-utils2:arm64 Utility functions for libblockdev
+ libblockdev2:arm64   Library for manipulating block devices
+ libbluetooth3:arm64  Library to use the BlueZ Linux Bluetooth stack
+ libc6-arm64-cross    GNU C Library: Shared libraries (for cross-compiling)
+ libc6-dbg:arm64      GNU C Library: detached debugging symbols
+ libcamel-1.2-62:arm64 Evolution MIME message handling library
+ libcanberra-gtk3-0:arm64 GTK+ 3.0 helper for playing widget event sounds with libc
+ libcanberra-gtk3-module:arm64 translates GTK3 widgets signals to event sounds
+ libcanberra-pulse:arm64 PulseAudio backend for libcanberra
+ libcdio-cdda2:arm64  library to read and control digital audio CDs
+ libcdio-paranoia2:arm64 library to read digital audio CDs with error correction
+ libcheese-gtk25:arm64 tool to take pictures and videos from your webcam - widge
+ libcheese8:arm64     tool to take pictures and videos from your webcam - base 
+ libclang-common-10-dev Clang library - Common development package
+ libclang-cpp10       C++ interface to the Clang library
+ libclang1-10         C interface to the Clang library
+ libclang1-8          C interface to the Clang library
+ libclutter-1.0-0:arm64 Open GL based interactive canvas library
+ libclutter-1.0-common Open GL based interactive canvas library (common files)
+ libclutter-gst-3.0-0:arm64 Open GL based interactive canvas library GStreamer elemen
+ libclutter-gtk-1.0-0:arm64 Open GL based interactive canvas library GTK+ widget
+ libcogl-common       Object oriented GL/GLES Abstraction/Utility Layer (common
+ libcogl-pango20:arm64 Object oriented GL/GLES Abstraction/Utility Layer
+ libcogl-path20:arm64 Object oriented GL/GLES Abstraction/Utility Layer
+ libcogl20:arm64      Object oriented GL/GLES Abstraction/Utility Layer
+ libcolord-gtk1:arm64 GTK+ convenience library for interacting with colord
+ libcolorhug2:arm64   library to access the ColorHug colourimeter -- runtime
+ libcrack2:arm64      pro-active password checker library
+ libcue2:arm64        CUE Sheet Parser Library
+ libdata-dump-perl    Perl module to help dump data structures
+ libdbusmenu-glib4:arm64 library for passing menus over DBus
+ libdbusmenu-gtk3-4:arm64 library for passing menus over DBus - GTK+ version
+ libdee-1.0-4:arm64   Model to synchronize multiple instances over DBus - share
+ libdw1:arm64         library that provides access to the DWARF debug informati
+ libebackend-1.2-10:arm64 Utility library for evolution data servers
+ libebook-1.2-20:arm64 Client library for evolution address books
+ libebook-contacts-1.2-3:arm64 Client library for evolution contacts books
+ libecal-2.0-1:arm64  Client library for evolution calendars
+ libedata-book-1.2-26:arm64 Backend library for evolution address books
+ libedata-cal-2.0-1:arm64 Backend library for evolution calendars
+ libedataserver-1.2-24:arm64 Utility library for evolution data servers
+ libedataserverui-1.2-2:arm64 Utility library for evolution data servers
+ libegl-dev:arm64     Vendor neutral GL dispatch library -- EGL development fil
+ libenchant-2-2:arm64 Wrapper library for various spell checker engines (runtim
+ libencode-locale-perl utility to determine the locale encoding
+ libexempi8:arm64     library to parse XMP metadata (Library)
+ libexiv2-27:arm64    EXIF/IPTC/XMP metadata manipulation library
+ libffi-dev:arm64     Foreign Function Interface library (development files)
+ libfile-basedir-perl Perl module to use the freedesktop basedir specification
+ libfile-desktopentry-perl Perl module to handle freedesktop .desktop files
+ libfile-listing-perl module to parse directory listings
+ libfile-mimeinfo-perl Perl module to determine file types
+ libfont-afm-perl     Font::AFM - Interface to Adobe Font Metrics files
+ libfontenc1:arm64    X11 font encoding library
+ libfprint-2-2:arm64  async fingerprint library of fprint project, shared libra
+ libfuse2:arm64       Filesystem in Userspace (library)
+ libgail-common:arm64 GNOME Accessibility Implementation Library -- common modu
+ libgail18:arm64      GNOME Accessibility Implementation Library -- shared libr
+ libgc1c2:arm64       conservative garbage collector for C and C++
+ libgck-1-0:arm64     Glib wrapper library for PKCS#11 - runtime
+ libgcr-base-3-1:arm64 Library for Crypto related tasks
+ libgcr-ui-3-1:arm64  Library for Crypto UI related tasks
+ libgd3:arm64         GD Graphics Library
+ libgdata-common      Library for accessing GData webservices - common data fil
+ libgdata22:arm64     Library for accessing GData webservices - shared librarie
+ libgdm1              GNOME Display Manager (shared library)
+ libgee-0.8-2:arm64   GObject based collection and utility library
+ libgeoclue-2-0:arm64 convenience library to interact with geoinformation servi
+ libgeocode-glib0:arm64 geocoding and reverse geocoding GLib library using Nomina
+ libgexiv2-2:arm64    GObject-based wrapper around the Exiv2 library
+ libgjs0g:arm64       Mozilla-based javascript bindings for the GNOME platform
+ libgl-dev:arm64      Vendor neutral GL dispatch library -- GL development file
+ libglib2.0-bin       Programs for the GLib library
+ libglib2.0-dev:arm64 Development files for the GLib library
+ libglib2.0-dev-bin   Development utilities for the GLib library
+ libglu1-mesa:arm64   Mesa OpenGL utility library (GLU)
+ libglu1-mesa-dev:arm64 Mesa OpenGL utility library -- development files
+ libglx-dev:arm64     Vendor neutral GL dispatch library -- GLX development fil
+ libgnome-autoar-0-0:arm64 Archives integration support for GNOME
+ libgnome-bluetooth13:arm64 GNOME Bluetooth tools - support library
+ libgnome-desktop-3-19:arm64 Utility library for loading .desktop files - runtime fil
+ libgnomekbd-common   GNOME library to manage keyboard configuration - common f
+ libgnomekbd8:arm64   GNOME library to manage keyboard configuration - shared l
+ libgoa-1.0-0b:arm64  library for GNOME Online Accounts
+ libgoa-1.0-common    library for GNOME Online Accounts - common files
+ libgoa-backend-1.0-1:arm64 backend library for GNOME Online Accounts
+ libgpgme11:arm64     GPGME - GnuPG Made Easy (library)
+ libgphoto2-6:arm64   gphoto2 digital camera library
+ libgphoto2-l10n      gphoto2 digital camera library - localized messages
+ libgphoto2-port12:arm64 gphoto2 digital camera port library
+ libgsf-1-114:arm64   Structured File Library - runtime version
+ libgsf-1-common      Structured File Library - common files
+ libgsound0:arm64     small library for playing system sounds
+ libgspell-1-2:arm64  spell-checking library for GTK+ applications
+ libgspell-1-common   libgspell architecture-independent files
+ libgtk2.0-0:arm64    GTK graphical user interface library - old version
+ libgtk2.0-bin        programs for the GTK graphical user interface library
+ libgtk2.0-common     common files for the GTK graphical user interface library
+ libgtksourceview-4-0:arm64 shared libraries for the GTK+ syntax highlighting widget
+ libgtksourceview-4-common common files for the GTK+ syntax highlighting widget
+ libgtop-2.0-11:arm64 gtop system monitoring library (shared)
+ libgtop2-common      gtop system monitoring library (common)
+ libgupnp-av-1.0-2    Audio/Visual utility library for GUPnP
+ libgupnp-dlna-2.0-3  DLNA utility library for GUPnP
+ libgusb2:arm64       GLib wrapper around libusb1
+ libgweather-3-16:arm64 GWeather shared library
+ libgweather-common   GWeather common files
+ libgxps2:arm64       handling and rendering XPS documents (library)
+ libhandy-0.0-0:arm64 Library with GTK widgets for mobile phones
+ libharfbuzz-icu0:arm64 OpenType text shaping engine ICU backend
+ libhtml-form-perl    module that represents an HTML form element
+ libhtml-format-perl  module for transforming HTML into various formats
+ libhtml-parser-perl  collection of modules that parse HTML text documents
+ libhtml-tagset-perl  data tables pertaining to HTML
+ libhtml-tree-perl    Perl module to represent and create HTML syntax trees
+ libhttp-cookies-perl HTTP cookie jars
+ libhttp-daemon-perl  simple http server class
+ libhttp-date-perl    module of date conversion routines
+ libhttp-message-perl perl interface to HTTP style messages
+ libhttp-negotiate-perl implementation of content negotiation
+ libhunspell-1.7-0:arm64 spell checker and morphological analyzer (shared library)
+ libhyphen0:arm64     ALTLinux hyphenation library - shared library
+ libibus-1.0-5:arm64  Intelligent Input Bus - shared library
+ libical3:arm64       iCalendar library implementation in C (runtime)
+ libieee1284-3:arm64  cross-platform library for parallel port access
+ libimobiledevice6:arm64 Library for communicating with iPhone and other Apple dev
+ libio-html-perl      open an HTML file with automatic charset detection
+ libio-socket-ssl-perl Perl module implementing object oriented interface to SS
+ libio-stringy-perl   modules for I/O on in-core objects (strings/arrays)
+ libip6tc2:arm64      netfilter libip6tc library
+ libipc-system-simple-perl Perl module to run commands simply, with detailed di
+ libjavascriptcoregtk-4.0-18:arm64 JavaScript engine library from WebKitGTK
+ libkeybinder-3.0-0:arm64 registers global key bindings for applications - Gtk+3
+ libkf5syntaxhighlighting-data Syntax highlighting Engine - translations
+ libkf5syntaxhighlighting5 Syntax highlighting Engine
+ libldb2:arm64        LDAP-like embedded database - shared library
+ libllvm10:arm64      Modular compiler and toolchain technologies, runtime libr
+ libllvm8:arm64       Modular compiler and toolchain technologies, runtime libr
+ liblmdb0:arm64       Lightning Memory-Mapped Database shared library
+ liblwp-mediatypes-perl module to guess media type for a file or a URL
+ liblwp-protocol-https-perl HTTPS driver for LWP::UserAgent
+ libmailtools-perl    modules to manipulate email in perl programs
+ libmaxminddb0:arm64  IP geolocation database library
+ libmbim-glib4:arm64  Support library to use the MBIM protocol
+ libmbim-proxy        Proxy to communicate with MBIM ports
+ libmediaart-2.0-0:arm64 media art extraction and cache management library
+ libmm-glib0:arm64    D-Bus service for managing modems - shared libraries
+ libmount-dev:arm64   device mounting library - headers and static libraries
+ libmozjs-68-0:arm64  SpiderMonkey JavaScript library
+ libmtp-common        Media Transfer Protocol (MTP) common files
+ libmtp-runtime       Media Transfer Protocol (MTP) runtime tools
+ libmtp9:arm64        Media Transfer Protocol (MTP) library
+ libmutter-6-0:arm64  window manager library from the Mutter window manager
+ libnautilus-extension1a:arm64 libraries for nautilus components - runtime version
+ libncurses-dev:arm64 developer's libraries for ncurses
+ libndp0:arm64        Library for Neighbor Discovery Protocol
+ libnet-dbus-perl     Perl extension for the DBus bindings
+ libnet-http-perl     module providing low-level HTTP connection client
+ libnet-smtp-ssl-perl Perl module providing SSL support to Net::SMTP
+ libnet-ssleay-perl   Perl module for Secure Sockets Layer (SSL)
+ libnewt0.52:arm64    Not Erik's Windowing Toolkit - text mode windowing with s
+ libnfs13:arm64       NFS client library (shared library)
+ libnftnl11:arm64     Netfilter nftables userspace API library
+ libnm0:arm64         GObject-based client library for NetworkManager
+ libnma0:arm64        library for wireless and mobile dialogs (libnm version)
+ libnotify4:arm64     sends desktop notifications to a notification daemon
+ libnss-mdns:arm64    NSS module for Multicast DNS name resolution
+ libntfs-3g883        read/write NTFS driver for FUSE (runtime library)
+ libobjc-9-dev:arm64  Runtime library for GNU Objective-C applications (develop
+ libobjc4:arm64       Runtime library for GNU Objective-C applications
+ libomp-10-dev        LLVM OpenMP runtime - dev package
+ libomp5-10:arm64     LLVM OpenMP runtime
+ libpackagekit-glib2-18:arm64 Library for accessing PackageKit using GLib
+ libpam-fprintd:arm64 PAM module for fingerprint authentication through fprintd
+ libpam-gnome-keyring:arm64 PAM module to unlock the GNOME keyring upon login
+ libparted-fs-resize0:arm64 disk partition manipulator - shared FS resizing library
+ libparted2:arm64     disk partition manipulator - shared library
+ libpci3:arm64        PCI utilities (shared library)
+ libpcre2-dev:arm64   New Perl Compatible Regular Expression Library - developm
+ libpcre2-posix2:arm64 New Perl Compatible Regular Expression Library - posix-co
+ libpcre3-dev:arm64   Old Perl 5 Compatible Regular Expression Library - develo
+ libpcsclite1:arm64   Middleware to access a smart card using PC/SC (library)
+ libpeas-1.0-0:arm64  Application plugin library
+ libpeas-common       Application plugin library (common files)
+ libpfm4:arm64        Library to program the performance monitoring events
+ libphonenumber7:arm64 parsing/formatting/validating phone numbers
+ libplist3:arm64      Library for handling Apple binary and XML property lists
+ libpolkit-agent-1-0:arm64 PolicyKit Authentication Agent API
+ libpolkit-gobject-1-0:arm64 PolicyKit Authorization API
+ libprotobuf17:arm64  protocol buffers C++ library
+ libpulse-dev:arm64   PulseAudio client development headers and libraries
+ libpulse-mainloop-glib0:arm64 PulseAudio client libraries (glib support)
+ libpulsedsp:arm64    PulseAudio OSS pre-load library
+ libpwquality-common  library for password quality checking and generation (dat
+ libpwquality1:arm64  library for password quality checking and generation
+ libqbscore1.13:arm64 Qbs core library
+ libqmi-glib5:arm64   Support library to use the Qualcomm MSM Interface (QMI) p
+ libqmi-proxy         Proxy to communicate with QMI ports
+ libqt5concurrent5:arm64 Qt 5 concurrent module
+ libqt5designer5:arm64 Qt 5 designer module
+ libqt5designercomponents5:arm64 Qt 5 Designer components module
+ libqt5help5:arm64    Qt 5 help module
+ libqt5multimedia5:arm64 Qt 5 Multimedia module
+ libqt5multimediagsttools5:arm64 GStreamer tools for  Qt 5 Multimedia module
+ libqt5multimediaquick5:arm64 Qt 5 Multimedia Quick module
+ libqt5multimediawidgets5:arm64 Qt 5 Multimedia Widgets module
+ libqt5opengl5-dev:arm64 Qt 5 OpenGL library development files
+ libqt5positioning5:arm64 Qt Positioning module
+ libqt5printsupport5:arm64 Qt 5 print support module
+ libqt5qml5:arm64     Qt 5 QML module
+ libqt5quick5:arm64   Qt 5 Quick library
+ libqt5quickparticles5:arm64 Qt 5 Quick particles module
+ libqt5quickshapes5:arm64 Qt 5 Quick Shapes module
+ libqt5quicktest5:arm64 Qt 5 Quick Test library
+ libqt5quickwidgets5:arm64 Qt 5 Quick Widgets library
+ libqt5script5:arm64  Qt 5 script module
+ libqt5sensors5:arm64 Qt Sensors module
+ libqt5serialport5:arm64 Qt 5 serial port support
+ libqt5sql5:arm64     Qt 5 SQL module
+ libqt5sql5-sqlite:arm64 Qt 5 SQLite 3 database driver
+ libqt5test5:arm64    Qt 5 test module
+ libqt5webchannel5:arm64 Web communication library for Qt
+ libqt5webkit5:arm64  Web content engine library for Qt
+ libqt5xmlpatterns5:arm64 Qt 5 XML patterns module
+ libraw19:arm64       raw image decoder library
+ librygel-core-2.6-2:arm64 GNOME UPnP/DLNA services - core library
+ librygel-db-2.6-2:arm64 GNOME UPnP/DLNA services - db library
+ librygel-renderer-2.6-2:arm64 GNOME UPnP/DLNA services - renderer library
+ librygel-server-2.6-2:arm64 GNOME UPnP/DLNA services - server library
+ libsane:arm64        API library for scanners
+ libsane-common       API library for scanners -- documentation and support fil
+ libsecret-1-0:arm64  Secret store
+ libsecret-common     Secret store (common files)
+ libselinux1-dev:arm64 SELinux development headers
+ libsepol1-dev:arm64  SELinux binary policy manipulation library and developmen
+ libsmbclient:arm64   shared library for communication with SMB/CIFS servers
+ libsnapd-glib1:arm64 GLib snapd library
+ libsnmp-base         SNMP configuration script, MIBs and documentation
+ libsnmp35:arm64      SNMP (Simple Network Management Protocol) library
+ libstartup-notification0:arm64 library for program launch feedback (shared library)
+ libstemmer0d:arm64   Snowball stemming algorithms for use in Information Retri
+ libtalloc2:arm64     hierarchical pool based memory allocator
+ libteamdctl0:arm64   library for communication with `teamd` process
+ libtepl-4-0:arm64    Text editor library for GTK
+ libtevent0:arm64     talloc-based event loop library - shared library
+ libtext-iconv-perl   module to convert between character sets in Perl
+ libtie-ixhash-perl   Perl module to order associative arrays
+ libtimedate-perl     collection of modules to manipulate date/time information
+ libtinfo-dev:arm64   transitional package for libncurses-dev
+ libtotem-plparser-common Totem Playlist Parser library - common files
+ libtotem-plparser18:arm64 Totem Playlist Parser library - runtime files
+ libtracker-control-2.0-0:arm64 library to control/monitor tracker miners
+ libtracker-miner-2.0-0:arm64 tracker data miner library
+ libtracker-sparql-2.0-0:arm64 metadata database, indexer and search tool - library
+ libtry-tiny-perl     module providing minimalistic try/catch
+ libuchardet0:arm64   universal charset detection library - shared library
+ libudisks2-0:arm64   GObject based library to access udisks2
+ libunity-protocol-private0:arm64 binding to get places into the launcher - private l
+ libunity-scopes-json-def-desktop binding to get places into the launcher - des
+ libunity9:arm64      binding to get places into the launcher - shared library
+ libunwind8:arm64     library to determine the call-chain of a program - runtim
+ libupower-glib3:arm64 abstraction for power management - shared library
+ liburi-perl          module to manipulate and access URI strings
+ libusbmuxd6:arm64    USB multiplexor daemon for iPhone and iPod Touch devices 
+ libuv1:arm64         asynchronous event notification library - runtime library
+ libvolume-key1       Library for manipulating storage encryption keys and pass
+ libvte-2.91-0:arm64  Terminal emulator widget for GTK+ 3.0 - runtime files
+ libvte-2.91-common   Terminal emulator widget for GTK+ 3.0 - common files
+ libwbclient0:arm64   Samba winbind client library
+ libwebkit2gtk-4.0-37:arm64 Web content engine library for GTK
+ libwebpdemux2:arm64  Lossy compression of digital photographic images.
+ libwhoopsie-preferences0 Ubuntu error tracker submission settings - shared lib
+ libwhoopsie0:arm64   Ubuntu error tracker submission - shared library
+ libwoff1:arm64       library for converting fonts to WOFF 2.0
+ libwww-perl          simple and consistent interface to the world-wide web
+ libwww-robotrules-perl database of robots.txt-derived permissions
+ libx11-dev:arm64     X11 client-side library (development headers)
+ libx11-protocol-perl Perl module for the X Window System Protocol, version 11
+ libxau-dev:arm64     X11 authorisation library (development headers)
+ libxaw7:arm64        X11 Athena Widget library
+ libxcb-res0:arm64    X C Binding, res extension
+ libxcb-xv0:arm64     X C Binding, xv extension
+ libxcb1-dev:arm64    X C Binding, development files
+ libxdmcp-dev:arm64   X11 authorisation library (development headers)
+ libxext-dev:arm64    X11 miscellaneous extensions library (development headers
+ libxfont2:arm64      X11 font rasterisation library
+ libxklavier16:arm64  X Keyboard Extension high-level API
+ libxml-parser-perl   Perl module for parsing XML files
+ libxml-twig-perl     Perl module for processing huge XML documents in tree mod
+ libxml-xpathengine-perl re-usable XPath engine for DOM-like trees
+ libxmu6:arm64        X11 miscellaneous utility library
+ libxpm4:arm64        X11 pixmap library
+ libxslt1.1:arm64     XSLT 1.0 processing library - runtime library
+ libxtables12:arm64   netfilter xtables library
+ libxxf86dga1:arm64   X11 Direct Graphics Access extension library
+ libyelp0:arm64       Library for the GNOME help browser
+ libz3-4:arm64        theorem prover from Microsoft Research - runtime librarie
+ libz3-dev:arm64      theorem prover from Microsoft Research - development file
+ llvm-10              Modular compiler and toolchain technologies
+ llvm-10-dev          Modular compiler and toolchain technologies, libraries an
+ llvm-10-runtime      Modular compiler and toolchain technologies, IR interpret
+ llvm-10-tools        Modular compiler and toolchain technologies, tools
+ lsof                 utility to list open files
+ man-db               tools for reading manual pages
+ mobile-broadband-provider-info database of mobile broadband service providers
+ modemmanager         D-Bus service for managing modems
+ mousetweaks          mouse accessibility enhancements for the GNOME desktop
+ mutter               Example window manager using GNOME's window manager libra
+ mutter-common        shared files for the Mutter window manager
+ nautilus             file manager and graphical shell for GNOME
+ nautilus-data        data files for nautilus
+ nautilus-extension-gnome-terminal GNOME terminal emulator application - Nautil
+ network-manager      network management framework (daemon and userspace tools)
+ network-manager-gnome network management framework (GNOME frontend)
+ network-manager-pptp network management framework (PPTP plugin core)
+ ntfs-3g              read/write NTFS driver for FUSE
+ p11-kit              p11-glue utilities
+ p11-kit-modules:arm64 p11-glue proxy and trust modules
+ packagekit           Provides a package management service
+ packagekit-tools     Provides PackageKit command-line tools
+ parted               disk partition manipulator
+ pci.ids              PCI ID Repository
+ perl-openssl-defaults:arm64 version compatibility baseline for Perl OpenSSL packages
+ pinentry-gnome3      GNOME 3 PIN or pass-phrase entry dialog for GnuPG
+ pkg-config           manage compile and link flags for libraries
+ policykit-1          framework for managing administrative policies and privil
+ ppp                  Point-to-Point Protocol (PPP) - daemon
+ pptp-linux           Point-to-Point Tunneling Protocol (PPTP) Client
+ pulseaudio           PulseAudio sound server
+ pulseaudio-module-bluetooth Bluetooth module for PulseAudio sound server
+ pulseaudio-utils     Command line tools for the PulseAudio sound server
+ python-apt-common    Python interface to libapt-pkg (locales)
+ python3-apport       Python 3 library for Apport crash report handling
+ python3-apt          Python 3 interface to libapt-pkg
+ python3-aptdaemon    Python 3 module for the server and client of aptdaemon
+ python3-aptdaemon.gtk3widgets Python 3 GTK+ 3 widgets to run an aptdaemon clie
+ python3-blinker      fast, simple object-to-object and broadcast signaling lib
+ python3-cairo:arm64  Python3 bindings for the Cairo vector graphics library
+ python3-cffi-backend Foreign Function Interface for Python 3 calling C code - 
+ python3-configobj    simple but powerful config file reader and writer for Pyt
+ python3-cryptography Python library exposing cryptographic recipes and primiti
+ python3-cups         Python3 bindings for CUPS
+ python3-cupshelpers  Python utility modules around the CUPS printing system
+ python3-defer        Small framework for asynchronous programming (Python 3)
+ python3-entrypoints  Discover and load entry points from installed packages (P
+ python3-gi-cairo     Python 3 Cairo bindings for the GObject library
+ python3-httplib2     comprehensive HTTP client library written for Python3
+ python3-ibus-1.0     Intelligent Input Bus - introspection overrides for Pytho
+ python3-jwt          Python 3 implementation of JSON Web Token
+ python3-keyring      store and access your passwords safely - Python 3 version
+ python3-launchpadlib Launchpad web services client library (Python 3)
+ python3-lazr.restfulclient client for lazr.restful-based web services (Python 
+ python3-lazr.uri     library for parsing, manipulating, and generating URIs
+ python3-ldb          Python 3 bindings for LDB
+ python3-macaroonbakery Higher-level macaroon operations for Python 3
+ python3-nacl         Python bindings to libsodium (Python 3)
+ python3-oauthlib     generic, spec-compliant implementation of OAuth for Pytho
+ python3-problem-report Python 3 library to handle problem reports
+ python3-protobuf     Python 3 bindings for protocol buffers
+ python3-psutil       module providing convenience functions for managing proce
+ python3-pymacaroons  Macaroon library for Python 3
+ python3-requests-unixsocket Use requests to talk HTTP via a UNIX domain socket
+ python3-rfc3339      parser and generator of RFC 3339-compliant timestamps (Py
+ python3-secretstorage Python module for storing secrets - Python 3.x version
+ python3-simplejson   simple, fast, extensible JSON encoder/decoder for Python 
+ python3-systemd      Python 3 bindings for systemd
+ python3-talloc:arm64 hierarchical pool based memory allocator - Python3 bindin
+ python3-tz           Python3 version of the Olson timezone database
+ python3-wadllib      Python 3 library for navigating WADL files
+ qbs-common           Qbs static files
+ qdoc-qt5             Qt 5 qdoc tool
+ qhelpgenerator-qt5   Qt 5 qhelpgenerator tool
+ qml-module-qtgraphicaleffects:arm64 Qt 5 Graphical Effects module
+ qml-module-qtqml-models2:arm64 Qt 5 Models2 QML module
+ qml-module-qtquick-controls:arm64 Qt 5 Quick Controls QML module
+ qml-module-qtquick-layouts:arm64 Qt 5 Quick Layouts QML module
+ qml-module-qtquick-window2:arm64 Qt 5 window 2 QML module
+ qml-module-qtquick2:arm64 Qt 5 Qt Quick 2 QML module
+ qmlscene             Qt 5 QML scene viewer
+ qt3d5-doc            Qt 3D documentation
+ qt5-assistant        Qt 5 Assistant
+ qt5-default:arm64    Qt 5 development defaults package
+ qt5-doc              Qt 5 API Documentation
+ qt5-qmake:arm64      Qt 5 qmake Makefile generator tool
+ qt5-qmake-bin        Qt 5 qmake Makefile generator tool — binary file
+ qt5-qmltooling-plugins:arm64 Qt 5 qmltooling plugins
+ qtattributionsscanner-qt5 Qt 5 qtattributionsscanner tool
+ qtbase5-dev:arm64    Qt 5 base development files
+ qtbase5-dev-tools    Qt 5 base development programs
+ qtbase5-doc          Qt 5 base documentation
+ qtcharts5-doc        Qt charts QCH documentation
+ qtchooser            Wrapper to select between Qt development binary versions
+ qtconnectivity5-doc  Qt 5 Connectivity documentation
+ qtcreator            integrated development environment (IDE) for Qt
+ qtcreator-data       application data for Qt Creator IDE
+ qtcreator-doc        documentation for Qt Creator IDE
+ qtdatavisualization5-doc Qt 5 Data Visualization documentation
+ qtdeclarative5-dev:arm64 Qt 5 declarative development files
+ qtdeclarative5-dev-tools Qt 5 declarative development programs
+ qtdeclarative5-doc   Qt 5 declarative documentation
+ qtgraphicaleffects5-doc Qt 5 graphical effects documentation
+ qtlocation5-doc      Qt 5 Location and Positioning QCH documentation
+ qtmultimedia5-dev:arm64 APIs for multimedia functionality - development files
+ qtmultimedia5-doc    Qt 5 multimedia documentation
+ qtnetworkauth5-doc   online account access for Qt apps - documentation
+ qtquickcontrols2-5-doc Qt 5 Quick Controls 2 documentation
+ qtquickcontrols5-doc Qt 5 Quick Controls documentation
+ qtscript5-doc        Qt 5 script documentation
+ qtscxml5-doc         Qt SCXML QCH documentation
+ qtsensors5-doc       Qt 5 Sensors documentation
+ qtserialbus5-doc     Qt serialbus serial bus access QCH documentation
+ qtserialport5-doc    Qt 5 serial port documentation
+ qtsvg5-doc           Qt 5 SVG documentation
+ qttools5-dev-tools   Qt 5 development tools
+ qttools5-doc         Qt 5 tools documentation
+ qtvirtualkeyboard5-doc Qt 5 Virtual Keyboard documentation
+ qtwayland5-doc       Qt 5 Wayland Compositor documentation
+ qtwebchannel5-doc    Web communication library for Qt - Documentation
+ qtwebengine5-doc     Qt 5 webengine documentation
+ qtwebsockets5-doc    Qt 5 Web Sockets documentation
+ qtwebview5-doc       display web content in a QML application - Documentation
+ qtx11extras5-doc     Qt 5 X11 extras documentation
+ qtxmlpatterns5-dev-tools Qt 5 XML patterns development programs
+ qtxmlpatterns5-doc   Qt 5 XML patterns documentation
+ rtkit                Realtime Policy and Watchdog Daemon
+ rygel                GNOME UPnP/DLNA services
+ samba-libs:arm64     Samba core libraries
+ sane-utils           API library for scanners -- utilities
+ session-migration    Tool to migrate in user session settings
+ sgml-base            SGML infrastructure and SGML catalog file support
+ sgml-data            common SGML and XML data
+ shotwell             digital photo organizer
+ shotwell-common      digital photo organizer - common files
+ sudo                 Provide limited super user privileges to specific users
+ switcheroo-control   D-Bus service to check the availability of dual-GPU
+ system-config-printer graphical interface to configure the printing system
+ system-config-printer-common backend and the translation files for system-conf
+ system-config-printer-udev Utilities to detect and configure printers automati
+ terminator           multiple GNOME terminals in one window
+ tracker              metadata database, indexer and search tool
+ tracker-extract      metadata database, indexer and search tool - metadata ext
+ tracker-miner-fs     metadata database, indexer and search tool - filesystem i
+ ubuntu-docs          Ubuntu Desktop Guide
+ ubuntu-wallpapers    Ubuntu Wallpapers
+ ubuntu-wallpapers-focal Ubuntu 20.04 Wallpapers
+ udisks2              D-Bus service to access and manipulate storage devices
+ update-inetd         inetd configuration file updater
+ upower               abstraction for power management
+ usb-modeswitch       mode switching tool for controlling "flip flop" USB devic
+ usb-modeswitch-data  mode switching data for usb-modeswitch
+ usbmuxd              USB multiplexor daemon for iPhone and iPod Touch devices
+ uuid-dev:arm64       Universally Unique ID library - headers and static librar
+ wamerican            American English dictionary words for /usr/share/dict
+ whoopsie-preferences System preferences for error reporting
+ wpasupplicant        client support for WPA and WPA2 (IEEE 802.11i)
+ x11-utils            X11 utilities
+ x11-xkb-utils        X11 XKB utilities
+ x11-xserver-utils    X server utilities
+ x11proto-core-dev    transitional dummy package
+ x11proto-dev         X11 extension protocols and auxiliary headers
+ x11proto-xext-dev    transitional dummy package
+ xdg-dbus-proxy       filtering D-Bus proxy
+ xdg-utils            desktop integration utilities from freedesktop.org
+ xfonts-base          standard fonts for X
+ xfonts-encodings     Encodings for X.Org fonts
+ xfonts-utils         X Window System font utility programs
+ xinit                X server initialisation tool
+ xml-core             XML infrastructure and XML catalog file support
+ xorg-sgml-doctools   Common tools for building X.Org SGML documentation
+ xserver-common       common files used by various X servers
+ xserver-xephyr       nested X server
+ xserver-xorg         X.Org X server
+ xserver-xorg-core    Xorg X server - core server
+ xserver-xorg-input-all X.Org X server -- input driver metapackage
+ xserver-xorg-input-libinput X.Org X server -- libinput input driver
+ xserver-xorg-input-wacom X.Org X server -- Wacom input driver
+ xserver-xorg-legacy  setuid root Xorg server wrapper
+ xserver-xorg-video-all X.Org X server -- output driver metapackage
+ xserver-xorg-video-amdgpu X.Org X server -- AMDGPU display driver
+ xserver-xorg-video-ati X.Org X server -- AMD/ATI display driver wrapper
+ xserver-xorg-video-fbdev X.Org X server -- fbdev display driver
+ xserver-xorg-video-nouveau X.Org X server -- Nouveau display driver
+ xserver-xorg-video-radeon X.Org X server -- AMD/ATI Radeon display driver
+ xserver-xorg-video-vesa X.Org X server -- VESA display driver
+ xul-ext-ubufox       Ubuntu modifications for Firefox
+ xwayland             Xwayland X server
+ yaru-theme-gnome-shell Yaru GNOME Shell desktop theme from the Ubuntu Communit
+ yelp                 Help browser for GNOME
+ yelp-xsl             XSL stylesheets for the yelp help browser
+ zenity               Display graphical dialog boxes from shell scripts
+ zenity-common        Display graphical dialog boxes from shell scripts (common
+ zlib1g-dev:arm64     compression library - development
+
+iptables 1.8.4-3ubuntu2.1
+
+SERVICES
+inactive
+inactive
+
+STORAGE
+drwxr-xr-x 6 root root 4096 Nov  1 10:51 /opt
+
+KERNEL CONFIG
+CONFIG_CGROUPS=y
+CONFIG_CGROUP_WRITEBACK=y
+CONFIG_CGROUP_SCHED=y
+CONFIG_CGROUP_PIDS=y
+# CONFIG_CGROUP_RDMA is not set
+CONFIG_CGROUP_FREEZER=y
+CONFIG_CGROUP_DEVICE=y
+CONFIG_CGROUP_CPUACCT=y
+CONFIG_CGROUP_PERF=y
+CONFIG_CGROUP_BPF=y
+# CONFIG_CGROUP_DEBUG is not set
+CONFIG_NAMESPACES=y
+CONFIG_PID_NS=y
+CONFIG_NET_NS=y
+CONFIG_SECCOMP=y
+CONFIG_SECCOMP_FILTER=y
+CONFIG_NETFILTER=y
+CONFIG_BRIDGE=y
+CONFIG_CGROUP_NET_PRIO=y
+CONFIG_CGROUP_NET_CLASSID=y
+CONFIG_VETH=y
+CONFIG_OVERLAY_FS=y
+
+LISTENERS
+
+WLAN HTTPS
+35: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 3000
+    inet 192.168.0.11/24 brd 192.168.0.255 scope global noprefixroute dynamic wlan0
+       valid_lft 2494sec preferred_lft 2494sec
+HTTP/2 200 
+[1mcontent-type[0m: text/html; charset=utf-8
+[1mcontent-length[0m: 223
+[1mserver[0m: AmazonS3
+[1mx-amz-meta-mtime[0m: 1793332263.101990753
+[1mlast-modified[0m: Fri, 30 Oct 2026 03:51:04 GMT
+[1mdate[0m: Sat, 31 Oct 2026 07:50:17 GMT
+[1metag[0m: "5a2449544577bdf952c47cdc248220b4"
+[1mx-cache[0m: Hit from cloudfront
+[1mvia[0m: 1.1 26c62194b72395923d30140fbf2d7638.cloudfront.net (CloudFront)
+[1mx-amz-cf-pop[0m: FOR50-P3
+[1mx-amz-cf-id[0m: 4LeFDSr-GzvcG3Lavn96F9Lch0In8eu6WHYdJLr4-allHYZ2V2zkqg==
+[1mage[0m: 70232
+
+
+__DOCKER_DEMO_EXIT__=0

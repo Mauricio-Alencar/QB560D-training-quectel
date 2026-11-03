@@ -1,0 +1,6 @@
+{
+  "command": "printf 'GPIO STATE\\n'; cat /sys/kernel/debug/gpio 2>/dev/null | grep -Ei 'lt9611|hdmi|gpio-(12|14|44|106|155)[^0-9]' || true; printf '\\nKERNEL BRIDGE LOG\\n'; journalctl -b -k --no-pager | grep -Ei '9611|hdmi|hpd|edid' || true; printf '\\nWESTON LOG BEGIN\\n'; head -n 110 /logcat; printf '\\nWESTON LOG END\\n'; tail -n 80 /logcat; printf '\\nBRIDGE SYSFS\\n'; find /sys/class -maxdepth 3 -iname '*9611*' 2>/dev/null; ls -l /proc/lt* /sys/devices/virtual/*/*9611* 2>/dev/null || true; printf '\\nMODULE SYMBOL STRINGS\\n'; strings /lib/modules/5.4.219-perf/kernel/drivers/gpu/drm/bridge/lt9611uxd/lt9611uxd.ko | grep -Ei 'hpd|edid|fw_ver|chip_id|firmware|sysfs|lt9611.*show|lt9611.*store|hdmi.*(on|off|status)' | head -n 75",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

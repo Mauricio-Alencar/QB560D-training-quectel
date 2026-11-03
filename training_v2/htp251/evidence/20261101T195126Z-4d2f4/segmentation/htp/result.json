@@ -1,0 +1,28 @@
+{
+  "foreground_fraction": 0.6300171085103484,
+  "class_fractions": {
+    "background": 0.36998289148965163,
+    "person": 0.6300171085103484
+  },
+  "task": "segmentation",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+  "input_image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 210,
+    "execute_us": [
+      17395.0,
+      8622.0,
+      8418.0
+    ]
+  },
+  "comparison_to_original_tflite_cpu": {
+    "passed": true,
+    "person_mask_iou": 0.976328525564234,
+    "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+  },
+  "passed": true,
+  "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+}

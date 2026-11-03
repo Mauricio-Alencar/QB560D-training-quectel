@@ -1,0 +1,15 @@
+{
+  "library": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+  "version": "2.12.0.230626174329_59328",
+  "results": [
+    {
+      "runtime": "DSP_FIXED8_TF",
+      "check": "UNSIGNEDPD_CHECK",
+      "available": true,
+      "last_error": ""
+    }
+  ],
+  "scope": "Runtime availability probe only; no DLC loaded and no inference executed",
+  "check_isolation": "One PD check mode per process; do not run normal then unsigned in the same SNPE 2.12 process",
+  "adsp_library_path_process_only": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned;/usr/lib/rfsa/adsp;/dsp;/usr/lib"
+}

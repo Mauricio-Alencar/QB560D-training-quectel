@@ -1,0 +1,7 @@
+{
+  "action": "inventory",
+  "script": "preflight",
+  "exit_code": 0,
+  "timed_out": false,
+  "at_utc": "2026-11-01T17:24:20.052501+00:00"
+}

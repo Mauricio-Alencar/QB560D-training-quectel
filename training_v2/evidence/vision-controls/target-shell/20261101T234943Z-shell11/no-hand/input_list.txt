@@ -1,0 +1,1 @@
+input_1:=/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/no-hand/input.raw

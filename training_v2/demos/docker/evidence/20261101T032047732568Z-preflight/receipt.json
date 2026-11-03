@@ -1,0 +1,6 @@
+{
+  "command": "sh /tmp/docker-demo-preflight.sh",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:20:48.457329+00:00"
+}

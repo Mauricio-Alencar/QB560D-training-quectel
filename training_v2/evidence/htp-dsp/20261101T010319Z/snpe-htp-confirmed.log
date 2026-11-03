@@ -1,0 +1,67 @@
+/prj/qct/webtech_hyd/pcgbait/projects/zsnpe_waipio/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 2, option - 2
+[USER_VERBOSE] QnnDsp <V> RouterRpc isPrepareLibLoaded
+[USER_VERBOSE] QnnDsp <V> HTP Prepare backend not loaded
+[USER_INFO] QnnDsp <I> QnnHtpLog_create exit.
+[USER_INFO] QnnDsp <I> addClient started.
+[USER_VERBOSE] QnnDsp <V> Backend handle created: 1
+[USER_INFO] QnnDsp <I> addClient done (1). status = 0x0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo started.
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo done. status 0x0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create started. device = 0x1
+[USER_VERBOSE] QnnDsp <V> Setting default value for unsigned PD usage
+[USER_VERBOSE] QnnDsp <V> skel file path file:///libSnpeHtpV68Skel.so?snpe_skel_handle_invoke&_modver=1.0&_dom=cdsp
+[USER_INFO] QnnDsp <I> First connection to QNN stub established!
+[USER_VERBOSE] QnnDsp <V> Loading remote funcs
+[USER_INFO] QnnDsp <I> exits with 2, successfully initialized rpc memory
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 136 isInit 1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_VERBOSE] QnnDsp <V> DeviceId 0 coreId 0 not present, insert a new entry 0x5e55410
+[USER_INFO] QnnDsp <I> Polling not supported in createDevicePollingContext
+[USER_VERBOSE] QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+{
+  "library": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+  "version": "2.12.0.230626174329_59328",
+  "results": [
+    {
+      "runtime": "DSP_FIXED8_TF",
+      "check": "UNSIGNEDPD_CHECK",
+      "available": true,
+      "last_error": ""
+    }
+  ],
+  "scope": "Runtime availability probe only; no DLC loaded and no inference executed",
+  "check_isolation": "One PD check mode per process; do not run normal then unsigned in the same SNPE 2.12 process",
+  "adsp_library_path_process_only": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned;/usr/lib/rfsa/adsp;/dsp;/usr/lib"
+}
+[USER_VERBOSE] QnnDsp <V> setSkelLogLevel return 0
+[USER_VERBOSE] QnnDsp <V> exits device initialization with  0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create done. status 0x0
+[USER_INFO] BackendTerminate triggered
+[USER_INFO] QnnDsp <I> terminateClient started. 0x1
+[USER_WARNING] QnnDsp <W> Backend 1 free cleanup called during process exit
+[USER_VERBOSE] QnnDsp <V> RouterRpc isPrepareLibLoaded
+[USER_WARNING] QnnDsp <W> Final clean up, free device id 1
+[USER_INFO] QnnDsp <I> QnnHtpDevice_free started. device = 0x1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_VERBOSE] QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+[USER_VERBOSE] QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+[USER_INFO] QnnDsp <I> Polling not supported in terminateDeviceWorkerThread
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 16 isInit 1
+[USER_VERBOSE] QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+[USER_INFO] QnnDsp <I> Polling not supported in clearDevicePollingContext
+/prj/qct/webtech_hyd/pcgbait/projects/zsnpe_waipio/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+[USER_VERBOSE] QnnDsp <V> DeviceId 0 coreId 0 present, update transport instance from 0x5e55410 to (nil)
+[USER_INFO] QnnDsp <I> exits with 4, successfully deinitialized rpc memory
+[USER_INFO] QnnDsp <I> QnnHtpDevice_free done. status 0x0
+[USER_INFO] QnnDsp <I> Polling not supported in terminateWorkerThreads
+[USER_INFO] QnnDsp <I> Polling not supported in clearAllContexts
+
+__QB560D_EXIT__=0

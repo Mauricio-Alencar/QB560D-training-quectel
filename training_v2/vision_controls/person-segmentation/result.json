@@ -1,0 +1,172 @@
+{
+  "case": {
+    "id": "person-segmentation",
+    "task": "segmentation",
+    "image": "pose.jpg",
+    "expected": "person"
+  },
+  "passed": true,
+  "image_sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+  "cpu": {
+    "foreground_fraction": 0.023346303501945526,
+    "class_fractions": {
+      "background": 0.9766536964980544,
+      "person": 0.023346303501945526
+    },
+    "demo_id": "D2-09",
+    "backend": "CPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+    "image_sha256": "134dba4e65ab9e814d978ef104c63e21d8951d6687ba1a353d7c3383b644fb44",
+    "runs": 1,
+    "warmup": 0,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 175.160536000476,
+    "inference_ms_p95": 175.160536000476,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "sub_7",
+          "shape": [
+            1,
+            257,
+            257,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "ResizeBilinear_3",
+          "shape": [
+            1,
+            257,
+            257,
+            21
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ]
+    },
+    "runtime_version": "2.8.4"
+  },
+  "gpu": {
+    "backend": "gpu",
+    "passed": true,
+    "runtime": "TFLite BSP 2.8.4",
+    "median_ms": 20.590699999956996,
+    "p95_ms": 20.623137799884717,
+    "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+    "image_sha256": "134dba4e65ab9e814d978ef104c63e21d8951d6687ba1a353d7c3383b644fb44",
+    "result": {
+      "foreground_fraction": 0.023346303501945526,
+      "class_fractions": {
+        "background": 0.9766536964980544,
+        "person": 0.023346303501945526
+      },
+      "demo_id": "D2-09",
+      "backend": "GPU",
+      "runtime": "vendor.tflite_c_api",
+      "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "134dba4e65ab9e814d978ef104c63e21d8951d6687ba1a353d7c3383b644fb44",
+      "runs": 3,
+      "warmup": 1,
+      "threads": 2,
+      "crop": null,
+      "inference_ms_median": 20.590699999956996,
+      "inference_ms_p95": 20.623137799884717,
+      "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+      "tensor_contract": {
+        "inputs": [
+          {
+            "name": "sub_7",
+            "shape": [
+              1,
+              257,
+              257,
+              3
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "slot": 0,
+            "name": "ResizeBilinear_3",
+            "shape": [
+              1,
+              257,
+              257,
+              21
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          }
+        ]
+      },
+      "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+      "runtime_version": "2.8.4"
+    },
+    "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+    "correctness": {
+      "passed": true,
+      "person_mask_iou": 1.0,
+      "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+    }
+  },
+  "htp": {
+    "foreground_fraction": 0.0311284046692607,
+    "class_fractions": {
+      "background": 0.9688715953307393,
+      "person": 0.0311284046692607
+    },
+    "task": "segmentation",
+    "backend": "htp",
+    "runtime": "QAIRT/QNN 2.51.40.260930",
+    "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+    "input_image_sha256": "134dba4e65ab9e814d978ef104c63e21d8951d6687ba1a353d7c3383b644fb44",
+    "profile": {
+      "accelerator_events": 3,
+      "positive_cycle_events": 210,
+      "execute_us": [
+        17523.0,
+        9107.0,
+        8720.0
+      ]
+    },
+    "comparison_to_original_tflite_cpu": {
+      "passed": true,
+      "person_mask_iou": 0.75,
+      "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+    },
+    "passed": true,
+    "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+  },
+  "raw_evidence_from_training_root": "evidence/vision-controls/20261101-reference-controls",
+  "runtime_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": []
+  }
+}

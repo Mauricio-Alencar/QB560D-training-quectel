@@ -1,0 +1,23 @@
+{
+  "result": "PASS_CONTROLS_PERSISTENT_DEPLOY_AND_MANUAL_PATH",
+  "at_host_utc": "2026-11-01T22:51:29.095522+00:00",
+  "remote": "/opt/qb560d-training-payload/media/controls",
+  "files_checked": 11,
+  "hashes_match": true,
+  "commands": [
+    "cd /opt/qb560d-training-payload && sh target/ai.sh classification --image media/controls/burger.jpg --runs 1 --warmup 0 --output evidence/controls-deploy-smoke"
+  ],
+  "scope": "Input assets staged to the documented persistent path. Reviewed rendered CPU/GPU/HTP outputs stay in the host gallery.",
+  "password_saved": false,
+  "case_count": 11,
+  "distinct_inputs_used": 6,
+  "image_files_in_deploy": 7,
+  "reviewed_rendered_outputs": 33,
+  "smoke_top1": {
+    "class_id": 934,
+    "label": "cheeseburger",
+    "score": 0.99609375
+  },
+  "smoke_image_sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+  "smoke_model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd"
+}

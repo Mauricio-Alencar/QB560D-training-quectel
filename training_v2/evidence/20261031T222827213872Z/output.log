@@ -1,0 +1,11 @@
+ERROR: Encountered unresolved custom op: Convolution2DTransposeBias.
+See instructions: https://www.tensorflow.org/lite/guide/ops_custom
+ERROR: Node number 244 (Convolution2DTransposeBias) failed to prepare.
+Traceback (most recent call last):
+  File "ai/inspect_models.py", line 11, in <module>
+    interpreter.allocate_tensors()
+  File "/tmp/qb560d-training/ai/c_api_backend.py", line 57, in allocate_tensors
+    raise RuntimeError("TFLite C API allocation failed. Inspect unsupported operators/runtime version.")
+RuntimeError: TFLite C API allocation failed. Inspect unsupported operators/runtime version.
+
+__QB560D_EXIT__=1

@@ -1,0 +1,6 @@
+{
+  "command": "if [ -d /opt/qb560d-docker-demo ]; then [ \"$(cat /opt/qb560d-docker-demo/.owner 2>/dev/null)\" = qb560d-training-docker-v1 ] || exit 1; else mkdir /opt/qb560d-docker-demo && printf \"qb560d-training-docker-v1\\n\" > /opt/qb560d-docker-demo/.owner; fi; mkdir -p /opt/qb560d-docker-demo/evidence",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:23:39.961044+00:00"
+}

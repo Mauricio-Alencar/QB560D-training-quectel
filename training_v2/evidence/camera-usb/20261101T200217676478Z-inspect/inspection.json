@@ -1,0 +1,11 @@
+{
+  "host_utc": "20261101T200217676478Z",
+  "command": "printf 'NETWORK ADDRESSES\n'\nip -4 -o addr\nprintf '\nWLAN PROFILE\n'\nnmcli --colors no -f GENERAL.STATE,GENERAL.CONNECTION,IP4.ADDRESS,IP4.GATEWAY device show wlan0\nnmcli --colors no -f connection.id,connection.interface-name,connection.autoconnect,ipv4.route-metric connection show qb560d-training-wlan\nprintf '\nSSH SERVICE\n'\nsystemctl is-active ssh sshd 2>&1\nif command -v ss >/dev/null 2>&1; then ss -lntp | grep -E ':22 |:5555 ' || :; else /opt/qb560d-workshop/bin/ss -lntp | grep -E ':22 |:5555 ' || :; fi\nfor exe in /usr/sbin/sshd /sbin/sshd; do\n  [ -x \"$exe\" ] || continue\n  \"$exe\" -T | grep -E '^(permitrootlogin|passwordauthentication|listenaddress|port) '\n  break\ndone\nprintf '\nSSH PUBLIC HOST KEYS\n'\nfor entry in /etc/ssh/ssh_host_*_key.pub; do\n  [ -r \"$entry\" ] || continue\n  cat \"$entry\"\ndone\n",
+  "exit_code": 0,
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

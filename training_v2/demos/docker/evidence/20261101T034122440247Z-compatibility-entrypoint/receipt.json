@@ -1,0 +1,6 @@
+{
+  "command": "sh /tmp/qb560d-training/target/docker.sh check",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:41:22.684425+00:00"
+}

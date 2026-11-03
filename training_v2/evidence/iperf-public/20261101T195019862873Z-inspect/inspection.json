@@ -1,0 +1,10 @@
+{
+  "command": "set -u\ntest ! -r /opt/qb560d-workshop/env.sh || . /opt/qb560d-workshop/env.sh\nid -u\ndate -u\ncat /etc/build_version\nuname -a\ncommand -v iperf3\niperf3 --version\niperf3 --help | grep -E 'bind-dev|connect-timeout|rcv-timeout|snd-timeout'\nip -4 addr show dev rmnet_data0\nip -4 route\nip -4 rule\ncat /proc/loadavg\nps -eo pid,comm,pcpu | head -n 25\n",
+  "exit_code": 0,
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

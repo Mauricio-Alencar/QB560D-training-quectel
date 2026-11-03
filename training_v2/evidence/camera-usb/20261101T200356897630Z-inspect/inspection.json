@@ -1,0 +1,11 @@
+{
+  "host_utc": "20261101T200356897630Z",
+  "command": "printf 'ENABLE SAVED WLAN PROFILE\n'\nnmcli radio wifi on\nnmcli --colors no --wait 35 connection up qb560d-training-wlan ifname wlan0\nnmcli --colors no -f GENERAL.STATE,GENERAL.CONNECTION,IP4.ADDRESS,IP4.GATEWAY device show wlan0\nip -4 route\nprintf '\nSSH CONFIGURATION\n'\ngrep -E '^(PermitRootLogin|PasswordAuthentication|ListenAddress|Port|Include|Match)' /etc/ssh/sshd_config\nsystemctl is-active ssh.socket sshd.socket 2>&1\nprintf '\nSSH PUBLIC HOST KEY\n'\ncat /etc/ssh/ssh_host_ed25519_key.pub\nprintf '\nDRM CONNECTORS\n'\nfor entry in /sys/class/drm/card*-*; do\n  [ -d \"$entry\" ] || continue\n  printf '\nCONNECTOR %s\n' \"$entry\"\n  for key in status enabled modes dpms; do\n    [ -r \"$entry/$key\" ] || continue\n    printf '%s:\n' \"$key\"\n    timeout -k 1s 3s cat \"$entry/$key\"\n  done\n  if [ -r \"$entry/edid\" ]; then\n    printf 'EDID_BASE64:\n'\n    timeout -k 1s 3s base64 \"$entry/edid\"\n  fi\ndone\nprintf '\nFRAMEBUFFERS\n'\nfor entry in /sys/class/graphics/fb*; do\n  [ -r \"$entry/name\" ] || continue\n  printf '%s: ' \"$entry\"; cat \"$entry/name\"\ndone\nprintf '\nWESTON\n'\nps -eo pid,comm | grep -E 'weston|Xorg|gnome' || :\nsystemctl is-active weston display-manager 2>&1\njournalctl -b -u weston -n 45 --no-pager 2>&1\nprintf '\nDISPLAY CONFIGURATION\n'\nfor entry in /etc/xdg/weston/weston.ini /etc/weston.ini /home/root/.config/weston.ini; do\n  [ -r \"$entry\" ] || continue\n  printf '%s\n' \"$entry\"\n  grep -E '^\\[|^(name|mode|transform|seat|backend|shell|idle-time)=' \"$entry\"\ndone\nprintf '\nDISPLAY KERNEL EVENTS\n'\ndmesg | grep -iE 'drm|hdmi|edid|displayport|sde|dp_display|lt9611' | tail -n 50\n",
+  "exit_code": 0,
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

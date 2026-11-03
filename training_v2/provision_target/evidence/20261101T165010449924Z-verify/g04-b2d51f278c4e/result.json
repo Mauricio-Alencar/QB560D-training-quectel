@@ -1,0 +1,92 @@
+{
+  "runtime_version": "2.51.40.260930",
+  "runtime": "/opt/qairt-isolated/2.51.40.260930",
+  "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g04-b2d51f278c4e",
+  "backend": "htp",
+  "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\update_QIART\\hand_gesture\\assets\\images\\thumbs_down.jpg",
+  "image_sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+  "prediction": "Thumb_Down",
+  "confidence": 0.7109375,
+  "expected": "Thumb_Down",
+  "passed": true,
+  "probabilities": {
+    "None": 0.28125,
+    "Closed_Fist": 0.0,
+    "Open_Palm": 0.0,
+    "Pointing_Up": 0.0,
+    "Thumb_Down": 0.7109375,
+    "Thumb_Up": 0.00390625,
+    "Victory": 0.0,
+    "ILoveYou": 0.0
+  },
+  "details": {
+    "palm_score": 0.94140625,
+    "palm_box_xyxy": [
+      212.63778686523438,
+      209.32086181640625,
+      327.5590515136719,
+      320.1377868652344
+    ],
+    "roi_corners": [
+      [
+        486.3143310546875,
+        153.84512329101562
+      ],
+      [
+        212.75152587890625,
+        110.07510375976562
+      ],
+      [
+        440.9232177734375,
+        437.5399475097656
+      ],
+      [
+        167.3603973388672,
+        393.7699279785156
+      ]
+    ],
+    "rotation_radians": 1.7294514179229736,
+    "palm_threshold": 0.75,
+    "landmark_score": 0.6875,
+    "handedness": 0.96484375
+  },
+  "stages": [
+    {
+      "graph": "palm_detector",
+      "backend": "libQnnHtp.so",
+      "profile": {
+        "execute_us": [
+          21161.0
+        ],
+        "accelerator_events": 1,
+        "positive_cycle_events": 156
+      },
+      "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"
+    },
+    {
+      "graph": "hand_landmark_detector",
+      "backend": "libQnnHtp.so",
+      "profile": {
+        "execute_us": [
+          5244.0
+        ],
+        "accelerator_events": 1,
+        "positive_cycle_events": 65
+      },
+      "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"
+    },
+    {
+      "graph": "canned_gesture_classifier",
+      "backend": "libQnnHtp.so",
+      "profile": {
+        "execute_us": [
+          2385.0
+        ],
+        "accelerator_events": 1,
+        "positive_cycle_events": 68
+      },
+      "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"
+    }
+  ],
+  "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."
+}

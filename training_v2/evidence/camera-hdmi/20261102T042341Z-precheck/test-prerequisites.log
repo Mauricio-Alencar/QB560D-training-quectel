@@ -1,0 +1,11 @@
+srwxr-xr-x 1 root root 0 Nov  2 06:34 /run/user/root/wayland-0
+-rw-r----- 1 root root 0 Nov  2 06:34 /run/user/root/wayland-0.lock
+PLUGIN_OK videotestsrc
+PLUGIN_OK waylandsink
+PLUGIN_OK videoconvert
+PLUGIN_OK v4l2src
+PLUGIN_OK jpegenc
+PLUGIN_OK filesink
+-rw-r--r-- 1 root root  854 Jan  1  1970 /opt/qb560d-training-payload/target/ai.sh
+-rw-r--r-- 1 root root 2306 Jan  1  1970 /opt/qb560d-training-payload/target/camera.sh
+active

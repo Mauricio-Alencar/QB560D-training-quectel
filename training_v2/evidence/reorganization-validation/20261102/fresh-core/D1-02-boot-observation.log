@@ -1,0 +1,94 @@
+ 10:09:00 up  3:34,  2 users,  load average: 3.60, 3.35, 3.21
+  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION                   
+● avahi-daemon.service       loaded failed failed Avahi mDNS/DNS-SD Stack       
+● camera_cgroup.service      loaded failed failed Create Camera Cgroup Service  
+● chg-policy.service         loaded failed failed Charger Policy Service        
+● dhcpd6.service             loaded failed failed DHCPv6 Server Daemon          
+● dnsmasq.service            loaded failed failed dnsmasq - A lightweight DHCP …
+● fs-scrub-daemon.service    loaded failed failed fs-scrub-daemon Service       
+● init_post_boot.service     loaded failed failed QTI Post Boot Service         
+● ip6tables.service          loaded failed failed IPv6 Packet Filtering Framewo…
+● ipacmdiag.service          loaded failed failed start IPA configuration manag…
+● iptables.service           loaded failed failed IPv4 Packet Filtering Framewo…
+● lunch-make-scripts.service loaded failed failed lunch make scripts            
+● qcmap_wlan.service         loaded failed failed WLAN service                  
+● qti_pppd.service           loaded failed failed qti_ppp service               
+● thermal-engine.service     loaded failed failed Thermal Engine Service        
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+14 loaded units listed.
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 10:08:59 CST. --
+Nov 02 10:07:27 qcs6490-odk systemd[1]: data.mount: What= setting is missing. Refusing.
+Nov 02 10:07:28 qcs6490-odk kernel: [soft_i][0x3934479bd4][02:07:28.610007] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:31 qcs6490-odk kernel: [soft_i][0x3937e98461][02:07:31.784145] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:34 qcs6490-odk kernel: [soft_i][0x393b8b8f1b][02:07:34.958740] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:38 qcs6490-odk kernel: [soft_i][0x393f2e545c][02:07:38.135821] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:41 qcs6490-odk kernel: [soft_i][0x3942cfe528][02:07:41.308789] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:44 qcs6490-odk kernel: [soft_i][0x394671f124][02:07:44.483399] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:47 qcs6490-odk kernel: [soft_i][0x394a141162][02:07:47.658280] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:50 qcs6490-odk kernel: [soft_i][0x394db5f953][02:07:50.832410] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:54 qcs6490-odk kernel: [soft_i][0x395157a8a8][02:07:54.005784] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:07:57 qcs6490-odk kernel: [soft_i][0x3954f9f6ef][02:07:57.181278] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:00 qcs6490-odk kernel: [soft_i][0x39589c020c][02:08:00.355877] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:03 qcs6490-odk kernel: [soft_i][0x395c3daa33][02:08:03.529155] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:06 qcs6490-odk kernel: [soft_i][0x395fe1a82d][02:08:06.710405] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:09 qcs6490-odk kernel: [soft_i][0x3963821862][02:08:09.879524] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:13 qcs6490-odk kernel: [soft_i][0x396723cf39][02:08:13.052999] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:16 qcs6490-odk kernel: [soft_i][0x396ac62885][02:08:16.228639] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:19 qcs6490-odk kernel: [soft_i][0x396e67a24b][02:08:19.401299] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:22 qcs6490-odk kernel: [soft_i][0x39720b064d][02:08:22.580495] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:25 qcs6490-odk kernel: [soft_i][0x3975ac369d][02:08:25.752175] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:28 qcs6490-odk kernel: [soft_i][0x39794e93ba][02:08:28.927865] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:32 qcs6490-odk kernel: [soft_i][0x397cf08333][02:08:32.102094] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:35 qcs6490-odk kernel: [soft_i][0x3980922459][02:08:35.275278] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:38 qcs6490-odk kernel: [soft_i][0x398433ac80][02:08:38.448129] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:41 qcs6490-odk kernel: [soft_i][0x3987d755fd][02:08:41.628251] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:44 qcs6490-odk kernel: [soft_i][0x398b780a84][02:08:44.798280] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:47 qcs6490-odk kernel: [soft_i][0x398f19b4e6][02:08:47.971587] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:51 qcs6490-odk kernel: [soft_i][0x3992bc2aad][02:08:51.147605] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:54 qcs6490-odk kernel: [soft_i][0x39965def5d][02:08:54.321263] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 10:08:57 qcs6490-odk kernel: [soft_i][0x399a002f0e][02:08:57.496560] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12852.243993] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12852.244041] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12852.244208] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12852.244212] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12854.068796] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[12854.964908] [soft_i][0x397cf08333][02:08:32.102094] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12857.363865] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12857.363925] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12857.364064] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12857.364069] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12858.138042] [soft_i][0x3980922459][02:08:35.275278] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12859.603736] IRQ 5: no longer affine to CPU7
+[12861.310843] [soft_i][0x398433ac80][02:08:38.448129] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12862.483634] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12862.483687] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12862.483825] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12862.483828] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12864.490915] [soft_i][0x3987d755fd][02:08:41.628251] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12864.518135] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[12867.603582] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12867.603640] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12867.603775] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12867.603778] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12867.660896] [soft_i][0x398b780a84][02:08:44.798280] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12870.834155] [soft_i][0x398f19b4e6][02:08:47.971587] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12872.723483] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12872.723565] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12872.723717] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12872.723721] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12874.010125] [soft_i][0x3992bc2aad][02:08:51.147605] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12877.183735] [soft_i][0x39965def5d][02:08:54.321263] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12877.843463] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12877.843515] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12877.843638] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12877.843642] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[12880.358984] [soft_i][0x399a002f0e][02:08:57.496560] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[12882.963359] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[12882.963416] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[12882.963881] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[12882.963884] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+

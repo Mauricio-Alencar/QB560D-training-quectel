@@ -1,0 +1,26 @@
+{
+  "recorded_at_host_utc": "2026-11-01T01:08:34.120611+00:00",
+  "result": "WLAN_CONNECTED_DNS_HTTPS_PASS",
+  "interface": "wlan0",
+  "ssid": "Mauricio_WIFI5G",
+  "profile": "qb560d-training-wlan",
+  "observed_ipv4": "192.168.0.11/24",
+  "gateway": "192.168.0.1",
+  "route_metric": 600,
+  "ipv4_method": "auto",
+  "ipv6_profile_method": "disabled",
+  "autoconnect_configured": true,
+  "dns_result": "PASS",
+  "https_status": 200,
+  "ntp_synchronized": true,
+  "boot_reconnection": "NOT_TESTED",
+  "secret_included": false,
+  "profile_permissions_observed": "600 root",
+  "owner": "NetworkManager",
+  "dhcpcd_change": "Preserved bridge0 and added wlan0 to existing global denyinterfaces line",
+  "dhcpcd_config_backup_on_target": "/etc/dhcpcd.conf.qb560d-training-20261101T010211Z.bak",
+  "logs": [
+    "status.log",
+    "check.log"
+  ]
+}

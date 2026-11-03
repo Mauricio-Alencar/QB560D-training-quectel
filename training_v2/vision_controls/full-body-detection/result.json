@@ -1,0 +1,270 @@
+{
+  "case": {
+    "id": "full-body-detection",
+    "task": "detection",
+    "image": "pose.jpg",
+    "expected": "person"
+  },
+  "passed": true,
+  "image_sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+  "cpu": {
+    "detections": [
+      {
+        "class_id": 0,
+        "label": "person",
+        "score": 0.82421875,
+        "box_yxyx": [
+          0.351614773273468,
+          0.2719726264476776,
+          0.9715642333030701,
+          0.7610664367675781
+        ]
+      }
+    ],
+    "demo_id": "D2-06",
+    "backend": "CPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+    "image_sha256": "5abff5f522149fe1eb206e59a0c85923ccd6d452c3e8189ddb8288e2bdb7b905",
+    "runs": 1,
+    "warmup": 0,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 54.74023399983707,
+    "inference_ms_p95": 54.74023399983707,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "normalized_input_image_tensor",
+          "shape": [
+            1,
+            300,
+            300,
+            3
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.0078125,
+            128
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "TFLite_Detection_PostProcess",
+          "shape": [
+            1,
+            10,
+            4
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 1,
+          "name": "TFLite_Detection_PostProcess:1",
+          "shape": [
+            1,
+            10
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 2,
+          "name": "TFLite_Detection_PostProcess:2",
+          "shape": [
+            1,
+            10
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 3,
+          "name": "TFLite_Detection_PostProcess:3",
+          "shape": [
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ]
+    },
+    "runtime_version": "2.8.4"
+  },
+  "gpu": {
+    "backend": "gpu",
+    "passed": true,
+    "runtime": "TFLite BSP 2.8.4",
+    "median_ms": 21.10391600035655,
+    "p95_ms": 22.691787798794394,
+    "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+    "image_sha256": "5abff5f522149fe1eb206e59a0c85923ccd6d452c3e8189ddb8288e2bdb7b905",
+    "result": {
+      "detections": [
+        {
+          "class_id": 0,
+          "label": "person",
+          "score": 0.82421875,
+          "box_yxyx": [
+            0.3476879596710205,
+            0.2719726264476776,
+            0.9676374197006226,
+            0.7610664367675781
+          ]
+        }
+      ],
+      "demo_id": "D2-06",
+      "backend": "GPU",
+      "runtime": "vendor.tflite_c_api",
+      "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "5abff5f522149fe1eb206e59a0c85923ccd6d452c3e8189ddb8288e2bdb7b905",
+      "runs": 3,
+      "warmup": 1,
+      "threads": 2,
+      "crop": null,
+      "inference_ms_median": 21.10391600035655,
+      "inference_ms_p95": 22.691787798794394,
+      "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+      "tensor_contract": {
+        "inputs": [
+          {
+            "name": "normalized_input_image_tensor",
+            "shape": [
+              1,
+              300,
+              300,
+              3
+            ],
+            "dtype": "<class 'numpy.uint8'>",
+            "quantization": [
+              0.0078125,
+              128
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "slot": 0,
+            "name": "TFLite_Detection_PostProcess",
+            "shape": [
+              1,
+              10,
+              4
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          },
+          {
+            "slot": 1,
+            "name": "TFLite_Detection_PostProcess:1",
+            "shape": [
+              1,
+              10
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          },
+          {
+            "slot": 2,
+            "name": "TFLite_Detection_PostProcess:2",
+            "shape": [
+              1,
+              10
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          },
+          {
+            "slot": 3,
+            "name": "TFLite_Detection_PostProcess:3",
+            "shape": [
+              1
+            ],
+            "dtype": "<class 'numpy.float32'>",
+            "quantization": [
+              0.0,
+              0
+            ]
+          }
+        ]
+      },
+      "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+      "runtime_version": "2.8.4"
+    },
+    "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+    "correctness": {
+      "passed": true,
+      "person_box_iou": 0.987411562938316,
+      "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+    }
+  },
+  "htp": {
+    "detections": [
+      {
+        "class_id": 0,
+        "label": "person",
+        "score": 0.715301513671875,
+        "box_yxyx": [
+          0.33756110072135925,
+          0.2704025208950043,
+          0.9656100273132324,
+          0.7577297687530518
+        ]
+      }
+    ],
+    "task": "detection",
+    "backend": "htp",
+    "runtime": "QAIRT/QNN 2.51.40.260930",
+    "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+    "input_image_sha256": "5abff5f522149fe1eb206e59a0c85923ccd6d452c3e8189ddb8288e2bdb7b905",
+    "profile": {
+      "accelerator_events": 3,
+      "positive_cycle_events": 153,
+      "execute_us": [
+        7224.0,
+        4996.0,
+        4736.0
+      ]
+    },
+    "comparison_to_original_tflite_cpu": {
+      "passed": true,
+      "person_box_iou": 0.9589306695585591,
+      "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+    },
+    "passed": true,
+    "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+  },
+  "raw_evidence_from_training_root": "evidence/vision-controls/20261101-reference-controls",
+  "runtime_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": []
+  }
+}

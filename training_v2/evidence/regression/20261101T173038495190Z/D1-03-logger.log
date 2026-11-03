@@ -1,0 +1,100 @@
+Boot and system health
+ 07:08:26 up  2:38,  3 users,  load average: 3.12, 3.03, 3.03
+  UNIT                    LOAD   ACTIVE SUB    DESCRIPTION                      
+● avahi-daemon.service    loaded failed failed Avahi mDNS/DNS-SD Stack          
+● camera_cgroup.service   loaded failed failed Create Camera Cgroup Service     
+● chg-policy.service      loaded failed failed Charger Policy Service           
+● dnsmasq.service         loaded failed failed dnsmasq - A lightweight DHCP and…
+● fs-scrub-daemon.service loaded failed failed fs-scrub-daemon Service          
+● ip6tables.service       loaded failed failed IPv6 Packet Filtering Framework  
+● ipacmdiag.service       loaded failed failed start IPA configuration manager …
+● iptables.service        loaded failed failed IPv4 Packet Filtering Framework  
+● qcmap_wlan.service      loaded failed failed WLAN service                     
+● qti_pppd.service        loaded failed failed qti_ppp service                  
+● thermal-engine.service  loaded failed failed Thermal Engine Service           
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+11 loaded units listed.
+-- Logs begin at Tue 2024-06-18 06:15:39 CST, end at Mon 2026-11-02 00:37:51 CST. --
+Jun 18 07:00:23 qcs6490-odk agetty[35844]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:00:39 qcs6490-odk agetty[35869]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:00:55 qcs6490-odk agetty[35896]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:12 qcs6490-odk agetty[35920]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:28 qcs6490-odk agetty[35942]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:44 qcs6490-odk agetty[35966]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:00 qcs6490-odk agetty[35990]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:17 qcs6490-odk agetty[36057]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:33 qcs6490-odk agetty[36081]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:49 qcs6490-odk agetty[36103]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:05 qcs6490-odk agetty[36128]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:22 qcs6490-odk agetty[36154]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:38 qcs6490-odk agetty[36176]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:54 qcs6490-odk agetty[36205]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:10 qcs6490-odk agetty[36230]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:27 qcs6490-odk agetty[36253]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:43 qcs6490-odk agetty[36277]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:59 qcs6490-odk agetty[36299]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:15 qcs6490-odk agetty[36322]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:32 qcs6490-odk agetty[36347]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:48 qcs6490-odk agetty[36372]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:04 qcs6490-odk agetty[36396]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:20 qcs6490-odk agetty[36418]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:37 qcs6490-odk agetty[36442]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:53 qcs6490-odk agetty[36468]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:09 qcs6490-odk agetty[36493]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:25 qcs6490-odk agetty[36522]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:42 qcs6490-odk agetty[36545]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:58 qcs6490-odk agetty[36569]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:08:14 qcs6490-odk agetty[36593]: /dev/hvc0: cannot open as standard input: Invalid argument
+
+Root filesystem
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G  9.2G   11G  47% /
+/dev/sda6 on / type ext4 (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=2463176k,nr_inodes=615794,mode=755)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,size=3739112k,nr_inodes=934778)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,size=747824k,nr_inodes=934778,mode=755)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,nr_inodes=934778)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=3739112k,nr_inodes=934778,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=3739112k,nr_inodes=934778)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda9 on /systemrw type ext4 (rw,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf8 on /persist type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf9 on /bt_firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sdg3 on /dsp type ext4 (ro,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered)
+/dev/sdg1 on /firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sda8 on /cache type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+diag on /dev/ffs-diag type functionfs (rw,relatime)
+/dev/sda12 on /data type ext4 (rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+nsfs on /run/qb560d-docker-demo/exec/netns/default type nsfs (rw)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=747924k,mode=700)
+Jun 18 07:08:26 qcs6490-odk qb560d-training[36715]: qb560d-training-1718665706-36704
+RESULT: LOG_EVENT_FOUND
+

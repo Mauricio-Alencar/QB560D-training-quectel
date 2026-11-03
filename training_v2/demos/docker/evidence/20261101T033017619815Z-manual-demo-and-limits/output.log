@@ -1,0 +1,37 @@
+c4b5acc94bdb0715ac0931158bf7a88a3020dd8b835565e41fb9c739f2be8ffb
+{
+  "/health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 16097.59,
+      "process_uptime_s": 3.024
+    }
+  },
+  "/missing": {
+    "http": 404,
+    "body": null
+  }
+}
+134217728
+
+64
+
+127.0.0.1 - - [01/Nov/2026 03:30:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 03:30:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 03:30:21] "GET /telemetry HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 03:30:21] code 404, message Not Found
+127.0.0.1 - - [01/Nov/2026 03:30:21] "GET /missing HTTP/1.1" 404 -
+Flag --time has been deprecated, use --timeout instead
+qb560d-docker-demo
+qb560d-docker-demo
+
+__DOCKER_DEMO_EXIT__=0

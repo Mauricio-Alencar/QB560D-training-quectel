@@ -1,0 +1,226 @@
+{
+  "result": "PASS_11_EXPLICIT_HTP_CASES",
+  "command": "python training_v2/host/validate_vision_controls.py run --backend htp",
+  "requested_backend": "htp",
+  "cases": [
+    {
+      "case": "burger-classification",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 99,
+        "execute_us": [
+          4175.0,
+          3071.0,
+          2441.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "case": "full-body-detection",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 153,
+        "execute_us": [
+          7120.0,
+          4939.0,
+          4764.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "person_box_iou": 0.9589306695585591,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "case": "no-person-detection",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 153,
+        "execute_us": [
+          7133.0,
+          4884.0,
+          4699.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "No person at score >=0.5 in CPU and evaluated backend",
+        "actual_person_count": 0,
+        "reference_person_count": 0
+      }
+    },
+    {
+      "case": "full-body-pose",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 93,
+        "execute_us": [
+          4536.0,
+          3040.0,
+          2968.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "median_visible_joint_distance": 0.013987389063853868,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12",
+        "minimum_visible_keypoints": 12
+      }
+    },
+    {
+      "case": "standing-full-body-pose",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 93,
+        "execute_us": [
+          4498.0,
+          3094.0,
+          3014.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "median_visible_joint_distance": 0.014591357743377591,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12",
+        "minimum_visible_keypoints": 12
+      }
+    },
+    {
+      "case": "occluded-pose",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 93,
+        "execute_us": [
+          4587.0,
+          3068.0,
+          2967.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "median_visible_joint_distance": 0.011498321480781545,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12",
+        "scope": "Synthetic lower-body occlusion: inspect visible upper-body points; hidden-joint guesses are not ground truth."
+      }
+    },
+    {
+      "case": "closed-fist",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 195,
+        "execute_us": [
+          4451.0,
+          3028.0,
+          2874.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "case": "no-hand",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 195,
+        "execute_us": [
+          4504.0,
+          3038.0,
+          2890.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "case": "person-segmentation",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 210,
+        "execute_us": [
+          17395.0,
+          8676.0,
+          8425.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "person_mask_iou": 0.75,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "case": "standing-boundary-segmentation",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 210,
+        "execute_us": [
+          17575.0,
+          8744.0,
+          8417.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "person_mask_iou": 0.9624227618910763,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "case": "no-person-segmentation",
+      "passed": true,
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 210,
+        "execute_us": [
+          17583.0,
+          8690.0,
+          8670.0
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "Person-labelled fraction <=1% in CPU and evaluated backend; other VOC classes are allowed",
+        "actual_person_fraction": 0.0,
+        "reference_person_fraction": 0.0
+      }
+    }
+  ],
+  "gpu_runs": 0,
+  "cpu_reference": "Separate TFLite CPU invocation per case; no fallback requested for HTP graph.",
+  "runtime_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": []
+  },
+  "default_backend_regression": {
+    "status": "PASS_REFERENCE_CONTROLS",
+    "case": "burger-classification",
+    "requested_backend": "all",
+    "htp_passed": true,
+    "gpu_passed": true,
+    "runtime_integrity": {
+      "passed": true,
+      "files_checked": 48,
+      "changed": []
+    }
+  }
+}

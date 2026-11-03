@@ -1,0 +1,4 @@
+{
+  "command": "printf %s aW1wb3J0IG9zCnA9Jy9vcHQvcWFpcnQtaXNvbGF0ZWQvMi41MS40MC4yNjA5MzAvZGVtb3MvaGFuZF9nZXN0dXJlL3J1bnMvZzA2LWIyZDUxZjI3OGM0ZScKYXNzZXJ0IG5vdCBvcy5wYXRoLmxleGlzdHMocCkKb3MubWFrZWRpcnMocCk= | base64 -d | python3",
+  "exit_code": 0
+}

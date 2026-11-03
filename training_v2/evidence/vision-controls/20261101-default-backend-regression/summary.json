@@ -1,0 +1,213 @@
+{
+  "status": "PASS_REFERENCE_CONTROLS",
+  "requested_backend": "all",
+  "records": [
+    {
+      "case": {
+        "id": "burger-classification",
+        "task": "classification",
+        "image": "burger.jpg",
+        "expected": "cheeseburger"
+      },
+      "image_sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+      "passed": true,
+      "htp": {
+        "task": "classification",
+        "passed": true,
+        "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+        "results": [
+          {
+            "top3": [
+              {
+                "class_id": 934,
+                "label": "cheeseburger",
+                "score": 0.99609375
+              },
+              {
+                "class_id": 16,
+                "label": "robin",
+                "score": 0.0
+              },
+              {
+                "class_id": 991,
+                "label": "buckeye",
+                "score": 0.0
+              }
+            ],
+            "task": "classification",
+            "backend": "htp",
+            "runtime": "QAIRT/QNN 2.51.40.260930",
+            "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+            "input_image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+            "profile": {
+              "accelerator_events": 3,
+              "positive_cycle_events": 99,
+              "execute_us": [
+                4176.0,
+                3164.0,
+                3107.0
+              ]
+            },
+            "comparison_to_original_tflite_cpu": {
+              "passed": true,
+              "criterion": "same top-1 as original TFLite CPU"
+            },
+            "passed": true,
+            "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+          }
+        ],
+        "case": "training_v2\\evidence\\vision-controls\\20261101-default-backend-regression\\burger-classification"
+      },
+      "gpu": {
+        "backend": "gpu",
+        "passed": true,
+        "runtime": "TFLite BSP 2.8.4",
+        "median_ms": 9.442278999813425,
+        "p95_ms": 9.515449899936357,
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+        "result": {
+          "top3": [
+            {
+              "class_id": 934,
+              "label": "cheeseburger",
+              "score": 0.99609375
+            },
+            {
+              "class_id": 1000,
+              "label": "toilet tissue",
+              "score": 0.0
+            },
+            {
+              "class_id": 327,
+              "label": "lycaenid",
+              "score": 0.0
+            }
+          ],
+          "demo_id": "D2-05",
+          "backend": "GPU",
+          "runtime": "vendor.tflite_c_api",
+          "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+          "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+          "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+          "runs": 3,
+          "warmup": 1,
+          "threads": 2,
+          "crop": null,
+          "inference_ms_median": 9.442278999813425,
+          "inference_ms_p95": 9.515449899936357,
+          "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+          "tensor_contract": {
+            "inputs": [
+              {
+                "name": "input",
+                "shape": [
+                  1,
+                  224,
+                  224,
+                  3
+                ],
+                "dtype": "<class 'numpy.uint8'>",
+                "quantization": [
+                  0.0078125,
+                  128
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "slot": 0,
+                "name": "MobilenetV1/Predictions/Reshape_1",
+                "shape": [
+                  1,
+                  1001
+                ],
+                "dtype": "<class 'numpy.uint8'>",
+                "quantization": [
+                  0.00390625,
+                  0
+                ]
+              }
+            ]
+          },
+          "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+          "runtime_version": "2.8.4"
+        },
+        "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+        "correctness": {
+          "passed": true,
+          "criterion": "same top-1 as original TFLite CPU"
+        }
+      },
+      "cpu": {
+        "top3": [
+          {
+            "class_id": 934,
+            "label": "cheeseburger",
+            "score": 0.99609375
+          },
+          {
+            "class_id": 1000,
+            "label": "toilet tissue",
+            "score": 0.0
+          },
+          {
+            "class_id": 327,
+            "label": "lycaenid",
+            "score": 0.0
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+        "runs": 1,
+        "warmup": 0,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 45.95909700037737,
+        "inference_ms_p95": 45.95909700037737,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "requested_backend": "all"
+    }
+  ],
+  "original_runtimes_unchanged": true,
+  "scope": "Functional CPU/OpenCL GPU/HTP controls on selected public images;3 HTP invocations,3 GPU invokes after1warmup. Not a latency benchmark or dataset accuracy evaluation."
+}

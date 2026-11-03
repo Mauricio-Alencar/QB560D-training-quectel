@@ -1,0 +1,9 @@
+qb560d-training-wlan
+wlan0
+yes
+-1
+auto
+600
+600 root /etc/NetworkManager/system-connections/qb560d-training-wlan.nmconnection
+42:denyinterfaces bridge0 wlan0
+

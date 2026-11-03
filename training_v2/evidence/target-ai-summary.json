@@ -1,0 +1,110 @@
+{
+  "at_host_utc": "2026-11-01T17:47:57.508887+00:00",
+  "runs": [
+    {
+      "demo": "classification",
+      "repetition": 1,
+      "exit_code": 0,
+      "receipt": "20261101T174715153721Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "detection",
+      "repetition": 1,
+      "exit_code": 0,
+      "receipt": "20261101T174716531494Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "pose",
+      "repetition": 1,
+      "exit_code": 0,
+      "receipt": "20261101T174718156496Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "gesture",
+      "repetition": 1,
+      "exit_code": 0,
+      "receipt": "20261101T174722092521Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "segmentation",
+      "repetition": 1,
+      "exit_code": 0,
+      "receipt": "20261101T174724178847Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "classification",
+      "repetition": 2,
+      "exit_code": 0,
+      "receipt": "20261101T174729342820Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "detection",
+      "repetition": 2,
+      "exit_code": 0,
+      "receipt": "20261101T174730677387Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "pose",
+      "repetition": 2,
+      "exit_code": 0,
+      "receipt": "20261101T174732315824Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "gesture",
+      "repetition": 2,
+      "exit_code": 0,
+      "receipt": "20261101T174736319947Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "segmentation",
+      "repetition": 2,
+      "exit_code": 0,
+      "receipt": "20261101T174738395910Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "classification",
+      "repetition": 3,
+      "exit_code": 0,
+      "receipt": "20261101T174743544427Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "detection",
+      "repetition": 3,
+      "exit_code": 0,
+      "receipt": "20261101T174744899936Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "pose",
+      "repetition": 3,
+      "exit_code": 0,
+      "receipt": "20261101T174746504018Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "gesture",
+      "repetition": 3,
+      "exit_code": 0,
+      "receipt": "20261101T174750414553Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    },
+    {
+      "demo": "segmentation",
+      "repetition": 3,
+      "exit_code": 0,
+      "receipt": "20261101T174752492764Z",
+      "scope": "physical QB560D-EU CPU, 20 invokes after 3 warmups"
+    }
+  ]
+}

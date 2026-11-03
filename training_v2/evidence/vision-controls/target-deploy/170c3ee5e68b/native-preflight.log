@@ -1,0 +1,4 @@
+  File "/opt/qb560d-ai-htp251/htp-controls/ai/htp_target.py", line 242
+    scope='Functional controls on reviewed images. No dataset accuracy or latency benchmark.')))
+                                                                                               ^
+SyntaxError: unmatched ')'

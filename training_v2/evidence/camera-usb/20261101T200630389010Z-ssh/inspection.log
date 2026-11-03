@@ -1,0 +1,284 @@
+DISPLAY I2C DEVICES
+/sys/bus/i2c/devices/2-002b name=lt9611
+/sys/devices/platform/soc/990000.i2c/i2c-2/2-002b/driver
+power/runtime_status=unsupported
+power/control=auto
+modalias
+name
+of_node
+power
+subsystem
+supplier:f000000.pinctrl
+uevent
+waiting_for_supplier
+/sys/bus/i2c/devices/2-0041 name=lt9611uxd
+/sys/bus/i2c/drivers/lt9611uxd
+power/runtime_status=unsupported
+power/control=auto
+driver
+modalias
+name
+of_node
+power
+subsystem
+supplier:f000000.pinctrl
+uevent
+
+DRM STATE
+/sys/kernel/debug/dri/0/state
+plane[67]: plane-0
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[87]: plane-1
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[93]: plane-2
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[96]: plane-3
+	crtc=crtc-0
+	fb=200
+		allocated by = weston
+		refcount=2
+		format=AB24 little-endian (0x34324241)
+		modifier=0x0
+		size=1920x1080
+		layers:
+			size[0]=1920x1080
+			pitch[0]=7680
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=1
+				start=00000000
+				size=8294400
+				imported=yes
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[99]: plane-4
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[103]: plane-5
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[106]: plane-6
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[109]: plane-7
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[112]: crtc-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=8
+	connector_mask=2
+	encoder_mask=2
+	mode: "1920x1080x60x148500vid": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x8 0x20000000
+crtc[167]: crtc-1
+	enable=0
+	active=0
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=0
+/sys/kernel/debug/dri/128/state
+plane[67]: plane-0
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[87]: plane-1
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[93]: plane-2
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[96]: plane-3
+	crtc=crtc-0
+	fb=200
+		allocated by = weston
+		refcount=2
+		format=AB24 little-endian (0x34324241)
+		modifier=0x0
+		size=1920x1080
+		layers:
+			size[0]=1920x1080
+			pitch[0]=7680
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=1
+				start=00000000
+				size=8294400
+				imported=yes
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[99]: plane-4
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[103]: plane-5
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[106]: plane-6
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[109]: plane-7
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=0
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[112]: crtc-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=8
+	connector_mask=2
+	encoder_mask=2
+	mode: "1920x1080x60x148500vid": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x8 0x20000000
+crtc[167]: crtc-1
+	enable=0
+	active=0
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=0
+
+WESTON PROCESS AND LOG FILES
+/proc/3592: weston --log=logcat --config=/etc/xdg/weston/weston.ini 
+/dev/tty2
+/dev/tty2
+
+DRM QUERY TOOL
+trying to open device 'i915'...failed
+trying to open device 'amdgpu'...failed
+trying to open device 'radeon'...failed
+trying to open device 'nouveau'...failed
+trying to open device 'vmwgfx'...failed
+trying to open device 'omapdrm'...failed
+trying to open device 'exynos'...failed
+trying to open device 'tilcdc'...failed
+trying to open device 'msm'...failed
+trying to open device 'sti'...failed
+trying to open device 'tegra'...failed
+trying to open device 'imx-drm'...failed
+trying to open device 'rockchip'...failed
+trying to open device 'atmel-hlcdc'...failed
+trying to open device 'fsl-dcu-drm'...failed
+trying to open device 'vc4'...failed
+trying to open device 'virtio_gpu'...failed
+trying to open device 'mediatek'...failed
+trying to open device 'meson'...failed
+trying to open device 'pl111'...failed
+trying to open device 'stm'...failed
+trying to open device 'sun4i-drm'...failed
+trying to open device 'armada-drm'...failed
+trying to open device 'komeda'...failed
+trying to open device 'imx-dcss'...failed
+trying to open device 'mxsfb-drm'...failed
+
+END SNAPSHOT

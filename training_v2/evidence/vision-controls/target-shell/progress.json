@@ -1,0 +1,4 @@
+{
+  "command": "tail -n 16 /opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11.console.log",
+  "exit_code": 0
+}

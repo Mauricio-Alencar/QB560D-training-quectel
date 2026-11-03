@@ -1,0 +1,6 @@
+{
+  "transport": "SSH",
+  "host_key_verified": true,
+  "command": "for n in /sys/class/drm/card*-*; do [ -d \"$n\" ] || continue; printf '\\nCONNECTOR %s\\n' \"$n\"; for f in status enabled modes; do if [ -r \"$n/$f\" ]; then printf '%s: ' \"$f\"; cat \"$n/$f\"; fi; done; if [ -r \"$n/edid\" ]; then printf 'edid_bytes: '; wc -c < \"$n/edid\"; fi; done; printf '\\nDRIVER\\n'; readlink -f /sys/class/drm/card0/device/driver; modetest -D /dev/dri/card0 -c 2>&1 | head -n 180",
+  "exit_code": 0
+}

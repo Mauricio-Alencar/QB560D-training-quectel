@@ -1,0 +1,17 @@
+active
+HTTP/2 200 
+[1mdate[0m: Sun, 01 Nov 2026 03:44:49 GMT
+[1mcontent-type[0m: text/html; charset=utf-8
+[1mserver[0m: cloudflare
+[1mlast-modified[0m: Sat, 24 Oct 2026 11:34:40 GMT
+[1mallow[0m: GET, HEAD
+[1maccept-ranges[0m: bytes
+[1mage[0m: 520
+[1mcf-cache-status[0m: HIT
+[1mcf-ray[0m: a537e734480f64f7-GIG
+[1malt-svc[0m: h3=":443"; ma=86400
+
+default via 192.168.0.1  proto dhcp  metric 600 
+192.168.0.0/24  proto kernel  scope link  src 192.168.0.11  metric 600 
+
+__DOCKER_DEMO_EXIT__=0

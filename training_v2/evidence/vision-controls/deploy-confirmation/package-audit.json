@@ -1,0 +1,53 @@
+{
+  "result": "PASS_CASE_INPUTS_DOCUMENTED_PACKAGED_AND_DEPLOYED",
+  "cases": 11,
+  "distinct_inputs": 6,
+  "input_image_files": 7,
+  "target_assets_checked": 11,
+  "rendered_outputs": 33,
+  "files": [
+    {
+      "image": "burger.jpg",
+      "sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    },
+    {
+      "image": "cat.jpg",
+      "sha256": "2533197401eebe9410ea4d063f86c43fbd2666f3e8165a38aca155c0d09c21be",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    },
+    {
+      "image": "fist.jpg",
+      "sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    },
+    {
+      "image": "male_full_height_hands.jpg",
+      "sha256": "8a7fe5be8b90d6078b09913ca28f7e5d342f8d3cde856ab4e3327d2970b887f8",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    },
+    {
+      "image": "pose.jpg",
+      "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    },
+    {
+      "image": "pose_lower_body_occluded.png",
+      "sha256": "1f02ac8dd8b7223f678d90bb6af31059c0fe593f02f4e8916530e2676b0fc18d",
+      "in_provision_bundle": true,
+      "in_release_zip": true,
+      "on_target": true
+    }
+  ],
+  "deploy_evidence": "evidence/vision-controls/deploy-confirmation/summary.json"
+}

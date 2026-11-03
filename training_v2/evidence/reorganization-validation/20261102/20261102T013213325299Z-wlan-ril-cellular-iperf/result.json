@@ -1,0 +1,10 @@
+{
+  "label": "wlan-ril-cellular-iperf",
+  "script": ".build\\reorganization-validation-20261102\\network_validation.py",
+  "args": [],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 1,
+  "timed_out": false,
+  "seconds": 4.25,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T013213325299Z-wlan-ril-cellular-iperf\\console.log"
+}

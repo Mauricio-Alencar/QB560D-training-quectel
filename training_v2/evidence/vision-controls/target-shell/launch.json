@@ -1,0 +1,4 @@
+{
+  "command": "nohup sh /opt/qb560d-ai-htp251/htp-controls/run.sh run-all --output /opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11 >/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11.console.log 2>&1 </dev/null & echo TARGET_PID=$!",
+  "exit_code": 0
+}

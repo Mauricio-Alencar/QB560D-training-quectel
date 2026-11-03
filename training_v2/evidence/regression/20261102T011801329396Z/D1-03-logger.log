@@ -1,0 +1,104 @@
+Boot and system health
+ 09:18:03 up  2:43,  1 user,  load average: 3.08, 3.19, 3.09
+  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION                   
+● avahi-daemon.service       loaded failed failed Avahi mDNS/DNS-SD Stack       
+● camera_cgroup.service      loaded failed failed Create Camera Cgroup Service  
+● chg-policy.service         loaded failed failed Charger Policy Service        
+● dhcpd6.service             loaded failed failed DHCPv6 Server Daemon          
+● dnsmasq.service            loaded failed failed dnsmasq - A lightweight DHCP …
+● fs-scrub-daemon.service    loaded failed failed fs-scrub-daemon Service       
+● init_post_boot.service     loaded failed failed QTI Post Boot Service         
+● ip6tables.service          loaded failed failed IPv6 Packet Filtering Framewo…
+● ipacmdiag.service          loaded failed failed start IPA configuration manag…
+● iptables.service           loaded failed failed IPv4 Packet Filtering Framewo…
+● lunch-make-scripts.service loaded failed failed lunch make scripts            
+● qcmap_wlan.service         loaded failed failed WLAN service                  
+● qti_pppd.service           loaded failed failed qti_ppp service               
+● thermal-engine.service     loaded failed failed Thermal Engine Service        
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+14 loaded units listed.
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 09:18:02 CST. --
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface eth1 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: No subnet declaration for eth2 (no IPv4 addresses).
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: ** Ignoring requests on eth2.  If this is not what
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    you want, please write a subnet declaration
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    in your dhcpd.conf file for the network segment
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface eth2 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: No subnet declaration for dummy0 (no IPv4 addresses).
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: ** Ignoring requests on dummy0.  If this is not what
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    you want, please write a subnet declaration
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    in your dhcpd.conf file for the network segment
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface dummy0 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: rc_sel is now: 0x2
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: the following RC(s) will be tested:
+Nov 02 06:35:13 qcs6490-odk kernel: RC 1
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: TEST: 10
+Nov 02 06:35:13 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: 
+                                    
+                                    PCIe: attempting to enumerate RC1
+Nov 02 06:35:13 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: PCIe: RC1 is already enumerated
+Nov 02 06:35:14 qcs6490-odk systemd[1]: Failed to start QTI Post Boot Service.
+Nov 02 06:35:33 qcs6490-odk systemd[1]: Failed to start lunch make scripts.
+Nov 02 06:35:43 qcs6490-odk kernel: [soft_i][0x6808e230][22:35:43.063108] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 09:14:22 qcs6490-odk systemd[1]: systemrw-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: /lib/systemd/system/ql-ota.service:8: Failed to parse service restart specifier, ignoring: yes
+Nov 02 09:14:22 qcs6490-odk systemd[1]: persist-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: cache-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: data.mount: What= setting is missing. Refusing.
+
+Root filesystem
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G  9.6G   10G  50% /
+/dev/sda6 on / type ext4 (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=2463176k,nr_inodes=615794,mode=755)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,size=3739112k,nr_inodes=934778)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,size=747824k,nr_inodes=934778,mode=755)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,nr_inodes=934778)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=3739112k,nr_inodes=934778,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=3739112k,nr_inodes=934778)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda9 on /systemrw type ext4 (rw,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf9 on /bt_firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sdf8 on /persist type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdg3 on /dsp type ext4 (ro,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered)
+/dev/sdg1 on /firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sda8 on /cache type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sda12 on /data type ext4 (rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+diag on /dev/ffs-diag type functionfs (rw,relatime)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+nsfs on /run/qb560d-docker-demo/exec/netns/default type nsfs (rw)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=747924k,mode=700)
+FAIL: Training event absent from journal. Check logger/journald routing and permissions.
+

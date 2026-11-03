@@ -1,0 +1,376 @@
+{
+  "status": "FAILED_DEMOS",
+  "runtime": "/opt/qairt-isolated/2.51.40.260930",
+  "isolated_demo_root": "/opt/qb560d-ai-htp251",
+  "original_runtimes_unchanged": true,
+  "results": [
+    {
+      "task": "classification",
+      "passed": true,
+      "results": [
+        {
+          "top3": [
+            {
+              "class_id": 653,
+              "label": "military uniform",
+              "score": 0.89453125
+            },
+            {
+              "class_id": 907,
+              "label": "Windsor tie",
+              "score": 0.0390625
+            },
+            {
+              "class_id": 466,
+              "label": "bulletproof vest",
+              "score": 0.01171875
+            }
+          ],
+          "task": "classification",
+          "backend": "cpu",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+          "input_image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+          "profile": {
+            "accelerator_events": 0,
+            "positive_cycle_events": 0,
+            "execute_us": [
+              11192.0,
+              10102.0,
+              9290.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "criterion": "same top-1 as original TFLite CPU"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        },
+        {
+          "top3": [
+            {
+              "class_id": 653,
+              "label": "military uniform",
+              "score": 0.87109375
+            },
+            {
+              "class_id": 907,
+              "label": "Windsor tie",
+              "score": 0.05078125
+            },
+            {
+              "class_id": 466,
+              "label": "bulletproof vest",
+              "score": 0.01171875
+            }
+          ],
+          "task": "classification",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+          "input_image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 99,
+            "execute_us": [
+              3351.0,
+              2273.0,
+              2259.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "criterion": "same top-1 as original TFLite CPU"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261101T194546Z-b3ea7\\classification"
+    },
+    {
+      "task": "detection",
+      "passed": false,
+      "results": [
+        {
+          "detections": [
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.09256833791732788,
+                0.0,
+                0.1729634404182434,
+                0.9302816390991211
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.3389570415019989,
+                0.0,
+                0.44266608357429504,
+                1.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.22495460510253906,
+                0.0,
+                1.0,
+                0.01568657159805298
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.5385453701019287,
+                0.0,
+                0.7400960922241211,
+                1.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.5407115817070007,
+                0.0,
+                0.6185932755470276,
+                0.0
+              ]
+            },
+            {
+              "class_id": 40,
+              "label": "skateboard",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.0,
+                0.0,
+                0.0,
+                0.8289411664009094
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.09497891366481781,
+                0.0,
+                0.1724875122308731,
+                0.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.0,
+                0.0,
+                0.0,
+                0.032090455293655396
+              ]
+            }
+          ],
+          "task": "detection",
+          "backend": "cpu",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "c833561d47a2557c2ffd4d850e723c275abd61e55ce767c0f2130a7c25a14c7d",
+          "input_image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+          "profile": {
+            "accelerator_events": 0,
+            "positive_cycle_events": 0,
+            "execute_us": [
+              14152.0,
+              12756.0,
+              12748.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": false,
+            "person_box_iou": 0.21655699129839187,
+            "criterion": "reference person detected with box IoU >= 0.5"
+          },
+          "passed": false,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        },
+        {
+          "detections": [
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.28118807077407837,
+                0.05356159806251526,
+                0.7385918498039246,
+                0.9488792419433594
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.03188779950141907,
+                0.2247554361820221,
+                0.9272054433822632,
+                0.769015908241272
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.11091923713684082,
+                0.0,
+                0.8828520774841309,
+                1.0
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.83203125,
+              "box_yxyx": [
+                0.0,
+                0.11091923713684082,
+                1.0,
+                0.8828520774841309
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.6796875,
+              "box_yxyx": [
+                0.01818186044692993,
+                0.01794549822807312,
+                0.7054646015167236,
+                0.595547080039978
+              ]
+            },
+            {
+              "class_id": 31,
+              "label": "tie",
+              "score": 0.64453125,
+              "box_yxyx": [
+                0.7084828615188599,
+                0.43782442808151245,
+                0.8997373580932617,
+                0.5649223923683167
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.609375,
+              "box_yxyx": [
+                0.2588408291339874,
+                0.019751131534576416,
+                0.9353460073471069,
+                0.6350491642951965
+              ]
+            },
+            {
+              "class_id": 66,
+              "label": "dining table",
+              "score": 0.59765625,
+              "box_yxyx": [
+                0.508635938167572,
+                0.03440013527870178,
+                0.9958177208900452,
+                0.8197990655899048
+              ]
+            },
+            {
+              "class_id": 31,
+              "label": "tie",
+              "score": 0.5859375,
+              "box_yxyx": [
+                0.7239762544631958,
+                0.45460134744644165,
+                0.8746565580368042,
+                0.5498793721199036
+              ]
+            },
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.5390625,
+              "box_yxyx": [
+                0.23896214365959167,
+                0.31938067078590393,
+                0.9827631711959839,
+                1.0
+              ]
+            }
+          ],
+          "task": "detection",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "c833561d47a2557c2ffd4d850e723c275abd61e55ce767c0f2130a7c25a14c7d",
+          "input_image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 168,
+            "execute_us": [
+              4997.0,
+              3170.0,
+              3422.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "person_box_iou": 0.8294063728964656,
+            "criterion": "reference person detected with box IoU >= 0.5"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261101T194546Z-b3ea7\\detection"
+    },
+    {
+      "task": "gesture",
+      "passed": false,
+      "error": "inference failed; see C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261101T194546Z-b3ea7\\gesture\\cpu\\inference.log"
+    }
+  ],
+  "evidence": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261101T194546Z-b3ea7"
+}

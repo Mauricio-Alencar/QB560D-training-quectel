@@ -1,0 +1,70 @@
+{
+  "runtime_version": "2.51.40.260930",
+  "runtime": "/opt/qairt-isolated/2.51.40.260930",
+  "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T025822212907Z-cpu-thumbs_down",
+  "backend": "cpu",
+  "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\update_QIART\\hand_gesture\\assets\\images\\thumbs_down.jpg",
+  "image_sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+  "prediction": "No_hand",
+  "confidence": 0.0,
+  "expected": "Thumb_Down",
+  "passed": false,
+  "probabilities": {},
+  "details": {
+    "palm_score": 0.94140625,
+    "palm_box_xyxy": [
+      77.19487762451172,
+      389.9114074707031,
+      200.32481384277344,
+      513.0413208007812
+    ],
+    "roi_corners": [
+      [
+        -89.40074157714844,
+        317.0804443359375
+      ],
+      [
+        35.618736267089844,
+        598.374267578125
+      ],
+      [
+        191.89312744140625,
+        192.0609130859375
+      ],
+      [
+        316.91259765625,
+        473.354736328125
+      ]
+    ],
+    "rotation_radians": -0.4182243347167969,
+    "landmark_score": 0.04296875,
+    "handedness": 0.02734375
+  },
+  "stages": [
+    {
+      "graph": "palm_detector",
+      "backend": "libQnnCpu.so",
+      "profile": {
+        "execute_us": [
+          76580.0
+        ],
+        "accelerator_events": 0,
+        "positive_cycle_events": 0
+      },
+      "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"
+    },
+    {
+      "graph": "hand_landmark_detector",
+      "backend": "libQnnCpu.so",
+      "profile": {
+        "execute_us": [
+          22111.0
+        ],
+        "accelerator_events": 0,
+        "positive_cycle_events": 0
+      },
+      "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"
+    }
+  ],
+  "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."
+}

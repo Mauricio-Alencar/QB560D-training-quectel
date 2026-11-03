@@ -1,0 +1,10 @@
+{
+  "label": "long-gesture-probe",
+  "script": ".build\\reorganization-validation-20261102\\long_gesture_probe.py",
+  "args": [],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 5.094,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T020613045486Z-long-gesture-probe\\console.log"
+}

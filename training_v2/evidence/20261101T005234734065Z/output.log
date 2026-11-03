@@ -1,0 +1,13 @@
+WARNING: Failed to fetch Hexagon NN version. This might be because you're using incompatible versions of libhexagon_interface and libhexagon_nn_skel. You must use compatible versions. Refer to Tensorflow Lite Hexagon Delegate Guide.
+INFO: Hexagon Delegate is not supported.
+
+Traceback (most recent call last):
+  File "ai/run_demo.py", line 243, in <module>
+    main()
+  File "ai/run_demo.py", line 181, in main
+    interpreter = Interpreter(model_path=str(model), num_threads=a.threads, backend=a.backend)
+  File "/tmp/qb560d-training/ai/c_api_backend.py", line 114, in __init__
+    raise RuntimeError("Hexagon DSP delegate unavailable; CPU retry is disabled. Inspect DSP NN/skel/SoC compatibility.")
+RuntimeError: Hexagon DSP delegate unavailable; CPU retry is disabled. Inspect DSP NN/skel/SoC compatibility.
+
+__QB560D_EXIT__=1

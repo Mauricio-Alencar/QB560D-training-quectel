@@ -1,0 +1,7 @@
+modeltools::IrQuantizer::IrQuantizer: Param Quantizer should be set to symmetric for 32 bit biases. Will ignore param quantizer option: min-max for biases
+2026-11-01 16:49:08,614 - 278 - INFO - Quantization completed successfully: 
+[ WARNING ] Current input dlc file is fully quantized! Nothing need to do.
+modeltools::IrGraph::reEvalMacsParams: Re-evaluated graph statistics after IrOptimizer optimization passes:
+modeltools::IrGraph::reEvalMacsParams: Total MACs: 728245791
+modeltools::IrGraph::reEvalMacsParams: Total Params Count: 4101231
+2026-11-01 16:49:08,747 - 278 - INFO - Quantized Model saved at: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\models\detection\model.w8a16.dlc 

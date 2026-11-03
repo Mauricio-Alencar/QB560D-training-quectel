@@ -1,0 +1,2 @@
+Logging started for program DebugLog on host qcs6490-odk at Sun Nov 01 2026 10:12:08.989549 (this log file is /tmp/qb560d-training/evidence/htp-comparison/20261101T021205Z/session_1_snpe_cpu_fixed/DebugLog.00.txt)
+Logging stopped at Sun Nov 01 2026 10:12:09.742996

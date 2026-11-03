@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload\nsh target/ai.sh verify\nsh target/ai.sh inspect",
+  "exit_code": 0
+}

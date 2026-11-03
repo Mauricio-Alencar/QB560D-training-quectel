@@ -1,0 +1,135 @@
+{
+  "detections": [
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.83203125,
+      "box_yxyx": [
+        0.28118807077407837,
+        0.05356159806251526,
+        0.7385918498039246,
+        0.9488792419433594
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.83203125,
+      "box_yxyx": [
+        0.03188779950141907,
+        0.2247554361820221,
+        0.9272054433822632,
+        0.769015908241272
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.83203125,
+      "box_yxyx": [
+        0.11091923713684082,
+        0.0,
+        0.8828520774841309,
+        1.0
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.83203125,
+      "box_yxyx": [
+        0.0,
+        0.11091923713684082,
+        1.0,
+        0.8828520774841309
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.6796875,
+      "box_yxyx": [
+        0.01818186044692993,
+        0.01794549822807312,
+        0.7054646015167236,
+        0.595547080039978
+      ]
+    },
+    {
+      "class_id": 31,
+      "label": "tie",
+      "score": 0.64453125,
+      "box_yxyx": [
+        0.7084828615188599,
+        0.43782442808151245,
+        0.8997373580932617,
+        0.5649223923683167
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.609375,
+      "box_yxyx": [
+        0.2588408291339874,
+        0.019751131534576416,
+        0.9353460073471069,
+        0.6350491642951965
+      ]
+    },
+    {
+      "class_id": 66,
+      "label": "dining table",
+      "score": 0.59765625,
+      "box_yxyx": [
+        0.508635938167572,
+        0.03440013527870178,
+        0.9958177208900452,
+        0.8197990655899048
+      ]
+    },
+    {
+      "class_id": 31,
+      "label": "tie",
+      "score": 0.5859375,
+      "box_yxyx": [
+        0.7239762544631958,
+        0.45460134744644165,
+        0.8746565580368042,
+        0.5498793721199036
+      ]
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.5390625,
+      "box_yxyx": [
+        0.23896214365959167,
+        0.31938067078590393,
+        0.9827631711959839,
+        1.0
+      ]
+    }
+  ],
+  "task": "detection",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "c833561d47a2557c2ffd4d850e723c275abd61e55ce767c0f2130a7c25a14c7d",
+  "input_image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 168,
+    "execute_us": [
+      4997.0,
+      3170.0,
+      3422.0
+    ]
+  },
+  "comparison_to_original_tflite_cpu": {
+    "passed": true,
+    "person_box_iou": 0.8294063728964656,
+    "criterion": "reference person detected with box IoU >= 0.5"
+  },
+  "passed": true,
+  "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+}

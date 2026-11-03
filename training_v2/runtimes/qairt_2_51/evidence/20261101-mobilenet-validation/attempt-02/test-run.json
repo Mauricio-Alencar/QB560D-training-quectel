@@ -1,0 +1,11 @@
+{
+  "remote": "/tmp/update-qiart-251-mobilenet-validation",
+  "remote_output": "/tmp/update-qiart-251-mobilenet-validation/results/20261101T022857617912Z",
+  "result_id": "20261101T022857617912Z",
+  "version": "2.51.40.260930",
+  "runs": 5,
+  "originals_unchanged": true,
+  "device": "? device product:qcm6490-Ubuntu transport_id:2",
+  "execution_pass": true,
+  "error": null
+}

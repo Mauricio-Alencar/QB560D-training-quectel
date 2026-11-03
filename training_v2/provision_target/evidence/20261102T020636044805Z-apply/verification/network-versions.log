@@ -1,0 +1,13 @@
+iperf 3.22 (cJSON 1.7.15)
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64
+Optional features available: CPU affinity setting, IPv6 flow label, TCP congestion algorithm setting, sendfile / zerocopy, socket pacing, bind to device, support IPv4 don't fragment, POSIX threads, GSO/GRO support
+                            (optional <dev> equivalent to `--bind-dev <dev>`)
+  --bind-dev <dev>          bind to the network interface with SO_BINDTODEVICE
+                              (option <dev> equivalent to `--bind-dev <dev>`)
+ss utility, iproute2-ss200127
+State    Recv-Q   Send-Q     Local Address:Port     Peer Address:Port  Process  
+LISTEN   0        10             127.0.0.1:5000          0.0.0.0:*              
+LISTEN   0        4              127.0.0.1:5037          0.0.0.0:*              
+LISTEN   0        4096       127.0.0.53%lo:53            0.0.0.0:*              
+LISTEN   0        4096                   *:6566                *:*              
+LISTEN   0        4096                   *:22                  *:*

@@ -1,0 +1,51 @@
+0
+Sun Nov  1 19:50:36 UTC 2026
+mainversion=QDPA_Ubuntu20.04.003.51.303
+subversion=V01
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+/opt/qb560d-workshop/bin/iperf3
+iperf 3.22 (cJSON 1.7.15)
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64
+Optional features available: CPU affinity setting, IPv6 flow label, TCP congestion algorithm setting, sendfile / zerocopy, socket pacing, bind to device, support IPv4 don't fragment, POSIX threads, GSO/GRO support
+                            (optional <dev> equivalent to `--bind-dev <dev>`)
+  --bind-dev <dev>          bind to the network interface with SO_BINDTODEVICE
+  --rcv-timeout #           idle timeout for receiving data (default 120000 ms)
+  --snd-timeout #           timeout for unacknowledged TCP data
+                              (option <dev> equivalent to `--bind-dev <dev>`)
+  --connect-timeout #       timeout for control connection setup (ms)
+14: rmnet_data0@rmnet_ipa0: <UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN group default qlen 1000
+    inet 100.65.195.62/30 scope global rmnet_data0
+       valid_lft forever preferred_lft forever
+default via 100.65.195.62 dev rmnet_data0  metric 500 
+100.65.195.60/30 dev rmnet_data0  proto kernel  scope link  src 100.65.195.62 
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+0:	from all lookup local 
+32766:	from all lookup main 
+32767:	from all lookup default 
+3.07 2.98 2.87 1/685 6413
+    PID COMMAND         %CPU
+      1 systemd          0.1
+      2 kthreadd         0.0
+      3 rcu_gp           0.0
+      4 rcu_par_gp       0.0
+      9 mm_percpu_wq     0.0
+     10 ksoftirqd/0      0.2
+     11 rcu_preempt      0.0
+     12 rcuog/0          0.0
+     13 rcuop/0          0.0
+     14 migration/0      0.0
+     15 cpuhp/0          0.0
+     16 cpuhp/1          0.0
+     17 migration/1      0.0
+     18 ksoftirqd/1      0.0
+     20 kworker/1:0H-ev  0.0
+     21 rcuop/1          0.0
+     22 cpuhp/2          0.0
+     23 migration/2      0.0
+     24 ksoftirqd/2      0.0
+     26 kworker/2:0H-ev  0.0
+     27 rcuop/2          0.0
+     28 cpuhp/3          0.0
+     29 migration/3      0.0
+     30 ksoftirqd/3      0.0
+

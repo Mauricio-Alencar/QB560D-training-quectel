@@ -1,0 +1,59 @@
+Focused NR5G verification,1 November2026. Host UTC timestamps.
+RIL70: registration and data RAT only.
+
+2026-11-01T19:26:26.175486+00:00 [outside_bound_transfer] RIL70: registration=1,RAT=19
+2026-11-01T19:29:50.251889+00:00 [outside_bound_transfer] RIL70: registration=1,RAT=19
+2026-11-01T19:30:08.679180+00:00 [during_bound_transfer] RIL70: registration=1,RAT=19
+2026-11-01T19:31:26.456646+00:00 [outside_bound_transfer] RIL70: registration=1,RAT=19
+
+2026-11-01T19:27:18.715794+00:00 [outside_bound_transfer] AT+QNWINFO
+ERROR
+
+2026-11-01T19:27:27.654168+00:00 [outside_bound_transfer] AT+QENG="servingcell"
++QENG: "servingcell","NOCONN"(net_state),"LTE"(net_des),"FDD"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-98(rsrp),-10(rsrq),-67(rssi),12(sinr),-
+OK
+
+2026-11-01T19:27:39.205147+00:00 [outside_bound_transfer] AT+C5GREG?
++C5GREG: 0,0
+OK
+
+2026-11-01T19:27:44.688487+00:00 [outside_bound_transfer] AT+QENDC
+ERROR
+
+2026-11-01T19:28:05.649626+00:00 [outside_bound_transfer] AT+QCAINFO
+ERROR
+
+2026-11-01T19:28:15.341240+00:00 [outside_bound_transfer] AT+QNWPREFCFG="mode_pref"
+ERROR
+
+2026-11-01T19:28:48.139108+00:00 [during_bound_transfer] AT+QENG="servingcell"
++QENG: "servingcell","NOCONN"(net_state),"LTE"(net_des),"FDD"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-97(rsrp),-11(rsrq),-66(rssi),10(sinr),-
+OK
+
+2026-11-01T19:28:51.127435+00:00 [during_bound_transfer] AT+COPS?
++COPS: 0,0,"TIM TIM",7
+OK
+
+2026-11-01T19:28:54.673896+00:00 [outside_bound_transfer] AT+C5GREG?
++C5GREG: 0,0
+OK
+
+2026-11-01T19:28:58.198515+00:00 [outside_bound_transfer] AT+CEREG?
++CEREG: 0,1
+OK
+
+2026-11-01T19:29:01.194899+00:00 [outside_bound_transfer] AT+QENG="servingcell"
++QENG: "servingcell","NOCONN"(net_state),"LTE"(net_des),"FDD"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-100(rsrp),-12(rsrq),-67(rssi),11(sinr),-
+OK
+
+2026-11-01T19:30:14.997197+00:00 [during_bound_transfer] AT+QENG="servingcell"
++QENG: "servingcell","NOCONN"(net_state),"LTE"(net_des),"FDD"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-98(rsrp),-11(rsrq),-68(rssi),11(sinr),-
+OK
+
+2026-11-01T19:30:18.021001+00:00 [during_bound_transfer] AT+C5GREG?
++C5GREG: 0,0
+OK
+
+2026-11-01T19:30:20.993173+00:00 [during_bound_transfer] AT+QENG="servingcell"
++QENG: "servingcell","NOCONN"(net_state),"LTE"(net_des),"FDD"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-97(rsrp),-12(rsrq),-66(rssi),10(sinr),-
+OK

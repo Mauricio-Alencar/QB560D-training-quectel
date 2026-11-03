@@ -1,0 +1,4 @@
+{
+  "command": "id; cat /etc/build_version; uname -a; uptime; df -h /opt; nmcli --colors no -f GENERAL.STATE,GENERAL.CONNECTION,IP4.ADDRESS,IP4.GATEWAY,IP4.DNS device show wlan0; ip -4 addr show dev rmnet_data0; ip -4 route; systemctl is-active qb560d-training.service || :; systemctl is-enabled qb560d-training.service || :",
+  "exit_code": 0
+}

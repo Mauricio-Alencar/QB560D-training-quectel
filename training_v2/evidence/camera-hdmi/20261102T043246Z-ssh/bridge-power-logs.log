@@ -1,0 +1,63 @@
+GPIO STATE
+
+KERNEL BRIDGE LOG
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x10: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x12: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x14: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x16: 10
+Nov 02 06:34:23 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/lt9611uxd_fw.bin
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD.bin CRC: 0x46
+Nov 02 06:34:24 qcs6490-odk kernel: msm-dai-q6-hdmi soc:qcom,msm-dai-q6-dp: DAI driver id is not set
+Nov 02 06:34:24 qcs6490-odk kernel: msm-dai-q6-hdmi soc:qcom,msm-dai-q6-dp1: ASoC: sink widget Display Port1 Playback overwritten
+Nov 02 06:34:24 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+
+WESTON LOG BEGIN
+
+WESTON LOG END
+
+BRIDGE SYSFS
+/sys/class/chip_class/lt9611uxd
+/sys/devices/virtual/chip_class/lt9611uxd:
+total 0
+-r--r--r-- 1 root root 4096 Nov  2 12:34 dev
+drwxr-xr-x 2 root root    0 Nov  2 12:34 power
+lrwxrwxrwx 1 root root    0 Nov  2 12:34 subsystem -> ../../../../class/chip_class
+-rw-r--r-- 1 root root 4096 Jun 18  2024 uevent
+-r--r--r-- 1 root root 4096 Nov  2 12:34 waiting_for_supplier
+
+MODULE SYMBOL STRINGS
+EDID_Info_Stu pointer is NULL
+Failed to read EDID byte number
+Failed to allocate memory for EDID data
+Failed to read EDID data for packet %d
+6EDID Length: %d
+6EDID Data: 
+Failed to retrieve EDID data
+Read Flash Firmware Crc=0x%02X
+Failed to write firmware data: %d
+Failed to load firmware: %d
+Firmware loaded, size: %zu bytes
+Firmware size exceeds 64KB limit
+Failed to prepare firmware data: %d
+The CRC is different, need to upgrade the firmware
+The old version is 0x%04llx need to upgrade the firmware
+LT9611UXD_Get_EDID
+request_firmware
+release_firmware
+__ksymtab_LT9611UXD_Get_EDID
+__kstrtab_LT9611UXD_Get_EDID
+chip_id_table
+chip_ids
+release_firmware
+request_firmware
+LT9611UXD_Prepare_Firmware_Data
+__crc_LT9611UXD_Get_EDID
+hpd_status
+__mod_i2c__chip_ids_device_table
+__mod_of__chip_id_table_device_table
+LT9611UXD_Firmware_Upgrade

@@ -1,0 +1,84 @@
+OWNERSHIP_AND_CHECKSUMS_OK
+
+__QA251_EXIT__=0
+
+SNAPSHOT={"original_hashes": {"/usr/lib/libSNPE.so": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so": "a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so": "579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6"}, "architecture": "aarch64", "kernel": "5.4.219-perf", "glibc": ["glibc", "2.31"], "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n"}
+
+__QA251_EXIT__=0
+
+
+__QA251_EXIT__=0
+
+
+__QA251_EXIT__=0
+
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\palm_detector\image.raw: 1 file pushed, 0 skipped. 5.6 MB/s (786432 bytes in 0.134s)
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (128 bytes in 0.010s)
+qnn-net-run pid:14895
+qnn-net-run build version: v2.51.40.260930230134
+qnn-net-run log level is : QNN_LOG_LEVEL_INFO
+Processing inference input(s):
+image -> /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/palm_detector/image.raw
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+Composing Graphs
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+Finalizing Graphs
+Executing Graphs
+Finished Executing Graphs
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+
+__QA251_EXIT__=0
+
+Profile extracted: update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\palm_detector\profile-palm_detector.log
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/palm_detector/output/: 6 files pulled, 0 skipped. 3.0 MB/s (278018 bytes in 0.089s)
+
+__QA251_EXIT__=0
+
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 5.3 MB/s (602112 bytes in 0.108s)
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (137 bytes in 0.006s)
+qnn-net-run pid:14926
+qnn-net-run build version: v2.51.40.260930230134
+qnn-net-run log level is : QNN_LOG_LEVEL_INFO
+Processing inference input(s):
+image -> /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/hand_landmark_detector/image.raw
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+Composing Graphs
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+Finalizing Graphs
+Executing Graphs
+Finished Executing Graphs
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+
+__QA251_EXIT__=0
+
+Profile extracted: update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\hand_landmark_detector\profile-hand_landmark_detector.log
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 0.9 MB/s (30817 bytes in 0.034s)
+
+__QA251_EXIT__=0
+
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.0 MB/s (256 bytes in 0.005s)
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.0 MB/s (256 bytes in 0.009s)
+update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (293 bytes in 0.007s)
+qnn-net-run pid:14958
+qnn-net-run build version: v2.51.40.260930230134
+qnn-net-run log level is : QNN_LOG_LEVEL_INFO
+Processing inference input(s):
+hand -> /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/canned_gesture_classifier/hand.raw
+mirrored_hand -> /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/canned_gesture_classifier/mirrored_hand.raw
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+Composing Graphs
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+Finalizing Graphs
+Executing Graphs
+Finished Executing Graphs
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+
+__QA251_EXIT__=0
+
+Profile extracted: update_QIART\hand_gesture\evidence\fist-threshold-05\20261101T030342326353Z-htp-test_fist\canned_gesture_classifier\profile-canned_gesture_classifier.log
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.0 MB/s (29960 bytes in 0.027s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030342326353Z-htp-test_fist", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\update_QIART\\hand_gesture\\assets\\images\\test_fist.jpg", "image_sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24", "prediction": "None", "confidence": 0.7578125, "expected": null, "passed": null, "probabilities": {"None": 0.7578125, "Closed_Fist": 0.203125, "Open_Palm": 0.0078125, "Pointing_Up": 0.0078125, "Thumb_Down": 0.01953125, "Thumb_Up": 0.0078125, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.5, "palm_box_xyxy": [123.97644805908203, 111.09870910644531, 179.07708740234375, 166.19935607910156], "roi_corners": [[103.99311828613281, 30.102142333984375], [75.61488342285156, 164.8989715576172], [238.78993225097656, 58.48038101196289], [210.4116973876953, 193.27720642089844]], "rotation_radians": 0.20749592781066895, "palm_threshold": 0.5, "landmark_score": 0.94921875, "handedness": 0.99609375}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [25160.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5581.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2461.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+SNAPSHOT={"original_hashes": {"/usr/lib/libSNPE.so": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so": "a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72", "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so": "579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6"}, "architecture": "aarch64", "kernel": "5.4.219-perf", "glibc": ["glibc", "2.31"], "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n"}
+
+__QA251_EXIT__=0
+

@@ -1,0 +1,202 @@
+{
+  "case": {
+    "id": "burger-classification",
+    "task": "classification",
+    "image": "burger.jpg",
+    "expected": "cheeseburger"
+  },
+  "passed": true,
+  "image_sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+  "cpu": {
+    "top3": [
+      {
+        "class_id": 934,
+        "label": "cheeseburger",
+        "score": 0.99609375
+      },
+      {
+        "class_id": 1000,
+        "label": "toilet tissue",
+        "score": 0.0
+      },
+      {
+        "class_id": 327,
+        "label": "lycaenid",
+        "score": 0.0
+      }
+    ],
+    "demo_id": "D2-05",
+    "backend": "CPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+    "runs": 1,
+    "warmup": 0,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 54.678246000548825,
+    "inference_ms_p95": 54.678246000548825,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "input",
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.0078125,
+            128
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "MobilenetV1/Predictions/Reshape_1",
+          "shape": [
+            1,
+            1001
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.00390625,
+            0
+          ]
+        }
+      ]
+    },
+    "runtime_version": "2.8.4"
+  },
+  "gpu": {
+    "backend": "gpu",
+    "passed": true,
+    "runtime": "TFLite BSP 2.8.4",
+    "median_ms": 9.986686000047484,
+    "p95_ms": 10.048515100606892,
+    "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+    "result": {
+      "top3": [
+        {
+          "class_id": 934,
+          "label": "cheeseburger",
+          "score": 0.99609375
+        },
+        {
+          "class_id": 1000,
+          "label": "toilet tissue",
+          "score": 0.0
+        },
+        {
+          "class_id": 327,
+          "label": "lycaenid",
+          "score": 0.0
+        }
+      ],
+      "demo_id": "D2-05",
+      "backend": "GPU",
+      "runtime": "vendor.tflite_c_api",
+      "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+      "runs": 3,
+      "warmup": 1,
+      "threads": 2,
+      "crop": null,
+      "inference_ms_median": 9.986686000047484,
+      "inference_ms_p95": 10.048515100606892,
+      "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+      "tensor_contract": {
+        "inputs": [
+          {
+            "name": "input",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ],
+            "dtype": "<class 'numpy.uint8'>",
+            "quantization": [
+              0.0078125,
+              128
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "slot": 0,
+            "name": "MobilenetV1/Predictions/Reshape_1",
+            "shape": [
+              1,
+              1001
+            ],
+            "dtype": "<class 'numpy.uint8'>",
+            "quantization": [
+              0.00390625,
+              0
+            ]
+          }
+        ]
+      },
+      "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+      "runtime_version": "2.8.4"
+    },
+    "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+    "correctness": {
+      "passed": true,
+      "criterion": "same top-1 as original TFLite CPU"
+    }
+  },
+  "htp": {
+    "top3": [
+      {
+        "class_id": 934,
+        "label": "cheeseburger",
+        "score": 0.99609375
+      },
+      {
+        "class_id": 16,
+        "label": "robin",
+        "score": 0.0
+      },
+      {
+        "class_id": 991,
+        "label": "buckeye",
+        "score": 0.0
+      }
+    ],
+    "task": "classification",
+    "backend": "htp",
+    "runtime": "QAIRT/QNN 2.51.40.260930",
+    "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+    "input_image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+    "profile": {
+      "accelerator_events": 3,
+      "positive_cycle_events": 99,
+      "execute_us": [
+        4136.0,
+        2969.0,
+        2925.0
+      ]
+    },
+    "comparison_to_original_tflite_cpu": {
+      "passed": true,
+      "criterion": "same top-1 as original TFLite CPU"
+    },
+    "passed": true,
+    "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+  },
+  "raw_evidence_from_training_root": "evidence/vision-controls/20261101-reference-controls",
+  "runtime_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": []
+  }
+}

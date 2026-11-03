@@ -1,0 +1,42 @@
+offline/runtime/docker-29.9.2.tgz: OK
+offline/runtime/buildx-v0.38.1.linux-arm64: OK
+tar: docker/containerd-shim-runc-v2: time stamp 2026-10-21 02:47:32 is 73862115.223154559 s in the future
+tar: docker/dockerd: time stamp 2026-10-21 02:47:32 is 73862114.51516258 s in the future
+tar: docker/docker-proxy: time stamp 2026-10-21 02:47:32 is 73862114.49336482 s in the future
+tar: docker/runc: time stamp 2026-10-21 02:47:32 is 73862114.387572424 s in the future
+tar: docker/docker-init: time stamp 2026-10-21 02:47:32 is 73862114.378705236 s in the future
+tar: docker/ctr: time stamp 2026-10-21 02:47:32 is 73862114.204949403 s in the future
+tar: docker/containerd: time stamp 2026-10-21 02:47:32 is 73862113.914641122 s in the future
+tar: docker/docker: time stamp 2026-10-21 02:47:32 is 73862113.614160705 s in the future
+tar: docker: time stamp 2026-10-21 02:47:32 is 73862113.613824664 s in the future
+configuration OK
+Client:
+ Version:           29.9.2
+ API version:       1.56
+ Go version:        go1.26.10
+ Git commit:        a82e528
+ Built:             Tue Oct 20 18:43:37 2026
+ OS/Arch:           linux/arm64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          29.9.2
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.10
+  Git commit:       0367cbe
+  Built:            Tue Oct 20 18:44:59 2026
+  OS/Arch:          linux/arm64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.2
+  GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc:
+  Version:          1.5.2
+  GitCommit:        v1.5.2-0-g29dd3dc
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+github.com/docker/buildx v0.38.1 0dbe87f36ed472fe36b6796c3f70b4210a731fc5
+RESULT: ENGINE_READY
+

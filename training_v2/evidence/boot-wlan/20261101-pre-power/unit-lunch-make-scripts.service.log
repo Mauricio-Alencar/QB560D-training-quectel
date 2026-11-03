@@ -1,0 +1,51 @@
+Result=exit-code
+ExecMainStatus=1
+Requires=system.slice
+Wants=wlan_daemon.service
+Before=
+After=multi-user.target systemd-journald.socket wlan_daemon.service system.slice
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/lunch-make-scripts.service
+# /lib/systemd/system/lunch-make-scripts.service
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+--More---- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:39 CST. --
+Nov 02 02:46:59 qcs6490-odk systemd[1]: Starting lunch make scripts...
+Nov 02 02:46:59 qcs6490-odk lunch-make-scripts[4692]: Checking for flex...
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[5152]: Reading package lists...
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[5152]: Building dependency tree...
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[5152]: Reading state information...
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[5152]: E: Version '2.6.4-6' for 'flex' was not found
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[4692]: Flex install failed...
+Nov 02 02:47:10 qcs6490-odk lunch-make-scripts[4692]: Checking for bison...
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[5191]: Reading package lists...
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[5191]: Building dependency tree...
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[5191]: Reading state information...
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[5191]: E: Version '2:3.0.4.dfsg-1build1' for 'bison' was not found
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[4692]: Bison install failed...
+Nov 02 02:47:20 qcs6490-odk lunch-make-scripts[4692]: Please check apt-get install for flex,bison...
+Nov 02 02:47:20 qcs6490-odk systemd[1]: lunch-make-scripts.service: Main process exited, code=exited, status=1/FAILURE
+Nov 02 02:47:20 qcs6490-odk systemd[1]: lunch-make-scripts.service: Failed with result 'exit-code'.
+Nov 02 02:47:20 qcs6490-odk systemd[1]: Failed to start lunch make scripts.
+

@@ -1,0 +1,112 @@
+[
+  {
+    "input": "/usr/bin/qlril-api-test",
+    "host_utc": "2026-11-02T01:34:12.755457+00:00",
+    "output": "QLRIL_Init success\nQLRIL library current version:202411060822\nCopyright (C) 2020 Quectel, Smart Linux\nGroup Name:QL RIL API, Supported test cases:\n0:\tHelp, Show all the API\n========================================\nGeneral Functions\n========================================\n1:\tQLRIL_Init\n2:\tQLRIL_Exit\n3:\tQLRIL_GetVersion\n4:\tQLRIL_GetSimCardSlotId\n5:\tQLRIL_SetSimCardSlotId\n6:\tQLRIL_SendAT\n7:\tQLRIL_ResetQcrild\n8:\tQLRIL_GetDefaultTimeout\n9:\tQLRIL_SetDefaultTimeout\n========================================\nUnsolicited Indication Callback\n========================================\n10:\tQLRIL_AddUnsolEventsListener\n11:\tQLRIL_DelUnsolEventsListener\n12:\tQLRIL_RegisterUnsolEvents\n13:\tQLRIL_UnregisterUnsolEvents\n========================================\nQuery and Settings\n========================================\n19:\tQLRIL_GetIMSIForUSIM\n20:\tQLRIL_GetOperator\n21:\tQLRIL_GetIccCardStatus\n22:\tQLRIL_SetRadioPower\n23:\tQLRIL_SetScreenState\n24:\tQLRIL_RequestShutdown - DEPRECATED\n25:\tQLRIL_GetDeviceIdentity\n26:\tQLRIL_GetIMSI - DEPRECATED\n27:\tQLRIL_GetIMSIForApp\n28:\tQLRIL_GetIMEI - DEPRECATED\n29:\tQLRIL_GetSignalStrength\n30:\tQLRIL_GetPhoneNumber\n31:\tQLRIL_SupplyIccPin\n32:\tQLRIL_SupplyIccPuk\n33:\tQLRIL_ChangeIccPin\n34:\tQLRIL_QueryFacilityLockForApp\n35:\tQLRIL_SetFacilityLockForApp\n36:\tQLRIL_IccIOForApp\n37:\tQLRIL_GetNetworkSelectionMode\n38:\tQLRIL_GetBasebandVersion\n39:\tQLRIL_GetSimIccId\n140:\tQLRIL_GetNITZTime\n========================================\nVoice Call\n========================================\n40:\tQLRIL_GetVoiceRegistrationState\n41:\tQLRIL_GetVoiceRadioTechnology\n42:\tQLRIL_GetImsRegistrationState\n43:\tQLRIL_Dial\n44:\tQLRIL_AcceptCall\n45:\tQLRIL_RejectCall\n46:\tQLRIL_GetCurrentCalls\n47:\tQLRIL_HangupConnection\n48:\tQLRIL_HangupWaitingOrBackground\n49:\tQLRIL_HangupForegroundResumeBackground\n50:\tQLRIL_GetMute\n51:\tQLRIL_SetMute\n52:\tQLRIL_SwitchWaitingOrHoldingAndActive\n53:\tQLRIL_Conference\n54:\tQLRIL_GetCurrentCallsByAtCmd\n56:\tQLRIL_IMSServerState\n57:\tQLRIL_IMSServerEnable\n58:\tQLRIL_IMSSendImsRegistrationState\n59:\tQLRIL_IMSSendRoamingRegistrationState\n========================================\nSend SMS\n========================================\n60:\tQLRIL_SendSms\n61:\tQLRIL_SendSmsByPDU\n62:\tQLRIL_SendImsGsmSms\n63:\tQLRIL_SendImsGsmSmsByPDU\n========================================\nData Network\n========================================\n70:\tQLRIL_GetDataRegistrationState\n71:\tQLRIL_SetupDataCall\n72:\tQLRIL_SetDataAllowed\n73:\tQLRIL_GetDataCallList\n74:\tQLRIL_DeactivateDataCall\n75:\tQLRIL_GetPreferredNetworkType\n76:\tQLRIL_SetPreferredNetworkType\n77:\tQLRIL_AppendDNSForIPV4V6\n78:\tQLRIL_ClearResolvConfFile\n79:\tQLRIL_EnableRNDIS\n80:\tQLRIL_DisableRNDIS\n81:\tQLRIL_IMSSendDataAllowedStatus\n82:\tQLRIL_SetRouteForIPV6\n83:\tQLRIL_SetDNSByInterface\n========================================\nGNSS Functions For Qrb\n========================================\n90:\tQLRIL_GNSS_CLIENT_OPEN\n91:\tQLRIL_GNSS_NEMA_TYPE\n92:\tQLRIL_GNSS_START_FIX\n93:\tQLRIL_GNSS_STOP_FIX\n94:\tQLRIL_GNSS_CLIENT_CLOSE\n95:\tQLRIL_GNSS_NEMA_GetLocation\n-1:\tExit!\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "4",
+    "host_utc": "2026-11-02T01:34:12.769303+00:00",
+    "output": "Current SIM card slot ID: 1\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "21",
+    "host_utc": "2026-11-02T01:34:12.785429+00:00",
+    "output": "QLRIL_GetIccCardStatus ret = 0\ncard_state(e.g. 0:absent; 1:present;): 1\nuniversal_pin_state(e.g. 0:unknown;): 0\ngsm_umts_subscription_app_index: 0\ncdma_subscription_app_index: -1\nims_subscription_app_index: 1\nnum_applications: 2\napp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): 2\napp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): 5\naid_ptr: a0000000871002ff55f00189000001ff\napp_label_ptr: 00000000\npin1_replaced: 0\npin1(e.g. 1:Enable not verified, 2:Enable verified): 3\npin2(e.g. 3:Disabled, 4:Enable blocked): 1\napp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): 0\napp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): 0\npin1(e.g. 1:Enable not verified, 2:Enable verified): 0\npin2(e.g. 3:Disabled, 4:Enable blocked): 0\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "20",
+    "host_utc": "2026-11-02T01:34:12.800854+00:00",
+    "output": "ONS: TIM\nEONS: TIM\nMCCMNC: 72402\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "29",
+    "host_utc": "2026-11-02T01:34:12.814548+00:00",
+    "output": "LTE: signalStrength[22] rsrp[99] rsrq[12] rssnr[32]\n\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "37",
+    "host_utc": "2026-11-02T01:34:12.830701+00:00",
+    "output": "QLRIL_GetNetworkSelectionMode with return:1\nNetwork selection mode(0: automatic selection;1: manual selection):0\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "38",
+    "host_utc": "2026-11-02T01:34:12.850175+00:00",
+    "output": "baseband version:BP10.003(SG560DEUPAR60A02)\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "70",
+    "host_utc": "2026-11-02T01:34:12.866835+00:00",
+    "output": "response[0] is registration state 0-5,e.g 1:Registered, 2: Not registered\nresponse[1] is LAC if registered or NULL if not\nresponse[2] is CID if registered or NULL if not\nresponse[3] indicates the available data radio technology, e.g 3:UMTS, 14:LTE, 20:NR5G\nvalid values as defined by RIL_RadioTechnology.\nresponse[5] The maximum number of simultaneous Data Calls that can be established\nFor more information refer to RIL_REQUEST_DATA_REGISTRATION_STATE in ril.h\nresponse[0]:1\nresponse[2]:0825cd01\nresponse[3]:14\nresponse[5]:20\nresponse[6]:38250\nresponse[7]:364\nresponse[8]:136695041\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "73",
+    "host_utc": "2026-11-02T01:34:12.880026+00:00",
+    "output": "No Data Call list items, May be you shuld run QLRIL_SetupDataCall() firstly\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "71",
+    "host_utc": "2026-11-02T01:34:12.886615+00:00",
+    "output": "Input an character(d: default; o: others; -1: exit):"
+  },
+  {
+    "input": "d",
+    "host_utc": "2026-11-02T01:34:17.909439+00:00",
+    "output": "QLRIL_SetupDataCall failed with return:-4\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "73",
+    "host_utc": "2026-11-02T01:34:17.926394+00:00",
+    "output": "QLRIL_GetDataCallList success return items: 1\nGetDataCallList response:\nstatus:0, retry:-1, call_id:0, active:up\ntype:IP, ifname:rmnet_data0, addresses:100.84.199.38/30, dnses:189.40.198.90 189.40.198.91\ngateways:100.84.199.37, pcscf:, mtu:1500\n\n\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "6",
+    "host_utc": "2026-11-02T01:34:17.928416+00:00",
+    "output": "Please input AT command(-1: exit):"
+  },
+  {
+    "input": "AT",
+    "host_utc": "2026-11-02T01:34:17.939657+00:00",
+    "output": "AT command response:\nAT\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+CPIN?",
+    "host_utc": "2026-11-02T01:34:17.949803+00:00",
+    "output": "AT command response:\nAT+CPIN?\n\n+CPIN: READY\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+CEREG?",
+    "host_utc": "2026-11-02T01:34:17.961342+00:00",
+    "output": "AT command response:\nAT+CEREG?\n\n+CEREG: 0,1\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+COPS?",
+    "host_utc": "2026-11-02T01:34:17.974280+00:00",
+    "output": "AT command response:\nAT+COPS?\n\n+COPS: 0,0,\"TIM TIM\",7\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+CSQ",
+    "host_utc": "2026-11-02T01:34:17.986104+00:00",
+    "output": "AT command response:\nAT+CSQ\n\n+CSQ: 25,99\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+QENG=\"servingcell\"",
+    "host_utc": "2026-11-02T01:34:17.999708+00:00",
+    "output": "AT command response:\nAT+QENG=\"servingcell\"\n\n+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),825CD01(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),956A(tac),-98(rsrp),-10(rsrq),-67(rssi),13(sinr),-\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "AT+C5GREG?",
+    "host_utc": "2026-11-02T01:34:18.012507+00:00",
+    "output": "AT command response:\nAT+C5GREG?\n\n+C5GREG: 0,0\n\nOK\n\nPlease input AT command(-1: exit):"
+  },
+  {
+    "input": "-1",
+    "host_utc": "2026-11-02T01:34:18.026048+00:00",
+    "output": "\nPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "-1",
+    "host_utc": "2026-11-02T01:34:18.029636+00:00",
+    "output": "QLRIL_Exit success"
+  }
+]

@@ -1,0 +1,176 @@
+# /etc/systemd/system/init_display.service
+# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#   * Redistributions of source code must retain the above copyright
+#     notice, this list of conditions and the following disclaimer.
+#   * Redistributions in binary form must reproduce the above
+#     copyright notice, this list of conditions and the following
+#     disclaimer in the documentation and/or other materials provided
+#     with the distribution.
+#   * Neither the name of The Linux Foundation nor the names of its
+#     contributors may be used to endorse or promote products derived
+#     from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+[Unit]
+Description=Init-display Service
+SourcePath=/etc/initscripts/init_qti_display
+Requires=leprop.service persist-prop.service
+After=leprop.service persist-prop.service
+
+[Service]
+Restart=no
+Type=simple
+RemainAfterExit=yes
+ExecStart=/etc/initscripts/init_qti_display start
+ExecStop=/etc/initscripts/init_qti_display stop
+
+[Install]
+WantedBy=multi-user.target
+ExecStart={ path=/etc/initscripts/init_qti_display ; argv[]=/etc/initscripts/init_qti_display start ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+FragmentPath=/etc/systemd/system/init_display.service
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 12:33:51 CST. --
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Started Init-display Service.
+Nov 02 06:34:23 qcs6490-odk init_qti_display[3468]: WESTON INITIALIZATION STARTUP
+
+WESTON FILES
+PID 3553 CWD /
+total 0
+lrwx------ 1 root root 64 Nov  2 12:33 0 -> /dev/tty2
+lrwx------ 1 root root 64 Nov  2 12:33 1 -> /dev/tty2
+lrwx------ 1 root root 64 Nov  2 12:33 10 -> anon_inode:[signalfd]
+lrwx------ 1 root root 64 Nov  2 12:33 11 -> anon_inode:[signalfd]
+lrwx------ 1 root root 64 Nov  2 12:33 12 -> anon_inode:[timerfd]
+lrwx------ 1 root root 64 Nov  2 12:33 13 -> /dev/tty2
+lrwx------ 1 root root 64 Nov  2 12:33 14 -> anon_inode:[signalfd]
+lrwx------ 1 root root 64 Nov  2 12:33 15 -> /dev/dri/card0
+lr-x------ 1 root root 64 Nov  2 12:33 16 -> /dev/ion
+lrwx------ 1 root root 64 Nov  2 12:33 17 -> /dev/kgsl-3d0
+lr-x------ 1 root root 64 Nov  2 12:33 18 -> /dev/ion
+lrwx------ 1 root root 64 Nov  2 12:33 19 -> anon_inode:[eventpoll]
+lrwx------ 1 root root 64 Nov  2 12:33 2 -> /dev/tty2
+lrwx------ 1 root root 64 Nov  2 12:33 20 -> anon_inode:[timerfd]
+lrwx------ 1 root root 64 Nov  2 12:33 21 -> socket:[57390]
+lrwx------ 1 root root 64 Nov  2 12:33 22 -> /dev/input/event0
+lrwx------ 1 root root 64 Nov  2 12:33 23 -> /dev/input/event1
+lrwx------ 1 root root 64 Nov  2 12:33 24 -> /memfd:weston-shared (deleted)
+lrwx------ 1 root root 64 Nov  2 12:33 25 -> anon_inode:[eventpoll]
+lrwx------ 1 root root 64 Nov  2 12:33 26 -> socket:[57395]
+lrwx------ 1 root root 64 Nov  2 12:33 27 -> socket:[57395]
+lr-x------ 1 root root 64 Nov  2 12:33 28 -> /dev/ion
+lrwx------ 1 root root 64 Nov  2 12:33 29 -> anon_inode:[eventfd]
+l-wx------ 1 root root 64 Nov  2 12:33 3 -> /logcat
+lrwx------ 1 root root 64 Nov  2 12:33 30 -> /dev/dri/card0
+lrwx------ 1 root root 64 Nov  2 12:33 31 -> /dev/dri/card0
+lrwx------ 1 root root 64 Nov  2 12:33 32 -> /dev/dri/card0
+lrwx------ 1 root root 64 Nov  2 12:33 33 -> /dev/dri/card0
+lr-x------ 1 root root 64 Nov  2 12:33 34 -> anon_inode:inotify
+l-wx------ 1 root root 64 Nov  2 12:33 35 -> /sys/kernel/debug/tracing/trace_marker
+lrwx------ 1 root root 64 Nov  2 12:33 36 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 37 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 38 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 39 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 4 -> /dev/tty2
+lrwx------ 1 root root 64 Nov  2 12:33 40 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 41 -> /dmabuf:
+lrwx------ 1 root root 64 Nov  2 12:33 42 -> anon_inode:[eventfd]
+lrwx------ 1 root root 64 Nov  2 12:33 43 -> anon_inode:[eventfd]
+lrwx------ 1 root root 64 Nov  2 12:33 44 -> /run/user/root/wayland-0.lock
+lrwx------ 1 root root 64 Nov  2 12:33 45 -> socket:[57535]
+lrwx------ 1 root root 64 Nov  2 12:33 46 -> socket:[57535]
+lrwx------ 1 root root 64 Nov  2 12:33 47 -> socket:[57537]
+lrwx------ 1 root root 64 Nov  2 12:33 48 -> socket:[57537]
+
+WAYLAND OUTPUTS
+interface: 'wl_compositor', version: 4, name: 1
+interface: 'wl_subcompositor', version: 1, name: 2
+interface: 'wp_viewporter', version: 1, name: 3
+interface: 'zxdg_output_manager_v1', version: 2, name: 4
+	xdg_output_v1
+		output: 19
+		name: 'DSI-54'
+		logical_x: 0, logical_y: 0
+		logical_width: 1920, logical_height: 1080
+interface: 'wp_presentation', version: 1, name: 5
+	presentation clock id: 1 (CLOCK_MONOTONIC)
+interface: 'zwp_relative_pointer_manager_v1', version: 1, name: 6
+interface: 'zwp_pointer_constraints_v1', version: 1, name: 7
+interface: 'zwp_input_timestamps_manager_v1', version: 1, name: 8
+interface: 'wl_data_device_manager', version: 3, name: 9
+interface: 'wl_shm', version: 1, name: 10
+	formats: 'YUYV'(0x56595559) 'NV12'(0x3231564e) 'YU12'(0x32315559) RGB565 XRGB8888 ARGB8888
+interface: 'wayland_buffer_backend', version: 4, name: 11
+interface: 'wl_seat', version: 7, name: 12
+	name: default
+	capabilities: keyboard
+	keyboard repeat rate: 40
+	keyboard repeat delay: 400
+interface: 'zwp_linux_dmabuf_v1', version: 3, name: 13
+	formats:
+	'YV12'(0x32315659), modifier: 0x00ffffffffffffff
+	'YU12'(0x32315559), modifier: 0x00ffffffffffffff
+	'2??P'(0x50000032), modifier: 0x00ffffffffffffff
+	'P010'(0x30313050), modifier: 0x0500000000000010
+	'P010'(0x30313050), modifier: 0x0000000000000000
+	'Q12A'(0x41323151), modifier: 0x0500000000000020
+	'Q12A'(0x41323151), modifier: 0x0500000000000010
+	'Q12A'(0x41323151), modifier: 0x0500000000000001
+	'NV21'(0x3132564e), modifier: 0x00ffffffffffffff
+	'NV12'(0x3231564e), modifier: 0x0500000000000020
+	'NV12'(0x3231564e), modifier: 0x0500000000000010
+	'NV12'(0x3231564e), modifier: 0x0500000000000001
+	'NV12'(0x3231564e), modifier: 0x0000000000000000
+	'UYVY'(0x59565955), modifier: 0x0500000000000010
+	'UYVY'(0x59565955), modifier: 0x0000000000000000
+	'AB30'(0x30334241), modifier: 0x00ffffffffffffff
+	'AB24'(0x34324241), modifier: 0x0500000000000001
+	'AB24'(0x34324241), modifier: 0x0000000000000000
+	'AR24'(0x34325241), modifier: 0x0500000000000001
+	'AR24'(0x34325241), modifier: 0x0000000000000000
+	'XB24'(0x34324258), modifier: 0x0500000000000001
+	'XB24'(0x34324258), modifier: 0x0000000000000000
+	'XR24'(0x34325258), modifier: 0x0500000000000001
+	'XR24'(0x34325258), modifier: 0x0000000000000000
+	'BG24'(0x34324742), modifier: 0x00ffffffffffffff
+	'BG16'(0x36314742), modifier: 0x00ffffffffffffff
+	'RG16'(0x36314752), modifier: 0x00ffffffffffffff
+	'RG32'(0x32334752), modifier: 0x00ffffffffffffff
+	'R16 '(0x20363152), modifier: 0x00ffffffffffffff
+	'RG88'(0x38384752), modifier: 0x00ffffffffffffff
+	'R8  '(0x20203852), modifier: 0x00ffffffffffffff
+interface: 'weston_direct_display_v1', version: 1, name: 14
+interface: 'gbm_buffer_backend', version: 1, name: 15
+interface: 'weston_qti_extn', version: 1, name: 16
+interface: 'zwp_linux_explicit_synchronization_v1', version: 2, name: 17
+interface: 'weston_content_protection', version: 1, name: 18
+interface: 'wl_output', version: 3, name: 19
+	x: 0, y: 0, scale: 1,
+	physical_width: 1920 mm, physical_height: 1080 mm,
+	make: 'unknown', model: 'unknown',
+	subpixel_orientation: unknown, output_transform: normal,
+	mode:
+		width: 1920 px, height: 1080 px, refresh: 60.000 Hz,
+		flags: current
+interface: 'zwp_input_panel_v1', version: 1, name: 20
+interface: 'zwp_input_method_v1', version: 1, name: 21
+interface: 'zwp_text_input_manager_v1', version: 1, name: 22
+interface: 'xdg_wm_base', version: 1, name: 23
+interface: 'zxdg_shell_v6', version: 1, name: 24
+interface: 'wl_shell', version: 1, name: 25
+interface: 'weston_desktop_shell', version: 1, name: 26
+interface: 'weston_screenshooter', version: 1, name: 27

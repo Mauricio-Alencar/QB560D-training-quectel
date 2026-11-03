@@ -1,0 +1,77 @@
+{
+  "backend": "gpu",
+  "passed": true,
+  "runtime": "TFLite BSP 2.8.4",
+  "median_ms": 20.825304999561922,
+  "p95_ms": 21.302057601224078,
+  "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+  "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+  "result": {
+    "foreground_fraction": 0.618873866371936,
+    "class_fractions": {
+      "background": 0.381126133628064,
+      "person": 0.618873866371936
+    },
+    "demo_id": "D2-09",
+    "backend": "GPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+    "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+    "runs": 50,
+    "warmup": 10,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 20.825304999561922,
+    "inference_ms_p95": 21.302057601224078,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "sub_7",
+          "shape": [
+            1,
+            257,
+            257,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "ResizeBilinear_3",
+          "shape": [
+            1,
+            257,
+            257,
+            21
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ]
+    },
+    "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+    "runtime_version": "2.8.4"
+  },
+  "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+  "task": "segmentation",
+  "session": 2,
+  "runs": 50,
+  "warmup": 10,
+  "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+  "comparison_to_tflite_cpu": {
+    "passed": true,
+    "person_mask_iou": 1.0,
+    "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+  }
+}

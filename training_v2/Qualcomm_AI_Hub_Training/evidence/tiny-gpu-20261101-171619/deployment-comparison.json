@@ -1,0 +1,137 @@
+{
+  "at_host_utc": "2026-11-01T20:34:53.397734+00:00",
+  "result": "HOSTED_AND_TARGET_CPU_GPU_PASS",
+  "artifact_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+  "hosted": {
+    "at_host_utc": "2026-11-01T20:25:40.955739+00:00",
+    "result": "HOSTED_ARTIFACT_AND_REFERENCE_PASS_LOCAL_DEPLOY_PENDING",
+    "device": "Dragonwing RB3 Gen 2 Vision Kit",
+    "compile_job": {
+      "id": "j5q1v4l7g",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/j5q1v4l7g/"
+    },
+    "inference_profile_job": {
+      "id": "j56mwo8vp",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/j56mwo8vp/"
+    },
+    "artifact_bytes": 1992,
+    "artifact_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+    "actual": [
+      [
+        0.0933837890625,
+        0.1846923828125,
+        0.32470703125,
+        0.09124755859375
+      ]
+    ],
+    "expected": [
+      [
+        0.09336850047111511,
+        0.1846853494644165,
+        0.3246975839138031,
+        0.09120750427246094
+      ]
+    ],
+    "max_abs_error": 4.00543212890625e-05,
+    "atol": 0.0001,
+    "rtol": 0.001,
+    "profile_compute_units": {
+      "GPU": 4
+    },
+    "profile_entry_count": 4,
+    "estimated_inference_us": 217,
+    "sample_count": 100,
+    "sample_median_us": 694.5,
+    "sample_min_us": 217,
+    "sample_max_us": 4895,
+    "timing_scope": "Qualcomm-hosted kit only. Estimated field and raw-sample median are distinct; neither is local QB560D latency.",
+    "compute_scope": "Four listed graph entries on GPU, zero CPU entries. Does not claim all application/preprocessing work avoids CPU.",
+    "local_deploy": "PENDING_TARGET_COMPATIBILITY_AND_OUTPUT_CHECKS",
+    "profile_units_source": "https://workbench.aihub.qualcomm.com/docs/hub/jobs.html"
+  },
+  "target": {
+    "cpu": {
+      "result": "PASS",
+      "backend": "cpu",
+      "runtime_version": "2.8.4",
+      "input_layout": "NCHW",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "input_sha256": "0de682b953928cdbd2ff44af3dda2b1fc3fc107054d8f1337e4a8335ae8fe65f",
+      "expected_sha256": "66117d1e99a6df5521c584c124b994ae3afb58d9e717cec7dc5a00122a190e2e",
+      "max_abs_error": 1.4901161193847656e-08,
+      "atol": 0.0001,
+      "rtol": 0.001,
+      "actual": [
+        [
+          0.09336850047111511,
+          0.1846853643655777,
+          0.3246975839138031,
+          0.09120748937129974
+        ]
+      ],
+      "expected": [
+        [
+          0.09336850047111511,
+          0.1846853494644165,
+          0.3246975839138031,
+          0.09120750427246094
+        ]
+      ],
+      "warmup": 10,
+      "runs": 50,
+      "median_invoke_ms": 0.08483050032737083,
+      "p95_invoke_ms": 0.08707530014362419,
+      "timing_scope": "invoke only, excluding set_tensor/get_tensor/preprocessing"
+    },
+    "gpu": {
+      "result": "PASS",
+      "backend": "gpu",
+      "runtime_version": "2.8.4",
+      "input_layout": "NCHW",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "input_sha256": "0de682b953928cdbd2ff44af3dda2b1fc3fc107054d8f1337e4a8335ae8fe65f",
+      "expected_sha256": "66117d1e99a6df5521c584c124b994ae3afb58d9e717cec7dc5a00122a190e2e",
+      "max_abs_error": 2.9802322387695312e-08,
+      "atol": 0.0001,
+      "rtol": 0.001,
+      "actual": [
+        [
+          0.09336850047111511,
+          0.1846853643655777,
+          0.3246976137161255,
+          0.09120750427246094
+        ]
+      ],
+      "expected": [
+        [
+          0.09336850047111511,
+          0.1846853494644165,
+          0.3246975839138031,
+          0.09120750427246094
+        ]
+      ],
+      "warmup": 10,
+      "runs": 50,
+      "median_invoke_ms": 0.25430649975533015,
+      "p95_invoke_ms": 0.4496498500429879,
+      "timing_scope": "invoke only, excluding set_tensor/get_tensor/preprocessing"
+    }
+  },
+  "local_gpu_log_evidence": {
+    "opencl_initialized": true,
+    "gpu_delegate_kernels": true
+  },
+  "timing_note": "Hosted estimate/raw samples and local invoke medians use different environments/procedures. No cross-device speedup is claimed.",
+  "scope": "One deterministic synthetic input. Not semantic classification or dataset accuracy. One local session/backend,10 warmups and50 invokes.",
+  "recorded_contingency": {
+    "status": "AVAILABLE",
+    "kind": "REPLAY_OF_VALIDATED_LOGS",
+    "video": "../../contingencia/AIHub_QB560D_Contingencia_Replay.mp4",
+    "duration_s": 106,
+    "live_screen_capture": false,
+    "audio": false
+  },
+  "max_abs_local_gpu_vs_cpu": 2.9802322387695312e-08,
+  "max_abs_local_gpu_vs_hosted_gpu": 4.00543212890625e-05,
+  "offline_validation": "offline-validation.json"
+}

@@ -1,0 +1,39 @@
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:31:51 CST. --
+Nov 02 02:46:10 qcs6490-odk systemd-resolved[3454]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+Nov 02 02:46:10 qcs6490-odk systemd-resolved[3454]: Negative trust anchors: 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+Nov 02 02:46:10 qcs6490-odk systemd-resolved[3454]: Using system hostname 'qcs6490-odk'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Started Network Name Resolution.
+Nov 02 05:30:04 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (UDP) for DNS server 181.213.132.2.
+Nov 02 05:30:10 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (UDP) for DNS server 181.213.132.3.
+Nov 02 05:30:36 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (TCP) for DNS server 181.213.132.2.
+Nov 02 05:30:46 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (TCP) for DNS server 181.213.132.3.
+Nov 02 05:31:37 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (UDP) for DNS server 181.213.132.2.
+Nov 02 05:31:43 qcs6490-odk systemd-resolved[3454]: Using degraded feature set (UDP) for DNS server 181.213.132.3.
+UNCONN    0         0            127.0.0.53%lo:53               0.0.0.0:*        users:(("systemd-resolve",pid=3454,fd=12))                                     
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+#
+# Entries in this file show the compile time defaults.
+# You can change settings by editing this file.
+# Defaults can be restored by simply deleting this file.
+#
+# See resolved.conf(5) for details
+
+[Resolve]
+#DNS=
+#FallbackDNS=
+#Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#DNSOverTLS=no
+#Cache=no-negative
+#DNSStubListener=yes
+#ReadEtcHosts=yes
+connection.autoconnect:                 yes
+connection.autoconnect-priority:        0
+

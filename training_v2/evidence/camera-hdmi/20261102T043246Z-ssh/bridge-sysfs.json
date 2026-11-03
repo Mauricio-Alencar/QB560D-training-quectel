@@ -1,0 +1,6 @@
+{
+  "command": "ls -la /sys/bus/i2c/devices/2-0041/; printf '\\nDT PROPERTIES\\n'; ls -l /sys/bus/i2c/devices/2-0041/of_node/; for f in compatible status; do p=/sys/bus/i2c/devices/2-0041/of_node/$f; if [ -r \"$p\" ]; then printf '%s: ' \"$f\"; tr '\\000' '\\n' < \"$p\"; fi; done; printf '\\nMODULE\\n'; modinfo lt9611uxd 2>&1 | head -n 25; printf '\\nKERNEL LOG SIZE\\n'; dmesg | wc -c; printf '\\nKERNEL JOURNAL\\n'; journalctl -b -k --no-pager | grep -Ei 'lt9611|hdmi|hpd|edid|dsi' | tail -n 90",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

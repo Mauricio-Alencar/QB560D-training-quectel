@@ -1,0 +1,146 @@
+[
+  {
+    "path": "gesture-qnn_dlc-w8a8.zip",
+    "url": "https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-qnn_dlc-w8a8.zip",
+    "sha256": "2b46cb6867df8e677f5c70372ba7f00f1538d5c17b94b7d8d0f8f1ef1477df91",
+    "bytes": 4478240
+  },
+  {
+    "path": "reference_app.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/mediapipe_hand_gesture/app.py",
+    "sha256": "f34fce362e112ec3691c10bd785545be4e281460030800e0d6f2cf5f693a2120",
+    "bytes": 21594
+  },
+  {
+    "path": "reference_model.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/mediapipe_hand_gesture/model.py",
+    "sha256": "9b9855532bf33c74224b97a44cb87086fed9fe7d1761cc88aee52472a7b29d3c",
+    "bytes": 34368
+  },
+  {
+    "path": "reference_mediapipe_app.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/templates/mediapipe/app.py",
+    "sha256": "7b869aaeaa0272b7b407c9f3af41d945ac3a1e135267bf6c834459d8ae1145d3",
+    "bytes": 33036
+  },
+  {
+    "path": "reference_mediapipe_utils.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/templates/mediapipe/utils.py",
+    "sha256": "1f0b13bbc1eff2417d6b14c2f47f8f37cb92ac2c167438a67e6bba890d63cee6",
+    "bytes": 6497
+  },
+  {
+    "path": "reference_hand_model.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/mediapipe_hand/model.py",
+    "sha256": "8632f1aeddd43cc9d1c772b94aa0536163f22c81a2ce54b64e0870afa8a5e08b",
+    "bytes": 11083
+  },
+  {
+    "path": "reference_boxes.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/utils/bounding_box_processing.py",
+    "sha256": "f8139b5123a0841ea71fc1cbfbd852c2ea9a92cb6193c62969e9135a9e867d7c",
+    "bytes": 20974
+  },
+  {
+    "path": "official_sample_notebook.ipynb.txt",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe-samples/main/examples/gesture_recognizer/python/gesture_recognizer.ipynb",
+    "sha256": "a5723f6fa34cd35ca2b469165cbc1f45c1aa6249050ec46134e8fe5fabde963d",
+    "bytes": 12667
+  },
+  {
+    "path": "model_card.md.txt",
+    "url": "https://huggingface.co/qualcomm/MediaPipe-Hand-Gesture-Recognition/raw/main/README.md",
+    "sha256": "de2796c7356356a4d16e63211f15dbf617fa56b4cb4bab4b812922c561ad3214",
+    "bytes": 31991
+  },
+  {
+    "path": "licenses/QAI_HUB_MODELS_LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/LICENSE",
+    "sha256": "1935f1927570e99e49d0f2f48b3d1e918c1a78d65d4d6f00e89c7c0bf9d4ddaf",
+    "bytes": 1501
+  },
+  {
+    "path": "licenses/MEDIAPIPE_LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/master/LICENSE",
+    "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+    "bytes": 12331
+  },
+  {
+    "path": "licenses/MODEL_LICENSE_POINTER.txt",
+    "url": "https://huggingface.co/qualcomm/MediaPipe-Hand-Gesture-Recognition/raw/main/LICENSE",
+    "sha256": "3fb02eea5325a8c50fc8e493059f51a2df600a9edd4bd683e626ef3b1b026019",
+    "bytes": 123
+  },
+  {
+    "path": "images/thumbs_down.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-tasks/gesture_recognizer/thumbs_down.jpg",
+    "sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+    "bytes": 46651
+  },
+  {
+    "path": "images/victory.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-tasks/gesture_recognizer/victory.jpg",
+    "sha256": "6ac265f3ace6a6c4ac4a9079b63fcce4ab6517272afb1e430857f55ef324fde6",
+    "bytes": 19125
+  },
+  {
+    "path": "images/thumbs_up.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-tasks/gesture_recognizer/thumbs_up.jpg",
+    "sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba",
+    "bytes": 28894
+  },
+  {
+    "path": "images/pointing_up.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-tasks/gesture_recognizer/pointing_up.jpg",
+    "sha256": "f4a701316b63dd8fa56e622f2b3042766369ccc189f0d89513f803cd985b993b",
+    "bytes": 36757
+  },
+  {
+    "path": "images/test_fist.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/fist.jpg",
+    "sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+    "bytes": 71355
+  },
+  {
+    "path": "images/test_fist.png",
+    "url": "https://storage.googleapis.com/mediapipe-assets/fist.png",
+    "sha256": "4397b3d3f590c88a8de7d21c08d73a0df4a97fd93f92cbd086eef37fd246daaa",
+    "bytes": 207870
+  },
+  {
+    "path": "images/test_right_hands.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/right_hands.jpg",
+    "sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f",
+    "bytes": 54887
+  },
+  {
+    "path": "images/test_victory.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/victory.jpg",
+    "sha256": "84cb8853e3df614e0cb5c93a25e3e2f38ea5e4f92fd428ee7d867ed3479d5764",
+    "bytes": 69362
+  },
+  {
+    "path": "images/iloveyou.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/ASL_ILY%40Side-PalmForward.jpg",
+    "sha256": "24dd7901df3ec8de7ba2cbf801e36d6bfc8264f4a8d9d2e231e320289fdce593",
+    "bytes": 760980
+  },
+  {
+    "path": "images/open_palm.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Human_Palm.jpg",
+    "sha256": "0bc2f3caef9dce603ea7c18ad3f0f033896dc6a11b03b3bb2105c1cfd93b68db",
+    "bytes": 88905
+  },
+  {
+    "path": "images/full_open_palm.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Right_Hand_Palm.png",
+    "sha256": "2456fd263914f7b6c9109edc5056d994c7ca140fad3c567d2edf0f5422a42e22",
+    "bytes": 8179354
+  },
+  {
+    "path": "images/closed_fist.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Closed_fist.jpg",
+    "sha256": "0e9b6332547e6fd3ba39be1dd5d10d3710eaf44d8217a5bedde8bcb803475fc9",
+    "bytes": 1958469
+  }
+]

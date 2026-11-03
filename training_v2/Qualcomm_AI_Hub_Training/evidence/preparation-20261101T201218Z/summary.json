@@ -1,0 +1,39 @@
+{
+  "at_host_utc": "2026-11-01T20:12:18.780462+00:00",
+  "result": "HOST_REFERENCE_PASS_CLOUD_NOT_RUN",
+  "input_shape": [
+    1,
+    3,
+    32,
+    32
+  ],
+  "output_shape": [
+    1,
+    4
+  ],
+  "actual": [
+    [
+      0.09336850047111511,
+      0.1846853345632553,
+      0.3246976137161255,
+      0.09120751172304153
+    ]
+  ],
+  "expected": [
+    [
+      0.09336850047111511,
+      0.1846853494644165,
+      0.3246975839138031,
+      0.09120750427246094
+    ]
+  ],
+  "max_abs_error": 2.9802322387695312e-08,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "files": {
+    "training_v2\\models\\workbench_demo.onnx": "d80d174228cefcf0e09dd344c102379dc03c4348ed13c9a09ac728ee61b31b5b",
+    "training_v2\\models\\workbench_input.npy": "0de682b953928cdbd2ff44af3dda2b1fc3fc107054d8f1337e4a8335ae8fe65f",
+    "training_v2\\models\\workbench_expected.npy": "66117d1e99a6df5521c584c124b994ae3afb58d9e717cec7dc5a00122a190e2e"
+  },
+  "scope": "Local ONNX ReferenceEvaluator versus independent NumPy reference. No hosted job or QB560D artifact execution claimed."
+}

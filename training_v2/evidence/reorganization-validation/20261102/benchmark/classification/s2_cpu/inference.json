@@ -1,0 +1,4 @@
+{
+  "command": "/usr/bin/timeout 240s sh /opt/qb560d-training-payload/target/ai.sh classification --image /opt/qb560d-ai-htp251/runs/b652f0388192043/input.png --output /opt/qb560d-ai-htp251/runs/b652f0388192043/s2_cpu --backend cpu --vendor-c-api --threads 2 --runs 50 --warmup 10",
+  "exit_code": 0
+}

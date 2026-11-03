@@ -1,0 +1,181 @@
+INFO: Created TensorFlow Lite delegate for GPU.
+ERROR: Following operations are not supported by GPU delegate:
+CUSTOM TFLite_Detection_PostProcess: TFLite_Detection_PostProcess
+63 operations will run on the GPU, and the remaining 1 operations will run on the CPU.
+INFO: Initialized OpenCL-based API.
+INFO: Created 1 GPU delegate kernels.
+{
+  "inputs": [
+    {
+      "name": "normalized_input_image_tensor",
+      "shape": [
+        1,
+        300,
+        300,
+        3
+      ],
+      "dtype": "<class 'numpy.uint8'>",
+      "quantization": [
+        0.0078125,
+        128
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "TFLite_Detection_PostProcess",
+      "shape": [
+        1,
+        10,
+        4
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "TFLite_Detection_PostProcess:1",
+      "shape": [
+        1,
+        10
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "TFLite_Detection_PostProcess:2",
+      "shape": [
+        1,
+        10
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "TFLite_Detection_PostProcess:3",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "detections": [
+    {
+      "class_id": 17,
+      "label": "dog",
+      "score": 0.6875,
+      "box_yxyx": [
+        0.196719229221344,
+        0.18911027908325195,
+        0.8382578492164612,
+        0.763455331325531
+      ]
+    }
+  ],
+  "demo_id": "D2-06",
+  "backend": "GPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+  "image_sha256": "473d5ab0bfa0cf17ca35706eeba82223566dd95ed37e3fe09beb4a38effd931e",
+  "runs": 3,
+  "warmup": 1,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 20.631151000998216,
+  "inference_ms_p95": 21.65787190060655,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "normalized_input_image_tensor",
+        "shape": [
+          1,
+          300,
+          300,
+          3
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.0078125,
+          128
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "TFLite_Detection_PostProcess",
+        "shape": [
+          1,
+          10,
+          4
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "TFLite_Detection_PostProcess:1",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "TFLite_Detection_PostProcess:2",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "TFLite_Detection_PostProcess:3",
+        "shape": [
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)

@@ -1,0 +1,12 @@
+qnn-net-run pid:49278
+qnn-net-run build version: v2.51.40.260930230134
+qnn-net-run log level is : QNN_LOG_LEVEL_INFO
+Processing inference input(s):
+image -> /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g01-ad6f8281/hand_landmark_detector/image.raw
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+Composing Graphs
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+Finalizing Graphs
+Executing Graphs
+Finished Executing Graphs
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc

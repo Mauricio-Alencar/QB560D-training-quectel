@@ -1,0 +1,4 @@
+{
+  "command": "python3 /opt/qb560d-docker-demo/target/rehearse.py",
+  "exit_code": 1
+}

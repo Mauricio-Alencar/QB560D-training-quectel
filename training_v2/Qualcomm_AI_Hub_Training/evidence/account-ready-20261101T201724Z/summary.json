@@ -1,0 +1,37 @@
+{
+  "at_host_utc": "2026-11-01T20:17:24.352315+00:00",
+  "account_web_access": "OWNER_CONFIRMED_AND_SCREENSHOT",
+  "account_api": "PASS_DEVICE_LISTING",
+  "api_token_included": false,
+  "devices_returned": 77,
+  "selected_device": {
+    "name": "Dragonwing RB3 Gen 2 Vision Kit",
+    "os": "1.6",
+    "attributes": [
+      "os:qc_linux",
+      "framework:tflite",
+      "framework:onnx",
+      "vendor:qualcomm",
+      "abi:aarch64-oe-linux-gcc11",
+      "format:iot",
+      "chipset:qualcomm-qcs6490",
+      "chipset:qcs6490",
+      "chipset:qualcomm-dragonwing-qcs6490",
+      "hexagon:v68",
+      "soc-model:93",
+      "framework:qnn"
+    ]
+  },
+  "client": {
+    "python": "3.12.10",
+    "qai_hub": "0.57.0",
+    "onnx": "1.17.0",
+    "numpy": "1.26.4",
+    "pip_check": "PASS",
+    "credential_helper_tests": 5
+  },
+  "reference_check": "HOST_REFERENCE_PASS max_abs_error2.9802322387695312e-08",
+  "hosted_jobs": "NOT_ACCEPTED_YET: waiting for the guided compile/inference/profile result",
+  "recorded_contingency": "PENDING_REAL_SUCCESSFUL_RUN",
+  "config_scope": "User SDK config outside training folder; token never printed by the helper"
+}

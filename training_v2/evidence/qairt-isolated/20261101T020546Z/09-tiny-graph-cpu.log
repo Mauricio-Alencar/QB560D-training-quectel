@@ -1,0 +1,55 @@
+BACKEND /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so provider=CPU_QTI_AISW backend_id=3
+BACKEND_BUILD v2.51.40.260930230134
+STAGE logCreate status=0
+QNN_LOG[3] Creating backend with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] CpuBackend creation start
+QNN_LOG[3] [QNN_CPU] CpuBackend creation end
+QNN_LOG[3] QnnGraphTransformer createBackend done, status = 0x0
+STAGE backendCreate status=0
+QNN_LOG[3] Creating context with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] QnnContext create start
+QNN_LOG[3] [QNN_CPU] QnnContext create end
+QNN_LOG[3] QnnGraphTransformer createContext done, status = 0x0
+STAGE contextCreate status=0
+STAGE profileCreate status=0
+QNN_LOG[3] Creating graph with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] CpuGraph creation start
+QNN_LOG[3] [QNN_CPU] CpuGraph creation end
+QNN_LOG[3] [QNN_CPU] CpuGraph 'isolated_add_uint8': initialized threadpool numThreads=6
+QNN_LOG[3] [QNN_CPU] QnnGraph create end
+STAGE graphCreate status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] Adding tensor 'input_a' with ID 1, type 0
+STAGE input_a status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] Adding tensor 'input_b' with ID 2, type 0
+STAGE input_b status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] Adding tensor 'output_y' with ID 3, type 1
+STAGE output_y status=0
+QNN_LOG[3] Add Graph Node with QnnGraphTransformerAdapter
+STAGE graphAddNode status=0
+QNN_LOG[3] Finalizing graph with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] QnnGraph finalize start
+QNN_LOG[3] [QNN_CPU] QnnGraph finalize end
+STAGE graphFinalize status=0
+QNN_LOG[3] [QNN_CPU] QnnGraph execute start
+QNN_LOG[3] [QNN_CPU] QnnGraph execute end
+STAGE graphExecute status=0
+GRAPH_RESULT={"backend":"CPU","operation":"ElementWiseAdd","input_a":[1,2,3,4],"input_b":[10,20,30,40],"output":[11,22,33,44],"expected":[11,22,33,44],"pass":true,"cpu_fallback":false}
+LOADED_LIBRARY 7f7f053000-7f7f7d5000 r-xp 00000000 08:06 737664                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so
+LOADED_LIBRARY 7f7f7d5000-7f7f7e4000 ---p 00782000 08:06 737664                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so
+LOADED_LIBRARY 7f7f7e4000-7f7f7f8000 r--p 00781000 08:06 737664                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so
+LOADED_LIBRARY 7f7f7f8000-7f7f7fc000 rw-p 00795000 08:06 737664                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so
+QNN_LOG[3] Free context with QnnGraphTransformerAdapter
+QNN_LOG[3] QnnGraphTransformer context freed successfully
+QNN_LOG[3] [QNN_CPU] QnnContext Free start
+QNN_LOG[3] [QNN_CPU] QnnContext Free end
+STAGE contextFree status=0
+STAGE profileFree status=0
+QNN_LOG[3] [QNN_CPU] QnnBackend Free start
+QNN_LOG[3] [QNN_CPU] QnnBackend Free end
+STAGE backendFree status=0
+STAGE logFree status=0
+
+__QAIRT_ISOLATED_EXIT__=0

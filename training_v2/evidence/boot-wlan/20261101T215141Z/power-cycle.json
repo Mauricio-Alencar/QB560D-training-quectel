@@ -1,0 +1,12 @@
+{
+  "power_on_operator_mark_utc": "2026-11-01T22:34:12.602979+00:00",
+  "authenticated_shell_utc": "2026-11-01T22:34:26.533780+00:00",
+  "seconds_operator_mark_to_authenticated_shell": 13.93800000000192,
+  "timing_limit": "Operator presses Enter after energizing; includes manual reaction offset. ADB polling period up to 1 second plus login.",
+  "cold_cycle": "Operator-directed physical power interruption; compare boot_id and logs with pre-capture.",
+  "post_boot_identity": "ad79661b-5a87-49cb-a330-1fcb1c5c9dbb\n10.45 49.23",
+  "previous_boot_id": "4af1e918-9fd1-43d5-bbb6-47156d1e4d70",
+  "boot_id_changed": true,
+  "wlan_automatic_connected": true,
+  "seconds_operator_mark_to_wlan_connected": 29.01599999999962
+}

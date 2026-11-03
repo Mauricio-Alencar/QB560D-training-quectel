@@ -1,0 +1,6 @@
+{
+  "remote": "/tmp/update-qiart-251-mobilenet-validation",
+  "version": "2.51.40.260930",
+  "originals_unchanged": true,
+  "device": "? device product:qcm6490-Ubuntu transport_id:2"
+}

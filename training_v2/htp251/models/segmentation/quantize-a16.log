@@ -1,0 +1,1053 @@
+modeltools::IrQuantizer::IrQuantizer: Param Quantizer should be set to symmetric for 32 bit biases. Will ignore param quantizer option: min-max for biases
+    14.5ms [  INFO ] Inferences will run in sync mode
+Processing inference input(s):
+calibration/segmentation/00.raw
+calibration/segmentation/01.raw
+calibration/segmentation/02.raw
+calibration/segmentation/03.raw
+calibration/segmentation/04.raw
+    15.0ms [  INFO ] No BackendExtensions lib provided;initializing NetRunBackend Interface
+    15.1ms [  INFO ] WindowsFileIO callback: WindowsFileIO
+    17.8ms [ ERROR ] WindowsFileIO couldn't open libcdsprpc.dll
+    17.8ms [  INFO ] Initialized WindowsFileIO callback
+     2.8ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     3.2ms [  INFO ] [QNN_CPU] CpuBackend creation start
+     3.2ms [  INFO ] [QNN_CPU] CpuBackend creation end
+     3.2ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+    18.3ms [WARNING] Unable to find a device with NetRunDeviceKeyDefault in Library NetRunBackendLibKeyDefault
+    18.3ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+     3.2ms [  INFO ] Creating context with QnnGraphTransformerAdapter
+     3.2ms [  INFO ] [QNN_CPU] QnnContext create start
+     3.2ms [  INFO ] [QNN_CPU] QnnContext create end
+     3.2ms [  INFO ] QnnGraphTransformer createContext done, status = 0x0
+    18.5ms [  INFO ] Entering QuantizeRuntimeApp flow
+    18.5ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+     3.5ms [  INFO ] Creating graph with QnnGraphTransformerAdapter
+     3.6ms [  INFO ] [QNN_CPU] CpuGraph creation start
+     3.6ms [  INFO ] [QNN_CPU] CpuGraph creation end
+     4.2ms [  INFO ] [QNN_CPU] CpuGraph 'model.float': initialized threadpool numThreads=8
+     4.2ms [  INFO ] [QNN_CPU] QnnGraph create end
+     4.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'sub_7' with ID 1, type 0
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/Conv/Relu6_dilation' with ID 2, type 4
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/Conv/Relu6_pad_amount' with ID 3, type 4
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/Conv/Relu6_stride' with ID 4, type 4
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2662' with ID 5, type 4
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/Conv/Conv2D_bias' with ID 6, type 4
+     4.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/Conv/Relu6' with ID 7, type 3
+     4.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     4.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     4.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2188:0' with ID 9, type 3
+     4.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     4.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     4.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/depthwise/Relu6_dilation' with ID 10, type 4
+     4.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/depthwise/Relu6_pad_amount' with ID 11, type 4
+     4.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/depthwise/Relu6_stride' with ID 12, type 4
+     4.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2701' with ID 13, type 4
+     4.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/depthwise/depthwise_bias' with ID 14, type 4
+     4.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/depthwise/Relu6' with ID 15, type 3
+     4.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     4.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     4.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2190:0' with ID 16, type 3
+     4.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     4.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm_dilation' with ID 17, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 18, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm_stride' with ID 19, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2655' with ID 20, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/project/Conv2D_bias' with ID 21, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm' with ID 22, type 3
+     4.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/expand/Relu6_dilation' with ID 23, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     4.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/expand/Relu6_pad_amount' with ID 24, type 4
+     4.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/expand/Relu6_stride' with ID 25, type 4
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2695' with ID 26, type 4
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/expand/Conv2D_bias' with ID 27, type 4
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/expand/Relu6' with ID 28, type 3
+     5.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2193:0' with ID 29, type 3
+     5.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/depthwise/Relu6_dilation' with ID 30, type 4
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/depthwise/Relu6_pad_amount' with ID 31, type 4
+     5.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/depthwise/Relu6_stride' with ID 32, type 4
+     5.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2698' with ID 33, type 4
+     5.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/depthwise/depthwise_bias' with ID 34, type 4
+     5.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/depthwise/Relu6' with ID 35, type 3
+     5.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2195:0' with ID 36, type 3
+     5.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm_dilation' with ID 37, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 38, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm_stride' with ID 39, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2692' with ID 40, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/project/Conv2D_bias' with ID 41, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm' with ID 42, type 3
+     5.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/expand/Relu6_dilation' with ID 43, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/expand/Relu6_pad_amount' with ID 44, type 4
+     5.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/expand/Relu6_stride' with ID 45, type 4
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2676' with ID 46, type 4
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/expand/Conv2D_bias' with ID 47, type 4
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/expand/Relu6' with ID 48, type 3
+     5.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2198:0' with ID 49, type 3
+     5.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/depthwise/Relu6_dilation' with ID 50, type 4
+     5.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/depthwise/Relu6_pad_amount' with ID 51, type 4
+     5.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/depthwise/Relu6_stride' with ID 52, type 4
+     5.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2722' with ID 53, type 4
+     5.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/depthwise/depthwise_bias' with ID 54, type 4
+     5.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/depthwise/Relu6' with ID 55, type 3
+     5.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2200:0' with ID 56, type 3
+     5.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm_dilation' with ID 57, type 4
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 58, type 4
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm_stride' with ID 59, type 4
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2716' with ID 60, type 4
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/project/Conv2D_bias' with ID 61, type 4
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm' with ID 62, type 3
+     5.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_2/add' with ID 63, type 3
+     5.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/expand/Relu6_dilation' with ID 64, type 4
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/expand/Relu6_pad_amount' with ID 65, type 4
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/expand/Relu6_stride' with ID 66, type 4
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2683' with ID 67, type 4
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/expand/Conv2D_bias' with ID 68, type 4
+     5.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/expand/Relu6' with ID 69, type 3
+     5.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2203:0' with ID 70, type 3
+     5.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/depthwise/Relu6_dilation' with ID 71, type 4
+     5.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/depthwise/Relu6_pad_amount' with ID 72, type 4
+     5.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/depthwise/Relu6_stride' with ID 73, type 4
+     5.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2686' with ID 74, type 4
+     5.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/depthwise/depthwise_bias' with ID 75, type 4
+     5.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/depthwise/Relu6' with ID 76, type 3
+     5.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2205:0' with ID 77, type 3
+     5.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm_dilation' with ID 78, type 4
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 79, type 4
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm_stride' with ID 80, type 4
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2665' with ID 81, type 4
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/project/Conv2D_bias' with ID 82, type 4
+     5.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     5.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm' with ID 83, type 3
+     6.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/expand/Relu6_dilation' with ID 84, type 4
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/expand/Relu6_pad_amount' with ID 85, type 4
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/expand/Relu6_stride' with ID 86, type 4
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2619' with ID 87, type 4
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/expand/Conv2D_bias' with ID 88, type 4
+     6.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/expand/Relu6' with ID 89, type 3
+     6.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2208:0' with ID 90, type 3
+     6.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/depthwise/Relu6_dilation' with ID 91, type 4
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/depthwise/Relu6_pad_amount' with ID 92, type 4
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/depthwise/Relu6_stride' with ID 93, type 4
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2717' with ID 94, type 4
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/depthwise/depthwise_bias' with ID 95, type 4
+     6.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/depthwise/Relu6' with ID 96, type 3
+     6.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2210:0' with ID 97, type 3
+     6.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm_dilation' with ID 98, type 4
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 99, type 4
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm_stride' with ID 100, type 4
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2690' with ID 101, type 4
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/project/Conv2D_bias' with ID 102, type 4
+     6.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm' with ID 103, type 3
+     6.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_4/add' with ID 104, type 3
+     6.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/expand/Relu6_dilation' with ID 105, type 4
+     6.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/expand/Relu6_pad_amount' with ID 106, type 4
+     6.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/expand/Relu6_stride' with ID 107, type 4
+     6.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2725' with ID 108, type 4
+     6.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/expand/Conv2D_bias' with ID 109, type 4
+     6.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/expand/Relu6' with ID 110, type 3
+     6.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2213:0' with ID 111, type 3
+     6.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/depthwise/Relu6_dilation' with ID 112, type 4
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/depthwise/Relu6_pad_amount' with ID 113, type 4
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/depthwise/Relu6_stride' with ID 114, type 4
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2704' with ID 115, type 4
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/depthwise/depthwise_bias' with ID 116, type 4
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/depthwise/Relu6' with ID 117, type 3
+     6.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2215:0' with ID 118, type 3
+     6.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm_dilation' with ID 119, type 4
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 120, type 4
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm_stride' with ID 121, type 4
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2680' with ID 122, type 4
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/project/Conv2D_bias' with ID 123, type 4
+     6.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm' with ID 124, type 3
+     6.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_5/add' with ID 125, type 3
+     6.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/expand/Relu6_dilation' with ID 126, type 4
+     6.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/expand/Relu6_pad_amount' with ID 127, type 4
+     6.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/expand/Relu6_stride' with ID 128, type 4
+     6.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2666' with ID 129, type 4
+     6.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/expand/Conv2D_bias' with ID 130, type 4
+     6.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/expand/Relu6' with ID 131, type 3
+     6.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     6.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2218:0' with ID 132, type 3
+     7.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/depthwise/Relu6_dilation' with ID 133, type 4
+     7.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/depthwise/Relu6_pad_amount' with ID 134, type 4
+     7.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/depthwise/Relu6_stride' with ID 135, type 4
+     7.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2728' with ID 136, type 4
+     7.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/depthwise/depthwise_bias' with ID 137, type 4
+     7.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/depthwise/Relu6' with ID 138, type 3
+     7.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2220:0' with ID 139, type 3
+     7.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm_dilation' with ID 140, type 4
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 141, type 4
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm_stride' with ID 142, type 4
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2627' with ID 143, type 4
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/project/Conv2D_bias' with ID 144, type 4
+     7.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm' with ID 145, type 3
+     7.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/expand/Relu6_dilation' with ID 146, type 4
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/expand/Relu6_pad_amount' with ID 147, type 4
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/expand/Relu6_stride' with ID 148, type 4
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2679' with ID 149, type 4
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/expand/Conv2D_bias' with ID 150, type 4
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/expand/Relu6' with ID 151, type 3
+     7.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2223:0' with ID 152, type 3
+     7.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/depthwise/Relu6_dilation' with ID 153, type 4
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/depthwise/Relu6_pad_amount' with ID 154, type 4
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/depthwise/Relu6_stride' with ID 155, type 4
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2715' with ID 156, type 4
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/depthwise/depthwise_bias' with ID 157, type 4
+     7.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/depthwise/Relu6' with ID 158, type 3
+     7.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2225:0' with ID 159, type 3
+     7.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm_dilation' with ID 160, type 4
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 161, type 4
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm_stride' with ID 162, type 4
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2675' with ID 163, type 4
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/project/Conv2D_bias' with ID 164, type 4
+     7.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm' with ID 165, type 3
+     7.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_7/add' with ID 166, type 3
+     7.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/expand/Relu6_dilation' with ID 167, type 4
+     7.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/expand/Relu6_pad_amount' with ID 168, type 4
+     7.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/expand/Relu6_stride' with ID 169, type 4
+     7.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2699' with ID 170, type 4
+     7.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/expand/Conv2D_bias' with ID 171, type 4
+     7.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/expand/Relu6' with ID 172, type 3
+     7.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2228:0' with ID 173, type 3
+     7.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/depthwise/Relu6_dilation' with ID 174, type 4
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/depthwise/Relu6_pad_amount' with ID 175, type 4
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/depthwise/Relu6_stride' with ID 176, type 4
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2726' with ID 177, type 4
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/depthwise/depthwise_bias' with ID 178, type 4
+     7.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/depthwise/Relu6' with ID 179, type 3
+     7.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     7.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2230:0' with ID 180, type 3
+     8.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm_dilation' with ID 181, type 4
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 182, type 4
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm_stride' with ID 183, type 4
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2700' with ID 184, type 4
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/project/Conv2D_bias' with ID 185, type 4
+     8.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm' with ID 186, type 3
+     8.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_8/add' with ID 187, type 3
+     8.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/expand/Relu6_dilation' with ID 188, type 4
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/expand/Relu6_pad_amount' with ID 189, type 4
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/expand/Relu6_stride' with ID 190, type 4
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2703' with ID 191, type 4
+     8.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/expand/Conv2D_bias' with ID 192, type 4
+     8.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/expand/Relu6' with ID 193, type 3
+     8.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2233:0' with ID 194, type 3
+     8.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/depthwise/Relu6_dilation' with ID 195, type 4
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/depthwise/Relu6_pad_amount' with ID 196, type 4
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/depthwise/Relu6_stride' with ID 197, type 4
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2721' with ID 198, type 4
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/depthwise/depthwise_bias' with ID 199, type 4
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/depthwise/Relu6' with ID 200, type 3
+     8.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2235:0' with ID 201, type 3
+     8.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm_dilation' with ID 202, type 4
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 203, type 4
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm_stride' with ID 204, type 4
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2651' with ID 205, type 4
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/project/Conv2D_bias' with ID 206, type 4
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm' with ID 207, type 3
+     8.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_9/add' with ID 208, type 3
+     8.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/expand/Relu6_dilation' with ID 209, type 4
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/expand/Relu6_pad_amount' with ID 210, type 4
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/expand/Relu6_stride' with ID 211, type 4
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2707' with ID 212, type 4
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/expand/Conv2D_bias' with ID 213, type 4
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/expand/Relu6' with ID 214, type 3
+     8.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.5ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2238:0' with ID 215, type 3
+     8.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/depthwise/Relu6_dilation' with ID 216, type 4
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/depthwise/Relu6_pad_amount' with ID 217, type 4
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/depthwise/Relu6_stride' with ID 218, type 4
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2720' with ID 219, type 4
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/depthwise/depthwise_bias' with ID 220, type 4
+     8.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/depthwise/Relu6' with ID 221, type 3
+     8.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2240:0' with ID 222, type 3
+     8.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm_dilation' with ID 223, type 4
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 224, type 4
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm_stride' with ID 225, type 4
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2671' with ID 226, type 4
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/project/Conv2D_bias' with ID 227, type 4
+     8.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm' with ID 228, type 3
+     8.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/expand/Relu6_dilation' with ID 229, type 4
+     8.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/expand/Relu6_pad_amount' with ID 230, type 4
+     8.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/expand/Relu6_stride' with ID 231, type 4
+     8.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2674' with ID 232, type 4
+     8.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/expand/Conv2D_bias' with ID 233, type 4
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/expand/Relu6' with ID 234, type 3
+     8.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2243:0' with ID 235, type 3
+     8.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/depthwise/Relu6_dilation' with ID 236, type 4
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/depthwise/Relu6_pad_amount' with ID 237, type 4
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     8.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/depthwise/Relu6_stride' with ID 238, type 4
+     8.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2723' with ID 239, type 4
+     9.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/depthwise/depthwise_bias' with ID 240, type 4
+     9.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/depthwise/Relu6' with ID 241, type 3
+     9.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2245:0' with ID 242, type 3
+     9.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm_dilation' with ID 243, type 4
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 244, type 4
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm_stride' with ID 245, type 4
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2608' with ID 246, type 4
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/project/Conv2D_bias' with ID 247, type 4
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm' with ID 248, type 3
+     9.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_11/add' with ID 249, type 3
+     9.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/expand/Relu6_dilation' with ID 250, type 4
+     9.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/expand/Relu6_pad_amount' with ID 251, type 4
+     9.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/expand/Relu6_stride' with ID 252, type 4
+     9.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2709' with ID 253, type 4
+     9.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/expand/Conv2D_bias' with ID 254, type 4
+     9.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/expand/Relu6' with ID 255, type 3
+     9.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2248:0' with ID 256, type 3
+     9.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/depthwise/Relu6_dilation' with ID 257, type 4
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/depthwise/Relu6_pad_amount' with ID 258, type 4
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/depthwise/Relu6_stride' with ID 259, type 4
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2710' with ID 260, type 4
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/depthwise/depthwise_bias' with ID 261, type 4
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/depthwise/Relu6' with ID 262, type 3
+     9.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2250:0' with ID 263, type 3
+     9.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm_dilation' with ID 264, type 4
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 265, type 4
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm_stride' with ID 266, type 4
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2706' with ID 267, type 4
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/project/Conv2D_bias' with ID 268, type 4
+     9.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm' with ID 269, type 3
+     9.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_12/add' with ID 270, type 3
+     9.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/expand/Relu6_dilation' with ID 271, type 4
+     9.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/expand/Relu6_pad_amount' with ID 272, type 4
+     9.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/expand/Relu6_stride' with ID 273, type 4
+     9.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2667' with ID 274, type 4
+     9.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/expand/Conv2D_bias' with ID 275, type 4
+     9.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/expand/Relu6' with ID 276, type 3
+     9.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2253:0' with ID 277, type 3
+     9.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/depthwise/Relu6_dilation' with ID 278, type 4
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/depthwise/Relu6_pad_amount' with ID 279, type 4
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/depthwise/Relu6_stride' with ID 280, type 4
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2711' with ID 281, type 4
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/depthwise/depthwise_bias' with ID 282, type 4
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/depthwise/Relu6' with ID 283, type 3
+     9.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2255:0' with ID 284, type 3
+     9.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm_dilation' with ID 285, type 4
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 286, type 4
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm_stride' with ID 287, type 4
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2708' with ID 288, type 4
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/project/Conv2D_bias' with ID 289, type 4
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm' with ID 290, type 3
+     9.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+     9.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/expand/Relu6_dilation' with ID 291, type 4
+    10.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/expand/Relu6_pad_amount' with ID 292, type 4
+    10.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/expand/Relu6_stride' with ID 293, type 4
+    10.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2670' with ID 294, type 4
+    10.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/expand/Conv2D_bias' with ID 295, type 4
+    10.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/expand/Relu6' with ID 296, type 3
+    10.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2258:0' with ID 297, type 3
+    10.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/depthwise/Relu6_dilation' with ID 298, type 4
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/depthwise/Relu6_pad_amount' with ID 299, type 4
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/depthwise/Relu6_stride' with ID 300, type 4
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2705' with ID 301, type 4
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/depthwise/depthwise_bias' with ID 302, type 4
+    10.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/depthwise/Relu6' with ID 303, type 3
+    10.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2260:0' with ID 304, type 3
+    10.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm_dilation' with ID 305, type 4
+    10.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 306, type 4
+    10.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.3ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm_stride' with ID 307, type 4
+    10.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2677' with ID 308, type 4
+    10.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/project/Conv2D_bias' with ID 309, type 4
+    10.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm' with ID 310, type 3
+    10.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_14/add' with ID 311, type 3
+    10.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/expand/Relu6_dilation' with ID 312, type 4
+    10.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/expand/Relu6_pad_amount' with ID 313, type 4
+    10.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.5ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/expand/Relu6_stride' with ID 314, type 4
+    10.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2664' with ID 315, type 4
+    10.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/expand/Conv2D_bias' with ID 316, type 4
+    10.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/expand/Relu6' with ID 317, type 3
+    10.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2263:0' with ID 318, type 3
+    10.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.6ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/depthwise/Relu6_dilation' with ID 319, type 4
+    10.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/depthwise/Relu6_pad_amount' with ID 320, type 4
+    10.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/depthwise/Relu6_stride' with ID 321, type 4
+    10.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2684' with ID 322, type 4
+    10.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/depthwise/depthwise_bias' with ID 323, type 4
+    10.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/depthwise/Relu6' with ID 324, type 3
+    10.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2265:0' with ID 325, type 3
+    10.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm_dilation' with ID 326, type 4
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 327, type 4
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm_stride' with ID 328, type 4
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2687' with ID 329, type 4
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/project/Conv2D_bias' with ID 330, type 4
+    10.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.8ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm' with ID 331, type 3
+    10.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    10.9ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_15/add' with ID 332, type 3
+    10.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    10.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    10.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/expand/Relu6_dilation' with ID 333, type 4
+    11.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/expand/Relu6_pad_amount' with ID 334, type 4
+    11.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/expand/Relu6_stride' with ID 335, type 4
+    11.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2727' with ID 336, type 4
+    11.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/expand/Conv2D_bias' with ID 337, type 4
+    11.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/expand/Relu6' with ID 338, type 3
+    11.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2268:0' with ID 339, type 3
+    11.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/depthwise/Relu6_dilation' with ID 340, type 4
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/depthwise/Relu6_pad_amount' with ID 341, type 4
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/depthwise/Relu6_stride' with ID 342, type 4
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2724' with ID 343, type 4
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/depthwise/depthwise_bias' with ID 344, type 4
+    11.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/depthwise/Relu6' with ID 345, type 3
+    11.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__2270:0' with ID 346, type 3
+    11.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm_dilation' with ID 347, type 4
+    11.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm_pad_amount' with ID 348, type 4
+    11.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.2ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm_stride' with ID 349, type 4
+    11.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2688' with ID 350, type 4
+    11.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/project/Conv2D_bias' with ID 351, type 4
+    11.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] [QNN_CPU] Adding tensor 'MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm' with ID 352, type 3
+    11.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] [QNN_CPU] Adding tensor 'aspp0/Relu_dilation' with ID 353, type 4
+    11.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] [QNN_CPU] Adding tensor 'aspp0/Relu_pad_amount' with ID 354, type 4
+    11.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.4ms [  INFO ] [QNN_CPU] Adding tensor 'aspp0/Relu_stride' with ID 355, type 4
+    11.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2640' with ID 356, type 4
+    11.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] [QNN_CPU] Adding tensor 'aspp0/Conv2D_bias' with ID 357, type 4
+    11.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] [QNN_CPU] Adding tensor 'aspp0/Relu' with ID 358, type 3
+    11.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] [QNN_CPU] Adding tensor 'Relu__2275:0' with ID 359, type 3
+    11.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] [QNN_CPU] Adding tensor 'AvgPool2D/AvgPool_filter_size' with ID 360, type 4
+    11.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] [QNN_CPU] Adding tensor 'AvgPool2D/AvgPool_pad_amount' with ID 361, type 4
+    11.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] [QNN_CPU] Adding tensor 'AvgPool2D/AvgPool_stride' with ID 362, type 4
+    11.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Relu__2540:0' with ID 363, type 3
+    11.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Relu_dilation' with ID 364, type 4
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Relu_pad_amount' with ID 365, type 4
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Relu_stride' with ID 366, type 4
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2696' with ID 367, type 4
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Conv2D_bias' with ID 368, type 4
+    11.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.7ms [  INFO ] [QNN_CPU] Adding tensor 'image_pooling/Relu' with ID 369, type 3
+    11.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    11.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    11.8ms [  INFO ] [QNN_CPU] Adding tensor 'Transpose__2544:0' with ID 370, type 3
+    11.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    11.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    12.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.3ms [  INFO ] [QNN_CPU] Adding tensor 'Resize__2546:0' with ID 371, type 3
+    12.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    12.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    12.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.9ms [  INFO ] [QNN_CPU] Adding tensor 'concat' with ID 372, type 3
+    12.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    13.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    13.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.6ms [  INFO ] [QNN_CPU] Adding tensor 'concat_projection/Relu_dilation' with ID 373, type 4
+    13.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.6ms [  INFO ] [QNN_CPU] Adding tensor 'concat_projection/Relu_pad_amount' with ID 374, type 4
+    13.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.6ms [  INFO ] [QNN_CPU] Adding tensor 'concat_projection/Relu_stride' with ID 375, type 4
+    13.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2694' with ID 376, type 4
+    13.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] [QNN_CPU] Adding tensor 'concat_projection/Conv2D_bias' with ID 377, type 4
+    13.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] [QNN_CPU] Adding tensor 'concat_projection/Relu' with ID 378, type 3
+    13.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu__2277:0' with ID 379, type 3
+    13.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    13.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'logits/semantic/BiasAdd_dilation' with ID 380, type 4
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'logits/semantic/BiasAdd_pad_amount' with ID 381, type 4
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'logits/semantic/BiasAdd_stride' with ID 382, type 4
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2697' with ID 383, type 4
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'logits/semantic/Conv2D_bias' with ID 384, type 4
+    13.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] [QNN_CPU] Adding tensor 'logits/semantic/BiasAdd' with ID 385, type 3
+    13.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    13.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] [QNN_CPU] Adding tensor 'Resize__2556:0' with ID 386, type 3
+    14.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] [QNN_CPU] Adding tensor 'ResizeBilinear_3' with ID 387, type 1
+    14.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] Finalizing graph with QnnGraphTransformerAdapter
+    14.0ms [  INFO ] [QNN_CPU] QnnGraph finalize start
+    18.7ms [  INFO ] [QNN_CPU] QnnGraph finalize end
+    27.5ms [  INFO ] [QNN_CPU] QnnGraph execute start
+    73.7ms [  INFO ] [QNN_CPU] QnnGraph execute end
+    71.8ms [  INFO ] cleaning up resources for input tensors
+    71.8ms [  INFO ] cleaning up resources for output tensors
+    87.0ms2026-11-01 16:46:40,808 - 278 - INFO - Quantization completed successfully: 
+ [  INFO ] [QNN_CPU] QnnGraph execute start
+   139.5ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   137.1ms [  INFO ] cleaning up resources for input tensors
+   137.1ms [  INFO ] cleaning up resources for output tensors
+   152.9ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   202.5ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   200.3ms [  INFO ] cleaning up resources for input tensors
+   200.3ms [  INFO ] cleaning up resources for output tensors
+   218.5ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   266.0ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   263.7ms [  INFO ] cleaning up resources for input tensors
+   263.7ms [  INFO ] cleaning up resources for output tensors
+   277.2ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   330.9ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   328.4ms [  INFO ] cleaning up resources for input tensors
+   328.4ms [  INFO ] cleaning up resources for output tensors
+modeltools::IrGraph::reEvalMacsParams: Re-evaluated graph statistics after IrOptimizer optimization passes:
+modeltools::IrGraph::reEvalMacsParams: Total MACs: 738582134
+modeltools::IrGraph::reEvalMacsParams: Total Params Count: 688357
+2026-11-01 16:46:40,926 - 278 - INFO - Quantized Model saved at: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\models\segmentation\model.w8a16.dlc 
+   393.1ms [  INFO ] Freeing graphsInfo
+   393.1ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+   396.7ms [  INFO ] Free context with QnnGraphTransformerAdapter
+   396.7ms [  INFO ] QnnGraphTransformer context freed successfully
+   396.7ms [  INFO ] [QNN_CPU] QnnContext Free start
+   398.6ms [  INFO ] [QNN_CPU] QnnContext Free end
+   395.5ms [WARNING] Profile Logger with name = defaultKey doesn't exist!
+   399.0ms [  INFO ] [QNN_CPU] QnnBackend Free start
+   399.0ms [  INFO ] [QNN_CPU] QnnBackend Free end
+   395.5ms [  INFO ] WindowsFileIO callback: ~WindowsFileIO

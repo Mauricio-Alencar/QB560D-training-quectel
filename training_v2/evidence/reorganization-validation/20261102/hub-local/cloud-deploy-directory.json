@@ -1,0 +1,4 @@
+{
+  "command": "mkdir -p /opt/qb560d-training-payload/evidence/reorg-aihub-20261102",
+  "exit_code": 0
+}

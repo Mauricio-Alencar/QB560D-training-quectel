@@ -1,0 +1,4 @@
+{
+  "command": "sh /opt/qb560d-ai-htp251/htp-controls/run.sh --runtime /opt/qb560d-no-such-runtime check",
+  "exit_code": 1
+}

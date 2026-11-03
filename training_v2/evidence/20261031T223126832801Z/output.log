@@ -1,0 +1,98 @@
+Boot and system health
+ 05:10:21 up 40 min,  0 users,  load average: 3.47, 3.20, 2.92
+[0m [0m[0m UNIT                   [0m[0m LOAD  [0m[0m ACTIVE[0m[0m SUB   [0m[0m DESCRIPTION                      [0m
+[0;1;31m●[0m [0;1;31mavahi-daemon.service   [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m Avahi mDNS/DNS-SD Stack          
+[0;1;31m●[0m [0;1;31mcamera_cgroup.service  [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m Create Camera Cgroup Service     
+[0;1;31m●[0m [0;1;31mchg-policy.service     [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m Charger Policy Service           
+[0;1;31m●[0m [0;1;31mdnsmasq.service        [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m dnsmasq - A lightweight DHCP and…
+[0;1;31m●[0m [0;1;31mfs-scrub-daemon.service[0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m fs-scrub-daemon Service          
+[0;1;31m●[0m [0;1;31mip6tables.service      [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m IPv6 Packet Filtering Framework  
+[0;1;31m●[0m [0;1;31mipacmdiag.service      [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m start IPA configuration manager …
+[0;1;31m●[0m [0;1;31miptables.service       [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m IPv4 Packet Filtering Framework  
+[0;1;31m●[0m [0;1;31mqti_pppd.service       [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m qti_ppp service                  
+[0;1;31m●[0m [0;1;31mthermal-engine.service [0m loaded [0;1;31mfailed[0m [0;1;31mfailed[0m Thermal Engine Service           
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+10 loaded units listed.
+-- Logs begin at Tue 2024-06-18 04:29:39 CST, end at Tue 2024-06-18 15:46:56 CST. --
+Jun 18 05:02:18 qcs6490-odk agetty[4905]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:02:34 qcs6490-odk agetty[4907]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:02:50 qcs6490-odk agetty[4908]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:03:07 qcs6490-odk agetty[4910]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:03:23 qcs6490-odk agetty[4911]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:03:39 qcs6490-odk agetty[4912]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:03:55 qcs6490-odk agetty[4938]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:04:12 qcs6490-odk agetty[4940]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:04:28 qcs6490-odk agetty[4941]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:04:44 qcs6490-odk agetty[4942]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:05:00 qcs6490-odk agetty[4943]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:05:17 qcs6490-odk agetty[4944]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:05:33 qcs6490-odk agetty[4949]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:05:49 qcs6490-odk agetty[4950]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:06:05 qcs6490-odk agetty[4952]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:06:22 qcs6490-odk agetty[4954]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:06:38 qcs6490-odk agetty[4955]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:06:54 qcs6490-odk agetty[4957]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:07:10 qcs6490-odk agetty[4968]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:07:27 qcs6490-odk agetty[4970]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:07:43 qcs6490-odk agetty[4988]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:07:59 qcs6490-odk agetty[4991]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:08:15 qcs6490-odk agetty[4992]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:08:32 qcs6490-odk agetty[4994]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:08:48 qcs6490-odk agetty[4995]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:09:04 qcs6490-odk agetty[5010]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:09:20 qcs6490-odk agetty[5011]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:09:37 qcs6490-odk agetty[5072]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:09:53 qcs6490-odk agetty[5144]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+Jun 18 05:10:09 qcs6490-odk agetty[5168]: [0;1;31m[0;1;39m[0;1;31m/dev/hvc0: cannot open as standard input: Invalid argument[0m
+
+Root filesystem
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G  7.9G   12G  41% /
+/dev/sda6 on / type ext4 (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=2463176k,nr_inodes=615794,mode=755)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,size=3739112k,nr_inodes=934778)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,size=747824k,nr_inodes=934778,mode=755)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,nr_inodes=934778)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=3739112k,nr_inodes=934778,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=3739112k,nr_inodes=934778)
+/dev/sda9 on /systemrw type ext4 (rw,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf8 on /persist type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf9 on /bt_firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sdg3 on /dsp type ext4 (ro,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered)
+/dev/sdg1 on /firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sda8 on /cache type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sda12 on /data type ext4 (rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+diag on /dev/ffs-diag type functionfs (rw,relatime)
+Jun 18 05:10:21 qcs6490-odk qb560d-training[5199]: qb560d-training-1718658621-5188
+RESULT: LOG_EVENT_FOUND
+
+__QB560D_EXIT__=0

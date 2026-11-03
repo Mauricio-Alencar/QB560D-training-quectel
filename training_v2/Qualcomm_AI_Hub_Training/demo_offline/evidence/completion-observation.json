@@ -1,0 +1,14 @@
+{
+  "at_host_utc": "2026-11-01T20:57:03.943611+00:00",
+  "result": "PASS_HOSTED_LOCAL_AND_CONTINGENCY_REFERENCE",
+  "compile": "PASS",
+  "inference_profile": "PASS",
+  "hosted_correctness": "PASS",
+  "local_cpu": "PASS",
+  "local_gpu": "PASS_OPENCL_DELEGATE_CONFIRMED",
+  "same_artifact_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+  "offline_payload": "PASS_CPU_GPU_HASHES_VERIFIED",
+  "contingency": "AVAILABLE_106_SECOND_CAPTIONED_REPLAY",
+  "classroom_50_minute_timed_rehearsal": "PENDING_FINAL_REHEARSAL_ITEM_7",
+  "scope": "One synthetic input,one hosted job,one guided target session/backend plus independent offline payload check. Not dataset accuracy."
+}

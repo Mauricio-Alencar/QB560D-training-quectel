@@ -1,0 +1,63 @@
+
+CONNECTOR /sys/class/drm/card0-DP-1
+status: disconnected
+enabled: disabled
+modes: edid_bytes: 0
+
+CONNECTOR /sys/class/drm/card0-DSI-1
+status: connected
+enabled: enabled
+modes: 1920x1080x60x148500vid
+edid_bytes: 128
+
+CONNECTOR /sys/class/drm/card0-Virtual-1
+status: connected
+enabled: disabled
+modes: 4096x2160
+4096x2160
+2560x1600
+2560x1600
+1920x1440
+1856x1392
+1792x1344
+2048x1152
+1920x1200
+1920x1200
+1920x1080
+1600x1200
+1680x1050
+1680x1050
+1400x1050
+1400x1050
+1600x900
+1280x1024
+1440x900
+1440x900
+1280x960
+1366x768
+1366x768
+1360x768
+1280x800
+1280x800
+1280x768
+1280x768
+1280x720
+1024x768
+800x600
+800x600
+848x480
+640x480
+edid_bytes: 0
+total 0
+drwxr-xr-x 2 root root         80 Jun 18  2024 by-path
+crw-rw---- 1 root video  226,   0 Nov  2 06:34 card0
+crw-rw---- 1 root render 226, 128 Jun 18  2024 renderD128
+/usr/bin/modetest
+/usr/bin/weston
+/usr/bin/gst-launch-1.0
+/usr/bin/v4l2-ctl
+   3275 Binder_2        /usr/bin/qmmf-server
+   3553 weston          weston --log=logcat --config=/etc/xdg/weston/weston.ini
+   3734 weston-keyboard /usr/libexec/weston-keyboard
+   3735 weston-desktop- /usr/libexec/weston-desktop-shell
+91 0 root   pts/0

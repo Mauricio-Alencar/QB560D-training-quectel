@@ -1,0 +1,220 @@
+Startup finished in 2.754s (kernel) + 1min 13.569s (userspace) = 1min 16.324s 
+multi-user.target reached after 52.665s in userspace
+avahi-daemon.service       loaded failed failed Avahi mDNS/DNS-SD Stack         
+camera_cgroup.service      loaded failed failed Create Camera Cgroup Service    
+chg-policy.service         loaded failed failed Charger Policy Service          
+dhcpd6.service             loaded failed failed DHCPv6 Server Daemon            
+dnsmasq.service            loaded failed failed dnsmasq - A lightweight DHCP an…
+fs-scrub-daemon.service    loaded failed failed fs-scrub-daemon Service         
+init_post_boot.service     loaded failed failed QTI Post Boot Service           
+ip6tables.service          loaded failed failed IPv6 Packet Filtering Framework 
+ipacmdiag.service          loaded failed failed start IPA configuration manager…
+iptables.service           loaded failed failed IPv4 Packet Filtering Framework 
+lunch-make-scripts.service loaded failed failed lunch make scripts              
+qcmap_wlan.service         loaded failed failed WLAN service                    
+qti_pppd.service           loaded failed failed qti_ppp service                 
+thermal-engine.service     loaded failed failed Thermal Engine Service          
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:33 CST. --
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: No subnet declaration for eth1 (no IPv4 addresses).
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: ** Ignoring requests on eth1.  If this is not what
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    you want, please write a subnet declaration
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    in your dhcpd.conf file for the network segment
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    to which interface eth1 is attached. **
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: No subnet declaration for eth2 (no IPv4 addresses).
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: ** Ignoring requests on eth2.  If this is not what
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    you want, please write a subnet declaration
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    in your dhcpd.conf file for the network segment
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    to which interface eth2 is attached. **
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: No subnet declaration for dummy0 (no IPv4 addresses).
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: ** Ignoring requests on dummy0.  If this is not what
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    you want, please write a subnet declaration
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    in your dhcpd.conf file for the network segment
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]:    to which interface dummy0 is attached. **
+Nov 02 02:46:59 qcs6490-odk dhcpd[4669]: 
+Nov 02 02:46:59 qcs6490-odk kernel: PCIe: rc_sel is now: 0x2
+Nov 02 02:46:59 qcs6490-odk kernel: PCIe: the following RC(s) will be tested:
+Nov 02 02:46:59 qcs6490-odk kernel: RC 1
+Nov 02 02:46:59 qcs6490-odk kernel: PCIe: TEST: 10
+Nov 02 02:46:59 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: 
+                                    
+                                    PCIe: attempting to enumerate RC1
+Nov 02 02:46:59 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: PCIe: RC1 is already enumerated
+Nov 02 02:47:00 qcs6490-odk systemd[1]: Failed to start QTI Post Boot Service.
+Nov 02 02:47:08 qcs6490-odk kernel: [schedu][0x4eddfac6][18:47:08.462442] wlan: [4516:E:DP] dp_tx_flow_pool_vdev_unmap: invalid vdev_id 0
+Nov 02 02:47:08 qcs6490-odk kernel: [schedu][0x4eddfc0b][18:47:08.462459] wlan: [4516:E:DP] dp_tx_delete_flow_pool: flow pool either not created or alread deleted
+Nov 02 02:47:19 qcs6490-odk kernel: [kworke][0x5b87075e][18:47:19.575072] wlan: [336:E:WMI] wmi_unified_unregister_event_handler: event handler is not registered: evt id 0x1d01a
+Nov 02 02:47:19 qcs6490-odk kernel: [schedu][0x5b8724bd][18:47:19.575464] wlan: [4516:E:SYS] Processing SYS MC STOP
+Nov 02 02:47:19 qcs6490-odk kernel: [E][mhi_process_ctrl_ev_ring] No EV access, PM_STATE:SHUTDOWN Process
+Nov 02 02:47:20 qcs6490-odk systemd[1]: Failed to start lunch make scripts.
+Nov 02 02:47:49 qcs6490-odk kernel: DATARMNETe9173bbe0e(): rmnet dl_ind registration fail
+Nov 02 02:57:03 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:57:31 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:57:40 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:57:49 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:58:08 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:58:19 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 02:58:25 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:27:04 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:27:19 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:27:28 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:27:40 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:27:45 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:06 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:16 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:49 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:52 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:55 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:28:59 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:29:02 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:30:16 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:30:19 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 03:30:21 qcs6490-odk kernel: [glink_pkt_ioctl]: unrecognized ioctl command 0x5401
+Nov 02 04:04:11 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/updates/amss20.bin
+Nov 02 04:04:11 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/updates/regdb.bin
+Nov 02 04:04:11 qcs6490-odk kernel: firmware_class: BDF download filepath :/persist/bdwlang.elf
+Nov 02 04:04:11 qcs6490-odk kernel: cnss: Failed to load QDSS: qdss_trace_config_v2.cfg
+Nov 02 04:04:11 qcs6490-odk kernel: [kworke][0x14f9ed0f74][20:04:11.990339] wlan: [6056:E:TXRX] hif_print_hal_shadow_register_cfg: num_config 33
+Nov 02 04:04:12 qcs6490-odk kernel: wlan_pld:pld_is_ipa_offload_disabled:3268:: Not supported on type 0
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f55e0d][20:04:12.018694] wlan: [6056:E:QDF] cds_get_context: Module ID 66 context is Null
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f5da40][20:04:12.020350] wlan: [6056:E:QDF] cds_get_context: Module ID 66 context is Null
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f61489][20:04:12.021127] wlan: [6056:F:WMA] WMA --> wmi_unified_attach - success
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f71f75][20:04:12.024686] wlan: [6056:E:QDF] htc_wait_target: Target Ready! TX resource : 2 size:2176, MaxMsgsPerHTCBundle = 1
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f720f8][20:04:12.024706] wlan: [6056:E:QDF] htc_setup_target_buffer_assignments: SVS Index : 1 TX : 0x100 : alloc:2
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9f7276a][20:04:12.024792] wlan: [6056:E:DP] dp_srng_get_str_from_hal_ring_type: Invalid ring type
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9fa28d6][20:04:12.035051] wlan: [6056:E:DP] dp_rx_fst_attach: RX FISA feature is disabled
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9fa3029][20:04:12.035149] wlan: [6056:E:DP] dp_rx_refill_buff_pool_init: RX refill buffer pool support is disabled
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9fa30ce][20:04:12.035157] wlan: [6056:E:DP] dp_rx_buffer_pool_init: RX buffer pool support is disabled
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14f9fd1ea8][20:04:12.045155] wlan: [7664:E:QDF] copy_fw_abi_version_tlv: copy_fw_abi_version_tlv: INIT_CMD version: 1, 0, 0x5f414351, 0x4c4d, 0x0, 0x0
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa4dbd78][20:04:12.320341] wlan: [7664:E:QDF] ready_extract_init_status_tlv: ready_extract_init_status_tlv:0
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa4dc4ed][20:04:12.320440] wlan: [7664:E:QDF] cds_get_context: Module ID 65 context is Null
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa4dc594][20:04:12.320449] wlan: [7664:F:DP] cdp_ipa_set_uc_tx_partition_base invalid instance
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa4ff939][20:04:12.327964] wlan: [7664:E:QDF] dp_peer_map_attach_wifi3: dp_peer_map_attach_wifi3 max_peers 25, max_ast_index: 80
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa503942][20:04:12.328818] wlan: [6056:E:WMI] send_action_oui_cmd_tlv: Invalid action id
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa5074ed][20:04:12.329614] wlan: [6056:E:TXRX] dp_rxdma_ring_config: DBS enabled max_mac_rings 2
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa507592][20:04:12.329622] wlan: [6056:E:TXRX] dp_rxdma_ring_config: pdev_id 0 max_mac_rings 2
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa507627][20:04:12.329630] wlan: [6056:E:TXRX] dp_rxdma_ring_config: mac_id 0
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa507b83][20:04:12.329702] wlan: [6056:E:TXRX] dp_rxdma_ring_config: mac_id 1
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa50817f][20:04:12.329781] wlan: [6056:E:DP] dp_rx_target_fst_config: RX FISA feature is disabled
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa50ae13][20:04:12.330376] wlan: [6056:E:REGULATORY] reg_freq_width_to_chan_op_class: no op class for frequency 5660
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa53749b][20:04:12.339849] wlan: [6056:E:fwol] ucfg_fwol_send_get_thermal_stats_cmd: Command Disabled in Ini gThermalStatsTempOffset 5 or not enabled in FW 0
+Nov 02 04:04:12 qcs6490-odk kernel: [kworke][0x14fa537599][20:04:12.339863] wlan: [6056:E:OSIF] os_if_fwol_get_thermal_stats_req: Failed to send get thermal stats cmd to FW, 4
+Nov 02 04:04:20 qcs6490-odk kernel: [soft_i][0x15033184bd][20:04:20.088375] wlan: [0:E:DP] dp_peer_find_add_id: peer         pK-error ID 2 vid 0 mac 8c:44:4f:0c:df:81
+Nov 02 04:04:20 qcs6490-odk kernel: [soft_i][0x1503318a45][20:04:20.088449] wlan: [0:E:DP] dp_peer_map_ast: peer         pK-error ID 21 vid 0 mac 8c:44:4f:0c:df:81
+Nov 02 04:04:20 qcs6490-odk kernel: [schedu][0x15033239b9][20:04:20.090788] wlan: [7758:E:REGULATORY] reg_chan_band_to_freq: Invalid channel 0
+Nov 02 04:05:06 qcs6490-odk kernel: [soft_i][0x1538a1123c][20:05:06.781525] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:05:27 qcs6490-odk kernel: [soft_i][0x1550a24669][20:05:27.757286] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:05:41 qcs6490-odk kernel: [soft_i][0x1560759f02][20:05:41.585969] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:06:31 qcs6490-odk kernel: [soft_i][0x159987dfd8][20:06:31.455967] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:06:44 qcs6490-odk kernel: [soft_i][0x15a869192a][20:06:44.458208] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:06:45 qcs6490-odk kernel: [soft_i][0x15a95afd48][20:06:45.283869] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:06:45 qcs6490-odk kernel: [soft_i][0x15a9ee77d1][20:06:45.787266] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:06:47 qcs6490-odk kernel: [soft_i][0x15abe4406e][20:06:47.500032] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:12:16 qcs6490-odk kernel: [soft_i][0x1724afcd95][20:12:16.751280] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:12:30 qcs6490-odk kernel: [soft_i][0x1734bdfad1][20:12:30.780807] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 04:12:31 qcs6490-odk kernel: [soft_i][0x173554571e][20:12:31.294043] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+[ 9706.319198] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9707.684055] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9707.684102] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9707.684403] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9707.684408] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9711.407729] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9712.803583] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9712.803638] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9712.803825] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9712.803829] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9715.842514] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9717.922470] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9717.922522] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9717.922663] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9717.922668] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9721.928052] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9723.041954] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9723.042017] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9723.042150] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9723.042153] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9728.161548] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9728.161621] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9728.162061] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9728.162068] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9730.377157] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9733.281880] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9733.281968] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9733.282123] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9733.282129] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9736.417581] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9738.401390] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9738.402090] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9738.402292] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9738.402296] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9741.856389] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9743.520877] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9743.520925] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9743.521287] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9743.521291] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9746.656132] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9748.639663] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9748.639887] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9748.640043] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9748.640048] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9752.000236] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9753.759171] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9753.759229] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9753.759383] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9753.759387] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9757.329426] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9758.878817] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9758.878904] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9758.879225] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9758.879228] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9762.635321] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9763.999121] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9763.999171] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9763.999338] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9763.999343] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9767.724351] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9769.118781] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9769.118850] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9769.119007] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9769.119014] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9770.682945] [soft_i][0x2bb34c098f][21:28:55.346297] wlan: [0:I:QDF] DHCP-R RX: SA:0e:90:de:0d:b6:88 DA:ff:ff:ff:ff:ff:ff
+[ 9772.723943] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9774.238243] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9774.238429] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9774.238557] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9774.238561] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9777.597907] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9779.357088] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9779.357146] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9779.357277] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9779.357281] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9782.796151] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9784.476633] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9784.476688] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9784.477030] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9784.477034] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9787.869179] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9789.596170] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9789.596215] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9789.596414] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9789.596418] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9793.295217] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9794.716499] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9794.716549] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9794.716919] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9794.716923] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9797.852367] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9799.836151] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9799.836307] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9799.836672] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9799.836676] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9804.955679] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9804.955739] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9804.955871] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9804.955874] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9807.148673] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+

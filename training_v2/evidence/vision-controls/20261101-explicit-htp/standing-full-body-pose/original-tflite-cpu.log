@@ -1,0 +1,266 @@
+{
+  "inputs": [
+    {
+      "name": "sub_2",
+      "shape": [
+        1,
+        353,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "float_heatmaps",
+      "shape": [
+        1,
+        23,
+        17,
+        17
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "float_short_offsets",
+      "shape": [
+        1,
+        23,
+        17,
+        34
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "float_mid_offsets",
+      "shape": [
+        1,
+        23,
+        17,
+        64
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "float_segments",
+      "shape": [
+        1,
+        23,
+        17,
+        1
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "keypoints_yxs": [
+    [
+      0.15267821682073576,
+      0.4862578833613414,
+      0.9936249617706793
+    ],
+    [
+      0.13882524366081606,
+      0.5143298453394077,
+      0.988962662907937
+    ],
+    [
+      0.14057426614734336,
+      0.47096703302999415,
+      0.9808242752608101
+    ],
+    [
+      0.15726898074487788,
+      0.5626064181791669,
+      0.9663113203913571
+    ],
+    [
+      0.1623959852007901,
+      0.4643097647433151,
+      0.8266346398430117
+    ],
+    [
+      0.2671739136531063,
+      0.6288375205103062,
+      0.9982787623268691
+    ],
+    [
+      0.2740673068224877,
+      0.3992521215505637,
+      0.9992740861930653
+    ],
+    [
+      0.3845583615829857,
+      0.69931119054208,
+      0.9827896426525123
+    ],
+    [
+      0.4041569378153123,
+      0.35271275924801365,
+      0.9846733291199248
+    ],
+    [
+      0.3857908532572198,
+      0.5980839970510757,
+      0.9271632535535073
+    ],
+    [
+      0.4870839942953742,
+      0.257104674201995,
+      0.9534699265836799
+    ],
+    [
+      0.5157166121701681,
+      0.5741974008686348,
+      0.9888790779600345
+    ],
+    [
+      0.5117254743495001,
+      0.4317174106256507,
+      0.9943789802101054
+    ],
+    [
+      0.6882810781765254,
+      0.5616076799682143,
+      0.98733528877627
+    ],
+    [
+      0.6878473434502275,
+      0.40830401409460876,
+      0.9936302152468706
+    ],
+    [
+      0.831278241727575,
+      0.5170489378012572,
+      0.9134278676971894
+    ],
+    [
+      0.8223158320353997,
+      0.40006643139434694,
+      0.9416608002769906
+    ]
+  ],
+  "visible_keypoints": 17,
+  "decoder": "single_person_heatmap_argmax",
+  "demo_id": "D2-07",
+  "backend": "CPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+  "image_sha256": "754d3c0c46fd9cd04c6affe83ef2500f70db835ef9693ab1ce24a477a37aa404",
+  "runs": 1,
+  "warmup": 0,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 129.1735489999155,
+  "inference_ms_p95": 129.1735489999155,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "sub_2",
+        "shape": [
+          1,
+          353,
+          257,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "float_heatmaps",
+        "shape": [
+          1,
+          23,
+          17,
+          17
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "float_short_offsets",
+        "shape": [
+          1,
+          23,
+          17,
+          34
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "float_mid_offsets",
+        "shape": [
+          1,
+          23,
+          17,
+          64
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "float_segments",
+        "shape": [
+          1,
+          23,
+          17,
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)

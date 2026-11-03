@@ -1,0 +1,26 @@
+127.0.0.1 - - [02/Nov/2026 09:18:09] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 09:18:09] "GET /telemetry HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 09:18:09] code 404, message Not Found
+127.0.0.1 - - [02/Nov/2026 09:18:09] "GET /missing HTTP/1.1" 404 -
+{
+  "result": "PASS_FOREGROUND_HTTP_LIFECYCLE",
+  "health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 9831.82,
+      "process_uptime_s": 0.034
+    }
+  },
+  "missing": 404,
+  "stopped_endpoint": "unavailable as expected"
+}
+

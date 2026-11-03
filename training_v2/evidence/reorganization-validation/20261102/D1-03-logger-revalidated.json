@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload && sh -n target/diagnostics.sh && sh target/diagnostics.sh",
+  "exit_code": 0
+}

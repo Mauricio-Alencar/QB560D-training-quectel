@@ -1,0 +1,32 @@
+HAND GESTURE: QAIRT 2.51 EM /opt/qairt-isolated/2.51.40.260930
+HTP: 7/7; CPU: 0/7 classes esperadas.
+Scores sao saidas diretas do classificador, sem softmax adicional.
+
+closed_fist.jpg: HTP=Closed_Fist score=0.83593750; CPU=None score=0.62500000
+  HTP execute por grafo (us, uma execucao): palm_detector=[21692.0], hand_landmark_detector=[5469.0], canned_gesture_classifier=[2446.0]
+full_open_palm.png: HTP=Open_Palm score=0.66796875; CPU=None score=0.51953125
+  HTP execute por grafo (us, uma execucao): palm_detector=[19651.0], hand_landmark_detector=[5756.0], canned_gesture_classifier=[2449.0]
+pointing_up.jpg: HTP=Pointing_Up score=0.96484375; CPU=None score=0.61718750
+  HTP execute por grafo (us, uma execucao): palm_detector=[23304.0], hand_landmark_detector=[5518.0], canned_gesture_classifier=[2483.0]
+thumbs_down.jpg: HTP=Thumb_Down score=0.71093750; CPU=No_hand score=0.00000000
+  HTP execute por grafo (us, uma execucao): palm_detector=[20226.0], hand_landmark_detector=[5525.0], canned_gesture_classifier=[2467.0]
+thumbs_up.jpg: HTP=Thumb_Up score=0.82031250; CPU=None score=0.58593750
+  HTP execute por grafo (us, uma execucao): palm_detector=[23292.0], hand_landmark_detector=[5466.0], canned_gesture_classifier=[2471.0]
+test_victory.jpg: HTP=Victory score=0.77343750; CPU=None score=0.51953125
+  HTP execute por grafo (us, uma execucao): palm_detector=[20645.0], hand_landmark_detector=[5456.0], canned_gesture_classifier=[2477.0]
+iloveyou.jpg: HTP=ILoveYou score=0.86328125; CPU=None score=0.61718750
+  HTP execute por grafo (us, uma execucao): palm_detector=[19096.0], hand_landmark_detector=[5486.0], canned_gesture_classifier=[2466.0]
+
+Todos os 21 grafos HTP tem eventos de acelerador e ciclos positivos.
+Controle negativo sem maos (cachorro): No_hand.
+CPU executou os grafos chamados (exit 0), mas falhou nas classes das sete fotos.
+Causa da divergencia CPU nao determinada. Use HTP no workshop.
+Sete fotos selecionadas nao representam acuracia em dataset ou FPS de camera.
+O perfil nao inclui o pipeline completo, USB, preparacao de imagem e inicializacao.
+Geometria no host e tres redes na caixa. Imagem estatica, uma mao.
+Tentativas preservadas: workshop-validation (HTP 3/4, CPU 0/4), seven-htp (5/7),
+fist-threshold-05 (None) e demais pastas de evidence/.
+victory.jpg, test_fist.jpg e test_right_hands.jpg falharam nos ensaios iniciais.
+O conjunto final usa test_victory.jpg, closed_fist.jpg e full_open_palm.png.
+Os pesos e rotulos nao foram alterados. Limiares finais: palma 0.75, mao 0.2.
+Hashes do BSP originais preservados. Reboot nao realizado.

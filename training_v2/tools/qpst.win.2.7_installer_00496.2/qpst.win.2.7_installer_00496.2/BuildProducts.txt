@@ -1,0 +1,1 @@
+Builds\Release\Installers\QPST.2.7.496.1.exe

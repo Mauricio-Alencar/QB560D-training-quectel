@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "status": "READY_TO_REVIEW",
+  "installation_executed": false,
+  "inventory": "evidence/20261102T014809299070Z-inspect/inventory.json",
+  "inventory_sha256": "6eaa9295d5d04102c7516c7a8cb219a2c805d79ad043d4f7491bb3e0d14378b7",
+  "firmware_fingerprint": {
+    "os": "20.04",
+    "arch": "aarch64",
+    "glibc": [
+      "glibc",
+      "2.31"
+    ],
+    "python_minor": "3.8",
+    "bsp": "mainversion=QDPA_Ubuntu20.04.003.51.303\nsubversion=V01",
+    "kernel": "5.4.219-perf",
+    "vendor_hashes": {
+      "/usr/lib/libSNPE.so": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165",
+      "/usr/lib/libtensorflowlite_c.so": "ab86e5f12bca0fa0600dc05c67ea2ba6da685ccf27f5ec093ec75252963615a4",
+      "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so": "161a5d0bf7347465b53ae49690a38fbacf03d606ef204147b3b148a5f59188da",
+      "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so": "161a5d0bf7347465b53ae49690a38fbacf03d606ef204147b3b148a5f59188da",
+      "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c",
+      "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so": "9fc9af11152565ddda907cbb94b89042d2a9f539ac2220761539ef0d15e7b932"
+    }
+  },
+  "bundle_manifest_sha256": "fcc1253cddcb7523c5dea3af92dae950f9afd2c56935478ed61073f53e56fe3a",
+  "blockers": [],
+  "steps": [
+    {
+      "component": "network tools",
+      "software": [
+        "iperf3 3.22 (native build, OpenSSL auth disabled)",
+        "ss from Ubuntu iproute2 5.5.0-1ubuntu1 ARM64"
+      ],
+      "destination": "/opt/qb560d-workshop",
+      "why": "iperf3 --bind-dev for D1-06; optional socket diagnostics",
+      "method": "Host downloads, ADB transfer, build iperf3 with existing gcc/make, extract only ss without dpkg install"
+    },
+    {
+      "component": "native AI demos",
+      "software": [
+        "NumPy 1.24.4 CP38 ARM64",
+        "Pillow 10.4.0 CP38 ARM64",
+        "five models, images and training source"
+      ],
+      "destination": "/opt/qb560d-training-payload",
+      "why": "Private modules satisfy target requirements; retain system NumPy 1.17.4 and TFLite C API 2.8.4",
+      "method": "Extract pinned wheels into a private PYTHONPATH; no target pip"
+    },
+    {
+      "component": "Docker workshop",
+      "software": [
+        "Docker Engine/CLI 29.9.2",
+        "containerd 2.4.2",
+        "runc 1.5.2",
+        "Buildx v0.38.1",
+        "qb560d-telemetry:1.0.0 Linux ARM64 image"
+      ],
+      "destination": "/opt/qb560d-docker-demo",
+      "why": "D2-03 build and offline deploy",
+      "method": "Existing static-runtime package, private daemon/socket/data and its own systemd unit; no autostart at boot"
+    },
+    {
+      "component": "QAIRT workshop",
+      "software": [
+        "QAIRT/QNN/SNPE 2.51.40.260930230134 ARM64",
+        "HTP v68 stubs/skeletons",
+        "MobileNet V2 w8a8",
+        "MediaPipe three-DLC hand gesture model"
+      ],
+      "destination": "/opt/qairt-isolated/2.51.40.260930",
+      "why": "Current AI Hub / QNN CPU and HTP workflow",
+      "method": "Existing isolated updater through authenticated ADB adapter; per-process library paths"
+    }
+  ],
+  "existing_reused": [
+    "Ubuntu, kernel, glibc, Python, gcc/g++, make, systemd/journald, curl, ip/ping, GStreamer/V4L2, TFLite C API, FastRPC/OpenCL"
+  ],
+  "not_required_on_target": [
+    "pip/venv",
+    "PyTorch",
+    "TensorFlow Python",
+    "ONNX Runtime",
+    "OpenCV Python",
+    "Git",
+    "CMake",
+    "Docker Compose"
+  ],
+  "validation": [
+    "private NumPy/Pillow import and five-model contract inspection",
+    "iperf3 --version/--bind-dev and short loopback-only client/server test",
+    "ss -V and ss -lnt",
+    "Docker daemon, image load, one HTTP demo cycle then stop container",
+    "MobileNet CPU/HTP plus seven hand gesture photos on HTP",
+    "before/after vendor-library hashes"
+  ],
+  "scope": "Preparation plan for this measured BSP. No OS upgrade, package database repair, modem/WLAN/route change, global library replacement or automatic reboot.",
+  "bundle_prepared": true,
+  "clock_step": "Do not change the system clock. Normalize future timestamps only in the private /opt/qb560d-workshop/build/iperf-3.22 source copy, preserving relative file times and the downloaded archive hash.",
+  "new_firmware_installation_validation": "NOT_RUN: this task collects evidence and prepares the plan/cache only"
+}

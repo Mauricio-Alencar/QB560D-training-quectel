@@ -1,0 +1,7 @@
+{
+  "action": "run",
+  "script": "ai",
+  "exit_code": 139,
+  "timed_out": false,
+  "at_utc": "2026-10-31T23:06:57.255490+00:00"
+}

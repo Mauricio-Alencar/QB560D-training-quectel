@@ -1,0 +1,750 @@
+
+--- Identity ---
+Mon Jun 17 21:54:57 UTC 2024
+uid=0(root) gid=0(root) groups=0(root)
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+NAME="Ubuntu"
+VERSION="20.04.3 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.3 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+LE.UM.1.3-14400-SDX20
+
+Qualcomm Technologies, Inc. Yupik IOT IDP + PM7250B
+ 05:54:58 up  1:25,  3 users,  load average: 3.14, 3.10, 3.07
+
+--- Resources ---
+              total        used        free      shared  buff/cache   available
+Mem:           7303        1139        4385          17        1778        6447
+Swap:          3651           0        3651
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G  8.4G   12G  43% /
+devtmpfs        2.4G     0  2.4G   0% /dev
+tmpfs           3.6G     0  3.6G   0% /dev/shm
+tmpfs           731M  4.7M  726M   1% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           3.6G     0  3.6G   0% /sys/fs/cgroup
+tmpfs           3.6G     0  3.6G   0% /var/volatile
+/dev/sda9       3.9M   12K  3.7M   1% /systemrw
+/dev/sdf8        28M  148K   27M   1% /persist
+/dev/sdf9        64M  1.5M   63M   3% /bt_firmware
+/dev/sdg3        59M   31M   28M  53% /dsp
+/dev/sdg1       220M  171M   50M  78% /firmware
+/dev/sda8       248M   12K  243M   1% /cache
+/dev/sda12       75G  416K   71G   1% /data
+tmpfs           731M     0  731M   0% /run/user/0
+/dev/sda6 on / type ext4 (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=2463176k,nr_inodes=615794,mode=755)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,size=3739112k,nr_inodes=934778)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,size=747824k,nr_inodes=934778,mode=755)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,nr_inodes=934778)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=3739112k,nr_inodes=934778,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=3739112k,nr_inodes=934778)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda9 on /systemrw type ext4 (rw,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf8 on /persist type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+/dev/sdf9 on /bt_firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sdg3 on /dsp type ext4 (ro,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered)
+/dev/sdg1 on /firmware type vfat (ro,nodev,noexec,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+/dev/sda8 on /cache type ext4 (rw,nosuid,nodev,noexec,noatime,discard,noauto_da_alloc,data=ordered,x-systemd.automount)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+diag on /dev/ffs-diag type functionfs (rw,relatime)
+/dev/sda12 on /data type ext4 (rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+nsfs on /run/qb560d-docker-demo/exec/netns/default type nsfs (rw)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=747924k,mode=700)
+
+--- Network ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 
+2: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 22:46:f2:f3:22:6e brd ff:ff:ff:ff:ff:ff promiscuity 0 
+    dummy 
+3: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0 promiscuity 0 
+    ipip remote any local any ttl inherit nopmtudisc 
+4: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0 promiscuity 0 
+    gre remote any local any ttl inherit nopmtudisc 
+5: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+    gretap remote any local any ttl inherit nopmtudisc 
+6: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+    erspan 
+7: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0 promiscuity 0 
+    vti remote any local any ikey 0.0.0.0 okey 0.0.0.0 
+8: ip6_vti0@NONE: <NOARP> mtu 1364 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/tunnel6 :: brd :: promiscuity 0 
+    vti6 
+9: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0 promiscuity 0 
+    sit remote any local any ttl 64 nopmtudisc 
+10: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/tunnel6 :: brd :: promiscuity 0 
+    ip6tnl ip6ip6 remote :: local :: encaplimit 0 hoplimit 0 tclass 0x00 flowlabel 0x00000 (flowinfo 0x00000000) 
+11: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/gre6 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 brd 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 promiscuity 0 
+    ip6gre remote any local any encaplimit 0 flowlabel 0x00000 
+13: bridge0: <NO-CARRIER,BROADCAST,MULTICAST,PROMISC,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1000
+    link/ether 66:05:93:40:fc:cc brd ff:ff:ff:ff:ff:ff promiscuity 1 
+    bridge 
+31: rmnet_ipa0: <UP,LOWER_UP> mtu 9216 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+32: eth2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:55:7b:b5:7c:f6 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+33: eth1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:55:7b:b5:7d:f7 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+34: rmnet_data0@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+35: rmnet_data1@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+36: rmnet_data2@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+37: rmnet_data3@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+38: rmnet_data4@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+39: eth4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether ec:21:e5:10:4f:ea brd ff:ff:ff:ff:ff:ff promiscuity 0 
+40: rmnet_data5@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+41: rmnet_data6@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+42: rmnet_data7@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+43: rmnet_data8@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+44: rmnet_data9@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+45: rmnet_data10@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+46: rmnet_data11@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+47: rmnet_data12@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+48: rmnet_data13@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+49: rmnet_data14@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+50: rmnet_data15@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+51: rmnet_data16@rmnet_ipa0: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[519]  promiscuity 0 
+    rmnet 
+52: eth3: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether ec:21:e5:11:4f:ea brd ff:ff:ff:ff:ff:ff promiscuity 0 
+53: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 3000
+    link/ether b4:2f:03:82:06:16 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+54: p2p0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 3000
+    link/ether b6:2f:03:02:06:16 brd ff:ff:ff:ff:ff:ff promiscuity 0 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+13: bridge0: <NO-CARRIER,BROADCAST,MULTICAST,PROMISC,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    inet 192.168.225.1/24 brd 192.168.225.255 scope global bridge0
+       valid_lft forever preferred_lft forever
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 state UNKNOWN qlen 1000
+    inet6 fe80::31cf:38a0:ba75:ce53/64 scope link 
+       valid_lft forever preferred_lft forever
+13: bridge0: <NO-CARRIER,BROADCAST,MULTICAST,PROMISC,UP> mtu 1500 state DOWN qlen 1000
+    inet6 fe80::6405:93ff:fe3d:f9c9/64 scope link 
+       valid_lft forever preferred_lft forever
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+broadcast 127.0.0.0 dev lo  table local  proto kernel  scope link  src 127.0.0.1 
+local 127.0.0.0/8 dev lo  table local  proto kernel  scope host  src 127.0.0.1 
+local 127.0.0.1 dev lo  table local  proto kernel  scope host  src 127.0.0.1 
+broadcast 127.255.255.255 dev lo  table local  proto kernel  scope link  src 127.0.0.1 
+broadcast 192.168.225.0 dev bridge0  table local  proto kernel  scope link  src 192.168.225.1 
+local 192.168.225.1 dev bridge0  table local  proto kernel  scope host  src 192.168.225.1 
+broadcast 192.168.225.255 dev bridge0  table local  proto kernel  scope link  src 192.168.225.1 
+0:	from all lookup local 
+32766:	from all lookup main 
+32767:	from all lookup default 
+# This file is managed by man:systemd-resolved(8). Do not edit.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs must not access this file directly, but only through the
+# symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a different way,
+# replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+
+--- Processes and services ---
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 04:29 ?        00:00:11 /sbin/init
+root           2       0  0 04:29 ?        00:00:00 [kthreadd]
+root           3       2  0 04:29 ?        00:00:00 [rcu_gp]
+root           4       2  0 04:29 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 04:29 ?        00:00:00 [kworker/0:0H-kblockd]
+root           9       2  0 04:29 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0 04:29 ?        00:00:00 [ksoftirqd/0]
+root          11       2  0 04:29 ?        00:00:01 [rcu_preempt]
+root          12       2  0 04:29 ?        00:00:02 [rcuog/0]
+root          13       2  0 04:29 ?        00:00:00 [rcuop/0]
+root          14       2  0 04:29 ?        00:00:00 [migration/0]
+root          15       2  0 04:29 ?        00:00:00 [cpuhp/0]
+root          16       2  0 04:29 ?        00:00:00 [cpuhp/1]
+root          17       2  0 04:29 ?        00:00:00 [migration/1]
+root          18       2  0 04:29 ?        00:00:00 [ksoftirqd/1]
+root          20       2  0 04:29 ?        00:00:00 [kworker/1:0H-events_highpri
+root          21       2  0 04:29 ?        00:00:00 [rcuop/1]
+root          22       2  0 04:29 ?        00:00:00 [cpuhp/2]
+root          23       2  0 04:29 ?        00:00:00 [migration/2]
+root          24       2  0 04:29 ?        00:00:00 [ksoftirqd/2]
+root          26       2  0 04:29 ?        00:00:00 [kworker/2:0H-events_highpri
+root          27       2  0 04:29 ?        00:00:00 [rcuop/2]
+root          28       2  0 04:29 ?        00:00:00 [cpuhp/3]
+root          29       2  0 04:29 ?        00:00:00 [migration/3]
+root          30       2  0 04:29 ?        00:00:00 [ksoftirqd/3]
+root          32       2  0 04:29 ?        00:00:00 [kworker/3:0H-events_highpri
+root          33       2  0 04:29 ?        00:00:00 [rcuop/3]
+root          34       2  0 04:29 ?        00:00:00 [cpuhp/4]
+root          35       2  0 04:29 ?        00:00:00 [migration/4]
+root          36       2  0 04:29 ?        00:00:00 [ksoftirqd/4]
+root          38       2  0 04:29 ?        00:00:00 [kworker/4:0H-events_highpri
+root          39       2  0 04:29 ?        00:00:00 [rcuog/4]
+root          40       2  0 04:29 ?        00:00:00 [rcuop/4]
+root          41       2  0 04:29 ?        00:00:00 [cpuhp/5]
+root          42       2  0 04:29 ?        00:00:00 [migration/5]
+root          43       2  0 04:29 ?        00:00:00 [ksoftirqd/5]
+root          45       2  0 04:29 ?        00:00:00 [kworker/5:0H-events_highpri
+root          46       2  0 04:29 ?        00:00:00 [rcuop/5]
+root          47       2  0 04:29 ?        00:00:00 [cpuhp/6]
+root          48       2  0 04:29 ?        00:00:00 [migration/6]
+root          49       2  0 04:29 ?        00:00:00 [ksoftirqd/6]
+root          50       2  0 04:29 ?        00:00:00 [kworker/6:0-events_freezabl
+root          51       2  0 04:29 ?        00:00:00 [kworker/6:0H-events_highpri
+root          52       2  0 04:29 ?        00:00:00 [rcuop/6]
+root          53       2  0 04:29 ?        00:00:00 [cpuhp/7]
+root          54       2  0 04:29 ?        00:00:00 [migration/7]
+root          55       2  0 04:29 ?        00:00:00 [ksoftirqd/7]
+root          56       2  0 04:29 ?        00:00:00 [kworker/7:0-events]
+root          57       2  0 04:29 ?        00:00:00 [kworker/7:0H-events_highpri
+root          58       2  0 04:29 ?        00:00:00 [rcuop/7]
+root          59       2  0 04:29 ?        00:00:00 [kdevtmpfs]
+root          60       2  0 04:29 ?        00:00:00 [netns]
+root          61       2  0 04:29 ?        00:00:00 [rcu_tasks_kthre]
+root          65       2  0 04:29 ?        00:00:00 [kauditd]
+root          66       2  0 04:29 ?        00:00:00 [qrtr_ns]
+root          73       2  0 04:29 ?        00:00:00 [msm-watchdog]
+root          74       2  0 04:29 ?        00:00:00 [qmp_aop]
+root          75       2  0 04:29 ?        00:00:00 [oom_reaper]
+root          76       2  0 04:29 ?        00:00:00 [writeback]
+root          77       2  0 04:29 ?        00:00:00 [kcompactd0]
+root          94       2  0 04:29 ?        00:00:00 [cryptd]
+root         126       2  0 04:29 ?        00:00:00 [kblockd]
+root         127       2  0 04:29 ?        00:00:00 [blk_crypto_wq]
+root         128       2  0 04:29 ?        00:00:00 [blkcg_punt_bio]
+root         130       2  0 04:29 ?        00:00:00 [kswapd-1:0]
+root         131       2  0 04:29 ?        00:00:00 [governor_msm_ad]
+root         132       2  0 04:29 ?        00:00:00 [irq/309-tsens-u]
+root         133       2  0 04:29 ?        00:00:00 [irq/310-tsens-c]
+root         134       2  0 04:29 ?        00:00:00 [irq/312-tsens-u]
+root         135       2  0 04:29 ?        00:00:00 [irq/313-tsens-c]
+root         136       2  0 04:29 ?        00:00:00 [edac-poller]
+root         137       2  0 04:29 ?        00:00:00 [irq/13-dcvsh-ir]
+root         138       2  0 04:29 ?        00:00:00 [irq/14-dcvsh-ir]
+root         139       2  0 04:29 ?        00:00:00 [irq/15-dcvsh-ir]
+root         140       2  0 04:29 ?        00:00:00 [core_ctl/0]
+root         141       2  0 04:29 ?        00:00:00 [kworker/4:2-mm_percpu_wq]
+root         142       2  0 04:29 ?        00:00:00 [core_ctl/4]
+root         143       2  0 04:29 ?        00:00:00 [kworker/4:3-pm]
+root         144       2  0 04:29 ?        00:00:00 [core_ctl/7]
+root         146       2  0 04:29 ?        00:00:00 [ion_system_heap]
+root         147       2  0 04:29 ?        00:00:00 [devfreq_wq]
+root         148       2  0 04:29 ?        00:00:00 [ipa_usb_wq]
+root         149       2  0 04:29 ?        00:00:00 [mpcie_wq]
+root         150       2  0 04:29 ?        00:00:00 [watchdogd]
+root         151       2  0 04:29 ?        00:00:00 [ion-pool-uncach]
+root         152       2  0 04:29 ?        00:00:00 [ion-pool-cached]
+root         153       2  0 04:29 ?        00:00:00 [system]
+root         154       2  0 04:29 ?        00:00:00 [rpciod]
+root         155       2  0 04:29 ?        00:00:00 [xprtiod]
+root         156       2  0 04:29 ?        00:00:00 [cfg80211]
+root         182       2  0 04:29 ?        00:00:00 [nfsiod]
+root         184       2  0 04:29 ?        00:00:00 [irq/32-smp2p]
+root         185       2  0 04:29 ?        00:00:00 [irq/34-smp2p]
+root         186       2  0 04:29 ?        00:00:00 [irq/35-smp2p]
+root         187       2  0 04:29 ?        00:00:00 [irq/36-smp2p]
+root         189       2  0 04:29 ?        00:00:00 [pmic_glink_rx]
+root         190       2  0 04:29 ?        00:00:00 [pmic_glink_rx]
+root         192       2  0 04:29 ?        00:00:00 [cdsprm-wq]
+root         193       2  0 04:29 ?        00:00:00 [cdsprm-wq-delay]
+root         194       2  0 04:29 ?        00:00:00 [hyp_core_ctl]
+root         195       2  0 04:29 ?        00:00:00 [rimps_wq]
+root         199       2  0 04:29 ?        00:00:00 [kgsl-workqueue]
+root         200       2  0 04:29 ?        00:00:00 [kgsl-mementry]
+root         201       2  0 04:29 ?        00:00:00 [kgsl_worker_thr]
+root         202       2  0 04:29 ?        00:00:00 [qseecom-unreg-l]
+root         203       2  0 04:29 ?        00:00:00 [qseecom-unload-]
+root         204       2  0 04:29 ?        00:00:00 [nvme-wq]
+root         205       2  0 04:29 ?        00:00:00 [nvme-reset-wq]
+root         206       2  0 04:29 ?        00:00:00 [nvme-delete-wq]
+root         207       2  0 04:29 ?        00:00:00 [uas]
+root         208       2  0 04:29 ?        00:00:00 [k_ipa_usb]
+root         209       2  0 04:29 ?        00:00:00 [irq/46-qcom,tem]
+root         211       2  0 04:29 ?        00:00:00 [kworker/1:1H-kblockd]
+root         212       2  0 04:29 ?        00:00:00 [kworker/2:1H-kblockd]
+root         214       2  0 04:29 ?        00:00:00 [kworker/4:1H-events_highpri
+root         215       2  0 04:29 ?        00:00:00 [kworker/5:1H-kblockd]
+root         216       2  0 04:29 ?        00:00:00 [kworker/6:1H-kblockd]
+root         217       2  0 04:29 ?        00:00:00 [kworker/7:1H-kblockd]
+root         218       2  0 04:29 ?        00:00:00 [irq/49-bcl-lvl0]
+root         219       2  0 04:29 ?        00:00:00 [irq/50-bcl-lvl1]
+root         220       2  0 04:29 ?        00:00:00 [irq/51-bcl-lvl2]
+root         221       2  0 04:29 ?        00:00:00 [irq/60-bcl-lvl0]
+root         222       2  0 04:29 ?        00:00:00 [irq/61-bcl-lvl1]
+root         223       2  0 04:29 ?        00:00:00 [irq/62-bcl-lvl2]
+root         224       2  0 04:29 ?        00:00:00 [dm_bufio_cache]
+root         225       2  0 04:29 ?        00:00:00 [irq/19-KRYO L3-]
+root         226       2  0 04:29 ?        00:00:00 [irq/55-flash_al]
+root         227       2  0 04:29 ?        00:00:00 [irq/54-flash_al]
+root         228       2  0 04:29 ?        00:00:00 [irq/53-flash_fa]
+root         229       2  0 04:29 ?        00:00:00 [qcrypto_seq_res]
+root         230       2  0 04:29 ?        00:00:00 [memlat_wq]
+root         231       2  0 04:29 ?        00:00:00 [ipv6_addrconf]
+root         232       2  0 04:29 ?        00:00:00 [krfcommd]
+root         233       2  0 04:29 ?        00:00:00 [qrtr_rx]
+root         234       2  0 04:29 ?        00:00:00 [recv_sync_threa]
+root         235       2  0 04:29 ?        00:00:00 [send_sync_threa]
+root         236       2  0 04:29 ?        00:00:00 [soc:qcom,svm_ne]
+root         237       2  0 04:29 ?        00:00:00 [rq_stats]
+root         238       2  0 04:29 ?        00:00:00 [msm_perf:events]
+root         239       2  0 04:29 ?        00:00:00 [khvcd]
+root         242       2  0 04:29 ?        00:00:00 [hwrng]
+root         243       2  0 04:29 ?        00:00:00 [ipa_power_mgmt]
+root         244       2  0 04:29 ?        00:00:00 [transport_power]
+root         245       2  0 04:29 ?        00:00:00 [ipa_pm_activate]
+root         246       2  0 04:29 ?        00:00:00 [rmnet_ctlwq]
+root         247       2  0 04:29 ?        00:00:00 [irq/153-arm-smm]
+root         248       2  0 04:29 ?        00:00:00 [irq/154-arm-smm]
+root         249       2  0 04:29 ?        00:00:00 [kgsl-events]
+root         250       2  0 04:29 ?        00:00:00 [irq/155-arm-smm]
+root         251       2  0 04:29 ?        00:00:00 [irq/156-arm-smm]
+root         252       2  0 04:29 ?        00:00:00 [irq/157-arm-smm]
+root         253       2  0 04:29 ?        00:00:00 [kgsl_devfreq_wq]
+root         254       2  0 04:29 ?        00:00:00 [msm_vidc_worker]
+root         255       2  0 04:29 ?        00:00:00 [pm_workerq_venu]
+root         256       2  0 04:29 ?        00:00:00 [vidc_core_workq]
+root         257       2  0 04:29 ?        00:00:00 [irq/164-arm-smm]
+root         258       2  0 04:29 ?        00:00:00 [irq/172-arm-smm]
+root         259       2  0 04:29 ?        00:00:00 [irq/173-arm-smm]
+root         260       2  0 04:29 ?        00:00:00 [mem_buf_rcvr]
+root         261       2  0 04:29 ?        00:00:00 [irq/174-arm-smm]
+root         262       2  0 04:29 ?        00:00:00 [irq/175-arm-smm]
+root         263       2  0 04:29 ?        00:00:00 [irq/176-arm-smm]
+root         264       2  0 04:29 ?        00:00:00 [irq/177-arm-smm]
+root         265       2  0 04:29 ?        00:00:00 [irq/178-arm-smm]
+root         266       2  0 04:29 ?        00:00:00 [irq/179-arm-smm]
+root         267       2  0 04:29 ?        00:00:00 [irq/180-arm-smm]
+root         268       2  0 04:29 ?        00:00:00 [irq/181-arm-smm]
+root         269       2  0 04:29 ?        00:00:00 [irq/182-arm-smm]
+root         270       2  0 04:29 ?        00:00:00 [irq/183-arm-smm]
+root         271       2  0 04:29 ?        00:00:00 [irq/184-arm-smm]
+root         272       2  0 04:29 ?        00:00:00 [irq/185-arm-smm]
+root         273       2  0 04:29 ?        00:00:00 [irq/186-arm-smm]
+root         274       2  0 04:29 ?        00:00:00 [irq/187-arm-smm]
+root         275       2  0 04:29 ?        00:00:00 [irq/188-arm-smm]
+root         276       2  0 04:29 ?        00:00:00 [irq/189-arm-smm]
+root         277       2  0 04:29 ?        00:00:00 [irq/43-qcom,tem]
+root         278       2  0 04:29 ?        00:00:00 [irq/57-qcom,tem]
+root         279       2  0 04:29 ?        00:00:00 [irq/33-threshol]
+root         280       2  0 04:29 ?        00:00:00 [irq/59-threshol]
+root         281       2  0 04:29 ?        00:00:00 [irq/190-arm-smm]
+root         282       2  0 04:29 ?        00:00:00 [irq/191-arm-smm]
+root         283       2  0 04:29 ?        00:00:00 [irq/192-arm-smm]
+root         284       2  0 04:29 ?        00:00:00 [irq/171-arm-smm]
+root         305       2  0 04:29 ?        00:00:00 [irq/193-arm-smm]
+root         306       2  0 04:29 ?        00:00:00 [uaudio_svc]
+root         307       2  0 04:29 ?        00:00:00 [irq/194-arm-smm]
+root         308       2  0 04:29 ?        00:00:00 [irq/168-arm-smm]
+root         309       2  0 04:29 ?        00:00:00 [scsi_eh_0]
+root         310       2  0 04:29 ?        00:00:00 [scsi_tmf_0]
+root         311       2  0 04:29 ?        00:00:00 [qc_ufs_qos_swq]
+root         312       2  0 04:29 ?        00:00:00 [ufs_eh_wq_0]
+root         313       2  0 04:29 ?        00:00:00 [ufs_clk_gating_]
+root         314       2  0 04:29 ?        00:00:00 [ufs_clkscaling_]
+root         315       2  0 04:29 ?        00:00:00 [irq/195-arm-smm]
+root         317       2  0 04:29 ?        00:00:00 [irq/196-arm-smm]
+root         318       2  0 04:29 ?        00:00:00 [irq/165-arm-smm]
+root         319       2  0 04:29 ?        00:00:00 [irq/71-int_glob]
+root         320       2  0 04:29 ?        00:00:00 [irq/42-7c4000.s]
+root         321       2  0 04:29 ?        00:00:00 [sdhci_msm_gener]
+root         322       2  0 04:29 ?        00:00:00 [sdhci]
+root         323       2  0 04:29 ?        00:00:00 [irq/41-mmc0]
+root         324       2  0 04:29 ?        00:00:00 [irq/108-int_glo]
+root         326       2  0 04:29 ?        00:00:00 [irq/170-arm-smm]
+root         327       2  0 04:29 ?        00:00:00 [irq/166-arm-smm]
+root         328       2  0 04:29 ?        00:00:00 [irq/45-8804000.]
+root         329       2  0 04:29 ?        00:00:00 [irq/151-pwr_eve]
+root         330       2  0 04:29 ?        00:00:00 [sdhci_msm_gener]
+root         331       2  0 04:29 ?        00:00:00 [irq/150-dp_hs_p]
+root         332       2  0 04:29 ?        00:00:00 [irq/152-dm_hs_p]
+root         333       2  0 04:29 ?        00:00:00 [sdhci]
+root         335       2  0 04:29 ?        00:00:00 [irq/44-mmc1]
+root         336       2  0 04:29 ?        00:00:00 [irq/197-arm-smm]
+root         338       2  0 04:29 ?        00:00:00 [irq/198-arm-smm]
+root         339       2  0 04:29 ?        00:00:00 [irq/199-arm-smm]
+root         340       2  0 04:29 ?        00:00:00 [irq/200-arm-smm]
+root         342       2  0 04:29 ?        00:00:00 [irq/337-8804000]
+root         345       2  0 04:29 ?        00:00:00 [irq/336-rts5452]
+root         346       2  0 04:29 ?        00:00:00 [irq/201-arm-smm]
+root         347       2  0 04:29 ?        00:00:00 [irq/202-arm-smm]
+root         348       2  0 04:29 ?        00:00:00 [mhi_w]
+root         352       2  0 04:29 ?        00:00:00 [irq/203-arm-smm]
+root         353       2  0 04:29 ?        00:00:00 [irq/204-arm-smm]
+root         354       2  0 04:29 ?        00:00:00 [irq/205-arm-smm]
+root         355       2  0 04:29 ?        00:00:00 [irq/206-arm-smm]
+root         356       2  0 04:29 ?        00:00:00 [irq/207-arm-smm]
+root         357       2  0 04:29 ?        00:00:00 [irq/147-pwr_eve]
+root         358       2  0 04:29 ?        00:00:00 [irq/146-dp_hs_p]
+root         359       2  0 04:29 ?        00:00:00 [irq/149-dm_hs_p]
+root         360       2  0 04:29 ?        00:00:00 [irq/148-ss_phy_]
+root         361       2  0 04:29 ?        00:00:00 [irq/20-90b6400.]
+root         362       2  0 04:29 ?        00:00:00 [irq/21-9091000.]
+root         363       2  0 04:29 ?        00:00:00 [irq/22-90b9100.]
+root         366       2  0 04:29 ?        00:00:00 [jbd2/sda6-8]
+root         367       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+root         387       2  0 04:29 ?        00:00:00 [ipa_interrupt_w]
+root         388       2  0 04:29 ?        00:00:00 [ipawq36]
+root         389       2  0 04:29 ?        00:00:00 [iparepwq36]
+root         390       2  0 04:29 ?        00:00:00 [ipawq33]
+root         391       2  0 04:29 ?        00:00:00 [iparepwq33]
+root         392       2  0 04:29 ?        00:00:00 [ipawq32]
+root         393       2  0 04:29 ?        00:00:00 [iparepwq32]
+root         401       1  0 04:29 ?        00:00:11 /lib/systemd/systemd-journal
+qrtr         408       1  0 04:29 ?        00:00:00 /usr/bin/qrtr-ns
+radio        409       1  0 04:29 ?        00:00:00 /usr/bin/netmgrd
+root         414       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-time-wa
+root         427       2  0 04:29 ?        00:00:00 [apr_driver]
+root         443       1  0 04:29 ?        00:00:03 /lib/systemd/systemd-udevd
+root         495       2  0 04:29 ?        00:00:00 [irq/208-arm-smm]
+root         496       2  0 04:29 ?        00:00:00 [irq/209-arm-smm]
+root         497       2  0 04:29 ?        00:00:00 [irq/210-arm-smm]
+root         498       2  0 04:29 ?        00:00:00 [irq/211-arm-smm]
+root         499       2  0 04:29 ?        00:00:00 [irq/212-arm-smm]
+root        1245       2  0 04:29 ?        00:00:00 [jbd2/sda9-8]
+root        1248       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+root        2156       2  0 04:29 ?        00:00:00 [jbd2/sdf8-8]
+root        2271       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+root        2790       2  0 04:29 ?        00:00:00 [irq/335-lt9611u]
+root        2854       2  0 04:29 ?        00:00:00 [dsi_dma_cmd_wor]
+root        2915       2  0 04:29 ?        00:00:00 [dsi_dma_cmd_wor]
+root        2916       2  0 04:29 ?        00:00:00 [irq/169-arm-smm]
+root        2919       2  0 04:29 ?        00:00:00 [jbd2/sdg3-8]
+root        2938       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+root        2939       2  0 04:29 ?        00:00:00 [irq/213-arm-smm]
+root        2941       2  0 04:29 ?        00:00:00 [dsi_dma_cmd_wor]
+root        2982       2  0 04:29 ?        00:00:00 [drm_dp]
+root        2994       2  0 04:29 ?        00:00:00 [dsi_dma_cmd_wor]
+root        3004       2  0 04:29 ?        00:00:00 [kworker/5:3-mm_percpu_wq]
+root        3010       2  0 04:29 ?        00:00:00 [sdm_dp_audio_no]
+root        3050       2  0 04:29 ?        00:00:00 [hdcp_1x_1]
+root        3078       2  0 04:29 ?        00:00:00 [hdcp_2x]
+root        3112       2  0 04:29 ?        00:00:00 [dp_hdcp2p2]
+root        3115       2  0 04:29 ?        00:00:00 [irq/374-dp-gpio]
+root        3121       2  0 04:29 ?        00:00:01 [crtc_commit:112]
+root        3127       2  0 04:29 ?        00:00:00 [crtc_event:112]
+root        3130       2  0 04:29 ?        00:00:00 [crtc_commit:167]
+root        3132       2  0 04:29 ?        00:00:00 [crtc_event:167]
+root        3133       2  0 04:29 ?        00:00:00 [crtc_commit:176]
+root        3134       2  0 04:29 ?        00:00:00 [crtc_event:176]
+root        3135       2  0 04:29 ?        00:00:00 [crtc_commit:185]
+root        3136       2  0 04:29 ?        00:00:00 [crtc_event:185]
+root        3137       2  0 04:29 ?        00:00:00 [pp_event]
+root        3166       1  0 04:29 ?        00:00:00 /usr/bin/ipacm_perf
+systemd+    3170       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-timesyn
+logd        3186       1  0 04:29 ?        00:00:00 /sbin/logd
+root        3250       1  0 04:29 ?        00:00:03 /usr/bin/usbd
+system      3252       1  0 04:29 ?        00:00:00 /usr/bin/adsprpcd
+system      3254       1  0 04:29 ?        00:00:00 /usr/bin/adsprpcd audiopd
+root        3255       1  0 04:29 ?        00:00:00 /bin/bash /etc/initscripts/a
+root        3256       2  0 04:29 ?        00:00:00 [jbd2/sda8-8]
+root        3257       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+system      3261       1  0 04:29 ?        00:00:00 /usr/bin/cdsprpcd
+root        3265       1  0 04:29 ?        00:00:00 /usr/sbin/cron -f
+root        3266    3255  0 04:29 ?        00:00:00 udevadm monitor --subsystem-
+root        3267    3255  0 04:29 ?        00:00:00 /bin/bash /etc/initscripts/a
+message+    3270       1  0 04:29 ?        00:00:03 /usr/bin/dbus-daemon --syste
+radio       3271       1  0 04:29 ?        00:00:00 /usr/bin/QCMAP_ConnectionMan
+root        3294       1  0 04:29 ?        00:00:00 /usr/bin/python3 /usr/bin/ne
+root        3298       1  0 04:29 ?        00:00:00 /usr/lib/policykit-1/polkitd
+root        3301       1  0 04:29 ?        00:00:00 /sbin/imud
+radio       3306       1  0 04:29 ?        00:00:01 /usr/bin/qti
+root        3309       1  0 04:29 ?        00:00:00 /usr/bin/pm-service
+root        3311       1  0 04:29 ?        00:00:00 /sbin/reboot-daemon
+sensors     3312       1  0 04:29 ?        00:00:00 /usr/bin/sensors.qti
+system      3314       1  0 04:29 ?        00:00:00 /usr/bin/servicemanager
+root        3316       1  0 04:29 ?        00:00:00 /usr/bin/qmmf-server
+root        3321       1  0 04:29 ?        00:00:00 /usr/sbin/cnss_daemon -n -dd
+root        3322       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-logind
+root        3345       2  0 04:29 ?        00:00:00 [glink_cdsp]
+root        3348       2  0 04:29 ?        00:00:00 [qrtr_rx]
+root        3349       2  0 04:29 ?        00:00:00 [kworker/0:2H-kblockd]
+system      3368       1  0 04:29 ?        00:00:00 /usr/bin/qseecomd
+leprop      3369       1  0 04:29 ?        00:00:00 /sbin/leprop-service
+system      3380       1  0 04:29 ?        00:00:00 /usr/bin/sscrpcd sensorspd
+root        3388       1  0 04:29 ?        00:00:00 /usr/bin/qwesd
+root        3426       1  0 04:29 ?        00:00:00 /usr/sbin/ModemManager
+root        3427       1  0 04:29 ?        00:00:02 /usr/sbin/NetworkManager --n
+systemd+    3434       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-network
+root        3435       2  0 04:29 ?        00:00:00 [glink_adsp]
+root        3446       2  0 04:29 ?        00:00:00 [qrtr_rx]
+root        3512       1  0 04:29 ?        00:00:00 /usr/sbin/dhcpcd
+systemd+    3603       1  0 04:29 ?        00:00:00 /lib/systemd/systemd-resolve
+root        3623       1  0 04:29 ?        00:00:00 /usr/bin/qcrild -c 2
+root        3625       1  0 04:29 ?        00:00:00 /usr/bin/qlrild
+root        3626       1  0 04:29 ?        00:00:00 /usr/bin/ql-network-manager
+root        3627       1  0 04:29 ?        00:00:00 /usr/bin/sound-manager
+root        3688       2  0 04:29 ?        00:00:00 [at_usb0]
+root        3690       2  0 04:29 ?        00:00:00 [at_usb1]
+root        3701       2  0 04:29 ?        00:00:00 [rmnet_ctrl]
+root        3710       2  0 04:29 ?        00:00:00 [android_mbim]
+root        3713       2  0 04:29 ?        00:00:00 [rmnet_v2x_ctrl]
+root        3715       2  0 04:29 ?        00:00:00 [dpl_ctrl]
+root        3719       2  0 04:29 ?        00:00:00 [gps]
+root        3727       1  0 04:29 tty2     00:00:28 weston --log=logcat --config
+root        3729       2  0 04:29 ?        00:00:00 [qdss]
+root        3733       2  0 04:29 ?        00:00:00 [qdss_mdm]
+root        3790       1  0 04:29 tty1     00:00:00 /sbin/agetty -o -p -- \u --n
+root        3887       1  0 04:29 ?        00:00:00 /usr/sbin/in.tftpd --listen 
+root        3920       2  0 04:29 ?        00:00:00 [jbd2/sda12-8]
+root        3921       2  0 04:29 ?        00:00:00 [ext4-rsv-conver]
+system      3952       1  0 04:29 ?        00:00:00 /sbin/tftp_server
+root        3954    3727  0 04:29 tty2     00:00:00 /usr/libexec/weston-keyboard
+root        3955    3727  0 04:29 tty2     00:00:02 /usr/libexec/weston-desktop-
+system      4003       1  0 04:29 ?        00:00:00 /usr/bin/diag-router
+nobody      4016       1  0 04:29 ?        00:00:00 /sbin/rmt_storage
+system      4018       1  0 04:29 ?        00:00:00 /sbin/init_mss
+system      4019       1  0 04:29 ?        00:00:00 /usr/bin/pdmappersvc
+root        4027       1  0 04:29 ?        00:00:42 /sbin/adbd
+root        4040       2  0 04:29 ?        00:00:00 [adsp]
+root        4041       2  0 04:29 ?        00:00:00 [adsp]
+root        4042       2  0 04:29 ?        00:00:00 [adsp]
+root        4043       2  0 04:29 ?        00:00:00 [irq/214-arm-smm]
+root        4081       2  0 04:29 ?        00:00:00 [irq/378-swr_mas]
+root        4082       2  0 04:29 ?        00:00:00 [irq/379-swr_mas]
+root        4128       1  0 04:29 ?        00:00:00 /usr/bin/diagrebootapp
+root        4134       2  0 04:29 ?        00:00:00 [kworker/3:2H-kblockd]
+root        4135       2  0 04:29 ?        00:00:00 [irq/392-swr_wak]
+root        4149       2  0 04:29 ?        00:00:00 [dsi_err_workq]
+root        4159       1  0 04:29 ?        00:00:00 /usr/bin/gstd -a 127.0.0.1
+pulse       4192       1  0 04:29 ?        00:00:01 /usr/bin/pulseaudio --system
+root        4198       1  0 04:29 ?        00:00:00 /usr/bin/qti_system_daemon
+root        4201       1  0 04:29 ?        00:00:00 /usr/bin/atfwd_quectel
+root        4330       2  0 04:29 ?        00:00:00 [ipawq34]
+root        4331       2  0 04:29 ?        00:00:00 [iparepwq34]
+root        4332       2  0 04:29 ?        00:00:00 [ipawq104]
+root        4333       2  0 04:29 ?        00:00:00 [iparepwq104]
+root        4334       2  0 04:29 ?        00:00:00 [ipawq95]
+root        4335       2  0 04:29 ?        00:00:00 [iparepwq95]
+root        4336       2  0 04:29 ?        00:00:00 [ipawq35]
+root        4337       2  0 04:29 ?        00:00:00 [iparepwq35]
+root        4338       2  0 04:29 ?        00:00:00 [ipawq105]
+root        4339       2  0 04:29 ?        00:00:00 [iparepwq105]
+root        4367       1  0 04:29 ?        00:00:00 /usr/bin/ql-ota
+root        4460       2  0 04:29 ?        00:00:00 [cds_recovery_wo]
+root        4461       2  0 04:29 ?        00:00:00 [wlan_logging_th]
+root        4491       1  0 04:29 ?        00:00:00 /usr/bin/time_daemon
+root        4501       1  0 04:29 ?        00:00:00 /usr/bin/port_bridge
+root        4507       2  0 04:29 ?        00:00:00 [irq/215-arm-smm]
+root        4533       2  0 04:29 ?        00:00:00 [glink_modem]
+root        4534       2  0 04:29 ?        00:00:00 [clnt_req]
+root        4536       2  0 04:29 ?        00:00:00 [qrtr_rx]
+root        4557       2  0 04:29 ?        00:00:00 [irq/216-arm-smm]
+root        4560       2  0 04:29 ?        00:00:00 [irq/217-arm-smm]
+root        4863       2  0 04:29 ?        00:00:00 [irq/338-mhi]
+root        4867       2  0 04:29 ?        00:00:00 [qrtr_rx]
+root        4870       2  0 04:29 ?        00:00:00 [scheduler_threa]
+root        4871       2  0 04:29 ?        00:00:00 [cds_ol_rx_threa]
+root        4885       1  0 04:29 ?        00:00:00 /sbin/wpa_supplicant -u -c /
+root        5823       2  0 04:38 ?        00:00:00 [kworker/6:1]
+root        6401       1  0 04:43 ?        00:00:00 /usr/bin/qcrild
+root        7458       2  0 04:54 ?        00:00:08 [kworker/u17:2-kgsl-events]
+root        7862       2  0 04:58 ?        00:00:00 [kworker/5:1]
+root        9113       2  0 05:12 ?        00:00:01 [kworker/u16:1-events_unboun
+root       10056       2  0 05:22 ?        00:00:01 [kworker/u16:4-events_unboun
+root       10642       2  0 05:28 ?        00:00:01 [kworker/u16:3-qc_ufs_qos_sw
+root       11744       2  0 05:34 ?        00:00:00 [kworker/3:3-events]
+root       11817       2  0 05:35 ?        00:00:00 [kworker/0:2-rcu_gp]
+root       13599       1  0 05:38 ?        00:00:03 /opt/qb560d-docker-demo/runt
+root       13630   13599  0 05:38 ?        00:00:00 /opt/qb560d-docker-demo/runt
+root       14445       2  0 05:40 ?        00:00:00 [kworker/3:4-cgroup_destroy]
+root       14491       2  0 05:41 ?        00:00:00 [kworker/0:3-cgroup_destroy]
+root       14676       2  0 05:43 ?        00:00:00 [kworker/1:0-events]
+root       14737       2  0 05:44 ?        00:00:00 [kworker/u16:2-qc_ufs_qos_sw
+root       14937       2  0 05:46 ?        00:00:02 [kworker/u17:1-dwc_wq]
+root       15440       2  0 05:46 ?        00:00:00 [kworker/2:9-events]
+root       15441       2  0 05:46 ?        00:00:00 [kworker/2:10-events]
+root       15442       2  0 05:46 ?        00:00:00 [kworker/2:11-events]
+root       15545       2  0 05:47 ?        00:00:00 [kworker/3:1-events]
+root       15573       2  0 05:48 ?        00:00:00 [kworker/7:2-events]
+root       15593       2  0 05:48 ?        00:00:00 [kworker/0:1-events]
+root       15622       2  0 05:48 ?        00:00:00 [kworker/1:1-events]
+root       15892       2  0 05:51 ?        00:00:00 [kworker/u16:0-events_unboun
+root       15943       2  0 05:51 ?        00:00:00 [kworker/2:0-cgroup_destroy]
+root       15969       2  1 05:51 ?        00:00:02 [kworker/u17:0-dwc_wq]
+root       16466       2  0 05:52 ?        00:00:00 [kworker/2:1-events]
+root       16537       2  0 05:53 ?        00:00:00 [kworker/7:1-events_freezabl
+root       16559       2  0 05:53 ?        00:00:00 [kworker/1:2-rcu_gp]
+root       16598       2  0 05:54 ?        00:00:00 [kworker/1:3-events]
+root       16647       1  0 05:54 ?        00:00:00 /sbin/agetty --autologin roo
+root       16654     443  0 05:54 ?        00:00:00 /lib/systemd/systemd-udevd
+root       16666    4027  0 05:54 pts/0    00:00:00 /bin/sh /bin/adb_shell -
+root       16668   16666  2 05:54 pts/0    00:00:00 /bin/login
+root       16679       1 23 05:54 ?        00:00:00 /lib/systemd/systemd --user
+root       16680   16679  0 05:54 ?        00:00:00 (sd-pam)
+root       16684       2  0 05:54 ?        00:00:00 [kworker/0:0]
+root       16686   16668  0 05:54 pts/0    00:00:00 -bash
+root       16694   16686  0 05:54 pts/0    00:00:00 sh
+root       16695   16694  0 05:54 pts/0    00:00:00 sh -c #!/bin/sh # D1-01 / D2
+root       16713   16695  0 05:54 pts/0    00:00:00 ps -ef
+  UNIT                    LOAD   ACTIVE SUB    DESCRIPTION                      
+● avahi-daemon.service    loaded failed failed Avahi mDNS/DNS-SD Stack          
+● camera_cgroup.service   loaded failed failed Create Camera Cgroup Service     
+● chg-policy.service      loaded failed failed Charger Policy Service           
+● dnsmasq.service         loaded failed failed dnsmasq - A lightweight DHCP and…
+● fs-scrub-daemon.service loaded failed failed fs-scrub-daemon Service          
+● ip6tables.service       loaded failed failed IPv6 Packet Filtering Framework  
+● ipacmdiag.service       loaded failed failed start IPA configuration manager …
+● iptables.service        loaded failed failed IPv4 Packet Filtering Framework  
+● qcmap_wlan.service      loaded failed failed WLAN service                     
+● qti_pppd.service        loaded failed failed qti_ppp service                  
+● thermal-engine.service  loaded failed failed Thermal Engine Service           
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+11 loaded units listed.
+-- Logs begin at Tue 2024-06-18 04:29:39 CST, end at Tue 2024-06-18 05:54:58 CST. --
+Jun 18 05:48:21 qcs6490-odk agetty[15595]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:48:37 qcs6490-odk agetty[15618]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:48:53 qcs6490-odk agetty[15641]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:49:10 qcs6490-odk agetty[15664]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:49:26 qcs6490-odk agetty[15688]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:49:42 qcs6490-odk agetty[15711]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:49:58 qcs6490-odk agetty[15737]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:50:15 qcs6490-odk agetty[15761]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:50:31 qcs6490-odk agetty[15791]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:50:47 qcs6490-odk agetty[15815]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:51:03 qcs6490-odk agetty[15838]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:51:20 qcs6490-odk agetty[15862]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:51:36 qcs6490-odk agetty[15885]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:51:52 qcs6490-odk agetty[15909]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:52:08 qcs6490-odk agetty[15972]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:52:23 qcs6490-odk systemd[1]: systemrw-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Jun 18 05:52:23 qcs6490-odk systemd[1]: /lib/systemd/system/ql-ota.service:8: Failed to parse service restart specifier, ignoring: yes
+Jun 18 05:52:23 qcs6490-odk systemd[1]: persist-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Jun 18 05:52:23 qcs6490-odk systemd[1]: cache-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Jun 18 05:52:23 qcs6490-odk systemd[1]: data.mount: What= setting is missing. Refusing.
+Jun 18 05:52:25 qcs6490-odk agetty[15994]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:52:41 qcs6490-odk agetty[16424]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:52:57 qcs6490-odk agetty[16471]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:53:13 qcs6490-odk agetty[16494]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:53:30 qcs6490-odk agetty[16520]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:53:46 qcs6490-odk agetty[16544]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:54:02 qcs6490-odk agetty[16574]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:54:18 qcs6490-odk agetty[16599]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:54:35 qcs6490-odk agetty[16623]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 05:54:51 qcs6490-odk agetty[16647]: /dev/hvc0: cannot open as standard input: Invalid argument
+
+--- Available tools ---
+/usr/bin/sh
+/usr/sbin/ip
+/usr/bin/ping
+/usr/bin/curl
+NOT_INSTALLED: iperf3
+/usr/bin/systemctl
+/usr/bin/journalctl
+/usr/bin/logger
+/usr/bin/python3
+/usr/bin/gcc
+NOT_INSTALLED: docker
+/usr/bin/qlril-api-test
+NOT_INSTALLED: qnn-net-run
+/usr/bin/gst-launch-1.0
+/usr/bin/v4l2-ctl
+
+--- AI Python modules ---
+3.8.10 (default, Mar 18 2025, 20:04:55) 
+[GCC 9.4.0]
+{"numpy": true, "PIL": false, "tflite_runtime": false, "ai_edge_litert": false, "tensorflow": false, "onnxruntime": false, "cv2": false}
+
+--- Devices ---
+crw-rw-r-- 1 system system 234, 0 Jun 18 04:29  /dev/adsprpc-smd
+crw-r--r-- 1 system system 234, 1 Jun 18 04:29  /dev/adsprpc-smd-secure
+crw------- 1 root   root   241, 0 Jun 18 04:29  /dev/mhi_1103_00.01.00_pipe_0
+crw------- 1 root   root   241, 1 Jun 18 04:29  /dev/mhi_1103_00.01.00_pipe_4
+crw-rw---- 1 root   video   81, 0 Jun 18 04:29  /dev/video32
+crw-rw---- 1 root   video   81, 1 Jun 18 04:29  /dev/video33
+
+--- Runtime library names in common paths ---
+/usr/lib/libtensorflowlite_c.so
+
+RESULT: INVENTORY_COLLECTED (not a hardware acceptance result)
+
+__QB560D_EXIT__=0
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\20261101T161709759934Z

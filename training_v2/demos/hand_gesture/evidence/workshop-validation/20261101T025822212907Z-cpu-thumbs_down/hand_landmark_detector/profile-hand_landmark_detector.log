@@ -1,0 +1,312 @@
+Input Log File Location: /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T025822212907Z-cpu-thumbs_down/hand_landmark_detector/output/qnn-profiling-data_0.log
+Log File Created: Sun Nov  1 10:58:24 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793501904041813 Steady Clock Timestamp: 14180129390
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 52174 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 48982 us
+
+Finalize Stats:
+---------------
+Graph 0 (graph_v55x_9sa):
+    NetRun: 3124 us
+    Backend (GRAPH_FINALIZE): 1696 us
+        _node_conv2d: 16 us
+        _node_conv2d_1: 163 us
+        _node_conv2d_2: 3 us
+        _node_conv2d_3: 2 us
+        _node_conv2d_4: 248 us
+        _node_conv2d_5: 4 us
+        _node_conv2d_6: 4 us
+        _node_conv2d_7: 223 us
+        _node_conv2d_8: 4 us
+        _node_add: 2 us
+        _node_conv2d_9: 4 us
+        _node_conv2d_10: 141 us
+        _node_conv2d_11: 4 us
+        _node_conv2d_12: 5 us
+        _node_conv2d_13: 94 us
+        _node_conv2d_14: 4 us
+        _node_add_1: 2 us
+        _node_conv2d_15: 6 us
+        _node_conv2d_16: 53 us
+        _node_conv2d_17: 5 us
+        _node_conv2d_18: 8 us
+        _node_conv2d_19: 48 us
+        _node_conv2d_20: 4 us
+        _node_add_2: 1 us
+        _node_conv2d_21: 8 us
+        _node_conv2d_22: 53 us
+        _node_conv2d_23: 4 us
+        _node_add_3: 1 us
+        _node_conv2d_24: 7 us
+        _node_conv2d_25: 49 us
+        _node_conv2d_26: 4 us
+        _node_conv2d_27: 9 us
+        _node_conv2d_28: 68 us
+        _node_conv2d_29: 5 us
+        _node_add_4: 1 us
+        _node_conv2d_30: 9 us
+        _node_conv2d_31: 67 us
+        _node_conv2d_32: 4 us
+        _node_add_5: 1 us
+        _node_conv2d_33: 9 us
+        _node_conv2d_34: 39 us
+        _node_conv2d_35: 5 us
+        _node_conv2d_36: 13 us
+        _node_conv2d_37: 19 us
+        _node_conv2d_38: 5 us
+        _node_add_6: 2 us
+        _node_conv2d_39: 12 us
+        _node_conv2d_40: 45 us
+        _node_conv2d_41: 5 us
+        _node_add_7: 2 us
+        _node_conv2d_42: 12 us
+        _node_conv2d_43: 37 us
+        _node_conv2d_44: 5 us
+        _node_add_8: 1 us
+        _node_conv2d_45: 12 us
+        _node_conv2d_46: 37 us
+        _node_mean: 3 us
+        _node_linear: 4 us
+        _node_linear_1: 2 us
+        _node_linear_2: 1 us
+        _node_linear_3: 1 us
+        _node_sigmoid_1: 14 us
+        _node_sigmoid: 3 us
+
+De-Init Stats:
+--------------
+    NetRun: 2773 us
+    Backend (null): 0 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 43.3614 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_v55x_9sa):
+    NetRun: 22111 us
+    Backend (GRAPH_EXECUTE): 22005 us
+        _node_conv2d: 1018 us
+        _node_conv2d_1: 1332 us
+        _node_conv2d_2: 230 us
+        _node_conv2d_3: 396 us
+        _node_conv2d_4: 1541 us
+        _node_conv2d_5: 108 us
+        _node_conv2d_6: 497 us
+        _node_conv2d_7: 1921 us
+        _node_conv2d_8: 315 us
+        _node_add: 129 us
+        _node_conv2d_9: 290 us
+        _node_conv2d_10: 1359 us
+        _node_conv2d_11: 69 us
+        _node_conv2d_12: 181 us
+        _node_conv2d_13: 1912 us
+        _node_conv2d_14: 106 us
+        _node_add_1: 52 us
+        _node_conv2d_15: 183 us
+        _node_conv2d_16: 359 us
+        _node_conv2d_17: 49 us
+        _node_conv2d_18: 105 us
+        _node_conv2d_19: 401 us
+        _node_conv2d_20: 85 us
+        _node_add_2: 28 us
+        _node_conv2d_21: 147 us
+        _node_conv2d_22: 401 us
+        _node_conv2d_23: 87 us
+        _node_add_3: 28 us
+        _node_conv2d_24: 102 us
+        _node_conv2d_25: 914 us
+        _node_conv2d_26: 114 us
+        _node_conv2d_27: 164 us
+        _node_conv2d_28: 1274 us
+        _node_conv2d_29: 169 us
+        _node_add_4: 37 us
+        _node_conv2d_30: 164 us
+        _node_conv2d_31: 1369 us
+        _node_conv2d_32: 111 us
+        _node_add_5: 38 us
+        _node_conv2d_33: 144 us
+        _node_conv2d_34: 373 us
+        _node_conv2d_35: 106 us
+        _node_conv2d_36: 158 us
+        _node_conv2d_37: 499 us
+        _node_conv2d_38: 106 us
+        _node_add_6: 19 us
+        _node_conv2d_39: 142 us
+        _node_conv2d_40: 497 us
+        _node_conv2d_41: 103 us
+        _node_add_7: 18 us
+        _node_conv2d_42: 139 us
+        _node_conv2d_43: 497 us
+        _node_conv2d_44: 109 us
+        _node_add_8: 18 us
+        _node_conv2d_45: 170 us
+        _node_conv2d_46: 251 us
+        _node_mean: 694 us
+        _node_linear: 18 us
+        _node_linear_1: 5 us
+        _node_linear_2: 22 us
+        _node_linear_3: 23 us
+        _node_sigmoid_1: 4 us
+        _node_sigmoid: 2 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_v55x_9sa):
+    NetRun: 22111 us
+    Backend (GRAPH_EXECUTE): 22005 us
+        _node_conv2d: 1018 us
+        _node_conv2d_1: 1332 us
+        _node_conv2d_2: 230 us
+        _node_conv2d_3: 396 us
+        _node_conv2d_4: 1541 us
+        _node_conv2d_5: 108 us
+        _node_conv2d_6: 497 us
+        _node_conv2d_7: 1921 us
+        _node_conv2d_8: 315 us
+        _node_add: 129 us
+        _node_conv2d_9: 290 us
+        _node_conv2d_10: 1359 us
+        _node_conv2d_11: 69 us
+        _node_conv2d_12: 181 us
+        _node_conv2d_13: 1912 us
+        _node_conv2d_14: 106 us
+        _node_add_1: 52 us
+        _node_conv2d_15: 183 us
+        _node_conv2d_16: 359 us
+        _node_conv2d_17: 49 us
+        _node_conv2d_18: 105 us
+        _node_conv2d_19: 401 us
+        _node_conv2d_20: 85 us
+        _node_add_2: 28 us
+        _node_conv2d_21: 147 us
+        _node_conv2d_22: 401 us
+        _node_conv2d_23: 87 us
+        _node_add_3: 28 us
+        _node_conv2d_24: 102 us
+        _node_conv2d_25: 914 us
+        _node_conv2d_26: 114 us
+        _node_conv2d_27: 164 us
+        _node_conv2d_28: 1274 us
+        _node_conv2d_29: 169 us
+        _node_add_4: 37 us
+        _node_conv2d_30: 164 us
+        _node_conv2d_31: 1369 us
+        _node_conv2d_32: 111 us
+        _node_add_5: 38 us
+        _node_conv2d_33: 144 us
+        _node_conv2d_34: 373 us
+        _node_conv2d_35: 106 us
+        _node_conv2d_36: 158 us
+        _node_conv2d_37: 499 us
+        _node_conv2d_38: 106 us
+        _node_add_6: 19 us
+        _node_conv2d_39: 142 us
+        _node_conv2d_40: 497 us
+        _node_conv2d_41: 103 us
+        _node_add_7: 18 us
+        _node_conv2d_42: 139 us
+        _node_conv2d_43: 497 us
+        _node_conv2d_44: 109 us
+        _node_add_8: 18 us
+        _node_conv2d_45: 170 us
+        _node_conv2d_46: 251 us
+        _node_mean: 694 us
+        _node_linear: 18 us
+        _node_linear_1: 5 us
+        _node_linear_2: 22 us
+        _node_linear_3: 23 us
+        _node_sigmoid_1: 4 us
+        _node_sigmoid: 2 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_v55x_9sa):
+    NetRun: 22111 us
+    Backend (GRAPH_EXECUTE): 22005 us
+        _node_conv2d: 1018 us
+        _node_conv2d_1: 1332 us
+        _node_conv2d_2: 230 us
+        _node_conv2d_3: 396 us
+        _node_conv2d_4: 1541 us
+        _node_conv2d_5: 108 us
+        _node_conv2d_6: 497 us
+        _node_conv2d_7: 1921 us
+        _node_conv2d_8: 315 us
+        _node_add: 129 us
+        _node_conv2d_9: 290 us
+        _node_conv2d_10: 1359 us
+        _node_conv2d_11: 69 us
+        _node_conv2d_12: 181 us
+        _node_conv2d_13: 1912 us
+        _node_conv2d_14: 106 us
+        _node_add_1: 52 us
+        _node_conv2d_15: 183 us
+        _node_conv2d_16: 359 us
+        _node_conv2d_17: 49 us
+        _node_conv2d_18: 105 us
+        _node_conv2d_19: 401 us
+        _node_conv2d_20: 85 us
+        _node_add_2: 28 us
+        _node_conv2d_21: 147 us
+        _node_conv2d_22: 401 us
+        _node_conv2d_23: 87 us
+        _node_add_3: 28 us
+        _node_conv2d_24: 102 us
+        _node_conv2d_25: 914 us
+        _node_conv2d_26: 114 us
+        _node_conv2d_27: 164 us
+        _node_conv2d_28: 1274 us
+        _node_conv2d_29: 169 us
+        _node_add_4: 37 us
+        _node_conv2d_30: 164 us
+        _node_conv2d_31: 1369 us
+        _node_conv2d_32: 111 us
+        _node_add_5: 38 us
+        _node_conv2d_33: 144 us
+        _node_conv2d_34: 373 us
+        _node_conv2d_35: 106 us
+        _node_conv2d_36: 158 us
+        _node_conv2d_37: 499 us
+        _node_conv2d_38: 106 us
+        _node_add_6: 19 us
+        _node_conv2d_39: 142 us
+        _node_conv2d_40: 497 us
+        _node_conv2d_41: 103 us
+        _node_add_7: 18 us
+        _node_conv2d_42: 139 us
+        _node_conv2d_43: 497 us
+        _node_conv2d_44: 109 us
+        _node_add_8: 18 us
+        _node_conv2d_45: 170 us
+        _node_conv2d_46: 251 us
+        _node_mean: 694 us
+        _node_linear: 18 us
+        _node_linear_1: 5 us
+        _node_linear_2: 22 us
+        _node_linear_3: 23 us
+        _node_sigmoid_1: 4 us
+        _node_sigmoid: 2 us
+
+
+__QA251_EXIT__=0

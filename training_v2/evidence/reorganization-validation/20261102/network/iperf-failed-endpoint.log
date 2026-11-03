@@ -1,0 +1,30 @@
+SERVER=127.0.0.1 CELL_IF=lo OUTPUT=/opt/qb560d-training-payload/evidence/iperf-20261102T093527-44753
+BEFORE
+RX=6067399388
+TX=6067399388
+{
+	"start":	{
+		"connected":	[],
+		"version":	"iperf 3.22",
+		"system_info":	"Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64"
+	},
+	"intervals":	[],
+	"end":	{
+	},
+	"error":	"unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused"
+}
+{
+	"start":	{
+		"connected":	[],
+		"version":	"iperf 3.22",
+		"system_info":	"Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64"
+	},
+	"intervals":	[],
+	"end":	{
+	},
+	"error":	"unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused"
+}
+AFTER
+RX=6067399588
+TX=6067399588
+RESULT: UL_DL_FAIL

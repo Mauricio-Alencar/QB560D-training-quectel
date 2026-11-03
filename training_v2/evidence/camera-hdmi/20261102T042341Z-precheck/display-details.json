@@ -1,0 +1,4 @@
+{
+  "command": "modetest -M msm -c 2>&1 | head -n 115; printf '\\nDISPLAY LOGS\\n'; dmesg | grep -Ei 'hdmi|lt9611|uvc|usb.*video' | tail -n 40; printf '\\nWESTON ENV\\n'; for p in $(pidof weston); do tr '\\000' '\\n' < /proc/$p/environ | grep -E '^(DISPLAY|WAYLAND_DISPLAY|XDG_RUNTIME_DIR|XDG_SESSION_TYPE)=' || true; done; printf '\\nWESTON CONFIG\\n'; sed -n '1,180p' /etc/xdg/weston/weston.ini",
+  "exit_code": 0
+}

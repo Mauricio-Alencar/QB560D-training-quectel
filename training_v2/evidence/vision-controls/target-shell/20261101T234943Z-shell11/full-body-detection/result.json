@@ -1,0 +1,40 @@
+{
+  "detections": [
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.715301513671875,
+      "box_yxyx": [
+        0.33756107091903687,
+        0.2704025208950043,
+        0.9656100869178772,
+        0.7577297687530518
+      ]
+    }
+  ],
+  "case": "full-body-detection",
+  "task": "detection",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+  "source_image_sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+  "prepared_tensor_sha256": "9e75eed9a2bf6a7d441ba5a4788ee6bcc9a6a97742e07200a7a68790dea5dcc7",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 153,
+    "execute_us": [
+      8027.0,
+      5660.0,
+      5641.0
+    ]
+  },
+  "comparison_to_saved_cpu": {
+    "passed": true,
+    "person_box_iou": 0.958930717582244,
+    "criterion": "Person IoU >=0.7 versus saved CPU, bounded extra detections"
+  },
+  "passed": true,
+  "execution_location": "All preparation, CNN inference, decoding, NMS/rules and rendering on target",
+  "cpu_reference": "Saved original TFLite CPU output; no live CPU inference",
+  "scope": "Functional controls on reviewed images. No dataset accuracy or latency benchmark."
+}

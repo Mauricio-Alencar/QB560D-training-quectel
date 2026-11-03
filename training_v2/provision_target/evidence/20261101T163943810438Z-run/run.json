@@ -1,0 +1,4 @@
+{
+  "command": "date -u; stat /opt/qb560d-workshop/build/iperf-3.22/configure /opt/qb560d-workshop/build/iperf-3.22/config.log; tail -n 100 /opt/qb560d-workshop/build/iperf-3.22/config.log",
+  "exit_code": 0
+}

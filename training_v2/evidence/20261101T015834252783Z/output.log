@@ -1,0 +1,42 @@
+{
+  "backend_requested": "cpu",
+  "runtime_order": [
+    "cpu"
+  ],
+  "cpu_retry": false,
+  "runtime_version": "2.26.0.240827110523_99241",
+  "library": "/tmp/qb560d-training/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+  "model_sha256": "847cbc12fc021b4557d00caa6b018bd3c51c7bc7c4b345b4c6eec6092d0f1a72",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "input_mode": "pixels",
+  "input_name": "input",
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "profiling": "off",
+  "runs": 1,
+  "warmup": 0,
+  "inference_ms_median": 56.9633849991078,
+  "inference_ms_p95": 56.9633849991078,
+  "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+  "top3": [
+    {
+      "class_id": 653,
+      "score": 0.8739495277404785
+    },
+    {
+      "class_id": 907,
+      "score": 0.0444842204451561
+    },
+    {
+      "class_id": 466,
+      "score": 0.012699105776846409
+    }
+  ],
+  "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+}
+
+__QB560D_EXIT__=0

@@ -1,0 +1,73 @@
+2026-11-01 16:49:01,377 - 278 - INFO - INFO_INITIALIZATION_SUCCESS: 
+2026-11-01 16:49:01,539 - 283 - WARNING - Unable to register converter supported Operation [Inverse:Version 1] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:49:01,573 - 283 - WARNING - Unable to register converter supported Operation [RMSNormalization:Version 23] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:49:01,610 - 283 - WARNING - Unable to register converter supported Operation [RotaryEmbedding:Version 23] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:49:02,496 - 283 - WARNING - --desired_input_shape and -d are deprecated. Use --source_model_input_shape or -s for achieving this functionality
+2026-11-01 16:49:02,496 - 278 - INFO - Validating user provided custom IO
+2026-11-01 16:49:02,496 - 278 - INFO - Input shape info 
+2026-11-01 16:49:03,444 - 278 - INFO - FuseRotaryEmbedding: RoPE fusion skipped (--onnx_enable_rope_fusion not set).
+2026-11-01 16:49:03,444 - 283 - WARNING - WARNING_OPSET_VERSION: Warning multiple opset versions specified, using highest.
+2026-11-01 16:49:03,812 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,823 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,834 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,843 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,852 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,862 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,873 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:03,883 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:49:04,242 - 283 - WARNING - Unused Input nodes found: []
+2026-11-01 16:49:07,178 - 278 - INFO - INFO_INITIALIZATION_SUCCESS: 
+modeltools::IrGraph::reEvalMacsParams: Re-evaluated graph statistics after IrOptimizer optimization passes:
+modeltools::IrGraph::reEvalMacsParams: Total MACs: 728245791
+modeltools::IrGraph::reEvalMacsParams: Total Params Count: 4101231
+modeltools::IrQuantizer::IrQuantizer: Param Quantizer should be set to symmetric for 32 bit biases. Will ignore param quantizer option: tf for biases
+[ WARNING ] Following OPs fallback to float.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Conv2D_Fold_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_5/ClassPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_5/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_4/ClassPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_4/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_3/ClassPredictor/Conv2D_bias2026-11-01 16:49:07,340 - 278 - INFO - INFO_CONVERSION_SUCCESS: Conversion completed successfully
+2026-11-01 16:49:07,456 - 278 - INFO - INFO_WRITE_SUCCESS: 
+_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_3/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_2/ClassPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_2/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_1/ClassPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_1/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_0/ClassPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.
+[ WARNING ] Tensor BoxPredictor_0/BoxEncodingPredictor/Conv2D_bias_dequant may has wrong signed offset 2147483648.000000 of a signed symmetric schema. Unsigned offset is 0.000000.

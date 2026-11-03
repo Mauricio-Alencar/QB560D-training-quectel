@@ -1,0 +1,4 @@
+{
+  "command": "ip -4 addr show dev rmnet_data0; ip -4 route; nmcli --colors no -g GENERAL.STATE,GENERAL.CONNECTION,IP4.ADDRESS device show wlan0; timedatectl show -p NTPSynchronized",
+  "exit_code": 0
+}

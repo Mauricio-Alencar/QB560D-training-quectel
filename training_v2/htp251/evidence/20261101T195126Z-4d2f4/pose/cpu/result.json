@@ -1,0 +1,7 @@
+{
+  "task": "pose",
+  "backend": "cpu",
+  "passed": false,
+  "exit_code": 14,
+  "error": "Graph/inference failed; inspect inference.log. No CPU fallback was requested."
+}

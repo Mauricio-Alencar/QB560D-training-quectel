@@ -1,0 +1,66 @@
+before: exit 0
+owned-directory: exit 0
+runtime-version: exit 0
+model-status-classification: exit 0
+model-hash-classification: exit 0
+run-directory: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-560f_0tp\input.png: 1 file pushed, 0 skipped. 14.6 MB/s (81580 bytes in 0.005s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-yxv6e93q\input.raw: 1 file pushed, 0 skipped. 9.1 MB/s (602112 bytes in 0.063s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-ganj3df6\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.005s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rdf181f9a3fc840/reference/: 3 files pulled, 0 skipped. 6.7 MB/s (421161 bytes in 0.060s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rdf181f9a3fc840/htp/: 7 files pulled, 0 skipped. 2.2 MB/s (60112 bytes in 0.026s)
+classification htp PASS
+model-status-detection: exit 0
+model-hash-detection: exit 0
+run-directory: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-yr1v5ubr\input.png: 1 file pushed, 0 skipped. 24.6 MB/s (141134 bytes in 0.005s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-1fnygz2q\input.raw: 1 file pushed, 0 skipped. 7.7 MB/s (1080000 bytes in 0.134s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-8w6ph6uj\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (85 bytes in 0.008s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rb10f429cca0d4c/reference/: 3 files pulled, 0 skipped. 6.7 MB/s (567727 bytes in 0.081s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rb10f429cca0d4c/htp/: 10 files pulled, 0 skipped. 6.9 MB/s (2311590 bytes in 0.322s)
+detection htp PASS
+model-status-pose: exit 0
+model-hash-pose: exit 0
+run-directory: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-wzl5f8p0\input.png: 1 file pushed, 0 skipped. 25.3 MB/s (143221 bytes in 0.005s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-mvgjub44\input.raw: 1 file pushed, 0 skipped. 6.9 MB/s (1088652 bytes in 0.150s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-or3_bmx3\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r5c37b1dd671e47/reference/: 3 files pulled, 0 skipped. 6.3 MB/s (634593 bytes in 0.095s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r5c37b1dd671e47/htp/: 10 files pulled, 0 skipped. 4.0 MB/s (298086 bytes in 0.071s)
+pose htp PASS
+model-status-gesture: exit 0
+model-hash-gesture: exit 0
+run-directory: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-898r2_1x\input.png: 1 file pushed, 0 skipped. 6.1 MB/s (42249 bytes in 0.007s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-v4y1srz1\input.raw: 1 file pushed, 0 skipped. 8.1 MB/s (602112 bytes in 0.071s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-4wt_o5j7\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (63 bytes in 0.007s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/ra0dee4960eb841/reference/: 3 files pulled, 0 skipped. 6.0 MB/s (283866 bytes in 0.045s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/ra0dee4960eb841/htp/: 10 files pulled, 0 skipped. 3.2 MB/s (144073 bytes in 0.043s)
+gesture htp PASS
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+run-directory: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-1qt7o2vn\input.png: 1 file pushed, 0 skipped. 15.0 MB/s (105776 bytes in 0.007s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-lvuk85_7\input.raw: 1 file pushed, 0 skipped. 7.8 MB/s (792588 bytes in 0.097s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-6qivukjk\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.005s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rcd4fe87e245341/reference/: 3 files pulled, 0 skipped. 7.3 MB/s (5450211 bytes in 0.713s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rcd4fe87e245341/htp/: 7 files pulled, 0 skipped. 7.3 MB/s (16745236 bytes in 2.191s)
+segmentation htp PASS
+after: exit 0
+PASS_ALL_MIGRATED_HTP_DEMOS C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\.qa\aibox_training\training_v2\htp251\evidence\20261102T020919Z-20b4e
+REAL_OUTPUT_GALLERY: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\.qa\aibox_training\training_v2\htp251\results\index.html

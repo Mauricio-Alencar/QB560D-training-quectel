@@ -1,0 +1,27 @@
+[
+  {
+    "label": "wlan-status",
+    "exit_code": 0,
+    "output": "GENERAL.STATE:                          100 (connected)\nGENERAL.CONNECTION:                     qb560d-training-wlan\nIP4.ADDRESS[1]:                         192.168.0.26/24\nIP4.GATEWAY:                            192.168.0.1\nIP4.DNS[1]:                             181.213.132.2\nIP4.DNS[2]:                             181.213.132.3\ndefault via 192.168.0.1  proto dhcp  src 192.168.0.26  metric 353 \n192.168.0.0/24  proto dhcp  scope link  src 192.168.0.26  metric 353 \nConnected to 8c:44:4f:0c:df:81 (on wlan0)\n\tSSID: Mauricio_WIFI5G\n\tfreq: 5825\n\tRX: 5157 bytes (39 packets)\n\tTX: 3206 bytes (24 packets)\n\tsignal: -73 dBm\n\trx bitrate: 78.0 MBit/s VHT-MCS 4 VHT-NSS 2\n\ttx bitrate: 52.0 MBit/s VHT-MCS 3 VHT-NSS 2\ndefault via 192.168.0.1  proto dhcp  src 192.168.0.26  metric 353 \n192.168.0.0/24  proto dhcp  scope link  src 192.168.0.26  metric 353 \nSun Nov  1 17:39:19 UTC 2026\n\n"
+  },
+  {
+    "label": "wlan-check",
+    "exit_code": 0,
+    "output": "172.66.147.243  STREAM example.com\n172.66.147.243  DGRAM  \n1.1.1.1 via 192.168.0.1 dev wlan0  src 192.168.0.26 \n    cache \nHTTPS_STATUS=200\nNTPSynchronized=yes\n\n"
+  },
+  {
+    "label": "camera-missing",
+    "exit_code": 78,
+    "output": "CONFIG_REQUIRED: Camera node absent; inspect the sensor and BSP camera source\n\n"
+  },
+  {
+    "label": "camera-codec",
+    "exit_code": 78,
+    "output": "CONFIG_REQUIRED: This is a video codec node, not a camera sensor\n\n"
+  },
+  {
+    "label": "camera-qmmf",
+    "exit_code": 1,
+    "output": "gbm_create_device(192): Info: backend name is: msm_drm\nSetting pipeline to PAUSED ...\nERROR: Pipeline doesn't want to pause.\nERROR: from element /GstPipeline:pipeline0/GstQmmfSrc:qmmfsrc0: Failed to Open Camera!\nAdditional debug info:\n/home/quectel/workspace/SW2_560DU_8550_r079L/build-qti-distro-ubuntu-fullstack-perf/tmp-glibc/work/aarch64-oe-linux/gstreamer1.0-plugins-qti-oss-qmmfsrc/1.0-r0/gst-plugin-qmmfsrc/qmmf_source.c(840): qmmfsrc_change_state (): /GstPipeline:pipeline0/GstQmmfSrc:qmmfsrc0\nSetting pipeline to NULL ...\nFreeing pipeline ...\nFAIL: QMMF capture failed or timed out. Check sensor availability, camera service and caps.\n\n"
+  }
+]

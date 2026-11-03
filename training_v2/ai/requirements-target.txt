@@ -1,0 +1,5 @@
+# For the Ubuntu Python 3.8 baseline. Freeze exact successful versions after rehearsal.
+numpy>=1.21,<1.25
+Pillow>=9.1,<11
+# Install the BSP-compatible TFLite interpreter separately, see TARGET_SETUP.md.
+# Example candidate if an aarch64 CPython wheel is available: tflite-runtime==2.14.0

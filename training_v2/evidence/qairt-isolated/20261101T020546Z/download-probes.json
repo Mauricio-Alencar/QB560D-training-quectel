@@ -1,0 +1,60 @@
+[
+  {
+    "version": "2.51.40.260930",
+    "channel": "community",
+    "url": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.51.40.260930/v2.51.40.260930.zip",
+    "credentials_supplied": false,
+    "status": 206,
+    "content_type": "application/x-zip-compressed",
+    "content_range": "bytes 0-15/2972704136",
+    "content_length": "16",
+    "zip_magic": true
+  },
+  {
+    "version": "2.51.0.260929",
+    "channel": "community",
+    "url": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.51.0.260929/v2.51.0.260929.zip",
+    "credentials_supplied": false,
+    "status": 206,
+    "content_type": "application/x-zip-compressed",
+    "content_range": "bytes 0-15/2971497940",
+    "content_length": "16",
+    "zip_magic": true
+  },
+  {
+    "version": "2.50.0.260828",
+    "channel": "community",
+    "url": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.50.0.260828/v2.50.0.260828.zip",
+    "credentials_supplied": false,
+    "status": 206,
+    "content_type": "application/x-zip-compressed",
+    "content_range": "bytes 0-15/2601473189",
+    "content_length": "16",
+    "zip_magic": true
+  },
+  {
+    "version": "2.51.40.260930",
+    "channel": "neural-processing-public",
+    "url": "https://softwarecenter.qualcomm.com/api/download/software/qualcomm_neural_processing_sdk/v2.51.40.260930.zip",
+    "credentials_supplied": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "version": "2.51.0.260929",
+    "channel": "neural-processing-public",
+    "url": "https://softwarecenter.qualcomm.com/api/download/software/qualcomm_neural_processing_sdk/v2.51.0.260929.zip",
+    "credentials_supplied": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "version": "2.51.40.260930",
+    "channel": "qualcomm-github-asset",
+    "url": "https://github.com/qualcomm/qai-appbuilder/releases/download/v2.51.40/QAIRT_v2.51.40.260930.zip",
+    "credentials_supplied": false,
+    "status": 206,
+    "content_type": "application/octet-stream",
+    "content_range": "bytes 0-15/4535080",
+    "content_length": "16",
+    "zip_magic": true
+  }
+]

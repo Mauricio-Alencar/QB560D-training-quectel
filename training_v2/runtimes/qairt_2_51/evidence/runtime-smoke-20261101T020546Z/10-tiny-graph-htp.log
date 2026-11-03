@@ -1,0 +1,323 @@
+BACKEND /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so provider=HTP_QTI_AISW backend_id=6
+BACKEND_BUILD v2.51.40.260930230134
+QNN_LOG[3]  <I> QnnLog_create started.
+
+QNN_LOG[2]  <W> Initializing HtpProvider
+
+QNN_LOG[3]  <I> exit with 0
+
+QNN_LOG[3]  <I> exit with 0
+
+QNN_LOG[3]  <I> QnnLog_create exit.
+
+STAGE logCreate status=0
+QNN_LOG[3] Creating backend with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnBackend_create started. backend = 0xd8e61f38
+
+QNN_LOG[3]  <I> QnnBackend_create done successfully. backend = 0xd8e61f38
+
+QNN_LOG[3] QnnGraphTransformer createBackend done, status = 0x0
+STAGE backendCreate status=0
+QNN_LOG[3]  <I> QnnDevice_create started
+
+QNN_LOG[3]  <I> No scheduler was created for deviceId=0 coreId=0 pdId=0
+
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+QNN_LOG[3]  <I> setHtpPowerDeviceInstance started for powerConfigId: 0, deviceId: 0, coreId: 0
+
+QNN_LOG[3]  <I> setHtpPowerDeviceInstance done. status 0x0
+
+QNN_LOG[3]  <I> QnnDevice_create done. device = 0x1. status 0x0
+
+STAGE deviceCreateUnsigned status=0
+QNN_LOG[3] Creating context with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnContext_create started. backend = 0x1, device = 0x1
+
+QNN_LOG[2]  <W> No op packages found for architecture 68; falling back to no-arch bucket
+
+QNN_LOG[3]  <I> Number of existing contexts: 1, graphs: 0
+
+QNN_LOG[3]  <I> QnnContext_create done successfully. context = 0x1
+
+QNN_LOG[3] QnnGraphTransformer createContext done, status = 0x0
+STAGE contextCreate status=0
+QNN_LOG[3]  <I> QnnProfile_create 0x5599482c20
+
+STAGE profileCreate status=0
+QNN_LOG[3] Creating graph with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnGraph_create started for graph isolated_add_uint8
+
+QNN_LOG[2]  <W> PrepareLibLoader Loading libQnnHtpPrepare.so
+
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+QNN_LOG[3]  <I> First connection to QNN HTP Prepare library established!
+
+QNN_LOG[3] c_interface.cc:155:Creating environment (&hexnn_env_priority=192): Create-threads: 1, Priority: c0, hexnn version: hexnn_ver_v2.51.40.260930230134.
+
+QNN_LOG[3] hexagon_nn_env.cc:405:VXU 0: Num HVX threads: 8, Num HMX threads: 1, Num HLX threads: 2
+
+QNN_LOG[3] c_interface.cc:166:New env: 0x55994825d0
+
+QNN_LOG[2]  <W> VTCM_OFFSET/VTCM_TOTAL_SIZE are no longer supported after PGE removal and will be ignored.
+
+QNN_LOG[2]  <W> VTCM_OFFSET/VTCM_TOTAL_SIZE are no longer supported after PGE removal and will be ignored.
+
+QNN_LOG[2]  <W> Sanitizing the value for hvx_threads and setting to default
+
+QNN_LOG[1]  <E> unexpected GraphHtpSettings option 66
+
+QNN_LOG[3] graph_registry.cc:575:[DefaultInitStatus] Graph 256 set to default init state
+
+QNN_LOG[3]  <I> Number of existing contexts: 1, graphs: 1
+
+QNN_LOG[3]  <I> QnnGraph_create done. status 0x0
+
+STAGE graphCreate status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor started, graph = 0x1
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor graph 1 
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor done. graph = 0x1, status 0x0
+
+STAGE input_a status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor started, graph = 0x1
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor graph 1 
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor done. graph = 0x1, status 0x0
+
+STAGE input_b status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor started, graph = 0x1
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor graph 1 
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor done. graph = 0x1, status 0x0
+
+STAGE output_y status=0
+QNN_LOG[3] Add Graph Node with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnGraph_addNode started.
+
+QNN_LOG[3]  <I> QnnGraph_addNode done. status 0x0
+
+STAGE graphAddNode status=0
+QNN_LOG[3] Finalizing graph with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnGraph_finalize started, graph = 0x1
+
+QNN_LOG[3] os_linux.cc:253:Setting libnative architecture to v79 (requested arch is v68)
+
+QNN_LOG[3] Starting stage: Graph Preparation Initializing
+
+QNN_LOG[3] graph_prepare.cc:1256:using no reorder (default)
+
+QNN_LOG[3] graph_prepare.cc:1272:reset supertile and autothread for vtcm_size 2097152
+
+QNN_LOG[3] vtcm_wrapper.cc:135:VtcmWrapper init shared backup buffer is disabled
+
+QNN_LOG[3] vtcm_wrapper.cc:159:Allocated 2097152 bit DDR yield buffer 0x7fb8c23100.  VTCM is at 0x7fb8e24000
+
+QNN_LOG[3] vtcm_wrapper.cc:179:VTCM: total_sz=2097152, sz=2097152, off=0, req=0x559a25dfd0, ctx=0 (0x7fb8e24000-0x7fb9024000)
+
+QNN_LOG[3] Completed stage: Graph Preparation Initializing (384 us)
+
+QNN_LOG[3] Starting stage: Graph Optimizations
+
+QNN_LOG[3] vtcm_wrapper.cc:269:0x7fd8e613f0 vtcm_waiters now 1, entering res_acquire
+
+QNN_LOG[3] vtcm_wrapper.cc:279:0x7fd8e613f0 Acquired Cache, gr=256, ctx=0x0, ptr=0x7fb8e24000
+
+QNN_LOG[2] tcm_migration.cc:2205:WARNING:no properties registered for q::Add_flat
+
+QNN_LOG[3] graph_prepare.cc:1833:do_prepare2 with num_nsps = 1
+
+QNN_LOG[3] Completed stage: Graph Optimizations (9394 us)
+
+QNN_LOG[3] Starting stage: Post Graph Optimization
+
+QNN_LOG[3] Completed stage: Post Graph Optimization (98 us)
+
+QNN_LOG[3] Starting stage: Graph Sequencing for Target
+
+QNN_LOG[3] graph_sequencing.cc:139:Scheduling with sched_threshold_ratio = 0.75000, tcm_reduction_index = 0, is_retry=0
+
+QNN_LOG[3] graph_sequencing.cc:312:combine_fill_ops
+
+QNN_LOG[3] graph_sequencing.cc:332:marking_weights
+
+QNN_LOG[3] graph_sequencing.cc:373:do_split_fork_join_oplist
+
+QNN_LOG[3] graph_sequencing.cc:399:assign_blocks_to_spillfill_mgrps
+
+QNN_LOG[3] graph_sequencing.cc:401:done assign_blocks_to_spillfill_mgrps
+
+QNN_LOG[3] Completed stage: Graph Sequencing for Target (366 us)
+
+QNN_LOG[3] Starting stage: VTCM Allocation
+
+QNN_LOG[3] graph_sequencing.cc:747:rewrite_opmap_for_spillfill
+
+QNN_LOG[3] graph_sequencing.cc:749:done rewrite_opmap_for_spillfill
+
+QNN_LOG[3] graph_prepare.cc:6608:link_source_destructive_operands
+
+QNN_LOG[3] graph_prepare.cc:6701:set_tcm_pool
+
+QNN_LOG[3] graph_prepare.cc:6703:set_largest_memory_alloc_size
+
+QNN_LOG[3] graph_prepare.cc:6706:allocate_tcm_blocks
+
+QNN_LOG[3] vtcm_alloc.cc:2062:Running reserving version of VTCM allocator.
+
+QNN_LOG[3] vtcm_alloc.cc:2112:Ran 1 internal passes of VTCM allocation.
+
+QNN_LOG[3] graph_prepare.cc:6709:done allocate_tcm_blocks
+
+QNN_LOG[3] graph_sequencing.cc:771:ALLOCATE SUCCESSFUL
+
+QNN_LOG[3] Completed stage: VTCM Allocation (90 us)
+
+QNN_LOG[3] Starting stage: Parallelization Optimization
+
+QNN_LOG[3] grdep_fillcombine.cc:388:combine overlapping fill: bw_read = 0, bw_overlap = 0 (nan%)
+
+QNN_LOG[3] Completed stage: Parallelization Optimization (28 us)
+
+QNN_LOG[3] Starting stage: Finalizing Graph Sequence
+
+QNN_LOG[3] graph_prepare.cc:2107:order_dma_join_operations
+
+QNN_LOG[3] graph_prepare.cc:2110:design_spill_fill_area
+
+QNN_LOG[3] 
+====== DDR bandwidth summary ======
+
+QNN_LOG[3] spill_bytes=0
+
+QNN_LOG[3] fill_bytes=0
+
+QNN_LOG[3] write_total_bytes=2048
+
+QNN_LOG[3] read_total_bytes=4096
+
+
+QNN_LOG[3] graph_prepare.cc:2178:do_prepare2_late
+
+QNN_LOG[3] graph_prepare.cc:2436:allocate_plain_blocks
+
+QNN_LOG[3] mem_overlap.cc:166:no plain allocations in graph @0
+
+QNN_LOG[3] graph_prepare.cc:2568:assign_dma_checkpoints
+
+QNN_LOG[3] grdep_spillfill.cc:2363:Assigned checkpoints to 2 dma ops out of 3; max in-flight = 1
+
+QNN_LOG[3] graph_prepare.cc:2571:late_construct_ops
+
+QNN_LOG[3] graph_prepare.cc:2575:assign_run_checkpoints
+
+QNN_LOG[3] grdep_checkpoints.cc:667:Insert 1 Sync op(s)
+
+QNN_LOG[3] grdep_checkpoints.cc:777:Assign checkpoints to 7 ops
+
+QNN_LOG[3] grdep_checkpoints.cc:809:Done setting up 0 checkpoints
+
+
+QNN_LOG[2] graph_prepare.cc:2394:WARNING:remote-weight rewrite scaffold: 0 exact candidate op(s) identified; 0 tagged remote-weight op(s); 0 exact target op(s); 0 exact target op(s) have nsp_id; 0 exact target op(s) have ddr_cluster; 0 have coherent op_map/graphdeps state; 0 are safe for proto-roundtrip validation; 0 replacement-path validations succeeded; 0 clone-equivalent replacements committed; 0 have constructible `_free` fallback forms; 0 have `_free` fallback output-block matches; 0 have `_free` fallback output-block-count mismatches
+
+QNN_LOG[3] graph_prepare.cc:2582:finalize_runlist
+
+QNN_LOG[3] grdep_main.cc:2609:finalize_runlist: in_runlist=9, runlist = 13 + 1 vec + 0 mtx + 0 elt + 0 non-run; pending_dummy_ops = 0, const tensors = 5 of 5
+
+QNN_LOG[3] graph_prepare.cc:2587:done finalize_runlist
+
+QNN_LOG[3] graph_prepare.cc:2593:Set physical pointers within all tensors
+
+QNN_LOG[3] graph_prepare.cc:2597:Done setting physical pointers within all tensors
+
+QNN_LOG[3] graph_prepare.cc:2183:done do_prepare2_late
+
+QNN_LOG[3] Completed stage: Finalizing Graph Sequence (244 us)
+
+QNN_LOG[3] Starting stage: Completion
+
+QNN_LOG[3] graph_prepare.cc:2198:compile
+
+QNN_LOG[3] graph_prepare.cc:2200:done compile
+
+QNN_LOG[3] graph_prepare.cc:2202:os_cleang
+
+QNN_LOG[3] graph_prepare.cc:2204:done os_cleang
+
+QNN_LOG[3] Completed stage: Completion (18 us)
+
+QNN_LOG[3] vtcm_wrapper.cc:309:0x7fd8e615a0 Releasing Cache, ctx = 0x0, ptr=0x7fb8e24000
+
+QNN_LOG[3] graph.cc:2430:256: Vec workers synced.
+QNN_LOG[2]  <W> gpe_serialize: not a GPE program, falling back to hexagon_nn_serialize
+
+QNN_LOG[2]  <W> gpe_serialize: not a GPE program, falling back to hexagon_nn_serialize
+
+QNN_LOG[1]  <E> [ERROR][SetBufName][NSW] status=-3
+
+QNN_LOG[2]  <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+QNN_LOG[2]  <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+QNN_LOG[3]  <I> QnnGraph_finalize done. status 0x0
+
+STAGE graphFinalize status=0
+QNN_LOG[3]  <I> QnnGraph_execute started. graph = 0x1
+
+QNN_LOG[3]  <I> QnnGraph_execute done. status 0x0
+
+STAGE graphExecute status=0
+GRAPH_RESULT={"backend":"HTP","operation":"ElementWiseAdd","input_a":[1,2,3,4],"input_b":[10,20,30,40],"output":[11,22,33,44],"expected":[11,22,33,44],"pass":true,"cpu_fallback":false}
+PROFILE type=8001 unit=4 value=2 name=Number of HVX threads used
+PROFILE type=3001 unit=1 value=1242 name=RPC (execute) time
+PROFILE type=3002 unit=1 value=1028 name=QNN accelerator (execute) time
+PROFILE type=3004 unit=1 value=986 name=Accelerator (execute) time
+PROFILE type=3012 unit=1 value=155 name=Accelerator (execute excluding wait) time
+PROFILE type=400 unit=1 value=1272 name=QNN (execute) time
+LOADED_LIBRARY 7fa66fd000-7fabaf1000 r-xp 00000000 08:06 737993                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpPrepare.so
+LOADED_LIBRARY 7fabaf1000-7fabb00000 ---p 053f4000 08:06 737993                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpPrepare.so
+LOADED_LIBRARY 7fabb00000-7fabdad000 r--p 053f3000 08:06 737993                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpPrepare.so
+LOADED_LIBRARY 7fabdad000-7fabdaf000 rw-p 056a0000 08:06 737993                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpPrepare.so
+LOADED_LIBRARY 7fba62b000-7fba6a2000 r-xp 00000000 08:06 737667                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpV68Stub.so
+LOADED_LIBRARY 7fba6a2000-7fba6b2000 ---p 00077000 08:06 737667                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpV68Stub.so
+LOADED_LIBRARY 7fba6b2000-7fba6b4000 r--p 00077000 08:06 737667                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpV68Stub.so
+LOADED_LIBRARY 7fba6b4000-7fba6b5000 rw-p 00079000 08:06 737667                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtpV68Stub.so
+LOADED_LIBRARY 7fba768000-7fbabc1000 r-xp 00000000 08:06 737665                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so
+LOADED_LIBRARY 7fbabc1000-7fbabd1000 ---p 00459000 08:06 737665                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so
+LOADED_LIBRARY 7fbabd1000-7fbabdb000 r--p 00459000 08:06 737665                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so
+LOADED_LIBRARY 7fbabdb000-7fbabdc000 rw-p 00463000 08:06 737665                         /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so
+QNN_LOG[3] Free context with QnnGraphTransformerAdapter
+QNN_LOG[3] QnnGraphTransformer context freed successfully
+QNN_LOG[3]  <I> QnnContext_free started. context = 0x1
+
+QNN_LOG[2]  <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+QNN_LOG[3]  <I> Number of existing contexts: 0, graphs: 0
+
+QNN_LOG[3]  <I> QnnContext_free done successfully.
+
+STAGE contextFree status=0
+QNN_LOG[3]  <I> QnnProfile_free 0x5599482c20
+
+STAGE profileFree status=0
+QNN_LOG[3]  <I> QnnDevice_free started. device = 0x1
+
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+QNN_LOG[3]  <I> QnnDevice_free done. status 0x0
+
+STAGE deviceFree status=0
+QNN_LOG[3]  <I> QnnBackend_free started. backend = 0x1
+
+QNN_LOG[3] c_interface.cc:232:Closing environment: 0x55994825d0
+
+QNN_LOG[2]  <W> PrepareLibLoader Unloading libQnnHtpPrepare.so
+
+STAGE backendFree status=0
+STAGE logFree status=0
+
+__QAIRT_ISOLATED_EXIT__=0

@@ -1,0 +1,6 @@
+{
+  "command": "sed -n '1,220p' /etc/initscripts/init_qti_display; printf '\\nEDID\\n'; od -An -tx1 /sys/class/drm/card0-DSI-1/edid",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

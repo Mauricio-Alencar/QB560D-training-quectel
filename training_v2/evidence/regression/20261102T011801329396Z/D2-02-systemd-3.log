@@ -1,0 +1,14 @@
+Reusing the identical training installation
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+{"status": "ok"}
+RESULT: SERVICE_HEALTH_PASS
+{"status": "ok"}{"application": "qb560d-training", "version": "1.0.0", "machine": "aarch64", "system_uptime_s": 9868.94, "process_uptime_s": 1.027}
+RESULT: APPLICATION_HTTP_PASS
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   130  100   130    0     0   9285      0 --:--:-- --:--:-- --:--:--  9285
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   131  100   131    0     0   9357      0 --:--:-- --:--:-- --:--:-- 10076
+RESULT: SERVICE_UPDATE_ROLLBACK_PASS (restored and stopped on exit)
+

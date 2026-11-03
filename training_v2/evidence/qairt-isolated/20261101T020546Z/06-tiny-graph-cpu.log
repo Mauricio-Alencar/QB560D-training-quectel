@@ -1,0 +1,36 @@
+BACKEND /tmp/qairt-isolated-20261101T020546Z/lib/libQnnCpu.so provider=CPU_QTI_AISW backend_id=3
+BACKEND_BUILD v2.51.40.260930230134
+STAGE logCreate status=0
+QNN_LOG[3] Creating backend with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] CpuBackend creation start
+QNN_LOG[3] [QNN_CPU] CpuBackend creation end
+QNN_LOG[3] QnnGraphTransformer createBackend done, status = 0x0
+STAGE backendCreate status=0
+QNN_LOG[3] Creating context with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] QnnContext create start
+QNN_LOG[3] [QNN_CPU] QnnContext create end
+QNN_LOG[3] QnnGraphTransformer createContext done, status = 0x0
+STAGE contextCreate status=0
+STAGE profileCreate status=0
+QNN_LOG[3] Creating graph with QnnGraphTransformerAdapter
+QNN_LOG[3] [QNN_CPU] CpuGraph creation start
+QNN_LOG[3] [QNN_CPU] CpuGraph creation end
+QNN_LOG[3] [QNN_CPU] CpuGraph 'isolated_add_uint8': initialized threadpool numThreads=6
+QNN_LOG[3] [QNN_CPU] QnnGraph create end
+STAGE graphCreate status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[1] [QNN_CPU] Tensor with ID: 0 is misconfigured: Non-static tensors cannot have a valid buffer
+STAGE input_a status=7004
+GRAPH_FAILED input_a
+QNN_LOG[3] Free context with QnnGraphTransformerAdapter
+QNN_LOG[3] QnnGraphTransformer context freed successfully
+QNN_LOG[3] [QNN_CPU] QnnContext Free start
+QNN_LOG[3] [QNN_CPU] QnnContext Free end
+STAGE contextFree status=0
+STAGE profileFree status=0
+QNN_LOG[3] [QNN_CPU] QnnBackend Free start
+QNN_LOG[3] [QNN_CPU] QnnBackend Free end
+STAGE backendFree status=0
+STAGE logFree status=0
+
+__QAIRT_ISOLATED_EXIT__=1

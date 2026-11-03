@@ -1,0 +1,202 @@
+{
+  "at_host_utc": "2026-11-01T19:05:56.339521+00:00",
+  "result": "ACTIVE_CELLULAR_SESSION_AND_BOUND_HTTPS_PASS",
+  "bsp": "QDPA_Ubuntu20.04.003.51.303 V01",
+  "kernel": "5.4.219-perf",
+  "executable": "/usr/bin/qlril-api-test",
+  "qlril_library_version": "202411060822",
+  "owner_supplied_activation": {
+    "source": "Owner attachment, separately supplied terminal transcript",
+    "source_sha256": "da6a6c4a9f2727ee01ab8be33be512b2574a89d59b9190919a3f4fdca5194c6b",
+    "sequence": [
+      "70",
+      "71",
+      "d",
+      "-1"
+    ],
+    "registration": 1,
+    "rat": 14,
+    "status": 0,
+    "call_id": 0,
+    "interface": "rmnet_data0",
+    "address": "100.65.195.62/30",
+    "gateway": "100.65.195.61",
+    "dns": [
+      "189.40.198.90",
+      "189.40.198.91"
+    ],
+    "mtu": 1500,
+    "route_dns_helpers_reported_success": true,
+    "unbound_ping": {
+      "sent": 4,
+      "received": 4,
+      "loss_percent": 0,
+      "rtt_avg_ms": 93.878,
+      "scope": "general connectivity, no explicit interface binding"
+    }
+  },
+  "live_read_only_inspection": {
+    "menu_selections": [
+      4,
+      21,
+      20,
+      29,
+      37,
+      38,
+      70,
+      73,
+      75,
+      6
+    ],
+    "slot": 1,
+    "card_present": 1,
+    "application_type": 2,
+    "application_state": 5,
+    "operator": "TIM",
+    "mccmnc": "72402",
+    "registration": 1,
+    "reported_data_rat": 19,
+    "network_selection_mode": 0,
+    "preferred_network_type_raw": 11,
+    "baseband": "BP10.003(SG560DEUPAR60A02)",
+    "call": {
+      "status": 0,
+      "call_id": 0,
+      "active": "up",
+      "type": "IP",
+      "interface": "rmnet_data0",
+      "address": "100.65.195.62/30",
+      "dns": [
+        "189.40.198.90",
+        "189.40.198.91"
+      ],
+      "gateway": "100.65.195.61",
+      "mtu": 1500
+    },
+    "signal_raw": {
+      "signalStrength": 23,
+      "rsrp": 98,
+      "rsrq": 13,
+      "rssnr": 8
+    },
+    "at_queries": {
+      "AT": "OK",
+      "AT+CPIN?": "+CPIN: READY / OK",
+      "AT+CEREG?": "+CEREG: 0,1 / OK",
+      "AT+COPS?": "+COPS: 0,0,\"TIM TIM\",7 / OK",
+      "AT+CSQ": "+CSQ: 23,99 / OK",
+      "AT+QENG=\"servingcell\"": {
+        "state": "NOCONN",
+        "rat": "LTE",
+        "duplex": "FDD",
+        "band": 7,
+        "rsrp": -102,
+        "rsrq": -12,
+        "rssi": -69,
+        "sinr": 12,
+        "result": "OK",
+        "long_line_wrapped": true
+      }
+    },
+    "setup_71_repeated": false,
+    "session_deactivated": false,
+    "exit": "AT submenu -1, main menu -1, QLRIL_Exit success"
+  },
+  "linux": {
+    "interface": "rmnet_data0",
+    "address": "100.65.195.62/30",
+    "default_route_observed": "default via 100.65.195.62 dev rmnet_data0 metric 500",
+    "route_vs_ril_gateway_note": "Retained as observed. No route correction attempted.",
+    "manual_bound_https": {
+      "exit_code": 0,
+      "stdout": "HTTP=200 remote=104.20.23.154 local=100.65.195.62 total_s=0.306503\n",
+      "before": {
+        "rx": 29277,
+        "tx": 54809
+      },
+      "after": {
+        "rx": 35300,
+        "tx": 56610
+      },
+      "delta": {
+        "rx": 6023,
+        "tx": 1801
+      }
+    },
+    "script_sha256": "0500f19a1699db88faca87bdc6287ee9c10ef50f14e56b5f04b87cdd12b7ecf0",
+    "script_cases": [
+      {
+        "case": "missing-interface",
+        "command": "CELL_IF= sh /opt/qb560d-training-payload/target/network.sh",
+        "exit_code": 1,
+        "result_lines": [
+          "FAIL: Set CELL_IF to the observed cellular interface"
+        ]
+      },
+      {
+        "case": "bound-http",
+        "command": "CELL_IF=rmnet_data0 sh /opt/qb560d-training-payload/target/network.sh",
+        "exit_code": 0,
+        "result_lines": [
+          "ICMP_SKIPPED: installed ping lacks interface binding (-I). No unbound fallback.",
+          "HTTP=200 total_s=1.106281",
+          "DNS_NOTE: curl may resolve through the system resolver. This is not an isolated cellular DNS test.",
+          "ICMP_RESULT: SKIPPED_UNSUPPORTED",
+          "RESULT: HTTP_PASS_ICMP_NOT_TESTED"
+        ],
+        "counters": {
+          "before": {
+            "rx": 40672,
+            "tx": 66494
+          },
+          "after": {
+            "rx": 46575,
+            "tx": 68175
+          },
+          "delta": {
+            "rx": 5903,
+            "tx": 1681
+          }
+        }
+      },
+      {
+        "case": "closed-endpoint",
+        "command": "CELL_IF=rmnet_data0 HTTP_URL=http://127.0.0.1:1/ sh /opt/qb560d-training-payload/target/network.sh",
+        "exit_code": 1,
+        "result_lines": [
+          "ICMP_SKIPPED: installed ping lacks interface binding (-I). No unbound fallback.",
+          "curl: (28) Connection timed out after 5001 milliseconds",
+          "HTTP=000 total_s=5.001276",
+          "DNS_NOTE: curl may resolve through the system resolver. This is not an isolated cellular DNS test.",
+          "ICMP_RESULT: SKIPPED_UNSUPPORTED",
+          "RESULT: NETWORK_FAIL"
+        ],
+        "counters": {
+          "before": {
+            "rx": 46575,
+            "tx": 68175
+          },
+          "after": {
+            "rx": 47031,
+            "tx": 68839
+          },
+          "delta": {
+            "rx": 456,
+            "tx": 664
+          }
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "NR/SA/NSA not demonstrated by these LTE/LTE_CA snapshots",
+    "No fresh setup71 repetition by assistant; activation is owner-supplied evidence",
+    "No deactivate/reconnect or three event setup repetitions",
+    "No interface-bound ICMP: installed ping lacks-I",
+    "DNS may use system resolver",
+    "No iperf3 uplink/downlink server or measurement",
+    "Other menu entries listed only, not functionally tested"
+  ],
+  "source_trace_sha256": "835f1e802138de8eab93b3da8441b4732e85703f78babfaf5f627980d6a5a13f",
+  "rat_enum_source": "https://android.googlesource.com/device/generic/goldfish/+/bf3559a47ee8a4937035596a0a5c64273bbb0923/radio/ril/ril.h"
+}

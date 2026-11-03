@@ -1,0 +1,30 @@
+Session 1 cpu OK
+Session 1 gpu OK
+Session 2 gpu OK
+Session 2 cpu OK
+Session 3 cpu OK
+Session 3 gpu OK
+/opt/qb560d-training-payload/evidence/acceleration/20261101T173429Z/: 18 files pulled, 0 skipped. 6.2 MB/s (2528063 bytes in 0.388s)
+{
+  "cpu_ms": 25.38312499927997,
+  "gpu_ms": 9.820494500672794,
+  "speedup": 2.5847094560809536,
+  "correctness": [
+    {
+      "session": 1,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    },
+    {
+      "session": 2,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    },
+    {
+      "session": 3,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    }
+  ],
+  "summary": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\evidence\\acceleration\\20261101T173429Z\\summary.json"
+}

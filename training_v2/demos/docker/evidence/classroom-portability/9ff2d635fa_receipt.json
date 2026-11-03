@@ -1,0 +1,17 @@
+{
+  "command": "python3 -c 'import json,subprocess\nd=['\"'\"'sh'\"'\"','\"'\"'/opt/qb560d-docker-demo/target/docker.sh'\"'\"']\nname='\"'\"'qb560d-docker-demo'\"'\"'\np=subprocess.run(d+['\"'\"'container'\"'\"','\"'\"'inspect'\"'\"',name],stdout=subprocess.PIPE,stderr=subprocess.PIPE)\nif p.returncode:\n print('\"'\"'CREATE'\"'\"')\nelse:\n c=json.loads(p.stdout)[0]\n assert c['\"'\"'Config'\"'\"'].get('\"'\"'Labels'\"'\"',{}).get('\"'\"'com.quectel.training.demo'\"'\"')=='\"'\"'qb560d-docker'\"'\"','\"'\"'Unrelated container; inspect manually'\"'\"'\n assert c['\"'\"'Image'\"'\"']=='\"'\"'sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021'\"'\"','\"'\"'Existing container uses another image'\"'\"'\n if c['\"'\"'State'\"'\"']['\"'\"'Running'\"'\"']:\n  print('\"'\"'REUSE'\"'\"')\n else:\n  subprocess.run(['\"'\"'sh'\"'\"','\"'\"'/opt/qb560d-docker-demo/target/demo.sh'\"'\"','\"'\"'stop'\"'\"'],check=True)\n  print('\"'\"'CREATE'\"'\"')\n'",
+  "exit_code": 0,
+  "timed_out": false,
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "1"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "host_utc": "2026-11-01T16:08:46.462668+00:00"
+}

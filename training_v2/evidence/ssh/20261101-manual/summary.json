@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-01",
+  "timezone": "America/Sao_Paulo",
+  "recorded_at_utc": "2026-11-01T20:14:36.893755+00:00",
+  "bsp": "QDPA_Ubuntu20.04.003.51.303 V01",
+  "kernel": "5.4.219-perf",
+  "transport": "SSH over WLAN",
+  "client": "Windows OpenSSH",
+  "observed_box_ipv4": "192.168.0.26",
+  "ip_is_example_not_fixed": true,
+  "wlan_profile": "qb560d-training-wlan",
+  "ssh_root_uid": 0,
+  "ssh_login_exit_code": 0,
+  "host_key_verified_from_authenticated_adb": true,
+  "ssh_configuration_modified": false,
+  "adbd_restarted": false,
+  "scp_download": {
+    "source": "/etc/build_version",
+    "exit_code": 0,
+    "bytes": 55,
+    "sha256": "f2d9514ae553c934cd32a2055a51f3647832dc0d14a3f2557cea1a2f1df2c59b",
+    "content": "mainversion=QDPA_Ubuntu20.04.003.51.303\nsubversion=V01\n",
+    "upload_tested": false
+  },
+  "passed": [
+    "WLAN profile activation",
+    "strict host-key SSH root login",
+    "remote diagnostics over SSH",
+    "SCP download of firmware identifier"
+  ],
+  "pending": [
+    "Physical removal of PC USB-C cable",
+    "SSH continuity after USB-C removal",
+    "USB-A camera enumeration/capture/inference",
+    "HDMI comparison",
+    "WLAN recovery after cold boot"
+  ],
+  "sources": [
+    "camera-usb/20261101T200356897630Z-inspect/inspection.log",
+    "camera-usb/20261101T200630389010Z-ssh/inspection.log"
+  ],
+  "privacy": "No password, private key or WLAN credential is included."
+}

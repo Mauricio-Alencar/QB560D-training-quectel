@@ -1,0 +1,4 @@
+{
+  "command": "find /sys/class/video4linux -maxdepth 2 -name name -exec sh -c 'printf \"%s: \" \"$1\"; cat \"$1\"' sh {} \\;",
+  "exit_code": 0
+}

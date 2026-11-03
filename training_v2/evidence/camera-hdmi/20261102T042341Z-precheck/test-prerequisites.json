@@ -1,0 +1,4 @@
+{
+  "command": "ls -l /run/user/root/wayland*; for p in videotestsrc waylandsink videoconvert v4l2src jpegenc filesink; do if gst-inspect-1.0 \"$p\" >/dev/null 2>&1; then printf 'PLUGIN_OK %s\\n' \"$p\"; else printf 'PLUGIN_MISSING %s\\n' \"$p\"; fi; done; ls -l /opt/qb560d-training-payload/target/camera.sh /opt/qb560d-training-payload/target/ai.sh; systemctl is-active ssh.socket || true",
+  "exit_code": 0
+}

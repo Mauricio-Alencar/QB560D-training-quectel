@@ -1,0 +1,161 @@
+input log file location, /opt/qb560d-ai-htp251/runs/r2e78e1b482d447/htp/qnn-profiling-data_0.log
+qnn-profile-viewer version, v2.51.40.260930230134
+qnn-net-run version, v2.51.40.260930230134
+Backend version, v2.51.40.260930230134
+Msg Timestamp, Message, Time, Unit of Measurement, Timing Source, Event Level, Event Identifier
+3946294854,INIT,233847,US,NETRUN,ROOT,QnnHtp (init)
+3946412776,COMPOSE GRAPHS,115209,US,NETRUN,ROOT,model_float
+3946531176,FINALIZE,118037,US,NETRUN,ROOT,Graph 0: model_float
+3946531176,FINALIZE,2547,US,BACKEND,ROOT,RPC (finalize) time
+3946531176,FINALIZE,2325,US,BACKEND,ROOT,QNN accelerator (finalize) time
+3946531176,FINALIZE,2168,US,BACKEND,ROOT,Accelerator (finalize) time
+3946531176,FINALIZE,117906,US,BACKEND,ROOT,QNN (finalize) time
+3946531176,FINALIZE,503,US,BACKEND,SUB-EVENT,Graph Preparation Initializing
+3946531176,FINALIZE,83438,US,BACKEND,SUB-EVENT,Graph Optimizations
+3946531176,FINALIZE,2463,US,BACKEND,SUB-EVENT,Post Graph Optimization
+3946531176,FINALIZE,7889,US,BACKEND,SUB-EVENT,Graph Sequencing for Target
+3946531176,FINALIZE,2126,US,BACKEND,SUB-EVENT,VTCM Allocation
+3946531176,FINALIZE,905,US,BACKEND,SUB-EVENT,Parallelization Optimization
+3946531176,FINALIZE,1346,US,BACKEND,SUB-EVENT,Finalizing Graph Sequence
+3946531176,FINALIZE,112,US,BACKEND,SUB-EVENT,Completion
+3946548536,DE-INIT,5963,US,NETRUN,ROOT,QnnHtp (deinit)
+3946548536,DE-INIT,1472,US,BACKEND,ROOT,RPC (deinit) time
+3946548536,DE-INIT,1277,US,BACKEND,ROOT,QNN Accelerator (deinit) time
+3946548536,DE-INIT,1251,US,BACKEND,ROOT,Accelerator (deinit) time
+3946548536,DE-INIT,5821,US,BACKEND,ROOT,QNN (deinit) time
+3946535561,EXECUTE,3335,US,NETRUN,ROOT,Graph 0: model_float
+3946535561,EXECUTE,2,COUNT,BACKEND,ROOT,Number of HVX threads used
+3946535561,EXECUTE,3146,US,BACKEND,ROOT,RPC (execute) time
+3946535561,EXECUTE,2860,US,BACKEND,ROOT,QNN accelerator (execute) time
+3946535561,EXECUTE,0,COUNT,BACKEND,ROOT,Num times yield occured
+3946535561,EXECUTE,2801,US,BACKEND,ROOT,Time for initial VTCM acquire
+3946535561,EXECUTE,4691,US,BACKEND,ROOT,Time for HVX + HMX power on and acquire
+3946535561,EXECUTE,906894,CYCLES,BACKEND,ROOT,Accelerator (execute) time (cycles)
+3946535561,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,Input OpId_2 (cycles)
+3946535561,EXECUTE,106110,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles)
+3946535561,EXECUTE,28292,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles)
+3946535561,EXECUTE,9488,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles)
+3946535561,EXECUTE,79369,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles)
+3946535561,EXECUTE,7156,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles)
+3946535561,EXECUTE,27878,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles)
+3946535561,EXECUTE,13832,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles)
+3946535561,EXECUTE,42600,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles)
+3946535561,EXECUTE,8567,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles)
+3946535561,EXECUTE,46589,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles)
+3946535561,EXECUTE,17729,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles)
+3946535561,EXECUTE,48948,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles)
+3946535561,EXECUTE,8983,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles)
+3946535561,EXECUTE,11940,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles)
+3946535561,EXECUTE,17031,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles)
+3946535561,EXECUTE,11938,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles)
+3946535561,EXECUTE,17207,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles)
+3946535561,EXECUTE,11598,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles)
+3946535561,EXECUTE,17488,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles)
+3946535561,EXECUTE,11184,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles)
+3946535561,EXECUTE,17669,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles)
+3946535561,EXECUTE,11716,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles)
+3946535561,EXECUTE,17395,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles)
+3946535561,EXECUTE,56895,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles)
+3946535561,EXECUTE,9539,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles)
+3946535561,EXECUTE,7635,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles)
+3946535561,EXECUTE,50119,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles)
+3946535561,EXECUTE,83734,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles)
+3946535561,EXECUTE,92986,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles)
+3946535561,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles)
+3946535561,EXECUTE,1776,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles)
+3946535561,EXECUTE,8734,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles)
+3946535561,EXECUTE,4769,CYCLES,BACKEND,SUB-EVENT,Output OpId_3 (cycles)
+3946535561,EXECUTE,1409,US,BACKEND,ROOT,Accelerator (execute) time
+3946535561,EXECUTE,591,US,BACKEND,ROOT,Accelerator (execute excluding wait) time
+3946535561,EXECUTE,3268,US,BACKEND,ROOT,QNN (execute) time
+3946538823,EXECUTE,2271,US,NETRUN,ROOT,Graph 0: model_float
+3946538823,EXECUTE,2,COUNT,BACKEND,ROOT,Number of HVX threads used
+3946538823,EXECUTE,2028,US,BACKEND,ROOT,RPC (execute) time
+3946538823,EXECUTE,1738,US,BACKEND,ROOT,QNN accelerator (execute) time
+3946538823,EXECUTE,0,COUNT,BACKEND,ROOT,Num times yield occured
+3946538823,EXECUTE,2361,US,BACKEND,ROOT,Time for initial VTCM acquire
+3946538823,EXECUTE,1490,US,BACKEND,ROOT,Time for HVX + HMX power on and acquire
+3946538823,EXECUTE,807597,CYCLES,BACKEND,ROOT,Accelerator (execute) time (cycles)
+3946538823,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,Input OpId_2 (cycles)
+3946538823,EXECUTE,101499,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles)
+3946538823,EXECUTE,27227,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles)
+3946538823,EXECUTE,10255,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles)
+3946538823,EXECUTE,75837,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles)
+3946538823,EXECUTE,7097,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles)
+3946538823,EXECUTE,27994,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles)
+3946538823,EXECUTE,13882,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles)
+3946538823,EXECUTE,41070,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles)
+3946538823,EXECUTE,8644,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles)
+3946538823,EXECUTE,24211,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles)
+3946538823,EXECUTE,17742,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles)
+3946538823,EXECUTE,47739,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles)
+3946538823,EXECUTE,11141,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles)
+3946538823,EXECUTE,12071,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles)
+3946538823,EXECUTE,17076,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles)
+3946538823,EXECUTE,13881,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles)
+3946538823,EXECUTE,19875,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles)
+3946538823,EXECUTE,11599,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles)
+3946538823,EXECUTE,17489,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles)
+3946538823,EXECUTE,14044,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles)
+3946538823,EXECUTE,21434,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles)
+3946538823,EXECUTE,15775,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles)
+3946538823,EXECUTE,20344,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles)
+3946538823,EXECUTE,53660,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles)
+3946538823,EXECUTE,9344,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles)
+3946538823,EXECUTE,7575,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles)
+3946538823,EXECUTE,35648,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles)
+3946538823,EXECUTE,31157,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles)
+3946538823,EXECUTE,84192,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles)
+3946538823,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles)
+3946538823,EXECUTE,968,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles)
+3946538823,EXECUTE,4987,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles)
+3946538823,EXECUTE,2140,CYCLES,BACKEND,SUB-EVENT,Output OpId_3 (cycles)
+3946538823,EXECUTE,1171,US,BACKEND,ROOT,Accelerator (execute) time
+3946538823,EXECUTE,568,US,BACKEND,ROOT,Accelerator (execute excluding wait) time
+3946538823,EXECUTE,2191,US,BACKEND,ROOT,QNN (execute) time
+3946542078,EXECUTE,2167,US,NETRUN,ROOT,Graph 0: model_float
+3946542078,EXECUTE,2,COUNT,BACKEND,ROOT,Number of HVX threads used
+3946542078,EXECUTE,1937,US,BACKEND,ROOT,RPC (execute) time
+3946542078,EXECUTE,1681,US,BACKEND,ROOT,QNN accelerator (execute) time
+3946542078,EXECUTE,0,COUNT,BACKEND,ROOT,Num times yield occured
+3946542078,EXECUTE,2322,US,BACKEND,ROOT,Time for initial VTCM acquire
+3946542078,EXECUTE,1465,US,BACKEND,ROOT,Time for HVX + HMX power on and acquire
+3946542078,EXECUTE,743978,CYCLES,BACKEND,ROOT,Accelerator (execute) time (cycles)
+3946542078,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,Input OpId_2 (cycles)
+3946542078,EXECUTE,99549,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles)
+3946542078,EXECUTE,25164,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles)
+3946542078,EXECUTE,10450,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles)
+3946542078,EXECUTE,73008,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles)
+3946542078,EXECUTE,7126,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles)
+3946542078,EXECUTE,27986,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles)
+3946542078,EXECUTE,13940,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles)
+3946542078,EXECUTE,40522,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles)
+3946542078,EXECUTE,8645,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles)
+3946542078,EXECUTE,20585,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles)
+3946542078,EXECUTE,17756,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles)
+3946542078,EXECUTE,34120,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles)
+3946542078,EXECUTE,9332,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles)
+3946542078,EXECUTE,11863,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles)
+3946542078,EXECUTE,17081,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles)
+3946542078,EXECUTE,11944,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles)
+3946542078,EXECUTE,17237,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles)
+3946542078,EXECUTE,11775,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles)
+3946542078,EXECUTE,17496,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles)
+3946542078,EXECUTE,11244,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles)
+3946542078,EXECUTE,17625,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles)
+3946542078,EXECUTE,11703,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles)
+3946542078,EXECUTE,17338,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles)
+3946542078,EXECUTE,34446,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles)
+3946542078,EXECUTE,9514,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles)
+3946542078,EXECUTE,7761,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles)
+3946542078,EXECUTE,64354,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles)
+3946542078,EXECUTE,6133,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant:OpId_209 (cycles)
+3946542078,EXECUTE,83329,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant:OpId_217 (cycles)
+3946542078,EXECUTE,0,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123:OpId_221 (cycles)
+3946542078,EXECUTE,370,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Logits/SpatialSqueeze_prequant:OpId_222 (cycles)
+3946542078,EXECUTE,3872,CYCLES,BACKEND,SUB-EVENT,MobilenetV1/Predictions/Reshape_1_prequant:OpId_223 (cycles)
+3946542078,EXECUTE,710,CYCLES,BACKEND,SUB-EVENT,Output OpId_3 (cycles)
+3946542078,EXECUTE,1153,US,BACKEND,ROOT,Accelerator (execute) time
+3946542078,EXECUTE,564,US,BACKEND,ROOT,Accelerator (execute excluding wait) time
+3946542078,EXECUTE,2090,US,BACKEND,ROOT,QNN (execute) time
+3946542385,EXECUTE IPS,277.469482,INF/SEC,NETRUN,ROOT,null

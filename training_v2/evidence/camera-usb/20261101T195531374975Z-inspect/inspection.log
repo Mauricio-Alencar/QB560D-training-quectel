@@ -1,0 +1,63 @@
+0
+Sun Nov  1 19:55:46 UTC 2026
+
+USB LIST (bounded)
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+VIDEO NODES
+crw-rw---- 1 root video 81, 0 Jun 18  2024 /dev/video32
+crw-rw---- 1 root video 81, 1 Jun 18  2024 /dev/video33
+
+SYSFS /sys/class/video4linux/video32
+
+/sys/devices/platform/soc/aa00000.qcom,vidc
+
+SYSFS /sys/class/video4linux/video33
+
+/sys/devices/platform/soc/aa00000.qcom,vidc
+
+USB CAMERA KERNEL MESSAGES
+
+BOUNDED CAMERA QUERY
+
+=== /dev/video32 INFO ===
+Driver Info:
+	Driver name      : msm_vidc_driver
+	Card type        : msm_vidc_vdec
+	Bus info         : 
+	Driver version   : 0.4.19
+	Capabilities     : 0x84203000
+		Video Capture Multiplanar
+		Video Output Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04203000
+		Video Capture Multiplanar
+		Video Output Multiplanar
+		Streaming
+		Extended Pix Format
+
+=== /dev/video33 INFO ===
+Driver Info:
+	Driver name      : msm_vidc_driver
+	Card type        : msm_vidc_venc
+	Bus info         : 
+	Driver version   : 0.4.19
+	Capabilities     : 0x84203000
+		Video Capture Multiplanar
+		Video Output Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04203000
+		Video Capture Multiplanar
+		Video Output Multiplanar
+		Streaming
+		Extended Pix Format
+
+PROCESS STATES
+   3577       1 Sl   gstd
+

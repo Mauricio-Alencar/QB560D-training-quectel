@@ -1,0 +1,66 @@
+{
+  "top3": [
+    {
+      "class_id": 934,
+      "label": "cheeseburger",
+      "score": 0.99609375
+    },
+    {
+      "class_id": 1000,
+      "label": "toilet tissue",
+      "score": 0.0
+    },
+    {
+      "class_id": 327,
+      "label": "lycaenid",
+      "score": 0.0
+    }
+  ],
+  "demo_id": "D2-05",
+  "backend": "CPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "image_sha256": "8e00cc5f7e88a98ca1efd2d0688df2589e276387b39674e94c30735b3d749f96",
+  "runs": 1,
+  "warmup": 0,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 54.678246000548825,
+  "inference_ms_p95": 54.678246000548825,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "input",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.0078125,
+          128
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "MobilenetV1/Predictions/Reshape_1",
+        "shape": [
+          1,
+          1001
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.00390625,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}

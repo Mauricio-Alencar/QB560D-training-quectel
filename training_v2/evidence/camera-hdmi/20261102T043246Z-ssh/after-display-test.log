@@ -1,0 +1,10 @@
+GRAPHICS
+active
+53657
+enabled
+BRIDGE IRQ
+335:          0          0          0          0          0          0          0          0   msmgpio  44 Level     lt9611uxd_interrupt_irq
+KERNEL
+Nov 02 12:36:02 qcs6490-odk kernel: [drm:dsi_display_set_mode [msm_drm]] [msm-dsi-info]: mdp_transfer_time=0, hactive=1920, vactive=1080, fps=60
+Nov 02 12:36:02 qcs6490-odk kernel: [drm:dsi_ctrl_isr_configure [msm_drm]] [msm-dsi-info]: dsi-ctrl-0: IRQ 375 registered
+DISPLAY LOG

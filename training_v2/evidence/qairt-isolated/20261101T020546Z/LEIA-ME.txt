@@ -1,0 +1,29 @@
+QAIRT/SNPE 2.51.40 - teste isolado concluido
+Pasta exclusiva na caixa: /tmp/qairt-isolated-20261101T020546Z
+Versao real dos binarios/bibliotecas: 2.51.40.260930230134
+Origem: SDK publico oficial Qualcomm, sem credenciais no download.
+
+RESULTADOS
+- SNPE novo carregou e declarou CPU, GPU e DSP unsigned disponiveis.
+- Diagnostico oficial QNN: soma no DSP passou, arquitetura Hexagon v68.
+- Grafo QNN independente ElementWiseAdd uint8: CPU e HTP retornaram [11,22,33,44].
+- Perfil HTP registrou execucao no acelerador. Nenhum backend CPU foi carregado no processo HTP.
+- Os quatro hashes originais conferidos permaneceram identicos.
+- Nenhum processo de teste ficou ativo.
+- Nao alteramos PATH global, ldconfig, servicos, firmware, BSP ou /tmp/qb560d-training.
+
+PARA REPETIR NO POWERSHELL (uma caixa ADB conectada)
+& C:\platform-tools\adb.exe shell sh /tmp/qairt-isolated-20261101T020546Z/repeat_htp.sh
+
+PARA REMOVER SOMENTE O ENSAIO DA CAIXA
+& C:\platform-tools\adb.exe shell sh /tmp/qairt-isolated-20261101T020546Z/cleanup_test.sh
+O script verifica o caminho absoluto e o marcador de propriedade antes da remocao.
+Nenhuma restauracao das bibliotecas do sistema e necessaria.
+A pasta /tmp e temporaria e pode desaparecer ao reiniciar.
+
+ESCOPO
+Teste de compatibilidade de runtime e grafo minimo. Nao valida MobileNet, DLC atual do AI Hub,
+estabilidade prolongada ou ganho de desempenho. GPU teve apenas probe de disponibilidade.
+O SNPE emitiu avisos de m_mutex ao encerrar o probe. O QNN registrou avisos opcionais de
+GraphHtpSettings/SetBufName, mas finalize, execute e cleanup retornaram zero.
+Detalhes completos em report.json e nos logs numerados.

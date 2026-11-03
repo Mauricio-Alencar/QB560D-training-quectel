@@ -1,0 +1,118 @@
+BACKEND /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so provider=HTP_QTI_AISW backend_id=6
+BACKEND_BUILD v2.51.40.260930230134
+QNN_LOG[3]  <I> QnnLog_create started.
+
+QNN_LOG[2]  <W> Initializing HtpProvider
+
+QNN_LOG[3]  <I> exit with 0
+
+QNN_LOG[3]  <I> exit with 0
+
+QNN_LOG[3]  <I> QnnLog_create exit.
+
+STAGE logCreate status=0
+QNN_LOG[3] Creating backend with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnBackend_create started. backend = 0xe560ff48
+
+QNN_LOG[3]  <I> QnnBackend_create done successfully. backend = 0xe560ff48
+
+QNN_LOG[3] QnnGraphTransformer createBackend done, status = 0x0
+STAGE backendCreate status=0
+QNN_LOG[3]  <I> QnnDevice_create started
+
+QNN_LOG[3]  <I> No scheduler was created for deviceId=0 coreId=0 pdId=0
+
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+QNN_LOG[3]  <I> setHtpPowerDeviceInstance started for powerConfigId: 0, deviceId: 0, coreId: 0
+
+QNN_LOG[3]  <I> setHtpPowerDeviceInstance done. status 0x0
+
+QNN_LOG[3]  <I> QnnDevice_create done. device = 0x1. status 0x0
+
+STAGE deviceCreateUnsigned status=0
+QNN_LOG[3] Creating context with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnContext_create started. backend = 0x1, device = 0x1
+
+QNN_LOG[2]  <W> No op packages found for architecture 68; falling back to no-arch bucket
+
+QNN_LOG[3]  <I> Number of existing contexts: 1, graphs: 0
+
+QNN_LOG[3]  <I> QnnContext_create done successfully. context = 0x1
+
+QNN_LOG[3] QnnGraphTransformer createContext done, status = 0x0
+STAGE contextCreate status=0
+QNN_LOG[3]  <I> QnnProfile_create 0x5571704c20
+
+STAGE profileCreate status=0
+QNN_LOG[3] Creating graph with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnGraph_create started for graph isolated_add_uint8
+
+QNN_LOG[2]  <W> PrepareLibLoader Loading libQnnHtpPrepare.so
+
+ # LIBNATIVE: No alternate configuration present in libnative_tls.conf or from LIBNATIVE_CONFIG environment variable - using default thread-local behavior.
+QNN_LOG[3]  <I> First connection to QNN HTP Prepare library established!
+
+QNN_LOG[3] c_interface.cc:155:Creating environment (&hexnn_env_priority=192): Create-threads: 1, Priority: c0, hexnn version: hexnn_ver_v2.51.40.260930230134.
+
+QNN_LOG[3] hexagon_nn_env.cc:405:VXU 0: Num HVX threads: 8, Num HMX threads: 1, Num HLX threads: 2
+
+QNN_LOG[3] c_interface.cc:166:New env: 0x55717045d0
+
+QNN_LOG[2]  <W> VTCM_OFFSET/VTCM_TOTAL_SIZE are no longer supported after PGE removal and will be ignored.
+
+QNN_LOG[2]  <W> VTCM_OFFSET/VTCM_TOTAL_SIZE are no longer supported after PGE removal and will be ignored.
+
+QNN_LOG[2]  <W> Sanitizing the value for hvx_threads and setting to default
+
+QNN_LOG[1]  <E> unexpected GraphHtpSettings option 66
+
+QNN_LOG[3] graph_registry.cc:575:[DefaultInitStatus] Graph 256 set to default init state
+
+QNN_LOG[3]  <I> Number of existing contexts: 1, graphs: 1
+
+QNN_LOG[3]  <I> QnnGraph_create done. status 0x0
+
+STAGE graphCreate status=0
+QNN_LOG[3] Add Graph tensor with QnnGraphTransformerAdapter
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor started, graph = 0x1
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor graph 1 
+
+QNN_LOG[1]  <E> tensor type 0 client buffer should be nullptr at tensor creation
+
+QNN_LOG[1]  <E> exits with 7004, tensor buffer parameters not supported
+
+QNN_LOG[3]  <I> QnnTensor_createGraphTensor done. graph = 0x1, status 0x1b5c
+
+STAGE input_a status=7004
+GRAPH_FAILED input_a
+QNN_LOG[3] Free context with QnnGraphTransformerAdapter
+QNN_LOG[3] QnnGraphTransformer context freed successfully
+QNN_LOG[3]  <I> QnnContext_free started. context = 0x1
+
+QNN_LOG[2]  <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+QNN_LOG[3]  <I> Number of existing contexts: 0, graphs: 0
+
+QNN_LOG[3]  <I> QnnContext_free done successfully.
+
+STAGE contextFree status=0
+QNN_LOG[3]  <I> QnnProfile_free 0x5571704c20
+
+STAGE profileFree status=0
+QNN_LOG[3]  <I> QnnDevice_free started. device = 0x1
+
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+QNN_LOG[3]  <I> QnnDevice_free done. status 0x0
+
+STAGE deviceFree status=0
+QNN_LOG[3]  <I> QnnBackend_free started. backend = 0x1
+
+QNN_LOG[3] c_interface.cc:232:Closing environment: 0x55717045d0
+
+QNN_LOG[2]  <W> PrepareLibLoader Unloading libQnnHtpPrepare.so
+
+STAGE backendFree status=0
+STAGE logFree status=0
+
+__QAIRT_ISOLATED_EXIT__=1

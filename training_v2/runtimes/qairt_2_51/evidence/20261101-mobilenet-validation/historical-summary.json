@@ -1,0 +1,207 @@
+{
+  "status": "VALIDATED_ISOLATED_RUNTIME_AND_MOBILENET_DEMO",
+  "completed_at_utc": "2026-11-01T02:39:01.013073+00:00",
+  "host": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pillow": "12.3.0",
+    "os": "Windows-11-10.0.26300-SP0"
+  },
+  "runtime_version": "2.51.40.260930230134",
+  "sdk_source": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.51.40.260930/v2.51.40.260930.zip",
+  "dlc_compiler_version": "2.50.0.260828221209",
+  "remote_validation_directory": "/tmp/update-qiart-251-mobilenet-validation",
+  "persistent_installation_performed": false,
+  "system_runtime_replaced": false,
+  "global_path_changed": false,
+  "originals_unchanged": true,
+  "test_processes_remaining": [],
+  "target_bytes": 205309858,
+  "checks": {
+    "default_plan": "PASS; no ADB operations",
+    "host_online_download": "PASS; SDK range index and cache hashes verified",
+    "host_offline_download": "PASS",
+    "new_target_stage": "PASS",
+    "existing_target_overwrite": "REFUSED_AS_EXPECTED",
+    "system_path_usr_lib": "REFUSED_LOCALLY_AS_EXPECTED",
+    "disposable_removal": "PASS",
+    "final_model_execution": "PASS_RUNTIME_AND_SINGLE_IMAGE_CLASSIFICATION"
+  },
+  "attempts": [
+    {
+      "path": "evidence/20261101-mobilenet-validation/attempt-01",
+      "cpu": "PASS",
+      "htp": "FAIL exit 28"
+    },
+    {
+      "path": "evidence/20261101-mobilenet-validation/attempt-02",
+      "cpu": "PASS; 5 executions, 1 output saved",
+      "htp": "PASS; 5 executions, 1 output saved"
+    },
+    {
+      "path": "evidence/20261101-mobilenet-validation/final",
+      "cpu": "PASS; 5 executions and outputs",
+      "htp": "PASS; 5 executions and outputs"
+    }
+  ],
+  "final_model_results": {
+    "runtime_version": "2.51.40.260930230134",
+    "model": "Qualcomm AI Hub MobileNet V2 w8a8",
+    "model_release": "v0.65.0",
+    "dlc_compiler_version": "2.50.0.260828221209",
+    "image": "PyTorch Hub dog.jpg",
+    "expected_top1": {
+      "class_id": 258,
+      "label": "Samoyed"
+    },
+    "runs_requested": 5,
+    "originals_unchanged": true,
+    "backends": {
+      "cpu": {
+        "completed": 5,
+        "outputs_saved": 5,
+        "top5": [
+          {
+            "class_id": 258,
+            "label": "Samoyed",
+            "logit": 15.550827026367188,
+            "softmax_probability": 0.8587013498732273
+          },
+          {
+            "class_id": 279,
+            "label": "Arctic fox",
+            "logit": 13.06792163848877,
+            "softmax_probability": 0.07170179640789198
+          },
+          {
+            "class_id": 259,
+            "label": "Pomeranian",
+            "logit": 12.283846855163574,
+            "softmax_probability": 0.03273487484048215
+          },
+          {
+            "class_id": 270,
+            "label": "white wolf",
+            "logit": 11.499771118164062,
+            "softmax_probability": 0.014944827920292529
+          },
+          {
+            "class_id": 261,
+            "label": "keeshond",
+            "logit": 10.454338073730469,
+            "softmax_probability": 0.005253698144165193
+          }
+        ],
+        "all_saved_top1_samoyed": true,
+        "saved_outputs_bitwise_identical": true,
+        "netrun_execution_ms": {
+          "samples": [
+            24.334,
+            23.549,
+            24.029,
+            38.675,
+            22.635
+          ],
+          "mean": 26.6444,
+          "median": 24.029,
+          "min": 22.635,
+          "max": 38.675
+        },
+        "profiling_accelerator_events": 0,
+        "positive_per_operator_cycle_events": 0,
+        "scope": "Execution time reported by qnn-net-run profiling; no warmup or controlled performance benchmark",
+        "output_sha256": [
+          "609b5ee7e817efa46707ec0bb725004bd4d78597ce13e43b21cebdb982419c84",
+          "609b5ee7e817efa46707ec0bb725004bd4d78597ce13e43b21cebdb982419c84",
+          "609b5ee7e817efa46707ec0bb725004bd4d78597ce13e43b21cebdb982419c84",
+          "609b5ee7e817efa46707ec0bb725004bd4d78597ce13e43b21cebdb982419c84",
+          "609b5ee7e817efa46707ec0bb725004bd4d78597ce13e43b21cebdb982419c84"
+        ]
+      },
+      "htp": {
+        "completed": 5,
+        "outputs_saved": 5,
+        "top5": [
+          {
+            "class_id": 258,
+            "label": "Samoyed",
+            "logit": 13.590639114379883,
+            "softmax_probability": 0.7554133719811523
+          },
+          {
+            "class_id": 279,
+            "label": "Arctic fox",
+            "logit": 11.499771118164062,
+            "softmax_probability": 0.09335385037231264
+          },
+          {
+            "class_id": 259,
+            "label": "Pomeranian",
+            "logit": 11.107733726501465,
+            "softmax_probability": 0.06307722214433252
+          },
+          {
+            "class_id": 261,
+            "label": "keeshond",
+            "logit": 10.454338073730469,
+            "softmax_probability": 0.03281757093942464
+          },
+          {
+            "class_id": 270,
+            "label": "white wolf",
+            "logit": 9.670262336730957,
+            "softmax_probability": 0.014982582118968938
+          }
+        ],
+        "all_saved_top1_samoyed": true,
+        "saved_outputs_bitwise_identical": true,
+        "netrun_execution_ms": {
+          "samples": [
+            6.951,
+            4.991,
+            4.011,
+            4.796,
+            4.627
+          ],
+          "mean": 5.0752,
+          "median": 4.796,
+          "min": 4.011,
+          "max": 6.951
+        },
+        "profiling_accelerator_events": 5,
+        "positive_per_operator_cycle_events": 340,
+        "scope": "Execution time reported by qnn-net-run profiling; no warmup or controlled performance benchmark",
+        "output_sha256": [
+          "6bd0706bf18d7e33c8fd811c9c7170d01ab482f6443691cb9495cac18d82c003",
+          "6bd0706bf18d7e33c8fd811c9c7170d01ab482f6443691cb9495cac18d82c003",
+          "6bd0706bf18d7e33c8fd811c9c7170d01ab482f6443691cb9495cac18d82c003",
+          "6bd0706bf18d7e33c8fd811c9c7170d01ab482f6443691cb9495cac18d82c003",
+          "6bd0706bf18d7e33c8fd811c9c7170d01ab482f6443691cb9495cac18d82c003"
+        ]
+      }
+    },
+    "comparison": {
+      "top1_agrees": true,
+      "max_abs_logit_difference": 2.8749427795410156,
+      "rmse_logits": 0.7373365828504272,
+      "max_abs_probability_difference": 0.103287977892075,
+      "strict_allclose_atol_1e-4_rtol_1e-3": false,
+      "interpretation": "Same top-1 on this image; CPU and HTP scores are not numerically equivalent. This does not establish dataset accuracy."
+    },
+    "status": "PASS_RUNTIME_AND_SINGLE_IMAGE_CLASSIFICATION",
+    "limitations": [
+      "One reference image; not a dataset accuracy certification.",
+      "CPU and HTP probability vectors differ; strict numerical equivalence is not claimed.",
+      "Five or configured executions are a functional check, not a controlled speedup benchmark.",
+      "DLC generated by QAIRT 2.50 executed under runtime 2.51.40; this is the exact validated version combination.",
+      "No global installation, BSP or firmware update was performed."
+    ]
+  },
+  "original_hashes_final": {
+    "/usr/lib/libSNPE.so": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165",
+    "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c",
+    "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so": "a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72",
+    "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so": "579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6"
+  },
+  "scope": "Functional runtime and one-image classification validation on one BSP; not dataset accuracy, numeric equivalence or a controlled performance benchmark."
+}

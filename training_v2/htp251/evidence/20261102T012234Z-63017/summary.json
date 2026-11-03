@@ -1,0 +1,418 @@
+{
+  "status": "PASS_ALL_MIGRATED_HTP_DEMOS",
+  "runtime": "/opt/qairt-isolated/2.51.40.260930",
+  "isolated_demo_root": "/opt/qb560d-ai-htp251",
+  "original_runtimes_unchanged": true,
+  "results": [
+    {
+      "task": "classification",
+      "passed": true,
+      "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+      "results": [
+        {
+          "top3": [
+            {
+              "class_id": 653,
+              "label": "military uniform",
+              "score": 0.87109375
+            },
+            {
+              "class_id": 907,
+              "label": "Windsor tie",
+              "score": 0.05078125
+            },
+            {
+              "class_id": 466,
+              "label": "bulletproof vest",
+              "score": 0.01171875
+            }
+          ],
+          "task": "classification",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+          "input_image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 99,
+            "execute_us": [
+              3436.0,
+              2317.0,
+              2149.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "criterion": "same top-1 as original TFLite CPU"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017\\classification"
+    },
+    {
+      "task": "detection",
+      "passed": true,
+      "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+      "results": [
+        {
+          "detections": [
+            {
+              "class_id": 0,
+              "label": "person",
+              "score": 0.715301513671875,
+              "box_yxyx": [
+                0.056058019399642944,
+                0.0,
+                0.9857144355773926,
+                1.0
+              ]
+            },
+            {
+              "class_id": 31,
+              "label": "tie",
+              "score": 0.652923583984375,
+              "box_yxyx": [
+                0.7068476676940918,
+                0.43901175260543823,
+                0.8994536399841309,
+                0.5655868649482727
+              ]
+            },
+            {
+              "class_id": 31,
+              "label": "tie",
+              "score": 0.579681396484375,
+              "box_yxyx": [
+                0.7239529490470886,
+                0.45394569635391235,
+                0.8747777342796326,
+                0.5489451289176941
+              ]
+            }
+          ],
+          "task": "detection",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+          "input_image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 153,
+            "execute_us": [
+              7213.0,
+              4902.0,
+              5623.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "person_box_iou": 0.9975222081121828,
+            "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017\\detection"
+    },
+    {
+      "task": "pose",
+      "passed": true,
+      "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+      "results": [
+        {
+          "keypoints_yxs": [
+            [
+              0.38871564946161113,
+              0.5183004553679826,
+              0.9992697834968567
+            ],
+            [
+              0.3114783034446219,
+              0.6005317895792801,
+              0.9996956586837769
+            ],
+            [
+              0.3201852520194337,
+              0.43043693076775696,
+              0.9995586276054382
+            ],
+            [
+              0.37613216675712435,
+              0.6991317800974568,
+              0.9953488707542419
+            ],
+            [
+              0.37181965825240265,
+              0.31362681050244934,
+              0.9821893572807312
+            ],
+            [
+              0.701188544038335,
+              0.8692014147799303,
+              0.9343750476837158
+            ],
+            [
+              0.6868954441027331,
+              0.19467853479348268,
+              0.938265323638916
+            ],
+            [
+              0.9915253798617182,
+              0.9084145772317967,
+              0.06324145942926407
+            ],
+            [
+              0.8563375527055,
+              0.015820978216623982,
+              0.2898614704608917
+            ],
+            [
+              0.9356564165174792,
+              -0.013448225385020215,
+              0.09842890501022339
+            ],
+            [
+              0.9289014076038393,
+              -0.020374209036622994,
+              0.2524992823600769
+            ],
+            [
+              0.9587086023757545,
+              -0.03190864755949622,
+              0.03275613114237785
+            ],
+            [
+              0.9146380978333039,
+              0.08835458569953414,
+              0.03218923509120941
+            ],
+            [
+              0.9503889603925494,
+              -0.0345787872136335,
+              0.04441991075873375
+            ],
+            [
+              0.9643131180457961,
+              -0.007335204094764324,
+              0.022838104516267776
+            ],
+            [
+              0.9934057966507865,
+              -0.008266171592682716,
+              0.05359074845910072
+            ],
+            [
+              0.9601833462377446,
+              -0.008425092882683305,
+              0.06404217332601547
+            ]
+          ],
+          "visible_keypoints": 7,
+          "decoder": "single_person_heatmap_argmax",
+          "task": "pose",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
+          "input_image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 93,
+            "execute_us": [
+              4666.0,
+              3202.0,
+              3066.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "median_visible_joint_distance": 0.010655304348626509,
+            "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017\\pose"
+    },
+    {
+      "task": "gesture",
+      "passed": true,
+      "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+      "results": [
+        {
+          "presence": 0.998382568359375,
+          "landmarks_xyz": [
+            [
+              0.5983242988586426,
+              0.8996776342391968,
+              6.143380596768111e-05
+            ],
+            [
+              0.4158249497413635,
+              0.8524554967880249,
+              -0.03780227154493332
+            ],
+            [
+              0.28757163882255554,
+              0.7545504570007324,
+              -0.06817104667425156
+            ],
+            [
+              0.19597384333610535,
+              0.6475123167037964,
+              -0.09669680893421173
+            ],
+            [
+              0.11111327260732651,
+              0.5771705508232117,
+              -0.11926349252462387
+            ],
+            [
+              0.3944459855556488,
+              0.5553001761436462,
+              -0.08051924407482147
+            ],
+            [
+              0.33710774779319763,
+              0.3666369616985321,
+              -0.11240338534116745
+            ],
+            [
+              0.300534188747406,
+              0.2458171397447586,
+              -0.13531818985939026
+            ],
+            [
+              0.27039065957069397,
+              0.15010325610637665,
+              -0.15077903866767883
+            ],
+            [
+              0.5099825263023376,
+              0.5292112827301025,
+              -0.07779567688703537
+            ],
+            [
+              0.4939277768135071,
+              0.31675270199775696,
+              -0.10869687795639038
+            ],
+            [
+              0.4907741844654083,
+              0.17180988192558289,
+              -0.1297072470188141
+            ],
+            [
+              0.491122305393219,
+              0.05842354893684387,
+              -0.145864337682724
+            ],
+            [
+              0.6226521134376526,
+              0.5448973774909973,
+              -0.07591170817613602
+            ],
+            [
+              0.6481266617774963,
+              0.36098504066467285,
+              -0.09946133196353912
+            ],
+            [
+              0.6670687794685364,
+              0.23652015626430511,
+              -0.11887441575527191
+            ],
+            [
+              0.6832872629165649,
+              0.1269427239894867,
+              -0.13376186788082123
+            ],
+            [
+              0.7281953692436218,
+              0.5936757922172546,
+              -0.0770379900932312
+            ],
+            [
+              0.7724072337150574,
+              0.44973641633987427,
+              -0.09475141018629074
+            ],
+            [
+              0.7957930564880371,
+              0.35164710879325867,
+              -0.11244434118270874
+            ],
+            [
+              0.8173357844352722,
+              0.2549912631511688,
+              -0.12407581508159637
+            ]
+          ],
+          "gesture": "open_hand",
+          "extended_fingers_excluding_thumb": 4,
+          "task": "gesture",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
+          "input_image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 195,
+            "execute_us": [
+              4520.0,
+              3016.0,
+              2988.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "criterion": "same gesture/presence result as original TFLite CPU"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017\\gesture"
+    },
+    {
+      "task": "segmentation",
+      "passed": true,
+      "acceptance": "HTP execution/profile and semantic comparison against original TFLite CPU; QNN CPU is an additional separately reported control.",
+      "results": [
+        {
+          "foreground_fraction": 0.6300171085103484,
+          "class_fractions": {
+            "background": 0.36998289148965163,
+            "person": 0.6300171085103484
+          },
+          "task": "segmentation",
+          "backend": "htp",
+          "runtime": "QAIRT/QNN 2.51.40.260930",
+          "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+          "input_image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+          "profile": {
+            "accelerator_events": 3,
+            "positive_cycle_events": 210,
+            "execute_us": [
+              17581.0,
+              8573.0,
+              8540.0
+            ]
+          },
+          "comparison_to_original_tflite_cpu": {
+            "passed": true,
+            "person_mask_iou": 0.976328525564234,
+            "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+          },
+          "passed": true,
+          "scope": "CNN graph executes on target. Image preparation, output decoding, NMS/rules and rendering execute on host. Reference images, not dataset accuracy."
+        }
+      ],
+      "case": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017\\segmentation"
+    }
+  ],
+  "evidence": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\evidence\\20261102T012234Z-63017"
+}

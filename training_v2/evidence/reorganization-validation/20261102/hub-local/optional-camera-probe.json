@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload && sh target/camera.sh",
+  "exit_code": 78
+}

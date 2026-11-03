@@ -1,0 +1,39 @@
+{
+  "detections": [
+    {
+      "class_id": 17,
+      "label": "dog",
+      "score": 0.675201416015625,
+      "box_yxyx": [
+        0.19414487481117249,
+        0.1894773244857788,
+        0.8440554141998291,
+        0.7682939171791077
+      ]
+    }
+  ],
+  "case": "no-person-detection",
+  "task": "detection",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+  "source_image_sha256": "2533197401eebe9410ea4d063f86c43fbd2666f3e8165a38aca155c0d09c21be",
+  "prepared_tensor_sha256": "f4b82c35c922aa7c453508a0fe4b467af3e24f0410cb51812690ae89c83f76fa",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 153,
+    "execute_us": [
+      8079.0,
+      5790.0,
+      5791.0
+    ]
+  },
+  "comparison_to_saved_cpu": {
+    "passed": true,
+    "criterion": "No person >=0.5 in HTP or saved CPU reference"
+  },
+  "passed": true,
+  "execution_location": "All preparation, CNN inference, decoding, NMS/rules and rendering on target",
+  "cpu_reference": "Saved original TFLite CPU output; no live CPU inference",
+  "scope": "Functional controls on reviewed images. No dataset accuracy or latency benchmark."
+}

@@ -1,0 +1,151 @@
+initial: exit 0
+inventory: exit 0
+{
+  "os": {
+    "NAME": "Ubuntu",
+    "VERSION": "20.04.3 LTS (Focal Fossa)",
+    "ID": "ubuntu",
+    "ID_LIKE": "debian",
+    "PRETTY_NAME": "Ubuntu 20.04.3 LTS",
+    "VERSION_ID": "20.04",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "VERSION_CODENAME": "focal",
+    "UBUNTU_CODENAME": "focal"
+  },
+  "kernel": "5.4.219-perf",
+  "python": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]",
+  "snpe": [
+    {
+      "path": "/usr/lib/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.21.0.240401120655_85612\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 386, in __getattr__\n    func = self.__getitem__(name)\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 391, in __getitem__\n    func = self._FuncPtr((name_or_ordinal, self))\nAttributeError: /usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so: undefined symbol: Snpe_Util_GetLibraryVersion\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 386, in __getattr__\n    func = self.__getitem__(name)\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 391, in __getitem__\n    func = self._FuncPtr((name_or_ordinal, self))\nAttributeError: /usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so: undefined symbol: Snpe_Util_GetLibraryVersion\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.12.0.230626174329_59328\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 373, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: /usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so: cannot open shared object file: No such file or directory\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.26.0.240827110523_99241\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/opt/qairt-isolated/2.51.40.260930/lib/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.51.40.260930230134\n",
+        "truncated": false
+      }
+    }
+  ],
+  "qnn": [
+    {
+      "executable": "/opt/qb560d-workshop/bin/qnn-net-run",
+      "exit_code": 0,
+      "output": "qnn-net-run pid:46356\nQNN SDK v2.51.40.260930230134\n"
+    },
+    {
+      "executable": "/opt/qb560d-workshop/bin/snpe-net-run",
+      "exit_code": 0,
+      "output": "SNPE v2.51.40.260930230134\n"
+    },
+    {
+      "executable": "/opt/qairt-isolated/2.51.40.260930/bin/qnn-net-run",
+      "exit_code": 0,
+      "output": "qnn-net-run pid:46358\nQNN SDK v2.51.40.260930230134\n"
+    },
+    {
+      "executable": "/opt/qairt-isolated/2.51.40.260930/bin/snpe-net-run",
+      "exit_code": 0,
+      "output": "SNPE v2.51.40.260930230134\n"
+    }
+  ],
+  "evidence": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\evidence\\20261102T014824293227Z-apply\\before"
+}
+own-qb560d-workshop: exit 0
+own-qb560d-training-payload: exit 0
+space: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-6tkrj7wo\iperf-3.22.tar.gz: 1 file pushed, 0 skipped. 8.0 MB/s (849295 bytes in 0.102s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-shvga6uo\iproute2_5.5.0-1ubuntu1_arm64.deb: 1 file pushed, 0 skipped. 7.4 MB/s (834768 bytes in 0.108s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-deppf2cc\numpy-1.24.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl: 1 file pushed, 0 skipped. 4.8 MB/s (14039616 bytes in 2.771s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-1mglqx70\pillow-10.4.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl: 1 file pushed, 0 skipped. 6.8 MB/s (4330810 bytes in 0.606s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-5nwenxdg\files.json: 1 file pushed, 0 skipped. 1.1 MB/s (1358 bytes in 0.001s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-pj1ci2xn\target_install.py: 1 file pushed, 0 skipped. 6.2 MB/s (7224 bytes in 0.001s)
+guard-qb560d-training-payload: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-0xyfr38b\payload-qb560d-training-payload.tar: 1 file pushed, 0 skipped. 6.3 MB/s (28006400 bytes in 4.217s)
+extract-qb560d-training-payload: exit 0
+install-python: exit 0
+install-network: exit 0
+own-qb560d-docker-demo: exit 0
+guard-qb560d-docker-demo: exit 0
+C:\Users\mauri\AppData\Local\Temp\qb-adb-jc15yo4j\payload-qb560d-docker-demo.tar: 1 file pushed, 0 skipped. 6.0 MB/s (188794880 bytes in 29.819s)
+extract-qb560d-docker-demo: exit 0
+install-docker: exit 0
+qairt-directory-status: exit 0
+ownership-check: exit 0
+ownership-check: exit 0
+demo-deploy-check: exit 0
+Demo installed at /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture
+install-wrappers: exit 0
+installation-prerequisites: exit 0
+network-versions: exit 0
+iperf-loopback: exit 0
+native-ai-contracts: exit 0
+docker-offline-http: exit 0
+ownership-check: exit 0
+before-test: exit 0
+mobilenet-cpu: exit 0
+mobilenet-htp: exit 0
+profile-cpu: exit 0
+profile-htp: exit 0
+/opt/qairt-isolated/2.51.40.260930/results/20261102T014933346171Z/: 18 files pulled, 0 skipped. 2.4 MB/s (233612 bytes in 0.092s)
+after-test: exit 0
+Traceback (most recent call last):
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\.qa\aibox_training\training_v2\runtimes\qairt_2_51\analyze_results.py", line 56, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\.qa\aibox_training\training_v2\runtimes\qairt_2_51\analyze_results.py", line 55, in main
+    a=p.parse_args();summarize(a.evidence)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\.qa\aibox_training\training_v2\runtimes\qairt_2_51\analyze_results.py", line 21, in summarize
+    samples=[np.fromfile(p,dtype="<f4") for p in paths]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\evidence\\20261102T014824293227Z-apply\\verification\\mobilenet\\target\\20261102T014933346171Z\\cpu\\Result_0\\class_logits.raw'
+ERROR: Command '['C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\.venv\\Scripts\\python.exe', 'C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\runtimes\\qairt_2_51\\analyze_results.py', '--evidence', 'C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\evidence\\20261102T014824293227Z-apply\\verification\\mobilenet']' returned non-zero exit status 1.

@@ -1,0 +1,8 @@
+BEFORE
+3553
+active
+AFTER
+active
+srwxr-xr-x 1 root root 0 Nov  2 06:34 /run/user/root/wayland-0
+connected
+disabled

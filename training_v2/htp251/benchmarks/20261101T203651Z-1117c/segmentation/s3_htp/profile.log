@@ -1,0 +1,52 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/ba435b575513a4a/s3_htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 04:39:16 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793565556562025 Steady Clock Timestamp: 6792221177
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 1030504 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 145963 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 884335 us
+
+De-Init Stats:
+--------------
+    NetRun: 10578 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 137.2417 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 4762 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 4519 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 5991 us

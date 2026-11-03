@@ -1,0 +1,17 @@
+{
+  "command": "python3 -c 'import os,pathlib\np=pathlib.Path('\"'\"'/opt/qb560d-docker-demo'\"'\"')\nassert os.path.realpath(str(p))==str(p), '\"'\"'Remote path is a symlink'\"'\"'\nif p.exists():\n assert p.is_dir() and (p/'\"'\"'.owner'\"'\"').read_text().strip()=='\"'\"'qb560d-training-docker-v1'\"'\"', '\"'\"'Unrecognized existing target folder'\"'\"'\nelse:\n p.mkdir(); (p/'\"'\"'.owner'\"'\"').write_text('\"'\"'qb560d-training-docker-v1\\n'\"'\"')\n(p/'\"'\"'evidence'\"'\"').mkdir(exist_ok=True)\nprint('\"'\"'OWNED_TARGET_DIRECTORY_READY'\"'\"')'",
+  "exit_code": 0,
+  "timed_out": false,
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "1"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "host_utc": "2026-11-01T16:14:08.275691+00:00"
+}

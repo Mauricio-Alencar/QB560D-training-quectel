@@ -1,0 +1,185 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/r628eefc00d2146/cpu/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 03:46:28 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793562388735456 Steady Clock Timestamp: 3624394609
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 31690 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 30969 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 488 us
+    Backend (GRAPH_FINALIZE): 236 us
+        _MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 23 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 4 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 3 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 5 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 4 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 5 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 5 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 7 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 7 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 7 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 7 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 7 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 6 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 11 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 11 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 11 us
+        _MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant: 21 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant: 10 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123: 1 us
+        _MobilenetV1/Logits/SpatialSqueeze_prequant: 0 us
+        _MobilenetV1/Predictions/Reshape_1_prequant: 6 us
+
+De-Init Stats:
+--------------
+    NetRun: 1371 us
+    Backend (null): 1 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 89.6513 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 10194 us
+    Backend (GRAPH_EXECUTE): 10014 us
+        _MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 609 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 547 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 547 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 770 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 396 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 554 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 521 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 374 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 275 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 272 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 452 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 181 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 239 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 134 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 442 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 142 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 441 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 132 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 440 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 132 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 430 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 132 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 412 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 91 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 332 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 69 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 572 us
+        _MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant: 22 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant: 261 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123: 7 us
+        _MobilenetV1/Logits/SpatialSqueeze_prequant: 13 us
+        _MobilenetV1/Predictions/Reshape_1_prequant: 6 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 9290 us
+    Backend (GRAPH_EXECUTE): 9109 us
+        _MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 447 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 476 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 479 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 710 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 325 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 509 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 493 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 376 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 280 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 261 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 454 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 172 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 237 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 130 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 429 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 130 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 415 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 126 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 429 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 128 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 413 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 126 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 368 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 87 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 294 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 67 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 408 us
+        _MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant: 19 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant: 247 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123: 7 us
+        _MobilenetV1/Logits/SpatialSqueeze_prequant: 4 us
+        _MobilenetV1/Predictions/Reshape_1_prequant: 6 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 11192 us
+    Backend (GRAPH_EXECUTE): 11026 us
+        _MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 839 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 635 us
+        _MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 635 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 802 us
+        _MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 464 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 576 us
+        _MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 554 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 393 us
+        _MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 275 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 295 us
+        _MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 448 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 196 us
+        _MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 245 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 145 us
+        _MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 440 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 168 us
+        _MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 452 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 141 us
+        _MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 447 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 143 us
+        _MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 446 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 143 us
+        _MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 450 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 98 us
+        _MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 384 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 74 us
+        _MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 721 us
+        _MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant: 30 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant: 279 us
+        _MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123: 8 us
+        _MobilenetV1/Logits/SpatialSqueeze_prequant: 32 us
+        _MobilenetV1/Predictions/Reshape_1_prequant: 8 us

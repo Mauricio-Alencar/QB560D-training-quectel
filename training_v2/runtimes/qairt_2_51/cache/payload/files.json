@@ -1,0 +1,118 @@
+[
+  {
+    "path": "cleanup_target.py",
+    "sha256": "6898ea97e9ea816c76de425f704d687f5313b55d3d2f67f92882e0c52fda78dd"
+  },
+  {
+    "path": "ownership.json",
+    "sha256": "8c98c8a1b2e1b55fd52f22e8aea38ce9112402925d96b59b71d430e72dab1144"
+  },
+  {
+    "path": "probe_runtime.py",
+    "sha256": "2c84e72597a117d6793210461a454d9700997e3a581adeb8efd141da7c756288"
+  },
+  {
+    "path": "bin/qnn-net-run",
+    "sha256": "a83db1cd0a565853aeff050c194f9995fa502e9ff2a605aac2c0dfbc8b8cc68e"
+  },
+  {
+    "path": "bin/qnn-platform-validator",
+    "sha256": "94df6f6b82122e5d4609b55b423bb1c30b17f3fe67b0c03f8053909ca7710c30"
+  },
+  {
+    "path": "bin/qnn-profile-viewer",
+    "sha256": "3109bb3bc3552b39f732c8de4c5977de1c2f0efef004c14099f242194d1e95e7"
+  },
+  {
+    "path": "bin/snpe-net-run",
+    "sha256": "4d2ce30b5db903cbb9bcc55103cf1df647ddbc7e80ac928a07cea59c50e3b03d"
+  },
+  {
+    "path": "dsp/libCalculator_skel.so",
+    "sha256": "5e0b27938732a6676c493d5eda779731ff1f6104cfda27e816701a0025e23103"
+  },
+  {
+    "path": "dsp/libQnnHtpV68.so",
+    "sha256": "8191e546b81bd767f5ffd1a0fec66857f0d28c6f3b8c8229342878c2f0f2d20b"
+  },
+  {
+    "path": "dsp/libQnnHtpV68Skel.so",
+    "sha256": "f659d93d893aea52a63d02418cf653fca47452ac56814a39f7efed5269d1ff28"
+  },
+  {
+    "path": "dsp/libSnpeHtpV68Skel.so",
+    "sha256": "fab399bcbfdb47c203c2a851776b88c4f522e2c2031d1a11c1697c0ee1ddc582"
+  },
+  {
+    "path": "input/dog.raw",
+    "sha256": "677bc9fa94a9cc9114bf61695e660a2e4896b7e1fa433e947786d18ffd79dff4"
+  },
+  {
+    "path": "input/input_list.txt",
+    "sha256": "a856504226f207119b27dc6517dc434c2e397d8ebfc3d10a92196b3d7ae05799"
+  },
+  {
+    "path": "lib/libcalculator.so",
+    "sha256": "9733c4d4417382fea51638af84a4bd4c96388c82cff514f6605db497943725a0"
+  },
+  {
+    "path": "lib/libQnnCpu.so",
+    "sha256": "6e23f5c49d1a701b9e517862b1648931cc15408d62c9d2cd0c9ad608217257df"
+  },
+  {
+    "path": "lib/libQnnHtp.so",
+    "sha256": "e43aa2b62131e50ede9b0d50c68a2335ef49f96bf12663357c7f32169bea8dc8"
+  },
+  {
+    "path": "lib/libQnnHtpNetRunExtensions.so",
+    "sha256": "15efaa08e12a2791b7438a34989df863837e7182ebc52578cc1d3f9e0ef16494"
+  },
+  {
+    "path": "lib/libQnnHtpPrepare.so",
+    "sha256": "a0275664dc1e9fc15fde4c5e9a9f1b7ffcca480743c1fc199b5eed1c832c704c"
+  },
+  {
+    "path": "lib/libQnnHtpV68CalculatorStub.so",
+    "sha256": "2e63e6563e3875d6dc9b0c7ccf5c0c235726cae49505175e8a617a2626baae53"
+  },
+  {
+    "path": "lib/libQnnHtpV68Stub.so",
+    "sha256": "b9cb0d20e29858fd86974be0c5d6b25fdc790815094ab16aae1eef7a936cc4a0"
+  },
+  {
+    "path": "lib/libQnnIr.so",
+    "sha256": "6fd0e760f71a7d66695d0ea8d2d31dcd14ac4003950bea8a09be848737d7e6d9"
+  },
+  {
+    "path": "lib/libQnnModelDlc.so",
+    "sha256": "c2f256c20dfde9b0372065ce892af788ed975cd80d6ea9d2b01c86ea202ec96c"
+  },
+  {
+    "path": "lib/libQnnSystem.so",
+    "sha256": "d6f5b34d130c49b5cdc656855dc782917a2d79de8876102fef9fc8f8e611c781"
+  },
+  {
+    "path": "lib/libSNPE.so",
+    "sha256": "690b86a0cb2674c7e2dd0d08cf9e3f570dd60f01cf3f79cde22999dc080f9465"
+  },
+  {
+    "path": "lib/libSnpeHtpV68CalculatorStub.so",
+    "sha256": "ff82a38dbfd0f312bb6ccdbc2183ef9d5022caa9fa5fd8edea3b43fe24ea0e94"
+  },
+  {
+    "path": "lib/libSnpeHtpV68Stub.so",
+    "sha256": "419da6ee3cc010324c4bffb2cdcba519f6bf2c11ea8125029446bc45a6f509cb"
+  },
+  {
+    "path": "model/labels.txt",
+    "sha256": "e697a491aa735cc6c2aaf982f8e86e8fc7b0a1ea7750a2cc6a2bdfc1e109012f"
+  },
+  {
+    "path": "model/metadata.json",
+    "sha256": "953a7dc260bcc67099d6e1ecbe79b05cd89ebff040a5bd540c69d3eb176a8753"
+  },
+  {
+    "path": "model/mobilenet_v2.dlc",
+    "sha256": "dcd7a540b072558ff98f5c460823048e2c785a5a8c3566a6b477bfef4e97c6c5"
+  }
+]

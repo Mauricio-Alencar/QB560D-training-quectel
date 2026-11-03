@@ -1,0 +1,183 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 249,
+    "estimated_inference_peak_memory": 11264000,
+    "first_load_time": 401049,
+    "first_load_peak_memory": 12259328,
+    "warm_load_time": 78088,
+    "warm_load_peak_memory": 11857920,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      1679312,
+      2468176
+    ],
+    "first_load_memory_peak_range": [
+      9310208,
+      10099072
+    ],
+    "warm_load_memory_increase_range": [
+      1681184,
+      2467440
+    ],
+    "warm_load_memory_peak_range": [
+      8908800,
+      9695056
+    ],
+    "inference_memory_increase_range": [
+      0,
+      0
+    ],
+    "inference_memory_peak_range": [
+      0,
+      6536592
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      401049
+    ],
+    "all_warm_load_times": [
+      78088
+    ],
+    "all_inference_times": [
+      5609,
+      1086,
+      422,
+      805,
+      516,
+      299,
+      256,
+      276,
+      249,
+      253,
+      271,
+      706,
+      341,
+      350,
+      515,
+      1816,
+      1749,
+      1006,
+      838,
+      731,
+      791,
+      796,
+      788,
+      969,
+      785,
+      781,
+      797,
+      830,
+      789,
+      830,
+      779,
+      788,
+      836,
+      795,
+      749,
+      804,
+      819,
+      875,
+      804,
+      746,
+      814,
+      787,
+      822,
+      804,
+      774,
+      687,
+      682,
+      690,
+      730,
+      678,
+      663,
+      704,
+      686,
+      679,
+      724,
+      678,
+      695,
+      684,
+      720,
+      672,
+      709,
+      693,
+      708,
+      646,
+      716,
+      830,
+      882,
+      818,
+      799,
+      849,
+      832,
+      802,
+      812,
+      745,
+      720,
+      766,
+      747,
+      743,
+      736,
+      734,
+      768,
+      741,
+      738,
+      738,
+      736,
+      742,
+      752,
+      741,
+      740,
+      735,
+      740,
+      775,
+      553,
+      735,
+      725,
+      744,
+      729,
+      760,
+      751,
+      747
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "model/tf.compat.v1.transpose/transpose",
+      "type": "TRANSPOSE",
+      "compute_unit": "GPU",
+      "execution_time": 3,
+      "execution_cycles": 0
+    },
+    {
+      "name": "model/dynamic_conv2d/DynamicConv2D",
+      "type": "CONV_2D",
+      "compute_unit": "GPU",
+      "execution_time": 3,
+      "execution_cycles": 0
+    },
+    {
+      "name": "model/tf.math.reduce_mean/Mean",
+      "type": "MEAN",
+      "compute_unit": "GPU",
+      "execution_time": 4,
+      "execution_cycles": 0
+    },
+    {
+      "name": "output_0",
+      "type": "RESHAPE",
+      "compute_unit": "GPU",
+      "execution_time": 2,
+      "execution_cycles": 0
+    }
+  ]
+}

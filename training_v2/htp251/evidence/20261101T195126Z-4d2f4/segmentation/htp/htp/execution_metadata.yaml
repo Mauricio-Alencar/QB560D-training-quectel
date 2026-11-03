@@ -1,0 +1,17 @@
+---
+timestamp: 3959605139
+command: /opt/qairt-isolated/2.51.40.260930/bin/qnn-net-run --model /opt/qairt-isolated/2.51.40.260930/lib/libQnnModelDlc.so --dlc_path /opt/qb560d-ai-htp251/models/segmentation-9957bc2fd1a82359.dlc --backend /opt/qairt-isolated/2.51.40.260930/lib/libQnnHtp.so --input_list /opt/qb560d-ai-htp251/runs/r5575d165165345/input_list.txt --output_dir /opt/qb560d-ai-htp251/runs/r5575d165165345/htp --profiling_level detailed --log_level info --num_inferences 3 --keep_num_outputs 3
+execution_mode: synchronous
+inferences_completed: 3
+graphs:
+  - graph_name: model_float
+    input_tensors:
+    - tensor_name: sub_7
+      id: 1
+      datatype: QNN_DATATYPE_UFIXED_POINT_16
+      dimensions: [1,257,257,3]
+    output_tensors:
+    - tensor_name: ResizeBilinear_3
+      id: 2
+      datatype: QNN_DATATYPE_UFIXED_POINT_16
+      dimensions: [1,257,257,21]

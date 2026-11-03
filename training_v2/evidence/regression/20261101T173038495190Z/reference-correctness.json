@@ -1,0 +1,263 @@
+{
+  "result": "PASS_15_REFERENCE_RESULTS",
+  "runs": [
+    {
+      "demo": "D2-05",
+      "task": "classification",
+      "median_ms": 24.337214000297536,
+      "correct_reference": true,
+      "visible": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      },
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd"
+    },
+    {
+      "demo": "D2-06",
+      "task": "detection",
+      "median_ms": 35.493489999680605,
+      "correct_reference": true,
+      "visible": [
+        {
+          "class_id": 0,
+          "label": "person",
+          "score": 0.71875,
+          "box_yxyx": [
+            0.054379791021347046,
+            0.0,
+            0.9850850105285645,
+            1.0
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.65625,
+          "box_yxyx": [
+            0.7084828615188599,
+            0.43894636631011963,
+            0.8997373580932617,
+            0.5660443305969238
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.5859375,
+          "box_yxyx": [
+            0.7239762544631958,
+            0.45460134744644165,
+            0.8746565580368042,
+            0.5498793721199036
+          ]
+        }
+      ],
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13"
+    },
+    {
+      "demo": "D2-08",
+      "task": "gesture",
+      "median_ms": 54.12218750007014,
+      "correct_reference": true,
+      "visible": {
+        "gesture": "open_hand",
+        "presence": 0.9951624870300293
+      },
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48"
+    },
+    {
+      "demo": "D2-07",
+      "task": "pose",
+      "median_ms": 128.65312450048805,
+      "correct_reference": true,
+      "visible": {
+        "visible": 7
+      },
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86"
+    },
+    {
+      "demo": "D2-09",
+      "task": "segmentation",
+      "median_ms": 163.90687500006607,
+      "correct_reference": true,
+      "visible": {
+        "background": 0.381126133628064,
+        "person": 0.618873866371936
+      },
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6"
+    },
+    {
+      "demo": "D2-05",
+      "task": "classification",
+      "median_ms": 26.033151000774524,
+      "correct_reference": true,
+      "visible": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      },
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd"
+    },
+    {
+      "demo": "D2-06",
+      "task": "detection",
+      "median_ms": 35.97018299933552,
+      "correct_reference": true,
+      "visible": [
+        {
+          "class_id": 0,
+          "label": "person",
+          "score": 0.71875,
+          "box_yxyx": [
+            0.054379791021347046,
+            0.0,
+            0.9850850105285645,
+            1.0
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.65625,
+          "box_yxyx": [
+            0.7084828615188599,
+            0.43894636631011963,
+            0.8997373580932617,
+            0.5660443305969238
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.5859375,
+          "box_yxyx": [
+            0.7239762544631958,
+            0.45460134744644165,
+            0.8746565580368042,
+            0.5498793721199036
+          ]
+        }
+      ],
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13"
+    },
+    {
+      "demo": "D2-08",
+      "task": "gesture",
+      "median_ms": 54.28083400056494,
+      "correct_reference": true,
+      "visible": {
+        "gesture": "open_hand",
+        "presence": 0.9951624870300293
+      },
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48"
+    },
+    {
+      "demo": "D2-07",
+      "task": "pose",
+      "median_ms": 128.47291699927155,
+      "correct_reference": true,
+      "visible": {
+        "visible": 7
+      },
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86"
+    },
+    {
+      "demo": "D2-09",
+      "task": "segmentation",
+      "median_ms": 166.7180205004115,
+      "correct_reference": true,
+      "visible": {
+        "background": 0.381126133628064,
+        "person": 0.618873866371936
+      },
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6"
+    },
+    {
+      "demo": "D2-05",
+      "task": "classification",
+      "median_ms": 26.55893250084773,
+      "correct_reference": true,
+      "visible": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      },
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd"
+    },
+    {
+      "demo": "D2-06",
+      "task": "detection",
+      "median_ms": 35.593646000052104,
+      "correct_reference": true,
+      "visible": [
+        {
+          "class_id": 0,
+          "label": "person",
+          "score": 0.71875,
+          "box_yxyx": [
+            0.054379791021347046,
+            0.0,
+            0.9850850105285645,
+            1.0
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.65625,
+          "box_yxyx": [
+            0.7084828615188599,
+            0.43894636631011963,
+            0.8997373580932617,
+            0.5660443305969238
+          ]
+        },
+        {
+          "class_id": 31,
+          "label": "tie",
+          "score": 0.5859375,
+          "box_yxyx": [
+            0.7239762544631958,
+            0.45460134744644165,
+            0.8746565580368042,
+            0.5498793721199036
+          ]
+        }
+      ],
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13"
+    },
+    {
+      "demo": "D2-08",
+      "task": "gesture",
+      "median_ms": 54.18833349995111,
+      "correct_reference": true,
+      "visible": {
+        "gesture": "open_hand",
+        "presence": 0.9951624870300293
+      },
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48"
+    },
+    {
+      "demo": "D2-07",
+      "task": "pose",
+      "median_ms": 128.71059900044202,
+      "correct_reference": true,
+      "visible": {
+        "visible": 7
+      },
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86"
+    },
+    {
+      "demo": "D2-09",
+      "task": "segmentation",
+      "median_ms": 168.259584000225,
+      "correct_reference": true,
+      "visible": {
+        "background": 0.381126133628064,
+        "person": 0.618873866371936
+      },
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6"
+    }
+  ]
+}

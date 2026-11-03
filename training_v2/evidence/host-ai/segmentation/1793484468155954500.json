@@ -1,0 +1,55 @@
+{
+  "foreground_fraction": 0.5787353515625,
+  "classes": [
+    "background",
+    "person"
+  ],
+  "demo_id": "D2-09",
+  "backend": "CPU",
+  "runtime": "ai_edge_litert.interpreter",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "model_sha256": "9ee168ec7c8f2a16c56fe8e1cfbc514974cbbb7e434051b455635f1bd1462f5c",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "runs": 3,
+  "warmup": 3,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 2.0678000000771135,
+  "inference_ms_p95": 2.312060000258498,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "input_1",
+        "shape": [
+          1,
+          256,
+          256,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "activation_10",
+        "shape": [
+          1,
+          256,
+          256,
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  }
+}

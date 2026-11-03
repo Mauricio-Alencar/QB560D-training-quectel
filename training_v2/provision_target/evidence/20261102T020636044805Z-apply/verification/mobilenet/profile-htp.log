@@ -1,0 +1,410 @@
+Input Log File Location: /opt/qairt-isolated/2.51.40.260930/results/20261102T020741492532Z/htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 10:07:42 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793585262794527 Steady Clock Timestamp: 12805349629
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 428990 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 162540 us
+
+Finalize Stats:
+---------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 266212 us
+    Backend (RPC (finalize) time): 4869 us
+    Backend (QNN accelerator (finalize) time): 2985 us
+    Backend (Accelerator (finalize) time): 2822 us
+    Backend (QNN (finalize) time): 265974 us
+        Graph Preparation Initializing: 578 us
+        Graph Optimizations: 195428 us
+        Post Graph Optimization: 4761 us
+        Graph Sequencing for Target: 15292 us
+        VTCM Allocation: 5859 us
+        Parallelization Optimization: 3068 us
+        Finalizing Graph Sequence: 4174 us
+        Completion: 328 us
+
+De-Init Stats:
+--------------
+    NetRun: 11499 us
+    Backend (RPC (deinit) time): 2897 us
+    Backend (QNN Accelerator (deinit) time): 1952 us
+    Backend (Accelerator (deinit) time): 1925 us
+    Backend (QNN (deinit) time): 10983 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 158.2579 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 5061 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 4670 us
+    Backend (QNN accelerator (execute) time): 3606 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2440 us
+    Backend (Time for HVX + HMX power on and acquire): 2184 us
+    Backend (Accelerator (execute) time (cycles)): 2422648 cycles
+        Input OpId_2 (cycles): 0 cycles
+        node_sub:OpId_17 (cycles): 359206 cycles
+        OpId_19 (cycles): 5788 cycles
+        node_div:OpId_20 (cycles): 1118942 cycles
+        node_Conv_239:OpId_29 (cycles): 0 cycles
+        n4:OpId_32 (cycles): 100456 cycles
+        node_Conv_240:OpId_46 (cycles): 0 cycles
+        n4_2:OpId_47 (cycles): 29450 cycles
+        node_Conv_241:OpId_61 (cycles): 5880 cycles
+        node_Conv_242:OpId_71 (cycles): 0 cycles
+        n4_3:OpId_74 (cycles): 8458 cycles
+        node_Conv_243:OpId_88 (cycles): 0 cycles
+        n4_4:OpId_89 (cycles): 100454 cycles
+        node_Conv_244:OpId_103 (cycles): 2890 cycles
+        node_Conv_245:OpId_113 (cycles): 0 cycles
+        n4_5:OpId_116 (cycles): 4412 cycles
+        node_Conv_246:OpId_130 (cycles): 0 cycles
+        n4_6:OpId_131 (cycles): 35299 cycles
+        node_Conv_247:OpId_145 (cycles): 6185 cycles
+        node_add:OpId_148 (cycles): 11465 cycles
+        node_Conv_248:OpId_157 (cycles): 0 cycles
+        n4_7:OpId_160 (cycles): 4435 cycles
+        node_Conv_249:OpId_174 (cycles): 0 cycles
+        n4_8:OpId_175 (cycles): 48927 cycles
+        node_Conv_250:OpId_189 (cycles): 1666 cycles
+        node_Conv_251:OpId_199 (cycles): 0 cycles
+        n4_9:OpId_202 (cycles): 2145 cycles
+        node_Conv_252:OpId_216 (cycles): 0 cycles
+        n4_10:OpId_217 (cycles): 16615 cycles
+        node_Conv_253:OpId_231 (cycles): 3666 cycles
+        node_add_1:OpId_234 (cycles): 3214 cycles
+        node_Conv_254:OpId_243 (cycles): 0 cycles
+        n4_11:OpId_246 (cycles): 2266 cycles
+        node_Conv_255:OpId_260 (cycles): 0 cycles
+        n4_12:OpId_261 (cycles): 15724 cycles
+        node_Conv_256:OpId_275 (cycles): 3843 cycles
+        node_add_2:OpId_278 (cycles): 3195 cycles
+        node_Conv_257:OpId_287 (cycles): 0 cycles
+        n4_13:OpId_290 (cycles): 2119 cycles
+        node_Conv_258:OpId_304 (cycles): 0 cycles
+        n4_14:OpId_305 (cycles): 22804 cycles
+        node_Conv_259:OpId_319 (cycles): 1105 cycles
+        node_Conv_260:OpId_329 (cycles): 0 cycles
+        n4_15:OpId_332 (cycles): 2472 cycles
+        node_Conv_261:OpId_346 (cycles): 0 cycles
+        n4_16:OpId_347 (cycles): 8794 cycles
+        node_Conv_262:OpId_361 (cycles): 2626 cycles
+        node_add_3:OpId_364 (cycles): 1281 cycles
+        node_Conv_263:OpId_373 (cycles): 0 cycles
+        n4_17:OpId_376 (cycles): 2416 cycles
+        node_Conv_264:OpId_390 (cycles): 0 cycles
+        n4_18:OpId_391 (cycles): 8566 cycles
+        node_Conv_265:OpId_405 (cycles): 2157 cycles
+        node_add_4:OpId_408 (cycles): 1436 cycles
+        node_Conv_266:OpId_417 (cycles): 0 cycles
+        n4_19:OpId_420 (cycles): 4130 cycles
+        node_Conv_267:OpId_434 (cycles): 0 cycles
+        n4_20:OpId_435 (cycles): 8829 cycles
+        node_Conv_268:OpId_449 (cycles): 2541 cycles
+        node_add_5:OpId_452 (cycles): 1506 cycles
+        node_Conv_269:OpId_461 (cycles): 0 cycles
+        n4_21:OpId_464 (cycles): 2379 cycles
+        node_Conv_270:OpId_478 (cycles): 0 cycles
+        n4_22:OpId_479 (cycles): 8510 cycles
+        node_Conv_271:OpId_493 (cycles): 2918 cycles
+        node_Conv_272:OpId_503 (cycles): 0 cycles
+        n4_23:OpId_506 (cycles): 6273 cycles
+        node_Conv_273:OpId_520 (cycles): 0 cycles
+        n4_24:OpId_521 (cycles): 13151 cycles
+        node_Conv_274:OpId_535 (cycles): 4122 cycles
+        node_add_6:OpId_538 (cycles): 2371 cycles
+        node_Conv_275:OpId_547 (cycles): 0 cycles
+        n4_25:OpId_550 (cycles): 5527 cycles
+        node_Conv_276:OpId_564 (cycles): 0 cycles
+        n4_26:OpId_565 (cycles): 13027 cycles
+        node_Conv_277:OpId_579 (cycles): 4236 cycles
+        node_add_7:OpId_582 (cycles): 1986 cycles
+        node_Conv_278:OpId_591 (cycles): 0 cycles
+        n4_27:OpId_594 (cycles): 6260 cycles
+        node_Conv_279:OpId_608 (cycles): 0 cycles
+        n4_28:OpId_609 (cycles): 36779 cycles
+        node_Conv_280:OpId_623 (cycles): 1801 cycles
+        node_Conv_281:OpId_633 (cycles): 0 cycles
+        n4_29:OpId_636 (cycles): 4215 cycles
+        node_Conv_282:OpId_650 (cycles): 0 cycles
+        n4_30:OpId_651 (cycles): 17665 cycles
+        node_Conv_283:OpId_665 (cycles): 2724 cycles
+        node_add_8:OpId_668 (cycles): 827 cycles
+        node_Conv_284:OpId_677 (cycles): 0 cycles
+        n4_31:OpId_680 (cycles): 5709 cycles
+        node_Conv_285:OpId_694 (cycles): 0 cycles
+        n4_32:OpId_695 (cycles): 9065 cycles
+        node_Conv_286:OpId_709 (cycles): 2850 cycles
+        node_add_9:OpId_712 (cycles): 726 cycles
+        node_Conv_287:OpId_721 (cycles): 0 cycles
+        n4_33:OpId_724 (cycles): 5263 cycles
+        node_Conv_288:OpId_738 (cycles): 0 cycles
+        n4_34:OpId_739 (cycles): 15774 cycles
+        node_Conv_289:OpId_753 (cycles): 12318 cycles
+        node_Conv_290:OpId_763 (cycles): 0 cycles
+        n4_35:OpId_766 (cycles): 35730 cycles
+        node_ReduceMean_293:OpId_774 (cycles): 177205 cycles
+        node_linear:OpId_780 (cycles): 52956 cycles
+        Output OpId_3 (cycles): 2890 cycles
+    Backend (Accelerator (execute) time): 1965 us
+    Backend (Accelerator (execute excluding wait) time): 1314 us
+    Backend (QNN (execute) time): 4911 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 4537 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 4132 us
+    Backend (QNN accelerator (execute) time): 3119 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2319 us
+    Backend (Time for HVX + HMX power on and acquire): 1506 us
+    Backend (Accelerator (execute) time (cycles)): 2367859 cycles
+        Input OpId_2 (cycles): 0 cycles
+        node_sub:OpId_17 (cycles): 352688 cycles
+        OpId_19 (cycles): 4584 cycles
+        node_div:OpId_20 (cycles): 1103653 cycles
+        node_Conv_239:OpId_29 (cycles): 0 cycles
+        n4:OpId_32 (cycles): 99966 cycles
+        node_Conv_240:OpId_46 (cycles): 0 cycles
+        n4_2:OpId_47 (cycles): 28545 cycles
+        node_Conv_241:OpId_61 (cycles): 5530 cycles
+        node_Conv_242:OpId_71 (cycles): 0 cycles
+        n4_3:OpId_74 (cycles): 8388 cycles
+        node_Conv_243:OpId_88 (cycles): 0 cycles
+        n4_4:OpId_89 (cycles): 97421 cycles
+        node_Conv_244:OpId_103 (cycles): 2838 cycles
+        node_Conv_245:OpId_113 (cycles): 0 cycles
+        n4_5:OpId_116 (cycles): 4268 cycles
+        node_Conv_246:OpId_130 (cycles): 0 cycles
+        n4_6:OpId_131 (cycles): 35452 cycles
+        node_Conv_247:OpId_145 (cycles): 6003 cycles
+        node_add:OpId_148 (cycles): 10122 cycles
+        node_Conv_248:OpId_157 (cycles): 0 cycles
+        n4_7:OpId_160 (cycles): 4223 cycles
+        node_Conv_249:OpId_174 (cycles): 0 cycles
+        n4_8:OpId_175 (cycles): 47524 cycles
+        node_Conv_250:OpId_189 (cycles): 1573 cycles
+        node_Conv_251:OpId_199 (cycles): 0 cycles
+        n4_9:OpId_202 (cycles): 2151 cycles
+        node_Conv_252:OpId_216 (cycles): 0 cycles
+        n4_10:OpId_217 (cycles): 15506 cycles
+        node_Conv_253:OpId_231 (cycles): 2732 cycles
+        node_add_1:OpId_234 (cycles): 3139 cycles
+        node_Conv_254:OpId_243 (cycles): 0 cycles
+        n4_11:OpId_246 (cycles): 2168 cycles
+        node_Conv_255:OpId_260 (cycles): 0 cycles
+        n4_12:OpId_261 (cycles): 15764 cycles
+        node_Conv_256:OpId_275 (cycles): 2892 cycles
+        node_add_2:OpId_278 (cycles): 3268 cycles
+        node_Conv_257:OpId_287 (cycles): 0 cycles
+        n4_13:OpId_290 (cycles): 2123 cycles
+        node_Conv_258:OpId_304 (cycles): 0 cycles
+        n4_14:OpId_305 (cycles): 22322 cycles
+        node_Conv_259:OpId_319 (cycles): 1124 cycles
+        node_Conv_260:OpId_329 (cycles): 0 cycles
+        n4_15:OpId_332 (cycles): 2523 cycles
+        node_Conv_261:OpId_346 (cycles): 0 cycles
+        n4_16:OpId_347 (cycles): 8803 cycles
+        node_Conv_262:OpId_361 (cycles): 2097 cycles
+        node_add_3:OpId_364 (cycles): 1184 cycles
+        node_Conv_263:OpId_373 (cycles): 0 cycles
+        n4_17:OpId_376 (cycles): 2426 cycles
+        node_Conv_264:OpId_390 (cycles): 0 cycles
+        n4_18:OpId_391 (cycles): 8584 cycles
+        node_Conv_265:OpId_405 (cycles): 2205 cycles
+        node_add_4:OpId_408 (cycles): 1500 cycles
+        node_Conv_266:OpId_417 (cycles): 0 cycles
+        n4_19:OpId_420 (cycles): 4298 cycles
+        node_Conv_267:OpId_434 (cycles): 0 cycles
+        n4_20:OpId_435 (cycles): 8900 cycles
+        node_Conv_268:OpId_449 (cycles): 2525 cycles
+        node_add_5:OpId_452 (cycles): 1535 cycles
+        node_Conv_269:OpId_461 (cycles): 0 cycles
+        n4_21:OpId_464 (cycles): 2466 cycles
+        node_Conv_270:OpId_478 (cycles): 0 cycles
+        n4_22:OpId_479 (cycles): 8506 cycles
+        node_Conv_271:OpId_493 (cycles): 2947 cycles
+        node_Conv_272:OpId_503 (cycles): 0 cycles
+        n4_23:OpId_506 (cycles): 4438 cycles
+        node_Conv_273:OpId_520 (cycles): 0 cycles
+        n4_24:OpId_521 (cycles): 13103 cycles
+        node_Conv_274:OpId_535 (cycles): 4132 cycles
+        node_add_6:OpId_538 (cycles): 2273 cycles
+        node_Conv_275:OpId_547 (cycles): 0 cycles
+        n4_25:OpId_550 (cycles): 7102 cycles
+        node_Conv_276:OpId_564 (cycles): 0 cycles
+        n4_26:OpId_565 (cycles): 13177 cycles
+        node_Conv_277:OpId_579 (cycles): 4226 cycles
+        node_add_7:OpId_582 (cycles): 1979 cycles
+        node_Conv_278:OpId_591 (cycles): 0 cycles
+        n4_27:OpId_594 (cycles): 4661 cycles
+        node_Conv_279:OpId_608 (cycles): 0 cycles
+        n4_28:OpId_609 (cycles): 34457 cycles
+        node_Conv_280:OpId_623 (cycles): 1812 cycles
+        node_Conv_281:OpId_633 (cycles): 0 cycles
+        n4_29:OpId_636 (cycles): 3665 cycles
+        node_Conv_282:OpId_650 (cycles): 0 cycles
+        n4_30:OpId_651 (cycles): 15492 cycles
+        node_Conv_283:OpId_665 (cycles): 2743 cycles
+        node_add_8:OpId_668 (cycles): 832 cycles
+        node_Conv_284:OpId_677 (cycles): 0 cycles
+        n4_31:OpId_680 (cycles): 3652 cycles
+        node_Conv_285:OpId_694 (cycles): 0 cycles
+        n4_32:OpId_695 (cycles): 15907 cycles
+        node_Conv_286:OpId_709 (cycles): 2858 cycles
+        node_add_9:OpId_712 (cycles): 726 cycles
+        node_Conv_287:OpId_721 (cycles): 0 cycles
+        n4_33:OpId_724 (cycles): 3802 cycles
+        node_Conv_288:OpId_738 (cycles): 0 cycles
+        n4_34:OpId_739 (cycles): 14893 cycles
+        node_Conv_289:OpId_753 (cycles): 12476 cycles
+        node_Conv_290:OpId_763 (cycles): 0 cycles
+        n4_35:OpId_766 (cycles): 33401 cycles
+        node_ReduceMean_293:OpId_774 (cycles): 168019 cycles
+        node_linear:OpId_780 (cycles): 49381 cycles
+        Output OpId_3 (cycles): 2186 cycles
+    Backend (Accelerator (execute) time): 1899 us
+    Backend (Accelerator (execute excluding wait) time): 1299 us
+    Backend (QNN (execute) time): 4384 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 6832 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 6529 us
+    Backend (QNN accelerator (execute) time): 5384 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2808 us
+    Backend (Time for HVX + HMX power on and acquire): 4845 us
+    Backend (Accelerator (execute) time (cycles)): 2484817 cycles
+        Input OpId_2 (cycles): 0 cycles
+        node_sub:OpId_17 (cycles): 366821 cycles
+        OpId_19 (cycles): 7083 cycles
+        node_div:OpId_20 (cycles): 1105977 cycles
+        node_Conv_239:OpId_29 (cycles): 0 cycles
+        n4:OpId_32 (cycles): 100833 cycles
+        node_Conv_240:OpId_46 (cycles): 0 cycles
+        n4_2:OpId_47 (cycles): 29618 cycles
+        node_Conv_241:OpId_61 (cycles): 6068 cycles
+        node_Conv_242:OpId_71 (cycles): 0 cycles
+        n4_3:OpId_74 (cycles): 8478 cycles
+        node_Conv_243:OpId_88 (cycles): 0 cycles
+        n4_4:OpId_89 (cycles): 100765 cycles
+        node_Conv_244:OpId_103 (cycles): 2837 cycles
+        node_Conv_245:OpId_113 (cycles): 0 cycles
+        n4_5:OpId_116 (cycles): 4213 cycles
+        node_Conv_246:OpId_130 (cycles): 0 cycles
+        n4_6:OpId_131 (cycles): 35182 cycles
+        node_Conv_247:OpId_145 (cycles): 5884 cycles
+        node_add:OpId_148 (cycles): 13773 cycles
+        node_Conv_248:OpId_157 (cycles): 0 cycles
+        n4_7:OpId_160 (cycles): 4187 cycles
+        node_Conv_249:OpId_174 (cycles): 0 cycles
+        n4_8:OpId_175 (cycles): 48694 cycles
+        node_Conv_250:OpId_189 (cycles): 1516 cycles
+        node_Conv_251:OpId_199 (cycles): 0 cycles
+        n4_9:OpId_202 (cycles): 2149 cycles
+        node_Conv_252:OpId_216 (cycles): 0 cycles
+        n4_10:OpId_217 (cycles): 18346 cycles
+        node_Conv_253:OpId_231 (cycles): 2546 cycles
+        node_add_1:OpId_234 (cycles): 3024 cycles
+        node_Conv_254:OpId_243 (cycles): 0 cycles
+        n4_11:OpId_246 (cycles): 2156 cycles
+        node_Conv_255:OpId_260 (cycles): 0 cycles
+        n4_12:OpId_261 (cycles): 15664 cycles
+        node_Conv_256:OpId_275 (cycles): 2923 cycles
+        node_add_2:OpId_278 (cycles): 3276 cycles
+        node_Conv_257:OpId_287 (cycles): 0 cycles
+        n4_13:OpId_290 (cycles): 2153 cycles
+        node_Conv_258:OpId_304 (cycles): 0 cycles
+        n4_14:OpId_305 (cycles): 21692 cycles
+        node_Conv_259:OpId_319 (cycles): 1120 cycles
+        node_Conv_260:OpId_329 (cycles): 0 cycles
+        n4_15:OpId_332 (cycles): 2521 cycles
+        node_Conv_261:OpId_346 (cycles): 0 cycles
+        n4_16:OpId_347 (cycles): 8762 cycles
+        node_Conv_262:OpId_361 (cycles): 4711 cycles
+        node_add_3:OpId_364 (cycles): 1503 cycles
+        node_Conv_263:OpId_373 (cycles): 0 cycles
+        n4_17:OpId_376 (cycles): 2443 cycles
+        node_Conv_264:OpId_390 (cycles): 0 cycles
+        n4_18:OpId_391 (cycles): 8644 cycles
+        node_Conv_265:OpId_405 (cycles): 2141 cycles
+        node_add_4:OpId_408 (cycles): 1416 cycles
+        node_Conv_266:OpId_417 (cycles): 0 cycles
+        n4_19:OpId_420 (cycles): 5315 cycles
+        node_Conv_267:OpId_434 (cycles): 0 cycles
+        n4_20:OpId_435 (cycles): 8873 cycles
+        node_Conv_268:OpId_449 (cycles): 2582 cycles
+        node_add_5:OpId_452 (cycles): 1470 cycles
+        node_Conv_269:OpId_461 (cycles): 0 cycles
+        n4_21:OpId_464 (cycles): 2356 cycles
+        node_Conv_270:OpId_478 (cycles): 0 cycles
+        n4_22:OpId_479 (cycles): 8525 cycles
+        node_Conv_271:OpId_493 (cycles): 2953 cycles
+        node_Conv_272:OpId_503 (cycles): 0 cycles
+        n4_23:OpId_506 (cycles): 13585 cycles
+        node_Conv_273:OpId_520 (cycles): 0 cycles
+        n4_24:OpId_521 (cycles): 13327 cycles
+        node_Conv_274:OpId_535 (cycles): 4095 cycles
+        node_add_6:OpId_538 (cycles): 2467 cycles
+        node_Conv_275:OpId_547 (cycles): 0 cycles
+        n4_25:OpId_550 (cycles): 4572 cycles
+        node_Conv_276:OpId_564 (cycles): 0 cycles
+        n4_26:OpId_565 (cycles): 12950 cycles
+        node_Conv_277:OpId_579 (cycles): 4122 cycles
+        node_add_7:OpId_582 (cycles): 1948 cycles
+        node_Conv_278:OpId_591 (cycles): 0 cycles
+        n4_27:OpId_594 (cycles): 12679 cycles
+        node_Conv_279:OpId_608 (cycles): 0 cycles
+        n4_28:OpId_609 (cycles): 44806 cycles
+        node_Conv_280:OpId_623 (cycles): 1813 cycles
+        node_Conv_281:OpId_633 (cycles): 0 cycles
+        n4_29:OpId_636 (cycles): 5171 cycles
+        node_Conv_282:OpId_650 (cycles): 0 cycles
+        n4_30:OpId_651 (cycles): 24494 cycles
+        node_Conv_283:OpId_665 (cycles): 2733 cycles
+        node_add_8:OpId_668 (cycles): 833 cycles
+        node_Conv_284:OpId_677 (cycles): 0 cycles
+        n4_31:OpId_680 (cycles): 13866 cycles
+        node_Conv_285:OpId_694 (cycles): 0 cycles
+        n4_32:OpId_695 (cycles): 7384 cycles
+        node_Conv_286:OpId_709 (cycles): 2850 cycles
+        node_add_9:OpId_712 (cycles): 730 cycles
+        node_Conv_287:OpId_721 (cycles): 0 cycles
+        n4_33:OpId_724 (cycles): 5142 cycles
+        node_Conv_288:OpId_738 (cycles): 0 cycles
+        n4_34:OpId_739 (cycles): 10414 cycles
+        node_Conv_289:OpId_753 (cycles): 5592 cycles
+        node_Conv_290:OpId_763 (cycles): 0 cycles
+        n4_35:OpId_766 (cycles): 36544 cycles
+        node_ReduceMean_293:OpId_774 (cycles): 221818 cycles
+        node_linear:OpId_780 (cycles): 44343 cycles
+        Output OpId_3 (cycles): 5346 cycles
+    Backend (Accelerator (execute) time): 2176 us
+    Backend (Accelerator (execute excluding wait) time): 1340 us
+    Backend (QNN (execute) time): 6732 us

@@ -1,0 +1,116 @@
+{
+  "recorded_at_host_utc": "2026-10-31T23:08:54.237304+00:00",
+  "target_clock_warning": "Target clock is not synchronized; timestamps use host UTC",
+  "demo": "MobileNet V1 uint8 image classification",
+  "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "runtime_version": "2.8.4",
+  "sessions_per_backend": 3,
+  "runs_per_session": 50,
+  "warmup_per_session": 10,
+  "cpu_threads": 2,
+  "cpu_median_of_session_medians_ms": 25.40960900000755,
+  "gpu_median_of_session_medians_ms": 9.670156000026964,
+  "speedup_cpu_over_gpu": 2.627631756916507,
+  "latency_reduction_percent": 61.94291694915852,
+  "timing_scope": "TFLite InterpreterInvoke only; includes delegate boundary conversion for uint8, excludes image decode/preprocess/output copy/render",
+  "gpu_evidence": "BSP logs: Initialized OpenCL-based API; Created 1 GPU delegate kernels. One GPU partition confirmed; per-operator coverage not exposed by this C API.",
+  "htp_dsp_status": "Not executed; GPU result does not establish HTP/DSP execution",
+  "correctness": [
+    {
+      "session": 1,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    },
+    {
+      "session": 2,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    },
+    {
+      "session": 3,
+      "max_abs_probability_difference": 0.00390625,
+      "top1_equal": true
+    }
+  ],
+  "records": [
+    {
+      "session": 1,
+      "backend": "cpu",
+      "log": "session_1_cpu.log",
+      "result": "target\\session_1_cpu\\classification\\1718660859521160787.json",
+      "median_ms": 25.425364499994885,
+      "p95_ms": 26.533482100006722,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 1,
+      "backend": "gpu",
+      "log": "session_1_gpu.log",
+      "result": "target\\session_1_gpu\\classification\\1718660861023548807.json",
+      "median_ms": 9.67393199996991,
+      "p95_ms": 9.725989950007374,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 2,
+      "backend": "gpu",
+      "log": "session_2_gpu.log",
+      "result": "target\\session_2_gpu\\classification\\1718660862528704744.json",
+      "median_ms": 9.66455700000779,
+      "p95_ms": 9.712500500026522,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 2,
+      "backend": "cpu",
+      "log": "session_2_cpu.log",
+      "result": "target\\session_2_cpu\\classification\\1718660864434880993.json",
+      "median_ms": 23.284244500018758,
+      "p95_ms": 24.963643349974515,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 3,
+      "backend": "cpu",
+      "log": "session_3_cpu.log",
+      "result": "target\\session_3_cpu\\classification\\1718660866464607972.json",
+      "median_ms": 25.40960900000755,
+      "p95_ms": 28.11675285001058,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 3,
+      "backend": "gpu",
+      "log": "session_3_gpu.log",
+      "result": "target\\session_3_gpu\\classification\\1718660868047689482.json",
+      "median_ms": 9.670156000026964,
+      "p95_ms": 9.713760400032356,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    }
+  ]
+}

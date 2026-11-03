@@ -1,0 +1,12 @@
+{
+  "removed_activation_quantizers": [
+    "BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant__376_QuantizeLinear__614",
+    "BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant__388_QuantizeLinear__613",
+    "BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant__400_QuantizeLinear__612",
+    "BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant__412_QuantizeLinear__611",
+    "BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant__424_QuantizeLinear__610",
+    "convert_scores_quantize",
+    "BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant__438_QuantizeLinear__609"
+  ],
+  "reason": "Fresh QAIRT 2.51 calibration after legacy Q/DQ ranges caused extra detections on the target"
+}

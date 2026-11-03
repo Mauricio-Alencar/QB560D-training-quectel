@@ -1,0 +1,45 @@
+{
+  "downloaded_at_utc": "2026-10-31T23:14:53.417558+00:00",
+  "materials": [
+    {
+      "file": "apresentacoes/01_Introduction_to_Edge_AI_CVPR2025.pdf",
+      "title": "Introduction to Edge AI",
+      "author": "Elizabete Munzlinger",
+      "source": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/pdfs/cvpr2025/02-Introduction_to_Edge_AI.pdf",
+      "event_page": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/",
+      "origin": "CVPR 2025 tutorial; original author/organizer publication, not an official Qualcomm Academy slide deck",
+      "bytes": 1519933,
+      "sha256": "6f1ce954590b3e84845beb8408ff6ece89b12352d3a345039173dd71721d9ce6"
+    },
+    {
+      "file": "apresentacoes/02_Model_Deployment_for_Edge_AI_CVPR2025.pdf",
+      "title": "Model Deployment for Edge AI",
+      "author": "Fabricio Batista Narcizo, Elizabete Munzlinger, Sai Narsi Reddy Donthi Reddy",
+      "source": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/pdfs/cvpr2025/03-Model_Deployment_for_Edge_AI.pdf",
+      "event_page": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/",
+      "origin": "CVPR 2025 tutorial; original author/organizer publication, not an official Qualcomm Academy slide deck",
+      "bytes": 22567969,
+      "sha256": "c3ba9fc35d20fd716770ab65d2acb7365e81685a1d4dc78cccfa2fff1eaeda82"
+    },
+    {
+      "file": "apresentacoes/03_Accelerating_Edge_AI_with_Qualcomm_AI_Hub_CVPR2025.pdf",
+      "title": "Accelerating Edge AI with Qualcomm AI Hub",
+      "author": "Shan Ahmed Shaffi",
+      "source": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/pdfs/cvpr2025/04-Accelerating_Edge_AI_with_Qualcomm_AI_Hub.pdf",
+      "event_page": "https://www.fabricionarcizo.com/cvpr2025-edge-ai-in-action/",
+      "origin": "CVPR 2025 tutorial; original author/organizer publication, not an official Qualcomm Academy slide deck",
+      "bytes": 16949560,
+      "sha256": "55a39cd07ce6074585a91729bda56d14e3389c67c2d3535dfe8bd6e713ac1ec4"
+    },
+    {
+      "file": "apresentacoes/04_Qualcomm_AI_driven_Multimedia_Embedded_Vision_Summit_2025.pdf",
+      "title": "How Qualcomm Is Powering AI-driven Multimedia at the Edge",
+      "author": "Ning Bi, VP Engineering, Qualcomm Technologies",
+      "source": "https://www.edge-ai-vision.com/wp-content/uploads/2025/06/E3W10_Bi_Qualcomm_2025.pdf",
+      "event_page": "https://www.edge-ai-vision.com/2025/06/how-qualcomm-is-powering-ai-driven-multimedia-at-the-edge-a-presentation-from-qualcomm/",
+      "origin": "Qualcomm Technologies presentation published by event organizer; supplementary context, not an AI Hub hands-on course",
+      "bytes": 2680584,
+      "sha256": "4d309f3bd3fc6a619b1ef0211247041522e1cdcee007bd529d0a41f8aff0207c"
+    }
+  ]
+}

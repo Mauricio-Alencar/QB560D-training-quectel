@@ -1,0 +1,14 @@
+{
+  "label": "wlan-host-check",
+  "script": "host\\adb_lab.py",
+  "args": [
+    "run",
+    "wlan",
+    "check"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 0.875,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T013537009547Z-wlan-host-check\\console.log"
+}

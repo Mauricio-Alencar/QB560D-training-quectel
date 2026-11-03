@@ -1,0 +1,317 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/radbc6ea1dc154e/cpu/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 03:46:31 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793562391498385 Steady Clock Timestamp: 3627157538
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 44117 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 42954 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 912 us
+    Backend (GRAPH_FINALIZE): 272 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 18 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 4 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 2 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 4 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 4 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 4 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 4 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 6 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 6 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 6 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 9 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 9 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 9 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant: 5 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant: 2 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant: 2 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant: 3 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant: 1 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant: 2 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_prequant: 8 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_0123: 2 us
+        _BoxPredictor_5/Reshape_1_prequant: 0 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant: 2 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123: 1 us
+        _BoxPredictor_5/Reshape_prequant: 1 us
+        _BoxPredictor_4/ClassPredictor/BiasAdd_prequant: 6 us
+        _BoxPredictor_4/Reshape_1_prequant: 1 us
+        _BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant: 2 us
+        _BoxPredictor_4/Reshape_prequant: 0 us
+        _BoxPredictor_3/ClassPredictor/BiasAdd_prequant: 6 us
+        _BoxPredictor_3/Reshape_1_prequant: 0 us
+        _BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant: 2 us
+        _BoxPredictor_3/Reshape_prequant: 0 us
+        _BoxPredictor_2/ClassPredictor/BiasAdd_prequant: 7 us
+        _BoxPredictor_2/Reshape_1_prequant: 1 us
+        _BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant: 2 us
+        _BoxPredictor_2/Reshape_prequant: 1 us
+        _BoxPredictor_1/ClassPredictor/BiasAdd_prequant: 7 us
+        _BoxPredictor_1/Reshape_1_prequant: 0 us
+        _BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant: 2 us
+        _BoxPredictor_1/Reshape_prequant: 1 us
+        _BoxPredictor_0/ClassPredictor/BiasAdd_prequant: 4 us
+        _BoxPredictor_0/Reshape_1_prequant: 0 us
+        _concat_1_prequant: 1 us
+        _convert_scores_prequant: 9 us
+        _BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant: 1 us
+        _BoxPredictor_0/Reshape_prequant: 0 us
+        _concat_prequant: 1 us
+        _Squeeze_prequant: 1 us
+
+De-Init Stats:
+--------------
+    NetRun: 1307 us
+    Backend (null): 0 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 41.5777 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 13218 us
+    Backend (GRAPH_EXECUTE): 12941 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 956 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 708 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 679 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 1011 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 432 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 720 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 618 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 200 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 316 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 346 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 525 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 242 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 242 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 426 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 434 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 175 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 418 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 437 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 175 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 419 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 61 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 290 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 99 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 570 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant: 168 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant: 225 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant: 27 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant: 53 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant: 23 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant: 57 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant: 10 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant: 19 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_prequant: 19 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_0123: 9 us
+        _BoxPredictor_5/Reshape_1_prequant: 4 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant: 6 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123: 3 us
+        _BoxPredictor_5/Reshape_prequant: 2 us
+        _BoxPredictor_4/ClassPredictor/BiasAdd_prequant: 36 us
+        _BoxPredictor_4/Reshape_1_prequant: 2 us
+        _BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant: 8 us
+        _BoxPredictor_4/Reshape_prequant: 2 us
+        _BoxPredictor_3/ClassPredictor/BiasAdd_prequant: 37 us
+        _BoxPredictor_3/Reshape_1_prequant: 3 us
+        _BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant: 9 us
+        _BoxPredictor_3/Reshape_prequant: 2 us
+        _BoxPredictor_2/ClassPredictor/BiasAdd_prequant: 84 us
+        _BoxPredictor_2/Reshape_1_prequant: 3 us
+        _BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant: 15 us
+        _BoxPredictor_2/Reshape_prequant: 2 us
+        _BoxPredictor_1/ClassPredictor/BiasAdd_prequant: 382 us
+        _BoxPredictor_1/Reshape_1_prequant: 7 us
+        _BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant: 34 us
+        _BoxPredictor_1/Reshape_prequant: 3 us
+        _BoxPredictor_0/ClassPredictor/BiasAdd_prequant: 334 us
+        _BoxPredictor_0/Reshape_1_prequant: 11 us
+        _concat_1_prequant: 22 us
+        _convert_scores_prequant: 92 us
+        _BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant: 41 us
+        _BoxPredictor_0/Reshape_prequant: 3 us
+        _concat_prequant: 7 us
+        _Squeeze_prequant: 2 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 12748 us
+    Backend (GRAPH_EXECUTE): 12479 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 750 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 638 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 635 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 966 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 460 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 674 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 595 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 198 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 318 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 345 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 494 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 242 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 241 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 442 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 177 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 421 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 419 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 421 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 175 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 418 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 61 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 290 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 99 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 580 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant: 161 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant: 224 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant: 31 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant: 54 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant: 29 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant: 63 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant: 10 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant: 19 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_prequant: 19 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_0123: 7 us
+        _BoxPredictor_5/Reshape_1_prequant: 4 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant: 7 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123: 4 us
+        _BoxPredictor_5/Reshape_prequant: 3 us
+        _BoxPredictor_4/ClassPredictor/BiasAdd_prequant: 36 us
+        _BoxPredictor_4/Reshape_1_prequant: 3 us
+        _BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant: 8 us
+        _BoxPredictor_4/Reshape_prequant: 3 us
+        _BoxPredictor_3/ClassPredictor/BiasAdd_prequant: 37 us
+        _BoxPredictor_3/Reshape_1_prequant: 3 us
+        _BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant: 9 us
+        _BoxPredictor_3/Reshape_prequant: 2 us
+        _BoxPredictor_2/ClassPredictor/BiasAdd_prequant: 85 us
+        _BoxPredictor_2/Reshape_1_prequant: 4 us
+        _BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant: 16 us
+        _BoxPredictor_2/Reshape_prequant: 2 us
+        _BoxPredictor_1/ClassPredictor/BiasAdd_prequant: 367 us
+        _BoxPredictor_1/Reshape_1_prequant: 7 us
+        _BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant: 33 us
+        _BoxPredictor_1/Reshape_prequant: 3 us
+        _BoxPredictor_0/ClassPredictor/BiasAdd_prequant: 321 us
+        _BoxPredictor_0/Reshape_1_prequant: 11 us
+        _concat_1_prequant: 23 us
+        _convert_scores_prequant: 93 us
+        _BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant: 41 us
+        _BoxPredictor_0/Reshape_prequant: 3 us
+        _concat_prequant: 6 us
+        _Squeeze_prequant: 3 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 14152 us
+    Backend (GRAPH_EXECUTE): 13853 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant: 1308 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant: 850 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant: 766 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant: 1097 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant: 419 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant: 817 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant: 635 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant: 204 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant: 321 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant: 346 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant: 589 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant: 243 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant: 243 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant: 177 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant: 417 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant: 174 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant: 466 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant: 176 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant: 417 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant: 177 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant: 418 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant: 175 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant: 419 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant: 62 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant: 291 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant: 101 us
+        _FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant: 572 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant: 183 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant: 233 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant: 26 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant: 52 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant: 20 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant: 54 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant: 11 us
+        _FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant: 20 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_prequant: 19 us
+        _BoxPredictor_5/ClassPredictor/BiasAdd_0123: 16 us
+        _BoxPredictor_5/Reshape_1_prequant: 4 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant: 7 us
+        _BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123: 3 us
+        _BoxPredictor_5/Reshape_prequant: 3 us
+        _BoxPredictor_4/ClassPredictor/BiasAdd_prequant: 36 us
+        _BoxPredictor_4/Reshape_1_prequant: 3 us
+        _BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant: 8 us
+        _BoxPredictor_4/Reshape_prequant: 3 us
+        _BoxPredictor_3/ClassPredictor/BiasAdd_prequant: 37 us
+        _BoxPredictor_3/Reshape_1_prequant: 3 us
+        _BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant: 10 us
+        _BoxPredictor_3/Reshape_prequant: 2 us
+        _BoxPredictor_2/ClassPredictor/BiasAdd_prequant: 84 us
+        _BoxPredictor_2/Reshape_1_prequant: 3 us
+        _BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant: 15 us
+        _BoxPredictor_2/Reshape_prequant: 2 us
+        _BoxPredictor_1/ClassPredictor/BiasAdd_prequant: 433 us
+        _BoxPredictor_1/Reshape_1_prequant: 8 us
+        _BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant: 38 us
+        _BoxPredictor_1/Reshape_prequant: 3 us
+        _BoxPredictor_0/ClassPredictor/BiasAdd_prequant: 334 us
+        _BoxPredictor_0/Reshape_1_prequant: 12 us
+        _concat_1_prequant: 23 us
+        _convert_scores_prequant: 93 us
+        _BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant: 41 us
+        _BoxPredictor_0/Reshape_prequant: 3 us
+        _concat_prequant: 8 us
+        _Squeeze_prequant: 2 us

@@ -1,0 +1,146 @@
+input log file location, /opt/qb560d-ai-htp251/runs/r2e78e1b482d447/cpu/qnn-profiling-data_0.log
+qnn-profile-viewer version, v2.51.40.260930230134
+qnn-net-run version, v2.51.40.260930230134
+Backend version, v2.51.40.260930230134
+Msg Timestamp, Message, Time, Unit of Measurement, Timing Source, Event Level, Event Identifier
+3946887319,INIT,32841,US,NETRUN,ROOT,Unknown (init)
+3946921625,COMPOSE GRAPHS,32308,US,NETRUN,ROOT,model_float
+3946922309,FINALIZE,446,US,NETRUN,ROOT,Graph 0: model_float
+3946922309,FINALIZE,207,US,BACKEND,ROOT,GRAPH_FINALIZE
+3946922309,FINALIZE,19,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant
+3946922309,FINALIZE,4,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant
+3946922309,FINALIZE,3,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant
+3946922309,FINALIZE,2,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant
+3946922309,FINALIZE,3,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant
+3946922309,FINALIZE,3,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant
+3946922309,FINALIZE,3,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant
+3946922309,FINALIZE,2,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant
+3946922309,FINALIZE,5,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant
+3946922309,FINALIZE,5,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant
+3946922309,FINALIZE,5,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant
+3946922309,FINALIZE,5,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant
+3946922309,FINALIZE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant
+3946922309,FINALIZE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant
+3946922309,FINALIZE,11,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant
+3946922309,FINALIZE,11,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant
+3946922309,FINALIZE,10,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant
+3946922309,FINALIZE,2,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant
+3946922309,FINALIZE,10,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant
+3946922309,FINALIZE,1,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123
+3946922309,FINALIZE,0,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/SpatialSqueeze_prequant
+3946922309,FINALIZE,6,US,BACKEND,SUB-EVENT,_MobilenetV1/Predictions/Reshape_1_prequant
+3946958386,DE-INIT,1176,US,NETRUN,ROOT,Unknown (deinit)
+3946958386,DE-INIT,0,US,BACKEND,ROOT,null
+3946934099,EXECUTE,10881,US,NETRUN,ROOT,Graph 0: model_float
+3946934099,EXECUTE,10708,US,BACKEND,ROOT,GRAPH_EXECUTE
+3946934099,EXECUTE,858,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant
+3946934099,EXECUTE,633,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant
+3946934099,EXECUTE,588,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant
+3946934099,EXECUTE,797,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant
+3946934099,EXECUTE,383,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant
+3946934099,EXECUTE,572,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant
+3946934099,EXECUTE,552,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant
+3946934099,EXECUTE,436,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant
+3946934099,EXECUTE,359,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant
+3946934099,EXECUTE,295,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant
+3946934099,EXECUTE,459,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant
+3946934099,EXECUTE,175,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant
+3946934099,EXECUTE,237,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant
+3946934099,EXECUTE,127,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant
+3946934099,EXECUTE,433,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant
+3946934099,EXECUTE,127,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant
+3946934099,EXECUTE,430,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant
+3946934099,EXECUTE,126,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant
+3946934099,EXECUTE,441,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant
+3946934099,EXECUTE,125,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant
+3946934099,EXECUTE,429,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant
+3946934099,EXECUTE,127,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant
+3946934099,EXECUTE,432,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant
+3946934099,EXECUTE,87,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant
+3946934099,EXECUTE,333,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant
+3946934099,EXECUTE,67,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant
+3946934099,EXECUTE,714,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant
+3946934099,EXECUTE,29,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant
+3946934099,EXECUTE,257,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant
+3946934099,EXECUTE,11,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123
+3946934099,EXECUTE,4,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/SpatialSqueeze_prequant
+3946934099,EXECUTE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/Predictions/Reshape_1_prequant
+3946944843,EXECUTE,9668,US,NETRUN,ROOT,Graph 0: model_float
+3946944843,EXECUTE,9505,US,BACKEND,ROOT,GRAPH_EXECUTE
+3946944843,EXECUTE,526,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant
+3946944843,EXECUTE,508,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant
+3946944843,EXECUTE,504,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant
+3946944843,EXECUTE,708,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant
+3946944843,EXECUTE,326,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant
+3946944843,EXECUTE,508,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant
+3946944843,EXECUTE,492,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant
+3946944843,EXECUTE,348,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant
+3946944843,EXECUTE,272,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant
+3946944843,EXECUTE,259,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant
+3946944843,EXECUTE,473,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant
+3946944843,EXECUTE,174,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant
+3946944843,EXECUTE,237,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant
+3946944843,EXECUTE,128,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant
+3946944843,EXECUTE,431,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant
+3946944843,EXECUTE,128,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant
+3946944843,EXECUTE,428,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant
+3946944843,EXECUTE,126,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant
+3946944843,EXECUTE,434,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant
+3946944843,EXECUTE,126,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant
+3946944843,EXECUTE,429,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant
+3946944843,EXECUTE,126,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant
+3946944843,EXECUTE,455,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant
+3946944843,EXECUTE,87,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant
+3946944843,EXECUTE,307,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant
+3946944843,EXECUTE,69,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant
+3946944843,EXECUTE,551,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant
+3946944843,EXECUTE,18,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant
+3946944843,EXECUTE,255,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant
+3946944843,EXECUTE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123
+3946944843,EXECUTE,4,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/SpatialSqueeze_prequant
+3946944843,EXECUTE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/Predictions/Reshape_1_prequant
+3946956679,EXECUTE,9813,US,NETRUN,ROOT,Graph 0: model_float
+3946956679,EXECUTE,9622,US,BACKEND,ROOT,GRAPH_EXECUTE
+3946956679,EXECUTE,1229,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant
+3946956679,EXECUTE,529,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant
+3946956679,EXECUTE,366,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant
+3946956679,EXECUTE,796,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant
+3946956679,EXECUTE,263,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant
+3946956679,EXECUTE,571,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant
+3946956679,EXECUTE,386,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant
+3946956679,EXECUTE,395,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant
+3946956679,EXECUTE,224,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant
+3946956679,EXECUTE,291,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant
+3946956679,EXECUTE,421,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant
+3946956679,EXECUTE,197,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant
+3946956679,EXECUTE,198,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant
+3946956679,EXECUTE,143,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant
+3946956679,EXECUTE,362,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant
+3946956679,EXECUTE,144,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant
+3946956679,EXECUTE,361,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant
+3946956679,EXECUTE,141,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant
+3946956679,EXECUTE,361,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant
+3946956679,EXECUTE,141,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant
+3946956679,EXECUTE,335,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant
+3946956679,EXECUTE,143,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant
+3946956679,EXECUTE,336,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant
+3946956679,EXECUTE,98,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant
+3946956679,EXECUTE,292,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant
+3946956679,EXECUTE,75,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant
+3946956679,EXECUTE,440,US,BACKEND,SUB-EVENT,_MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant
+3946956679,EXECUTE,20,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/AvgPool_1a/AvgPool_prequant
+3946956679,EXECUTE,288,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_prequant
+3946956679,EXECUTE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/Conv2d_1c_1x1/BiasAdd_0123
+3946956679,EXECUTE,4,US,BACKEND,SUB-EVENT,_MobilenetV1/Logits/SpatialSqueeze_prequant
+3946956679,EXECUTE,7,US,BACKEND,SUB-EVENT,_MobilenetV1/Predictions/Reshape_1_prequant
+3946957030,EXECUTE IPS,87.550339,INF/SEC,NETRUN,ROOT,null

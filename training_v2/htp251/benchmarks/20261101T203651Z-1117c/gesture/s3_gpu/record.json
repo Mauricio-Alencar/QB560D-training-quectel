@@ -1,0 +1,218 @@
+{
+  "backend": "gpu",
+  "passed": true,
+  "runtime": "TFLite BSP 2.8.4",
+  "median_ms": 7.707308499902865,
+  "p95_ms": 8.101840500330582,
+  "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+  "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+  "result": {
+    "presence": 0.9951624870300293,
+    "landmarks_xyz": [
+      [
+        0.5966857075691223,
+        0.9298046231269836,
+        1.2746811384189982e-09
+      ],
+      [
+        0.4069175124168396,
+        0.9006722569465637,
+        -0.020440174266695976
+      ],
+      [
+        0.28919389843940735,
+        0.7870520949363708,
+        -0.040349580347537994
+      ],
+      [
+        0.20504441857337952,
+        0.6703912019729614,
+        -0.055105846375226974
+      ],
+      [
+        0.11767320334911346,
+        0.5863056778907776,
+        -0.07139123231172562
+      ],
+      [
+        0.38397589325904846,
+        0.5949748754501343,
+        -0.07140642404556274
+      ],
+      [
+        0.32542917132377625,
+        0.3888055980205536,
+        -0.09490729868412018
+      ],
+      [
+        0.30048632621765137,
+        0.25128811597824097,
+        -0.10839695483446121
+      ],
+      [
+        0.2826099097728729,
+        0.14602652192115784,
+        -0.11877549439668655
+      ],
+      [
+        0.5037545561790466,
+        0.565986692905426,
+        -0.06970954686403275
+      ],
+      [
+        0.4850817620754242,
+        0.336337149143219,
+        -0.09598314762115479
+      ],
+      [
+        0.4832502007484436,
+        0.17626182734966278,
+        -0.10939420014619827
+      ],
+      [
+        0.4845421016216278,
+        0.05438140407204628,
+        -0.12042265385389328
+      ],
+      [
+        0.6192497611045837,
+        0.5755326151847839,
+        -0.06443307548761368
+      ],
+      [
+        0.6339353919029236,
+        0.36392322182655334,
+        -0.08419422060251236
+      ],
+      [
+        0.6512524485588074,
+        0.2230476588010788,
+        -0.09484641999006271
+      ],
+      [
+        0.6647573709487915,
+        0.11911247670650482,
+        -0.10314030945301056
+      ],
+      [
+        0.717814028263092,
+        0.6111704707145691,
+        -0.06003373861312866
+      ],
+      [
+        0.7632943391799927,
+        0.4496667683124542,
+        -0.07617628574371338
+      ],
+      [
+        0.7950515747070312,
+        0.34152206778526306,
+        -0.08575713634490967
+      ],
+      [
+        0.8237076997756958,
+        0.2565174400806427,
+        -0.09397946298122406
+      ]
+    ],
+    "gesture": "open_hand",
+    "extended_fingers_excluding_thumb": 4,
+    "demo_id": "D2-08",
+    "backend": "GPU",
+    "runtime": "vendor.tflite_c_api",
+    "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+    "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+    "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+    "runs": 50,
+    "warmup": 10,
+    "threads": 2,
+    "crop": null,
+    "inference_ms_median": 7.707308499902865,
+    "inference_ms_p95": 8.101840500330582,
+    "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+    "tensor_contract": {
+      "inputs": [
+        {
+          "name": "input_1",
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "slot": 0,
+          "name": "Identity",
+          "shape": [
+            1,
+            63
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 1,
+          "name": "Identity_1",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 2,
+          "name": "Identity_2",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "slot": 3,
+          "name": "Identity_3",
+          "shape": [
+            1,
+            63
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ]
+    },
+    "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+    "runtime_version": "2.8.4"
+  },
+  "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+  "task": "gesture",
+  "session": 3,
+  "runs": 50,
+  "warmup": 10,
+  "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+  "comparison_to_tflite_cpu": {
+    "passed": true,
+    "criterion": "same gesture/presence result as original TFLite CPU"
+  }
+}

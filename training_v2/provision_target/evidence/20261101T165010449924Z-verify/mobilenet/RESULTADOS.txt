@@ -1,0 +1,11 @@
+MobileNet V2 / QAIRT 2.51.40 - resultado da validacao
+
+PASS_RUNTIME_AND_SINGLE_IMAGE_CLASSIFICATION
+
+CPU: 5 inferencias; 5 saidas salvas; top-1 Samoyed (85.8701%); media do perfil 23.4062 ms.
+HTP: 5 inferencias; 5 saidas salvas; top-1 Samoyed (75.5413%); media do perfil 3.9998 ms.
+
+Maior diferenca absoluta dos logits CPU/HTP: 2.87494278.
+Top-1 coincide; os vetores de scores NAO sao equivalentes.
+Tempo apenas informativo: sem aquecimento/controlar frequencias/condicoes termicas.
+Bibliotecas originais preservadas: True

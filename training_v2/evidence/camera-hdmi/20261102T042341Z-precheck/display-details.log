@@ -1,0 +1,44 @@
+failed to open device 'msm': No such file or directory
+
+DISPLAY LOGS
+
+WESTON ENV
+XDG_RUNTIME_DIR=/run/user/root
+
+WESTON CONFIG
+# configuration file for Weston
+
+[core]
+backend=sdm-backend.so
+idle-time=0
+require-input=false
+repaint-window=15
+
+[shell]
+# Set background color
+#background-image=/data/background.jpg
+
+# Set Title bar position: top|bottom|left|right|none
+panel-position=top
+
+# Set Clock style: none|minutes|seconds
+clock-format=seconds
+
+# Set Title Bar Color: 0xAARRGGBB|none
+#panel-color=none
+
+# Prohibit screen lock
+locking=false
+
+# Turn off animation effects
+startup-animation=none
+
+[output]
+# Monitor names can be viewed through weston-info
+name=DSI-1
+mode=on
+# Set effective resolution. If closed, select default.
+#mode=1920x1080
+
+#Set screen rotation or flipping display. rotation: normal|180|flipped|flipped-180
+transform=normal

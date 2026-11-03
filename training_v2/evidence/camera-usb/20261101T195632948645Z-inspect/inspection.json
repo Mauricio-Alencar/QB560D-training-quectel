@@ -1,0 +1,11 @@
+{
+  "host_utc": "20261101T195632948645Z",
+  "command": "printf 'USB TREE\n'\ntimeout -k 1s 4s lsusb -t\nprintf '\nROLE SWITCHES\n'\nfor entry in /sys/class/usb_role/*/role /sys/class/typec/*/data_role /sys/class/dual_role_usb/*/mode; do\n  [ -r \"$entry\" ] || continue\n  printf '%s: ' \"$entry\"\n  cat \"$entry\"\ndone\nprintf '\nUSB DEVICE ATTRIBUTES\n'\nfor entry in /sys/bus/usb/devices/*; do\n  [ -r \"$entry/idVendor\" ] || continue\n  printf '%s ' \"$entry\"\n  for key in idVendor idProduct product authorized; do\n    [ -r \"$entry/$key\" ] || continue\n    printf '%s=' \"$key\"\n    cat \"$entry/$key\"\n  done\ndone\nprintf '\nUVC DRIVER\n'\nls -d /sys/bus/usb/drivers/uvcvideo 2>&1\nif [ -r /proc/config.gz ]; then\n  zcat /proc/config.gz | grep -E 'CONFIG_USB_VIDEO_CLASS|CONFIG_USB_XHCI_HCD|CONFIG_MEDIA_USB_SUPPORT'\nfi\nprintf '\nUSB KERNEL EVENTS\n'\ndmesg | grep -iE 'usb|xhci|uvc|over.current|descriptor' | tail -n 55\n",
+  "exit_code": 0,
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

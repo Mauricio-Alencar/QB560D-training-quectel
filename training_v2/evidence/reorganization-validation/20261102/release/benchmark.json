@@ -1,0 +1,262 @@
+{
+  "status": "PASS_COMPARATIVE_TIMING",
+  "sessions": 45,
+  "sessions_per_backend": 3,
+  "measured_runs_per_session": 50,
+  "discarded_warmup_per_session": 10,
+  "table": [
+    {
+      "task": "classification",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 26.505241500672128,
+          "session_medians_ms": [
+            26.14595500017458,
+            26.53799000017898,
+            26.505241500672128
+          ],
+          "session_p95_ms": [
+            29.772370800674253,
+            32.37512839914415,
+            29.73029154973119
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 10.419066499707696,
+          "session_medians_ms": [
+            10.491771499800961,
+            10.15413249933772,
+            10.419066499707696
+          ],
+          "session_p95_ms": [
+            10.978337149481376,
+            10.715715349124366,
+            10.711513951082452
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.5579999999999998,
+          "session_medians_ms": [
+            1.5579999999999998,
+            1.5635,
+            1.5495
+          ],
+          "session_p95_ms": [
+            1.6272,
+            2.3853,
+            1.6181
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 17.01235012880111,
+      "latency_ratio_gpu_over_htp": 6.687462451673747
+    },
+    {
+      "task": "detection",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 35.79781799999182,
+          "session_medians_ms": [
+            35.91620200040779,
+            35.79781799999182,
+            35.695257999577734
+          ],
+          "session_p95_ms": [
+            37.3936284496267,
+            36.83911260040986,
+            36.78387619993373
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 23.644806499760307,
+          "session_medians_ms": [
+            23.64726950054319,
+            23.644806499760307,
+            22.94676199926471
+          ],
+          "session_p95_ms": [
+            24.514456099404924,
+            24.064457700114872,
+            23.298889299439907
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 3.088,
+          "session_medians_ms": [
+            3.088,
+            3.642,
+            3.049
+          ],
+          "session_p95_ms": [
+            3.1593999999999998,
+            3.7381,
+            3.1094
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 11.592557642484397,
+      "latency_ratio_gpu_over_htp": 7.656996923497508
+    },
+    {
+      "task": "pose",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 138.5677164998924,
+          "session_medians_ms": [
+            137.88308649964165,
+            138.5677164998924,
+            139.07949699932942
+          ],
+          "session_p95_ms": [
+            140.96911140004522,
+            140.13307524946867,
+            141.49070800003756
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 15.36659649991634,
+          "session_medians_ms": [
+            15.36659649991634,
+            15.006480499323516,
+            15.48376449954958
+          ],
+          "session_p95_ms": [
+            15.939749450444651,
+            15.84318409950356,
+            16.473418250279792
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 2.249,
+          "session_medians_ms": [
+            2.214,
+            2.249,
+            2.3335
+          ],
+          "session_p95_ms": [
+            2.2857499999999997,
+            2.8668499999999986,
+            2.70055
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 61.61303534899618,
+      "latency_ratio_gpu_over_htp": 6.832635171149995
+    },
+    {
+      "task": "gesture",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 56.998343499799375,
+          "session_medians_ms": [
+            55.96695999975054,
+            58.559228000376606,
+            56.998343499799375
+          ],
+          "session_p95_ms": [
+            58.1608905491521,
+            63.37658599886708,
+            61.03282295061945
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 7.910206999440561,
+          "session_medians_ms": [
+            7.94472950110503,
+            7.840655999643786,
+            7.910206999440561
+          ],
+          "session_p95_ms": [
+            8.340728199800651,
+            8.120538000093802,
+            8.203420499648928
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.7925,
+          "session_medians_ms": [
+            1.7925,
+            1.7725,
+            1.9925000000000002
+          ],
+          "session_p95_ms": [
+            1.8343,
+            1.83365,
+            2.445849999999999
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 31.79823905149198,
+      "latency_ratio_gpu_over_htp": 4.412946722142572
+    },
+    {
+      "task": "segmentation",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 178.18239950065617,
+          "session_medians_ms": [
+            178.18239950065617,
+            176.28645149943623,
+            179.02633950052405
+          ],
+          "session_p95_ms": [
+            181.9403627997417,
+            182.30212685039078,
+            183.1473092500346
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 20.88095150065783,
+          "session_medians_ms": [
+            20.88095150065783,
+            20.825304999561922,
+            21.59250849945238
+          ],
+          "session_p95_ms": [
+            21.360735099824524,
+            21.302057601224078,
+            22.16993755009753
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 4.6295,
+          "session_medians_ms": [
+            4.6295,
+            4.6434999999999995,
+            4.6075
+          ],
+          "session_p95_ms": [
+            4.81305,
+            4.8607,
+            4.81445
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 38.48847596946888,
+      "latency_ratio_gpu_over_htp": 4.51041181567293
+    }
+  ],
+  "method": {
+    "cpu_gpu_runtime": "Installed TFLite C API 2.8.4; CPU 2 threads; GPU delegate OpenCL partition, residual CPU ops possible",
+    "htp_runtime": "QAIRT/QNN 2.51.40.260930; libQnnHtp.so only; perf_profile default; profiling client; discard first warmup executions",
+    "scope": "TFLite InterpreterInvoke and QNN NETRUN ROOT EXECUTE; excludes model loading/compile, input preprocessing, host postprocess/NMS, rendering and ADB. TFLite SSD includes built-in detection postprocess/NMS; QNN SSD graph excludes host NMS. Converted/quantized artifacts differ; pipeline latency ratios, not pure hardware speedups or FPS.",
+    "order": "Rotate CPU/GPU/HTP order each session; no global governors/services/settings changed",
+    "reference_scope": "Same prepared PNG per task, semantic checks against original TFLite CPU; selected images, not dataset accuracy"
+  },
+  "original_runtimes_unchanged": true
+}

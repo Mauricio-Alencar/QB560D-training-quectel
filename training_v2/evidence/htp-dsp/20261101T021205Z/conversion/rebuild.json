@@ -1,0 +1,18 @@
+{
+  "pipeline_script": "host/rebuild_snpe_model.py",
+  "result": "PASS_REBUILT_CANDIDATE_CPU_AND_HTP_OUTPUT_MATCH",
+  "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "published_sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+  "rebuilt_sha256": "d7b8e8fd9d709e6cd4d7e58c1f9296de8ad754e94e4f129eb592e19288ff437b",
+  "same_bytes": false,
+  "onnx_output": "Exact source TFLite TF2.13 match before and after axis metadata normalization; supplied image only",
+  "quantization": "8-bit weights/activations; 32-bit bias; override_params; two reference images only",
+  "cpu_rebuilt_output": {
+    "exact_match_to_published_dlc": true,
+    "max_abs_difference": 0.0
+  },
+  "dsp_rebuilt_output": {
+    "exact_match_to_published_dlc": true,
+    "max_abs_difference": 0.0
+  }
+}

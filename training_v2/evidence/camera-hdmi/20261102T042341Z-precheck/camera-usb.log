@@ -1,0 +1,44 @@
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+msm_vidc_vdec ():
+	/dev/video32
+	/dev/video33
+
+Cannot open device /dev/video0, exiting.
+
+/sys/class/video4linux/video32: 
+
+/sys/class/video4linux/video33: 
+crw-rw---- 1 root video 81, 0 Jun 18  2024 /dev/video32
+crw-rw---- 1 root video 81, 1 Jun 18  2024 /dev/video33
+Module                  Size  Used by
+qps615                274432  0
+yt6801                376832  0
+wlan                10821632  0
+msm_drm              2064384  8
+lt9611uxd              32768  0
+camera               8392704  0
+rmnet_shs             126976  0
+rmnet_offload          20480  0
+rmnet_qlcore          167936  3 rmnet_offload,rmnet_shs
+rmnet_ctl              16384  1 rmnet_qlcore
+machine_dlkm          200704  0
+bt_fm_slim             24576  0
+btpower                24576  1 bt_fm_slim
+slimbus                49152  1 bt_fm_slim
+native_dlkm           192512  0
+swr_dmic_dlkm          20480  0
+rx_macro_dlkm         118784  0
+va_macro_dlkm         118784  0
+wsa_macro_dlkm         77824  0
+wcd937x_slave_dlkm     16384  0
+wcd938x_slave_dlkm     16384  0
+wcd938x_dlkm          122880  2 machine_dlkm,swr_dmic_dlkm
+wcd937x_dlkm          106496  2 machine_dlkm
+wcd9xxx_dlkm           32768  20 wcd937x_dlkm,wcd938x_dlkm
+mbhc_dlkm              45056  2 wcd937x_dlkm,wcd938x_dlkm
+tx_macro_dlkm         139264  0
+swr_ctrl_dlkm          57344  4 wsa_macro_dlkm,tx_macro_dlkm,rx_macro_dlkm,va_macro_dlkm
+swr_haptics_dlkm       20480  0
+bolero_cdc_dlkm        57344  6 machine_dlkm,wsa_macro_dlkm,tx_macro_dlkm,rx_macro_dlkm,va_macro_dlkm

@@ -1,0 +1,40 @@
+"""Write the human report and software catalog from the measured inventory."""
+import json
+from pathlib import Path
+from provision import ROOT,REPO,latest,read,save
+def main():
+    inv=read(latest());plan=read(ROOT/'plan.json')
+    observed=[]
+    for row in inv['snpe_api_versions']:
+        if row['probe']['exit_code']==0:observed.append(row['path']+' = '+row['probe']['output'].strip())
+    lines=['INVENTARIO DO NOVO FIRMWARE E PLANO DE PREPARACAO','Coleta autenticada por ADB em 01/11/2026 (America/Sao_Paulo).','Nenhum pacote foi instalado nesta revisao. apply NAO foi executado.','',
+    '1. SISTEMA OPERACIONAL',inv['identity']['uname']['output'].strip(),'Arquitetura: '+inv['identity']['architecture'],'Hostname: '+inv['identity']['hostname'],'SoC/device-tree: '+str(inv['identity']['soc_model']),'glibc: '+inv['identity']['glibc'][1],'Python: '+inv['identity']['python'].replace('\n',' '),'Usuario efetivo: root (uid 0)','','/etc/os-release:',inv['os_release_raw'],'','/etc/lsb-release:',inv['lsb_release_raw'],'','/etc/build_version:',inv['build_files'].get('/etc/build_version','ausente'),'','/etc/version:',inv['build_files'].get('/etc/version','ausente'),'','/etc/debian_version:',inv['build_files'].get('/etc/debian_version','ausente'),'Este identificador auxiliar e preservado como dado do BSP; os-release/lsb-release identificam Ubuntu focal.','',
+    '2. RUNTIMES DE IA',*observed,'','Nao foi encontrada instalacao QAIRT/QNN 2.51 nos caminhos examinados.','Nenhum qnn-net-run ou snpe-net-run foi localizado no PATH ou na busca dos runtimes.','Nao foram encontradas bibliotecas libQnn* na busca. A pasta isolada anterior em /opt desapareceu apos o reflash.','SNPE do BSP e um componente de runtime; sua presenca nao comprova um SDK QAIRT completo.','Outras copias gcc7.5 existem, mas nao exportam a API C consultada. Versao nao confirmada nessas copias.','TFLite C API: '+inv['tflite_c_api_version']['output'].strip(),
+    'NumPy global: '+inv['python_modules']['numpy']['version'],'Pillow: AUSENTE','Bindings Python tflite_runtime/LiteRT/TensorFlow/ONNX Runtime/OpenCV: AUSENTES.','O projeto pode reutilizar TFLite C API com o wrapper NumPy, sem instalar esses frameworks.','OpenCL/Adreno e FastRPC: bibliotecas/nodes presentes; inferencia funcional no novo firmware ainda nao ensaiada.','',
+    '3. FERRAMENTAS', 'Docker CLI/Engine, containerd, runc e Buildx: AUSENTES.','iperf3 e ss: AUSENTES.','pip3, Git e CMake: AUSENTES, nao obrigatorios para os fluxos previstos.','']
+    for name in ['gcc','g++','make','curl','systemctl','gst-launch-1.0']:
+        t=inv['tools'][name];lines.append(name+': '+t.get('version',{}).get('output','').splitlines()[0]+' ['+str(t['path'])+']')
+    lines+=['v4l2-ctl, ip, ping, journalctl, logger, tar/gzip/xz/unzip: presentes.','',
+    '4. FILESYSTEM, RELÓGIO E GERENCIADOR DE PACOTES','/opt: '+inv['mounts']['/opt']['output'].strip(),'/data: '+inv['mounts']['/data']['output'].strip(),inv['space']['output'].strip(),
+    'Use /opt para arquivos persistentes executaveis. /data esta com noexec.','Relogio observado na caixa (UTC): '+inv['at_target_utc'],'Horario da coleta no host (UTC): '+inv['host_utc'],'O relogio do target estava desatualizado; o plano sincroniza a partir do host se a diferenca exceder cinco minutos.','dpkg --audit retornou uma lista extensa de pacotes sem arquivos de lista/controle.','O plano nao executa reparo do dpkg nem apt update/upgrade/install.','',
+    '5. SOFTWARE QUE O PLANO ACRESCENTARA','iperf3 3.22 (build nativo em /opt, fonte e hash oficiais ESnet).','ss do iproute2 5.5.0-1ubuntu1 ARM64 (extracao privada; bibliotecas necessarias encontradas).','NumPy 1.24.4 e Pillow 10.4.0 privados para CPython 3.8/AArch64.','Docker 29.9.2, containerd 2.4.2, runc 1.5.2, Buildx v0.38.1 e imagem offline ARM64 da demo.','QAIRT/QNN/SNPE 2.51.40.260930230134, stubs/skeletons HTP v68, MobileNet e tres DLCs de gestos.','Fontes, modelos, imagens e configuracao de exemplo do treinamento.','O catalogo SOFTWARE_PLANEJADO.json e o README.txt detalham origens e destinos.','',
+    '6. ESTADO DO PLANO','Status: '+plan['status'],'Blockers: '+json.dumps(plan['blockers']),'Bundle preparado: '+str(plan['bundle_prepared']),'Instalacao no novo firmware: NAO EXECUTADA.','Os testes de software/arquivos foram feitos no host; apply repetira os testes funcionais na caixa.','A homologacao anterior de Docker/QAIRT serve como referencia, nao como resultado do novo firmware.','',
+    '7. REPRODUCAO A PARTIR DA RAIZ DO REPOSITORIO','python provision_target/provision.py inspect','python provision_target/provision.py prepare --offline','python provision_target/provision.py plan','python provision_target/provision.py apply  # somente na etapa futura de instalacao','',
+    'A senha e solicitada no terminal e nao e salva em codigo, plano ou evidencias.','Os comandos antigos que pressupunham um shell ADB sem login nao atendem a este firmware.','O novo helper autentica a sessao e confirma o status remoto de cada comando.','',
+    'EVIDENCIA PRIMARIA: '+str(latest().resolve())]
+    (ROOT/'RELATORIO_FIRMWARE_ATUAL.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (ROOT/'os-release-atual.txt').write_text(inv['os_release_raw']+'\n',encoding='utf-8')
+    catalog=[]
+    def add(name,version,before,dest,source,method):catalog.append(dict(software=name,planned_version=version,current_state=before,destination=dest,source=source,method=method))
+    add('iperf3','3.22','absent','/opt/qb560d-workshop/tools/iperf3-3.22','https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz','Native build with existing GCC/Make; --without-openssl; SHA256 pinned')
+    add('ss (iproute2)','5.5.0-1ubuntu1','absent','/opt/qb560d-workshop/tools/ss-5.5.0','https://ports.ubuntu.com/ubuntu-ports/pool/main/i/iproute2/iproute2_5.5.0-1ubuntu1_arm64.deb','Extract ss/copyright only; no dpkg installation or replacement of ip')
+    for name,version,before in [('NumPy','1.24.4','global 1.17.4 retained'),('Pillow','10.4.0','absent')]:add(name,version,before,'/opt/qb560d-training-payload/.python-deps','PyPI pinned CP38/AArch64 wheel','Private wheel extraction; no target pip or global Python replacement')
+    for name,version in [('Docker Engine/CLI','29.9.2'),('containerd and ctr/shim','2.4.2'),('runc','1.5.2'),('docker-init / docker-proxy','bundled with Docker 29.9.2'),('Docker Buildx','v0.38.1')]:add(name,version,'absent','/opt/qb560d-docker-demo','demos/docker/offline/runtime.lock.json','Official static runtime; private daemon, socket and Docker unit')
+    add('Telemetry OCI image','qb560d-telemetry:1.0.0','absent','Docker private image storage','demos/docker/offline/image.lock.json','Offline docker load; image includes its own Python/Linux userland')
+    add('QAIRT/QNN/SNPE','2.51.40.260930230134','SNPE 2.21 and legacy 2.12 retained; QNN 2.51 absent','/opt/qairt-isolated/2.51.40.260930','runtimes/qairt_2_51/versions.lock.json','Parallel installation, per-process library paths, HTP v68')
+    add('Native training payload','current locked repository revision','absent','/opt/qb560d-training-payload','bundle-manifest.json','Sources, five TFLite models, media, example config, wheels')
+    add('MobileNet V2 QNN DLC','v0.65.0 w8a8','absent','/opt/qairt-isolated/2.51.40.260930/model','runtimes/qairt_2_51/versions.lock.json','Precompiled DLC; CPU/HTP validation after installation')
+    add('MediaPipe hand gesture DLCs','v0.65.0 w8a8, three graphs','absent','/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture','demos/hand_gesture/assets.lock.json','Precompiled DLCs and selected photos; HTP validation after installation')
+    save(ROOT/'SOFTWARE_PLANEJADO.json',dict(installation_executed=False,software=catalog,system_packages_replaced=[],outside_opt_changes=['/etc/systemd/system/qb560d-docker-demo.service','Start Docker training service, not enable at boot','Set UTC from host if target clock differs by more than five minutes'],existing_reused=plan['existing_reused'],not_required_on_target=plan['not_required_on_target']))
+    print('Report and software catalog written.')
+if __name__=='__main__':main()

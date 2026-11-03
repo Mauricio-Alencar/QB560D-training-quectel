@@ -1,0 +1,6 @@
+{
+  "command": "cd /opt/qb560d-docker-demo && python3 target/rehearse.py",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:27:41.417639+00:00"
+}

@@ -1,0 +1,4 @@
+{
+  "command": "sh /opt/qb560d-training-payload/target/ai.sh segmentation --image /opt/qb560d-ai-htp251/runs/rd3192690a68248/input.png --output /opt/qb560d-ai-htp251/runs/rd3192690a68248/reference --runs 1 --warmup 0 --vendor-c-api",
+  "exit_code": 0
+}

@@ -1,0 +1,4 @@
+{
+  "command": "id\nuname -a\ncat /etc/os-release\ncommand -v python3\npython3 --version",
+  "exit_code": 0
+}

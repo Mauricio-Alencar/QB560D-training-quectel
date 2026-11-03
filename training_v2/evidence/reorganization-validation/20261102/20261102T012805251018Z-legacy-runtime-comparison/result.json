@@ -1,0 +1,10 @@
+{
+  "label": "legacy-runtime-comparison",
+  "script": "host\\run_htp_comparison.py",
+  "args": [],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 20.594,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012805251018Z-legacy-runtime-comparison\\console.log"
+}

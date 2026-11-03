@@ -1,0 +1,36 @@
+{
+  "classification": {
+    "demo_id": "D2-05", "task": "classification", "model": "mobilenet_v1.tflite",
+    "input_kind": "raw", "size": [224, 224], "labels": "imagenet_labels.txt",
+    "outputs": {"scores": 0},
+    "source": "https://storage.googleapis.com/download.tensorflow.org/models/mobilenet_v1_2018_08_02/mobilenet_v1_1.0_224_quant.tgz",
+    "archive_member": "mobilenet_v1_1.0_224_quant.tflite",
+    "labels_url": "https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt"
+  },
+  "detection": {
+    "demo_id": "D2-06", "task": "detection", "model": "ssd_mobilenet_v1.tflite",
+    "input_kind": "raw", "size": [300, 300], "labels": "coco_labels.txt", "label_offset": 1,
+    "outputs": {"boxes": 0, "classes": 1, "scores": 2, "count": 3},
+    "source": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip",
+    "archive_member": "detect.tflite", "labels_member": "labelmap.txt"
+  },
+  "pose": {
+    "demo_id": "D2-07", "task": "pose", "model": "posenet.tflite",
+    "input_kind": "normalized", "mean": 127.5, "std": 127.5, "size": [257, 353],
+    "outputs": {"heatmaps": 0, "offsets": 1},
+    "source": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/multi_person_mobilenet_v1_075_float.tflite"
+  },
+  "gesture": {
+    "demo_id": "D2-08", "task": "gesture", "model": "hand_landmark_lite.tflite",
+    "input_kind": "normalized", "mean": 0.0, "std": 255.0, "size": [224, 224],
+    "outputs": {"landmarks": 0, "presence": 1},
+    "source": "https://storage.googleapis.com/mediapipe-assets/hand_landmark_lite.tflite"
+  },
+  "segmentation": {
+    "demo_id": "D2-09", "task": "segmentation", "model": "deeplabv3.tflite",
+    "input_kind": "normalized", "mean": 127.5, "std": 127.5, "size": [257, 257],
+    "outputs": {"mask": 0},
+    "class_labels": ["background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"],
+    "source": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/deeplabv3_257_mv_gpu.tflite"
+  }
+}

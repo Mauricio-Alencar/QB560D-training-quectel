@@ -1,0 +1,371 @@
+{
+  "tensorflow_inspection_version": "2.13.0",
+  "models": {
+    "classification": {
+      "source_model": "mobilenet_v1.tflite",
+      "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "inputs": [
+        {
+          "name": "input",
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.0078125,
+            128
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MobilenetV1/Predictions/Reshape_1",
+          "shape": [
+            1,
+            1001
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.00390625,
+            0
+          ]
+        }
+      ],
+      "operators": [
+        "AVERAGE_POOL_2D",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "RESHAPE",
+        "SOFTMAX"
+      ]
+    },
+    "detection": {
+      "source_model": "ssd_mobilenet_v1.tflite",
+      "source_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "inputs": [
+        {
+          "name": "normalized_input_image_tensor",
+          "shape": [
+            1,
+            300,
+            300,
+            3
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.0078125,
+            128
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "TFLite_Detection_PostProcess",
+          "shape": [
+            1,
+            10,
+            4
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "TFLite_Detection_PostProcess:1",
+          "shape": [
+            1,
+            10
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "TFLite_Detection_PostProcess:2",
+          "shape": [
+            1,
+            10
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "TFLite_Detection_PostProcess:3",
+          "shape": [
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "operators": [
+        "CONCATENATION",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "LOGISTIC",
+        "RESHAPE",
+        "TFLite_Detection_PostProcess"
+      ],
+      "pre_nms_outputs": [
+        {
+          "name": "Squeeze",
+          "shape": [
+            1,
+            1917,
+            4
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.07902787625789642,
+            191
+          ]
+        },
+        {
+          "name": "convert_scores",
+          "shape": [
+            1,
+            1917,
+            91
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "quantization": [
+            0.00390625,
+            0
+          ]
+        }
+      ],
+      "nms_options": {
+        "_output_quantized": true,
+        "h_scale": 5.0,
+        "max_classes_per_detection": 1,
+        "max_detections": 10,
+        "nms_iou_threshold": 0.6000000238418579,
+        "nms_score_threshold": 9.99999993922529e-09,
+        "num_classes": 90,
+        "w_scale": 5.0,
+        "x_scale": 10.0,
+        "y_scale": 10.0
+      }
+    },
+    "pose": {
+      "source_model": "posenet.tflite",
+      "source_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "inputs": [
+        {
+          "name": "sub_2",
+          "shape": [
+            1,
+            353,
+            257,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "float_heatmaps",
+          "shape": [
+            1,
+            23,
+            17,
+            17
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "float_short_offsets",
+          "shape": [
+            1,
+            23,
+            17,
+            34
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "float_mid_offsets",
+          "shape": [
+            1,
+            23,
+            17,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "float_segments",
+          "shape": [
+            1,
+            23,
+            17,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "operators": [
+        "CONCATENATION",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D"
+      ]
+    },
+    "gesture": {
+      "source_model": "hand_landmark_lite.tflite",
+      "source_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "inputs": [
+        {
+          "name": "input_1",
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Identity",
+          "shape": [
+            1,
+            63
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "Identity_1",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "Identity_2",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        },
+        {
+          "name": "Identity_3",
+          "shape": [
+            1,
+            63
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "operators": [
+        "ADD",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "DEQUANTIZE",
+        "FULLY_CONNECTED",
+        "LOGISTIC",
+        "MAX_POOL_2D",
+        "MEAN"
+      ]
+    },
+    "segmentation": {
+      "source_model": "deeplabv3.tflite",
+      "source_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "inputs": [
+        {
+          "name": "sub_7",
+          "shape": [
+            1,
+            257,
+            257,
+            3
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ResizeBilinear_3",
+          "shape": [
+            1,
+            257,
+            257,
+            21
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "quantization": [
+            0.0,
+            0
+          ]
+        }
+      ],
+      "operators": [
+        "ADD",
+        "AVERAGE_POOL_2D",
+        "CONCATENATION",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "RESIZE_BILINEAR"
+      ]
+    }
+  }
+}

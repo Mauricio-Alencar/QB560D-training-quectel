@@ -1,0 +1,20 @@
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 0, option - 2
+[USER_INFO] SNPEBuilder Runtime - 0, Profile - 0, Profiling level - 0, Execution Priority - 0 
+                  SNPEBuilder User buffer - 0, Debug Mode - 0, Fallback - 0, Caching - 0 
+                  SNPEBuilder CPU Fixed Point Mode - 0 
+[USER_INFO] Performing regular init
+[USER_INFO] Cleaning up cluster manager instance resources
+Traceback (most recent call last):
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 209, in <module>
+    main()
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 174, in main
+    engine = Snpe(library, model, args.backend, output, {'off': 0, 'basic': 1, 'detailed': 2}[args.profiling])
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 85, in __init__
+    self.handle = self.own('SNPE', self.lib.Snpe_SNPEBuilder_Build(builder))
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 106, in own
+    raise RuntimeError(kind + ' creation failed: ' + (self.lib.Snpe_ErrorCode_GetLastErrorString() or self.lib.Snpe_Util_GetLastError() or b'').decode(errors='replace'))
+RuntimeError: SNPE creation failed: error_code=400; error_message=Network is empty. error_code=400; error_message=Network is empty. Empty network descriptor detected; error_component=Dl Network; line_no=925; thread_id=547997401568; error_component=Dl Network; line_no=280; thread_id=548077465616
+[USER_INFO] BackendTerminate triggered
+
+__QB560D_EXIT__=1

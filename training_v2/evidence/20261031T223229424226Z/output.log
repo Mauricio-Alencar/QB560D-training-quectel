@@ -1,0 +1,5 @@
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+{"status": "ok"}
+RESULT: SERVICE_HEALTH_PASS
+
+__QB560D_EXIT__=0

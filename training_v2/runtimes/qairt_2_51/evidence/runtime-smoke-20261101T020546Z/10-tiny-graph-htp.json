@@ -1,0 +1,5 @@
+{
+  "command": "cd /tmp/qairt-isolated-20261101T020546Z\nenv LD_LIBRARY_PATH=/tmp/qairt-isolated-20261101T020546Z/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu ADSP_LIBRARY_PATH='/tmp/qairt-isolated-20261101T020546Z/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib' /usr/bin/timeout 25s /tmp/qairt-isolated-20261101T020546Z/bin/tiny_graph /tmp/qairt-isolated-20261101T020546Z/lib/libQnnHtp.so\n",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:13:53.990097+00:00"
+}

@@ -1,0 +1,18 @@
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     qb560d-training-wlan
+IP4.ADDRESS[1]:                         192.168.0.11/24
+IP4.GATEWAY:                            192.168.0.1
+IP4.DNS[1]:                             181.213.132.2
+IP4.DNS[2]:                             181.213.132.3
+default via 192.168.0.1  proto dhcp  metric 600 
+192.168.0.0/24  proto kernel  scope link  src 192.168.0.11  metric 600 
+Connected to 8c:44:4f:0c:df:81 (on wlan0)
+	SSID: Mauricio_WIFI5G
+	freq: 5825
+	RX: 66401 bytes (419 packets)
+	TX: 15212 bytes (123 packets)
+	signal: -77 dBm
+	rx bitrate: 104.0 MBit/s VHT-MCS 5 VHT-NSS 2
+	tx bitrate: 39.0 MBit/s VHT-MCS 2 VHT-NSS 2
+
+__QB560D_EXIT__=0

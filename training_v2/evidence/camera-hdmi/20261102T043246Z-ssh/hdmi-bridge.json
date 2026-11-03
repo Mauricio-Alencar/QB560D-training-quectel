@@ -1,0 +1,6 @@
+{
+  "transport": "SSH",
+  "host_key_verified": true,
+  "command": "for n in /sys/bus/i2c/devices/2-002b /sys/bus/i2c/devices/2-0041; do printf '\\nDEVICE %s\\n' \"$n\"; ls -la \"$n\"; cat \"$n/name\" 2>/dev/null || true; readlink -f \"$n/driver\"; if [ -f \"$n/of_node/compatible\" ]; then tr '\\000' '\\n' < \"$n/of_node/compatible\"; fi; done; printf '\\nKERNEL\\n'; dmesg | grep -Ei 'lt9611|hdmi|hpd|edid|drm|dsi' | tail -n 90; printf '\\nINTERRUPTS\\n'; grep -Ei 'lt9611|hdmi|dsi|msm_drm' /proc/interrupts || true",
+  "exit_code": 0
+}

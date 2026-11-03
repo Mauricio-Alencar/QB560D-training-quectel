@@ -1,0 +1,10 @@
+{
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "location": "Qualcomm-hosted device; NOT the local QB560D",
+  "compile_options": "--target_runtime tflite --compute_unit gpu",
+  "source_sha256": "d80d174228cefcf0e09dd344c102379dc03c4348ed13c9a09ac728ee61b31b5b",
+  "compile_job": {
+    "id": "j57n9nnrp",
+    "url": "https://workbench.aihub.qualcomm.com/jobs/j57n9nnrp/"
+  }
+}

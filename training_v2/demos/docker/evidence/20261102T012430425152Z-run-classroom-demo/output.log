@@ -1,0 +1,24 @@
+7e27d165c97b767b149905a5955d82f7a76035b855546179e03e985140121bc4
+{
+  "/health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 10218.06,
+      "process_uptime_s": 3.019
+    }
+  },
+  "/missing": {
+    "http": 404,
+    "body": null
+  }
+}
+

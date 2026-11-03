@@ -1,0 +1,191 @@
+before: exit 0
+owned-directory: exit 0
+model-status-classification: exit 0
+model-hash-classification: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\burger-classification\input.png: 1 file pushed, 0 skipped. 16.1 MB/s (95361 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\burger-classification\input.raw: 1 file pushed, 0 skipped. 8.7 MB/s (602112 bytes in 0.066s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\burger-classification\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rd86787b4b92746/reference/: 3 files pulled, 0 skipped. 6.3 MB/s (534412 bytes in 0.080s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rd86787b4b92746/htp/: 7 files pulled, 0 skipped. 2.2 MB/s (60110 bytes in 0.027s)
+classification htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\burger-classification\input.png: 1 file pushed, 0 skipped. 210.8 MB/s (95361 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/cae780a6c10cb4b/gpu/: 3 files pulled, 0 skipped. 6.4 MB/s (534516 bytes in 0.080s)
+burger-classification PASS
+model-status-detection: exit 0
+model-hash-detection: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-detection\input.png: 1 file pushed, 0 skipped. 14.5 MB/s (94336 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-detection\input.raw: 1 file pushed, 0 skipped. 7.6 MB/s (1080000 bytes in 0.135s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-detection\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (85 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r80978b7dae1c43/reference/: 3 files pulled, 0 skipped. 5.9 MB/s (322314 bytes in 0.052s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r80978b7dae1c43/htp/: 10 files pulled, 0 skipped. 7.0 MB/s (2311586 bytes in 0.316s)
+detection htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-detection\input.png: 1 file pushed, 0 skipped. 213.5 MB/s (94336 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c26e9def510b845/gpu/: 3 files pulled, 0 skipped. 5.9 MB/s (322589 bytes in 0.052s)
+full-body-detection PASS
+model-status-detection: exit 0
+model-hash-detection: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-detection\input.png: 1 file pushed, 0 skipped. 14.2 MB/s (80999 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-detection\input.raw: 1 file pushed, 0 skipped. 7.8 MB/s (1080000 bytes in 0.132s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-detection\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (85 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r6a2766bf522d4f/reference/: 3 files pulled, 0 skipped. 6.2 MB/s (284670 bytes in 0.044s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r6a2766bf522d4f/htp/: 10 files pulled, 0 skipped. 6.5 MB/s (2311590 bytes in 0.340s)
+detection htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-detection\input.png: 1 file pushed, 0 skipped. 194.7 MB/s (80999 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c10b8d7a4446a47/gpu/: 3 files pulled, 0 skipped. 5.4 MB/s (284838 bytes in 0.050s)
+no-person-detection PASS
+model-status-pose: exit 0
+model-hash-pose: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-pose\input.png: 1 file pushed, 0 skipped. 14.3 MB/s (96076 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-pose\input.raw: 1 file pushed, 0 skipped. 8.0 MB/s (1088652 bytes in 0.131s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-pose\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.007s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r40b7e26693534d/reference/: 3 files pulled, 0 skipped. 5.2 MB/s (436494 bytes in 0.080s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r40b7e26693534d/htp/: 10 files pulled, 0 skipped. 4.2 MB/s (298087 bytes in 0.068s)
+pose htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\full-body-pose\input.png: 1 file pushed, 0 skipped. 139.7 MB/s (96076 bytes in 0.001s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/caf6c0b2e384747/gpu/: 3 files pulled, 0 skipped. 6.4 MB/s (436624 bytes in 0.065s)
+full-body-pose PASS
+model-status-pose: exit 0
+model-hash-pose: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-full-body-pose\input.png: 1 file pushed, 0 skipped. 12.6 MB/s (76673 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-full-body-pose\input.raw: 1 file pushed, 0 skipped. 7.5 MB/s (1088652 bytes in 0.138s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-full-body-pose\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rce85d93b3e204b/reference/: 3 files pulled, 0 skipped. 7.0 MB/s (380377 bytes in 0.052s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rce85d93b3e204b/htp/: 10 files pulled, 0 skipped. 4.3 MB/s (298086 bytes in 0.067s)
+pose htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-full-body-pose\input.png: 1 file pushed, 0 skipped. 199.0 MB/s (76673 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c3470512d70df47/gpu/: 3 files pulled, 0 skipped. 6.1 MB/s (380494 bytes in 0.060s)
+standing-full-body-pose PASS
+model-status-pose: exit 0
+model-hash-pose: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\occluded-pose\input.png: 1 file pushed, 0 skipped. 12.9 MB/s (71788 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\occluded-pose\input.raw: 1 file pushed, 0 skipped. 7.6 MB/s (1088652 bytes in 0.137s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\occluded-pose\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r70e034ef12be4d/reference/: 3 files pulled, 0 skipped. 6.6 MB/s (358204 bytes in 0.052s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r70e034ef12be4d/htp/: 10 files pulled, 0 skipped. 3.7 MB/s (298086 bytes in 0.076s)
+pose htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\occluded-pose\input.png: 1 file pushed, 0 skipped. 208.7 MB/s (71788 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/ca67c92b74c854c/gpu/: 3 files pulled, 0 skipped. 6.4 MB/s (358341 bytes in 0.054s)
+occluded-pose PASS
+model-status-gesture: exit 0
+model-hash-gesture: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\closed-fist\input.png: 1 file pushed, 0 skipped. 12.0 MB/s (77365 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\closed-fist\input.raw: 1 file pushed, 0 skipped. 8.9 MB/s (602112 bytes in 0.064s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\closed-fist\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (63 bytes in 0.005s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r2c40fe2ab53f47/reference/: 3 files pulled, 0 skipped. 6.4 MB/s (480853 bytes in 0.071s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r2c40fe2ab53f47/htp/: 10 files pulled, 0 skipped. 3.3 MB/s (144072 bytes in 0.042s)
+gesture htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\closed-fist\input.png: 1 file pushed, 0 skipped. 152.5 MB/s (77365 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/ca928aec2171e41/gpu/: 3 files pulled, 0 skipped. 6.4 MB/s (480959 bytes in 0.072s)
+closed-fist PASS
+model-status-gesture: exit 0
+model-hash-gesture: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-hand\input.png: 1 file pushed, 0 skipped. 17.5 MB/s (92990 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-hand\input.raw: 1 file pushed, 0 skipped. 9.2 MB/s (602112 bytes in 0.062s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-hand\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (63 bytes in 0.005s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r05232ca81db945/reference/: 3 files pulled, 0 skipped. 6.4 MB/s (591605 bytes in 0.088s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r05232ca81db945/htp/: 10 files pulled, 0 skipped. 3.1 MB/s (144073 bytes in 0.044s)
+gesture htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-hand\input.png: 1 file pushed, 0 skipped. 242.8 MB/s (92990 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/ca5236eea92c54d/gpu/: 3 files pulled, 0 skipped. 6.1 MB/s (591710 bytes in 0.092s)
+no-hand PASS
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\person-segmentation\input.png: 1 file pushed, 0 skipped. 12.7 MB/s (73637 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\person-segmentation\input.raw: 1 file pushed, 0 skipped. 8.2 MB/s (792588 bytes in 0.092s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\person-segmentation\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/rd3192690a68248/reference/: 3 files pulled, 0 skipped. 6.8 MB/s (5305124 bytes in 0.743s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/rd3192690a68248/htp/: 7 files pulled, 0 skipped. 7.0 MB/s (16745236 bytes in 2.270s)
+segmentation htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\person-segmentation\input.png: 1 file pushed, 0 skipped. 165.4 MB/s (73637 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c403155d04d5c49/gpu/: 3 files pulled, 0 skipped. 7.1 MB/s (5302766 bytes in 0.716s)
+person-segmentation PASS
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-boundary-segmentation\input.png: 1 file pushed, 0 skipped. 10.1 MB/s (60212 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-boundary-segmentation\input.raw: 1 file pushed, 0 skipped. 7.7 MB/s (792588 bytes in 0.099s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-boundary-segmentation\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/r5764838ddd3a4b/reference/: 3 files pulled, 0 skipped. 7.0 MB/s (5256968 bytes in 0.720s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/r5764838ddd3a4b/htp/: 7 files pulled, 0 skipped. 7.2 MB/s (16745236 bytes in 2.230s)
+segmentation htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\standing-boundary-segmentation\input.png: 1 file pushed, 0 skipped. 190.0 MB/s (60212 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c27e3ca8cd51e4b/gpu/: 3 files pulled, 0 skipped. 7.2 MB/s (5253999 bytes in 0.695s)
+standing-boundary-segmentation PASS
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-segmentation\input.png: 1 file pushed, 0 skipped. 11.0 MB/s (62182 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-segmentation\input.raw: 1 file pushed, 0 skipped. 8.1 MB/s (792588 bytes in 0.093s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-segmentation\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.006s)
+original-tflite-cpu: exit 0
+/opt/qb560d-ai-htp251/runs/re30d3744ad524e/reference/: 3 files pulled, 0 skipped. 7.0 MB/s (5285986 bytes in 0.716s)
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/re30d3744ad524e/htp/: 7 files pulled, 0 skipped. 7.2 MB/s (16745236 bytes in 2.220s)
+segmentation htp PASS
+gpu-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11\no-person-segmentation\input.png: 1 file pushed, 0 skipped. 182.3 MB/s (62182 bytes in 0.000s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/c39c12047454845/gpu/: 3 files pulled, 0 skipped. 6.8 MB/s (5283546 bytes in 0.741s)
+no-person-segmentation PASS
+after: exit 0
+PASS_REFERENCE_CONTROLS C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\vision-11

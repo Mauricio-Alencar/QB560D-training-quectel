@@ -1,0 +1,10 @@
+{
+  "label": "fresh-candidate-path-validation",
+  "script": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\host\\validate_release.py",
+  "args": [],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 3.125,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T015551338003Z-fresh-candidate-path-validation\\console.log"
+}

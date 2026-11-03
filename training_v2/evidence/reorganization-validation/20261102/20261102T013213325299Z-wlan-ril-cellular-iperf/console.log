@@ -1,0 +1,40 @@
+START wlan-host-status
+PASS wlan-host-status (0.516s) evidence\reorganization-validation\20261102\20261102T013213503180Z-wlan-host-status\console.log
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     qb560d-training-wlan
+IP4.ADDRESS[1]:                         192.168.0.26/24
+IP4.GATEWAY:                            192.168.0.1
+IP4.DNS[1]:                             181.213.132.2
+IP4.DNS[2]:                             181.213.132.3
+default via 192.168.0.1  proto dhcp  metric 600 
+181.213.132.2 via 192.168.0.1  proto static  metric 600 
+181.213.132.3 via 192.168.0.1  proto static  metric 600 
+192.168.0.0/24  proto kernel  scope link  src 192.168.0.26  metric 600 
+Connected to 8c:44:4f:0c:df:81 (on wlan0)
+	SSID: Mauricio_WIFI5G
+	freq: 5825
+	RX: 165137 bytes (2323 packets)
+	TX: 24578 bytes (525 packets)
+	signal: -68 dBm
+	rx bitrate: 86.7 MBit/s VHT-MCS 4 short GI VHT-NSS 2
+	tx bitrate: 52.0 MBit/s VHT-MCS 3 VHT-NSS 2
+
+__QB560D_EXIT__=0
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\20261102T013213723370Z
+
+before: exit 0
+profile-hash-before: exit 0
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\reorganization-validation-20261102\network_validation.py", line 101, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\reorganization-validation-20261102\network_validation.py", line 49, in main
+    assert report.get('registration') in [1,5],'SIM is not registered; do not activate blindly'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SIM is not registered; do not activate blindly

@@ -1,0 +1,169 @@
+{
+  "at_host_utc": "2026-11-01T20:42:50.574264+00:00",
+  "kind": "REPLAY_OF_VALIDATED_LOGS",
+  "live_screen_capture": false,
+  "fresh_cloud_submission": false,
+  "audio": false,
+  "duration_s": 106,
+  "fps": 10,
+  "size": [
+    1280,
+    720
+  ],
+  "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+  "source_sha256": "a037aece6f98629446157e85e5a62b38ca24a1e3370c143fdc8e35dea2e2e09c",
+  "video_sha256": "0547ec2311d64d795b891c8e787f8fb0bef143923e8f49a9ca1f1d6182c2e760",
+  "scenes": [
+    {
+      "number": 1,
+      "start_s": 0,
+      "end_s": 9,
+      "seconds": 9,
+      "title": "AI Hub na QB560D-EU",
+      "lines": [
+        "Conting\u00eancia offline do laborat\u00f3rio D2-04",
+        "Compile, infer\u00eancia, profile e deploy CPU/GPU",
+        "Dados reais de 1 de novembro de 2026",
+        "Formato: replay de logs e resultados aprovados"
+      ],
+      "caption": "Este v\u00eddeo reproduz os resultados reais salvos. N\u00e3o \u00e9 uma captura de tela ao vivo."
+    },
+    {
+      "number": 2,
+      "start_s": 9,
+      "end_s": 22,
+      "seconds": 13,
+      "title": "1. Contrato do modelo",
+      "lines": [
+        "Algoritmo: Conv3x3, ReLU, m\u00e9dia espacial, Flatten",
+        "Entrada sint\u00e9tica: float32 NCHW [1, 3, 32, 32]",
+        "Sa\u00edda: quatro caracter\u00edsticas num\u00e9ricas [1, 4]",
+        "",
+        "Refer\u00eancia NumPy:",
+        "0.09336850  0.18468535  0.32469758  0.09120750",
+        "A sa\u00edda n\u00e3o representa classes de objetos."
+      ],
+      "caption": "A refer\u00eancia controlada permite validar convers\u00e3o e execu\u00e7\u00e3o antes de uma demo visual."
+    },
+    {
+      "number": 3,
+      "start_s": 22,
+      "end_s": 34,
+      "seconds": 12,
+      "title": "2. Jobs hospedados conclu\u00eddos",
+      "lines": [
+        "Dragonwing RB3 Gen 2 Vision Kit",
+        "QCS6490 / Hexagon v68 / Qualcomm Linux 1.6",
+        "Compile:          j5q1v4l7g   SUCCESS",
+        "Inference/profile:j56mwo8vp   SUCCESS",
+        "Profile: 4 entradas GPU e 0 entradas CPU",
+        "TFLite exportado: 1992 bytes",
+        "CPU/GPU da nossa caixa usam esse mesmo artefato."
+      ],
+      "caption": "O kit hospedado e a QB560D-EU t\u00eam sistemas distintos. Suas medidas ficam separadas."
+    },
+    {
+      "number": 4,
+      "start_s": 34,
+      "end_s": 46,
+      "seconds": 12,
+      "title": "3. Compara\u00e7\u00e3o num\u00e9rica hospedada",
+      "lines": [
+        "Refer\u00eancia:",
+        "0.09336850  0.18468535  0.32469758  0.09120750",
+        "GPU hospedada:",
+        "0.09338379  0.18469238  0.32470703  0.09124756",
+        "Erro absoluto m\u00e1ximo: 0.00004005",
+        "Toler\u00e2ncia: atol=0.0001, rtol=0.001",
+        "CORRECTNESS: PASS"
+      ],
+      "caption": "Os quatro valores passaram na compara\u00e7\u00e3o. A valida\u00e7\u00e3o cobre essa entrada sint\u00e9tica."
+    },
+    {
+      "number": 5,
+      "start_s": 46,
+      "end_s": 60,
+      "seconds": 14,
+      "title": "4. CPU da QB560D-EU",
+      "lines": [
+        "Trecho do resultado real salvo:",
+        "result: PASS",
+        "backend: cpu     runtime: TFLite 2.8.4",
+        "input_layout: NCHW",
+        "max_abs_error: 1.490e-08",
+        "median_invoke_ms: 0.0848305",
+        "10 aquecimentos e 50 infer\u00eancias medidas",
+        "__QB560D_EXIT__=0"
+      ],
+      "caption": "A CPU executou o artefato baixado, com o mesmo hash e sem alterar o runtime do BSP."
+    },
+    {
+      "number": 6,
+      "start_s": 60,
+      "end_s": 74,
+      "seconds": 14,
+      "title": "5. GPU da QB560D-EU",
+      "lines": [
+        "INFO: Created TensorFlow Lite delegate for GPU.",
+        "INFO: Initialized OpenCL-based API.",
+        "INFO: Created 1 GPU delegate kernels.",
+        "result: PASS     runtime: TFLite 2.8.4",
+        "max_abs_error: 2.980e-08",
+        "median_invoke_ms: 0.2543065",
+        "10 aquecimentos e 50 infer\u00eancias medidas",
+        "__QB560D_EXIT__=0"
+      ],
+      "caption": "O log confirma OpenCL e um kernel delegado. O caminho n\u00e3o refaz a execu\u00e7\u00e3o em CPU."
+    },
+    {
+      "number": 7,
+      "start_s": 74,
+      "end_s": 88,
+      "seconds": 14,
+      "title": "6. Resultado e limites",
+      "lines": [
+        "Mesmo TFLite, entrada e refer\u00eancia na caixa",
+        "CPU local: mediana 0.0848 ms",
+        "GPU local: mediana 0.2543 ms",
+        "GPU/CPU local: 3.00x o tempo",
+        "Este grafo pequeno n\u00e3o mostrou ganho na GPU.",
+        "Hub: estimativa 0.217 ms; mediana 0.6945 ms",
+        "Medi\u00e7\u00f5es hospedadas e locais n\u00e3o s\u00e3o equivalentes."
+      ],
+      "caption": "O objetivo \u00e9 validar o fluxo. Os tempos s\u00e3o de infer\u00eancia, n\u00e3o de uma aplica\u00e7\u00e3o completa."
+    },
+    {
+      "number": 8,
+      "start_s": 88,
+      "end_s": 98,
+      "seconds": 10,
+      "title": "7. Repeti\u00e7\u00e3o offline",
+      "lines": [
+        "Na pasta do pacote, na caixa j\u00e1 preparada:",
+        "$ sh run_target.sh cpu",
+        "$ sh run_target.sh gpu",
+        "",
+        "Conferir PASS, hash e log OpenCL.",
+        "Pacote: QB560D_AIHub_Demo_Offline.zip",
+        "Modelo, tensores, c\u00f3digo e evid\u00eancias inclu\u00eddos."
+      ],
+      "caption": "A execu\u00e7\u00e3o local dispensa Internet e conta AI Hub. O preparo do BSP continua sendo pr\u00e9-requisito."
+    },
+    {
+      "number": 9,
+      "start_s": 98,
+      "end_s": 106,
+      "seconds": 8,
+      "title": "Fluxo aprovado",
+      "lines": [
+        "Compile e inference/profile: PASS",
+        "Compara\u00e7\u00e3o num\u00e9rica hospedada: PASS",
+        "Mesmo artefato em CPU/GPU na caixa: PASS",
+        "Hashes, sa\u00eddas e logs preservados",
+        "",
+        "Replay dos resultados reais, sem credenciais."
+      ],
+      "caption": "Use o guia e os arquivos salvos para explicar a demonstra\u00e7\u00e3o durante uma falha de rede."
+    }
+  ]
+}

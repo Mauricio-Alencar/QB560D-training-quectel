@@ -1,0 +1,5 @@
+{
+  "command": "mkdir /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T173443912784Z-htp-full_open_palm/canned_gesture_classifier",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T17:34:51.350812+00:00"
+}

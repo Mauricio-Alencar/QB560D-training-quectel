@@ -1,0 +1,38 @@
+Result=exit-code
+ExecMainStatus=203
+Requires=qtid.service sysinit.target system.slice QCMAP_ConnectionManagerd.servi
+ce
+Wants=
+Before=multi-user.target shutdown.target
+After=systemd-journald.socket sysinit.target system.slice basic.target
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/qti_pppd.service
+# Warning: qti_pppd.service changed on disk, the version systemd has loa
+ded is outdated.
+# This output shows the current version of the unit's original fragment 
+and drop-in files.
+# If fragments or drop-ins were added or removed, they are not properly 
+reflected in this output.
+# Run 'systemctl daemon-reload' to reload units.
+# /lib/systemd/system/qti_pppd.service
+[Unit]
+SourcePath=/usr/bin/qti_ppp
+Description= qti_ppp service
+Requires= QCMAP_ConnectionManagerd.service qtid.service
+
+[Service]
+# Don't change to other than NO as daemon exits after reading config
+User=radio
+Group=radio
+Restart=no
+ExecStart=/usr/bin/qti_ppp
+
+SupplementaryGroups=diag inet net_admin system wifi netdev net_raw kmsg
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SETUID 
+CAP_SETGID
+--More---- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:43 CST. --
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Started qti_ppp service.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: qti_pppd.service: Main process exited, code=exited, status=203/EXEC
+Nov 02 06:23:53 qcs6490-odk systemd[1]: qti_pppd.service: Failed with result 'exit-code'.
+

@@ -1,0 +1,10 @@
+test_failed_pull_does_not_copy_partial_output_or_change_existing_data (test_adb_transfer.WindowsTransfers.test_failed_pull_does_not_copy_partial_output_or_change_existing_data) ... ok
+profile-hand_landmark_detector: exit 0
+test_provisioning_writes_long_profile_log_paths (test_adb_transfer.WindowsTransfers.test_provisioning_writes_long_profile_log_paths) ... ok
+test_pull_to_existing_long_directory_preserves_run_folder (test_adb_transfer.WindowsTransfers.test_pull_to_existing_long_directory_preserves_run_folder) ... ok
+test_push_of_long_source_directory_passes_unchanged_bytes_through_short_path (test_adb_transfer.WindowsTransfers.test_push_of_long_source_directory_passes_unchanged_bytes_through_short_path) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.057s
+
+OK

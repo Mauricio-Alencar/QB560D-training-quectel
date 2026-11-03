@@ -1,0 +1,6644 @@
+{
+  "status": "PASS_COMPARATIVE_TIMING",
+  "recorded_at_host_utc": "2026-11-01T20:39:34.298998+00:00",
+  "sessions_per_backend": 3,
+  "measured_runs_per_session": 50,
+  "discarded_warmup_per_session": 10,
+  "table": [
+    {
+      "task": "classification",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 26.496092000343197,
+          "session_medians_ms": [
+            26.496092000343197,
+            23.31358450010157,
+            26.50616099981562
+          ],
+          "session_p95_ms": [
+            29.262255499952513,
+            25.4486266499498,
+            33.09726294996835
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 10.148544999992737,
+          "session_medians_ms": [
+            10.148544999992737,
+            10.140733999833174,
+            10.938641999473475
+          ],
+          "session_p95_ms": [
+            10.777973549875242,
+            10.614025849918107,
+            11.216016249954919
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.5,
+          "session_medians_ms": [
+            1.493,
+            1.5,
+            1.5139999999999998
+          ],
+          "session_p95_ms": [
+            1.57175,
+            1.5701,
+            1.566
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 17.66406133356213,
+      "latency_ratio_gpu_over_htp": 6.765696666661825
+    },
+    {
+      "task": "detection",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 35.6675475004522,
+          "session_medians_ms": [
+            36.56381800010422,
+            35.626055000193446,
+            35.6675475004522
+          ],
+          "session_p95_ms": [
+            36.755210599903876,
+            36.70048015028442,
+            36.787463199925696
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 23.55882499978179,
+          "session_medians_ms": [
+            23.55882499978179,
+            23.522348999904352,
+            23.72876350000297
+          ],
+          "session_p95_ms": [
+            23.854621399914322,
+            24.03611210006602,
+            24.261667350128846
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 3.9355,
+          "session_medians_ms": [
+            3.9355,
+            3.9785000000000004,
+            3.9255
+          ],
+          "session_p95_ms": [
+            4.604550000000001,
+            4.63985,
+            4.3598
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 9.063028204917343,
+      "latency_ratio_gpu_over_htp": 5.986234277672923
+    },
+    {
+      "task": "pose",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 137.923722999858,
+          "session_medians_ms": [
+            138.28583799977423,
+            137.83212950011148,
+            137.923722999858
+          ],
+          "session_p95_ms": [
+            140.70786604966088,
+            140.02203920003922,
+            139.84047509993616
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 15.709532000073523,
+          "session_medians_ms": [
+            15.766327000164893,
+            15.41478350009129,
+            15.709532000073523
+          ],
+          "session_p95_ms": [
+            16.753133250404062,
+            15.614128899869684,
+            16.876140100021075
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 2.201,
+          "session_medians_ms": [
+            2.201,
+            2.1515,
+            2.3045
+          ],
+          "session_p95_ms": [
+            2.25855,
+            2.2426000000000004,
+            2.6685499999999998
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 62.66411767372013,
+      "latency_ratio_gpu_over_htp": 7.137452067275567
+    },
+    {
+      "task": "gesture",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 55.951954499960266,
+          "session_medians_ms": [
+            55.6395439998596,
+            55.951954499960266,
+            56.490305999886914
+          ],
+          "session_p95_ms": [
+            58.94313049993798,
+            58.988522599702264,
+            59.54315550015963
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 7.742065999536862,
+          "session_medians_ms": [
+            7.742065999536862,
+            7.768784999825584,
+            7.707308499902865
+          ],
+          "session_p95_ms": [
+            8.141008949451134,
+            8.208530200090536,
+            8.101840500330582
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.7825,
+          "session_medians_ms": [
+            1.9165,
+            1.7405,
+            1.7825
+          ],
+          "session_p95_ms": [
+            2.5341,
+            1.802,
+            2.5795
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 31.389595792404076,
+      "latency_ratio_gpu_over_htp": 4.343375034803289
+    },
+    {
+      "task": "segmentation",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 179.76726599999893,
+          "session_medians_ms": [
+            179.76726599999893,
+            179.92592400014473,
+            177.4504015002094
+          ],
+          "session_p95_ms": [
+            183.5279384995829,
+            182.5336912504099,
+            181.74847865038828
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 21.419401000002836,
+          "session_medians_ms": [
+            21.434052999666164,
+            21.419401000002836,
+            21.320515500065085
+          ],
+          "session_p95_ms": [
+            22.064000100272096,
+            21.999115100061317,
+            21.905012199840712
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 4.609,
+          "session_medians_ms": [
+            4.5875,
+            4.609,
+            4.634
+          ],
+          "session_p95_ms": [
+            4.9119,
+            4.890199999999999,
+            4.8133
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 39.00352918203492,
+      "latency_ratio_gpu_over_htp": 4.647298980256636
+    }
+  ],
+  "records": [
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 26.496092000343197,
+      "p95_ms": 29.262255499952513,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.88671875
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 26.496092000343197,
+        "inference_ms_p95": 29.262255499952513,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "classification",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 10.148544999992737,
+      "p95_ms": 10.777973549875242,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.8828125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 10.148544999992737,
+        "inference_ms_p95": 10.777973549875242,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "classification",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.493,
+      "p95_ms": 1.57175,
+      "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+      "samples_ms": [
+        1.491,
+        1.475,
+        1.45,
+        1.47,
+        1.439,
+        1.439,
+        1.437,
+        1.479,
+        1.451,
+        1.488,
+        1.466,
+        1.46,
+        1.423,
+        1.499,
+        1.429,
+        1.432,
+        1.501,
+        1.461,
+        1.495,
+        1.487,
+        1.48,
+        1.399,
+        1.435,
+        1.551,
+        1.459,
+        1.454,
+        1.5,
+        1.513,
+        1.61,
+        1.574,
+        1.529,
+        1.525,
+        1.625,
+        1.557,
+        1.478,
+        1.503,
+        1.565,
+        1.543,
+        1.491,
+        1.524,
+        1.554,
+        1.545,
+        1.479,
+        1.516,
+        1.561,
+        1.569,
+        1.499,
+        1.532,
+        1.557,
+        1.559
+      ],
+      "discarded_warmup_ms": [
+        1.799,
+        1.468,
+        1.488,
+        1.474,
+        1.466,
+        1.453,
+        1.52,
+        1.455,
+        1.466,
+        1.495
+      ],
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87109375
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ]
+      },
+      "task": "classification",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 10.140733999833174,
+      "p95_ms": 10.614025849918107,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.8828125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 10.140733999833174,
+        "inference_ms_p95": 10.614025849918107,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "classification",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.5,
+      "p95_ms": 1.5701,
+      "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+      "samples_ms": [
+        1.469,
+        1.455,
+        1.474,
+        1.466,
+        1.468,
+        1.492,
+        1.494,
+        1.496,
+        1.438,
+        1.538,
+        1.461,
+        1.477,
+        1.483,
+        1.492,
+        1.426,
+        1.448,
+        1.471,
+        1.475,
+        1.461,
+        1.449,
+        1.495,
+        1.44,
+        1.457,
+        1.526,
+        1.487,
+        1.426,
+        1.473,
+        1.571,
+        1.514,
+        1.504,
+        1.531,
+        1.574,
+        1.566,
+        1.511,
+        1.519,
+        1.562,
+        1.543,
+        1.519,
+        1.583,
+        1.569,
+        1.527,
+        1.505,
+        1.505,
+        1.554,
+        1.518,
+        1.508,
+        1.519,
+        1.563,
+        1.505,
+        1.508
+      ],
+      "discarded_warmup_ms": [
+        1.799,
+        1.454,
+        1.484,
+        1.451,
+        1.46,
+        1.475,
+        1.464,
+        1.456,
+        1.461,
+        1.51
+      ],
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87109375
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ]
+      },
+      "task": "classification",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 23.31358450010157,
+      "p95_ms": 25.4486266499498,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.88671875
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 23.31358450010157,
+        "inference_ms_p95": 25.4486266499498,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "classification",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.5139999999999998,
+      "p95_ms": 1.566,
+      "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+      "samples_ms": [
+        1.495,
+        1.537,
+        1.481,
+        1.513,
+        1.532,
+        1.524,
+        1.566,
+        1.496,
+        1.557,
+        1.508,
+        1.502,
+        1.551,
+        1.55,
+        1.507,
+        1.492,
+        1.531,
+        1.546,
+        1.508,
+        1.505,
+        1.517,
+        1.541,
+        1.468,
+        1.499,
+        1.538,
+        1.527,
+        1.497,
+        1.515,
+        1.559,
+        1.536,
+        1.492,
+        1.496,
+        1.545,
+        1.501,
+        1.494,
+        1.51,
+        1.541,
+        1.508,
+        1.495,
+        1.51,
+        1.555,
+        1.481,
+        1.502,
+        1.566,
+        1.447,
+        1.457,
+        1.753,
+        1.531,
+        1.52,
+        1.571,
+        1.547
+      ],
+      "discarded_warmup_ms": [
+        2.012,
+        1.584,
+        1.641,
+        1.592,
+        1.525,
+        1.463,
+        1.499,
+        1.543,
+        1.56,
+        1.511
+      ],
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87109375
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ]
+      },
+      "task": "classification",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 26.50616099981562,
+      "p95_ms": 33.09726294996835,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.88671875
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 26.50616099981562,
+        "inference_ms_p95": 33.09726294996835,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "classification",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 10.938641999473475,
+      "p95_ms": 11.216016249954919,
+      "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.8828125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.0390625
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "demo_id": "D2-05",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "image_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 10.938641999473475,
+        "inference_ms_p95": 11.216016249954919,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "MobilenetV1/Predictions/Reshape_1",
+              "shape": [
+                1,
+                1001
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.00390625,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "classification",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same top-1 as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 36.56381800010422,
+      "p95_ms": 36.755210599903876,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.65625,
+            "box_yxyx": [
+              0.7084828615188599,
+              0.43894636631011963,
+              0.8997373580932617,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7239762544631958,
+              0.45460134744644165,
+              0.8746565580368042,
+              0.5498793721199036
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 36.56381800010422,
+        "inference_ms_p95": 36.755210599903876,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "detection",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 23.55882499978179,
+      "p95_ms": 23.854621399914322,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.64453125,
+            "box_yxyx": [
+              0.7062389850616455,
+              0.43894636631011963,
+              0.8974934816360474,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7232112884521484,
+              0.4538363814353943,
+              0.8738915920257568,
+              0.5491144061088562
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 23.55882499978179,
+        "inference_ms_p95": 23.854621399914322,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "detection",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 3.9355,
+      "p95_ms": 4.604550000000001,
+      "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+      "samples_ms": [
+        4.531,
+        3.83,
+        4.645,
+        4.159,
+        4.008,
+        3.777,
+        4.604,
+        3.829,
+        4.148,
+        4.039,
+        3.943,
+        3.904,
+        4.005,
+        3.957,
+        3.84,
+        4.068,
+        3.872,
+        3.66,
+        4.625,
+        4.353,
+        3.872,
+        3.919,
+        3.821,
+        3.899,
+        3.845,
+        4.426,
+        4.589,
+        3.844,
+        3.819,
+        4.1,
+        3.887,
+        3.895,
+        4.186,
+        3.883,
+        3.9,
+        4.071,
+        3.821,
+        4.109,
+        4.063,
+        3.956,
+        4.056,
+        3.874,
+        3.815,
+        3.928,
+        3.791,
+        4.605,
+        4.355,
+        3.983,
+        3.885,
+        3.82
+      ],
+      "discarded_warmup_ms": [
+        4.059,
+        3.79,
+        3.776,
+        3.408,
+        3.913,
+        3.95,
+        4.012,
+        4.227,
+        3.911,
+        3.928
+      ],
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.715301513671875,
+            "box_yxyx": [
+              0.056058019399642944,
+              0.0,
+              0.9857144355773926,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.652923583984375,
+            "box_yxyx": [
+              0.7068476676940918,
+              0.43901175260543823,
+              0.8994536399841309,
+              0.5655868649482727
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.579681396484375,
+            "box_yxyx": [
+              0.7239529490470886,
+              0.45394569635391235,
+              0.8747777342796326,
+              0.5489451289176941
+            ]
+          }
+        ]
+      },
+      "task": "detection",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 0.9975222081121828,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 23.522348999904352,
+      "p95_ms": 24.03611210006602,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.64453125,
+            "box_yxyx": [
+              0.7062389850616455,
+              0.43894636631011963,
+              0.8974934816360474,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7232112884521484,
+              0.4538363814353943,
+              0.8738915920257568,
+              0.5491144061088562
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 23.522348999904352,
+        "inference_ms_p95": 24.03611210006602,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "detection",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 3.9785000000000004,
+      "p95_ms": 4.63985,
+      "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+      "samples_ms": [
+        3.335,
+        3.729,
+        4.019,
+        4.394,
+        4.636,
+        4.154,
+        4.319,
+        3.936,
+        4.343,
+        4.595,
+        4.546,
+        3.974,
+        3.978,
+        4.763,
+        4.155,
+        4.643,
+        4.048,
+        3.915,
+        4.514,
+        4.604,
+        4.687,
+        3.935,
+        4.078,
+        4.539,
+        4.475,
+        4.56,
+        3.932,
+        3.959,
+        3.872,
+        3.886,
+        4.341,
+        4.026,
+        4.035,
+        3.96,
+        3.884,
+        3.867,
+        3.961,
+        3.898,
+        3.885,
+        4.017,
+        3.979,
+        3.85,
+        3.901,
+        4.045,
+        3.794,
+        3.851,
+        3.969,
+        3.891,
+        3.919,
+        3.948
+      ],
+      "discarded_warmup_ms": [
+        4.074,
+        3.856,
+        3.389,
+        3.276,
+        3.322,
+        3.92,
+        4.142,
+        3.972,
+        3.263,
+        3.278
+      ],
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.715301513671875,
+            "box_yxyx": [
+              0.056058019399642944,
+              0.0,
+              0.9857144355773926,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.652923583984375,
+            "box_yxyx": [
+              0.7068476676940918,
+              0.43901175260543823,
+              0.8994536399841309,
+              0.5655868649482727
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.579681396484375,
+            "box_yxyx": [
+              0.7239529490470886,
+              0.45394569635391235,
+              0.8747777342796326,
+              0.5489451289176941
+            ]
+          }
+        ]
+      },
+      "task": "detection",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 0.9975222081121828,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 35.626055000193446,
+      "p95_ms": 36.70048015028442,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.65625,
+            "box_yxyx": [
+              0.7084828615188599,
+              0.43894636631011963,
+              0.8997373580932617,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7239762544631958,
+              0.45460134744644165,
+              0.8746565580368042,
+              0.5498793721199036
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 35.626055000193446,
+        "inference_ms_p95": 36.70048015028442,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "detection",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 3.9255,
+      "p95_ms": 4.3598,
+      "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
+      "samples_ms": [
+        3.894,
+        3.961,
+        3.879,
+        4.394,
+        4.5,
+        3.89,
+        3.829,
+        3.953,
+        3.956,
+        3.926,
+        3.78,
+        3.94,
+        3.865,
+        4.234,
+        4.209,
+        4.001,
+        3.923,
+        3.918,
+        3.905,
+        3.815,
+        4.085,
+        3.914,
+        3.836,
+        3.793,
+        3.803,
+        3.802,
+        3.99,
+        3.816,
+        3.849,
+        4.041,
+        3.763,
+        3.765,
+        3.976,
+        4.018,
+        3.779,
+        3.82,
+        4.024,
+        4.133,
+        4.255,
+        3.939,
+        3.767,
+        3.848,
+        4.197,
+        4.522,
+        4.318,
+        4.173,
+        4.318,
+        3.919,
+        3.925,
+        4.021
+      ],
+      "discarded_warmup_ms": [
+        4.026,
+        3.827,
+        3.982,
+        3.462,
+        4.202,
+        4.022,
+        3.783,
+        3.782,
+        4.007,
+        3.896
+      ],
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.715301513671875,
+            "box_yxyx": [
+              0.056058019399642944,
+              0.0,
+              0.9857144355773926,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.652923583984375,
+            "box_yxyx": [
+              0.7068476676940918,
+              0.43901175260543823,
+              0.8994536399841309,
+              0.5655868649482727
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.579681396484375,
+            "box_yxyx": [
+              0.7239529490470886,
+              0.45394569635391235,
+              0.8747777342796326,
+              0.5489451289176941
+            ]
+          }
+        ]
+      },
+      "task": "detection",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 0.9975222081121828,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 35.6675475004522,
+      "p95_ms": 36.787463199925696,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.65625,
+            "box_yxyx": [
+              0.7084828615188599,
+              0.43894636631011963,
+              0.8997373580932617,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7239762544631958,
+              0.45460134744644165,
+              0.8746565580368042,
+              0.5498793721199036
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 35.6675475004522,
+        "inference_ms_p95": 36.787463199925696,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "detection",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 23.72876350000297,
+      "p95_ms": 24.261667350128846,
+      "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71875,
+            "box_yxyx": [
+              0.054379791021347046,
+              0.0,
+              0.9850850105285645,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.64453125,
+            "box_yxyx": [
+              0.7062389850616455,
+              0.43894636631011963,
+              0.8974934816360474,
+              0.5660443305969238
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.5859375,
+            "box_yxyx": [
+              0.7232112884521484,
+              0.4538363814353943,
+              0.8738915920257568,
+              0.5491144061088562
+            ]
+          }
+        ],
+        "demo_id": "D2-06",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 23.72876350000297,
+        "inference_ms_p95": 24.261667350128846,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "normalized_input_image_tensor",
+              "shape": [
+                1,
+                300,
+                300,
+                3
+              ],
+              "dtype": "<class 'numpy.uint8'>",
+              "quantization": [
+                0.0078125,
+                128
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "TFLite_Detection_PostProcess",
+              "shape": [
+                1,
+                10,
+                4
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "TFLite_Detection_PostProcess:1",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "TFLite_Detection_PostProcess:2",
+              "shape": [
+                1,
+                10
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "TFLite_Detection_PostProcess:3",
+              "shape": [
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "detection",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_box_iou": 1.0,
+        "criterion": "reference person IoU >= 0.7 with bounded extra detections/person duplicates"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 138.28583799977423,
+      "p95_ms": 140.70786604966088,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597220942251403,
+            0.5217145964329345,
+            0.9989013128867703
+          ],
+          [
+            0.31377151532483843,
+            0.6007389354334731,
+            0.9997960138336883
+          ],
+          [
+            0.3188350774748805,
+            0.43121647927547707,
+            0.9992971376753976
+          ],
+          [
+            0.38602592046807915,
+            0.70308768053463,
+            0.996488091222109
+          ],
+          [
+            0.3779033155684431,
+            0.32723492128839754,
+            0.9807542958061557
+          ],
+          [
+            0.7067966055937597,
+            0.8810117263274434,
+            0.9582753651136423
+          ],
+          [
+            0.6923827017332947,
+            0.15895824024185595,
+            0.9662161367545615
+          ],
+          [
+            0.8191114434439467,
+            -0.0010295535803768886,
+            0.17817960774924035
+          ],
+          [
+            0.8480650574897571,
+            0.051527670849158144,
+            0.4156167778347319
+          ],
+          [
+            0.8938139302196989,
+            -0.006945123932241002,
+            0.24264960807269845
+          ],
+          [
+            0.9006195399308677,
+            -0.009916030943161782,
+            0.40320284772867204
+          ],
+          [
+            0.6449468412750503,
+            0.008032917512530019,
+            0.22678217161068248
+          ],
+          [
+            1.0130174031676382,
+            0.13822935527400748,
+            0.2646337248883651
+          ],
+          [
+            0.6649847570965041,
+            0.014098440162866497,
+            0.08860505515907612
+          ],
+          [
+            0.6538694762643268,
+            0.04052607836890314,
+            0.0940629495633954
+          ],
+          [
+            0.9072475317686205,
+            -0.0034069699536037816,
+            0.026105721369273433
+          ],
+          [
+            0.9119020865929364,
+            0.004704631256222261,
+            0.028789966080278645
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 138.28583799977423,
+        "inference_ms_p95": 140.70786604966088,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "pose",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.0,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 15.766327000164893,
+      "p95_ms": 16.753133250404062,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597223373715667,
+            0.5217145778789595,
+            0.998901312363451
+          ],
+          [
+            0.31377152072809233,
+            0.6007389818184107,
+            0.9997960128612026
+          ],
+          [
+            0.3188350798388041,
+            0.4312164704623389,
+            0.9992971400198009
+          ],
+          [
+            0.38602589885506344,
+            0.703087647137475,
+            0.996488086215923
+          ],
+          [
+            0.3779033155684431,
+            0.3272349602517451,
+            0.9807542508038651
+          ],
+          [
+            0.7067966393640966,
+            0.8810117049903721,
+            0.9582758131555027
+          ],
+          [
+            0.6923826287893668,
+            0.1589581994231109,
+            0.9662161678848749
+          ],
+          [
+            0.8191114910601218,
+            -0.001029557059247206,
+            0.1781805678318817
+          ],
+          [
+            0.8480649440214248,
+            0.05152777104062329,
+            0.41562010025146195
+          ],
+          [
+            0.8938136735651379,
+            -0.006945153618601045,
+            0.24265125111525046
+          ],
+          [
+            0.9006192501813765,
+            -0.009915986413621717,
+            0.4032072652832642
+          ],
+          [
+            0.6449467683311224,
+            0.008032969463660096,
+            0.22678275691172273
+          ],
+          [
+            1.013017650366505,
+            0.13822948886262768,
+            0.26463268095936193
+          ],
+          [
+            0.6649846490314256,
+            0.014098723110985664,
+            0.08860559425299776
+          ],
+          [
+            0.6538695046314099,
+            0.040526443882211174,
+            0.09406398572866066
+          ],
+          [
+            0.9072473735545917,
+            -0.0034068512081636064,
+            0.026105854724907483
+          ],
+          [
+            0.9119019373280468,
+            0.004704846482332579,
+            0.028790306071006824
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 15.766327000164893,
+        "inference_ms_p95": 16.753133250404062,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "pose",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 3.9780553200838973e-08,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 2.201,
+      "p95_ms": 2.25855,
+      "model_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
+      "samples_ms": [
+        2.189,
+        2.182,
+        2.258,
+        2.236,
+        2.217,
+        2.205,
+        2.213,
+        2.206,
+        2.157,
+        2.184,
+        2.192,
+        2.224,
+        2.198,
+        2.201,
+        2.176,
+        2.162,
+        2.199,
+        2.206,
+        2.215,
+        2.22,
+        2.198,
+        2.19,
+        2.154,
+        2.186,
+        2.223,
+        2.25,
+        2.26,
+        2.2,
+        2.191,
+        2.152,
+        2.199,
+        2.259,
+        2.196,
+        2.213,
+        2.246,
+        2.215,
+        2.17,
+        2.201,
+        2.172,
+        2.204,
+        2.229,
+        2.206,
+        2.2,
+        2.174,
+        2.192,
+        2.168,
+        2.207,
+        2.216,
+        2.261,
+        2.205
+      ],
+      "discarded_warmup_ms": [
+        2.459,
+        2.16,
+        2.162,
+        2.216,
+        2.175,
+        2.215,
+        2.302,
+        2.198,
+        2.187,
+        2.194
+      ],
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38871564946161113,
+            0.5183004553679826,
+            0.9992697834968567
+          ],
+          [
+            0.3114783034446219,
+            0.6005317895792801,
+            0.9996956586837769
+          ],
+          [
+            0.3201852520194337,
+            0.43043693076775696,
+            0.9995586276054382
+          ],
+          [
+            0.37613216675712435,
+            0.6991317800974568,
+            0.9953488707542419
+          ],
+          [
+            0.37181965825240265,
+            0.31362681050244934,
+            0.9821893572807312
+          ],
+          [
+            0.701188544038335,
+            0.8692014147799303,
+            0.9343750476837158
+          ],
+          [
+            0.6868954441027331,
+            0.19467853479348268,
+            0.938265323638916
+          ],
+          [
+            0.9915253798617182,
+            0.9084145772317967,
+            0.06324145942926407
+          ],
+          [
+            0.8563375527055,
+            0.015820978216623982,
+            0.2898614704608917
+          ],
+          [
+            0.9356564165174792,
+            -0.013448225385020215,
+            0.09842890501022339
+          ],
+          [
+            0.9289014076038393,
+            -0.020374209036622994,
+            0.2524992823600769
+          ],
+          [
+            0.9587086023757545,
+            -0.03190864755949622,
+            0.03275613114237785
+          ],
+          [
+            0.9146380978333039,
+            0.08835458569953414,
+            0.03218923509120941
+          ],
+          [
+            0.9503889603925494,
+            -0.0345787872136335,
+            0.04441991075873375
+          ],
+          [
+            0.9643131180457961,
+            -0.007335204094764324,
+            0.022838104516267776
+          ],
+          [
+            0.9934057966507865,
+            -0.008266171592682716,
+            0.05359074845910072
+          ],
+          [
+            0.9601833462377446,
+            -0.008425092882683305,
+            0.06404217332601547
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax"
+      },
+      "task": "pose",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.010655304348626509,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 15.41478350009129,
+      "p95_ms": 15.614128899869684,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597223373715667,
+            0.5217145778789595,
+            0.998901312363451
+          ],
+          [
+            0.31377152072809233,
+            0.6007389818184107,
+            0.9997960128612026
+          ],
+          [
+            0.3188350798388041,
+            0.4312164704623389,
+            0.9992971400198009
+          ],
+          [
+            0.38602589885506344,
+            0.703087647137475,
+            0.996488086215923
+          ],
+          [
+            0.3779033155684431,
+            0.3272349602517451,
+            0.9807542508038651
+          ],
+          [
+            0.7067966393640966,
+            0.8810117049903721,
+            0.9582758131555027
+          ],
+          [
+            0.6923826287893668,
+            0.1589581994231109,
+            0.9662161678848749
+          ],
+          [
+            0.8191114910601218,
+            -0.001029557059247206,
+            0.1781805678318817
+          ],
+          [
+            0.8480649440214248,
+            0.05152777104062329,
+            0.41562010025146195
+          ],
+          [
+            0.8938136735651379,
+            -0.006945153618601045,
+            0.24265125111525046
+          ],
+          [
+            0.9006192501813765,
+            -0.009915986413621717,
+            0.4032072652832642
+          ],
+          [
+            0.6449467683311224,
+            0.008032969463660096,
+            0.22678275691172273
+          ],
+          [
+            1.013017650366505,
+            0.13822948886262768,
+            0.26463268095936193
+          ],
+          [
+            0.6649846490314256,
+            0.014098723110985664,
+            0.08860559425299776
+          ],
+          [
+            0.6538695046314099,
+            0.040526443882211174,
+            0.09406398572866066
+          ],
+          [
+            0.9072473735545917,
+            -0.0034068512081636064,
+            0.026105854724907483
+          ],
+          [
+            0.9119019373280468,
+            0.004704846482332579,
+            0.028790306071006824
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 15.41478350009129,
+        "inference_ms_p95": 15.614128899869684,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "pose",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 3.9780553200838973e-08,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 2.1515,
+      "p95_ms": 2.2426000000000004,
+      "model_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
+      "samples_ms": [
+        2.091,
+        2.129,
+        2.175,
+        2.097,
+        2.115,
+        2.081,
+        2.066,
+        2.095,
+        2.105,
+        2.188,
+        2.188,
+        2.248,
+        2.168,
+        2.149,
+        2.123,
+        2.158,
+        2.131,
+        2.14,
+        2.333,
+        2.254,
+        2.214,
+        2.109,
+        2.154,
+        2.135,
+        2.153,
+        2.166,
+        2.15,
+        2.152,
+        2.164,
+        2.115,
+        2.15,
+        2.147,
+        2.19,
+        2.162,
+        2.165,
+        2.151,
+        2.149,
+        2.113,
+        2.155,
+        2.129,
+        2.145,
+        2.181,
+        2.168,
+        2.159,
+        2.236,
+        2.154,
+        2.114,
+        2.163,
+        2.147,
+        2.173
+      ],
+      "discarded_warmup_ms": [
+        2.385,
+        2.079,
+        2.105,
+        2.119,
+        2.123,
+        2.082,
+        2.097,
+        2.071,
+        2.096,
+        2.145
+      ],
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38871564946161113,
+            0.5183004553679826,
+            0.9992697834968567
+          ],
+          [
+            0.3114783034446219,
+            0.6005317895792801,
+            0.9996956586837769
+          ],
+          [
+            0.3201852520194337,
+            0.43043693076775696,
+            0.9995586276054382
+          ],
+          [
+            0.37613216675712435,
+            0.6991317800974568,
+            0.9953488707542419
+          ],
+          [
+            0.37181965825240265,
+            0.31362681050244934,
+            0.9821893572807312
+          ],
+          [
+            0.701188544038335,
+            0.8692014147799303,
+            0.9343750476837158
+          ],
+          [
+            0.6868954441027331,
+            0.19467853479348268,
+            0.938265323638916
+          ],
+          [
+            0.9915253798617182,
+            0.9084145772317967,
+            0.06324145942926407
+          ],
+          [
+            0.8563375527055,
+            0.015820978216623982,
+            0.2898614704608917
+          ],
+          [
+            0.9356564165174792,
+            -0.013448225385020215,
+            0.09842890501022339
+          ],
+          [
+            0.9289014076038393,
+            -0.020374209036622994,
+            0.2524992823600769
+          ],
+          [
+            0.9587086023757545,
+            -0.03190864755949622,
+            0.03275613114237785
+          ],
+          [
+            0.9146380978333039,
+            0.08835458569953414,
+            0.03218923509120941
+          ],
+          [
+            0.9503889603925494,
+            -0.0345787872136335,
+            0.04441991075873375
+          ],
+          [
+            0.9643131180457961,
+            -0.007335204094764324,
+            0.022838104516267776
+          ],
+          [
+            0.9934057966507865,
+            -0.008266171592682716,
+            0.05359074845910072
+          ],
+          [
+            0.9601833462377446,
+            -0.008425092882683305,
+            0.06404217332601547
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax"
+      },
+      "task": "pose",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.010655304348626509,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 137.83212950011148,
+      "p95_ms": 140.02203920003922,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597220942251403,
+            0.5217145964329345,
+            0.9989013128867703
+          ],
+          [
+            0.31377151532483843,
+            0.6007389354334731,
+            0.9997960138336883
+          ],
+          [
+            0.3188350774748805,
+            0.43121647927547707,
+            0.9992971376753976
+          ],
+          [
+            0.38602592046807915,
+            0.70308768053463,
+            0.996488091222109
+          ],
+          [
+            0.3779033155684431,
+            0.32723492128839754,
+            0.9807542958061557
+          ],
+          [
+            0.7067966055937597,
+            0.8810117263274434,
+            0.9582753651136423
+          ],
+          [
+            0.6923827017332947,
+            0.15895824024185595,
+            0.9662161367545615
+          ],
+          [
+            0.8191114434439467,
+            -0.0010295535803768886,
+            0.17817960774924035
+          ],
+          [
+            0.8480650574897571,
+            0.051527670849158144,
+            0.4156167778347319
+          ],
+          [
+            0.8938139302196989,
+            -0.006945123932241002,
+            0.24264960807269845
+          ],
+          [
+            0.9006195399308677,
+            -0.009916030943161782,
+            0.40320284772867204
+          ],
+          [
+            0.6449468412750503,
+            0.008032917512530019,
+            0.22678217161068248
+          ],
+          [
+            1.0130174031676382,
+            0.13822935527400748,
+            0.2646337248883651
+          ],
+          [
+            0.6649847570965041,
+            0.014098440162866497,
+            0.08860505515907612
+          ],
+          [
+            0.6538694762643268,
+            0.04052607836890314,
+            0.0940629495633954
+          ],
+          [
+            0.9072475317686205,
+            -0.0034069699536037816,
+            0.026105721369273433
+          ],
+          [
+            0.9119020865929364,
+            0.004704631256222261,
+            0.028789966080278645
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 137.83212950011148,
+        "inference_ms_p95": 140.02203920003922,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "pose",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.0,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 2.3045,
+      "p95_ms": 2.6685499999999998,
+      "model_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
+      "samples_ms": [
+        2.926,
+        3.249,
+        2.452,
+        2.624,
+        2.705,
+        2.587,
+        2.546,
+        2.279,
+        2.381,
+        2.186,
+        2.361,
+        2.357,
+        2.434,
+        2.422,
+        2.359,
+        2.313,
+        2.296,
+        2.22,
+        2.406,
+        2.246,
+        2.374,
+        2.27,
+        2.262,
+        2.275,
+        2.458,
+        2.261,
+        2.165,
+        2.184,
+        2.323,
+        2.273,
+        2.461,
+        2.397,
+        2.337,
+        2.379,
+        2.325,
+        2.237,
+        2.192,
+        2.191,
+        2.173,
+        2.153,
+        2.209,
+        2.474,
+        2.244,
+        2.163,
+        2.239,
+        2.188,
+        2.223,
+        2.212,
+        2.197,
+        2.371
+      ],
+      "discarded_warmup_ms": [
+        3.174,
+        2.966,
+        3.056,
+        2.462,
+        2.592,
+        2.464,
+        2.408,
+        2.584,
+        3.031,
+        2.981
+      ],
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38871564946161113,
+            0.5183004553679826,
+            0.9992697834968567
+          ],
+          [
+            0.3114783034446219,
+            0.6005317895792801,
+            0.9996956586837769
+          ],
+          [
+            0.3201852520194337,
+            0.43043693076775696,
+            0.9995586276054382
+          ],
+          [
+            0.37613216675712435,
+            0.6991317800974568,
+            0.9953488707542419
+          ],
+          [
+            0.37181965825240265,
+            0.31362681050244934,
+            0.9821893572807312
+          ],
+          [
+            0.701188544038335,
+            0.8692014147799303,
+            0.9343750476837158
+          ],
+          [
+            0.6868954441027331,
+            0.19467853479348268,
+            0.938265323638916
+          ],
+          [
+            0.9915253798617182,
+            0.9084145772317967,
+            0.06324145942926407
+          ],
+          [
+            0.8563375527055,
+            0.015820978216623982,
+            0.2898614704608917
+          ],
+          [
+            0.9356564165174792,
+            -0.013448225385020215,
+            0.09842890501022339
+          ],
+          [
+            0.9289014076038393,
+            -0.020374209036622994,
+            0.2524992823600769
+          ],
+          [
+            0.9587086023757545,
+            -0.03190864755949622,
+            0.03275613114237785
+          ],
+          [
+            0.9146380978333039,
+            0.08835458569953414,
+            0.03218923509120941
+          ],
+          [
+            0.9503889603925494,
+            -0.0345787872136335,
+            0.04441991075873375
+          ],
+          [
+            0.9643131180457961,
+            -0.007335204094764324,
+            0.022838104516267776
+          ],
+          [
+            0.9934057966507865,
+            -0.008266171592682716,
+            0.05359074845910072
+          ],
+          [
+            0.9601833462377446,
+            -0.008425092882683305,
+            0.06404217332601547
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax"
+      },
+      "task": "pose",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.010655304348626509,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 137.923722999858,
+      "p95_ms": 139.84047509993616,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597220942251403,
+            0.5217145964329345,
+            0.9989013128867703
+          ],
+          [
+            0.31377151532483843,
+            0.6007389354334731,
+            0.9997960138336883
+          ],
+          [
+            0.3188350774748805,
+            0.43121647927547707,
+            0.9992971376753976
+          ],
+          [
+            0.38602592046807915,
+            0.70308768053463,
+            0.996488091222109
+          ],
+          [
+            0.3779033155684431,
+            0.32723492128839754,
+            0.9807542958061557
+          ],
+          [
+            0.7067966055937597,
+            0.8810117263274434,
+            0.9582753651136423
+          ],
+          [
+            0.6923827017332947,
+            0.15895824024185595,
+            0.9662161367545615
+          ],
+          [
+            0.8191114434439467,
+            -0.0010295535803768886,
+            0.17817960774924035
+          ],
+          [
+            0.8480650574897571,
+            0.051527670849158144,
+            0.4156167778347319
+          ],
+          [
+            0.8938139302196989,
+            -0.006945123932241002,
+            0.24264960807269845
+          ],
+          [
+            0.9006195399308677,
+            -0.009916030943161782,
+            0.40320284772867204
+          ],
+          [
+            0.6449468412750503,
+            0.008032917512530019,
+            0.22678217161068248
+          ],
+          [
+            1.0130174031676382,
+            0.13822935527400748,
+            0.2646337248883651
+          ],
+          [
+            0.6649847570965041,
+            0.014098440162866497,
+            0.08860505515907612
+          ],
+          [
+            0.6538694762643268,
+            0.04052607836890314,
+            0.0940629495633954
+          ],
+          [
+            0.9072475317686205,
+            -0.0034069699536037816,
+            0.026105721369273433
+          ],
+          [
+            0.9119020865929364,
+            0.004704631256222261,
+            0.028789966080278645
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 137.923722999858,
+        "inference_ms_p95": 139.84047509993616,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "pose",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 0.0,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 15.709532000073523,
+      "p95_ms": 16.876140100021075,
+      "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+      "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "result": {
+        "keypoints_yxs": [
+          [
+            0.38597223373715667,
+            0.5217145778789595,
+            0.998901312363451
+          ],
+          [
+            0.31377152072809233,
+            0.6007389818184107,
+            0.9997960128612026
+          ],
+          [
+            0.3188350798388041,
+            0.4312164704623389,
+            0.9992971400198009
+          ],
+          [
+            0.38602589885506344,
+            0.703087647137475,
+            0.996488086215923
+          ],
+          [
+            0.3779033155684431,
+            0.3272349602517451,
+            0.9807542508038651
+          ],
+          [
+            0.7067966393640966,
+            0.8810117049903721,
+            0.9582758131555027
+          ],
+          [
+            0.6923826287893668,
+            0.1589581994231109,
+            0.9662161678848749
+          ],
+          [
+            0.8191114910601218,
+            -0.001029557059247206,
+            0.1781805678318817
+          ],
+          [
+            0.8480649440214248,
+            0.05152777104062329,
+            0.41562010025146195
+          ],
+          [
+            0.8938136735651379,
+            -0.006945153618601045,
+            0.24265125111525046
+          ],
+          [
+            0.9006192501813765,
+            -0.009915986413621717,
+            0.4032072652832642
+          ],
+          [
+            0.6449467683311224,
+            0.008032969463660096,
+            0.22678275691172273
+          ],
+          [
+            1.013017650366505,
+            0.13822948886262768,
+            0.26463268095936193
+          ],
+          [
+            0.6649846490314256,
+            0.014098723110985664,
+            0.08860559425299776
+          ],
+          [
+            0.6538695046314099,
+            0.040526443882211174,
+            0.09406398572866066
+          ],
+          [
+            0.9072473735545917,
+            -0.0034068512081636064,
+            0.026105854724907483
+          ],
+          [
+            0.9119019373280468,
+            0.004704846482332579,
+            0.028790306071006824
+          ]
+        ],
+        "visible_keypoints": 7,
+        "decoder": "single_person_heatmap_argmax",
+        "demo_id": "D2-07",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+        "image_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 15.709532000073523,
+        "inference_ms_p95": 16.876140100021075,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_2",
+              "shape": [
+                1,
+                353,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "float_heatmaps",
+              "shape": [
+                1,
+                23,
+                17,
+                17
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "float_short_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                34
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "float_mid_offsets",
+              "shape": [
+                1,
+                23,
+                17,
+                64
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "float_segments",
+              "shape": [
+                1,
+                23,
+                17,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "pose",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "083dcd837e755aa4d6a68c5a1e1d9868f13dee08d9253cd98fd4a3b92fa0e430",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "median_visible_joint_distance": 3.9780553200838973e-08,
+        "criterion": "visible reference joints retained, median normalized joint displacement <= 0.12"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 55.6395439998596,
+      "p95_ms": 58.94313049993798,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298045039176941,
+            1.2746771416161096e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006723165512085,
+            -0.02044016495347023
+          ],
+          [
+            0.28919389843940735,
+            0.7870521545410156,
+            -0.040349580347537994
+          ],
+          [
+            0.2050444334745407,
+            0.6703912019729614,
+            -0.05510583147406578
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140640914440155
+          ],
+          [
+            0.325429230928421,
+            0.3888055682182312,
+            -0.09490729123353958
+          ],
+          [
+            0.30048635601997375,
+            0.2512880861759186,
+            -0.10839694738388062
+          ],
+          [
+            0.2826099693775177,
+            0.14602653682231903,
+            -0.11877547204494476
+          ],
+          [
+            0.5037545561790466,
+            0.5659865736961365,
+            -0.06970955431461334
+          ],
+          [
+            0.48508182168006897,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.1762618124485016,
+            -0.10939420759677887
+          ],
+          [
+            0.4845421016216278,
+            0.05438141152262688,
+            -0.12042264640331268
+          ],
+          [
+            0.6192498207092285,
+            0.5755326151847839,
+            -0.06443308293819427
+          ],
+          [
+            0.6339353322982788,
+            0.36392322182655334,
+            -0.08419425040483475
+          ],
+          [
+            0.6512524485588074,
+            0.2230476289987564,
+            -0.0948464646935463
+          ],
+          [
+            0.6647573113441467,
+            0.11911241710186005,
+            -0.10314035415649414
+          ],
+          [
+            0.717814028263092,
+            0.6111704111099243,
+            -0.06003376841545105
+          ],
+          [
+            0.7632942199707031,
+            0.449666827917099,
+            -0.07617634534835815
+          ],
+          [
+            0.795051634311676,
+            0.34152212738990784,
+            -0.08575718849897385
+          ],
+          [
+            0.8237075805664062,
+            0.2565173804759979,
+            -0.09397953003644943
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 55.6395439998596,
+        "inference_ms_p95": 58.94313049993798,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "gesture",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 7.742065999536862,
+      "p95_ms": 8.141008949451134,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298046231269836,
+            1.2746811384189982e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006722569465637,
+            -0.020440174266695976
+          ],
+          [
+            0.28919389843940735,
+            0.7870520949363708,
+            -0.040349580347537994
+          ],
+          [
+            0.20504441857337952,
+            0.6703912019729614,
+            -0.055105846375226974
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140642404556274
+          ],
+          [
+            0.32542917132377625,
+            0.3888055980205536,
+            -0.09490729868412018
+          ],
+          [
+            0.30048632621765137,
+            0.25128811597824097,
+            -0.10839695483446121
+          ],
+          [
+            0.2826099097728729,
+            0.14602652192115784,
+            -0.11877549439668655
+          ],
+          [
+            0.5037545561790466,
+            0.565986692905426,
+            -0.06970954686403275
+          ],
+          [
+            0.4850817620754242,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.17626182734966278,
+            -0.10939420014619827
+          ],
+          [
+            0.4845421016216278,
+            0.05438140407204628,
+            -0.12042265385389328
+          ],
+          [
+            0.6192497611045837,
+            0.5755326151847839,
+            -0.06443307548761368
+          ],
+          [
+            0.6339353919029236,
+            0.36392322182655334,
+            -0.08419422060251236
+          ],
+          [
+            0.6512524485588074,
+            0.2230476588010788,
+            -0.09484641999006271
+          ],
+          [
+            0.6647573709487915,
+            0.11911247670650482,
+            -0.10314030945301056
+          ],
+          [
+            0.717814028263092,
+            0.6111704707145691,
+            -0.06003373861312866
+          ],
+          [
+            0.7632943391799927,
+            0.4496667683124542,
+            -0.07617628574371338
+          ],
+          [
+            0.7950515747070312,
+            0.34152206778526306,
+            -0.08575713634490967
+          ],
+          [
+            0.8237076997756958,
+            0.2565174400806427,
+            -0.09397946298122406
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 7.742065999536862,
+        "inference_ms_p95": 8.141008949451134,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "gesture",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.9165,
+      "p95_ms": 2.5341,
+      "model_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
+      "samples_ms": [
+        1.865,
+        1.775,
+        1.641,
+        1.658,
+        1.897,
+        2.481,
+        2.569,
+        2.535,
+        1.794,
+        1.756,
+        1.877,
+        1.975,
+        1.739,
+        2.035,
+        1.8,
+        1.996,
+        1.845,
+        1.979,
+        1.75,
+        1.939,
+        1.748,
+        2.05,
+        2.051,
+        2.073,
+        1.787,
+        1.733,
+        2.026,
+        1.936,
+        2.016,
+        1.806,
+        2.139,
+        2.026,
+        2.108,
+        1.744,
+        1.687,
+        2.162,
+        1.81,
+        2.076,
+        1.795,
+        2.216,
+        1.82,
+        2.266,
+        1.804,
+        2.432,
+        2.533,
+        2.621,
+        1.814,
+        1.689,
+        1.716,
+        1.993
+      ],
+      "discarded_warmup_ms": [
+        2.041,
+        2.478,
+        2.499,
+        2.053,
+        2.571,
+        1.99,
+        1.859,
+        1.646,
+        1.835,
+        1.644
+      ],
+      "result": {
+        "presence": 0.998382568359375,
+        "landmarks_xyz": [
+          [
+            0.5983242988586426,
+            0.8996776342391968,
+            6.143380596768111e-05
+          ],
+          [
+            0.4158249497413635,
+            0.8524554967880249,
+            -0.03780227154493332
+          ],
+          [
+            0.28757163882255554,
+            0.7545504570007324,
+            -0.06817104667425156
+          ],
+          [
+            0.19597384333610535,
+            0.6475123167037964,
+            -0.09669680893421173
+          ],
+          [
+            0.11111327260732651,
+            0.5771705508232117,
+            -0.11926349252462387
+          ],
+          [
+            0.3944459855556488,
+            0.5553001761436462,
+            -0.08051924407482147
+          ],
+          [
+            0.33710774779319763,
+            0.3666369616985321,
+            -0.11240338534116745
+          ],
+          [
+            0.300534188747406,
+            0.2458171397447586,
+            -0.13531818985939026
+          ],
+          [
+            0.27039065957069397,
+            0.15010325610637665,
+            -0.15077903866767883
+          ],
+          [
+            0.5099825263023376,
+            0.5292112827301025,
+            -0.07779567688703537
+          ],
+          [
+            0.4939277768135071,
+            0.31675270199775696,
+            -0.10869687795639038
+          ],
+          [
+            0.4907741844654083,
+            0.17180988192558289,
+            -0.1297072470188141
+          ],
+          [
+            0.491122305393219,
+            0.05842354893684387,
+            -0.145864337682724
+          ],
+          [
+            0.6226521134376526,
+            0.5448973774909973,
+            -0.07591170817613602
+          ],
+          [
+            0.6481266617774963,
+            0.36098504066467285,
+            -0.09946133196353912
+          ],
+          [
+            0.6670687794685364,
+            0.23652015626430511,
+            -0.11887441575527191
+          ],
+          [
+            0.6832872629165649,
+            0.1269427239894867,
+            -0.13376186788082123
+          ],
+          [
+            0.7281953692436218,
+            0.5936757922172546,
+            -0.0770379900932312
+          ],
+          [
+            0.7724072337150574,
+            0.44973641633987427,
+            -0.09475141018629074
+          ],
+          [
+            0.7957930564880371,
+            0.35164710879325867,
+            -0.11244434118270874
+          ],
+          [
+            0.8173357844352722,
+            0.2549912631511688,
+            -0.12407581508159637
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4
+      },
+      "task": "gesture",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 7.768784999825584,
+      "p95_ms": 8.208530200090536,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298046231269836,
+            1.2746811384189982e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006722569465637,
+            -0.020440174266695976
+          ],
+          [
+            0.28919389843940735,
+            0.7870520949363708,
+            -0.040349580347537994
+          ],
+          [
+            0.20504441857337952,
+            0.6703912019729614,
+            -0.055105846375226974
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140642404556274
+          ],
+          [
+            0.32542917132377625,
+            0.3888055980205536,
+            -0.09490729868412018
+          ],
+          [
+            0.30048632621765137,
+            0.25128811597824097,
+            -0.10839695483446121
+          ],
+          [
+            0.2826099097728729,
+            0.14602652192115784,
+            -0.11877549439668655
+          ],
+          [
+            0.5037545561790466,
+            0.565986692905426,
+            -0.06970954686403275
+          ],
+          [
+            0.4850817620754242,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.17626182734966278,
+            -0.10939420014619827
+          ],
+          [
+            0.4845421016216278,
+            0.05438140407204628,
+            -0.12042265385389328
+          ],
+          [
+            0.6192497611045837,
+            0.5755326151847839,
+            -0.06443307548761368
+          ],
+          [
+            0.6339353919029236,
+            0.36392322182655334,
+            -0.08419422060251236
+          ],
+          [
+            0.6512524485588074,
+            0.2230476588010788,
+            -0.09484641999006271
+          ],
+          [
+            0.6647573709487915,
+            0.11911247670650482,
+            -0.10314030945301056
+          ],
+          [
+            0.717814028263092,
+            0.6111704707145691,
+            -0.06003373861312866
+          ],
+          [
+            0.7632943391799927,
+            0.4496667683124542,
+            -0.07617628574371338
+          ],
+          [
+            0.7950515747070312,
+            0.34152206778526306,
+            -0.08575713634490967
+          ],
+          [
+            0.8237076997756958,
+            0.2565174400806427,
+            -0.09397946298122406
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 7.768784999825584,
+        "inference_ms_p95": 8.208530200090536,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "gesture",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.7405,
+      "p95_ms": 1.802,
+      "model_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
+      "samples_ms": [
+        1.75,
+        1.677,
+        1.866,
+        1.867,
+        1.722,
+        1.763,
+        1.715,
+        1.701,
+        1.72,
+        1.765,
+        1.765,
+        1.701,
+        1.69,
+        1.685,
+        1.741,
+        1.773,
+        1.733,
+        1.707,
+        1.692,
+        1.778,
+        1.802,
+        1.776,
+        1.656,
+        1.682,
+        1.725,
+        1.771,
+        1.772,
+        1.699,
+        1.73,
+        1.723,
+        1.78,
+        1.78,
+        1.711,
+        1.699,
+        1.729,
+        1.779,
+        1.782,
+        1.761,
+        1.672,
+        1.741,
+        1.779,
+        1.766,
+        1.757,
+        1.74,
+        1.709,
+        1.732,
+        1.762,
+        1.756,
+        1.802,
+        1.736
+      ],
+      "discarded_warmup_ms": [
+        2.058,
+        1.659,
+        1.649,
+        1.659,
+        1.772,
+        1.785,
+        1.687,
+        1.764,
+        1.764,
+        1.755
+      ],
+      "result": {
+        "presence": 0.998382568359375,
+        "landmarks_xyz": [
+          [
+            0.5983242988586426,
+            0.8996776342391968,
+            6.143380596768111e-05
+          ],
+          [
+            0.4158249497413635,
+            0.8524554967880249,
+            -0.03780227154493332
+          ],
+          [
+            0.28757163882255554,
+            0.7545504570007324,
+            -0.06817104667425156
+          ],
+          [
+            0.19597384333610535,
+            0.6475123167037964,
+            -0.09669680893421173
+          ],
+          [
+            0.11111327260732651,
+            0.5771705508232117,
+            -0.11926349252462387
+          ],
+          [
+            0.3944459855556488,
+            0.5553001761436462,
+            -0.08051924407482147
+          ],
+          [
+            0.33710774779319763,
+            0.3666369616985321,
+            -0.11240338534116745
+          ],
+          [
+            0.300534188747406,
+            0.2458171397447586,
+            -0.13531818985939026
+          ],
+          [
+            0.27039065957069397,
+            0.15010325610637665,
+            -0.15077903866767883
+          ],
+          [
+            0.5099825263023376,
+            0.5292112827301025,
+            -0.07779567688703537
+          ],
+          [
+            0.4939277768135071,
+            0.31675270199775696,
+            -0.10869687795639038
+          ],
+          [
+            0.4907741844654083,
+            0.17180988192558289,
+            -0.1297072470188141
+          ],
+          [
+            0.491122305393219,
+            0.05842354893684387,
+            -0.145864337682724
+          ],
+          [
+            0.6226521134376526,
+            0.5448973774909973,
+            -0.07591170817613602
+          ],
+          [
+            0.6481266617774963,
+            0.36098504066467285,
+            -0.09946133196353912
+          ],
+          [
+            0.6670687794685364,
+            0.23652015626430511,
+            -0.11887441575527191
+          ],
+          [
+            0.6832872629165649,
+            0.1269427239894867,
+            -0.13376186788082123
+          ],
+          [
+            0.7281953692436218,
+            0.5936757922172546,
+            -0.0770379900932312
+          ],
+          [
+            0.7724072337150574,
+            0.44973641633987427,
+            -0.09475141018629074
+          ],
+          [
+            0.7957930564880371,
+            0.35164710879325867,
+            -0.11244434118270874
+          ],
+          [
+            0.8173357844352722,
+            0.2549912631511688,
+            -0.12407581508159637
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4
+      },
+      "task": "gesture",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 55.951954499960266,
+      "p95_ms": 58.988522599702264,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298045039176941,
+            1.2746771416161096e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006723165512085,
+            -0.02044016495347023
+          ],
+          [
+            0.28919389843940735,
+            0.7870521545410156,
+            -0.040349580347537994
+          ],
+          [
+            0.2050444334745407,
+            0.6703912019729614,
+            -0.05510583147406578
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140640914440155
+          ],
+          [
+            0.325429230928421,
+            0.3888055682182312,
+            -0.09490729123353958
+          ],
+          [
+            0.30048635601997375,
+            0.2512880861759186,
+            -0.10839694738388062
+          ],
+          [
+            0.2826099693775177,
+            0.14602653682231903,
+            -0.11877547204494476
+          ],
+          [
+            0.5037545561790466,
+            0.5659865736961365,
+            -0.06970955431461334
+          ],
+          [
+            0.48508182168006897,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.1762618124485016,
+            -0.10939420759677887
+          ],
+          [
+            0.4845421016216278,
+            0.05438141152262688,
+            -0.12042264640331268
+          ],
+          [
+            0.6192498207092285,
+            0.5755326151847839,
+            -0.06443308293819427
+          ],
+          [
+            0.6339353322982788,
+            0.36392322182655334,
+            -0.08419425040483475
+          ],
+          [
+            0.6512524485588074,
+            0.2230476289987564,
+            -0.0948464646935463
+          ],
+          [
+            0.6647573113441467,
+            0.11911241710186005,
+            -0.10314035415649414
+          ],
+          [
+            0.717814028263092,
+            0.6111704111099243,
+            -0.06003376841545105
+          ],
+          [
+            0.7632942199707031,
+            0.449666827917099,
+            -0.07617634534835815
+          ],
+          [
+            0.795051634311676,
+            0.34152212738990784,
+            -0.08575718849897385
+          ],
+          [
+            0.8237075805664062,
+            0.2565173804759979,
+            -0.09397953003644943
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 55.951954499960266,
+        "inference_ms_p95": 58.988522599702264,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "gesture",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 1.7825,
+      "p95_ms": 2.5795,
+      "model_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
+      "samples_ms": [
+        2.385,
+        2.547,
+        2.574,
+        2.5,
+        2.098,
+        1.797,
+        2.584,
+        2.643,
+        2.527,
+        2.007,
+        1.776,
+        1.795,
+        2.037,
+        1.735,
+        1.716,
+        1.773,
+        2.151,
+        1.794,
+        1.788,
+        1.694,
+        1.847,
+        1.757,
+        2.587,
+        1.762,
+        1.774,
+        1.788,
+        1.918,
+        1.748,
+        1.728,
+        1.764,
+        1.772,
+        1.972,
+        1.724,
+        1.708,
+        1.735,
+        1.824,
+        1.78,
+        1.784,
+        1.687,
+        1.897,
+        1.745,
+        1.776,
+        1.77,
+        1.696,
+        1.876,
+        1.702,
+        1.756,
+        2.026,
+        1.781,
+        1.695
+      ],
+      "discarded_warmup_ms": [
+        2.815,
+        2.133,
+        1.909,
+        2.264,
+        1.807,
+        1.742,
+        2.039,
+        1.979,
+        1.783,
+        1.765
+      ],
+      "result": {
+        "presence": 0.998382568359375,
+        "landmarks_xyz": [
+          [
+            0.5983242988586426,
+            0.8996776342391968,
+            6.143380596768111e-05
+          ],
+          [
+            0.4158249497413635,
+            0.8524554967880249,
+            -0.03780227154493332
+          ],
+          [
+            0.28757163882255554,
+            0.7545504570007324,
+            -0.06817104667425156
+          ],
+          [
+            0.19597384333610535,
+            0.6475123167037964,
+            -0.09669680893421173
+          ],
+          [
+            0.11111327260732651,
+            0.5771705508232117,
+            -0.11926349252462387
+          ],
+          [
+            0.3944459855556488,
+            0.5553001761436462,
+            -0.08051924407482147
+          ],
+          [
+            0.33710774779319763,
+            0.3666369616985321,
+            -0.11240338534116745
+          ],
+          [
+            0.300534188747406,
+            0.2458171397447586,
+            -0.13531818985939026
+          ],
+          [
+            0.27039065957069397,
+            0.15010325610637665,
+            -0.15077903866767883
+          ],
+          [
+            0.5099825263023376,
+            0.5292112827301025,
+            -0.07779567688703537
+          ],
+          [
+            0.4939277768135071,
+            0.31675270199775696,
+            -0.10869687795639038
+          ],
+          [
+            0.4907741844654083,
+            0.17180988192558289,
+            -0.1297072470188141
+          ],
+          [
+            0.491122305393219,
+            0.05842354893684387,
+            -0.145864337682724
+          ],
+          [
+            0.6226521134376526,
+            0.5448973774909973,
+            -0.07591170817613602
+          ],
+          [
+            0.6481266617774963,
+            0.36098504066467285,
+            -0.09946133196353912
+          ],
+          [
+            0.6670687794685364,
+            0.23652015626430511,
+            -0.11887441575527191
+          ],
+          [
+            0.6832872629165649,
+            0.1269427239894867,
+            -0.13376186788082123
+          ],
+          [
+            0.7281953692436218,
+            0.5936757922172546,
+            -0.0770379900932312
+          ],
+          [
+            0.7724072337150574,
+            0.44973641633987427,
+            -0.09475141018629074
+          ],
+          [
+            0.7957930564880371,
+            0.35164710879325867,
+            -0.11244434118270874
+          ],
+          [
+            0.8173357844352722,
+            0.2549912631511688,
+            -0.12407581508159637
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4
+      },
+      "task": "gesture",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 56.490305999886914,
+      "p95_ms": 59.54315550015963,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298045039176941,
+            1.2746771416161096e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006723165512085,
+            -0.02044016495347023
+          ],
+          [
+            0.28919389843940735,
+            0.7870521545410156,
+            -0.040349580347537994
+          ],
+          [
+            0.2050444334745407,
+            0.6703912019729614,
+            -0.05510583147406578
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140640914440155
+          ],
+          [
+            0.325429230928421,
+            0.3888055682182312,
+            -0.09490729123353958
+          ],
+          [
+            0.30048635601997375,
+            0.2512880861759186,
+            -0.10839694738388062
+          ],
+          [
+            0.2826099693775177,
+            0.14602653682231903,
+            -0.11877547204494476
+          ],
+          [
+            0.5037545561790466,
+            0.5659865736961365,
+            -0.06970955431461334
+          ],
+          [
+            0.48508182168006897,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.1762618124485016,
+            -0.10939420759677887
+          ],
+          [
+            0.4845421016216278,
+            0.05438141152262688,
+            -0.12042264640331268
+          ],
+          [
+            0.6192498207092285,
+            0.5755326151847839,
+            -0.06443308293819427
+          ],
+          [
+            0.6339353322982788,
+            0.36392322182655334,
+            -0.08419425040483475
+          ],
+          [
+            0.6512524485588074,
+            0.2230476289987564,
+            -0.0948464646935463
+          ],
+          [
+            0.6647573113441467,
+            0.11911241710186005,
+            -0.10314035415649414
+          ],
+          [
+            0.717814028263092,
+            0.6111704111099243,
+            -0.06003376841545105
+          ],
+          [
+            0.7632942199707031,
+            0.449666827917099,
+            -0.07617634534835815
+          ],
+          [
+            0.795051634311676,
+            0.34152212738990784,
+            -0.08575718849897385
+          ],
+          [
+            0.8237075805664062,
+            0.2565173804759979,
+            -0.09397953003644943
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 56.490305999886914,
+        "inference_ms_p95": 59.54315550015963,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "gesture",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 7.707308499902865,
+      "p95_ms": 8.101840500330582,
+      "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+      "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "result": {
+        "presence": 0.9951624870300293,
+        "landmarks_xyz": [
+          [
+            0.5966857075691223,
+            0.9298046231269836,
+            1.2746811384189982e-09
+          ],
+          [
+            0.4069175124168396,
+            0.9006722569465637,
+            -0.020440174266695976
+          ],
+          [
+            0.28919389843940735,
+            0.7870520949363708,
+            -0.040349580347537994
+          ],
+          [
+            0.20504441857337952,
+            0.6703912019729614,
+            -0.055105846375226974
+          ],
+          [
+            0.11767320334911346,
+            0.5863056778907776,
+            -0.07139123231172562
+          ],
+          [
+            0.38397589325904846,
+            0.5949748754501343,
+            -0.07140642404556274
+          ],
+          [
+            0.32542917132377625,
+            0.3888055980205536,
+            -0.09490729868412018
+          ],
+          [
+            0.30048632621765137,
+            0.25128811597824097,
+            -0.10839695483446121
+          ],
+          [
+            0.2826099097728729,
+            0.14602652192115784,
+            -0.11877549439668655
+          ],
+          [
+            0.5037545561790466,
+            0.565986692905426,
+            -0.06970954686403275
+          ],
+          [
+            0.4850817620754242,
+            0.336337149143219,
+            -0.09598314762115479
+          ],
+          [
+            0.4832502007484436,
+            0.17626182734966278,
+            -0.10939420014619827
+          ],
+          [
+            0.4845421016216278,
+            0.05438140407204628,
+            -0.12042265385389328
+          ],
+          [
+            0.6192497611045837,
+            0.5755326151847839,
+            -0.06443307548761368
+          ],
+          [
+            0.6339353919029236,
+            0.36392322182655334,
+            -0.08419422060251236
+          ],
+          [
+            0.6512524485588074,
+            0.2230476588010788,
+            -0.09484641999006271
+          ],
+          [
+            0.6647573709487915,
+            0.11911247670650482,
+            -0.10314030945301056
+          ],
+          [
+            0.717814028263092,
+            0.6111704707145691,
+            -0.06003373861312866
+          ],
+          [
+            0.7632943391799927,
+            0.4496667683124542,
+            -0.07617628574371338
+          ],
+          [
+            0.7950515747070312,
+            0.34152206778526306,
+            -0.08575713634490967
+          ],
+          [
+            0.8237076997756958,
+            0.2565174400806427,
+            -0.09397946298122406
+          ]
+        ],
+        "gesture": "open_hand",
+        "extended_fingers_excluding_thumb": 4,
+        "demo_id": "D2-08",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+        "image_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 7.707308499902865,
+        "inference_ms_p95": 8.101840500330582,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "input_1",
+              "shape": [
+                1,
+                224,
+                224,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "Identity",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "name": "Identity_1",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "name": "Identity_2",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "name": "Identity_3",
+              "shape": [
+                1,
+                63
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "gesture",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "d11ce83fd8b81f73356ace50ea622321aa7deebb43ccadb8559fc58712dc53f7",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "criterion": "same gesture/presence result as original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 179.76726599999893,
+      "p95_ms": 183.5279384995829,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 179.76726599999893,
+        "inference_ms_p95": 183.5279384995829,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "segmentation",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 21.434052999666164,
+      "p95_ms": 22.064000100272096,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 21.434052999666164,
+        "inference_ms_p95": 22.064000100272096,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "segmentation",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 4.5875,
+      "p95_ms": 4.9119,
+      "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+      "samples_ms": [
+        4.805,
+        4.612,
+        4.609,
+        4.571,
+        4.663,
+        4.64,
+        4.593,
+        4.571,
+        4.583,
+        4.614,
+        5.038,
+        5.137,
+        4.604,
+        4.553,
+        4.535,
+        4.509,
+        4.47,
+        4.565,
+        4.528,
+        4.598,
+        4.599,
+        4.491,
+        4.902,
+        4.495,
+        4.567,
+        4.603,
+        4.622,
+        4.685,
+        4.546,
+        4.742,
+        4.507,
+        4.565,
+        4.92,
+        4.749,
+        4.681,
+        4.574,
+        4.623,
+        4.457,
+        4.501,
+        4.561,
+        4.54,
+        4.714,
+        4.853,
+        4.614,
+        4.458,
+        4.573,
+        4.509,
+        4.592,
+        4.576,
+        4.544
+      ],
+      "discarded_warmup_ms": [
+        6.146,
+        5.631,
+        5.544,
+        5.612,
+        5.457,
+        5.444,
+        4.842,
+        4.743,
+        4.608,
+        4.77
+      ],
+      "result": {
+        "foreground_fraction": 0.6300171085103484,
+        "class_fractions": {
+          "background": 0.36998289148965163,
+          "person": 0.6300171085103484
+        }
+      },
+      "task": "segmentation",
+      "session": 1,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 0.976328525564234,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 21.419401000002836,
+      "p95_ms": 21.999115100061317,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 21.419401000002836,
+        "inference_ms_p95": 21.999115100061317,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "segmentation",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 4.609,
+      "p95_ms": 4.890199999999999,
+      "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+      "samples_ms": [
+        4.488,
+        4.69,
+        4.548,
+        4.561,
+        4.53,
+        4.549,
+        4.592,
+        4.51,
+        4.579,
+        4.609,
+        4.603,
+        5.016,
+        4.776,
+        4.764,
+        4.609,
+        4.548,
+        5.067,
+        4.539,
+        4.648,
+        4.574,
+        4.552,
+        4.553,
+        4.669,
+        4.811,
+        4.578,
+        4.625,
+        4.622,
+        4.756,
+        4.721,
+        4.679,
+        4.509,
+        4.726,
+        4.591,
+        4.588,
+        4.638,
+        4.674,
+        4.615,
+        4.506,
+        4.645,
+        4.548,
+        4.623,
+        4.69,
+        4.652,
+        4.767,
+        4.566,
+        4.538,
+        4.609,
+        4.955,
+        4.54,
+        4.605
+      ],
+      "discarded_warmup_ms": [
+        6.139,
+        5.399,
+        5.456,
+        5.38,
+        5.451,
+        5.342,
+        5.438,
+        5.818,
+        4.683,
+        5.18
+      ],
+      "result": {
+        "foreground_fraction": 0.6300171085103484,
+        "class_fractions": {
+          "background": 0.36998289148965163,
+          "person": 0.6300171085103484
+        }
+      },
+      "task": "segmentation",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 0.976328525564234,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 179.92592400014473,
+      "p95_ms": 182.5336912504099,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 179.92592400014473,
+        "inference_ms_p95": 182.5336912504099,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "segmentation",
+      "session": 2,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "htp",
+      "passed": true,
+      "runtime": "QAIRT/QNN 2.51.40.260930",
+      "median_ms": 4.634,
+      "p95_ms": 4.8133,
+      "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
+      "samples_ms": [
+        4.636,
+        4.637,
+        4.632,
+        4.816,
+        4.655,
+        4.601,
+        4.563,
+        4.641,
+        4.683,
+        4.596,
+        4.599,
+        4.658,
+        4.579,
+        5.196,
+        4.519,
+        4.636,
+        4.596,
+        4.754,
+        4.831,
+        4.547,
+        4.585,
+        4.575,
+        4.6,
+        4.66,
+        4.662,
+        4.53,
+        4.799,
+        4.563,
+        4.688,
+        4.608,
+        4.589,
+        4.636,
+        4.541,
+        4.658,
+        4.613,
+        4.66,
+        4.645,
+        4.595,
+        4.707,
+        4.599,
+        4.81,
+        4.655,
+        4.701,
+        4.613,
+        4.644,
+        4.595,
+        4.605,
+        4.549,
+        4.628,
+        4.642
+      ],
+      "discarded_warmup_ms": [
+        5.991,
+        5.392,
+        5.311,
+        5.451,
+        5.454,
+        5.416,
+        5.462,
+        5.42,
+        4.824,
+        4.695
+      ],
+      "result": {
+        "foreground_fraction": 0.6300171085103484,
+        "class_fractions": {
+          "background": 0.36998289148965163,
+          "person": 0.6300171085103484
+        }
+      },
+      "task": "segmentation",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 0.976328525564234,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "cpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 177.4504015002094,
+      "p95_ms": 181.74847865038828,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "CPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 177.4504015002094,
+        "inference_ms_p95": 181.74847865038828,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "runtime_version": "2.8.4"
+      },
+      "task": "segmentation",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    },
+    {
+      "backend": "gpu",
+      "passed": true,
+      "runtime": "TFLite BSP 2.8.4",
+      "median_ms": 21.320515500065085,
+      "p95_ms": 21.905012199840712,
+      "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+      "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "result": {
+        "foreground_fraction": 0.618873866371936,
+        "class_fractions": {
+          "background": 0.381126133628064,
+          "person": 0.618873866371936
+        },
+        "demo_id": "D2-09",
+        "backend": "GPU",
+        "runtime": "vendor.tflite_c_api",
+        "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+        "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+        "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+        "runs": 50,
+        "warmup": 10,
+        "threads": 2,
+        "crop": null,
+        "inference_ms_median": 21.320515500065085,
+        "inference_ms_p95": 21.905012199840712,
+        "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+        "tensor_contract": {
+          "inputs": [
+            {
+              "name": "sub_7",
+              "shape": [
+                1,
+                257,
+                257,
+                3
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "slot": 0,
+              "name": "ResizeBilinear_3",
+              "shape": [
+                1,
+                257,
+                257,
+                21
+              ],
+              "dtype": "<class 'numpy.float32'>",
+              "quantization": [
+                0.0,
+                0
+              ]
+            }
+          ]
+        },
+        "delegate": "TfLiteGpuDelegateV2 (installed BSP); inspect stderr for delegated partition coverage",
+        "runtime_version": "2.8.4"
+      },
+      "coverage": "GPU delegate partition confirmed; residual CPU operators may remain, see log. No fully-GPU graph claim.",
+      "task": "segmentation",
+      "session": 3,
+      "runs": 50,
+      "warmup": 10,
+      "input_png_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+      "comparison_to_tflite_cpu": {
+        "passed": true,
+        "person_mask_iou": 1.0,
+        "criterion": "person mask IoU >= 0.70 against original TFLite CPU"
+      }
+    }
+  ],
+  "original_runtimes_unchanged": true,
+  "evidence": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\htp251\\benchmarks\\20261101T203651Z-1117c",
+  "method": {
+    "cpu_gpu_runtime": "Installed TFLite C API 2.8.4; CPU 2 threads; GPU delegate OpenCL partition, residual CPU ops possible",
+    "htp_runtime": "QAIRT/QNN 2.51.40.260930; libQnnHtp.so only; perf_profile default; profiling client; discard first warmup executions",
+    "scope": "TFLite InterpreterInvoke and QNN NETRUN ROOT EXECUTE; excludes model loading/compile, input preprocessing, host postprocess/NMS, rendering and ADB. TFLite SSD includes built-in detection postprocess/NMS; QNN SSD graph excludes host NMS. Converted/quantized artifacts differ; pipeline latency ratios, not pure hardware speedups or FPS.",
+    "order": "Rotate CPU/GPU/HTP order each session; no global governors/services/settings changed",
+    "placement_evidence": "Detailed HTP functional profiles: htp251/evidence/20261101T195905Z-ffc9e, matching current DLC hashes. Timing uses client profiling to avoid detailed per-op overhead.",
+    "reference_scope": "Same prepared PNG per task, semantic checks against original TFLite CPU; selected images, not dataset accuracy"
+  }
+}

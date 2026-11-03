@@ -1,0 +1,3 @@
+sh: line 1:  5922 Segmentation fault      sh /tmp/qb560d-training/target/ai.sh classification --image media/grace_hopper.jpg --backend gpu --runs 20 --warmup 3 --output evidence/acceleration/gpu
+
+__QB560D_EXIT__=139

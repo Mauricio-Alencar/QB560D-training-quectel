@@ -1,0 +1,18 @@
+{
+  "recorded_at_host_utc": "2026-11-01T01:08:34.120611+00:00",
+  "model_inference": "NOT_EXECUTED_HTP_DLC_REQUIRED",
+  "source_tflite_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "tflite_hexagon_attempt": {
+    "result": "DELEGATE_INITIALIZATION_FAILED",
+    "remote_exit": 1,
+    "cpu_retry": false,
+    "log": "tflite-hexagon-attempt.log"
+  },
+  "snpe_htp_runtime": {
+    "result": "AVAILABLE_UNSIGNED_PD",
+    "version": "2.12.0.230626174329_59328",
+    "probe": "snpe-probe-confirmed.json",
+    "model_loaded": false
+  },
+  "pending": "DLC converted from the same MobileNet V1 source, compatible with SNPE 2.12; inference/output/profile validation"
+}

@@ -1,0 +1,4 @@
+{
+  "command": "test -f /opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/summary.json",
+  "exit_code": 0
+}

@@ -1,0 +1,6 @@
+{
+  "command": "cat /opt/qb560d-docker-demo/evidence/docker-info.txt; journalctl -u qb560d-docker-demo.service -n 8 --no-pager; sh /opt/qb560d-docker-demo/target/docker.sh images",
+  "exit_code": 0,
+  "timed_out": false,
+  "host_utc": "2026-11-01T03:25:30.572727+00:00"
+}

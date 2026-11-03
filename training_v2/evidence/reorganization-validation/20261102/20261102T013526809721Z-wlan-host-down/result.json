@@ -1,0 +1,14 @@
+{
+  "label": "wlan-host-down",
+  "script": "host\\adb_lab.py",
+  "args": [
+    "run",
+    "wlan",
+    "down"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 0.594,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T013526809721Z-wlan-host-down\\console.log"
+}

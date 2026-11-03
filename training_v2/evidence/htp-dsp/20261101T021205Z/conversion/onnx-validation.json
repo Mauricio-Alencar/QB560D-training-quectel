@@ -1,0 +1,19 @@
+{
+  "tensorflow": "2.13.0",
+  "onnxruntime": "1.16.3",
+  "scope": "supplied image only; the old target TFLite 2.8.4 has separately measured rounding differences",
+  "records": [
+    {
+      "file": "mobilenet_v1.onnx",
+      "source_tflite_tf213_exact_output_match": true,
+      "top1": 653,
+      "top1_score": 0.8984375
+    },
+    {
+      "file": "mobilenet_v1_scalar.onnx",
+      "source_tflite_tf213_exact_output_match": true,
+      "top1": 653,
+      "top1_score": 0.8984375
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "qai_hub_import": "PASS",
+  "configuration_file_present": false,
+  "hosted_job": "NOT_RUN_CREDENTIALS_NOT_CONFIGURED",
+  "model_and_numpy_input_reference_present": true,
+  "client": "CREATED",
+  "device_listing": "BLOCKED_NO_CONFIG",
+  "exception_type": "UserError"
+}

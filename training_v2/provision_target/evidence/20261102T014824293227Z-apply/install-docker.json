@@ -1,0 +1,4 @@
+{
+  "command": "printf 'qb560d-training-docker-v1\\n' > /opt/qb560d-docker-demo/.owner\nsh /opt/qb560d-docker-demo/target/install.sh",
+  "exit_code": 0
+}

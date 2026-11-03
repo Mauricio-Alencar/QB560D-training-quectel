@@ -1,0 +1,47 @@
+[
+  {
+    "input": "/usr/bin/qlril-api-test",
+    "host_utc": "2026-11-02T01:32:14.455174+00:00",
+    "output": "\u001b[1m\u001b[32mQLRIL_Init success\u001b[1m\n\u001b[0m\u001b[1m\u001b[32mQLRIL library current version:\u001b[1m202411060822\n\u001b[0mCopyright (C) 2020 Quectel, Smart Linux\nGroup Name:QL RIL API, Supported test cases:\n0:\tHelp, Show all the API\n========================================\nGeneral Functions\n========================================\n1:\tQLRIL_Init\n2:\tQLRIL_Exit\n3:\tQLRIL_GetVersion\n4:\tQLRIL_GetSimCardSlotId\n5:\tQLRIL_SetSimCardSlotId\n6:\tQLRIL_SendAT\n7:\tQLRIL_ResetQcrild\n8:\tQLRIL_GetDefaultTimeout\n9:\tQLRIL_SetDefaultTimeout\n========================================\nUnsolicited Indication Callback\n========================================\n10:\tQLRIL_AddUnsolEventsListener\n11:\tQLRIL_DelUnsolEventsListener\n12:\tQLRIL_RegisterUnsolEvents\n13:\tQLRIL_UnregisterUnsolEvents\n========================================\nQuery and Settings\n========================================\n19:\tQLRIL_GetIMSIForUSIM\n20:\tQLRIL_GetOperator\n21:\tQLRIL_GetIccCardStatus\n22:\tQLRIL_SetRadioPower\n23:\tQLRIL_SetScreenState\n24:\tQLRIL_RequestShutdown - DEPRECATED\n25:\tQLRIL_GetDeviceIdentity\n26:\tQLRIL_GetIMSI - DEPRECATED\n27:\tQLRIL_GetIMSIForApp\n28:\tQLRIL_GetIMEI - DEPRECATED\n29:\tQLRIL_GetSignalStrength\n30:\tQLRIL_GetPhoneNumber\n31:\tQLRIL_SupplyIccPin\n32:\tQLRIL_SupplyIccPuk\n33:\tQLRIL_ChangeIccPin\n34:\tQLRIL_QueryFacilityLockForApp\n35:\tQLRIL_SetFacilityLockForApp\n36:\tQLRIL_IccIOForApp\n37:\tQLRIL_GetNetworkSelectionMode\n38:\tQLRIL_GetBasebandVersion\n39:\tQLRIL_GetSimIccId\n140:\tQLRIL_GetNITZTime\n========================================\nVoice Call\n========================================\n40:\tQLRIL_GetVoiceRegistrationState\n41:\tQLRIL_GetVoiceRadioTechnology\n42:\tQLRIL_GetImsRegistrationState\n43:\tQLRIL_Dial\n44:\tQLRIL_AcceptCall\n45:\tQLRIL_RejectCall\n46:\tQLRIL_GetCurrentCalls\n47:\tQLRIL_HangupConnection\n48:\tQLRIL_HangupWaitingOrBackground\n49:\tQLRIL_HangupForegroundResumeBackground\n50:\tQLRIL_GetMute\n51:\tQLRIL_SetMute\n52:\tQLRIL_SwitchWaitingOrHoldingAndActive\n53:\tQLRIL_Conference\n54:\tQLRIL_GetCurrentCallsByAtCmd\n56:\tQLRIL_IMSServerState\n57:\tQLRIL_IMSServerEnable\n58:\tQLRIL_IMSSendImsRegistrationState\n59:\tQLRIL_IMSSendRoamingRegistrationState\n========================================\nSend SMS\n========================================\n60:\tQLRIL_SendSms\n61:\tQLRIL_SendSmsByPDU\n62:\tQLRIL_SendImsGsmSms\n63:\tQLRIL_SendImsGsmSmsByPDU\n========================================\nData Network\n========================================\n70:\tQLRIL_GetDataRegistrationState\n71:\tQLRIL_SetupDataCall\n72:\tQLRIL_SetDataAllowed\n73:\tQLRIL_GetDataCallList\n74:\tQLRIL_DeactivateDataCall\n75:\tQLRIL_GetPreferredNetworkType\n76:\tQLRIL_SetPreferredNetworkType\n77:\tQLRIL_AppendDNSForIPV4V6\n78:\tQLRIL_ClearResolvConfFile\n79:\tQLRIL_EnableRNDIS\n80:\tQLRIL_DisableRNDIS\n81:\tQLRIL_IMSSendDataAllowedStatus\n82:\tQLRIL_SetRouteForIPV6\n83:\tQLRIL_SetDNSByInterface\n========================================\nGNSS Functions For Qrb\n========================================\n90:\tQLRIL_GNSS_CLIENT_OPEN\n91:\tQLRIL_GNSS_NEMA_TYPE\n92:\tQLRIL_GNSS_START_FIX\n93:\tQLRIL_GNSS_STOP_FIX\n94:\tQLRIL_GNSS_CLIENT_CLOSE\n95:\tQLRIL_GNSS_NEMA_GetLocation\n-1:\tExit!\n\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "4",
+    "host_utc": "2026-11-02T01:32:14.469673+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mCurrent SIM card slot ID: \u001b[1m1\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "21",
+    "host_utc": "2026-11-02T01:32:14.486361+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mQLRIL_GetIccCardStatus ret = \u001b[1m0\n\u001b[0m\u001b[1m\u001b[34mcard_state(e.g. 0:absent; 1:present;): \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34muniversal_pin_state(e.g. 0:unknown;): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mgsm_umts_subscription_app_index: \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mcdma_subscription_app_index: \u001b[1m\u001b[32m-1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mims_subscription_app_index: \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mnum_applications: \u001b[1m\u001b[32m2\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): \u001b[1m\u001b[32m2\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): \u001b[1m\u001b[32m5\u001b[1m\n\u001b[0m\u001b[1m\u001b[34maid_ptr: \u001b[1m\u001b[32ma0000000871002ff55f00189000001ff\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_label_ptr: \u001b[1m\u001b[32m00000000\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1_replaced: \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1(e.g. 1:Enable not verified, 2:Enable verified): \u001b[1m\u001b[32m3\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin2(e.g. 3:Disabled, 4:Enable blocked): \u001b[1m\u001b[32m1\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_type(e.g 1:SIM; 2:USIM 3:RUIM 4:CSIM 5:ISIM): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mapp_state(e.g. 2: Pin req; 3: PUK req; 5:Ready): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin1(e.g. 1:Enable not verified, 2:Enable verified): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\u001b[1m\u001b[34mpin2(e.g. 3:Disabled, 4:Enable blocked): \u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "20",
+    "host_utc": "2026-11-02T01:32:14.500947+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mONS: \u001b[1mTIM\n\u001b[0m\u001b[1m\u001b[32mEONS: \u001b[1mTIM\n\u001b[0m\u001b[1m\u001b[32mMCCMNC: \u001b[1m72402\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "29",
+    "host_utc": "2026-11-02T01:32:14.514136+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mLTE: signalStrength[23] rsrp[99] rsrq[12] rssnr[32]\n\u001b[1m\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "37",
+    "host_utc": "2026-11-02T01:32:14.528091+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[34mQLRIL_GetNetworkSelectionMode with return:\u001b[1m1\n\u001b[0m\u001b[1m\u001b[33mNetwork selection mode(0: automatic selection;1: manual selection):\u001b[1m\u001b[32m0\u001b[1m\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "38",
+    "host_utc": "2026-11-02T01:32:14.541971+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[32mbaseband version:\u001b[1mBP10.003(SG560DEUPAR60A02)\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "70",
+    "host_utc": "2026-11-02T01:32:14.557232+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[34mresponse[0] is registration state 0-5,e.g 1:Registered, 2: Not registered\nresponse[1] is LAC if registered or NULL if not\nresponse[2] is CID if registered or NULL if not\nresponse[3] indicates the available data radio technology, e.g 3:UMTS, 14:LTE, 20:NR5G\nvalid values as defined by RIL_RadioTechnology.\nresponse[5] The maximum number of simultaneous Data Calls that can be established\nFor more information refer to RIL_REQUEST_DATA_REGISTRATION_STATE in ril.h\u001b[1m\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m0]:1\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m2]:0825cd01\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m3]:14\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m5]:20\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m6]:38250\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m7]:364\n\u001b[0m\u001b[1m\u001b[32mresponse[\u001b[1m8]:136695041\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  },
+  {
+    "input": "73",
+    "host_utc": "2026-11-02T01:32:14.570010+00:00",
+    "output": "\u001b[1m\u001b[0m\u001b[1m\u001b[33mNo Data Call list items, May be you shuld run QLRIL_SetupDataCall() firstly\u001b[1m\n\u001b[0m\n\u001b[1m\u001b[33mPlease input cmd index (-1: exit, 0: help):"
+  }
+]

@@ -1,0 +1,136 @@
+qcs6490-odk
+ 12:32:47 up  5:58,  3 users,  load average: 3.04, 2.98, 2.98
+Bus 005 Device 002: ID 0451:8140 Texas Instruments, Inc. TUSB8041 4-Port Hub
+Bus 005 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 004 Device 003: ID 1224:2a25  
+Bus 004 Device 002: ID 0451:8142 Texas Instruments, Inc. TUSB8041 4-Port Hub
+Bus 004 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+msm_vidc_vdec ():
+	/dev/video32
+	/dev/video33
+
+USB PHY 2.0: USB CAMERA (usb-xhci-hcd.3.auto-1.3):
+	/dev/video0
+	/dev/video1
+	/dev/media0
+
+Driver Info:
+	Driver name      : uvcvideo
+	Card type        : USB PHY 2.0: USB CAMERA
+	Bus info         : usb-xhci-hcd.3.auto-1.3
+	Driver version   : 5.4.219
+	Capabilities     : 0x84a00001
+		Video Capture
+		Metadata Capture
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04200001
+		Video Capture
+		Streaming
+		Extended Pix Format
+Media Driver Info:
+	Driver name      : uvcvideo
+	Model            : USB PHY 2.0: USB CAMERA
+	Serial           : 
+	Bus info         : usb-xhci-hcd.3.auto-1.3
+	Media version    : 5.4.219
+	Hardware revision: 0x00000100 (256)
+	Driver version   : 5.4.219
+Interface Info:
+	ID               : 0x03000002
+	Type             : V4L Video
+Entity Info:
+	ID               : 0x00000001 (1)
+	Name             : USB PHY 2.0: USB CAMERA
+	Function         : V4L2 I/O
+	Flags         : default
+	Pad 0x01000007   : 0: Sink
+	  Link 0x02000013: from remote pad 0x100000a of entity 'Extension 4': Data, Enabled, Immutable
+Priority: 2
+Video input : 0 (Camera 1: ok)
+Format Video Capture:
+	Width/Height      : 1280/720
+	Pixel Format      : 'YUYV' (YUYV 4:2:2)
+	Field             : None
+	Bytes per Line    : 2560
+	Size Image        : 1843200
+	Colorspace        : sRGB
+	Transfer Function : Default (maps to sRGB)
+	YCbCr/HSV Encoding: Default (maps to ITU-R 601)
+	Quantization      : Default (maps to Limited Range)
+	Flags             : 
+Crop Capability Video Capture:
+	Bounds      : Left 0, Top 0, Width 1280, Height 720
+	Default     : Left 0, Top 0, Width 1280, Height 720
+	Pixel Aspect: 1/1
+Selection Video Capture: crop_default, Left 0, Top 0, Width 1280, Height 720, Flags: 
+Selection Video Capture: crop_bounds, Left 0, Top 0, Width 1280, Height 720, Flags: 
+Streaming Parameters Video Capture:
+	Capabilities     : timeperframe
+	Frames per second: 5.000 (5/1)
+	Read buffers     : 0
+                     brightness 0x00980900 (int)    : min=0 max=255 step=1 default=128 value=128
+                       contrast 0x00980901 (int)    : min=0 max=255 step=1 default=128 value=128
+                     saturation 0x00980902 (int)    : min=0 max=255 step=1 default=128 value=128
+                            hue 0x00980903 (int)    : min=-256 max=-32513 step=1 default=-32640 value=128
+ white_balance_temperature_auto 0x0098090c (bool)   : default=0 value=0
+    white_balance_red_component 0x0098090e (int)    : min=0 max=255 step=0 default=128 value=128
+   white_balance_blue_component 0x0098090f (int)    : min=0 max=255 step=1 default=128 value=128
+                          gamma 0x00980910 (int)    : min=0 max=255 step=10 default=128 value=128
+                           gain 0x00980913 (int)    : min=0 max=255 step=1 default=128 value=128
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=0 value=0
+				0: Disabled
+				1: 50 Hz
+				2: 60 Hz
+                       hue_auto 0x00980919 (bool)   : default=0 value=0
+      white_balance_temperature 0x0098091a (int)    : min=0 max=255 step=1 default=128 value=128
+                      sharpness 0x0098091b (int)    : min=0 max=255 step=1 default=128 value=128
+         backlight_compensation 0x0098091c (int)    : min=0 max=255 step=1 default=128 value=128
+                  exposure_auto 0x009a0901 (menu)   : min=0 max=3 default=0 value=0
+              exposure_absolute 0x009a0902 (int)    : min=0 max=0 step=0 default=0 value=0 flags=inactive
+         exposure_auto_priority 0x009a0903 (bool)   : default=0 value=0
+                   pan_absolute 0x009a0908 (int)    : min=0 max=0 step=0 default=0 value=0
+                  tilt_absolute 0x009a0909 (int)    : min=0 max=0 step=0 default=0 value=0
+                 focus_absolute 0x009a090a (int)    : min=0 max=0 step=0 default=0 value=0
+                     focus_auto 0x009a090c (bool)   : default=0 value=0
+                  zoom_absolute 0x009a090d (int)    : min=0 max=0 step=0 default=0 value=0
+                zoom_continuous 0x009a090f (int)    : min=0 max=0 step=0 default=0 value=0 flags=write-only
+                        privacy 0x009a0910 (bool)   : default=0 value=0
+                  iris_absolute 0x009a0911 (int)    : min=0 max=0 step=0 default=0 value=0
+                  iris_relative 0x009a0912 (int)    : min=0 max=0 step=0 default=0 value=0 flags=write-only
+                      pan_speed 0x009a0920 (int)    : min=0 max=0 step=0 default=0 value=0
+                     tilt_speed 0x009a0921 (int)    : min=0 max=0 step=0 default=0 value=0
+ioctl: VIDIOC_ENUM_FMT
+	Type: Video Capture
+
+	[0]: 'MJPG' (Motion-JPEG, compressed)
+		Size: Discrete 1920x1080
+			Interval: Discrete 0.040s (25.000 fps)
+		Size: Discrete 1280x720
+			Interval: Discrete 0.040s (25.000 fps)
+		Size: Discrete 640x480
+			Interval: Discrete 0.040s (25.000 fps)
+	[1]: 'YUYV' (YUYV 4:2:2)
+		Size: Discrete 1280x720
+			Interval: Discrete 0.200s (5.000 fps)
+		Size: Discrete 640x480
+			Interval: Discrete 0.040s (25.000 fps)
+6448ccd130036faf7d14e79903553c638c014cb87756ff264519ee857f88074c  /opt/qb560d-training-payload/media/captured/frame.jpg
+total 80
+drwxr-xr-x 3 root root 4096 Nov  2 10:09 rv-65bb2071e647
+drwxr-xr-x 2 root root 4096 Nov  2 10:09 native
+drwxr-xr-x 2 root root 4096 Nov  2 09:35 iperf-20261102T093527-44753
+drwxr-xr-x 2 root root 4096 Nov  2 09:35 iperf-20261102T093505-44721
+drwxr-xr-x 2 root root 4096 Nov  2 09:34 iperf-20261102T093442-44688
+drwxr-xr-x 2 root root 4096 Nov  2 09:34 iperf-20261102T093420-44653
+drwxr-xr-x 2 root root 4096 Nov  2 09:32 reorg-aihub-20261102
+drwxr-xr-x 4 root root 4096 Nov  2 09:28 htp-comparison
+drwxr-xr-x 4 root root 4096 Nov  2 09:22 reorganization-source-backup-20261102
+drwxr-xr-x 5 root root 4096 Nov  2 09:18 rv-101f34c8ce7a
+drwxr-xr-x 3 root root 4096 Nov  2 06:51 controls-deploy-smoke
+-rw-r--r-- 1 root root  905 Nov  2 06:37 cold-boot-aihub-cpu.json
+-rw-r--r-- 1 root root  904 Nov  2 04:34 aihub-tiny-first-gpu.json

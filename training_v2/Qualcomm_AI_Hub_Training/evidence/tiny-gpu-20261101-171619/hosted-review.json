@@ -1,0 +1,47 @@
+{
+  "at_host_utc": "2026-11-01T20:25:40.955739+00:00",
+  "result": "HOSTED_ARTIFACT_AND_REFERENCE_PASS_LOCAL_DEPLOY_PENDING",
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "compile_job": {
+    "id": "j5q1v4l7g",
+    "url": "https://workbench.aihub.qualcomm.com/jobs/j5q1v4l7g/"
+  },
+  "inference_profile_job": {
+    "id": "j56mwo8vp",
+    "url": "https://workbench.aihub.qualcomm.com/jobs/j56mwo8vp/"
+  },
+  "artifact_bytes": 1992,
+  "artifact_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+  "actual": [
+    [
+      0.0933837890625,
+      0.1846923828125,
+      0.32470703125,
+      0.09124755859375
+    ]
+  ],
+  "expected": [
+    [
+      0.09336850047111511,
+      0.1846853494644165,
+      0.3246975839138031,
+      0.09120750427246094
+    ]
+  ],
+  "max_abs_error": 4.00543212890625e-05,
+  "atol": 0.0001,
+  "rtol": 0.001,
+  "profile_compute_units": {
+    "GPU": 4
+  },
+  "profile_entry_count": 4,
+  "estimated_inference_us": 217,
+  "sample_count": 100,
+  "sample_median_us": 694.5,
+  "sample_min_us": 217,
+  "sample_max_us": 4895,
+  "timing_scope": "Qualcomm-hosted kit only. Estimated field and raw-sample median are distinct; neither is local QB560D latency.",
+  "compute_scope": "Four listed graph entries on GPU, zero CPU entries. Does not claim all application/preprocessing work avoids CPU.",
+  "local_deploy": "PENDING_TARGET_COMPATIBILITY_AND_OUTPUT_CHECKS",
+  "profile_units_source": "https://workbench.aihub.qualcomm.com/docs/hub/jobs.html"
+}

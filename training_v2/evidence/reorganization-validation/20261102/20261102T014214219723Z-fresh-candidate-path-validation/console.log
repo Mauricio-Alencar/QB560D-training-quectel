@@ -1,0 +1,9 @@
+{
+  "result": "PASS_PORTABLE_TRAINING",
+  "python_files": 95,
+  "slides": 108,
+  "ai_hub_pdfs": 4,
+  "cli_entrypoints": 9,
+  "adb_transport": "host/adb_transport.py",
+  "hardware_connection_used": false
+}

@@ -1,0 +1,196 @@
+{
+  "inputs": [
+    {
+      "name": "normalized_input_image_tensor",
+      "shape": [
+        1,
+        300,
+        300,
+        3
+      ],
+      "dtype": "<class 'numpy.uint8'>",
+      "quantization": [
+        0.0078125,
+        128
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "TFLite_Detection_PostProcess",
+      "shape": [
+        1,
+        10,
+        4
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "TFLite_Detection_PostProcess:1",
+      "shape": [
+        1,
+        10
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "TFLite_Detection_PostProcess:2",
+      "shape": [
+        1,
+        10
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "TFLite_Detection_PostProcess:3",
+      "shape": [
+        1
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "detections": [
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.71875,
+      "box_yxyx": [
+        0.054379791021347046,
+        0.0,
+        0.9850850105285645,
+        1.0
+      ]
+    },
+    {
+      "class_id": 31,
+      "label": "tie",
+      "score": 0.65625,
+      "box_yxyx": [
+        0.7084828615188599,
+        0.43894636631011963,
+        0.8997373580932617,
+        0.5660443305969238
+      ]
+    },
+    {
+      "class_id": 31,
+      "label": "tie",
+      "score": 0.5859375,
+      "box_yxyx": [
+        0.7239762544631958,
+        0.45460134744644165,
+        0.8746565580368042,
+        0.5498793721199036
+      ]
+    }
+  ],
+  "demo_id": "D2-06",
+  "backend": "CPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+  "image_sha256": "833edac7b847e162f56dc0e2dfaf1365209998ef26afe5326fa36c81599ba774",
+  "runs": 1,
+  "warmup": 0,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 54.60952800012819,
+  "inference_ms_p95": 54.60952800012819,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "normalized_input_image_tensor",
+        "shape": [
+          1,
+          300,
+          300,
+          3
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.0078125,
+          128
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "TFLite_Detection_PostProcess",
+        "shape": [
+          1,
+          10,
+          4
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "TFLite_Detection_PostProcess:1",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "TFLite_Detection_PostProcess:2",
+        "shape": [
+          1,
+          10
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "TFLite_Detection_PostProcess:3",
+        "shape": [
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)

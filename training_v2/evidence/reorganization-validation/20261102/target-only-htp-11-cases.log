@@ -1,0 +1,13 @@
+burger-classification PASS
+full-body-detection PASS
+no-person-detection PASS
+full-body-pose PASS
+standing-full-body-pose PASS
+occluded-pose PASS
+closed-fist PASS
+no-hand PASS
+person-segmentation PASS
+standing-boundary-segmentation PASS
+no-person-segmentation PASS
+PASS_TARGET_HTP_CONTROLS 
+EVIDENCE /opt/qb560d-ai-htp251/htp-controls/runs/20261102T012344Z-f208c

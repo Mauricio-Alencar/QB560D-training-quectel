@@ -1,0 +1,27 @@
+{
+  "shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "dtype": "little-endian float32",
+  "layout": "NHWC",
+  "range": [
+    0.003921568859368563,
+    1.0
+  ],
+  "resize_shorter_side": 256,
+  "center_crop": 224,
+  "normalization": "RGB / 255; ImageNet mean/std normalization is inside the AI Hub network",
+  "qnn_input_mode": "Float input file; qnn-net-run converts to the graph quantization",
+  "graph_input_quantization": {
+    "scale": 0.003918204456567764,
+    "zero_point": 0
+  },
+  "image_sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+  "tensor_sha256": "677bc9fa94a9cc9114bf61695e660a2e4896b7e1fa433e947786d18ffd79dff4"
+}
+Host cache verified. No target files changed.
+PASS: all locked model assets match
+HOST_ONLY_PREPARED: 175 locked files; 470091593 bytes

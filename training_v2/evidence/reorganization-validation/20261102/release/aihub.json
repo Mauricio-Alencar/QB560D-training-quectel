@@ -1,0 +1,61 @@
+{
+  "result": "PASS_NEW_HOSTED_ARTIFACT_AND_OFFLINE_CPU_GPU",
+  "hosted": {
+    "device": "Dragonwing RB3 Gen 2 Vision Kit",
+    "location": "Qualcomm-hosted device; NOT the local QB560D",
+    "compile_options": "--target_runtime tflite --compute_unit gpu",
+    "source_sha256": "d80d174228cefcf0e09dd344c102379dc03c4348ed13c9a09ac728ee61b31b5b",
+    "compile_job": {
+      "id": "jp44344lp",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/jp44344lp/"
+    },
+    "input_sha256": "0de682b953928cdbd2ff44af3dda2b1fc3fc107054d8f1337e4a8335ae8fe65f",
+    "inference_profile_job": {
+      "id": "j5mk8kkqp",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/j5mk8kkqp/"
+    },
+    "target_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+    "correctness": {
+      "pass": true,
+      "max_abs_error": 4.00543212890625e-05,
+      "atol": 0.0001,
+      "rtol": 0.001
+    }
+  },
+  "hosted_compute_unit": "4 GPU graph entries; 0 CPU graph entries",
+  "local": {
+    "cpu": {
+      "result": "PASS",
+      "runtime_version": "2.8.4",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "max_abs_error": 1.4901161193847656e-08,
+      "median_invoke_ms": 0.09510999916528817,
+      "p95_invoke_ms": 0.096292949092458
+    },
+    "gpu": {
+      "result": "PASS",
+      "runtime_version": "2.8.4",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "max_abs_error": 2.9802322387695312e-08,
+      "median_invoke_ms": 0.25655300032667583,
+      "p95_invoke_ms": 1.2526613003501552
+    }
+  },
+  "offline": {
+    "cpu": {
+      "result": "PASS",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "max_abs_error": 1.4901161193847656e-08
+    },
+    "gpu": {
+      "result": "PASS",
+      "model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+      "max_abs_error": 2.9802322387695312e-08
+    }
+  },
+  "offline_integrity": {
+    "files_checked": 6,
+    "passed": true
+  },
+  "cloud_credentials_included": false
+}

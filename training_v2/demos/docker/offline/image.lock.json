@@ -1,0 +1,15 @@
+{
+  "image": "qb560d-telemetry:1.0.0",
+  "image_id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+  "os": "linux",
+  "architecture": "arm64",
+  "uncompressed_image_size_bytes": 155045534,
+  "archive": "offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz",
+  "archive_bytes": 47037664,
+  "archive_sha256": "cd0c23929d9b698a1e824d1f735cad94112c9eeef6e9e1b60648e13ccc638550",
+  "base_image": "python@sha256:94a8fee35252d06ab75856f15f12c7bae67b10e8a6da93c7fded82b2610926cd",
+  "source_hashes": {
+    "app/Dockerfile": "af3045cb52e0f5a344f613e72c3adaff4e123049e69011ccb2f31a5ec7470eb5",
+    "app/telemetry.py": "dd05013a59d12af859c67adb0f84857a9055f243c05373f9ec7ff2c9c68a6dac"
+  }
+}

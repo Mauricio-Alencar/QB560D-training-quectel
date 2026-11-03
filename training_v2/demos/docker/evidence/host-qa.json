@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "at_host_utc": "2026-11-01T16:29:21.792244+00:00",
+  "python38_syntax_files": 20,
+  "shell_lf_and_syntax": 6,
+  "authentication_transport_unit_tests": 14,
+  "existing_training_unit_tests": 14,
+  "target_integration_checks": 61,
+  "three_target_sessions": "PASS",
+  "first_install_and_repeat_authenticated": "PASS",
+  "student_relocated_unicode_folder_and_long_path_collection": "PASS",
+  "image_runtime_source_and_adb_hashes": "PASS",
+  "credential_scan_files": 331,
+  "slides": "2 slides; notes updated; visible content and RGB pixels unchanged",
+  "target_platform": "Ubuntu20.04.3 / kernel5.4.219-perf build Apr2 2026 / aarch64",
+  "target_clock": "Unsynchronized 2024; host UTC used for deployment records",
+  "classroom_validation": "evidence/CLASSROOM_VALIDATION.json"
+}

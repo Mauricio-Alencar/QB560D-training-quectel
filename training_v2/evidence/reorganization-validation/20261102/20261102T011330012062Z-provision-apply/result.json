@@ -1,0 +1,12 @@
+{
+  "label": "provision-apply",
+  "script": "provision_target\\provision.py",
+  "args": [
+    "apply"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 107.032,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T011330012062Z-provision-apply\\console.log"
+}

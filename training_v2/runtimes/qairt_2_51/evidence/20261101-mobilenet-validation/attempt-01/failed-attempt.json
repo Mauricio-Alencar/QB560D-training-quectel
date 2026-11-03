@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_HTP_INITIALIZATION",
+  "cpu_exit_code": 0,
+  "htp_exit_code": 28,
+  "option_present": "--platform_options unsignedPD:ON",
+  "correction": "Removed that option from the QNN command; attempts 02 and final passed.",
+  "note": "Original failure logs preserved; no fallback CPU execution was substituted for the failed HTP run."
+}

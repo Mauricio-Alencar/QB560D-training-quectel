@@ -1,0 +1,965 @@
+modeltools::IrQuantizer::IrQuantizer: Param Quantizer should be set to symmetric for 32 bit biases. Will ignore param quantizer option: min-max for biases
+    15.5ms [  INFO ] Inferences will run in sync mode
+Processing inference input(s):
+calibration/gesture/00.raw
+calibration/gesture/01.raw
+calibration/gesture/02.raw
+calibration/gesture/03.raw
+calibration/gesture/04.raw
+calibration/gesture/05.raw
+calibration/gesture/06.raw
+calibration/gesture/07.raw
+calibration/gesture/08.raw
+    19.9ms [  INFO ] No BackendExtensions lib provided;initializing NetRunBackend Interface
+    20.2ms [  INFO ] WindowsFileIO callback: WindowsFileIO
+    23.1ms [ ERROR ] WindowsFileIO couldn't open libcdsprpc.dll
+    23.3ms [  INFO ] Initialized WindowsFileIO callback
+     3.9ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     6.2ms [  INFO ] [QNN_CPU] CpuBackend creation start
+     6.2ms [  INFO ] [QNN_CPU] CpuBackend creation end
+     6.4ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+    25.9ms [WARNING] Unable to find a device with NetRunDeviceKeyDefault in Library NetRunBackendLibKeyDefault
+    25.9ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+     6.4ms [  INFO ] Creating context with QnnGraphTransformerAdapter
+     6.5ms [  INFO ] [QNN_CPU] QnnContext create start
+     6.6ms [  INFO ] [QNN_CPU] QnnContext create end
+     6.6ms [  INFO ] QnnGraphTransformer createContext done, status = 0x0
+    26.8ms [  INFO ] Entering QuantizeRuntimeApp flow
+    26.8ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+     7.9ms [  INFO ] Creating graph with QnnGraphTransformerAdapter
+     8.7ms [  INFO ] [QNN_CPU] CpuGraph creation start
+     8.9ms [  INFO ] [QNN_CPU] CpuGraph creation end
+    12.2ms [  INFO ] [QNN_CPU] CpuGraph 'model.float': initialized threadpool numThreads=8
+    12.2ms [  INFO ] [QNN_CPU] QnnGraph create end
+    12.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.6ms [  INFO ] [QNN_CPU] Adding tensor 'input_1' with ID 1, type 0
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D_dilation' with ID 2, type 4
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D_pad_amount' with ID 3, type 4
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D_stride' with ID 4, type 4
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2123' with ID 5, type 4
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1981' with ID 6, type 4
+    12.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    12.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu/Relu6;model_1/model/batch_normalization/FusedBatchNormV3;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d/Conv2D' with ID 7, type 3
+    12.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    13.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    14.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    14.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1612:0' with ID 9, type 3
+    14.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    14.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    14.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    14.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D_dilation' with ID 10, type 4
+    15.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D_pad_amount' with ID 11, type 4
+    15.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D_stride' with ID 12, type 4
+    15.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2095' with ID 13, type 4
+    15.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1980' with ID 14, type 4
+    15.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_1/Relu6;model_1/model/batch_normalization_1/FusedBatchNormV3;model_1/model/depthwise_conv2d/depthwise;model_1/model/conv2d_9/Conv2D' with ID 15, type 3
+    15.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    15.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    15.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.5ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1614:0' with ID 16, type 3
+    15.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    15.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1_dilation' with ID 17, type 4
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1_pad_amount' with ID 18, type 4
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1_stride' with ID 19, type 4
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2019' with ID 20, type 4
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2020' with ID 21, type 4
+    15.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_2/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_1/Conv2D1' with ID 22, type 3
+    15.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    15.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    15.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D_dilation' with ID 23, type 4
+    15.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D_pad_amount' with ID 24, type 4
+    15.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D_stride' with ID 25, type 4
+    15.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2115' with ID 26, type 4
+    15.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2102' with ID 27, type 4
+    15.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_2/Relu6;model_1/model/batch_normalization_3/FusedBatchNormV3;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_2/Conv2D' with ID 28, type 3
+    15.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1617:0' with ID 29, type 3
+    15.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    15.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D_dilation' with ID 30, type 4
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D_pad_amount' with ID 31, type 4
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D_stride' with ID 32, type 4
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2093' with ID 33, type 4
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2024' with ID 34, type 4
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_3/Relu6;model_1/model/batch_normalization_4/FusedBatchNormV3;model_1/model/depthwise_conv2d_1/depthwise;model_1/model/conv2d_21/Conv2D' with ID 35, type 3
+    16.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1619:0' with ID 36, type 3
+    16.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1_dilation' with ID 37, type 4
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1_pad_amount' with ID 38, type 4
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1_stride' with ID 39, type 4
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2070' with ID 40, type 4
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2072' with ID 41, type 4
+    16.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_5/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D;model_1/model/conv2d_3/Conv2D1' with ID 42, type 3
+    16.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    16.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/max_pooling2d/MaxPool_filter_size' with ID 43, type 4
+    16.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/max_pooling2d/MaxPool_pad_amount' with ID 44, type 4
+    16.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/max_pooling2d/MaxPool_stride' with ID 45, type 4
+    16.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/max_pooling2d/MaxPool' with ID 46, type 3
+    16.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    16.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    16.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add/add' with ID 47, type 3
+    16.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    16.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    16.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D_dilation' with ID 48, type 4
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D_pad_amount' with ID 49, type 4
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D_stride' with ID 50, type 4
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2054' with ID 51, type 4
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2068' with ID 52, type 4
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_4/Relu6;model_1/model/batch_normalization_6/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_4/Conv2D' with ID 53, type 3
+    17.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1622:0' with ID 54, type 3
+    17.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise_dilation' with ID 55, type 4
+    17.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise_pad_amount' with ID 56, type 4
+    17.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise_stride' with ID 57, type 4
+    17.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2144' with ID 58, type 4
+    17.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2067' with ID 59, type 4
+    17.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_5/Relu6;model_1/model/batch_normalization_7/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/depthwise_conv2d_2/depthwise' with ID 60, type 3
+    17.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1624:0' with ID 61, type 3
+    17.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1_dilation' with ID 62, type 4
+    17.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1_pad_amount' with ID 63, type 4
+    17.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1_stride' with ID 64, type 4
+    17.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2160' with ID 65, type 4
+    17.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2011' with ID 66, type 4
+    17.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_8/FusedBatchNormV3;model_1/model/conv2d_5/Conv2D1' with ID 67, type 3
+    17.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_1/add' with ID 68, type 3
+    17.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D_dilation' with ID 69, type 4
+    17.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D_pad_amount' with ID 70, type 4
+    17.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D_stride' with ID 71, type 4
+    17.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2050' with ID 72, type 4
+    17.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2010' with ID 73, type 4
+    17.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_6/Relu6;model_1/model/batch_normalization_9/FusedBatchNormV3;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise;model_1/model/conv2d_6/Conv2D' with ID 74, type 3
+    17.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1627:0' with ID 75, type 3
+    17.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise_dilation' with ID 76, type 4
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise_pad_amount' with ID 77, type 4
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise_stride' with ID 78, type 4
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2090' with ID 79, type 4
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1978' with ID 80, type 4
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_7/Relu6;model_1/model/batch_normalization_10/FusedBatchNormV3;model_1/model/depthwise_conv2d_3/depthwise' with ID 81, type 3
+    17.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1629:0' with ID 82, type 3
+    17.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1_dilation' with ID 83, type 4
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1_pad_amount' with ID 84, type 4
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1_stride' with ID 85, type 4
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2180' with ID 86, type 4
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1976' with ID 87, type 4
+    17.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_11/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D;model_1/model/conv2d_7/Conv2D1' with ID 88, type 3
+    17.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D_dilation' with ID 89, type 4
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D_pad_amount' with ID 90, type 4
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D_stride' with ID 91, type 4
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2046' with ID 92, type 4
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2037' with ID 93, type 4
+    17.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    17.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_8/Relu6;model_1/model/batch_normalization_12/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_8/Conv2D' with ID 94, type 3
+    17.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1632:0' with ID 95, type 3
+    18.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise_dilation' with ID 96, type 4
+    18.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise_pad_amount' with ID 97, type 4
+    18.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise_stride' with ID 98, type 4
+    18.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2169' with ID 99, type 4
+    18.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2036' with ID 100, type 4
+    18.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_9/Relu6;model_1/model/batch_normalization_13/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/depthwise_conv2d_4/depthwise' with ID 101, type 3
+    18.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1634:0' with ID 102, type 3
+    18.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1_dilation' with ID 103, type 4
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1_pad_amount' with ID 104, type 4
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1_stride' with ID 105, type 4
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2179' with ID 106, type 4
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2034' with ID 107, type 4
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_14/FusedBatchNormV3;model_1/model/conv2d_9/Conv2D1' with ID 108, type 3
+    18.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_2/add' with ID 109, type 3
+    18.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D_dilation' with ID 110, type 4
+    18.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D_pad_amount' with ID 111, type 4
+    18.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D_stride' with ID 112, type 4
+    18.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2122' with ID 113, type 4
+    18.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2031' with ID 114, type 4
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_10/Relu6;model_1/model/batch_normalization_15/FusedBatchNormV3;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise;model_1/model/conv2d_10/Conv2D' with ID 115, type 3
+    18.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1637:0' with ID 116, type 3
+    18.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise_dilation' with ID 117, type 4
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise_pad_amount' with ID 118, type 4
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise_stride' with ID 119, type 4
+    18.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2113' with ID 120, type 4
+    18.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2030' with ID 121, type 4
+    18.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_11/Relu6;model_1/model/batch_normalization_16/FusedBatchNormV3;model_1/model/depthwise_conv2d_5/depthwise' with ID 122, type 3
+    18.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1639:0' with ID 123, type 3
+    18.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1_dilation' with ID 124, type 4
+    18.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1_pad_amount' with ID 125, type 4
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1_stride' with ID 126, type 4
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2027' with ID 127, type 4
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2028' with ID 128, type 4
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_17/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_11/Conv2D1' with ID 129, type 3
+    18.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D_dilation' with ID 130, type 4
+    18.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D_pad_amount' with ID 131, type 4
+    18.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D_stride' with ID 132, type 4
+    18.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2121' with ID 133, type 4
+    18.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2025' with ID 134, type 4
+    18.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_12/Relu6;model_1/model/batch_normalization_18/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_12/Conv2D' with ID 135, type 3
+    18.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1642:0' with ID 136, type 3
+    18.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise_dilation' with ID 137, type 4
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise_pad_amount' with ID 138, type 4
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise_stride' with ID 139, type 4
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2155' with ID 140, type 4
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2023' with ID 141, type 4
+    18.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_13/Relu6;model_1/model/batch_normalization_19/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_6/depthwise' with ID 142, type 3
+    18.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1644:0' with ID 143, type 3
+    18.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1_dilation' with ID 144, type 4
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1_pad_amount' with ID 145, type 4
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1_stride' with ID 146, type 4
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2016' with ID 147, type 4
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    18.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2127' with ID 148, type 4
+    18.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_20/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D;model_1/model/conv2d_13/Conv2D1' with ID 149, type 3
+    19.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_3/add' with ID 150, type 3
+    19.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D_dilation' with ID 151, type 4
+    19.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D_pad_amount' with ID 152, type 4
+    19.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D_stride' with ID 153, type 4
+    19.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2120' with ID 154, type 4
+    19.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2126' with ID 155, type 4
+    19.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_14/Relu6;model_1/model/batch_normalization_21/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_14/Conv2D' with ID 156, type 3
+    19.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1647:0' with ID 157, type 3
+    19.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise_dilation' with ID 158, type 4
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise_pad_amount' with ID 159, type 4
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise_stride' with ID 160, type 4
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2110' with ID 161, type 4
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2125' with ID 162, type 4
+    19.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_15/Relu6;model_1/model/batch_normalization_22/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/depthwise_conv2d_7/depthwise' with ID 163, type 3
+    19.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1649:0' with ID 164, type 3
+    19.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1_dilation' with ID 165, type 4
+    19.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1_pad_amount' with ID 166, type 4
+    19.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1_stride' with ID 167, type 4
+    19.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2175' with ID 168, type 4
+    19.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1990' with ID 169, type 4
+    19.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_23/FusedBatchNormV3;model_1/model/conv2d_15/Conv2D1' with ID 170, type 3
+    19.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_4/add' with ID 171, type 3
+    19.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D_dilation' with ID 172, type 4
+    19.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D_pad_amount' with ID 173, type 4
+    19.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D_stride' with ID 174, type 4
+    19.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2159' with ID 175, type 4
+    19.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1989' with ID 176, type 4
+    19.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_16/Relu6;model_1/model/batch_normalization_24/FusedBatchNormV3;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise;model_1/model/conv2d_16/Conv2D' with ID 177, type 3
+    19.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1652:0' with ID 178, type 3
+    19.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise_dilation' with ID 179, type 4
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise_pad_amount' with ID 180, type 4
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise_stride' with ID 181, type 4
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2108' with ID 182, type 4
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1988' with ID 183, type 4
+    19.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_17/Relu6;model_1/model/batch_normalization_25/FusedBatchNormV3;model_1/model/depthwise_conv2d_8/depthwise' with ID 184, type 3
+    19.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1654:0' with ID 185, type 3
+    19.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    19.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    19.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1_dilation' with ID 186, type 4
+    19.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1_pad_amount' with ID 187, type 4
+    19.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    19.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1_stride' with ID 188, type 4
+    19.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2106' with ID 189, type 4
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1986' with ID 190, type 4
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_26/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_17/Conv2D1' with ID 191, type 3
+    20.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D_dilation' with ID 192, type 4
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D_pad_amount' with ID 193, type 4
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D_stride' with ID 194, type 4
+    20.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2158' with ID 195, type 4
+    20.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1985' with ID 196, type 4
+    20.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_18/Relu6;model_1/model/batch_normalization_27/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_18/Conv2D' with ID 197, type 3
+    20.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1657:0' with ID 198, type 3
+    20.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise_dilation' with ID 199, type 4
+    20.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise_pad_amount' with ID 200, type 4
+    20.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise_stride' with ID 201, type 4
+    20.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2174' with ID 202, type 4
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1984' with ID 203, type 4
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_19/Relu6;model_1/model/batch_normalization_28/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_9/depthwise' with ID 204, type 3
+    20.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1659:0' with ID 205, type 3
+    20.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1_dilation' with ID 206, type 4
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1_pad_amount' with ID 207, type 4
+    20.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1_stride' with ID 208, type 4
+    20.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2148' with ID 209, type 4
+    20.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__1982' with ID 210, type 4
+    20.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_29/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D;model_1/model/conv2d_19/Conv2D1' with ID 211, type 3
+    20.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_5/add' with ID 212, type 3
+    20.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D_dilation' with ID 213, type 4
+    20.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D_pad_amount' with ID 214, type 4
+    20.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D_stride' with ID 215, type 4
+    20.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2176' with ID 216, type 4
+    20.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2101' with ID 217, type 4
+    20.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_20/Relu6;model_1/model/batch_normalization_30/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_20/Conv2D' with ID 218, type 3
+    20.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1662:0' with ID 219, type 3
+    20.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise_dilation' with ID 220, type 4
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise_pad_amount' with ID 221, type 4
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise_stride' with ID 222, type 4
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2173' with ID 223, type 4
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2100' with ID 224, type 4
+    20.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_21/Relu6;model_1/model/batch_normalization_31/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/depthwise_conv2d_10/depthwise' with ID 225, type 3
+    20.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1664:0' with ID 226, type 3
+    20.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1_dilation' with ID 227, type 4
+    20.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1_pad_amount' with ID 228, type 4
+    20.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1_stride' with ID 229, type 4
+    20.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2039' with ID 230, type 4
+    20.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2098' with ID 231, type 4
+    20.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    20.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_32/FusedBatchNormV3;model_1/model/conv2d_21/Conv2D1' with ID 232, type 3
+    20.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    20.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_6/add' with ID 233, type 3
+    21.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D_dilation' with ID 234, type 4
+    21.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D_pad_amount' with ID 235, type 4
+    21.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D_stride' with ID 236, type 4
+    21.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2170' with ID 237, type 4
+    21.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2138' with ID 238, type 4
+    21.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_22/Relu6;model_1/model/batch_normalization_33/FusedBatchNormV3;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise;model_1/model/conv2d_22/Conv2D' with ID 239, type 3
+    21.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.1ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1667:0' with ID 240, type 3
+    21.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise_dilation' with ID 241, type 4
+    21.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise_pad_amount' with ID 242, type 4
+    21.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise_stride' with ID 243, type 4
+    21.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2182' with ID 244, type 4
+    21.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2137' with ID 245, type 4
+    21.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_23/Relu6;model_1/model/batch_normalization_34/FusedBatchNormV3;model_1/model/depthwise_conv2d_11/depthwise' with ID 246, type 3
+    21.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1669:0' with ID 247, type 3
+    21.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1_dilation' with ID 248, type 4
+    21.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1_pad_amount' with ID 249, type 4
+    21.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1_stride' with ID 250, type 4
+    21.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2033' with ID 251, type 4
+    21.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2135' with ID 252, type 4
+    21.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_35/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_23/Conv2D1' with ID 253, type 3
+    21.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D_dilation' with ID 254, type 4
+    21.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D_pad_amount' with ID 255, type 4
+    21.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D_stride' with ID 256, type 4
+    21.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2161' with ID 257, type 4
+    21.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2134' with ID 258, type 4
+    21.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_24/Relu6;model_1/model/batch_normalization_36/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_24/Conv2D' with ID 259, type 3
+    21.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1672:0' with ID 260, type 3
+    21.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise_dilation' with ID 261, type 4
+    21.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise_pad_amount' with ID 262, type 4
+    21.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise_stride' with ID 263, type 4
+    21.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2183' with ID 264, type 4
+    21.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2133' with ID 265, type 4
+    21.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_25/Relu6;model_1/model/batch_normalization_37/FusedBatchNormV3;model_1/model/depthwise_conv2d_12/depthwise;model_1/model/depthwise_conv2d_15/depthwise' with ID 266, type 3
+    21.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1674:0' with ID 267, type 3
+    21.9ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    21.9ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1_dilation' with ID 268, type 4
+    22.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1_pad_amount' with ID 269, type 4
+    22.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1_stride' with ID 270, type 4
+    22.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2178' with ID 271, type 4
+    22.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2131' with ID 272, type 4
+    22.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_38/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_25/Conv2D1' with ID 273, type 3
+    22.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_7/add' with ID 274, type 3
+    22.1ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D_dilation' with ID 275, type 4
+    22.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D_pad_amount' with ID 276, type 4
+    22.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D_stride' with ID 277, type 4
+    22.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2168' with ID 278, type 4
+    22.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.3ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2130' with ID 279, type 4
+    22.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_26/Relu6;model_1/model/batch_normalization_39/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_26/Conv2D' with ID 280, type 3
+    22.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1677:0' with ID 281, type 3
+    22.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise_dilation' with ID 282, type 4
+    22.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise_pad_amount' with ID 283, type 4
+    22.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise_stride' with ID 284, type 4
+    22.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2171' with ID 285, type 4
+    22.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.5ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2129' with ID 286, type 4
+    22.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_27/Relu6;model_1/model/batch_normalization_40/FusedBatchNormV3;model_1/model/depthwise_conv2d_13/depthwise;model_1/model/depthwise_conv2d_15/depthwise' with ID 287, type 3
+    22.5ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.5ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1679:0' with ID 288, type 3
+    22.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1_dilation' with ID 289, type 4
+    22.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1_pad_amount' with ID 290, type 4
+    22.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1_stride' with ID 291, type 4
+    22.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2177' with ID 292, type 4
+    22.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2017' with ID 293, type 4
+    22.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_41/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D;model_1/model/conv2d_27/Conv2D1' with ID 294, type 3
+    22.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_8/add' with ID 295, type 3
+    22.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    22.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    22.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D_dilation' with ID 296, type 4
+    22.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D_pad_amount' with ID 297, type 4
+    22.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    22.9ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D_stride' with ID 298, type 4
+    22.9ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2062' with ID 299, type 4
+    23.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2014' with ID 300, type 4
+    23.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_28/Relu6;model_1/model/batch_normalization_42/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_28/Conv2D' with ID 301, type 3
+    23.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.0ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1682:0' with ID 302, type 3
+    23.0ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.1ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise_dilation' with ID 303, type 4
+    23.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise_pad_amount' with ID 304, type 4
+    23.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise_stride' with ID 305, type 4
+    23.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2150' with ID 306, type 4
+    23.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2013' with ID 307, type 4
+    23.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_29/Relu6;model_1/model/batch_normalization_43/FusedBatchNormV3;model_1/model/depthwise_conv2d_14/depthwise;model_1/model/depthwise_conv2d_15/depthwise' with ID 308, type 3
+    23.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1684:0' with ID 309, type 3
+    23.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.2ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1_dilation' with ID 310, type 4
+    23.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1_pad_amount' with ID 311, type 4
+    23.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1_stride' with ID 312, type 4
+    23.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2142' with ID 313, type 4
+    23.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2080' with ID 314, type 4
+    23.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/batch_normalization_44/FusedBatchNormV3;model_1/model/conv2d_29/Conv2D1' with ID 315, type 3
+    23.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/add_9/add' with ID 316, type 3
+    23.4ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D_dilation' with ID 317, type 4
+    23.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D_pad_amount' with ID 318, type 4
+    23.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.5ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D_stride' with ID 319, type 4
+    23.5ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2057' with ID 320, type 4
+    23.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2076' with ID 321, type 4
+    23.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_30/Relu6;model_1/model/batch_normalization_45/FusedBatchNormV3;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise;model_1/model/conv2d_30/Conv2D' with ID 322, type 3
+    23.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1687:0' with ID 323, type 3
+    23.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise_dilation' with ID 324, type 4
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise_pad_amount' with ID 325, type 4
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise_stride' with ID 326, type 4
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2149' with ID 327, type 4
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2075' with ID 328, type 4
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/re_lu_31/Relu6;model_1/model/batch_normalization_46/FusedBatchNormV3;model_1/model/depthwise_conv2d_15/depthwise' with ID 329, type 3
+    23.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.7ms [  INFO ] [QNN_CPU] Adding tensor 'Relu6__1689:0' with ID 330, type 3
+    23.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_filter_size' with ID 331, type 4
+    23.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_pad_amount' with ID 332, type 4
+    23.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_stride' with ID 333, type 4
+    23.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    23.8ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean' with ID 334, type 3
+    23.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.0ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    24.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.1ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_0123_perm' with ID 335, type 4
+    24.1ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.2ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_0123' with ID 336, type 3
+    24.2ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.3ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    24.3ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.3ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/global_average_pooling2d/Mean_Squeeze__2185:0' with ID 337, type 3
+    24.3ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.4ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2114' with ID 338, type 4
+    24.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2082' with ID 339, type 4
+    24.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] [QNN_CPU] Adding tensor 'model_1/model/conv_handflag/MatMul;model_1/model/conv_handflag/BiasAdd_Gemm__1700:0' with ID 340, type 3
+    24.6ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    24.6ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2084' with ID 341, type 4
+    24.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.7ms [  INFO ] [QNN_CPU] Adding tensor 'const_fold_opt__2074' with ID 342, type 4
+    24.7ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.7ms [  INFO ] [QNN_CPU] Adding tensor 'Identity' with ID 343, type 1
+    24.7ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.7ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    24.8ms [  INFO ] Add Graph tensor with QnnGraphTransformerAdapter
+    24.8ms [  INFO ] [QNN_CPU] Adding tensor 'Identity_1' with ID 344, type 1
+    24.8ms [  INFO ] validate OpConfig with QnnGraphTransformerAdapter
+    24.8ms [  INFO ] Add Graph Node with QnnGraphTransformerAdapter
+    25.0ms [  INFO ] Finalizing graph with QnnGraphTransformerAdapter
+    25.1ms [  INFO ] [QNN_CPU] QnnGraph finalize start
+    30.7ms [  INFO ] [QNN_CPU] QnnGraph finalize end
+    41.1ms [  INFO ] [QNN_CPU] QnnGraph execute start
+    71.7ms [  INFO ] [QNN_CPU] QnnGraph execute end
+    64.1ms [  INFO ] cleaning up resources for input tensors
+    64.1ms [  INFO ] cleaning up resources for output tensors
+    79.8ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   131.7ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   124.0ms [  INFO ] cleaning up resources for input tensors
+   124.0ms [  INFO ] cleaning up resources for output tensors
+   140.5ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   200.3ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   192.6ms [  INFO ] cleani2026-11-01 16:44:28,057 - 278 - INFO - Quantization completed successfully: 
+ng up resources for input tensors
+   192.7ms [  INFO ] cleaning up resources for output tensors
+   211.8ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   254.4ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   246.6ms [  INFO ] cleaning up resources for input tensors
+   246.6ms [  INFO ] cleaning up resources for output tensors
+   264.1ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   310.4ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   302.7ms [  INFO ] cleaning up resources for input tensors
+   302.7ms [  INFO ] cleaning up resources for output tensors
+   319.1ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   369.1ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   361.3ms [  INFO ] cleaning up resources for input tensors
+   361.3ms [  INFO ] cleaning up resources for output tensors
+   384.9ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   438.9ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   431.3ms [  INFO ] cleaning up resources for input tensors
+   431.3ms [  INFO ] cleaning up resources for output tensors
+   449.4ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   489.2ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   481.4ms [  INFO ] cleaning up resources for input tensors
+   481.4ms [  INFO ] cleaning up resources for output tensors
+   499.0ms [  INFO ] [QNN_CPU] QnnGraph execute start
+   544.1ms [  INFO ] [QNN_CPU] QnnGraph execute end
+   536.4ms [  INFO ] cleaning up resources for input tensors
+   536.4ms [  INFO ] cleaning up resources for output tensors
+modeltools::IrGraph::reEvalMacsParams: Re-evaluated graph statistics after IrOptimizer optimization passes:
+modeltools::IrGraph::reEvalMacsParams: Total MACs: 149723505
+modeltools::IrGraph::reEvalMacsParams: Total Params Count: 968640
+2026-11-01 16:44:28,184 - 278 - INFO - Quantized Model saved at: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\models\gesture\model.w8a16.dlc 
+   589.3ms [  INFO ] Freeing graphsInfo
+   589.3ms [WARNING] Profile Logger with name = defaultKey doesn't exist! Returning nullptr
+   597.2ms [  INFO ] Free context with QnnGraphTransformerAdapter
+   597.2ms [  INFO ] QnnGraphTransformer context freed successfully
+   597.3ms [  INFO ] [QNN_CPU] QnnContext Free start
+   600.5ms [  INFO ] [QNN_CPU] QnnContext Free end
+   593.2ms [WARNING] Profile Logger with name = defaultKey doesn't exist!
+   601.1ms [  INFO ] [QNN_CPU] QnnBackend Free start
+   601.1ms [  INFO ] [QNN_CPU] QnnBackend Free end
+   593.2ms [  INFO ] WindowsFileIO callback: ~WindowsFileIO

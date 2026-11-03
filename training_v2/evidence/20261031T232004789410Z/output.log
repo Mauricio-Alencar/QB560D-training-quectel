@@ -1,0 +1,38 @@
+usage: run_tensor.py
+       [-h]
+       --model
+       MODEL
+       --input
+       INPUT
+       --expected
+       EXPECTED
+       [--backend {cpu,gpu}]
+       [--runs RUNS]
+       [--warmup WARMUP]
+       --output
+       OUTPUT
+
+Validate
+the tiny AI
+Hub TFLite
+artifact on
+the actual
+BSP, using
+known
+tensors.
+
+optional arguments:
+  -h, --help
+    show this
+    help
+    message and
+    exit
+  --model MODEL
+  --input INPUT
+  --expected EXPECTED
+  --backend {cpu,gpu}
+  --runs RUNS
+  --warmup WARMUP
+  --output OUTPUT
+
+__QB560D_EXIT__=0

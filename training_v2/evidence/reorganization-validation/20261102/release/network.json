@@ -1,0 +1,48 @@
+{
+  "result": "FUNCTIONAL_NETWORK_PASS_WITH_RIL_SETUP_WARNING",
+  "functional_data_path_passed": true,
+  "setup_api_return": -4,
+  "setup_api_passed": false,
+  "registration": 1,
+  "reported_rat": 14,
+  "nr_confirmed": false,
+  "interface": "rmnet_data0",
+  "wlan_controls_passed": [
+    "status",
+    "check",
+    "down",
+    "up",
+    "radio off",
+    "radio on",
+    "reconnect"
+  ],
+  "wlan_and_rmnet_coexistence_passed": true,
+  "saved_wlan_profile_unchanged": true,
+  "cellular_iperf_rounds": [
+    {
+      "uplink_mbps": 16.565315834841385,
+      "downlink_mbps": 22.43704934975179
+    },
+    {
+      "uplink_mbps": 15.620609854138625,
+      "downlink_mbps": 24.429136037949426
+    },
+    {
+      "uplink_mbps": 16.984397127948508,
+      "downlink_mbps": 28.308477699321852
+    }
+  ],
+  "median_ul_mbps": 16.565315834841385,
+  "median_dl_mbps": 24.429136037949426,
+  "iperf_method": {
+    "seconds_per_direction": 10,
+    "streams": 1,
+    "public_server_availability_and_load_external": true,
+    "scope": "Selected cellular interface to public endpoint, not modem maximum capacity"
+  },
+  "failed_endpoint_control_passed": true,
+  "radio_preferences_changed": false,
+  "apn_changed": false,
+  "data_teardown_tested": false,
+  "credentials_included": false
+}

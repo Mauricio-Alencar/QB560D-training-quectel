@@ -1,0 +1,96 @@
+ 09:18:03 up  2:43,  1 user,  load average: 3.08, 3.19, 3.09
+  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION                   
+● avahi-daemon.service       loaded failed failed Avahi mDNS/DNS-SD Stack       
+● camera_cgroup.service      loaded failed failed Create Camera Cgroup Service  
+● chg-policy.service         loaded failed failed Charger Policy Service        
+● dhcpd6.service             loaded failed failed DHCPv6 Server Daemon          
+● dnsmasq.service            loaded failed failed dnsmasq - A lightweight DHCP …
+● fs-scrub-daemon.service    loaded failed failed fs-scrub-daemon Service       
+● init_post_boot.service     loaded failed failed QTI Post Boot Service         
+● ip6tables.service          loaded failed failed IPv6 Packet Filtering Framewo…
+● ipacmdiag.service          loaded failed failed start IPA configuration manag…
+● iptables.service           loaded failed failed IPv4 Packet Filtering Framewo…
+● lunch-make-scripts.service loaded failed failed lunch make scripts            
+● qcmap_wlan.service         loaded failed failed WLAN service                  
+● qti_pppd.service           loaded failed failed qti_ppp service               
+● thermal-engine.service     loaded failed failed Thermal Engine Service        
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+14 loaded units listed.
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 09:18:02 CST. --
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface eth1 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: No subnet declaration for eth2 (no IPv4 addresses).
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: ** Ignoring requests on eth2.  If this is not what
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    you want, please write a subnet declaration
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    in your dhcpd.conf file for the network segment
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface eth2 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: No subnet declaration for dummy0 (no IPv4 addresses).
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: ** Ignoring requests on dummy0.  If this is not what
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    you want, please write a subnet declaration
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    in your dhcpd.conf file for the network segment
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]:    to which interface dummy0 is attached. **
+Nov 02 06:35:13 qcs6490-odk dhcpd[5118]: 
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: rc_sel is now: 0x2
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: the following RC(s) will be tested:
+Nov 02 06:35:13 qcs6490-odk kernel: RC 1
+Nov 02 06:35:13 qcs6490-odk kernel: PCIe: TEST: 10
+Nov 02 06:35:13 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: 
+                                    
+                                    PCIe: attempting to enumerate RC1
+Nov 02 06:35:13 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: PCIe: RC1 is already enumerated
+Nov 02 06:35:14 qcs6490-odk systemd[1]: Failed to start QTI Post Boot Service.
+Nov 02 06:35:33 qcs6490-odk systemd[1]: Failed to start lunch make scripts.
+Nov 02 06:35:43 qcs6490-odk kernel: [soft_i][0x6808e230][22:35:43.063108] wlan: [0:E:DATA] hdd_gro_rx_dp_thread: gro not supported without DP RX thread!
+Nov 02 09:14:22 qcs6490-odk systemd[1]: systemrw-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: /lib/systemd/system/ql-ota.service:8: Failed to parse service restart specifier, ignoring: yes
+Nov 02 09:14:22 qcs6490-odk systemd[1]: persist-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: cache-ext4.mount: Where= setting doesn't match unit name. Refusing.
+Nov 02 09:14:22 qcs6490-odk systemd[1]: data.mount: What= setting is missing. Refusing.
+[ 9785.431881] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9785.431929] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9785.432070] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9785.432073] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9789.107415] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9790.552043] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9790.552099] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9790.552258] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9790.552263] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9794.040215] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9795.672105] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9795.672172] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9795.672291] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9795.672295] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9798.775310] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9800.791199] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9800.791249] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9800.791398] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9800.791402] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9804.413388] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9805.911401] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9805.911458] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9805.911592] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9805.911596] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9809.438077] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9811.032195] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9811.032243] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9811.032547] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9811.032551] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9814.456407] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9816.152420] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9816.152767] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9816.152896] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9816.152900] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9819.511592] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9821.272385] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9821.272441] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9821.272632] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9821.272636] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9824.759805] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+

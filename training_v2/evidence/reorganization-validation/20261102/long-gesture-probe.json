@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "expected": "Closed_Fist",
+  "predicted": "Closed_Fist",
+  "graphs": 3,
+  "evidence_path_length": 214,
+  "profile_path_length": 278
+}

@@ -1,0 +1,1 @@
+normalized_input_image_tensor:=/opt/qb560d-ai-htp251/runs/r6a2766bf522d4f/input.raw

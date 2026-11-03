@@ -1,0 +1,16 @@
+{
+  "label": "vision-11-all-backends",
+  "script": "host\\validate_vision_controls.py",
+  "args": [
+    "run",
+    "--backend",
+    "all",
+    "--output",
+    "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\evidence\\reorganization-validation\\20261102\\vision-11"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 51.688,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012249624075Z-vision-11-all-backends\\console.log"
+}

@@ -1,0 +1,5 @@
+{
+  "command": "/usr/bin/python3 /tmp/update-qiart-251-cleanup-probe-20261101T023500/cleanup_target.py /tmp/update-qiart-251-cleanup-probe-20261101T023500",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:35:01.392020+00:00"
+}

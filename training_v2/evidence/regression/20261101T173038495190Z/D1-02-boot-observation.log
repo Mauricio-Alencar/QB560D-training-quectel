@@ -1,0 +1,91 @@
+ 07:08:26 up  2:38,  3 users,  load average: 3.12, 3.03, 3.03
+  UNIT                    LOAD   ACTIVE SUB    DESCRIPTION                      
+● avahi-daemon.service    loaded failed failed Avahi mDNS/DNS-SD Stack          
+● camera_cgroup.service   loaded failed failed Create Camera Cgroup Service     
+● chg-policy.service      loaded failed failed Charger Policy Service           
+● dnsmasq.service         loaded failed failed dnsmasq - A lightweight DHCP and…
+● fs-scrub-daemon.service loaded failed failed fs-scrub-daemon Service          
+● ip6tables.service       loaded failed failed IPv6 Packet Filtering Framework  
+● ipacmdiag.service       loaded failed failed start IPA configuration manager …
+● iptables.service        loaded failed failed IPv4 Packet Filtering Framework  
+● qcmap_wlan.service      loaded failed failed WLAN service                     
+● qti_pppd.service        loaded failed failed qti_ppp service                  
+● thermal-engine.service  loaded failed failed Thermal Engine Service           
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+11 loaded units listed.
+-- Logs begin at Tue 2024-06-18 06:15:39 CST, end at Mon 2026-11-02 00:37:51 CST. --
+Jun 18 07:00:23 qcs6490-odk agetty[35844]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:00:39 qcs6490-odk agetty[35869]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:00:55 qcs6490-odk agetty[35896]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:12 qcs6490-odk agetty[35920]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:28 qcs6490-odk agetty[35942]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:01:44 qcs6490-odk agetty[35966]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:00 qcs6490-odk agetty[35990]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:17 qcs6490-odk agetty[36057]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:33 qcs6490-odk agetty[36081]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:02:49 qcs6490-odk agetty[36103]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:05 qcs6490-odk agetty[36128]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:22 qcs6490-odk agetty[36154]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:38 qcs6490-odk agetty[36176]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:03:54 qcs6490-odk agetty[36205]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:10 qcs6490-odk agetty[36230]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:27 qcs6490-odk agetty[36253]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:43 qcs6490-odk agetty[36277]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:04:59 qcs6490-odk agetty[36299]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:15 qcs6490-odk agetty[36322]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:32 qcs6490-odk agetty[36347]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:05:48 qcs6490-odk agetty[36372]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:04 qcs6490-odk agetty[36396]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:20 qcs6490-odk agetty[36418]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:37 qcs6490-odk agetty[36442]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:06:53 qcs6490-odk agetty[36468]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:09 qcs6490-odk agetty[36493]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:25 qcs6490-odk agetty[36522]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:42 qcs6490-odk agetty[36545]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:07:58 qcs6490-odk agetty[36569]: /dev/hvc0: cannot open as standard input: Invalid argument
+Jun 18 07:08:14 qcs6490-odk agetty[36593]: /dev/hvc0: cannot open as standard input: Invalid argument
+[ 9493.472117] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9493.472247] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9493.472251] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9496.999834] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9498.592104] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9498.592146] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9498.592268] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9498.592272] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9500.098808] [schedu][0x2a7d420158][23:07:56.731179] wlan: [4870:I:OSIF] scan start scan id 41113
+[ 9502.072420] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9503.660743] [schedu][0x2a81558a72][23:08:00.293114] wlan: [4870:I:OSIF] vdev 0, scan id 41113 type COMPLETED(1) reason COMPLETED(1) scan found 12 bss
+[ 9503.712101] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9503.712159] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9503.712282] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9503.712285] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9507.350621] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9508.832091] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9508.832138] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9508.832269] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9508.832272] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9512.300217] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9513.952115] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9513.952172] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9513.952367] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9513.952370] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9517.514581] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9519.072102] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9519.072156] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9519.072286] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9519.072289] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9522.697808] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9524.192082] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9524.192128] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9524.192253] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9524.192256] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[ 9528.215800] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9529.312099] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[ 9529.312141] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[ 9529.312274] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[ 9529.312278] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+

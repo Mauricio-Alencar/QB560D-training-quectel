@@ -1,0 +1,12 @@
+{
+  "label": "fresh-candidate-five-htp",
+  "script": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\host\\htp251_workshop.py",
+  "args": [
+    "test-all"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 16.422,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T020918696619Z-fresh-candidate-five-htp\\console.log"
+}

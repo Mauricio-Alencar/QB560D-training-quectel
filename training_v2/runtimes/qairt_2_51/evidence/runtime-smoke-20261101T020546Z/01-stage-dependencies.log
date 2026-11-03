@@ -1,0 +1,26 @@
+018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165  /usr/lib/libSNPE.so
+dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c  /usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so
+a572831a3878e285264f9082e1c6caba74bbb5ba8f156f41e29d19cd66b8da72  /usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so
+579de26ac56a5520da498927c3c551a85449a141c8e082994da29b96d0f27ba6  /usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so
+
+DEPENDENCIES
+	linux-vdso.so.1 (0x0000007fb729f000)
+	libatomic.so.1 => /lib/aarch64-linux-gnu/libatomic.so.1 (0x0000007fb5575000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000007fb5561000)
+	librt.so.1 => /lib/aarch64-linux-gnu/librt.so.1 (0x0000007fb5549000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000007fb5518000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000007fb5333000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007fb5288000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000007fb5264000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007fb50f1000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007fb726f000)
+	linux-vdso.so.1 (0x0000007fb6344000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000007fb626f000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000007fb623e000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000007fb6059000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000007fb6035000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007fb5ec2000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007fb6314000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007fb5e17000)
+
+__QAIRT_ISOLATED_EXIT__=0

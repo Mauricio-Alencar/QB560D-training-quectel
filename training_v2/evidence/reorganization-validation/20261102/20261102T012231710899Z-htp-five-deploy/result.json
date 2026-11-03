@@ -1,0 +1,12 @@
+{
+  "label": "htp-five-deploy",
+  "script": "host\\htp251_workshop.py",
+  "args": [
+    "deploy"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 2.093,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012231710899Z-htp-five-deploy\\console.log"
+}

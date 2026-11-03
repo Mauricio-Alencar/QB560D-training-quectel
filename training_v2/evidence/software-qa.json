@@ -1,0 +1,82 @@
+{
+  "preparation_platform": "Windows-11-10.0.26300-SP0",
+  "python38_syntax_files": 33,
+  "shell_lf": "PASS",
+  "shell_syntax": {
+    "result": "PASS",
+    "scripts": 11
+  },
+  "unit_http_legacy_adb": {
+    "tests": 19,
+    "result": "PASS",
+    "execution": "actual subprocess run by final_checks.py"
+  },
+  "target_ai": {
+    "sessions": 15,
+    "models": 5,
+    "result": "PASS_REFERENCE_INPUTS",
+    "runtime": "vendor TFLite C API 2.8.4"
+  },
+  "target_app": "Dated target observations in docs/TARGET_RESULTS.md",
+  "slides": {
+    "canonical_file": "QB560D_EU_Training.pptx",
+    "count": 46,
+    "embedded_media": 58,
+    "empty_media": 0,
+    "initial_source_count": 35,
+    "source": "official Quectel 2026 template"
+  },
+  "target_gpu": {
+    "result": "PASS_REFERENCE_INPUT",
+    "sessions": 3,
+    "runs_per_session": 50,
+    "speedup": 2.5847094560809536,
+    "source": "evidence/acceleration/20261101T173429Z/summary.json"
+  },
+  "wlan": {
+    "result": "WLAN_CONNECTED_DNS_HTTPS_PASS",
+    "ntp_synchronized": true,
+    "boot_reconnection": "NOT_TESTED"
+  },
+  "htp": {
+    "runtime": {
+      "result": "INFERENCE_EXECUTED_DSP_PROFILE_CONFIRMED",
+      "version": "2.26.0.240827110523_99241",
+      "model_loaded": true
+    },
+    "model_inference": "PASS_REFERENCE_IMAGE_HTP",
+    "sessions_per_backend": 3,
+    "profile": {
+      "dsp_entries": 34,
+      "cpu_entries": 0,
+      "includes_input_output_entries": true,
+      "file": "htp-profile.txt",
+      "timing_sessions_profiling": "off; detailed placement collected in a separate run"
+    },
+    "same_dlc_speedup": 6.0425987269822565,
+    "numerical_validation": "reference top1 matches; maximum HTP/same-DLC CPU probability difference 4/256; no dataset accuracy evaluation"
+  },
+  "target_docker": {
+    "result": "PASS_THREE_SESSIONS_AND_OFFLINE_DEPLOY",
+    "source": "../demos/docker/evidence/LATEST.json",
+    "sessions": 3,
+    "command_checks": 61,
+    "runtime": "29.9.2"
+  },
+  "pending": [
+    "cellular/iperf3 deferred by owner until SIM setup",
+    "cold boot and BSP failed-unit review",
+    "AI Hub account/job",
+    "camera sensor/pipeline",
+    "dataset/event-scene controls",
+    "WLAN boot reconnection"
+  ],
+  "current_firmware": {
+    "bsp": "QDPA_Ubuntu20.04.003.51.303 V01",
+    "core_checks": 28,
+    "cpu_reference_results": 15,
+    "result": "PASS_CORE_WITH_EXPLICIT_PENDING_DEMOS",
+    "vendor_libraries_unchanged": true,
+    "snpe_offline_files": 9
+  }
+}

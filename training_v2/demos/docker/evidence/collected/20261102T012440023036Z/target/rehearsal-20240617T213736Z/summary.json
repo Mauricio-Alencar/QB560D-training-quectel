@@ -1,0 +1,1136 @@
+{
+  "started_utc": "2024-06-17T21:37:36.303827+00:00",
+  "result": "PASS_THREE_SESSIONS_AND_OFFLINE_DEPLOY",
+  "checks": [
+    {
+      "test": "engine-info",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "info",
+        "--format",
+        "{{json .}}"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "image-before",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "image",
+        "inspect",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "routes-before",
+      "command": [
+        "ip",
+        "-4",
+        "route",
+        "show"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-start",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-demo",
+        "--network",
+        "host",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.0",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-logs",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "logs",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-user-tmp-security",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import os; assert os.getuid()==65534; p=\"/tmp/demo-check\"; open(p,\"w\").write(\"ok\"); print(open(p).read()); print(open(\"/proc/self/status\").read())"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-readonly-root",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "--user",
+        "0",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import errno\ntry:\n open(\"/app/readonly-check\",\"w\").write(\"must fail\")\nexcept OSError as e:\n assert e.errno==errno.EROFS, e\n print(\"PASS: EROFS\")\nelse:\n raise RuntimeError(\"root filesystem writable\")"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-stop",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "stop",
+        "--time",
+        "5",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-1-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-start",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-demo",
+        "--network",
+        "host",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.0",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-logs",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "logs",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-user-tmp-security",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import os; assert os.getuid()==65534; p=\"/tmp/demo-check\"; open(p,\"w\").write(\"ok\"); print(open(p).read()); print(open(\"/proc/self/status\").read())"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-readonly-root",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "--user",
+        "0",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import errno\ntry:\n open(\"/app/readonly-check\",\"w\").write(\"must fail\")\nexcept OSError as e:\n assert e.errno==errno.EROFS, e\n print(\"PASS: EROFS\")\nelse:\n raise RuntimeError(\"root filesystem writable\")"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-stop",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "stop",
+        "--time",
+        "5",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-2-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-start",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-demo",
+        "--network",
+        "host",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.0",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-logs",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "logs",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-user-tmp-security",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import os; assert os.getuid()==65534; p=\"/tmp/demo-check\"; open(p,\"w\").write(\"ok\"); print(open(p).read()); print(open(\"/proc/self/status\").read())"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-readonly-root",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "--user",
+        "0",
+        "qb560d-docker-demo",
+        "python3",
+        "-c",
+        "import errno\ntry:\n open(\"/app/readonly-check\",\"w\").write(\"must fail\")\nexcept OSError as e:\n assert e.errno==errno.EROFS, e\n print(\"PASS: EROFS\")\nelse:\n raise RuntimeError(\"root filesystem writable\")"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-stop",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "stop",
+        "--time",
+        "5",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "session-3-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-start",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-demo",
+        "--network",
+        "host",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.1",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-1-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-start",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-demo",
+        "--network",
+        "host",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.0",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "update-1-0-0-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-demo"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "archive-checksum",
+      "command": [
+        "sha256sum",
+        "-c",
+        "/opt/qb560d-docker-demo/offline/image.sha256"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-remove-image",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "image",
+        "rm",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-missing-image-rejected",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "--pull",
+        "never",
+        "--network",
+        "none",
+        "--name",
+        "qb560d-docker-offline",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 125,
+      "expected": "nonzero",
+      "passed": true
+    },
+    {
+      "test": "offline-load",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "load",
+        "-i",
+        "/opt/qb560d-docker-demo/offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "image-after-load",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "image",
+        "inspect",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-start-network-none",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "run",
+        "-d",
+        "--pull",
+        "never",
+        "--name",
+        "qb560d-docker-offline",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "128m",
+        "-e",
+        "APP_VERSION=1.0.0",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-offline"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-offline"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-offline"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-healthcheck",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "inspect",
+        "qb560d-docker-offline"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-internal-http",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "exec",
+        "qb560d-docker-offline",
+        "python3",
+        "-c",
+        "import urllib.request; print(urllib.request.urlopen(\"http://127.0.0.1:8081/telemetry\",timeout=2).read().decode())"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "offline-remove",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "container",
+        "rm",
+        "-f",
+        "qb560d-docker-offline"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "engine-restart",
+      "command": [
+        "systemctl",
+        "restart",
+        "qb560d-docker-demo.service"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "image-after-engine-restart",
+      "command": [
+        "sh",
+        "/opt/qb560d-docker-demo/target/docker.sh",
+        "image",
+        "inspect",
+        "qb560d-telemetry:1.0.0"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "routes-after",
+      "command": [
+        "ip",
+        "-4",
+        "route",
+        "show"
+      ],
+      "exit_code": 0,
+      "expected": "zero",
+      "passed": true
+    },
+    {
+      "test": "unit-autostart-disabled",
+      "command": [
+        "systemctl",
+        "is-enabled",
+        "qb560d-docker-demo.service"
+      ],
+      "exit_code": 1,
+      "expected": "nonzero",
+      "passed": true
+    }
+  ],
+  "scope": "one QB560D/BSP; host-network and network-none HTTP app; bridge/NAT, GPU/HTP in containers and cold boot not tested",
+  "engine": {
+    "ID": "f2880d3d-0047-45d4-973d-e5333353730d",
+    "Containers": 0,
+    "ContainersRunning": 0,
+    "ContainersPaused": 0,
+    "ContainersStopped": 0,
+    "Images": 1,
+    "Driver": "overlay2",
+    "DriverStatus": [
+      [
+        "Backing Filesystem",
+        "extfs"
+      ],
+      [
+        "Supports d_type",
+        "true"
+      ],
+      [
+        "Using metacopy",
+        "false"
+      ],
+      [
+        "Native Overlay Diff",
+        "true"
+      ],
+      [
+        "userxattr",
+        "false"
+      ]
+    ],
+    "Plugins": {
+      "Volume": [
+        "local"
+      ],
+      "Network": [
+        "bridge",
+        "host",
+        "ipvlan",
+        "macvlan",
+        "null",
+        "overlay"
+      ],
+      "Authorization": null,
+      "Log": [
+        "awslogs",
+        "fluentd",
+        "gcplogs",
+        "gelf",
+        "journald",
+        "json-file",
+        "local",
+        "splunk",
+        "syslog"
+      ]
+    },
+    "MemoryLimit": true,
+    "SwapLimit": true,
+    "CpuCfsPeriod": false,
+    "CpuCfsQuota": false,
+    "CPUShares": true,
+    "CPUSet": true,
+    "PidsLimit": true,
+    "IPv4Forwarding": false,
+    "Debug": false,
+    "NFd": 28,
+    "OomKillDisable": true,
+    "NGoroutines": 52,
+    "SystemTime": "2024-06-18T05:37:36.378036621+08:00",
+    "LoggingDriver": "json-file",
+    "CgroupDriver": "cgroupfs",
+    "CgroupVersion": "1",
+    "NEventsListener": 0,
+    "KernelVersion": "5.4.219-perf",
+    "OperatingSystem": "Ubuntu 20.04.3 LTS",
+    "OSVersion": "20.04",
+    "OSType": "linux",
+    "Architecture": "aarch64",
+    "IndexServerAddress": "https://index.docker.io/v1/",
+    "RegistryConfig": {
+      "InsecureRegistryCIDRs": [
+        "127.0.0.0/8",
+        "::1/128"
+      ],
+      "IndexConfigs": {
+        "docker.io": {
+          "Name": "docker.io",
+          "Mirrors": [],
+          "Secure": true,
+          "Official": true
+        }
+      },
+      "Mirrors": []
+    },
+    "NCPU": 8,
+    "MemTotal": 7658749952,
+    "GenericResources": null,
+    "DockerRootDir": "/opt/qb560d-docker-demo/data",
+    "HttpProxy": "",
+    "HttpsProxy": "",
+    "NoProxy": "",
+    "Name": "qcs6490-odk",
+    "Labels": [],
+    "ExperimentalBuild": false,
+    "ServerVersion": "29.9.2",
+    "Runtimes": {
+      "io.containerd.runc.v2": {
+        "path": "runc",
+        "status": {
+          "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.3.0\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_LOONGARCH64\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\",\"SECCOMP_FILTER_FLAG_WAIT_KILLABLE_RECV\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true,\"schemata\":true,\"monitoring\":true},\"memoryPolicy\":{\"modes\":[\"MPOL_BIND\",\"MPOL_DEFAULT\",\"MPOL_INTERLEAVE\",\"MPOL_LOCAL\",\"MPOL_PREFERRED\",\"MPOL_PREFERRED_MANY\",\"MPOL_WEIGHTED_INTERLEAVE\"],\"flags\":[\"MPOL_F_NUMA_BALANCING\",\"MPOL_F_RELATIVE_NODES\",\"MPOL_F_STATIC_NODES\"]},\"mountExtensions\":{\"idmap\":{\"enabled\":true}},\"netDevices\":{\"enabled\":true}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.6.0\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.5.2-0-g29dd3dc\",\"org.opencontainers.runc.version\":\"1.5.2\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+        }
+      },
+      "runc": {
+        "path": "runc",
+        "status": {
+          "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.3.0\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_LOONGARCH64\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\",\"SECCOMP_FILTER_FLAG_WAIT_KILLABLE_RECV\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true,\"schemata\":true,\"monitoring\":true},\"memoryPolicy\":{\"modes\":[\"MPOL_BIND\",\"MPOL_DEFAULT\",\"MPOL_INTERLEAVE\",\"MPOL_LOCAL\",\"MPOL_PREFERRED\",\"MPOL_PREFERRED_MANY\",\"MPOL_WEIGHTED_INTERLEAVE\"],\"flags\":[\"MPOL_F_NUMA_BALANCING\",\"MPOL_F_RELATIVE_NODES\",\"MPOL_F_STATIC_NODES\"]},\"mountExtensions\":{\"idmap\":{\"enabled\":true}},\"netDevices\":{\"enabled\":true}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.6.0\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.5.2-0-g29dd3dc\",\"org.opencontainers.runc.version\":\"1.5.2\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+        }
+      }
+    },
+    "DefaultRuntime": "runc",
+    "Swarm": {
+      "NodeID": "",
+      "NodeAddr": "",
+      "LocalNodeState": "inactive",
+      "ControlAvailable": false,
+      "Error": "",
+      "RemoteManagers": null
+    },
+    "LiveRestoreEnabled": false,
+    "Isolation": "",
+    "InitBinary": "docker-init",
+    "ContainerdCommit": {
+      "ID": "b7a25261e029d68978bbf290df0a62fc819b3c51"
+    },
+    "RuncCommit": {
+      "ID": "v1.5.2-0-g29dd3dc"
+    },
+    "InitCommit": {
+      "ID": "de40ad0"
+    },
+    "SecurityOptions": [
+      "name=apparmor,profile=default",
+      "name=seccomp,profile=builtin"
+    ],
+    "ProductLicense": "Community Engine",
+    "FirewallBackend": {
+      "Driver": "iptables"
+    },
+    "CDISpecDirs": [
+      "/etc/cdi",
+      "/var/run/cdi"
+    ],
+    "Containerd": {
+      "Address": "/run/qb560d-docker-demo/exec/containerd/containerd.sock",
+      "Namespaces": {
+        "Containers": "moby",
+        "Plugins": "plugins.moby"
+      }
+    },
+    "Warnings": [
+      "WARNING: No cpu cfs quota support",
+      "WARNING: No cpu cfs period support",
+      "WARNING: No blkio throttle.read_bps_device support",
+      "WARNING: No blkio throttle.write_bps_device support",
+      "WARNING: No blkio throttle.read_iops_device support",
+      "WARNING: No blkio throttle.write_iops_device support",
+      "WARNING: Support for cgroup v1 is deprecated and planned to be removed by no later than May 2029 (https://github.com/moby/moby/issues/51111)",
+      "WARNING: IPv4 forwarding is disabled"
+    ],
+    "ClientInfo": {
+      "Debug": false,
+      "Version": "29.9.2",
+      "DefaultAPIVersion": "1.56",
+      "GitCommit": "a82e528",
+      "GoVersion": "go1.26.10",
+      "Os": "linux",
+      "Arch": "arm64",
+      "BuildTime": "Tue Oct 20 18:43:37 2026",
+      "Context": "default",
+      "Plugins": [
+        {
+          "SchemaVersion": "0.1.0",
+          "Vendor": "Docker Inc.",
+          "Version": "v0.38.1",
+          "ShortDescription": "Docker Buildx",
+          "Name": "buildx",
+          "Path": "/opt/qb560d-docker-demo/client/cli-plugins/docker-buildx"
+        }
+      ],
+      "Warnings": null
+    }
+  },
+  "image_id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+  "image_size_bytes": 155045534,
+  "routes_before": "192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 \n",
+  "three_sessions": [
+    {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 4083.68,
+      "process_uptime_s": 2.947
+    },
+    {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 4092.7,
+      "process_uptime_s": 2.957
+    },
+    {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 4101.69,
+      "process_uptime_s": 2.946
+    }
+  ],
+  "update_rollback": "PASS: configuration APP_VERSION 1.0.0 -> 1.0.1 -> 1.0.0; same immutable image",
+  "archive_sha256": "cd0c23929d9b698a1e824d1f735cad94112c9eeef6e9e1b60648e13ccc638550",
+  "offline": "PASS: image absent -> --pull never refused -> tar.gz load restores same image ID -> healthy HTTP app with --network none",
+  "routes_after": "192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 \n",
+  "unit_enabled_state": "disabled",
+  "completed_utc": "2024-06-17T21:38:23.988938+00:00"
+}

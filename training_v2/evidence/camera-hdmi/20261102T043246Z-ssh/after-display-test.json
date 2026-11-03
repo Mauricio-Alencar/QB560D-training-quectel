@@ -1,0 +1,6 @@
+{
+  "command": "printf 'GRAPHICS\\n'; systemctl is-active init_display.service; pidof weston; cat /sys/class/drm/card0-DSI-1/enabled; printf 'BRIDGE IRQ\\n'; grep -i lt9611 /proc/interrupts || true; printf 'KERNEL\\n'; journalctl -b -k --since '-3 minutes' --no-pager | grep -Ei '9611|drm|hdmi|dsi' | tail -n 55; printf 'DISPLAY LOG\\n'; tail -n 60 /logcat",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

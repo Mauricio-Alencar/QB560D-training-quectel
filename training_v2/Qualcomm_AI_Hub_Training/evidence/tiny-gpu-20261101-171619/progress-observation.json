@@ -1,0 +1,18 @@
+{
+  "at_host_utc": "2026-11-01T20:18:56.211835+00:00",
+  "account_api": "PASS_DEVICE_LISTING_77",
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "compile_job": {
+    "id": "j5q1v4l7g",
+    "url": "https://workbench.aihub.qualcomm.com/jobs/j5q1v4l7g/",
+    "observed_status": "SUCCESS"
+  },
+  "inference_profile_job": {
+    "id": "j56mwo8vp",
+    "url": "https://workbench.aihub.qualcomm.com/jobs/j56mwo8vp/",
+    "observed_status": "PROVISIONING_DEVICE"
+  },
+  "hosted_correctness": "PENDING",
+  "local_artifact_execution": "PENDING",
+  "recorded_contingency": "PENDING"
+}

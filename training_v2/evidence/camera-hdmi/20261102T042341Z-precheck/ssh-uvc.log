@@ -1,0 +1,30 @@
+sh: ss: command not found
+ssh.service                                enabled         enabled      
+ssh@.service                               static          enabled      
+sshd.service                               enabled         enabled      
+ssh.socket                                 enabled         enabled      
+rescue-ssh.target                          static          enabled      
+CONFIG_VIDEO_V4L2_SUBDEV_API=y
+CONFIG_VIDEO_V4L2=y
+CONFIG_VIDEO_V4L2_I2C=y
+CONFIG_MEDIA_USB_SUPPORT=y
+CONFIG_USB_VIDEO_CLASS=y
+CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y
+Factory Details:
+  Rank                     marginal (64)
+  Long-name                wayland video sink
+  Klass                    Sink/Video
+  Description              Output to wayland surface
+  Author                   Sreerenj Balachandran <sreerenj.balachandran@intel.com>, George Kiagiadakis <george.kiagiadakis@collabora.com>
+
+Plugin Details:
+  Name                     waylandsink
+  Description              Wayland Video Sink
+  Filename                 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstwaylandsink.so
+  Version                  1.16.3
+  License                  LGPL
+  Source module            gst-plugins-bad
+  Binary package           GStreamer Bad Plug-ins source release
+  Origin URL               Unknown package origin
+
+GObject

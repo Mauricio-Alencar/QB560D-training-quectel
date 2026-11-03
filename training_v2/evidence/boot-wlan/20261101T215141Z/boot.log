@@ -1,0 +1,216 @@
+Bootup is not yet finished (org.freedesktop.systemd1.Manager.FinishTimestampMonotonic=0).
+Please try again later.
+Hint: Use 'systemctl list-jobs' to see active jobs
+avahi-daemon.service    loaded failed failed Avahi mDNS/DNS-SD Stack            
+camera_cgroup.service   loaded failed failed Create Camera Cgroup Service       
+chg-policy.service      loaded failed failed Charger Policy Service             
+dnsmasq.service         loaded failed failed dnsmasq - A lightweight DHCP and c…
+fs-scrub-daemon.service loaded failed failed fs-scrub-daemon Service            
+ip6tables.service       loaded failed failed IPv6 Packet Filtering Framework    
+ipacmdiag.service       loaded failed failed start IPA configuration manager di…
+iptables.service        loaded failed failed IPv4 Packet Filtering Framework    
+qcmap_wlan.service      loaded failed failed WLAN service                       
+qti_pppd.service        loaded failed failed qti_ppp service                    
+thermal-engine.service  loaded failed failed Thermal Engine Service             
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:42 CST. --
+Nov 02 06:34:31 qcs6490-odk kernel: afe_callback: cmd = 0x100fa returned error = 0x2
+Nov 02 06:34:31 qcs6490-odk kernel: afe_apr_send_pkt: DSP returned error[ADSP_EBADPARAM]
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: fail to open AFE port 0xb037
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: ASoC: cpu DAI prepare error: -22
+Nov 02 06:34:31 qcs6490-odk kernel:  TX_CDC_DMA_TX_3: ASoC: backend prepare failed -22
+Nov 02 06:34:31 qcs6490-odk kernel: q6asm_find_cal_by_buf_number: Can't find ASM Cal for cal_index 0 app_type 0 buffer_number 1
+Nov 02 06:34:30 qcs6490-odk systemd[1]: eth_config.service: Ignoring invalid environment assignment 'export ADSP_LIBRARY_PATH=/root/lib/;/system/lib/rfsa/adsp/;system/vendor/lib/rfsa/adsp/;/dsp': /etc/environment
+Nov 02 06:34:31 qcs6490-odk kernel: OF: /soc/qcom,pcie@1c08000/pcie1_rp/pcie1_bus1_dev0_fn0/pcie1_bus2_dev3_fn0/qps615_eth1,qps615_eth1@pcie1_rp: could not get #gpio-cells for /soc/interrupt-controller@17a00000
+Nov 02 06:34:31 qcs6490-odk kernel: send_afe_cal_type: No cal sent for cal_index 1, port_id = 0xb037! ret -22
+Nov 02 06:34:31 qcs6490-odk kernel: afe_callback: cmd = 0x100fa returned error = 0x2
+Nov 02 06:34:31 qcs6490-odk kernel: afe_apr_send_pkt: DSP returned error[ADSP_EBADPARAM]
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: fail to open AFE port 0xb037
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: ASoC: cpu DAI prepare error: -22
+Nov 02 06:34:31 qcs6490-odk kernel:  TX_CDC_DMA_TX_3: ASoC: backend prepare failed -22
+Nov 02 06:34:31 qcs6490-odk kernel: q6asm_callback: cmd = 0x10bcd returned error = 0x1
+Nov 02 06:34:31 qcs6490-odk kernel: __q6asm_cmd: DSP returned error[ADSP_EFAILED] opcode 68557
+Nov 02 06:34:31 qcs6490-odk kernel: send_afe_cal_type: No cal sent for cal_index 1, port_id = 0xb037! ret -22
+Nov 02 06:34:31 qcs6490-odk kernel: afe_callback: cmd = 0x100fa returned error = 0x2
+Nov 02 06:34:31 qcs6490-odk kernel: afe_apr_send_pkt: DSP returned error[ADSP_EBADPARAM]
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: fail to open AFE port 0xb037
+Nov 02 06:34:31 qcs6490-odk kernel: msm-dai-cdc-dma-dev soc:qcom,msm-dai-cdc-dma:qcom,msm-dai-tx-cdc-dma-3-tx: ASoC: cpu DAI prepare error: -22
+Nov 02 06:34:31 qcs6490-odk kernel:  TX_CDC_DMA_TX_3: ASoC: backend prepare failed -22
+Nov 02 06:34:31 qcs6490-odk kernel: q6asm_find_cal_by_buf_number: Can't find ASM Cal for cal_index 0 app_type 0 buffer_number 1
+Nov 02 06:34:31 qcs6490-odk kernel: OF: /soc/qcom,pcie@1c08000/pcie1_rp/pcie1_bus1_dev0_fn0/pcie1_bus2_dev3_fn0/qps615_eth1,qps615_eth1@pcie1_rp: could not get #gpio-cells for /soc/interrupt-controller@17a00000
+Nov 02 06:34:32 qcs6490-odk kernel: OF: /soc/qcom,pcie@1c08000/pcie1_rp/pcie1_bus1_dev0_fn0/pcie1_bus2_dev3_fn0/qps615_eth1,qps615_eth1@pcie1_rp: could not get #gpio-cells for /soc/interrupt-controller@17a00000
+Nov 02 06:34:32 qcs6490-odk kernel: arm-smmu 15000000.apps-smmu: SMR[63] write err write:0x80001c82, read:0x0
+Nov 02 06:34:32 qcs6490-odk kernel: pcieport 0001:02:01.0: Failed to add to iommu group 53: -22
+Nov 02 06:34:32 qcs6490-odk kernel: arm-smmu 15000000.apps-smmu: SMR[63] write err write:0x80001c83, read:0x0
+Nov 02 06:34:32 qcs6490-odk kernel: pcieport 0001:02:02.0: Failed to add to iommu group 53: -22
+Nov 02 06:34:32 qcs6490-odk kernel: msm_pcie_sel_debug_testcase: PCIe: RC1 is successfully enumerated
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: -->tc956x_config_tamap
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: <--tc956x_config_tamap
+Nov 02 06:34:33 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/qps615_fw.bin
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: Enabling all eMAC clocks for Port 0
+Nov 02 06:34:33 qcs6490-odk kernel: Mac configuration file not found
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: TC956X: [1] Phy detected C22 at ID/ADDR 6
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: tc956xmac_pci_probe : (Device Usage Count = [1]) 
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.1: Enabling all eMAC clocks for Port 1
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.0: tc956xmac_init_phy [1] PHY configured in polling mode
+Nov 02 06:34:33 qcs6490-odk kernel: ===== Executing rtl8221b_config_init (PHY ID: 0x001cc849) =====
+Nov 02 06:34:33 qcs6490-odk kernel: ===== Finish rtl8221b_config_init =====
+Nov 02 06:34:33 qcs6490-odk kernel: Mac configuration file not found
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.1: TC956X: [1] Phy detected C22 at ID/ADDR 1
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.1: tc956xmac_pci_probe : (Device Usage Count = [2]) 
+Nov 02 06:34:33 qcs6490-odk kernel: tc956x_pci-eth 0001:08:00.1: tc956xmac_init_phy [1] PHY configured in polling mode
+Nov 02 06:34:33 qcs6490-odk kernel: ===== Executing rtl8211f_config_init (PHY ID: 0x001cc916) =====
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Starting CLKOUT disable sequence
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Selected page 0x0A43
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Modified register 0x19 to disable CLKOUT
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Register 0x19 after disabling CLKOUT: 0x0862
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Switched back to page 0
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: PHY reset command sent (0x9200)
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Waited 5ms for PHY reset
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Selected page 0x0A43 after reset
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: Register 0x19 after reset: 0x0862
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: CLKOUT successfully disabled (0x0862)
+Nov 02 06:34:33 qcs6490-odk kernel: rtl8211f: CLKOUT disable sequence completed
+Nov 02 06:34:34 qcs6490-odk tftp_server[3524]: ERR:pid=3524 tid=4542 tftp-server : ERR :[tftp_os_la.c, 70] open failed: [2] [No such file or directory]
+Nov 02 06:34:34 qcs6490-odk tftp_server[3524]: ERR:pid=3524 tid=4542 tftp-server : ERR :[tftp_server.c, 1750] open failed : [-2] [Unknown error -2]
+Nov 02 06:34:34 qcs6490-odk tftp_server[3524]: ERR:pid=3524 tid=4542 tftp-server : ERR :[tftp_protocol.c, 1230] sending error-pkt. Code = 1, Msg = Err=2 String=No such file or directory
+Nov 02 06:34:34 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/updates/amss20.bin
+Nov 02 06:34:35 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/updates/regdb.bin
+Nov 02 06:34:35 qcs6490-odk kernel: firmware_class: BDF download filepath :/persist/bdwlang.elf
+Nov 02 06:34:35 qcs6490-odk kernel: cnss: Failed to load QDSS: qdss_trace_config_v2.cfg
+Nov 02 06:34:35 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a68cf1a][22:34:35.628680] wlan: [351:E:TXRX] hif_print_hal_shadow_register_cfg: num_config 33
+Nov 02 06:34:35 qcs6490-odk kernel: wlan_pld:pld_is_ipa_offload_disabled:3268:: Not supported on type 0
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a70611f][22:34:35.654521] wlan: [351:E:QDF] cds_get_context: Module ID 66 context is Null
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a70c394][22:34:35.655833] wlan: [351:E:QDF] cds_get_context: Module ID 66 context is Null
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a7222f7][22:34:35.660519] wlan: [351:F:WMA] WMA --> wmi_unified_attach - success
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a732771][22:34:35.663992] wlan: [351:E:QDF] htc_wait_target: Target Ready! TX resource : 2 size:2176, MaxMsgsPerHTCBundle = 1
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a732913][22:34:35.664013] wlan: [351:E:QDF] htc_setup_target_buffer_assignments: SVS Index : 1 TX : 0x100 : alloc:2
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a732f23][22:34:35.664094] wlan: [351:E:DP] dp_srng_get_str_from_hal_ring_type: Invalid ring type
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a74cd4d][22:34:35.669616] wlan: [351:E:DP] dp_rx_fst_attach: RX FISA feature is disabled
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a74d175][22:34:35.669672] wlan: [351:E:DP] dp_rx_refill_buff_pool_init: RX refill buffer pool support is disabled
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a74d1ab][22:34:35.669675] wlan: [351:E:DP] dp_rx_buffer_pool_init: RX buffer pool support is disabled
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1a7769cd][22:34:35.678530] wlan: [353:E:QDF] copy_fw_abi_version_tlv: copy_fw_abi_version_tlv: INIT_CMD version: 1, 0, 0x5f414351, 0x4c4d, 0x0, 0x0
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac7c681][22:34:35.952832] wlan: [352:E:QDF] ready_extract_init_status_tlv: ready_extract_init_status_tlv:0
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac7cf6c][22:34:35.952951] wlan: [352:E:QDF] cds_get_context: Module ID 65 context is Null
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac7d020][22:34:35.952961] wlan: [352:F:DP] cdp_ipa_set_uc_tx_partition_base invalid instance
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8bd98][22:34:35.956127] wlan: [352:E:QDF] dp_peer_map_attach_wifi3: dp_peer_map_attach_wifi3 max_peers 25, max_ast_index: 80
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8d7f9][22:34:35.956479] wlan: [351:E:WMI] send_action_oui_cmd_tlv: Invalid action id
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8dd75][22:34:35.956552] wlan: [351:E:QDF] Cannot malloc 0 bytes @ hdd_init_channel_avoidance:11952
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8e8e7][22:34:35.956704] wlan: [351:E:TXRX] dp_rxdma_ring_config: DBS enabled max_mac_rings 2
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8e919][22:34:35.956707] wlan: [351:E:TXRX] dp_rxdma_ring_config: pdev_id 0 max_mac_rings 2
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8e93f][22:34:35.956709] wlan: [351:E:TXRX] dp_rxdma_ring_config: mac_id 0
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8eb00][22:34:35.956732] wlan: [351:E:TXRX] dp_rxdma_ring_config: mac_id 1
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8ecaf][22:34:35.956755] wlan: [351:E:DP] dp_rx_target_fst_config: RX FISA feature is disabled
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1ac8fc3d][22:34:35.956962] wlan: [351:E:REGULATORY] reg_freq_width_to_chan_op_class: no op class for frequency 5660
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1acc6655][22:34:35.968617] wlan: [351:E:fwol] ucfg_fwol_send_get_thermal_stats_cmd: Command Disabled in Ini gThermalStatsTempOffset 5 or not enabled in FW 0
+Nov 02 06:34:35 qcs6490-odk kernel: [kworke][0x1acc6744][22:34:35.968629] wlan: [351:E:OSIF] os_if_fwol_get_thermal_stats_req: Failed to send get thermal stats cmd to FW, 4
+Nov 02 06:34:35 qcs6490-odk kernel: cnss_utils: WLAN MAC address is not set, type 0
+Nov 02 06:34:35 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/wlan/qca_cld/wlan_mac.bin
+Nov 02 06:34:36 qcs6490-odk kernel: [wpa_su][0x1ad66cdd][22:34:36.002837] wlan: [4649:E:mlme] mlme_is_twt_setup_done: Peer object not found
+Nov 02 06:34:36 qcs6490-odk dhcpcd[3459]: dhcpcd_prestartinterface: p2p0: Operation not supported
+Nov 02 06:34:39 qcs6490-odk kernel: [soft_i][0x1f3bf70c][22:34:39.844680] wlan: [0:E:DP] dp_peer_find_add_id: peer         pK-error ID 2 vid 0 mac 8c:44:4f:0c:df:81
+Nov 02 06:34:39 qcs6490-odk kernel: [soft_i][0x1f3bfa99][22:34:39.844727] wlan: [0:E:DP] dp_peer_map_ast: peer         pK-error ID 21 vid 0 mac 8c:44:4f:0c:df:81
+Nov 02 06:34:39 qcs6490-odk kernel: [schedu][0x1f3c6c7e][22:34:39.846246] wlan: [4636:E:REGULATORY] reg_chan_band_to_freq: Invalid channel 0
+Nov 02 06:34:40 qcs6490-odk kernel: msm_pcm_playback_close: CMD_EOS failed, cmd_pending 0x8
+Nov 02 06:34:40 qcs6490-odk kernel: msm_adsp_clean_mixer_ctl_adm_pp_event_queue: failed to get kctl.
+[   18.508870] [kworke][0x1ac80ba9][22:34:35.953754] wlan: [352:I:dfs] WLAN_DEBUG_DFS_ALWAYS : wlan_dfs_pdev_obj_create_notification: dfs_offload 1
+[   18.508882] [kworke][0x1ac80c97][22:34:35.953767] wlan: [352:I:SPECTRAL] null_get_capability: SPECTRAL : get_capability not registered
+
+[   18.508887] [kworke][0x1ac80d05][22:34:35.953773] wlan: [352:I:SPECTRAL] target_if_pdev_spectral_init: HAL_CAP_PHYDIAG : Capable
+[   18.508892] [kworke][0x1ac80d68][22:34:35.953778] wlan: [352:I:SPECTRAL] null_get_capability: SPECTRAL : get_capability not registered
+
+[   18.508897] [kworke][0x1ac80dcc][22:34:35.953783] wlan: [352:I:SPECTRAL] target_if_pdev_spectral_init: HAL_CAP_RADAR   : Capable
+[   18.508902] [kworke][0x1ac80e2b][22:34:35.953788] wlan: [352:I:SPECTRAL] null_get_capability: SPECTRAL : get_capability not registered
+
+[   18.508907] [kworke][0x1ac80e89][22:34:35.953793] wlan: [352:I:SPECTRAL] target_if_pdev_spectral_init: HAL_CAP_SPECTRAL_SCAN : Capable
+[   18.508913] [kworke][0x1ac80ef5][22:34:35.953798] wlan: [352:I:SPECTRAL] null_get_tsf64: SPECTRAL : get_tsf64 not registered
+
+[   18.508928] [kworke][0x1ac81009][22:34:35.953813] wlan: [352:I:GREEN_AP] wlan_green_ap_pdev_obj_create_notification: Green AP creation successful, green ap ctx: ffffff9cb8670500, pdev: ffffff9cc35d0800
+[   18.508940] [kworke][0x1ac810f5][22:34:35.953825] wlan: [352:I:IPA] ipa_pdev_obj_create_notification: IPA is disabled
+[   18.510956] [kworke][0x1ac8a701][22:34:35.955826] wlan: [352:I:REGULATORY] reg_set_band: same band 7
+[   18.510969] [kworke][0x1ac8a919][22:34:35.955854] wlan: [352:I:HDD] hdd_intersect_igmp_offload_setting: fw cap to handle igmp 1 igmp_offload_enable ini 0
+[   18.511229] [kworke][0x1ac8bc98][22:34:35.956114] wlan: [352:I:GREEN_AP] target_if_green_ap_register_egap_event_handler: Set the Enhance Green AP event handler
+[   18.511241] [kworke][0x1ac8bd98][22:34:35.956127] wlan: [352:E:QDF] dp_peer_map_attach_wifi3: dp_peer_map_attach_wifi3 max_peers 25, max_ast_index: 80
+
+[   18.511252] [kworke][0x1ac8be6d][22:34:35.956138] wlan: [352:I:DP] 
+               <=== cfg max peer id 25 ====>
+[   18.511261] [kworke][0x1ac8bf0d][22:34:35.956146] wlan: [352:I:DP] 
+               <=== cfg max ast idx 80 ====>
+[   18.511267] [kworke][0x1ac8bf82][22:34:35.956152] wlan: [352:I:DP] ast hash_elems: 256, max_ast_idx: 80
+[   18.511296] [kworke][0x1ac8c1d2][22:34:35.956183] wlan: [351:I:WMA] wma_wait_for_ready_event: FW ready event received
+[   18.511591] [kworke][0x1ac8d7f9][22:34:35.956479] wlan: [351:E:WMI] send_action_oui_cmd_tlv: Invalid action id
+[   18.511664] [kworke][0x1ac8dd75][22:34:35.956552] wlan: [351:E:QDF] Cannot malloc 0 bytes @ hdd_init_channel_avoidance:11952
+[   18.511668] [kworke][0x1ac8ddbc][22:34:35.956555] wlan: [351:I:IPA] ipa_register_is_ipa_ready: IPA config is disabled
+[   18.511742] [kworke][0x1ac8e351][22:34:35.956630] wlan: [351:I:SYS] Creating periodic timer for OLBC UPDATE CACHE TIMEOUT
+
+[   18.511817] [kworke][0x1ac8e8e7][22:34:35.956704] wlan: [351:E:TXRX] dp_rxdma_ring_config: DBS enabled max_mac_rings 2
+[   18.511819] [kworke][0x1ac8e919][22:34:35.956707] wlan: [351:E:TXRX] dp_rxdma_ring_config: pdev_id 0 max_mac_rings 2
+[   18.511821] [kworke][0x1ac8e93f][22:34:35.956709] wlan: [351:E:TXRX] dp_rxdma_ring_config: mac_id 0
+[   18.511845] [kworke][0x1ac8eb00][22:34:35.956732] wlan: [351:E:TXRX] dp_rxdma_ring_config: mac_id 1
+[   18.511867] [kworke][0x1ac8ecaf][22:34:35.956755] wlan: [351:E:DP] dp_rx_target_fst_config: RX FISA feature is disabled
+[   18.512075] [kworke][0x1ac8fc3d][22:34:35.956962] wlan: [351:E:REGULATORY] reg_freq_width_to_chan_op_class: no op class for frequency 5660
+[   18.523733] [kworke][0x1acc6655][22:34:35.968617] wlan: [351:E:fwol] ucfg_fwol_send_get_thermal_stats_cmd: Command Disabled in Ini gThermalStatsTempOffset 5 or not enabled in FW 0
+[   18.523744] [kworke][0x1acc6744][22:34:35.968629] wlan: [351:E:OSIF] os_if_fwol_get_thermal_stats_req: Failed to send get thermal stats cmd to FW, 4
+[   18.523798] [kworke][0x1acc6b45][22:34:35.968683] wlan: [351:I:HIF] hif_pm_runtime_start: RUNTIME PM is disabled in ini
+[   18.524541] cnss_utils: WLAN MAC address is not set, type 0
+[   18.524627] firmware_class: BDF download filepath :/lib/firmware/wlan/qca_cld/wlan_mac.bin
+[   18.525920] [kworke][0x1acd0a62][22:34:35.970804] wlan: [351:I:HDD] hdd_initialize_mac_address: using MAC address from wlan_mac.bin
+[   18.540879] cnss: Config PCIe remap window register to 0x4000003f
+[   18.540937] cnss: Host time = 23434000 us, device time = 1249090 us, offset = 22184910 us
+[   18.540964] cnss: Updated time sync regs [0x984] = 0x15283ce, [0x988] = 0x0
+[   18.540982] cnss: Removing vote for Regulator vdd-wlan-rfa2
+[   18.541126] cnss: Removing vote for Regulator vdd-wlan-rfa1
+[   18.541152] cnss: Removing vote for Regulator vdd-wlan-dig
+[   18.541160] cnss: Removing vote for Regulator vdd-wlan-aon
+[   18.541177] cnss: Removing vote for Regulator vdd-wlan-io
+[   18.541187] cnss: PM relax, state: 0x126107, count: 0
+[   18.555299] [wpa_su][0x1ad5a5a6][22:34:36.000181] wlan: [4649:I:DP] dp_vdev_attach_wifi3: wlan_cfg_ap_bridge_enabled 0
+[   18.555347] [wpa_su][0x1ad5a977][22:34:36.000232] wlan: [4649:I:DP] 00000000: 23 f5 ca 0f 44 0c 98 28 42 78 4a 5f 61 8f b0 43
+[   18.555352] [wpa_su][0x1ad5a9e2][22:34:36.000237] wlan: [4649:I:DP] 00000010: 35 02 a4 ad
+[   18.555360] [wpa_su][0x1ad5aa89][22:34:36.000246] wlan: [4649:I:DP] 00000000: 1a 30 41 13 6e 7d 1f a8 55 13 fa f7 63 d1 2c 74
+[   18.555366] [wpa_su][0x1ad5aaed][22:34:36.000251] wlan: [4649:I:DP] 00000010: d5 39 6c d1 28 c3 3c 1a f3 23 20 74 64 0b cf 6a
+[   18.555371] [wpa_su][0x1ad5ab4c][22:34:36.000256] wlan: [4649:I:DP] 00000020: 65 2b 89 e2 b0 8d 0d 6e 93 f3 4f 00
+[   18.557951] [wpa_su][0x1ad66cdd][22:34:36.002837] wlan: [4649:E:mlme] mlme_is_twt_setup_done: Peer object not found
+[   18.557962] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   18.565303] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   18.583321] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   18.718740] [schedu][0x1b0587d2][22:34:36.163623] wlan: [4636:I:OSIF] scan start scan id 40961
+[   20.633250] sd 0:0:0:6: [sdg] Synchronizing SCSI cache
+[   21.216068] tc956x_pci-eth 0001:08:00.0: PHY state: interrupt valid: 0, irq: -1, link: 0, state: 5
+[   21.216110] tc956x_pci-eth 0001:08:00.0: BMSR value: 0x7989 (Link: 0, AN complete: 0)
+[   21.216232] tc956x_pci-eth 0001:08:00.0: PHY no need reset
+[   21.216236] tc956x_pci-eth 0001:08:00.0: ESD Check cycle completed.
+[   21.256097] sd 0:0:0:5: [sdf] Synchronizing SCSI cache
+[   21.640078] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[   22.322066] [schedu][0x1f25312c][22:34:39.766948] wlan: [4636:I:OSIF] vdev 0, scan id 40961 type COMPLETED(1) reason COMPLETED(1) scan found 13 bss
+[   22.389736] [wpa_su][0x1f390479][22:34:39.834619] wlan: [4649:W:SME] csr_save_to_channel_power2_g_5_g: Invalid Channel freq 5955 Present in Country IE
+[   22.390441] [wpa_su][0x1f393970][22:34:39.835325] wlan: [4649:I:SME] vdev-0: Connecting to Mauricio_WIFI5G 8c:44:4f:0c:df:81 rssi: -70 freq: 5825 akm 9 cipher: uc 6 mc 5, CC: 
+[   22.399796] [soft_i][0x1f3bf70c][22:34:39.844680] wlan: [0:E:DP] dp_peer_find_add_id: peer         pK-error ID 2 vid 0 mac 8c:44:4f:0c:df:81
+[   22.399822] [soft_i][0x1f3bf924][22:34:39.844708] wlan: [0:I:DP] dp_peer_find_add_id: ref_cnt: 4
+[   22.399842] [soft_i][0x1f3bfa99][22:34:39.844727] wlan: [0:E:DP] dp_peer_map_ast: peer         pK-error ID 21 vid 0 mac 8c:44:4f:0c:df:81
+[   22.401361] [schedu][0x1f3c6c7e][22:34:39.846246] wlan: [4636:E:REGULATORY] reg_chan_band_to_freq: Invalid channel 0
+[   22.401483] [schedu][0x1f3c758b][22:34:39.846366] wlan: [4636:I:WMI] send_vdev_start_cmd_tlv: vdev_id 0 freq 5825 chanmode 8 ch_info: 0x8 is_dfs 0 beacon interval 100 dtim 0 center_chan 5825 center_freq2 0 reg_info_1: 0x0 reg_info_2: 0x0, req->max_txpow: 0x0 Tx SS 2, Rx SS 2, ldpc_rx: 0, cac 0, regd 1, HE ops: 0req->dis_hw_ack: 0 
+[   22.462183] [schedu][0x1f4e3db5][22:34:39.907062] wlan: [4636:I:PE] Auth TX: seq 1 seq num 2049 status 0 WEP 0 to 8c:44:4f:0c:df:81
+[   22.463971] [schedu][0x1f4ec447][22:34:39.908856] wlan: [4636:I:PE] Auth TX: success (0)
+[   22.464947] [schedu][0x1f4f0d6b][22:34:39.909831] wlan: [4636:I:PE] Auth RX: vdev 0 sys role 2 lim_state 5 from 8c:44:4f:0c:df:81 rssi -69 auth_alg 0 seq 1530
+[   22.465073] [schedu][0x1f4f16e9][22:34:39.909958] wlan: [4636:I:PE] Assoc req TX: vdev 0 to 8c:44:4f:0c:df:81 seq num 2050
+[   22.466526] [schedu][0x1f4f83e4][22:34:39.911411] wlan: [4636:I:PE] Assoc req TX: success (0)
+[   22.467230] [schedu][0x1f4fb8b1][22:34:39.912115] wlan: [4636:I:PE] Assoc rsp RX: subtype 0 vdev 0 sys role 2 lim state 10 rssi -69 from 8c:44:4f:0c:df:81
+[   22.471343] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   22.471874] [schedu][0x1f511503][22:34:39.916759] wlan: [4636:I:HDD] wlan0(vdevid-0): b4:2f:03:82:06:16 connected to 8c:44:4f:0c:df:81
+[   22.534621] [soft_i][0x1f6376d9][22:34:39.979504] wlan: [0:I:QDF] EAPOL-1 RX: SA:8c:44:4f:0c:df:81 DA:b4:2f:03:82:06:16
+[   22.539302] [soft_i][0x1f64d5fd][22:34:39.984186] wlan: [0:I:QDF] EAPOL-2 TX: SA:b4:2f:03:82:06:16 DA:8c:44:4f:0c:df:81 msdu_id:0 status: succ
+[   22.539530] [soft_i][0x1f64e734][22:34:39.984415] wlan: [0:I:TXRX] dp_htt_t2h_msg_handler: PeerID 2 BAW 63 TID 0 stat 0
+[   22.603488] [soft_i][0x1f77a3fc][22:34:40.048372] wlan: [0:I:QDF] EAPOL-3 RX: SA:8c:44:4f:0c:df:81 DA:b4:2f:03:82:06:16
+[   22.605575] [schedu][0x1f784092][22:34:40.050460] wlan: [4636:I:WMI] wmi_fill_rso_tlvs: RSO_CFG: vdev:0 pmk_len = 32 pmksa caching:1 OKC:1 sae_same_pmk:0 key_mgmt_offload:1
+[   22.606205] [soft_i][0x1f786fb3][22:34:40.051088] wlan: [0:I:QDF] EAPOL-4 TX: SA:b4:2f:03:82:06:16 DA:8c:44:4f:0c:df:81 msdu_id:0 status: succ
+[   22.631535] [soft_i][0x1f7fdb48][22:34:40.076416] wlan: [0:I:QDF] DHCP-R TX: SA:b4:2f:03:82:06:16 DA:ff:ff:ff:ff:ff:ff msdu_id:0 status: succ
+[   22.696049] msm_pcm_playback_close: CMD_EOS failed, cmd_pending 0x8
+[   22.701285] msm_adsp_clean_mixer_ctl_adm_pp_event_queue: failed to get kctl.
+[   24.643218] [soft_i][0x21cd3791][22:34:42.088100] wlan: [0:I:QDF] DHCP-D TX: SA:b4:2f:03:82:06:16 DA:ff:ff:ff:ff:ff:ff msdu_id:0 status: succ
+[   24.663202] [soft_i][0x21d31287][22:34:42.108086] wlan: [0:I:QDF] DHCP-D RX: SA:b4:2f:03:82:06:16 DA:ff:ff:ff:ff:ff:ff
+[   24.663293] [soft_i][0x21d31968][22:34:42.108178] wlan: [0:I:QDF] DHCP-O RX: SA:8c:44:4f:0c:df:77 DA:b4:2f:03:82:06:16
+[   24.667778] [soft_i][0x21d469b8][22:34:42.112662] wlan: [0:I:QDF] DHCP-R TX: SA:b4:2f:03:82:06:16 DA:ff:ff:ff:ff:ff:ff msdu_id:0 status: succ
+[   24.694031] [soft_i][0x21dc1ab4][22:34:42.138915] wlan: [0:I:QDF] DHCP-A RX: SA:8c:44:4f:0c:df:77 DA:b4:2f:03:82:06:16
+[   24.766347] [soft_i][0x21f14a02][22:34:42.211226] wlan: [0:I:QDF] DHCP-R RX: SA:b4:2f:03:82:06:16 DA:ff:ff:ff:ff:ff:ff
+

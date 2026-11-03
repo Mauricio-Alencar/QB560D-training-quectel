@@ -1,0 +1,4 @@
+{
+  "command": "id; uname -a; cat /etc/build_version; ip -4 addr show dev wlan0; systemctl is-active ssh || true; ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub",
+  "exit_code": 0
+}

@@ -1,0 +1,37 @@
+cloud-deploy-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\hub-cloud-utf8\model.tflite: 1 file pushed, 0 skipped. 8.2 MB/s (1992 bytes in 0.000s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\models\workbench_input.npy: 1 file pushed, 0 skipped. 3.9 MB/s (12416 bytes in 0.003s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\models\workbench_expected.npy: 1 file pushed, 0 skipped. 0.6 MB/s (144 bytes in 0.000s)
+new-cloud-artifact-cpu: exit 0
+read-cpu: exit 0
+new-cloud-artifact-gpu: exit 0
+read-gpu: exit 0
+/opt/qb560d-training-payload/evidence/reorg-aihub-20261102/: 5 files pulled, 0 skipped. 0.9 MB/s (16359 bytes in 0.017s)
+offline-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\Qualcomm_AI_Hub_Training\demo_offline\ai\: 2 files pushed, 0 skipped. 1.5 MB/s (13661 bytes in 0.009s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\Qualcomm_AI_Hub_Training\demo_offline\models\: 3 files pushed, 0 skipped. 2.2 MB/s (14552 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\Qualcomm_AI_Hub_Training\demo_offline\source\: 1 file pushed, 0 skipped. 0.3 MB/s (701 bytes in 0.002s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\Qualcomm_AI_Hub_Training\demo_offline\run_target.sh: 1 file pushed, 0 skipped. 1.6 MB/s (431 bytes in 0.000s)
+offline-payload-hashes: exit 0
+offline-cpu: exit 0
+read-offline-cpu: exit 0
+offline-gpu: exit 0
+read-offline-gpu: exit 0
+/opt/qb560d-training-payload/aihub-offline-reorg20261102/results/: 2 files pulled, 0 skipped. 0.3 MB/s (1809 bytes in 0.006s)
+optional-camera-probe: exit 78
+video-device-names: exit 0
+{
+  "result": "PASS_NEW_HOSTED_ARTIFACT_AND_OFFLINE_CPU_GPU",
+  "cloud_model_sha256": "6a569f3f9ea3b0891281f7122e76ba568ce0d2307a437ecbf7810c69bcd150fc",
+  "cpu_error": 1.4901161193847656e-08,
+  "gpu_error": 2.9802322387695312e-08,
+  "offline_files_checked": {
+    "files_checked": 6,
+    "passed": true
+  },
+  "camera": {
+    "exit_code": 78,
+    "status": "OPTIONAL_CAMERA_NOT_AVAILABLE",
+    "log": "optional-camera-probe.log"
+  }
+}

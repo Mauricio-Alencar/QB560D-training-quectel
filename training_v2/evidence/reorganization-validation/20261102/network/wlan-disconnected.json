@@ -1,0 +1,4 @@
+{
+  "command": "test \"$(nmcli --colors no -g GENERAL.STATE device show wlan0 | cut -d \" \" -f 1)\" != 100",
+  "exit_code": 0
+}

@@ -1,0 +1,4 @@
+{
+  "command": "nmcli radio wifi off; test \"$(nmcli radio wifi)\" = disabled",
+  "exit_code": 0
+}

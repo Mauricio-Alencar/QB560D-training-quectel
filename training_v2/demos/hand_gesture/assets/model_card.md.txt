@@ -1,0 +1,352 @@
+---
+library_name: pytorch
+license: apache-2.0
+tags:
+- real_time
+- android
+pipeline_tag: object-detection
+
+---
+
+![](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/web-assets/model_demo.png)
+
+# MediaPipe-Hand-Gesture-Recognition: Optimized for Qualcomm Devices
+
+The MediaPipe Gesture Recognizer is a real-time machine learning pipeline that detects hands, predicts 21 hand landmarks, determines handedness (left/right), and classifies gestures from a predefined set
+
+This is based on the implementation of MediaPipe-Hand-Gesture-Recognition found [here](https://github.com/google-ai-edge/mediapipe).
+This repository contains pre-exported model files optimized for Qualcomm® devices. You can use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mediapipe_hand_gesture) library to export with custom configurations. More details on model performance across various devices, can be found [here](#performance-summary).
+
+Qualcomm AI Hub Models uses [Qualcomm AI Hub Workbench](https://workbench.aihub.qualcomm.com) to compile, profile, and evaluate this model. [Sign up](https://myaccount.qualcomm.com/signup) to run these models on a hosted Qualcomm® device.
+
+## Getting Started
+There are two ways to deploy this model on your device:
+
+### Option 1: Download Pre-Exported Models
+
+Below are pre-exported model assets ready for deployment.
+
+| Runtime | Precision | Chipset | SDK Versions | Download |
+|---|---|---|---|---|
+| ONNX | float | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-onnx-float.zip)
+| ONNX | w8a8 | Universal | QAIRT 2.50, ONNX Runtime 1.30.0 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-onnx-w8a8.zip)
+| QNN_DLC | float | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-qnn_dlc-float.zip)
+| QNN_DLC | w8a8 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-qnn_dlc-w8a8.zip)
+| TFLITE | float | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-tflite-float.zip)
+| TFLITE | w8a8 | Universal | QAIRT 2.50 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-tflite-w8a8.zip)
+
+For more device-specific assets and performance metrics, visit **[MediaPipe-Hand-Gesture-Recognition on Qualcomm® AI Hub](https://aihub.qualcomm.com/models/mediapipe_hand_gesture)**.
+
+
+### Option 2: Export with Custom Configurations
+
+Use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mediapipe_hand_gesture) Python library to compile and export the model with your own:
+- Custom weights (e.g., fine-tuned checkpoints)
+- Custom input shapes
+- Target device and runtime configurations
+
+This option is ideal if you need to customize the model beyond the default configuration provided here.
+
+See our repository for [MediaPipe-Hand-Gesture-Recognition on GitHub](https://github.com/qualcomm/ai-hub-models/blob/v0.65.0/src/qai_hub_models/models/mediapipe_hand_gesture) for usage instructions.
+
+## Model Details
+
+**Model Type:** Model_use_case.object_detection
+
+**Model Stats:**
+- Input resolution: 256x256
+- Model size (canned_gesture_classifier) (float): 577 KB
+- Model size (canned_gesture_classifier) (w8a8): 180 KB
+- Model size (hand_landmark_detector) (float): 10.4 MB
+- Model size (hand_landmark_detector) (w8a8): 3.12 MB
+- Model size (palm_detector) (float): 6.75 MB
+- Model size (palm_detector) (w8a8): 2.05 MB
+- Number of parameters (canned_gesture_classifier): 143K
+- Number of parameters (hand_landmark_detector): 2.72M
+- Number of parameters (palm_detector): 1.76M
+
+## Performance Summary
+| Model | Runtime | Precision | Chipset | Inference Time (ms) | Peak Memory Range (MB) | Primary Compute Unit
+|---|---|---|---|---|---|---
+| canned_gesture_classifier | ONNX | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.06 ms | 0 - 23 MB | NPU
+| canned_gesture_classifier | ONNX | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | ONNX | float | Snapdragon® X2 Elite | 0.042 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | float | Snapdragon® X Elite | 0.055 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | float | Snapdragon® 8 Gen 3 Mobile | 0.069 ms | 0 - 32 MB | NPU
+| canned_gesture_classifier | ONNX | float | Snapdragon® 8 Gen 1 Mobile | 0.104 ms | 0 - 37 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® Dragonwing™ IQ-8275 | 0.283 ms | 0 - 4 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.078 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® QCS8450 | 0.104 ms | 0 - 37 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® Dragonwing™ IQ-9075 | 0.16 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® Dragonwing™ IQ-X7181 | 0.055 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | float | Qualcomm® Dragonwing™ Q-8750 | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.058 ms | 0 - 26 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.052 ms | 0 - 25 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® X2 Elite | 0.038 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® X Elite | 0.05 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.066 ms | 0 - 35 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.098 ms | 0 - 38 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 0.428 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.143 ms | 0 - 4 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.08 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® QCS8450 | 0.098 ms | 0 - 38 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.166 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.05 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 0.185 ms | 0 - 25 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.083 ms | 0 - 25 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.052 ms | 0 - 25 MB | NPU
+| canned_gesture_classifier | ONNX | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.083 ms | 0 - 25 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.048 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® X2 Elite | 0.144 ms | 0 - 0 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® X Elite | 0.151 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® 8 Gen 3 Mobile | 0.066 ms | 0 - 30 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Snapdragon® 8 Gen 1 Mobile | 0.1 ms | 0 - 32 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-8275 | 0.121 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.078 ms | 0 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® SA8650P | 0.22 ms | 0 - 20 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® SA8255P | 0.22 ms | 0 - 20 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® QCS8450 | 0.1 ms | 0 - 32 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-9075 | 0.144 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-X7181 | 0.151 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® Dragonwing™ Q-8750 | 0.048 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | float | Qualcomm® SA8295P | 0.212 ms | 0 - 20 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.046 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® X2 Elite | 0.128 ms | 0 - 0 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® X Elite | 0.158 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.059 ms | 0 - 30 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.097 ms | 0 - 31 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 0.338 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.12 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.07 ms | 0 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® SA8650P | 0.221 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® SA8255P | 0.221 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® QCS8450 | 0.097 ms | 0 - 31 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.13 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.158 ms | 1 - 1 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 0.129 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.058 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.046 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Qualcomm® SA8295P | 0.216 ms | 0 - 20 MB | NPU
+| canned_gesture_classifier | QNN_DLC | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.058 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.06 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Snapdragon® 8 Gen 3 Mobile | 0.06 ms | 0 - 31 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Snapdragon® 8 Gen 1 Mobile | 0.102 ms | 0 - 36 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® Dragonwing™ IQ-8275 | 0.151 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.075 ms | 0 - 28 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® SA8650P | 0.234 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® SA8255P | 0.234 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® QCS8450 | 0.102 ms | 0 - 36 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® Dragonwing™ IQ-9075 | 0.139 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® Dragonwing™ Q-8750 | 0.054 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | TFLITE | float | Qualcomm® SA8295P | 0.215 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.059 ms | 0 - 22 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.054 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.065 ms | 0 - 29 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.101 ms | 0 - 35 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 0.214 ms | 0 - 2 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.149 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.065 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® SA8650P | 0.226 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® SA8255P | 0.226 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® QCS8450 | 0.101 ms | 0 - 35 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.138 ms | 0 - 3 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 0.123 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.069 ms | 0 - 20 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.054 ms | 0 - 21 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Qualcomm® SA8295P | 0.212 ms | 0 - 19 MB | NPU
+| canned_gesture_classifier | TFLITE | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.069 ms | 0 - 20 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.263 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.335 ms | 0 - 31 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® X2 Elite | 0.314 ms | 2 - 2 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® X Elite | 0.55 ms | 7 - 7 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® 8 Gen 3 Mobile | 0.399 ms | 0 - 51 MB | NPU
+| hand_landmark_detector | ONNX | float | Snapdragon® 8 Gen 1 Mobile | 1.001 ms | 1 - 55 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-8275 | 0.979 ms | 0 - 4 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.551 ms | 1 - 3 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® QCS8450 | 1.001 ms | 1 - 55 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-9075 | 0.87 ms | 1 - 4 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-X7181 | 0.55 ms | 7 - 7 MB | NPU
+| hand_landmark_detector | ONNX | float | Qualcomm® Dragonwing™ Q-8750 | 0.335 ms | 0 - 31 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.154 ms | 0 - 40 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.177 ms | 0 - 44 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® X2 Elite | 0.148 ms | 1 - 1 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® X Elite | 0.265 ms | 0 - 0 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.2 ms | 0 - 58 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.383 ms | 0 - 62 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.25 ms | 0 - 3 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.435 ms | 0 - 4 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.277 ms | 0 - 6 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® QCS8450 | 0.383 ms | 0 - 62 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.409 ms | 0 - 3 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.265 ms | 0 - 0 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.502 ms | 0 - 41 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.27 ms | 0 - 40 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.177 ms | 0 - 44 MB | NPU
+| hand_landmark_detector | ONNX | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.27 ms | 0 - 40 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.234 ms | 1 - 31 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.292 ms | 0 - 29 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® X2 Elite | 0.376 ms | 1 - 1 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® X Elite | 0.58 ms | 1 - 1 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® 8 Gen 3 Mobile | 0.351 ms | 0 - 47 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Snapdragon® 8 Gen 1 Mobile | 0.855 ms | 0 - 55 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-8275 | 0.846 ms | 1 - 4 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.474 ms | 1 - 2 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® SA8650P | 0.866 ms | 1 - 29 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® SA8255P | 0.866 ms | 1 - 29 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® QCS8450 | 0.855 ms | 0 - 55 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-9075 | 0.752 ms | 1 - 3 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-X7181 | 0.58 ms | 1 - 1 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® Dragonwing™ Q-8750 | 0.292 ms | 0 - 29 MB | NPU
+| hand_landmark_detector | QNN_DLC | float | Qualcomm® SA8295P | 1.102 ms | 0 - 29 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.11 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.135 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® X2 Elite | 0.202 ms | 0 - 0 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® X Elite | 0.291 ms | 0 - 0 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.153 ms | 0 - 50 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.303 ms | 0 - 57 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.08 ms | 2 - 4 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.261 ms | 0 - 3 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.207 ms | 0 - 39 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® SA8650P | 0.383 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® SA8255P | 0.383 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® QCS8450 | 0.303 ms | 0 - 57 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.292 ms | 0 - 2 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.291 ms | 0 - 0 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.37 ms | 0 - 35 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.235 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.135 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Qualcomm® SA8295P | 0.518 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | QNN_DLC | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.235 ms | 0 - 34 MB | NPU
+| hand_landmark_detector | TFLITE | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.241 ms | 0 - 31 MB | NPU
+| hand_landmark_detector | TFLITE | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.298 ms | 0 - 37 MB | NPU
+| hand_landmark_detector | TFLITE | float | Snapdragon® 8 Gen 3 Mobile | 0.346 ms | 0 - 51 MB | NPU
+| hand_landmark_detector | TFLITE | float | Snapdragon® 8 Gen 1 Mobile | 0.879 ms | 0 - 55 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® Dragonwing™ IQ-8275 | 0.862 ms | 0 - 11 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.475 ms | 0 - 2 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® SA8650P | 0.884 ms | 0 - 32 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® SA8255P | 0.884 ms | 0 - 32 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® QCS8450 | 0.879 ms | 0 - 55 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® Dragonwing™ IQ-9075 | 0.758 ms | 0 - 11 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® Dragonwing™ Q-8750 | 0.298 ms | 0 - 37 MB | NPU
+| hand_landmark_detector | TFLITE | float | Qualcomm® SA8295P | 1.116 ms | 0 - 29 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.116 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.139 ms | 0 - 32 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.146 ms | 0 - 49 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.304 ms | 0 - 57 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 0.974 ms | 0 - 11 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.27 ms | 0 - 7 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.207 ms | 0 - 2 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® SA8650P | 0.404 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® SA8255P | 0.404 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® QCS8450 | 0.304 ms | 0 - 57 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.306 ms | 0 - 6 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 1.38 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.233 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.139 ms | 0 - 32 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Qualcomm® SA8295P | 0.537 ms | 0 - 33 MB | NPU
+| hand_landmark_detector | TFLITE | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.233 ms | 0 - 33 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.674 ms | 0 - 52 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.772 ms | 0 - 50 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® X2 Elite | 0.756 ms | 2 - 2 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® X Elite | 1.421 ms | 0 - 0 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® 8 Gen 3 Mobile | 0.982 ms | 0 - 75 MB | NPU
+| palm_detector | ONNX | float | Snapdragon® 8 Gen 1 Mobile | 2.025 ms | 1 - 71 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-8275 | 1.944 ms | 1 - 5 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 1.393 ms | 0 - 6 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® QCS8450 | 2.025 ms | 1 - 71 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-9075 | 1.892 ms | 1 - 4 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® Dragonwing™ IQ-X7181 | 1.421 ms | 0 - 0 MB | NPU
+| palm_detector | ONNX | float | Qualcomm® Dragonwing™ Q-8750 | 0.772 ms | 0 - 50 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.271 ms | 0 - 51 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.285 ms | 0 - 54 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® X2 Elite | 0.264 ms | 1 - 1 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® X Elite | 0.494 ms | 0 - 0 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.334 ms | 0 - 65 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.604 ms | 0 - 71 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.281 ms | 0 - 3 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.548 ms | 0 - 4 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.496 ms | 0 - 5 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® QCS8450 | 0.604 ms | 0 - 71 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.637 ms | 0 - 3 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.494 ms | 0 - 0 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 2.537 ms | 0 - 180 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.512 ms | 0 - 50 MB | NPU
+| palm_detector | ONNX | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.285 ms | 0 - 54 MB | NPU
+| palm_detector | ONNX | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.512 ms | 0 - 50 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.632 ms | 1 - 48 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.714 ms | 0 - 46 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® X2 Elite | 1.0 ms | 1 - 1 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® X Elite | 1.547 ms | 1 - 1 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® 8 Gen 3 Mobile | 0.912 ms | 0 - 68 MB | NPU
+| palm_detector | QNN_DLC | float | Snapdragon® 8 Gen 1 Mobile | 1.876 ms | 0 - 66 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-8275 | 1.77 ms | 1 - 5 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 1.306 ms | 1 - 12 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® SA8650P | 1.978 ms | 0 - 46 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® SA8255P | 1.978 ms | 0 - 46 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® QCS8450 | 1.876 ms | 0 - 66 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-9075 | 1.753 ms | 1 - 4 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® Dragonwing™ IQ-X7181 | 1.547 ms | 1 - 1 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® Dragonwing™ Q-8750 | 0.714 ms | 0 - 46 MB | NPU
+| palm_detector | QNN_DLC | float | Qualcomm® SA8295P | 2.229 ms | 0 - 40 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.257 ms | 0 - 42 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.267 ms | 0 - 40 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® X2 Elite | 0.379 ms | 0 - 0 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® X Elite | 0.577 ms | 0 - 0 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.305 ms | 0 - 56 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.556 ms | 0 - 63 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.301 ms | 0 - 3 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.542 ms | 0 - 3 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.455 ms | 0 - 2 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® SA8650P | 0.79 ms | 0 - 42 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® SA8255P | 0.79 ms | 0 - 42 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® QCS8450 | 0.556 ms | 0 - 63 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.566 ms | 0 - 3 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ IQ-X7181 | 0.577 ms | 0 - 0 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 2.386 ms | 0 - 48 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.461 ms | 0 - 41 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.267 ms | 0 - 40 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Qualcomm® SA8295P | 0.799 ms | 0 - 40 MB | NPU
+| palm_detector | QNN_DLC | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.461 ms | 0 - 41 MB | NPU
+| palm_detector | TFLITE | float | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.646 ms | 0 - 47 MB | NPU
+| palm_detector | TFLITE | float | Snapdragon® 8 Elite For Galaxy Mobile | 0.755 ms | 0 - 50 MB | NPU
+| palm_detector | TFLITE | float | Snapdragon® 8 Gen 3 Mobile | 0.951 ms | 0 - 65 MB | NPU
+| palm_detector | TFLITE | float | Snapdragon® 8 Gen 1 Mobile | 1.981 ms | 0 - 64 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® Dragonwing™ IQ-8275 | 1.815 ms | 0 - 9 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 1.36 ms | 0 - 4 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® SA8650P | 2.078 ms | 0 - 46 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® SA8255P | 2.078 ms | 0 - 46 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® QCS8450 | 1.981 ms | 0 - 64 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® Dragonwing™ IQ-9075 | 1.848 ms | 0 - 8 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® Dragonwing™ Q-8750 | 0.755 ms | 0 - 50 MB | NPU
+| palm_detector | TFLITE | float | Qualcomm® SA8295P | 2.354 ms | 0 - 38 MB | NPU
+| palm_detector | TFLITE | w8a8 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 0.261 ms | 0 - 40 MB | NPU
+| palm_detector | TFLITE | w8a8 | Snapdragon® 8 Elite For Galaxy Mobile | 0.266 ms | 0 - 40 MB | NPU
+| palm_detector | TFLITE | w8a8 | Snapdragon® 8 Gen 3 Mobile | 0.311 ms | 0 - 54 MB | NPU
+| palm_detector | TFLITE | w8a8 | Snapdragon® 8 Gen 1 Mobile | 0.561 ms | 0 - 61 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS6490 | 1.148 ms | 0 - 6 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-8275 | 0.537 ms | 0 - 6 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ QCS8550 (Proxy) | 0.46 ms | 0 - 42 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® SA8650P | 0.818 ms | 0 - 39 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® SA8255P | 0.818 ms | 0 - 39 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® QCS8450 | 0.561 ms | 0 - 61 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ IQ-9075 | 0.594 ms | 0 - 5 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-6690 | 2.426 ms | 0 - 46 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-7790 | 0.464 ms | 0 - 38 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® Dragonwing™ Q-8750 | 0.266 ms | 0 - 40 MB | NPU
+| palm_detector | TFLITE | w8a8 | Qualcomm® SA8295P | 0.817 ms | 0 - 38 MB | NPU
+| palm_detector | TFLITE | w8a8 | Snapdragon® 7 Gen 4 Mobile | 0.464 ms | 0 - 38 MB | NPU
+
+## License
+* The license for the original implementation of MediaPipe-Hand-Gesture-Recognition can be found
+  [here](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE).
+
+## References
+* [MediaPipe Hands: On-device Real-time Hand Tracking](https://arxiv.org/abs/2006.10214)
+* [Source Model Implementation](https://github.com/google-ai-edge/mediapipe)
+
+## Community
+* Join [our AI Hub Slack community](https://aihub.qualcomm.com/community/slack) to collaborate, post questions and learn more about on-device AI.
+* For questions or feedback please [reach out to us](mailto:ai-hub-support@qti.qualcomm.com).

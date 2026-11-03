@@ -1,0 +1,408 @@
+{
+  "classification": {
+    "status": "ONNX_EXPORT_VALIDATED",
+    "input": {
+      "name": "input",
+      "shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "dtype": "<class 'numpy.uint8'>",
+      "quantization": [
+        0.0078125,
+        128
+      ]
+    },
+    "outputs": [
+      {
+        "name": "MobilenetV1/Predictions/Reshape_1",
+        "shape": [
+          1,
+          1001
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.00390625,
+          0
+        ]
+      }
+    ],
+    "source_model": "mobilenet_v1.tflite",
+    "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "onnx": "models/classification/model.onnx",
+    "onnx_sha256": "d1d9feb53de34ce54a35fb46cdd9deffc988cd40c6fb14a043249b22d7a1538e",
+    "axis_metadata_changes": [
+      "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_Fold_bias_dequant",
+      "MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_Fold_bias_dequant",
+      "MobilenetV1/Logits/Conv2d_1c_1x1/Conv2D_bias_dequant"
+    ],
+    "reference_validation": [
+      {
+        "image": "training_v2\\media\\grace_hopper.jpg",
+        "outputs": [
+          {
+            "name": "MobilenetV1/Predictions/Reshape_1",
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "dtype": "uint8"
+          }
+        ]
+      },
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "MobilenetV1/Predictions/Reshape_1",
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "dtype": "uint8"
+          }
+        ]
+      }
+    ],
+    "calibration_samples": 5,
+    "calibration_list": "calibration/classification/input_list.txt",
+    "scope": "Reference-image conversion checks; not dataset accuracy."
+  },
+  "detection": {
+    "status": "ONNX_EXPORT_VALIDATED",
+    "input": {
+      "name": "normalized_input_image_tensor",
+      "shape": [
+        1,
+        300,
+        300,
+        3
+      ],
+      "dtype": "<class 'numpy.uint8'>",
+      "quantization": [
+        0.0078125,
+        128
+      ]
+    },
+    "outputs": [
+      {
+        "name": "Squeeze",
+        "shape": [
+          1,
+          1917,
+          4
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.07902787625789642,
+          191
+        ]
+      },
+      {
+        "name": "convert_scores",
+        "shape": [
+          1,
+          1917,
+          91
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.00390625,
+          0
+        ]
+      }
+    ],
+    "source_model": "ssd_mobilenet_v1.tflite",
+    "source_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+    "onnx": "models/detection_requant/model.onnx",
+    "onnx_sha256": "36a0ccb45d2b78627a4a8c5ff338b1b79aee45a9a96e4ce094beae1f1688de3c",
+    "dequantized_before_fresh_calibration": true,
+    "axis_metadata_changes": [],
+    "reference_validation": [
+      {
+        "image": "training_v2\\media\\grace_hopper.jpg",
+        "outputs": [
+          {
+            "name": "Squeeze",
+            "max_abs_error": 0.6378154754638672,
+            "mean_abs_error": 0.035895455265875585,
+            "dtype": "float32"
+          },
+          {
+            "name": "convert_scores",
+            "max_abs_error": 0.015125185251235962,
+            "mean_abs_error": 0.001047835076277637,
+            "dtype": "float32"
+          }
+        ]
+      },
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "Squeeze",
+            "max_abs_error": 0.7159641981124878,
+            "mean_abs_error": 0.03909977168975768,
+            "dtype": "float32"
+          },
+          {
+            "name": "convert_scores",
+            "max_abs_error": 0.02556133270263672,
+            "mean_abs_error": 0.0010864388369588379,
+            "dtype": "float32"
+          }
+        ]
+      }
+    ],
+    "calibration_samples": 5,
+    "calibration_list": "calibration/detection/input_list.txt",
+    "scope": "Reference-image conversion checks; not dataset accuracy. SSD decoding/NMS runs on host after pre-NMS CNN outputs.",
+    "input_mode": "pixels_float32"
+  },
+  "pose": {
+    "status": "ONNX_EXPORT_VALIDATED",
+    "input": {
+      "name": "sub_2",
+      "shape": [
+        1,
+        353,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    "outputs": [
+      {
+        "name": "float_heatmaps",
+        "shape": [
+          1,
+          23,
+          17,
+          17
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "name": "float_short_offsets",
+        "shape": [
+          1,
+          23,
+          17,
+          34
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "source_model": "posenet.tflite",
+    "source_sha256": "a78ecc5ca6b2cb5259628a8c5c9efd9dd76eca388bdc2d7f08359a6eb0a0fc86",
+    "onnx": "models/pose/model.onnx",
+    "onnx_sha256": "f74aed7f6144f8f3f03892da192d8a7eb595b9986885f4063aad9257855fb354",
+    "axis_metadata_changes": [],
+    "reference_validation": [
+      {
+        "image": "training_v2\\media\\grace_hopper.jpg",
+        "outputs": [
+          {
+            "name": "float_heatmaps",
+            "max_abs_error": 5.054473876953125e-05
+          },
+          {
+            "name": "float_short_offsets",
+            "max_abs_error": 0.00051116943359375
+          }
+        ]
+      },
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "float_heatmaps",
+            "max_abs_error": 5.91278076171875e-05
+          },
+          {
+            "name": "float_short_offsets",
+            "max_abs_error": 0.00054931640625
+          }
+        ]
+      }
+    ],
+    "calibration_samples": 5,
+    "calibration_list": "calibration/pose/input_list.txt",
+    "scope": "Reference-image conversion checks; not dataset accuracy."
+  },
+  "gesture": {
+    "status": "ONNX_EXPORT_VALIDATED",
+    "input": {
+      "name": "input_1",
+      "shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    "outputs": [
+      {
+        "name": "Identity",
+        "shape": [
+          1,
+          63
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      },
+      {
+        "name": "Identity_1",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "source_model": "hand_landmark_lite.tflite",
+    "source_sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48",
+    "onnx": "models/gesture/model.onnx",
+    "onnx_sha256": "1fc13ea2a32a2da5ff8c9004cfcc4d36e4fab5f545da0cd51d7edcb781dbf8dd",
+    "axis_metadata_changes": [],
+    "reference_validation": [
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "Identity",
+            "max_abs_error": 6.103515625e-05
+          },
+          {
+            "name": "Identity_1",
+            "max_abs_error": 0.0
+          }
+        ]
+      },
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "Identity",
+            "max_abs_error": 6.103515625e-05
+          },
+          {
+            "name": "Identity_1",
+            "max_abs_error": 0.0
+          }
+        ]
+      }
+    ],
+    "calibration_samples": 9,
+    "calibration_list": "calibration/gesture/input_list.txt",
+    "scope": "Reference-image conversion checks; not dataset accuracy."
+  },
+  "segmentation": {
+    "status": "ONNX_EXPORT_VALIDATED",
+    "input": {
+      "name": "sub_7",
+      "shape": [
+        1,
+        257,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    "outputs": [
+      {
+        "name": "ResizeBilinear_3",
+        "shape": [
+          1,
+          257,
+          257,
+          21
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "source_model": "deeplabv3.tflite",
+    "source_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+    "onnx": "models/segmentation/model.onnx",
+    "onnx_sha256": "3dfde851c30887f79c8690b6c65c1371f38cf9e72bb44a51e4c97588974da7e6",
+    "axis_metadata_changes": [],
+    "reference_validation": [
+      {
+        "image": "training_v2\\media\\grace_hopper.jpg",
+        "outputs": [
+          {
+            "name": "ResizeBilinear_3",
+            "max_abs_error": 3.0517578125e-05
+          }
+        ]
+      },
+      {
+        "image": "training_v2\\media\\right_hands.jpg",
+        "outputs": [
+          {
+            "name": "ResizeBilinear_3",
+            "max_abs_error": 3.24249267578125e-05
+          }
+        ]
+      }
+    ],
+    "calibration_samples": 5,
+    "calibration_list": "calibration/segmentation/input_list.txt",
+    "scope": "Reference-image conversion checks; not dataset accuracy."
+  }
+}

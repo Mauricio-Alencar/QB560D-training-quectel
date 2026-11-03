@@ -1,0 +1,17 @@
+[Unit]
+Description=QB560D isolated Docker training daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh /opt/qb560d-docker-demo/target/daemon.sh
+Delegate=yes
+KillMode=process
+TimeoutStartSec=90
+TimeoutStopSec=90
+Restart=no
+LimitNOFILE=1048576
+TasksMax=infinity
+
+[Install]
+WantedBy=multi-user.target

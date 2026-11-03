@@ -1,0 +1,17 @@
+{
+  "command": "python3 -c 'import datetime,json,os,platform,shutil,subprocess\ntools=['\"'\"'sh'\"'\"','\"'\"'base64'\"'\"','\"'\"'python3'\"'\"','\"'\"'tar'\"'\"','\"'\"'gzip'\"'\"','\"'\"'sha256sum'\"'\"','\"'\"'systemctl'\"'\"','\"'\"'mount'\"'\"','\"'\"'iptables'\"'\"']\nresult={'\"'\"'uid'\"'\"':os.getuid(),'\"'\"'architecture'\"'\"':platform.machine(),'\"'\"'kernel'\"'\"':platform.release(),'\"'\"'kernel_build'\"'\"':platform.version(),'\"'\"'glibc'\"'\"':subprocess.check_output(['\"'\"'getconf'\"'\"','\"'\"'GNU_LIBC_VERSION'\"'\"'],text=True).strip(),'\"'\"'os_release'\"'\"':open('\"'\"'/etc/os-release'\"'\"').read(),'\"'\"'target_utc'\"'\"':datetime.datetime.now(datetime.timezone.utc).isoformat(),'\"'\"'free_bytes_opt'\"'\"':shutil.disk_usage('\"'\"'/opt'\"'\"').free,'\"'\"'tools'\"'\"':{name:shutil.which(name) for name in tools},'\"'\"'docker_demo_already_present'\"'\"':os.path.isdir('\"'\"'/opt/qb560d-docker-demo'\"'\"')}\nprint(json.dumps(result))\nassert result['\"'\"'uid'\"'\"']==0 and result['\"'\"'architecture'\"'\"']=='\"'\"'aarch64'\"'\"','\"'\"'Root on an ARM64 target is required'\"'\"'\nassert result['\"'\"'free_bytes_opt'\"'\"']>=2*1024**3,'\"'\"'Keep at least 2 GiB free on /opt for the classroom package'\"'\"'\nassert all(result['\"'\"'tools'\"'\"'].values()),'\"'\"'Required BSP tool missing'\"'\"'\nassert '\"'\"'VERSION_ID=\"20.04\"'\"'\"' in result['\"'\"'os_release'\"'\"'],'\"'\"'This package was validated with Ubuntu20.04'\"'\"'\n'",
+  "exit_code": 0,
+  "timed_out": false,
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "1"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "host_utc": "2026-11-01T16:02:18.251029+00:00"
+}

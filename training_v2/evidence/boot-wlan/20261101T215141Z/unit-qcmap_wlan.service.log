@@ -1,0 +1,25 @@
+Result=exit-code
+ExecMainStatus=1
+Requires=system.slice
+Wants=
+Before=eth_config.service
+After=system.slice systemd-journald.socket
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/qcmap_wlan.service
+# /lib/systemd/system/qcmap_wlan.service
+[Unit]
+Description= WLAN service
+SourcePath=/etc/initscripts/start_qcmap_wlan_le
+DefaultDependencies=no
+
+[Service]
+Restart=no
+RemainAfterExit=yes
+#ExecStartPre=+/sbin/mount-copybind /systemrw/misc/wifi /etc/misc/wifi
+ExecStart=/etc/initscripts/start_qcmap_wlan_le start
+ExecStop=/etc/initscripts/start_qcmap_wlan_le stop
+Nice=-20
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:43 CST. --
+-- No entries --
+

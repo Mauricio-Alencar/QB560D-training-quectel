@@ -1,0 +1,441 @@
+before: exit 0
+owned-directory: exit 0
+conditions-before: exit 0
+runtime-version: exit 0
+model-status-classification: exit 0
+model-hash-classification: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\classification\input.png: 1 file pushed, 0 skipped. 12.5 MB/s (81580 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\classification\input.raw: 1 file pushed, 0 skipped. 8.8 MB/s (602112 bytes in 0.066s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\classification\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.008s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s1_cpu/: 3 files pulled, 0 skipped. 5.8 MB/s (421164 bytes in 0.069s)
+classification 1 cpu PASS 26.14595500017458
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s1_gpu/: 3 files pulled, 0 skipped. 5.4 MB/s (421526 bytes in 0.074s)
+classification 1 gpu PASS 10.491771499800961
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s1_htp/: 5 files pulled, 0 skipped. 1.1 MB/s (20833 bytes in 0.019s)
+classification 1 htp PASS 1.5579999999999998
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s2_gpu/: 3 files pulled, 0 skipped. 5.1 MB/s (421525 bytes in 0.079s)
+classification 2 gpu PASS 10.15413249933772
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s2_htp/: 5 files pulled, 0 skipped. 1.1 MB/s (20833 bytes in 0.019s)
+classification 2 htp PASS 1.5635
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s2_cpu/: 3 files pulled, 0 skipped. 5.4 MB/s (421163 bytes in 0.074s)
+classification 2 cpu PASS 26.53799000017898
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s3_htp/: 5 files pulled, 0 skipped. 1.0 MB/s (20833 bytes in 0.019s)
+classification 3 htp PASS 1.5495
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s3_cpu/: 3 files pulled, 0 skipped. 5.1 MB/s (421164 bytes in 0.079s)
+classification 3 cpu PASS 26.505241500672128
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/b652f0388192043/s3_gpu/: 3 files pulled, 0 skipped. 4.8 MB/s (421526 bytes in 0.084s)
+classification 3 gpu PASS 10.419066499707696
+conditions-after: exit 0
+model-status-detection: exit 0
+model-hash-detection: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\detection\input.png: 1 file pushed, 0 skipped. 24.7 MB/s (141134 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\detection\input.raw: 1 file pushed, 0 skipped. 7.4 MB/s (1080000 bytes in 0.139s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\detection\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (85 bytes in 0.006s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s1_cpu/: 3 files pulled, 0 skipped. 5.6 MB/s (567728 bytes in 0.096s)
+detection 1 cpu PASS 35.91620200040779
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s1_gpu/: 3 files pulled, 0 skipped. 5.3 MB/s (567989 bytes in 0.102s)
+detection 1 gpu PASS 23.64726950054319
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s1_htp/: 6 files pulled, 0 skipped. 5.4 MB/s (745407 bytes in 0.131s)
+detection 1 htp PASS 3.088
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s2_gpu/: 3 files pulled, 0 skipped. 5.3 MB/s (567990 bytes in 0.102s)
+detection 2 gpu PASS 23.644806499760307
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s2_htp/: 6 files pulled, 0 skipped. 5.2 MB/s (745407 bytes in 0.136s)
+detection 2 htp PASS 3.642
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s2_cpu/: 3 files pulled, 0 skipped. 5.4 MB/s (567729 bytes in 0.100s)
+detection 2 cpu PASS 35.79781799999182
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s3_htp/: 6 files pulled, 0 skipped. 5.1 MB/s (745407 bytes in 0.140s)
+detection 3 htp PASS 3.049
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s3_cpu/: 3 files pulled, 0 skipped. 5.5 MB/s (567730 bytes in 0.098s)
+detection 3 cpu PASS 35.695257999577734
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/baa5c2ca5acfe47/s3_gpu/: 3 files pulled, 0 skipped. 5.5 MB/s (567989 bytes in 0.099s)
+detection 3 gpu PASS 22.94676199926471
+conditions-after: exit 0
+model-status-pose: exit 0
+model-hash-pose: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\pose\input.png: 1 file pushed, 0 skipped. 23.2 MB/s (143221 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\pose\input.raw: 1 file pushed, 0 skipped. 7.0 MB/s (1088652 bytes in 0.149s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\pose\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.007s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s1_cpu/: 3 files pulled, 0 skipped. 4.5 MB/s (634595 bytes in 0.133s)
+pose 1 cpu PASS 137.88308649964165
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s1_gpu/: 3 files pulled, 0 skipped. 5.5 MB/s (634664 bytes in 0.111s)
+pose 1 gpu PASS 15.36659649991634
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s1_htp/: 6 files pulled, 0 skipped. 2.8 MB/s (96697 bytes in 0.033s)
+pose 1 htp PASS 2.214
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s2_gpu/: 3 files pulled, 0 skipped. 5.2 MB/s (634664 bytes in 0.115s)
+pose 2 gpu PASS 15.006480499323516
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s2_htp/: 6 files pulled, 0 skipped. 2.5 MB/s (96697 bytes in 0.037s)
+pose 2 htp PASS 2.249
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s2_cpu/: 3 files pulled, 0 skipped. 5.2 MB/s (634594 bytes in 0.116s)
+pose 2 cpu PASS 138.5677164998924
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s3_htp/: 6 files pulled, 0 skipped. 2.0 MB/s (96697 bytes in 0.046s)
+pose 3 htp PASS 2.3335
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s3_cpu/: 3 files pulled, 0 skipped. 6.5 MB/s (634595 bytes in 0.094s)
+pose 3 cpu PASS 139.07949699932942
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bd1502ebc32914c/s3_gpu/: 3 files pulled, 0 skipped. 6.9 MB/s (634664 bytes in 0.088s)
+pose 3 gpu PASS 15.48376449954958
+conditions-after: exit 0
+model-status-gesture: exit 0
+model-hash-gesture: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\gesture\input.png: 1 file pushed, 0 skipped. 7.8 MB/s (42249 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\gesture\input.raw: 1 file pushed, 0 skipped. 8.7 MB/s (602112 bytes in 0.066s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\gesture\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (63 bytes in 0.006s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s1_cpu/: 3 files pulled, 0 skipped. 5.6 MB/s (283865 bytes in 0.048s)
+gesture 1 cpu PASS 55.96695999975054
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s1_gpu/: 3 files pulled, 0 skipped. 5.2 MB/s (283976 bytes in 0.052s)
+gesture 1 gpu PASS 7.94472950110503
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s1_htp/: 6 files pulled, 0 skipped. 0.8 MB/s (17166 bytes in 0.021s)
+gesture 1 htp PASS 1.7925
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s2_gpu/: 3 files pulled, 0 skipped. 5.9 MB/s (283977 bytes in 0.046s)
+gesture 2 gpu PASS 7.840655999643786
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s2_htp/: 6 files pulled, 0 skipped. 0.8 MB/s (17166 bytes in 0.020s)
+gesture 2 htp PASS 1.7725
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s2_cpu/: 3 files pulled, 0 skipped. 3.0 MB/s (283867 bytes in 0.090s)
+gesture 2 cpu PASS 58.559228000376606
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s3_htp/: 6 files pulled, 0 skipped. 0.8 MB/s (17166 bytes in 0.021s)
+gesture 3 htp PASS 1.9925000000000002
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s3_cpu/: 3 files pulled, 0 skipped. 6.1 MB/s (283867 bytes in 0.044s)
+gesture 3 cpu PASS 56.998343499799375
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bcd0df7d8428246/s3_gpu/: 3 files pulled, 0 skipped. 5.3 MB/s (283977 bytes in 0.052s)
+gesture 3 gpu PASS 7.910206999440561
+conditions-after: exit 0
+model-status-segmentation: exit 0
+model-hash-segmentation: exit 0
+run-directory: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\segmentation\input.png: 1 file pushed, 0 skipped. 17.1 MB/s (105776 bytes in 0.006s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\segmentation\input.raw: 1 file pushed, 0 skipped. 8.0 MB/s (792588 bytes in 0.094s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\evidence\reorganization-validation\20261102\benchmark\segmentation\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (61 bytes in 0.005s)
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s1_cpu/: 3 files pulled, 0 skipped. 5.4 MB/s (5450212 bytes in 0.954s)
+segmentation 1 cpu PASS 178.18239950065617
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s1_gpu/: 3 files pulled, 0 skipped. 6.3 MB/s (5447841 bytes in 0.821s)
+segmentation 1 gpu PASS 20.88095150065783
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s1_htp/: 5 files pulled, 0 skipped. 6.1 MB/s (5564935 bytes in 0.867s)
+segmentation 1 htp PASS 4.6295
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s2_gpu/: 3 files pulled, 0 skipped. 6.4 MB/s (5447842 bytes in 0.808s)
+segmentation 2 gpu PASS 20.825304999561922
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s2_htp/: 5 files pulled, 0 skipped. 4.0 MB/s (5564936 bytes in 1.326s)
+segmentation 2 htp PASS 4.6434999999999995
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s2_cpu/: 3 files pulled, 0 skipped. 6.3 MB/s (5450213 bytes in 0.819s)
+segmentation 2 cpu PASS 176.28645149943623
+inference: exit 0
+profile: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s3_htp/: 5 files pulled, 0 skipped. 6.4 MB/s (5564935 bytes in 0.832s)
+segmentation 3 htp PASS 4.6075
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s3_cpu/: 3 files pulled, 0 skipped. 6.2 MB/s (5450212 bytes in 0.836s)
+segmentation 3 cpu PASS 179.02633950052405
+inference: exit 0
+/opt/qb560d-ai-htp251/runs/bb26fc1623e7041/s3_gpu/: 3 files pulled, 0 skipped. 6.2 MB/s (5447840 bytes in 0.843s)
+segmentation 3 gpu PASS 21.59250849945238
+conditions-after: exit 0
+after: exit 0
+{
+  "status": "PASS_COMPARATIVE_TIMING",
+  "table": [
+    {
+      "task": "classification",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 26.505241500672128,
+          "session_medians_ms": [
+            26.14595500017458,
+            26.53799000017898,
+            26.505241500672128
+          ],
+          "session_p95_ms": [
+            29.772370800674253,
+            32.37512839914415,
+            29.73029154973119
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 10.419066499707696,
+          "session_medians_ms": [
+            10.491771499800961,
+            10.15413249933772,
+            10.419066499707696
+          ],
+          "session_p95_ms": [
+            10.978337149481376,
+            10.715715349124366,
+            10.711513951082452
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.5579999999999998,
+          "session_medians_ms": [
+            1.5579999999999998,
+            1.5635,
+            1.5495
+          ],
+          "session_p95_ms": [
+            1.6272,
+            2.3853,
+            1.6181
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 17.01235012880111,
+      "latency_ratio_gpu_over_htp": 6.687462451673747
+    },
+    {
+      "task": "detection",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 35.79781799999182,
+          "session_medians_ms": [
+            35.91620200040779,
+            35.79781799999182,
+            35.695257999577734
+          ],
+          "session_p95_ms": [
+            37.3936284496267,
+            36.83911260040986,
+            36.78387619993373
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 23.644806499760307,
+          "session_medians_ms": [
+            23.64726950054319,
+            23.644806499760307,
+            22.94676199926471
+          ],
+          "session_p95_ms": [
+            24.514456099404924,
+            24.064457700114872,
+            23.298889299439907
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 3.088,
+          "session_medians_ms": [
+            3.088,
+            3.642,
+            3.049
+          ],
+          "session_p95_ms": [
+            3.1593999999999998,
+            3.7381,
+            3.1094
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 11.592557642484397,
+      "latency_ratio_gpu_over_htp": 7.656996923497508
+    },
+    {
+      "task": "pose",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 138.5677164998924,
+          "session_medians_ms": [
+            137.88308649964165,
+            138.5677164998924,
+            139.07949699932942
+          ],
+          "session_p95_ms": [
+            140.96911140004522,
+            140.13307524946867,
+            141.49070800003756
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 15.36659649991634,
+          "session_medians_ms": [
+            15.36659649991634,
+            15.006480499323516,
+            15.48376449954958
+          ],
+          "session_p95_ms": [
+            15.939749450444651,
+            15.84318409950356,
+            16.473418250279792
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 2.249,
+          "session_medians_ms": [
+            2.214,
+            2.249,
+            2.3335
+          ],
+          "session_p95_ms": [
+            2.2857499999999997,
+            2.8668499999999986,
+            2.70055
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 61.61303534899618,
+      "latency_ratio_gpu_over_htp": 6.832635171149995
+    },
+    {
+      "task": "gesture",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 56.998343499799375,
+          "session_medians_ms": [
+            55.96695999975054,
+            58.559228000376606,
+            56.998343499799375
+          ],
+          "session_p95_ms": [
+            58.1608905491521,
+            63.37658599886708,
+            61.03282295061945
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 7.910206999440561,
+          "session_medians_ms": [
+            7.94472950110503,
+            7.840655999643786,
+            7.910206999440561
+          ],
+          "session_p95_ms": [
+            8.340728199800651,
+            8.120538000093802,
+            8.203420499648928
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 1.7925,
+          "session_medians_ms": [
+            1.7925,
+            1.7725,
+            1.9925000000000002
+          ],
+          "session_p95_ms": [
+            1.8343,
+            1.83365,
+            2.445849999999999
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 31.79823905149198,
+      "latency_ratio_gpu_over_htp": 4.412946722142572
+    },
+    {
+      "task": "segmentation",
+      "backends": {
+        "cpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 178.18239950065617,
+          "session_medians_ms": [
+            178.18239950065617,
+            176.28645149943623,
+            179.02633950052405
+          ],
+          "session_p95_ms": [
+            181.9403627997417,
+            182.30212685039078,
+            183.1473092500346
+          ]
+        },
+        "gpu": {
+          "passed": true,
+          "median_of_session_medians_ms": 20.88095150065783,
+          "session_medians_ms": [
+            20.88095150065783,
+            20.825304999561922,
+            21.59250849945238
+          ],
+          "session_p95_ms": [
+            21.360735099824524,
+            21.302057601224078,
+            22.16993755009753
+          ]
+        },
+        "htp": {
+          "passed": true,
+          "median_of_session_medians_ms": 4.6295,
+          "session_medians_ms": [
+            4.6295,
+            4.6434999999999995,
+            4.6075
+          ],
+          "session_p95_ms": [
+            4.81305,
+            4.8607,
+            4.81445
+          ]
+        }
+      },
+      "latency_ratio_cpu_over_htp": 38.48847596946888,
+      "latency_ratio_gpu_over_htp": 4.51041181567293
+    }
+  ],
+  "evidence": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\evidence\\reorganization-validation\\20261102\\benchmark"
+}

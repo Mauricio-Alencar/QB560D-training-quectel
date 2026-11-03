@@ -1,0 +1,9 @@
+{
+  "package": "qb560d-htp-controls-target-v1",
+  "archive": "offline/htp-controls-target.tar.gz",
+  "sha256": "bfd81d4c1083c14991b0c92a4b2ccb45a883c2d47ffeeacdb5ce614bc0a8f223",
+  "bytes": 9139019,
+  "files": 40,
+  "cases": 11,
+  "runtime_version": "2.51.40.260930"
+}

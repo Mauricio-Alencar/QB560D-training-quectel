@@ -1,0 +1,557 @@
+{
+  "schema": 1,
+  "at_target_utc": "2024-06-17T20:58:22.202857+00:00",
+  "identity": {
+    "uid": 0,
+    "user": {
+      "exit_code": 0,
+      "output": "uid=0(root) gid=0(root) groups=0(root)\n",
+      "truncated": false
+    },
+    "hostname": "qcs6490-odk",
+    "architecture": "aarch64",
+    "kernel": "5.4.219-perf",
+    "uname": {
+      "exit_code": 0,
+      "output": "Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux\n",
+      "truncated": false
+    },
+    "glibc": [
+      "glibc",
+      "2.31"
+    ],
+    "python": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]",
+    "boot_id": "516a5353-3ce9-4d8e-9839-4aaab8f9d99d",
+    "soc_model": "Qualcomm Technologies, Inc. Yupik IOT IDP + PM7250B"
+  },
+  "os_release": {
+    "NAME": "Ubuntu",
+    "VERSION": "20.04.3 LTS (Focal Fossa)",
+    "ID": "ubuntu",
+    "ID_LIKE": "debian",
+    "PRETTY_NAME": "Ubuntu 20.04.3 LTS",
+    "VERSION_ID": "20.04",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "VERSION_CODENAME": "focal",
+    "UBUNTU_CODENAME": "focal"
+  },
+  "os_release_raw": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal",
+  "lsb_release_raw": "DISTRIB_ID=Ubuntu\nDISTRIB_RELEASE=20.04\nDISTRIB_CODENAME=focal\nDISTRIB_DESCRIPTION=\"Ubuntu 20.04.3 LTS\"",
+  "build_files": {
+    "/etc/build_version": "mainversion=QDPA_Ubuntu20.04.003.51.303\nsubversion=V01",
+    "/etc/build_version_wf": "mainversion=SG560DWFR60A01_BP01.001_Ubuntu20.04.3\nsubversion=V01",
+    "/etc/debian_version": "bullseye/sid",
+    "/etc/version": "LE.UM.1.3-14400-SDX20",
+    "/etc/lsb-release": "DISTRIB_ID=Ubuntu\nDISTRIB_RELEASE=20.04\nDISTRIB_CODENAME=focal\nDISTRIB_DESCRIPTION=\"Ubuntu 20.04.3 LTS\"",
+    "/etc/os-release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal",
+    "/etc/build.prop": "persist.vendor.audio.fluence.voicecall=true\npersist.vendor.audio.fluence.voicerec=false\npersist.vendor.audio.fluence.speaker=true\npersist.vendor.audio.fluence.audiorec=false\npersist.vendor.audio.qas.enabled=true\npersist.vendor.audio.speaker.prot.enable=true\npersist.vendor.audio.spv4.enable=true\npersist.vendor.audio.avs.afe_api_version=2\npersist.display.launch.weston.at.bootup=true\npersist.vendor.sensors.enable.tdkMezzCard=false\npersist.vendor.sensors.enable.NavMezzCard=false\npersist.vendor.sensors.enable.NavMezzCard_Rev2=false\npersist.vendor.audio.ambisonic.auto.profile=false\npersist.vendor.audio.ambisonic.capture=false\npersist.vendor.audio.apptype.multirec.enabled=false\npersist.vendor.audio.bcl.enabled=true\npersist.vendor.audio.fluence.tmic.enabled=false\npersist.vendor.audio.fluence.voicecomm=true\npersist.vendor.audio.ha_proxy.enabled=true\npersist.vendor.audio.ras.enabled=false\npersist.vendor.audio.vbat.enabled=true\npersist.vendor.audio.voicecall.speaker.stereo=true\npersist.vendor.service.bt.adv_audio_mask=7\npersist.vendor.audio.spv3.enable=true\npersist.radio.adb_log_on=0\npersist.radio.ril_payload_on=0\npersist.radio.multisim.config=dsds\npersist.radio.msim.stackid_1=1\npersist.radio.msim.stackid_0=0\npersist.radio.stack_id_1=1\npersist.radio.stack_id_0=0\npersist.radio.apm_sim_not_pwdn=1\npersist.radio.sib16_support=1\npersist.radio.eons.enabled=false\npersist.radio.mt_sms_ack=20\npersist.radio.sglte_target=0"
+  },
+  "tools": {
+    "sh": {
+      "path": "/usr/bin/sh"
+    },
+    "bash": {
+      "path": "/usr/bin/bash"
+    },
+    "base64": {
+      "path": "/usr/bin/base64"
+    },
+    "timeout": {
+      "path": "/usr/bin/timeout"
+    },
+    "sha256sum": {
+      "path": "/usr/bin/sha256sum"
+    },
+    "findmnt": {
+      "path": "/usr/bin/findmnt"
+    },
+    "dpkg-deb": {
+      "path": "/usr/bin/dpkg-deb"
+    },
+    "logger": {
+      "path": "/usr/bin/logger"
+    },
+    "journalctl": {
+      "path": "/usr/bin/journalctl"
+    },
+    "ping": {
+      "path": "/usr/bin/ping"
+    },
+    "ldconfig": {
+      "path": "/usr/sbin/ldconfig"
+    },
+    "lsb_release": {
+      "path": "/usr/bin/lsb_release"
+    },
+    "pip3": {
+      "path": null
+    },
+    "python3": {
+      "path": "/usr/bin/python3",
+      "version": {
+        "exit_code": 0,
+        "output": "Python 3.8.10\n",
+        "truncated": false
+      }
+    },
+    "gcc": {
+      "path": "/usr/bin/gcc",
+      "version": {
+        "exit_code": 0,
+        "output": "gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0\nCopyright (C) 2019 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+        "truncated": false
+      }
+    },
+    "g++": {
+      "path": "/usr/bin/g++",
+      "version": {
+        "exit_code": 0,
+        "output": "g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0\nCopyright (C) 2019 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+        "truncated": false
+      }
+    },
+    "make": {
+      "path": "/usr/bin/make",
+      "version": {
+        "exit_code": 0,
+        "output": "GNU Make 4.2.1\nBuilt for aarch64-unknown-linux-gnu\nCopyright (C) 1988-2016 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n",
+        "truncated": false
+      }
+    },
+    "cmake": {
+      "path": null
+    },
+    "curl": {
+      "path": "/usr/bin/curl",
+      "version": {
+        "exit_code": 0,
+        "output": "curl 7.68.0 (aarch64-unknown-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3\nRelease-Date: 2020-01-08\nProtocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp \nFeatures: AsynchDNS brotli GSS-API HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets\n",
+        "truncated": false
+      }
+    },
+    "wget": {
+      "path": "/usr/bin/wget"
+    },
+    "git": {
+      "path": null
+    },
+    "iperf3": {
+      "path": null
+    },
+    "docker": {
+      "path": null
+    },
+    "dockerd": {
+      "path": null
+    },
+    "containerd": {
+      "path": null
+    },
+    "runc": {
+      "path": null
+    },
+    "qnn-net-run": {
+      "path": null
+    },
+    "snpe-net-run": {
+      "path": null
+    },
+    "qnn-platform-validator": {
+      "path": null
+    },
+    "qnn-profile-viewer": {
+      "path": null
+    },
+    "systemctl": {
+      "path": "/usr/bin/systemctl",
+      "version": {
+        "exit_code": 0,
+        "output": "systemd 245 (245.4-4ubuntu3.24)\n+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid\n",
+        "truncated": false
+      }
+    },
+    "gst-launch-1.0": {
+      "path": "/usr/bin/gst-launch-1.0",
+      "version": {
+        "exit_code": 0,
+        "output": "gst-launch-1.0 version 1.16.3\nGStreamer 1.16.3\nhttps://launchpad.net/distros/ubuntu/+source/gstreamer1.0\n",
+        "truncated": false
+      }
+    },
+    "v4l2-ctl": {
+      "path": "/usr/bin/v4l2-ctl",
+      "version": {
+        "exit_code": 1,
+        "output": "/usr/bin/v4l2-ctl: unrecognized option '--version'\n\nGeneral/Common options:\n  --all              display all information available\n  -C, --get-ctrl <ctrl>[,<ctrl>...]\n                     get the value of the controls [VIDIOC_G_EXT_CTRLS]\n  -c, --set-ctrl <ctrl>=<val>[,<ctrl>=<val>...]\n                     set the value of the controls [VIDIOC_S_EXT_CTRLS]\n  -D, --info         show driver info [VIDIOC_QUERYCAP]\n  -d, --device <dev> use device <dev> instead of /dev/video0\n                     if <dev> starts with a digit, then /dev/video<dev> is used\n                     Otherwise if -z was specified earlier, then <dev> is the entity name\n                     or interface ID (if prefixed with 0x) as found in the topology of the\n                     media device with the bus info string as specified by the -z option.\n  -e, --out-device <dev> use device <dev> for output streams instead of the\n                     default device as set with --device\n                     if <dev> starts with a digit, then /dev/video<dev> is used\n                     Otherwise if -z was specified earlier, then <dev> is the entity name\n                     or interface ID (if prefixed with 0x) as found in the topology of the\n                     media device with the bus info string as specified by the -z option.\n  -E, --export-device <dev> use device <dev> for exporting DMA buffers\n                     if <dev> starts with a digit, then /dev/video<dev> is used\n                     Otherwise if -z was specified earlier, then <dev> is the entity name\n                     or interface ID (if prefixed with 0x) as found in the topology of the\n                     media device with the bus info string as specified by the -z option.\n  -z, --media-bus-info <bus-info>\n                     find the media device with the given bus info string. If set, then\n                     -d, -e and -E options can use the entity name or interface ID to refer\n                     to the device nodes.\n  -h, --help         display this help message\n  --help-all         all options\n  --help-io          input/output options\n  --help-meta        metadata format options\n  --help-misc        miscellaneous options\n  --help-overlay     overlay format options\n  --help-sdr         SDR format options\n  --help-selection   crop/selection options\n  --help-stds        standards and other video timings options\n  --help-streaming   streaming options\n  --help-subdev      sub-device options\n  --help-tuner       tuner/modulator options\n  --help-vbi         VBI format options\n  --help-vidcap      video capture format options\n  --help-vidout      vidout output format options\n  --help-edid        edid handling options\n  -k, --concise      be more concise if possible.\n  -l, --list-ctrls   display all controls and their values [VIDIOC_QUERYCTRL]\n  -L, --list-ctrls-menus\n\t\t     display all controls and their menus [VIDIOC_QUERYMENU]\n  -r, --subset <ctrl>[,<offset>,<size>]+\n                     the subset of the N-dimensional array to get/set for control <ctrl>,\n                     for every dimension an (<offset>, <size>) tuple is given.\n  -w, --wrapper      use the libv4l2 wrapper library.\n  --list-devices     list all v4l devices. If -z was given, then list just the\n                     devices of the media device with the bus info string as\n                     specified by the -z option.\n  --log-status       log the board status in the kernel log [VIDIOC_LOG_STATUS]\n  --get-priority     query the current access priority [VIDIOC_G_PRIORITY]\n  --set-priority <prio>\n                     set the new access priority [VIDIOC_S_PRIORITY]\n                     <prio> is 1 (background), 2 (interactive) or 3 (record)\n  --silent           only set the result code, do not print any messages\n  --sleep <secs>     sleep <secs>, call QUERYCAP and close the file handle\n  --verbose          turn on verbose ioctl status reporting\n",
+        "truncated": false
+      }
+    },
+    "apt-get": {
+      "path": "/usr/bin/apt-get",
+      "version": {
+        "exit_code": 0,
+        "output": "apt 2.0.6 (arm64)\nSupported modules:\n*Ver: Standard .deb\n*Pkg:  Debian dpkg interface (Priority 30)\n Pkg:  Debian APT solver interface (Priority -1000)\n Pkg:  Debian APT planner interface (Priority -1000)\n S.L: 'deb' Debian binary tree\n S.L: 'deb-src' Debian source tree\n Idx: Debian Source Index\n Idx: Debian Package Index\n Idx: Debian Translation Index\n Idx: Debian dpkg status file\n Idx: Debian deb file\n Idx: Debian dsc file\n Idx: Debian control file\n Idx: EDSP scenario file\n Idx: EIPP scenario file\n",
+        "truncated": false
+      }
+    },
+    "dpkg": {
+      "path": "/usr/bin/dpkg",
+      "version": {
+        "exit_code": 0,
+        "output": "Debian 'dpkg' package management program version 1.19.7 (arm64).\nThis is free software; see the GNU General Public License version 2 or\nlater for copying conditions. There is NO warranty.\n",
+        "truncated": false
+      }
+    },
+    "tar": {
+      "path": "/usr/bin/tar",
+      "version": {
+        "exit_code": 0,
+        "output": "tar (GNU tar) 1.30\nCopyright (C) 2017 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by John Gilmore and Jay Fenlason.\n",
+        "truncated": false
+      }
+    },
+    "gzip": {
+      "path": "/usr/bin/gzip"
+    },
+    "xz": {
+      "path": "/usr/bin/xz"
+    },
+    "unzip": {
+      "path": "/usr/bin/unzip",
+      "version": {
+        "exit_code": 0,
+        "output": "UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.\n\nLatest sources and executables are at ftp://ftp.info-zip.org/pub/infozip/ ;\nsee ftp://ftp.info-zip.org/pub/infozip/UnZip.html for other sites.\n\nCompiled with gcc 9.4.0 for Unix (Linux ELF).\n\nUnZip special compilation options:\n        ACORN_FTYPE_NFS\n        COPYRIGHT_CLEAN (PKZIP 0.9x unreducing method not supported)\n        SET_DIR_ATTRIB\n        SYMLINKS (symbolic links supported, if RTL and file system permit)\n        TIMESTAMP\n        UNIXBACKUP\n        USE_EF_UT_TIME\n        USE_UNSHRINK (PKZIP/Zip 1.x unshrinking method supported)\n        USE_DEFLATE64 (PKZIP 4.x Deflate64(tm) supported)\n        UNICODE_SUPPORT [wide-chars, char coding: other] (handle UTF-8 paths)\n        LARGE_FILE_SUPPORT (large files over 2 GiB supported)\n        ZIP64_SUPPORT (archives using Zip64 for large files supported)\n        USE_BZIP2 (PKZIP 4.6+, using bzip2 lib version 1.0.8, 13-Jul-2019)\n        VMS_TEXT_CONV\n        WILD_STOP_AT_DIR\n        [decryption, version 2.11 of 05 Jan 2007]\n\nUnZip and ZipInfo environment options:\n           UNZIP:  [none]\n        UNZIPOPT:  [none]\n         ZIPINFO:  [none]\n      ZIPINFOOPT:  [none]\n",
+        "truncated": false
+      }
+    },
+    "ip": {
+      "path": "/usr/sbin/ip",
+      "version": {
+        "exit_code": 0,
+        "output": "ip utility, iproute2-ss140804\n",
+        "truncated": false
+      }
+    },
+    "ss": {
+      "path": null
+    }
+  },
+  "python_modules": {
+    "numpy": {
+      "available": true,
+      "version": "1.17.4",
+      "file": "/usr/lib/python3/dist-packages/numpy/__init__.py"
+    },
+    "PIL": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'PIL'\n"
+    },
+    "tflite_runtime": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'tflite_runtime'\n"
+    },
+    "ai_edge_litert": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'ai_edge_litert'\n"
+    },
+    "tensorflow": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'tensorflow'\n"
+    },
+    "cv2": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'cv2'\n"
+    },
+    "onnxruntime": {
+      "available": false,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/importlib/__init__.py\", line 127, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1014, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 991, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 973, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'onnxruntime'\n"
+    }
+  },
+  "ai_libraries": [
+    {
+      "path": "/usr/lib/libOpenCL.so",
+      "realpath": "/opt/qti/usr/lib/libOpenCL.so.adreno",
+      "bytes": 64400,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/libOpenCL_adreno.so",
+      "realpath": "/usr/lib/libOpenCL_adreno.so",
+      "bytes": 150600,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/libSNPE.so",
+      "realpath": "/usr/lib/libSNPE.so",
+      "bytes": 17301424,
+      "embedded_versions": [],
+      "sha256": "018c6af637570766319e0c037c3ce185766d18cfa6d3273381d18df14e50f165"
+    },
+    {
+      "path": "/usr/lib/libSnpeHtpV68Skel.so",
+      "realpath": "/usr/lib/libSnpeHtpV68Skel.so",
+      "bytes": 6643204,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/libSnpeHtpV68Stub.so",
+      "realpath": "/usr/lib/libSnpeHtpV68Stub.so",
+      "bytes": 161728,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/libadsprpc.so",
+      "realpath": "/usr/lib/libadsprpc.so",
+      "bytes": 354728,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/libtensorflowlite_c.so",
+      "realpath": "/usr/lib/libtensorflowlite_c.so",
+      "bytes": 7627112,
+      "embedded_versions": [],
+      "sha256": "ab86e5f12bca0fa0600dc05c67ea2ba6da685ccf27f5ec093ec75252963615a4"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/libOpenCL.so.1",
+      "realpath": "/usr/lib/aarch64-linux-gnu/libOpenCL.so.1.0.0",
+      "bytes": 34808,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "bytes": 9008016,
+      "embedded_versions": [],
+      "sha256": "161a5d0bf7347465b53ae49690a38fbacf03d606ef204147b3b148a5f59188da"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "bytes": 9008016,
+      "embedded_versions": [],
+      "sha256": "161a5d0bf7347465b53ae49690a38fbacf03d606ef204147b3b148a5f59188da"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+      "bytes": 15366040,
+      "embedded_versions": [],
+      "sha256": "dffcc2517bf436ad852c2cfe8be979165cadcb84743562c65362033855d4737c"
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeDspV65Stub.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeDspV65Stub.so",
+      "bytes": 1045640,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeDspV66Stub.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeDspV66Stub.so",
+      "bytes": 1033328,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSnpeHtpV68Stub.so",
+      "bytes": 113264,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v65/unsigned/libSnpeDspV65Skel.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v65/unsigned/libSnpeDspV65Skel.so",
+      "bytes": 2231016,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v66/unsigned/libSnpeDspV66Skel.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v66/unsigned/libSnpeDspV66Skel.so",
+      "bytes": 2359760,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v68/unsigned/libSnpeHtpV68Skel.so",
+      "bytes": 5422680,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v69/unsigned/libSnpeHtpV69Skel.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v69/unsigned/libSnpeHtpV69Skel.so",
+      "bytes": 6379212,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v73/unsigned/libSnpeHtpV73Skel.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/hexagon-v73/unsigned/libSnpeHtpV73Skel.so",
+      "bytes": 6381784,
+      "embedded_versions": []
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so",
+      "realpath": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so",
+      "bytes": 10616864,
+      "embedded_versions": [],
+      "sha256": "9fc9af11152565ddda907cbb94b89042d2a9f539ac2220761539ef0d15e7b932"
+    }
+  ],
+  "ai_executables": [],
+  "runtime_versions": [],
+  "snpe_api_versions": [
+    {
+      "path": "/usr/lib/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.21.0.240401120655_85612\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 386, in __getattr__\n    func = self.__getitem__(name)\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 391, in __getitem__\n    func = self._FuncPtr((name_or_ordinal, self))\nAttributeError: /usr/lib/aarch64-linux-gnu/aarch64-ubuntu-gcc7.5/libSNPE.so: undefined symbol: Snpe_Util_GetLibraryVersion\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 386, in __getattr__\n    func = self.__getitem__(name)\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 391, in __getitem__\n    func = self._FuncPtr((name_or_ordinal, self))\nAttributeError: /usr/lib/aarch64-linux-gnu/release_lib/aarch64-ubuntu-gcc7.5/libSNPE.so: undefined symbol: Snpe_Util_GetLibraryVersion\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/aarch64_Linux/libSNPE.so",
+      "probe": {
+        "exit_code": 0,
+        "output": "2.12.0.230626174329_59328\n",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so",
+      "probe": {
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.8/ctypes/__init__.py\", line 373, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: /usr/lib/aarch64-linux-gnu/snpe-2.12/lib/x86_64_Linux/libSNPE.so: cannot open shared object file: No such file or directory\n",
+        "truncated": false
+      }
+    }
+  ],
+  "tflite_c_api_version": {
+    "exit_code": 0,
+    "output": "2.8.4\n",
+    "truncated": false
+  },
+  "docker": {
+    "system_client": {
+      "path": null
+    },
+    "system_version": null,
+    "private_installed": false,
+    "private_service": {
+      "exit_code": 3,
+      "output": "inactive\n",
+      "truncated": false
+    },
+    "system_service": {
+      "exit_code": 3,
+      "output": "inactive\n",
+      "truncated": false
+    }
+  },
+  "packages": {
+    "exit_code": 0,
+    "output": "ab-slot-util\t1.0-r0\tii \nab-status-updater\t1.0-r2\tii \nabctl\t1.0-r0\tii \naccountsservice\t0.6.55-0ubuntu12~20.04.7\tii \nacdbloader\t0-r7\tii \nacl\t2.2.53-6\tii \nadbd\t0-r0\tii \nadduser\t3.118ubuntu2\tii \nadreno-c2d\t1.0-r0\tii \nadreno-gles\t1.0-r0\tii \nadreno-utils\t1.0-r0\tii \nadreno-vulkan\t1.0-r0\tii \nadsp-firmware\t0-r0\tii \nadsprpc\t0-r1\tii \nadsprpc-internals\t0-r1\tii \nadwaita-icon-theme\t3.36.1-2ubuntu0.20.04.2\tii \nadwaita-icon-theme-full\t3.36.1-2ubuntu0.20.04.2\tii \nalsa-topology-conf\t1.2.2-1\tii \nalsa-ucm-conf\t1.2.2-1ubuntu0.13\tii \nalsa-utils\t1.2.2-1ubuntu2.1\tii \napg\t2.2.3.dfsg.1-5\tii \napparmor\t2.13.3-7ubuntu5.4\tii \napplication-migration\t1.0-r0\tii \napport\t2.20.11-0ubuntu27.31\tii \napport-symptoms\t0.23\tii \napt\t2.0.6\tii \naptdaemon\t1.1.1+bzr982-0ubuntu32.3\tii \naptdaemon-data\t1.1.1+bzr982-0ubuntu32.3\tii \naspell\t0.60.8-1ubuntu0.1\tii \naspell-en\t2018.04.16-0-1\tii \nat-spi2-core\t2.36.0-2\tii \natfwd-quectel\t0-r3\tii \nath6kl-utils\t0-r2\tii \naudio-datamgr\t0-r0\tii \naudio-parsers\t0-r0\tii \naudio-test\t0.1-r0\tii \naudio-utils\t0-r0\tii \naudiodlkm\t0-r0\tii \naudiohal\t1.0-r0\tii \nautoconf\t2.69-11.1\tii \nautomake\t1:1.16.1-4ubuntu6\tii \nautotools-dev\t20180224.1\tii \navahi-daemon\t0.7-4ubuntu7.3\tii \navahi-utils\t0.7-4ubuntu7.3\tii \nbase-files\t11ubuntu5.4\tii \nbase-passwd\t3.5.47\tii \nbash\t5.0-6ubuntu1.1\tii \nbash-completion\t1:2.10-1ubuntu1\tii \nbind9-host\t1:9.18.30-0ubuntu0.20.04.2\tii \nbind9-libs:arm64\t1:9.18.30-0ubuntu0.20.04.2\tii \nbinder\t0-r0\tii \nbinfmt-support\t2.2.0-2\tii \nbinutils\t2.34-6ubuntu1.11\tii \nbinutils-aarch64-linux-gnu\t2.34-6ubuntu1.11\tii \nbinutils-common:arm64\t2.34-6ubuntu1.11\tii \nbluez\t5.53-0ubuntu3.9\tii \nbolt\t0.9.1-2~ubuntu20.04.2\tii \nbridge-utils\t1.6-2ubuntu1\tii \nbsdmainutils\t11.1.2ubuntu3\tii \nbsdutils\t1:2.34-0.1ubuntu9.1\tii \nbt-app\t0-r0\tii \nbt-cert\t0-r0\tii \nbt-property\t0-r0\tii \nbthost-ipc\t0-r0\tii \nbubblewrap\t0.4.0-1ubuntu4.1\tii \nbuild-essential\t12.8ubuntu1.1\tii \nbzip2\t1.0.8-2\tii \nca-certificates\t20240203~20.04.1\tii \nca-certificates-mono\t6.8.0.105+dfsg-2\tii \ncamx\t0.1-r0\tii \ncamxlib\t0.1-r0\tii \ncheese-common\t3.34.0-1ubuntu1\tii \nchg-policy\t0-r0\tii \nchicdk\t0.1-r0\tii \nchrome-gnome-shell\t10.1-5\tii \nclang\t1:10.0-50~exp1\tii \nclang-10\t1:10.0.0-4ubuntu1\tii \nclang-tidy\t1:10.0-50~exp1\tii \nclang-tidy-10\t1:10.0.0-4ubuntu1\tii \nclang-tools-10\t1:10.0.0-4ubuntu1\tii \ncli-common\t0.10\tii \ncnnsva\t0-r0\tii \ncnss-daemon\t0-r2\tii \ncodec2\t1.0-r0\tii \ncolord\t1.4.4-2\tii \ncolord-data\t1.4.4-2\tii \ncomerr-dev:arm64\t2.1-1.45.5-2ubuntu1.2\tii \ncommon-tools\t0-r2\tii \nconntrack-tools\t1.0.1-r1\tii \nconsole-setup\t1.194ubuntu3\tii \nconsole-setup-linux\t1.194ubuntu3\tii \ncoreutils\t8.30-3ubuntu2\tii \ncpp\t4:9.3.0-1ubuntu2\tii \ncpp-9\t9.4.0-1ubuntu1~20.04.2\tii \ncracklib-runtime\t2.9.6-3.2\tii \ncrda\t3.18-1build1\tii \ncron\t3.0pl1-136ubuntu1\tii \ncups-pk-helper\t0.2.6-1ubuntu3\tii \ncurl\t7.68.0-1ubuntu2.25\tii \ncvp-noship\t0-r0\tii \ndash\t0.5.10.2-6\tii \ndata\t0-r26\tii \ndata-ipa-cfg-mgr\t0-r4\tii \ndata-oss\t0-r4\tii \ndatarmnet\t0-r0\tii \ndbus\t1.12.16-2ubuntu2.3\tii \ndbus-user-session\t1.12.16-2ubuntu2.3\tii \ndbus-x11\t1.12.16-2ubuntu2.3\tii \ndconf-cli\t0.36.0-1\tii \ndconf-gsettings-backend:arm64\t0.36.0-1\tii \ndconf-service\t0.36.0-1\tii \ndebconf\t1.5.73\tii \ndebianutils\t4.9.1\tii \ndepends-update\t1.0-r0\tii \ndesktop-file-utils\t0.24-1ubuntu3\tii \ndesktop-switch\t1.0-r0\tii \ndhcp-libs\t4.4.2-r0\tii \ndhcp-server\t4.4.2-r0\tii \ndhcp-server-config\t4.4.2-r0\tii \ndhcpcd5\t7.1.0-2build1\tii \ndiag\t0-r12\tii \ndiag-reboot-app\t0-r5\tii \ndiag-router\t0-r10\tii \ndialog\t1.3-20190808-1\tii \ndictionaries-common\t1.28.1\tii \ndiffutils\t1:3.7-3\tii \ndirmngr\t2.2.19-3ubuntu2.5\tii \ndisplay-hal-linux\t0-r8\tii \ndisplay-noship-linux\t0-r3\tii \ndisplay-ship-linux\t0-r3\tii \ndistro-info-data\t0.43ubuntu1.19\tii \ndmsetup\t2:1.02.167-1ubuntu1\tii \ndns-root-data\t2024071801~ubuntu0.20.04.1\tii \ndnsmasq\t2.90-0ubuntu0.20.04.1\tii \ndnsmasq-base\t2.90-0ubuntu0.20.04.1\tii \ndocbook-xml\t4.5-9\tii \ndosfstools\t4.1-2\tii \ndpkg\t1.19.7ubuntu3\tii \ndpkg-dev\t1.19.7ubuntu3.2\tii \ndvb-tools\t1.18.0-2build1\tii \ne2fsprogs\t1.45.5-2ubuntu1.2\tii \neject\t2.1.5+deb1+cvs20081104-14\tii \nemacsen-common\t3.0.4\tii \nenchant-2\t2.2.8-1ubuntu0.20.04.1\tii \nencoders\t1.0-r0\tii \neth-config\t1.0-r0\tii \nevolution-data-server\t3.36.5-0ubuntu1\tii \nevolution-data-server-common\t3.36.5-0ubuntu1\tii \nfakeroot\t1.24-1\tii \nfastcv-noship\t0-r0\tii \nfastmmi\t0-r0\tii \nfct\t0.1-r0\tii \nfdisk\t2.34-0.1ubuntu9.1\tii \nffmpeg\t4.2.2-r0\tii \nfile\t1:5.38-4\tii \nfileparser\t1.0-r0\tii \nfindutils\t4.7.0-1ubuntu1\tii \nfirefox\t136.0+build3-0ubuntu0.20.04.1\tii \nflang-18\t1:18.1.8-11~20.04.2\tii \nfluoride\t0-r0\tii \nfontconfig\t2.13.1-2ubuntu3\tii \nfontconfig-config\t2.13.1-2ubuntu3\tii \nfonts-cantarell\t0.111-2\tii \nfonts-dejavu-core\t2.37-1\tii \nfonts-wqy-zenhei\t0.9.45-7ubuntu1\tii \nfprintd\t1.90.9-1~ubuntu20.04.1\tii \nfreeglut3:arm64\t2.8.1-3\tii \nfs-scrub-daemon\t1.0-r1\tii \nfscrypt\t0.2.5-2\tii \nfsmgr\t0-r0\tii \nftm\t0-r1\tii \nfuse\t2.9.9-3\tii \ng++\t4:9.3.0-1ubuntu2\tii \ng++-9\t9.4.0-1ubuntu1~20.04.2\tii \ngcc\t4:9.3.0-1ubuntu2\tii \ngcc-10-base:arm64\t10.5.0-1ubuntu1~20.04\tii \ngcc-9\t9.4.0-1ubuntu1~20.04.2\tii \ngcc-9-base:arm64\t9.4.0-1ubuntu1~20.04.2\tii \ngcc-runtime-dev\t0-0\tii \ngcr\t3.36.0-2build1\tii \ngdal-data\t3.0.4+dfsg-1build3\tii \ngdb\t9.2-0ubuntu1~20.04.2\tii \ngdbserver\t9.2-0ubuntu1~20.04.2\tii \ngdisk\t1.0.5-1\tii \ngdm3\t3.36.3-0ubuntu0.20.04.4\tii \ngedit\t3.36.2-0ubuntu1\tii \ngedit-common\t3.36.2-0ubuntu1\tii \ngeoclue-2.0\t2.5.6-0ubuntu1\tii \ngettext-base\t0.19.8.1-10build1\tii \ngir1.2-accountsservice-1.0\t0.6.55-0ubuntu12~20.04.7\tii \ngir1.2-atk-1.0:arm64\t2.35.1-1ubuntu2\tii \ngir1.2-atspi-2.0:arm64\t2.36.0-2\tii \ngir1.2-freedesktop:arm64\t1.64.1-1~ubuntu20.04.1\tii \ngir1.2-gck-1:arm64\t3.36.0-2build1\tii \ngir1.2-gcr-3:arm64\t3.36.0-2build1\tii \ngir1.2-gdesktopenums-3.0:arm64\t3.36.0-1ubuntu1\tii \ngir1.2-gdkpixbuf-2.0:arm64\t2.40.0+dfsg-3ubuntu0.5\tii \ngir1.2-gdm-1.0:arm64\t3.36.3-0ubuntu0.20.04.4\tii \ngir1.2-geoclue-2.0:arm64\t2.5.6-0ubuntu1\tii \ngir1.2-glib-2.0:arm64\t1.64.1-1~ubuntu20.04.1\tii \ngir1.2-gnomebluetooth-1.0:arm64\t3.34.3-0ubuntu1\tii \ngir1.2-gnomedesktop-3.0:arm64\t3.36.8-0ubuntu1\tii \ngir1.2-graphene-1.0:arm64\t1.10.0-1build2\tii \ngir1.2-gtk-3.0:arm64\t3.24.20-0ubuntu1.2\tii \ngir1.2-gtksource-4:arm64\t4.6.0-1\tii \ngir1.2-gweather-3.0:arm64\t3.36.1-1~ubuntu20.04.1\tii \ngir1.2-handy-0.0:arm64\t0.0.13-1\tii \ngir1.2-ibus-1.0:arm64\t1.5.22-2ubuntu2.1\tii \ngir1.2-json-1.0:arm64\t1.4.4-2ubuntu2\tii \ngir1.2-keybinder-3.0\t0.3.2-1ubuntu1\tii \ngir1.2-mutter-6:arm64\t3.36.9-0ubuntu0.20.04.2\tii \ngir1.2-nm-1.0:arm64\t1.22.10-1ubuntu2.4\tii \ngir1.2-nma-1.0:arm64\t1.8.24-1ubuntu3\tii \ngir1.2-notify-0.7:arm64\t0.7.9-1ubuntu3.20.04.2\tii \ngir1.2-packagekitglib-1.0\t1.1.13-2ubuntu1.1\tii \ngir1.2-pango-1.0:arm64\t1.44.7-2ubuntu4\tii \ngir1.2-peas-1.0:arm64\t1.26.0-2\tii \ngir1.2-polkit-1.0\t0.105-26ubuntu1.3\tii \ngir1.2-poppler-0.18:arm64\t0.86.1-0ubuntu1.7\tii \ngir1.2-rsvg-2.0:arm64\t2.48.9-1ubuntu0.20.04.4\tii \ngir1.2-secret-1:arm64\t0.20.4-0ubuntu1\tii \ngir1.2-soup-2.4:arm64\t2.70.0-1ubuntu0.5\tii \ngir1.2-upowerglib-1.0:arm64\t0.99.11-1build2\tii \ngir1.2-vte-2.91:arm64\t0.60.3-0ubuntu1~20.5\tii \ngjs\t1.64.5-0ubuntu0.20.04.01\tii \ngkbd-capplet\t3.26.1-1\tii \nglib-networking:arm64\t2.64.2-1ubuntu0.1\tii \nglib-networking-common\t2.64.2-1ubuntu0.1\tii \nglib-networking-services\t2.64.2-1ubuntu0.1\tii \nglibc\t0-0\tii \ngnome-accessibility-themes\t3.28-1ubuntu1\tii \ngnome-append\t1.0-r0\tii \ngnome-control-center\t1:3.36.5-0ubuntu4.1\tii \ngnome-control-center-data\t1:3.36.5-0ubuntu4.1\tii \ngnome-control-center-faces\t1:3.36.5-0ubuntu4.1\tii \ngnome-desktop3-data\t3.36.8-0ubuntu1\tii \ngnome-keyring\t3.36.0-1ubuntu1\tii \ngnome-keyring-pkcs11:arm64\t3.36.0-1ubuntu1\tii \ngnome-menus\t3.36.0-1ubuntu1\tii \ngnome-online-accounts\t3.36.1-0ubuntu1\tii \ngnome-session\t3.36.0-2ubuntu1\tii \ngnome-session-bin\t3.36.0-2ubuntu1\tii \ngnome-session-common\t3.36.0-2ubuntu1\tii \ngnome-settings-daemon\t3.36.1-0ubuntu1.1\tii \ngnome-settings-daemon-common\t3.36.1-0ubuntu1.1\tii \ngnome-shell\t3.36.9-0ubuntu0.20.04.5\tii \ngnome-shell-common\t3.36.9-0ubuntu0.20.04.5\tii \ngnome-shell-extension-autohidetopbar\t20200322-1\tii \ngnome-shell-extension-prefs\t3.36.9-0ubuntu0.20.04.5\tii \ngnome-startup-applications\t3.36.0-2ubuntu1\tii \ngnome-terminal\t3.36.2-1ubuntu1~20.04\tii \ngnome-terminal-data\t3.36.2-1ubuntu1~20.04\tii \ngnome-themes-extra:arm64\t3.28-1ubuntu1\tii \ngnome-themes-extra-data\t3.28-1ubuntu1\tii \ngnome-tweaks\t3.34.0-2ubuntu1\tii \ngnome-user-docs\t3.36.2+git20200704-0ubuntu0.1\tii \ngnupg\t2.2.19-3ubuntu2.5\tii \ngnupg-l10n\t2.2.19-3ubuntu2.5\tii \ngnupg-utils\t2.2.19-3ubuntu2.5\tii \ngnupg2\t2.2.19-3ubuntu2.5\tii \ngobject-introspection\t1.64.1-1~ubuntu20.04.1\tii \ngpg\t2.2.19-3ubuntu2.5\tii \ngpg-agent\t2.2.19-3ubuntu2.5\tii \ngpg-wks-client\t2.2.19-3ubuntu2.5\tii \ngpg-wks-server\t2.2.19-3ubuntu2.5\tii \ngpgconf\t2.2.19-3ubuntu2.5\tii \ngpgsm\t2.2.19-3ubuntu2.5\tii \ngpgv\t2.2.19-3ubuntu2.5\tii \ngrep\t3.4-1\tii \ngroff-base\t1.22.4-4build1\tii \ngsettings-desktop-schemas\t3.36.0-1ubuntu1\tii \ngst-ros2node\t0.1-r0\tii \ngst-ros2sink\t0.1-r0\tii \ngstd\t1.0+really0.8.0-r0\tii \ngstreamer1.0-alsa:arm64\t1.16.3-0ubuntu1.4\tii \ngstreamer1.0-clutter-3.0:arm64\t3.0.27-1\tii \ngstreamer1.0-gl:arm64\t1.16.3-0ubuntu1.4\tii \ngstreamer1.0-gtk3:arm64\t1.16.3-0ubuntu1.3\tii \ngstreamer1.0-libav:arm64\t1.16.2-2\tii \ngstreamer1.0-omx\t1.16.3-r0\tii \ngstreamer1.0-plugins-bad:arm64\t1.16.3-0ubuntu1.1\tii \ngstreamer1.0-plugins-bad-waylandsink\t1.16.3-r0\tii \ngstreamer1.0-plugins-base:arm64\t1.16.3-0ubuntu1.4\tii \ngstreamer1.0-plugins-base-apps\t1.16.3-0ubuntu1.4\tii \ngstreamer1.0-plugins-good:arm64\t1.16.3-0ubuntu1.3\tii \ngstreamer1.0-plugins-good-pulse\t1.16.3-r0\tii \ngstreamer1.0-plugins-qti-oss-base\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-batch\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-codec2\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-examples\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-jpegenc\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-metamux\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mldemux\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlmeta\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mltflite\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlvclassification\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlvconverter\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlvdetection\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlvpose\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-mlvsegmentation\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-overlay\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-qmmfsrc\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-socket\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-tools\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-vcomposer\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-vcrop\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-vsplit\t1.0-r0\tii \ngstreamer1.0-plugins-qti-oss-vtransform\t1.0-r0\tii \ngstreamer1.0-plugins-qtivdec\t1.0-r1\tii \ngstreamer1.0-plugins-ugly:arm64\t1.16.2-2build1\tii \ngstreamer1.0-rtsp:arm64\t1.16.2-3\tii \ngstreamer1.0-tools\t1.16.3-0ubuntu1.2\tii \ngstreamer1.0-x:arm64\t1.16.3-0ubuntu1.4\tii \ngtest\t1.10.0-r0\tii \ngtk-update-icon-cache\t3.24.20-0ubuntu1.2\tii \ngtk2-engines-pixbuf:arm64\t2.24.32-4ubuntu4.1\tii \ngvfs:arm64\t1.44.1-1ubuntu1.2\tii \ngvfs-backends\t1.44.1-1ubuntu1.2\tii \ngvfs-common\t1.44.1-1ubuntu1.2\tii \ngvfs-daemons\t1.44.1-1ubuntu1.2\tii \ngvfs-libs:arm64\t1.44.1-1ubuntu1.2\tii \ngzip\t1.10-0ubuntu4\tii \nhci-qcomm-init\t0-r0\tii \nhicolor-icon-theme\t0.17-2\tii \nhostapd\t2:2.9-1ubuntu4.6\tii \nhostname\t3.23\tii \nhumanity-icon-theme\t0.6.15\tii \nhunspell-en-us\t1:2018.04.16-1\tii \nibus\t1.5.22-2ubuntu2.1\tii \nibus-data\t1.5.22-2ubuntu2.1\tii \nibus-gtk:arm64\t1.5.22-2ubuntu2.1\tii \nibus-gtk3:arm64\t1.5.22-2ubuntu2.1\tii \nibverbs-providers:arm64\t28.0-1ubuntu1\tii \niio-sensor-proxy\t2.8-1ubuntu2\tii \nim-config\t0.44-1ubuntu1.3\tii \nimu-ros2node\t0.1-r0\tii \nimud\t1.0-r0\tii \ninetutils-ping\t2:1.9.4-11ubuntu0.2\tii \ninit-audio\t0-r5\tii \ninit-mss\t0-r7\tii \ninit-system-helpers\t1.57\tii \nipa-fws\t0-r3\tii \nippusbxd\t1.34-2ubuntu1\tii \niproute2\t3.16.0-r0\tii \niptables\t1.8.4-3ubuntu2.1\tii \nir-keytable\t1.18.0-2build1\tii \niso-codes\t4.4-1\tii \niw\t5.4-1\tii \njx-sdk-package\t1.0-r0\tii \nkbd\t2.0.4-4ubuntu2\tii \nkernel-5.4.219-perf\t5.4-r0\tii \nkernel-module-bt-fm-slim-5.4.219-perf\t5.4-r0\tii \nkernel-module-btpower-5.4.219-perf\t5.4-r0\tii \nkernel-module-camera-5.4.219-perf\t5.4-r0\tii \nkernel-module-e4000-5.4.219-perf\t5.4-r0\tii \nkernel-module-fc0011-5.4.219-perf\t5.4-r0\tii \nkernel-module-fc0012-5.4.219-perf\t5.4-r0\tii \nkernel-module-fc0013-5.4.219-perf\t5.4-r0\tii \nkernel-module-fc2580-5.4.219-perf\t5.4-r0\tii \nkernel-module-hid-aksys-5.4.219-perf\t5.4-r0\tii \nkernel-module-it913x-5.4.219-perf\t5.4-r0\tii \nkernel-module-llcc-perfmon-5.4.219-perf\t5.4-r0\tii \nkernel-module-lt9611uxd-5.4.219-perf\t5.4-r0\tii \nkernel-module-m88rs6000t-5.4.219-perf\t5.4-r0\tii \nkernel-module-max2165-5.4.219-perf\t5.4-r0\tii \nkernel-module-mc44s803-5.4.219-perf\t5.4-r0\tii \nkernel-module-msi001-5.4.219-perf\t5.4-r0\tii \nkernel-module-msm-drm-5.4.219-perf\t5.4-r0\tii \nkernel-module-mt2060-5.4.219-perf\t5.4-r0\tii \nkernel-module-mt2063-5.4.219-perf\t5.4-r0\tii \nkernel-module-mt20xx-5.4.219-perf\t5.4-r0\tii \nkernel-module-mt2131-5.4.219-perf\t5.4-r0\tii \nkernel-module-mt2266-5.4.219-perf\t5.4-r0\tii \nkernel-module-mxl301rf-5.4.219-perf\t5.4-r0\tii \nkernel-module-mxl5005s-5.4.219-perf\t5.4-r0\tii \nkernel-module-mxl5007t-5.4.219-perf\t5.4-r0\tii \nkernel-module-qcom-edac-5.4.219-perf\t5.4-r0\tii \nkernel-module-qm1d1b0004-5.4.219-perf\t5.4-r0\tii \nkernel-module-qm1d1c0042-5.4.219-perf\t5.4-r0\tii \nkernel-module-qps615-5.4.219-perf\t5.4-r0\tii \nkernel-module-qt1010-5.4.219-perf\t5.4-r0\tii \nkernel-module-r820t-5.4.219-perf\t5.4-r0\tii \nkernel-module-radio-i2c-rtc6226-qca-5.4.219-perf\t5.4-r0\tii \nkernel-module-rdbg-5.4.219-perf\t5.4-r0\tii \nkernel-module-si2157-5.4.219-perf\t5.4-r0\tii \nkernel-module-slimbus-5.4.219-perf\t5.4-r0\tii \nkernel-module-slimbus-ngd-5.4.219-perf\t5.4-r0\tii \nkernel-module-tda18212-5.4.219-perf\t5.4-r0\tii \nkernel-module-tda18218-5.4.219-perf\t5.4-r0\tii \nkernel-module-tda18250-5.4.219-perf\t5.4-r0\tii \nkernel-module-tda9887-5.4.219-perf\t5.4-r0\tii \nkernel-module-tea5761-5.4.219-perf\t5.4-r0\tii \nkernel-module-tea5767-5.4.219-perf\t5.4-r0\tii \nkernel-module-tua9001-5.4.219-perf\t5.4-r0\tii \nkernel-module-tuner-simple-5.4.219-perf\t5.4-r0\tii \nkernel-module-tuner-types-5.4.219-perf\t5.4-r0\tii \nkernel-module-tuner-xc2028-5.4.219-perf\t5.4-r0\tii \nkernel-module-xc4000-5.4.219-perf\t5.4-r0\tii \nkernel-module-xc5000-5.4.219-perf\t5.4-r0\tii \nkernel-module-yt6801-5.4.219-perf\t5.4-r0\tii \nkernel-modules\t5.4-r0\tii \nkeyboard-configuration\t1.194ubuntu3\tii \nkmod\t27-1ubuntu2.1\tii \nkrb5-locales\t1.17-6ubuntu4.11\tii \nkrb5-multidev:arm64\t1.17-6ubuntu4.11\tii \nlanguage-selector-common\t0.204.2\tii \nlanguage-selector-gnome\t0.204.2\tii \nleproperties\t0-r0\tii \nliba52-0.7.4:arm64\t0.7.4-20\tii \nlibaa1:arm64\t1.4p5-46\tii \nlibaacs0:arm64\t0.9.0-2\tii \nlibaccountsservice0:arm64\t0.6.55-0ubuntu12~20.04.7\tii \nlibacdbrtac1\t1.0-r3\tii \nlibacl1:arm64\t2.2.53-6\tii \nlibadiertac1\t1.0-r3\tii \nlibaec0:arm64\t1.0.4-1\tii \nlibalgorithm-diff-perl\t1.19.03-2\tii \nlibalgorithm-diff-xs-perl\t0.04-6\tii \nlibalgorithm-merge-perl\t0.08-3\tii \nlibamtk-5-0:arm64\t5.0.2-1build1\tii \nlibamtk-5-common\t5.0.2-1build1\tii \nlibaom0:arm64\t1.0.0.errata1-3+deb11u1ubuntu0.1\tii \nlibapparmor1:arm64\t2.13.3-7ubuntu5.4\tii \nlibappindicator3-1\t12.10.1+20.04.20200408.1-0ubuntu1\tii \nlibappstream4:arm64\t0.12.10-2\tii \nlibapt-pkg6.0:arm64\t2.0.6\tii \nlibarchive13:arm64\t3.4.0-2ubuntu1.5\tii \nlibargon2-1:arm64\t0~20171227-0.2\tii \nlibarmadillo9\t1:9.800.4+dfsg-1build1\tii \nlibarpack2:arm64\t3.7.0-3\tii \nlibasan5:arm64\t9.4.0-1ubuntu1~20.04.2\tii \nlibasan6:arm64\t10.5.0-1ubuntu1~20.04\tii \nlibasn1-8-heimdal:arm64\t7.7.0+dfsg-1ubuntu1.4\tii \nlibasound2:arm64\t1.2.2-2.1ubuntu2.5\tii \nlibasound2-data\t1.2.2-2.1ubuntu2.5\tii \nlibasound2-plugin-smixer:arm64\t1.2.2-2.1ubuntu2.5\tii \nlibasound2-plugins:arm64\t1.2.2-1ubuntu1\tii \nlibaspell15:arm64\t0.60.8-1ubuntu0.1\tii \nlibass9:arm64\t1:0.14.0-2\tii \nlibassuan0:arm64\t2.5.3-7ubuntu2\tii \nlibasyncns0:arm64\t0.8-6\tii \nlibatasmart4:arm64\t0.19-5\tii \nlibatk-adaptor:arm64\t2.34.2-0ubuntu2~20.04.1\tii \nlibatk-bridge2.0-0:arm64\t2.34.2-0ubuntu2~20.04.1\tii \nlibatk1.0-0:arm64\t2.35.1-1ubuntu2\tii \nlibatk1.0-data\t2.35.1-1ubuntu2\tii \nlibatomic-ops-dev\t7.6.10-1ubuntu2\tii \nlibatomic1:arm64\t10.5.0-1ubuntu1~20.04\tii \nlibatopology2:arm64\t1.2.2-2.1ubuntu2.5\tii \nlibatspi2.0-0:arm64\t2.36.0-2\tii \nlibattr1:arm64\t1:2.4.48-5\tii \nlibaudcal1\t0-r11\tii \nlibaudioalsa1\t0-r5\tii \nlibaudioroute0\t0-r0\tii \nlibaudit-common\t1:2.8.5-2ubuntu6\tii \nlibaudit1:arm64\t1:2.8.5-2ubuntu6\tii \nlibauparse0:arm64\t1:2.8.5-2ubuntu6\tii \nlibauthen-sasl-perl\t2.1600-1\tii \nlibavahi-client3:arm64\t0.7-4ubuntu7.3\tii \nlibavahi-common-data:arm64\t0.7-4ubuntu7.3\tii \nlibavahi-common3:arm64\t0.7-4ubuntu7.3\tii \nlibavahi-core7:arm64\t0.7-4ubuntu7.3\tii \nlibavahi-glib1:arm64\t0.7-4ubuntu7.3\tii \nlibavc1394-0:arm64\t0.5.4-5\tii \nlibavcodec58:arm64\t7:4.2.7-0ubuntu0.1\tii \nlibavfilter7:arm64\t7:4.2.7-0ubuntu0.1\tii \nlibavformat58:arm64\t7:4.2.7-0ubuntu0.1\tii \nlibavutil56:arm64\t7:4.2.7-0ubuntu0.1\tii \nlibbabeltrace1:arm64\t1.5.8-1build1\tii \nlibbase0\t0-r1\tii \nlibbdplus0:arm64\t0.1.2-3\tii \nlibbinutils:arm64\t2.34-6ubuntu1.11\tii \nlibblas3:arm64\t3.9.0-1build1\tii \nlibblas64-3:arm64\t3.9.0-1build1\tii \nlibblkid-dev:arm64\t2.34-0.1ubuntu9.6\tii \nlibblkid1:arm64\t2.34-0.1ubuntu9.6\tii \nlibblockdev-crypto2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-fs2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-loop2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-part-err2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-part2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-swap2:arm64\t2.23-2ubuntu3\tii \nlibblockdev-utils2:arm64\t2.23-2ubuntu3\tii \nlibblockdev2:arm64\t2.23-2ubuntu3\tii \nlibbluetooth3:arm64\t5.53-0ubuntu3.9\tii \nlibbluray2:arm64\t1:1.2.0-1\tii \nlibboost-atomic1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-chrono1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-container1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-context1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-contract1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-coroutine1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-date-time1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-fiber1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-filesystem1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-graph-parallel1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-graph1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-iostreams1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-locale1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-log1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-math1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-mpi-python1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-mpi1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-numpy1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-program-options1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-python1.71.0\t1.71.0-6ubuntu6\tii \nlibboost-random1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-regex1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-serialization1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-stacktrace1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-system1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-test1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-thread1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-timer1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-type-erasure1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost-wave1.71.0:arm64\t1.71.0-6ubuntu6\tii \nlibboost1.71-dev:arm64\t1.71.0-6ubuntu6\tii \nlibbrotli1:arm64\t1.0.7-6ubuntu0.1\tii \nlibbs2b0:arm64\t3.1.0+dfsg-2.2build1\tii \nlibbsd0:arm64\t0.10.0-1\tii \nlibbttransport0\t1.0-r0\tii \nlibbtvendorhal0\t0-r1\tii \nlibbz2-1.0:arm64\t1.0.8-2\tii \nlibc-bin\t2.31-0ubuntu9.2\tii \nlibc-dev-bin\t2.31-0ubuntu9.18\tii \nlibc6:arm64\t2.31-0ubuntu9.18\tii \nlibc6-arm64-cross\t2.31-0ubuntu9.9cross1\tii \nlibc6-dbg:arm64\t2.31-0ubuntu9.18\tii \nlibc6-dev:arm64\t2.31-0ubuntu9.18\tii \nlibc6-dev-arm64-cross\t0-0\tii \nlibcaca0:arm64\t0.99.beta19-2.1ubuntu1.20.04.2\tii \nlibcaf-openmpi-3:arm64\t2.8.0-1\tii \nlibcairo-gobject2:arm64\t1.16.0-4ubuntu1\tii \nlibcairo2:arm64\t1.16.0-4ubuntu1\tii \nlibcamel-1.2-62:arm64\t3.36.5-0ubuntu1\tii \nlibcamera-metadata0\t1.1-r0\tii \nlibcanberra-gtk3-0:arm64\t0.30-7ubuntu1\tii \nlibcanberra-gtk3-module:arm64\t0.30-7ubuntu1\tii \nlibcanberra-pulse:arm64\t0.30-7ubuntu1\tii \nlibcanberra0:arm64\t0.30-7ubuntu1\tii \nlibcap-ng0:arm64\t0.7.9-2.1build1\tii \nlibcap2:arm64\t1:2.32-1ubuntu0.2\tii \nlibcap2-bin\t1:2.32-1ubuntu0.2\tii \nlibcbor0.6:arm64\t0.6.0-0ubuntu1\tii \nlibcc1-0:arm64\t10.5.0-1ubuntu1~20.04\tii \nlibcdio-cdda2:arm64\t10.2+2.0.0-1\tii \nlibcdio-paranoia2:arm64\t10.2+2.0.0-1\tii \nlibcdio18:arm64\t2.0.0-2ubuntu0.2\tii \nlibcdparanoia0:arm64\t3.10.2+debian-13\tii \nlibcfitsio8:arm64\t3.470-3\tii \nlibcharls2:arm64\t2.0.0+dfsg-1build1\tii \nlibcheese-gtk25:arm64\t3.34.0-1ubuntu1\tii \nlibcheese8:arm64\t3.34.0-1ubuntu1\tii \nlibchromaprint1:arm64\t1.4.3-3build1\tii \nlibchrome0\t1.0-r0\tii \nlibclang-common-10-dev\t1:10.0.0-4ubuntu1\tii \nlibclang-cpp10\t1:10.0.0-4ubuntu1\tii \nlibclang-cpp18\t1:18.1.8-11~20.04.2\tii \nlibclang1-10\t1:10.0.0-4ubuntu1\tii \nlibclang1-8\t1:8.0.1-9\tii \nlibcld80211-0\t0-r2\tii \nlibclutter-1.0-0:arm64\t1.26.4+dfsg-1\tii \nlibclutter-1.0-common\t1.26.4+dfsg-1\tii \nlibclutter-gst-3.0-0:arm64\t3.0.27-1\tii \nlibclutter-gtk-1.0-0:arm64\t1.8.4-4\tii \nlibcoarrays-dev:arm64\t2.8.0-1\tii \nlibcoarrays-openmpi-dev:arm64\t2.8.0-1\tii \nlibcodec2-0.9:arm64\t0.9.2-2\tii \nlibcogl-common\t1.22.6-1\tii \nlibcogl-pango20:arm64\t1.22.6-1\tii \nlibcogl-path20:arm64\t1.22.6-1\tii \nlibcogl20:arm64\t1.22.6-1\tii \nlibcolord-gtk1:arm64\t0.2.0-0ubuntu1\tii \nlibcolord2:arm64\t1.4.4-2\tii \nlibcolorhug2:arm64\t1.4.4-2\tii \nlibcom-err2:arm64\t1.45.5-2ubuntu1.2\tii \nlibconfigdb0\t0-r5\tii \nlibconsole-bridge0.4:arm64\t0.4.4+dfsg-1build1\tii \nlibcppunit-1.15-0:arm64\t1.15.1-2build1\tii \nlibcrack2:arm64\t2.9.6-3.2\tii \nlibcrypt-dev:arm64\t1:4.4.10-10ubuntu4\tii \nlibcrypt1:arm64\t1:4.4.10-10ubuntu4\tii \nlibcrypto++-dev\t5.6.4-9build1\tii \nlibcrypto++-utils\t5.6.4-9build1\tii \nlibcrypto++6\t5.6.4-9build1\tii \nlibcryptsetup12:arm64\t2:2.2.2-3ubuntu2.5\tii \nlibctf-nobfd0:arm64\t2.34-6ubuntu1.11\tii \nlibctf0:arm64\t2.34-6ubuntu1.11\tii \nlibcue2:arm64\t2.2.1-2ubuntu0.1\tii \nlibcups2:arm64\t2.3.1-9ubuntu1.9\tii \nlibcurl3-gnutls:arm64\t7.68.0-1ubuntu2.25\tii \nlibcurl3-nss:arm64\t7.68.0-1ubuntu2.25\tii \nlibcurl4:arm64\t7.68.0-1ubuntu2.25\tii \nlibcutils0\t0-r1\tii \nlibdaemon0:arm64\t0.14-7\tii \nlibdap25:arm64\t3.20.5-1\tii \nlibdapclient6v5:arm64\t3.20.5-1\tii \nlibdata-dump-perl\t1.23-1\tii \nlibdatrie1:arm64\t0.2.12-3\tii \nlibdb5.3:arm64\t5.3.28+dfsg1-0.6ubuntu2\tii \nlibdbus-1-3:arm64\t1.12.16-2ubuntu2.3\tii \nlibdbusmenu-glib4:arm64\t16.04.1+18.10.20180917-0ubuntu6\tii \nlibdbusmenu-gtk3-4:arm64\t16.04.1+18.10.20180917-0ubuntu6\tii \nlibdc1394-22:arm64\t2.2.5-2.1\tii \nlibdca0:arm64\t0.0.6-1\tii \nlibdconf1:arm64\t0.36.0-1\tii \nlibde265-0:arm64\t1.0.4-1ubuntu0.4\tii \nlibdebconfclient0:arm64\t0.251ubuntu1\tii \nlibdee-1.0-4:arm64\t1.2.7+17.10.20170616-4ubuntu6\tii \nlibdevmapper1.02.1:arm64\t2:1.02.167-1ubuntu1\tii \nlibdouble-conversion3:arm64\t3.1.5-4ubuntu1\tii \nlibdpkg-perl\t1.19.7ubuntu3.2\tii \nlibdrm-amdgpu1:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-common\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-etnaviv1:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-freedreno1:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-nouveau2:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-radeon1:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm-tests\t2.4.107-8ubuntu1~20.04.2\tii \nlibdrm2:arm64\t2.4.107-8ubuntu1~20.04.2\tii \nlibdsutils1\t0-r7\tii \nlibdv4:arm64\t1.0.0-12\tii \nlibdvbv5-0:arm64\t1.18.0-2build1\tii \nlibdvdnav4:arm64\t6.0.1-1build1\tii \nlibdvdread7:arm64\t6.1.0+really6.0.2-1\tii \nlibdw1:arm64\t0.176-1.1ubuntu0.1\tii \nlibebackend-1.2-10:arm64\t3.36.5-0ubuntu1\tii \nlibebook-1.2-20:arm64\t3.36.5-0ubuntu1\tii \nlibebook-contacts-1.2-3:arm64\t3.36.5-0ubuntu1\tii \nlibecal-2.0-1:arm64\t3.36.5-0ubuntu1\tii \nlibecpg-compat3:arm64\t12.22-0ubuntu0.20.04.4\tii \nlibecpg6:arm64\t12.22-0ubuntu0.20.04.4\tii \nlibedata-book-1.2-26:arm64\t3.36.5-0ubuntu1\tii \nlibedata-cal-2.0-1:arm64\t3.36.5-0ubuntu1\tii \nlibedataserver-1.2-24:arm64\t3.36.5-0ubuntu1\tii \nlibedataserverui-1.2-2:arm64\t3.36.5-0ubuntu1\tii \nlibedit2:arm64\t3.1-20191231-1\tii \nlibegl-dev:arm64\t1.3.2-1~ubuntu0.20.04.2\tii \nlibegl-mesa0:arm64\t21.2.6-0ubuntu0.1~20.04.2\tii \nlibegl1:arm64\t1.3.2-1~ubuntu0.20.04.2\tii \nlibegl1-mesa:arm64\t21.2.6-0ubuntu0.1~20.04.2\tii \nlibelf1:arm64\t0.176-1.1ubuntu0.1\tii \nlibenchant-2-2:arm64\t2.2.8-1ubuntu0.20.04.1\tii \nlibencode-locale-perl\t1.05-1\tii \nlibepoxy0:arm64\t1.5.4-1\tii \nlibepsilon1:arm64\t0.9.2+dfsg-4\tii \nlibestr0:arm64\t0.1.10-2.1\tii \nlibevdev2:arm64\t1.9.0+dfsg-1ubuntu0.2\tii \nlibevent-2.1-7:arm64\t2.1.11-stable-1\tii \nlibevent-core-2.1-7:arm64\t2.1.11-stable-1\tii \nlibevent-dev\t2.1.11-stable-1\tii \nlibevent-extra-2.1-7:arm64\t2.1.11-stable-1\tii \nlibevent-openssl-2.1-7:arm64\t2.1.11-stable-1\tii \nlibevent-pthreads-2.1-7:arm64\t2.1.11-stable-1\tii \nlibevent0\t1.0-r0\tii \nlibexempi8:arm64\t2.5.1-1ubuntu0.1\tii \nlibexif12:arm64\t0.6.21-6ubuntu0.4\tii \nlibex",
+    "truncated": true
+  },
+  "dpkg_audit": {
+    "exit_code": 0,
+    "output": "The following packages are missing the list control file in the\ndatabase, they need to be reinstalled:\n accountsservice      query and manipulate user account information\n acl                  access control list - utilities\n adwaita-icon-theme-full default icon theme of GNOME\n apg                  Automated Password Generator - Standalone version\n apport               automatically generate crash reports for debugging\n apport-symptoms      symptom scripts for apport\n aptdaemon            transaction based package management service\n aptdaemon-data       data files for clients\n aspell               GNU Aspell spell-checker\n aspell-en            English dictionary for GNU Aspell\n avahi-daemon         Avahi mDNS/DNS-SD daemon\n avahi-utils          Avahi browsing, publishing and discovery utilities\n bind9-host           DNS Lookup Utility\n bind9-libs:arm64     Shared Libraries used by BIND 9\n bluez                Bluetooth tools and daemons\n bolt                 system daemon to manage thunderbolt 3 devices\n bsdmainutils         collection of more utilities from FreeBSD\n bubblewrap           setuid wrapper for unprivileged chroot and namespace mani\n cheese-common        Common files for the Cheese tool to take pictures and vid\n chrome-gnome-shell   GNOME Shell extensions integration for web browsers\n clang                C, C++ and Objective-C compiler (LLVM based)\n clang-10             C, C++ and Objective-C compiler\n clang-tidy           clang-based C++ linter tool\n clang-tidy-10        clang-based C++ linter tool\n clang-tools-10       clang-based tools for C/C++ developments\n colord               system service to manage device colour profiles -- system\n colord-data          system service to manage device colour profiles -- data f\n cracklib-runtime     runtime support for password checker library cracklib2\n cups-pk-helper       PolicyKit helper to configure cups with fine-grained priv\n dbus-x11             simple interprocess messaging system (X11 deps)\n dconf-cli            simple configuration storage system - utilities\n desktop-file-utils   Utilities for .desktop files\n dialog               Displays user-friendly dialog boxes from shell scripts\n dictionaries-common  spelling dictionaries - common utilities\n docbook-xml          standard XML documentation system for software and system\n dosfstools           utilities for making and checking MS-DOS FAT filesystems\n eject                ejects CDs and operates CD-Changers under Linux\n emacsen-common       Common facilities for all emacsen\n enchant-2            Wrapper for various spell checker engines (binary program\n evolution-data-server evolution database backend server\n evolution-data-server-common architecture independent files for Evolution Data\n firefox              Safe and easy web browser from Mozilla\n fonts-cantarell      sans serif font family designed for on-screen readability\n fonts-wqy-zenhei     \"WenQuanYi Zen Hei\" A Hei-Ti Style (sans-serif) Chinese f\n fprintd              D-Bus daemon for fingerprint reader access\n fuse                 Filesystem in Userspace\n gcr                  GNOME crypto services (daemon and tools)\n gdb                  GNU Debugger\n gdbserver            GNU Debugger (remote server)\n gdisk                GPT fdisk text-mode partitioning tool\n gdm3                 GNOME Display Manager\n gedit                official text editor of the GNOME desktop environment\n gedit-common         official text editor of the GNOME desktop environment (su\n geoclue-2.0          geoinformation service\n gettext-base         GNU Internationalization utilities for the base system\n gir1.2-accountsservice-1.0 GObject introspection data for AccountService\n gir1.2-gck-1:arm64   GObject introspection data for the GCK library\n gir1.2-gcr-3:arm64   GObject introspection data for the GCR library\n gir1.2-gdesktopenums-3.0:arm64 GObject introspection for GSettings desktop-wide sche\n gir1.2-gdm-1.0:arm64 GObject introspection data for the GNOME Display Manager\n gir1.2-geoclue-2.0:arm64 convenience library to interact with geoinformation servi\n gir1.2-gnomebluetooth-1.0:arm64 Introspection data for GnomeBluetooth\n gir1.2-gnomedesktop-3.0:arm64 Introspection data for GnomeDesktop\n gir1.2-graphene-1.0:arm64 library of graphic data types (introspection files)\n gir1.2-gtksource-4:arm64 gir files for the GTK+ syntax highlighting widget\n gir1.2-gweather-3.0:arm64 GObject introspection data for the GWeather library\n gir1.2-handy-0.0:arm64 GObject introspection files for libhandy\n gir1.2-ibus-1.0:arm64 Intelligent Input Bus - introspection data\n gir1.2-json-1.0:arm64 GLib JSON manipulation library (introspection data)\n gir1.2-keybinder-3.0 registers global key bindings for applications - Gtk+3 - \n gir1.2-mutter-6:arm64 GObject introspection data for Mutter\n gir1.2-nm-1.0:arm64  GObject introspection data for the libnm library\n gir1.2-nma-1.0:arm64 GObject introspection data for libnma\n gir1.2-notify-0.7:arm64 sends desktop notifications to a notification daemon (Int\n gir1.2-packagekitglib-1.0 GObject introspection data for the PackageKit GLib l\n gir1.2-peas-1.0:arm64 Application plugin library (introspection files)\n gir1.2-polkit-1.0    GObject introspection data for PolicyKit\n gir1.2-rsvg-2.0:arm64 gir files for renderer library for SVG files\n gir1.2-secret-1:arm64 Secret store (GObject-Introspection)\n gir1.2-soup-2.4:arm64 GObject introspection data for the libsoup HTTP library\n gir1.2-upowerglib-1.0:arm64 GObject introspection data for upower\n gir1.2-vte-2.91:arm64 GObject introspection data for the VTE library\n gjs                  Mozilla-based javascript bindings for the GNOME platform\n gkbd-capplet         GNOME control center tools for libgnomekbd\n gnome-accessibility-themes High Contrast GTK+ 2 theme and icons\n gnome-control-center utilities to configure the GNOME desktop\n gnome-control-center-data configuration applets for GNOME - data files\n gnome-control-center-faces utilities to configure the GNOME desktop - faces im\n gnome-desktop3-data  Common files for GNOME desktop apps\n gnome-keyring        GNOME keyring services (daemon and tools)\n gnome-keyring-pkcs11:arm64 GNOME keyring module for the PKCS#11 module loading libra\n gnome-menus          GNOME implementation of the freedesktop menu specificatio\n gnome-online-accounts service to manage online accounts for the GNOME desktop\n gnome-session        GNOME Session Manager - GNOME 3 session\n gnome-session-bin    GNOME Session Manager - Minimal runtime\n gnome-session-common GNOME Session Manager - common files\n gnome-settings-daemon daemon handling the GNOME session settings\n gnome-settings-daemon-common daemon handling the GNOME session settings - comm\n gnome-shell          graphical shell for the GNOME desktop\n gnome-shell-common   common files for the GNOME graphical shell\n gnome-shell-extension-autohidetopbar GNOME shell automatic topbar hider\n gnome-shell-extension-prefs tool to enable / disable GNOME Shell extensions\n gnome-startup-applications Startup Applications manager for GNOME\n gnome-terminal       GNOME terminal emulator application\n gnome-terminal-data  Data files for the GNOME terminal emulator\n gnome-themes-extra:arm64 Adwaita GTK+ 2 theme \u2014 engine\n gnome-themes-extra-data Adwaita GTK+ 2 theme \u2014 common files\n gnome-tweaks         tool to adjust advanced configuration settings for GNOME\n gnome-user-docs      GNOME user docs\n groff-base           GNU troff text-formatting system (base system components)\n gstreamer1.0-clutter-3.0:arm64 Clutter PLugin for GStreamer 1.0\n gtk2-engines-pixbuf:arm64 pixbuf-based theme for GTK 2\n gvfs:arm64           userspace virtual filesystem - GIO module\n gvfs-backends        userspace virtual filesystem - backends\n gvfs-common          userspace virtual filesystem - common data files\n gvfs-daemons         userspace virtual filesystem - servers\n gvfs-libs:arm64      userspace virtual filesystem - private libraries\n hostapd              IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator\n hunspell-en-us       English_american dictionary for hunspell\n ibus                 Intelligent Input Bus - core\n ibus-data            Intelligent Input Bus - data files\n ibus-gtk:arm64       Intelligent Input Bus - GTK2 support\n ibus-gtk3:arm64      Intelligent Input Bus - GTK3 support\n iio-sensor-proxy     IIO sensors to D-Bus proxy\n im-config            Input method configuration framework\n ippusbxd             Daemon for IPP USB printer support\n iptables             administration tools for packet filtering and NAT\n language-selector-common Language selector for Ubuntu\n language-selector-gnome Language selector for Ubuntu\n libaccountsservice0:arm64 query and manipulate user account information - shared li\n libamtk-5-0:arm64    Actions, Menus and Toolbars Kit for GTK+\n libamtk-5-common     Actions, Menus and Toolbars Kit for GTK+ - architecture-i\n libappindicator3-1   Application Indicators\n libappstream4:arm64  Library to access AppStream services\n libarchive13:arm64   Multi-format archive and compression library (shared libr\n libaspell15:arm64    GNU Aspell spell-checker runtime library\n libatasmart4:arm64   ATA S.M.A.R.T. reading and parsing library\n libauthen-sasl-perl  Authen::SASL - SASL Authentication framework\n libavahi-core7:arm64 Avahi's embeddable mDNS/DNS-SD library\n libavahi-glib1:arm64 Avahi GLib integration library\n libbabeltrace1:arm64 Babeltrace conversion libraries\n libblkid-dev:arm64   block device ID library - headers and static libraries\n libblockdev-crypto2:arm64 Crypto plugin for libblockdev\n libblockdev-fs2:arm64 file system plugin for libblockdev\n libblockdev-loop2:arm64 Loop device plugin for libblockdev\n libblockdev-part-err2:arm64 Partition error utility functions for libblockdev\n libblockdev-part2:arm64 Partitioning plugin for libblockdev\n libblockdev-swap2:arm64 Swap plugin for libblockdev\n libblockdev-utils2:arm64 Utility functions for libblockdev\n libblockdev2:arm64   Library for manipulating block devices\n libbluetooth3:arm64  Library to use the BlueZ Linux Bluetooth stack\n libc6-arm64-cross    GNU C Library: Shared libraries (for cross-compiling)\n libc6-dbg:arm64      GNU C Library: detached debugging symbols\n libcamel-1.2-62:arm64 Evolution MIME message handling library\n libcanberra-gtk3-0:arm64 GTK+ 3.0 helper for playing widget event sounds with libc\n libcanberra-gtk3-module:arm64 translates GTK3 widgets signals to event sounds\n libcanberra-pulse:arm64 PulseAudio backend for libcanberra\n libcdio-cdda2:arm64  library to read and control digital audio CDs\n libcdio-paranoia2:arm64 library to read digital audio CDs with error correction\n libcheese-gtk25:arm64 tool to take pictures and videos from your webcam - widge\n libcheese8:arm64     tool to take pictures and videos from your webcam - base \n libclang-common-10-dev Clang library - Common development package\n libclang-cpp10       C++ interface to the Clang library\n libclang1-10         C interface to the Clang library\n libclang1-8          C interface to the Clang library\n libclutter-1.0-0:arm64 Open GL based interactive canvas library\n libclutter-1.0-common Open GL based interactive canvas library (common files)\n libclutter-gst-3.0-0:arm64 Open GL based interactive canvas library GStreamer elemen\n libclutter-gtk-1.0-0:arm64 Open GL based interactive canvas library GTK+ widget\n libcogl-common       Object oriented GL/GLES Abstraction/Utility Layer (common\n libcogl-pango20:arm64 Object oriented GL/GLES Abstraction/Utility Layer\n libcogl-path20:arm64 Object oriented GL/GLES Abstraction/Utility Layer\n libcogl20:arm64      Object oriented GL/GLES Abstraction/Utility Layer\n libcolord-gtk1:arm64 GTK+ convenience library for interacting with colord\n libcolorhug2:arm64   library to access the ColorHug colourimeter -- runtime\n libcrack2:arm64      pro-active password checker library\n libcue2:arm64        CUE Sheet Parser Library\n libdata-dump-perl    Perl module to help dump data structures\n libdbusmenu-glib4:arm64 library for passing menus over DBus\n libdbusmenu-gtk3-4:arm64 library for passing menus over DBus - GTK+ version\n libdee-1.0-4:arm64   Model to synchronize multiple instances over DBus - share\n libdw1:arm64         library that provides access to the DWARF debug informati\n libebackend-1.2-10:arm64 Utility library for evolution data servers\n libebook-1.2-20:arm64 Client library for evolution address books\n libebook-contacts-1.2-3:arm64 Client library for evolution contacts books\n libecal-2.0-1:arm64  Client library for evolution calendars\n libedata-book-1.2-26:arm64 Backend library for evolution address books\n libedata-cal-2.0-1:arm64 Backend library for evolution calendars\n libedataserver-1.2-24:arm64 Utility library for evolution data servers\n libedataserverui-1.2-2:arm64 Utility library for evolution data servers\n libegl-dev:arm64     Vendor neutral GL dispatch library -- EGL development fil\n libenchant-2-2:arm64 Wrapper library for various spell checker engines (runtim\n libencode-locale-perl utility to determine the locale encoding\n libexempi8:arm64     library to parse XMP metadata (Library)\n libexiv2-27:arm64    EXIF/IPTC/XMP metadata manipulation library\n libffi-dev:arm64     Foreign Function Interface library (development files)\n libfile-basedir-perl Perl module to use the freedesktop basedir specification\n libfile-desktopentry-perl Perl module to handle freedesktop .desktop files\n libfile-listing-perl module to parse directory listings\n libfile-mimeinfo-perl Perl module to determine file types\n libfont-afm-perl     Font::AFM - Interface to Adobe Font Metrics files\n libfontenc1:arm64    X11 font encoding library\n libfprint-2-2:arm64  async fingerprint library of fprint project, shared libra\n libfuse2:arm64       Filesystem in Userspace (library)\n libgail-common:arm64 GNOME Accessibility Implementation Library -- common modu\n libgail18:arm64      GNOME Accessibility Implementation Library -- shared libr\n libgc1c2:arm64       conservative garbage collector for C and C++\n libgck-1-0:arm64     Glib wrapper library for PKCS#11 - runtime\n libgcr-base-3-1:arm64 Library for Crypto related tasks\n libgcr-ui-3-1:arm64  Library for Crypto UI related tasks\n libgd3:arm64         GD Graphics Library\n libgdata-common      Library for accessing GData webservices - common data fil\n libgdata22:arm64     Library for accessing GData webservices - shared librarie\n libgdm1              GNOME Display Manager (shared library)\n libgee-0.8-2:arm64   GObject based collection and utility library\n libgeoclue-2-0:arm64 convenience library to interact with geoinformation servi\n libgeocode-glib0:arm64 geocoding and reverse geocoding GLib library using Nomina\n libgexiv2-2:arm64    GObject-based wrapper around the Exiv2 library\n libgjs0g:arm64       Mozilla-based javascript bindings for the GNOME platform\n libgl-dev:arm64      Vendor neutral GL dispatch library -- GL development file\n libglib2.0-bin       Programs for the GLib library\n libglib2.0-dev:arm64 Development files for the GLib library\n libglib2.0-dev-bin   Development utilities for the GLib library\n libglu1-mesa:arm64   Mesa OpenGL utility library (GLU)\n libglu1-mesa-dev:arm64 Mesa OpenGL utility library -- development files\n libglx-dev:arm64     Vendor neutral GL dispatch library -- GLX development fil\n libgnome-autoar-0-0:arm64 Archives integration support for GNOME\n libgnome-bluetooth13:arm64 GNOME Bluetooth tools - support library\n libgnome-desktop-3-19:arm64 Utility library for loading .desktop files - runtime fil\n libgnomekbd-common   GNOME library to manage keyboard configuration - common f\n libgnomekbd8:arm64   GNOME library to manage keyboard configuration - shared l\n libgoa-1.0-0b:arm64  library for GNOME Online Accounts\n libgoa-1.0-common    library for GNOME Online Accounts - common files\n libgoa-backend-1.0-1:arm64 backend library for GNOME Online Accounts\n libgpgme11:arm64     GPGME - GnuPG Made Easy (library)\n libgphoto2-6:arm64   gphoto2 digital camera library\n libgphoto2-l10n      gphoto2 digital camera library - localized messages\n libgphoto2-port12:arm64 gphoto2 digital camera port library\n libgsf-1-114:arm64   Structured File Library - runtime version\n libgsf-1-common      Structured File Library - common files\n libgsound0:arm64     small library for playing system sounds\n libgspell-1-2:arm64  spell-checking library for GTK+ applications\n libgspell-1-common   libgspell architecture-independent files\n libgtk2.0-0:arm64    GTK graphical user interface library - old version\n libgtk2.0-bin        programs for the GTK graphical user interface library\n libgtk2.0-common     common files for the GTK graphical user interface library\n libgtksourceview-4-0:arm64 shared libraries for the GTK+ syntax highlighting widget\n libgtksourceview-4-common common files for the GTK+ syntax highlighting widget\n libgtop-2.0-11:arm64 gtop system monitoring library (shared)\n libgtop2-common      gtop system monitoring library (common)\n libgupnp-av-1.0-2    Audio/Visual utility library for GUPnP\n libgupnp-dlna-2.0-3  DLNA utility library for GUPnP\n libgusb2:arm64       GLib wrapper around libusb1\n libgweather-3-16:arm64 GWeather shared library\n libgweather-common   GWeather common files\n libgxps2:arm64       handling and rendering XPS documents (library)\n libhandy-0.0-0:arm64 Library with GTK widgets for mobile phones\n libharfbuzz-icu0:arm64 OpenType text shaping engine ICU backend\n libhtml-form-perl    module that represents an HTML form element\n libhtml-format-perl  module for transforming HTML into various formats\n libhtml-parser-perl  collection of modules that parse HTML text documents\n libhtml-tagset-perl  data tables pertaining to HTML\n libhtml-tree-perl    Perl module to represent and create HTML syntax trees\n libhttp-cookies-perl HTTP cookie jars\n libhttp-daemon-perl  simple http server class\n libhttp-date-perl    module of date conversion routines\n libhttp-message-perl perl interface to HTTP style messages\n libhttp-negotiate-perl implementation of content negotiation\n libhunspell-1.7-0:arm64 spell checker and morphological analyzer (shared library)\n libhyphen0:arm64     ALTLinux hyphenation library - shared library\n libibus-1.0-5:arm64  Intelligent Input Bus - shared library\n libical3:arm64       iCalendar library implementation in C (runtime)\n libieee1284-3:arm64  cross-platform library for parallel port access\n libimobiledevice6:arm64 Library for communicating with iPhone and other Apple dev\n libio-html-perl      open an HTML file with automatic charset detection\n libio-socket-ssl-perl Perl module implementing object oriented interface to SS\n libio-stringy-perl   modules for I/O on in-core objects (strings/arrays)\n libip6tc2:arm64      netfilter libip6tc library\n libipc-system-simple-perl Perl module to run commands simply, with detailed di\n libjavascriptcoregtk-4.0-18:arm64 JavaScript engine library from WebKitGTK\n libkeybinder-3.0-0:arm64 registers global key bindings for applications - Gtk+3\n libkf5syntaxhighlighting-data Syntax highlighting Engine - translations\n libkf5syntaxhighlighting5 Syntax highlighting Engine\n libldb2:arm64        LDAP-like embedded database - shared library\n libllvm10:arm64      Modular compiler and toolchain technologies, runtime libr\n libllvm8:arm64       Modular compiler and toolchain technologies, runtime libr\n liblmdb0:arm64       Lightning Memory-Mapped Database shared library\n liblwp-mediatypes-perl module to guess media type for a file or a URL\n liblwp-protocol-https-perl HTTPS driver for LWP::UserAgent\n libmailtools-perl    modules to manipulate email in perl programs\n libmaxminddb0:arm64  IP geolocation database library\n libmbim-glib4:arm64  Support library to use the MBIM protocol\n libmbim-proxy        Proxy to communicate with MBIM ports\n libmediaart-2.0-0:arm64 media art extraction and cache management library\n libmm-glib0:arm64    D-Bus service for managing modems - shared libraries\n libmount-dev:arm64   device mounting library - headers and static libraries\n libmozjs-68-0:arm64  SpiderMonkey JavaScript library\n libmtp-common        Media Transfer Protocol (MTP) common files\n libmtp-runtime       Media Transfer Protocol (MTP) runtime tools\n libmtp9:arm64        Media Transfer Protocol (MTP) library\n libmutter-6-0:arm64  window manager library from the Mutter window manager\n libnautilus-extension1a:arm64 libraries for nautilus components - runtime version\n libncurses-dev:arm64 developer's libraries for ncurses\n libndp0:arm64        Library for Neighbor Discovery Protocol\n libnet-dbus-perl     Perl extension for the DBus bindings\n libnet-http-perl     module providing low-level HTTP connection client\n libnet-smtp-ssl-perl Perl module providing SSL support to Net::SMTP\n libnet-ssleay-perl   Perl module for Secure Sockets Layer (SSL)\n libnewt0.52:arm64    Not Erik's Windowing Toolkit - text mode windowing with s\n libnfs13:arm64       NFS client library (shared library)\n libnftnl11:arm64     Netfilter nftables userspace API library\n libnm0:arm64         GObject-based client library for NetworkManager\n libnma0:arm64        library for wireless and mobile dialogs (libnm version)\n libnotify4:arm64     sends desktop notifications to a notification daemon\n libnss-mdns:arm64    NSS module for Multicast DNS name resolution\n libntfs-3g883        read/write NTFS driver for FUSE (runtime library)\n libobjc-9-dev:arm64  Runtime library for GNU Objective-C applications (develop\n libobjc4:arm64       Runtime library for GNU Objective-C applications\n libomp-10-dev        LLVM OpenMP runtime - dev package\n libomp5-10:arm64     LLVM OpenMP runtime\n libpackagekit-glib2-18:arm64 Library for accessing PackageKit using GLib\n libpam-fprintd:arm64 PAM module for fingerprint authentication through fprintd\n libpam-gnome-keyring:arm64 PAM module to unlock the GNOME keyring upon login\n libparted-fs-resize0:arm64 disk partition manipulator - shared FS resizing library\n libparted2:arm64     disk partition manipulator - shared library\n libpci3:arm64        PCI utilities (shared library)\n libpcre2-dev:arm64   New Perl Compatible Regular Expression Library - developm\n libpcre2-posix2:arm64 New Perl Compatible Regular Expression Library - posix-co\n libpcre3-dev:arm64   Old Perl 5 Compatible Regular Expression Library - develo\n libpcsclite1:arm64   Middleware to access a smart card using PC/SC (library)\n libpeas-1.0-0:arm64  Application plugin library\n libpeas-common       Application plugin library (common files)\n libpfm4:arm64        Library to program the performance monitoring events\n libphonenumber7:arm64 parsing/formatting/validating phone numbers\n libplist3:arm64      Library for handling Apple binary and XML property lists\n libpolkit-agent-1-0:arm64 PolicyKit Authentication Agent API\n libpolkit-gobject-1-0:arm64 PolicyKit Authorization API\n libprotobuf17:arm64  protocol buffers C++ library\n libpulse-dev:arm64   PulseAudio client development headers and libraries\n libpulse-mainloop-glib0:arm64 PulseAudio client libraries (glib support)\n libpulsedsp:arm64    PulseAudio OSS pre-load library\n libpwquality-common  library for password quality checking and generation (dat\n libpwquality1:arm64  library for password quality checking and generation\n libqbscore1.13:arm64 Qbs core library\n libqmi-glib5:arm64   Support library to use the Qualcomm MSM Interface (QMI) p\n libqmi-proxy         Proxy to communicate with QMI ports\n libqt5concurrent5:arm64 Qt 5 concurrent module\n libqt5designer5:arm64 Qt 5 designer module\n libqt5designercomponents5:arm64 Qt 5 Designer components module\n libqt5help5:arm64    Qt 5 help module\n libqt5multimedia5:arm64 Qt 5 Multimedia module\n libqt5multimediagsttools5:arm64 GStreamer tools for  Qt 5 Multimedia module\n libqt5multimediaquick5:arm64 Qt 5 Multimedia Quick module\n libqt5multimediawidgets5:arm64 Qt 5 Multimedia Widgets module\n libqt5opengl5-dev:arm64 Qt 5 OpenGL library development files\n libqt5positioning5:arm64 Qt Positioning module\n libqt5printsupport5:arm64 Qt 5 print support module\n libqt5qml5:arm64     Qt 5 QML module\n libqt5quick",
+    "truncated": true
+  },
+  "mounts": {
+    "/": {
+      "exit_code": 0,
+      "output": "/      /dev/sda6 ext4   rw,relatime\n",
+      "truncated": false
+    },
+    "/opt": {
+      "exit_code": 0,
+      "output": "/      /dev/sda6 ext4   rw,relatime\n",
+      "truncated": false
+    },
+    "/data": {
+      "exit_code": 0,
+      "output": "/data  /dev/sda12 ext4   rw,nosuid,nodev,noexec,relatime,discard,noauto_da_alloc,stripe=128,data=ordered\n",
+      "truncated": false
+    },
+    "/tmp": {
+      "exit_code": 0,
+      "output": "/      /dev/sda6 ext4   rw,relatime\n",
+      "truncated": false
+    }
+  },
+  "filesystems": "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbdev\nnodev\tproc\nnodev\tcgroup\nnodev\tcgroup2\nnodev\tcpuset\nnodev\tdevtmpfs\nnodev\tbinfmt_misc\nnodev\tconfigfs\nnodev\tdebugfs\nnodev\ttracefs\nnodev\tsecurityfs\nnodev\tsockfs\nnodev\tbpf\nnodev\tpipefs\nnodev\tramfs\nnodev\trpc_pipefs\nnodev\tdevpts\n\text3\n\text2\n\text4\n\tvfat\n\tmsdos\nnodev\tnfs\nnodev\tnfsd\n\tfuseblk\nnodev\tfuse\nnodev\tfusectl\nnodev\toverlay\nnodev\tincremental-fs\n\tf2fs\n\terofs\nnodev\tmqueue\n\tbtrfs\nnodev\tpstore\nnodev\tfunctionfs",
+  "cgroups": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpuset\t9\t1\t1\ncpu\t4\t1\t1\ncpuacct\t4\t1\t1\nblkio\t6\t1\t1\nmemory\t8\t235\t1\ndevices\t7\t134\t1\nfreezer\t5\t1\t1\nnet_cls\t3\t1\t1\nperf_event\t10\t1\t1\nnet_prio\t3\t1\t1\npids\t2\t144\t1",
+  "cgroup_mount": "10:perf_event:/\n9:cpuset:/\n8:memory:/user.slice/user-0.slice/session-7.scope\n7:devices:/user.slice\n6:blkio:/\n5:freezer:/\n4:cpu,cpuacct:/\n3:net_cls,net_prio:/\n2:pids:/user.slice/user-0.slice/session-7.scope\n1:name=systemd:/user.slice/user-0.slice/session-7.scope\n0::/user.slice/user-0.slice/session-7.scope",
+  "devices": [
+    "/dev/adsprpc-smd",
+    "/dev/adsprpc-smd-secure",
+    "/dev/dri/by-path",
+    "/dev/dri/card0",
+    "/dev/dri/renderD128",
+    "/dev/video32",
+    "/dev/video33"
+  ],
+  "system_libraries_for_ss": {
+    "libselinux.so.1": [
+      "/lib/aarch64-linux-gnu/libselinux.so.1",
+      "/usr/lib/aarch64-linux-gnu/libselinux.so.1"
+    ],
+    "libmnl.so.0": [
+      "/lib/aarch64-linux-gnu/libmnl.so.0",
+      "/usr/lib/aarch64-linux-gnu/libmnl.so.0"
+    ],
+    "libbsd.so.0": [
+      "/lib/aarch64-linux-gnu/libbsd.so.0",
+      "/usr/lib/aarch64-linux-gnu/libbsd.so.0"
+    ],
+    "libcap.so.2": [
+      "/lib/aarch64-linux-gnu/libcap.so.2",
+      "/usr/lib/aarch64-linux-gnu/libcap.so.2"
+    ],
+    "libc.so.6": [
+      "/lib/aarch64-linux-gnu/libc.so.6",
+      "/usr/lib/aarch64-linux-gnu/libc.so.6"
+    ],
+    "ld-linux-aarch64.so.1": [
+      "/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+      "/lib/ld-linux-aarch64.so.1",
+      "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+      "/usr/lib/ld-linux-aarch64.so.1"
+    ]
+  },
+  "compiler_headers": {
+    "/usr/include/stdio.h": true,
+    "/usr/include/pthread.h": true,
+    "/usr/include/sys/socket.h": false,
+    "/usr/include/aarch64-linux-gnu/sys/socket.h": true
+  },
+  "space": {
+    "exit_code": 0,
+    "output": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/root        20G  7.7G   12G  40% /\n/dev/root        20G  7.7G   12G  40% /\n",
+    "truncated": false
+  },
+  "opt_entries": [
+    "qti",
+    "ros"
+  ],
+  "network_tools_only": true,
+  "host_utc": "2026-11-01T15:20:35.001974+00:00",
+  "adb_identity": "? device product:qcm6490-Ubuntu transport_id:1"
+}

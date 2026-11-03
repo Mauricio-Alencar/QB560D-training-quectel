@@ -1,0 +1,103 @@
+/prj/qct/webtech_hyd18/mlg_user_admin/qaisw_source_repo/qaisw_repo_release/snpe_src/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 2, option - 2
+[USER_INFO] Checking unsigned PD session
+[USER_INFO] QnnDsp <I> QnnHtpLog_create started.
+[USER_WARNING] QnnDsp <W> Initializing HtpProvider
+[USER_VERBOSE] QnnDsp <V> Creating default router
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC create
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the router
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> exit with 0
+[USER_INFO] QnnDsp <I> First connection to QNN stub established!
+[USER_VERBOSE] QnnDsp <V> Loading remote funcs
+[USER_VERBOSE] QnnDsp <V> Async property not supported. Skipping setup async threads
+[USER_VERBOSE] QnnDsp <V> Detected Snapdragon SOC SM7325 with 5 SOCs
+[USER_VERBOSE] QnnDsp <V> Allocating PlatformInfo struct size 120
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the log registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the graph registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the context registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the device registry
+[USER_VERBOSE] QnnDsp <V> HTP: Initializing the tensor counter
+[USER_VERBOSE] QnnDsp <V> HTP: setting isExitCalled to false
+[USER_VERBOSE] QnnDsp <V> HTP: initializing mem registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing mmap registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing graphId registry
+[USER_VERBOSE] QnnDsp <V> HTP: initializing debugFactory
+[USER_VERBOSE] QnnDsp <V> HTP: constructing bundle
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC isPrepareLibLoaded
+[USER_VERBOSE] QnnDsp <V> HTP: initialization completed successfully
+[USER_INFO] QnnDsp <I> Applying log level 4 to 0 devices
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC initializeNativeOpValidatorLogs
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+[USER_VERBOSE] QnnDsp <V> HTP Prepare backend not loaded
+[USER_INFO] QnnDsp <I> QnnHtpLog_create exit.
+[USER_INFO] QnnDsp <I> QnnHtpBackend_create started. backend = 0x947bf930
+[USER_VERBOSE] QnnDsp <V> Backend handle created: 1
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC isPrepareLibLoaded
+[USER_INFO] QnnDsp <I> QnnHtpBackend_create done successfully. backend = 0x947bf930
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo started.
+[USER_INFO] QnnDsp <I> QnnHtpDevice_getPlatformInfo done. status 0x0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create started
+[USER_VERBOSE] QnnDsp <V> Create device with id 0x1
+[USER_VERBOSE] QnnDsp <V> Validating device config 0xd7c61b0
+[USER_VERBOSE] QnnDsp <V> Setting device config 0xd7c61b0 via router
+[USER_WARNING] QnnDsp <W> HTP arch will be deprecated, please set SoC id instead.
+[USER_VERBOSE] QnnDsp <V> Setting default value for unsigned PD usage
+[USER_VERBOSE] QnnDsp <V> skel file path file:///libSnpeHtpV68Skel.so?snpe_skel_handle_invoke&_modver=1.0&_dom=cdsp
+[USER_VERBOSE] QnnDsp <V> Transport session for deviceId 0 coreId 0 pdId 0 not found!
+[USER_VERBOSE] QnnDsp <V> DeviceId 0 coreId 0 pdId 0 not present, insert a new entry 0xd7da5e0
+[USER_INFO] QnnDsp <I> exits with 2, successfully initialized rpc memory
+[USER_VERBOSE] QnnDsp <V> Successful rpcMemInit
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 136 isInit 1
+[USER_VERBOSE] QnnDsp <V> Found transport session 0xd7da5e0 for deviceId 0 coreId 0 pdId 0!
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_INFO] QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+[USER_VERBOSE] QnnDsp <V> Found transport session 0xd7da5e0 for deviceId 0 coreId 0 pdId 0!
+[USER_INFO] QnnDsp <I> setHtpPowerDeviceInstance started for powerConfigId: 0, deviceId: 0, coreId: 0
+[USER_INFO] QnnDsp <I> setHtpPowerDeviceInstance done. status 0x0
+[USER_INFO] QnnDsp <I> Polling not supported in createDevicePollingContext
+[USER_VERBOSE] QnnDsp <V> Async property not supported. Skipping setup Async context
+[USER_VERBOSE] QnnDsp <V> exits device initialization with  0
+[USER_WARNING] QnnDsp <W> Function not called, PrepareLib isn't loaded!
+[USER_VERBOSE] QnnDsp <V> Found transport session 0xd7da5e0 for deviceId 0 coreId 0 pdId 0!
+[USER_VERBOSE] QnnDsp <V> setSkelLogLevel return 0
+[USER_INFO] QnnDsp <I> QnnHtpDevice_create done. device = 0x1. status 0x0
+[USER_INFO] SNPEBuilder Runtime - 2, Profiling Level - 2, Execution Priority - 0, User Buffer - 0, Debug Mode - 0, CPU Fallback - 0, Init Cache - 0, CPU Fixed Point Mode - 0
+[USER_INFO] Target device backend record identifier: HTP_V68_SM7325_2MB
+[USER_INFO] No cache record in the DLC matches the target device (HTP_V68_SM7325_2MB). Creating a new record
+[USER_WARNING] Cannot perform accelerated HTP init without a valid and complete cache record
+[USER_INFO] Attempting regular HTP cache based init
+[USER_INFO] No change in input dimensions so no resizing of network is required.
+[USER_VERBOSE] Number of ops in validation cache record (0) does not match the size of the network (32)
+[USER_INFO] No validation cache record found. Validating network and renewing validation cache
+[USER_INFO] Checking unsigned PD session
+[USER_VERBOSE] QnnDsp <V> check for mandatory input
+[USER_VERBOSE] QnnDsp <V> check for mandatory output
+[USER_VERBOSE] QnnDsp <V> check if SocModel support FP16
+[USER_ERROR] QnnDsp <E> The SocModel doesn't support FP16
+[USER_WARNING] Validation for Op=MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant Type=Conv2d at pos=0 failed for runtime=DSP
+[USER_ERROR] 1002 | No backend could validate Op=MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant Type=Conv2d error code=3110
+[USER_ERROR] 1002 | No backend could validate Op=MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant Type=Conv2d error code=3110
+[USER_INFO] Cleaning up cluster manager instance resources
+[USER_ERROR] SNPEBuilder::build Create network failed
+Traceback (most recent call last):
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 212, in <module>
+    main()
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 177, in main
+    engine = Snpe(library, model, args.backend, output, {'off': 0, 'basic': 1, 'detailed': 2}[args.profiling])
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 88, in __init__
+    self.handle = self.own('SNPE', self.lib.Snpe_SNPEBuilder_Build(builder))
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 109, in own
+    raise RuntimeError(kind + ' creation failed: ' + (self.lib.Snpe_ErrorCode_GetLastErrorString() or self.lib.Snpe_Util_GetLastError() or b'').decode(errors='replace'))
+RuntimeError: SNPE creation failed: error_code=1002; error_message=Layer parameter value is invalid. No backend could validate Op=MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant Type=Conv2d error code=3110; error_component=Model Validation; line_no=141; thread_id=547993964560
+[USER_INFO] BackendTerminate triggered
+[USER_VERBOSE] QnnDsp <V> Final cleanup: free backend id 0x1
+[USER_WARNING] QnnDsp <W> Backend 1 free cleanup called during process exit
+[USER_VERBOSE] QnnDsp <V> Terminated backend 0x1 successfully in backendLifecycleManager
+[USER_WARNING] QnnDsp <W> qnnOpPackageManager: hexagon unload op package function pointer is nullptr!
+[USER_VERBOSE] QnnDsp <V> RouterFastRPC tryUnLoadPrepare
+/prj/qct/webtech_hyd18/mlg_user_admin/qaisw_source_repo/qaisw_repo_release/snpe_src/avante-tools/prebuilt/dsp/hexagon-sdk-4.2.0/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc
+
+__QB560D_EXIT__=1

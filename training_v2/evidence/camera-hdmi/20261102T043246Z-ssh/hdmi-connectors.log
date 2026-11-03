@@ -1,0 +1,80 @@
+
+CONNECTOR /sys/class/drm/card0-DP-1
+status: disconnected
+enabled: disabled
+modes: edid_bytes: 0
+
+CONNECTOR /sys/class/drm/card0-DSI-1
+status: connected
+enabled: enabled
+modes: 1920x1080x60x148500vid
+edid_bytes: 128
+
+CONNECTOR /sys/class/drm/card0-Virtual-1
+status: connected
+enabled: disabled
+modes: 4096x2160
+4096x2160
+2560x1600
+2560x1600
+1920x1440
+1856x1392
+1792x1344
+2048x1152
+1920x1200
+1920x1200
+1920x1080
+1600x1200
+1680x1050
+1680x1050
+1400x1050
+1400x1050
+1600x900
+1280x1024
+1440x900
+1440x900
+1280x960
+1366x768
+1366x768
+1360x768
+1280x800
+1280x800
+1280x768
+1280x768
+1280x720
+1024x768
+800x600
+800x600
+848x480
+640x480
+edid_bytes: 0
+
+DRIVER
+/sys/bus/platform/drivers/msm_drm
+no device found
+trying to open device 'i915'...failed
+trying to open device 'amdgpu'...failed
+trying to open device 'radeon'...failed
+trying to open device 'nouveau'...failed
+trying to open device 'vmwgfx'...failed
+trying to open device 'omapdrm'...failed
+trying to open device 'exynos'...failed
+trying to open device 'tilcdc'...failed
+trying to open device 'msm'...failed
+trying to open device 'sti'...failed
+trying to open device 'tegra'...failed
+trying to open device 'imx-drm'...failed
+trying to open device 'rockchip'...failed
+trying to open device 'atmel-hlcdc'...failed
+trying to open device 'fsl-dcu-drm'...failed
+trying to open device 'vc4'...failed
+trying to open device 'virtio_gpu'...failed
+trying to open device 'mediatek'...failed
+trying to open device 'meson'...failed
+trying to open device 'pl111'...failed
+trying to open device 'stm'...failed
+trying to open device 'sun4i-drm'...failed
+trying to open device 'armada-drm'...failed
+trying to open device 'komeda'...failed
+trying to open device 'imx-dcss'...failed
+trying to open device 'mxsfb-drm'...failed

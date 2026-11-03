@@ -1,0 +1,105 @@
+QLRIL_Init success
+QLRIL library current version:202411060822
+Copyright (C) 2020 Quectel, Smart Linux
+Group Name:QL RIL API, Supported test cases:
+0:	Help, Show all the API
+========================================
+General Functions
+========================================
+1:	QLRIL_Init
+2:	QLRIL_Exit
+3:	QLRIL_GetVersion
+4:	QLRIL_GetSimCardSlotId
+5:	QLRIL_SetSimCardSlotId
+6:	QLRIL_SendAT
+7:	QLRIL_ResetQcrild
+8:	QLRIL_GetDefaultTimeout
+9:	QLRIL_SetDefaultTimeout
+========================================
+Unsolicited Indication Callback
+========================================
+10:	QLRIL_AddUnsolEventsListener
+11:	QLRIL_DelUnsolEventsListener
+12:	QLRIL_RegisterUnsolEvents
+13:	QLRIL_UnregisterUnsolEvents
+========================================
+Query and Settings
+========================================
+19:	QLRIL_GetIMSIForUSIM
+20:	QLRIL_GetOperator
+21:	QLRIL_GetIccCardStatus
+22:	QLRIL_SetRadioPower
+23:	QLRIL_SetScreenState
+24:	QLRIL_RequestShutdown - DEPRECATED
+25:	QLRIL_GetDeviceIdentity
+26:	QLRIL_GetIMSI - DEPRECATED
+27:	QLRIL_GetIMSIForApp
+28:	QLRIL_GetIMEI - DEPRECATED
+29:	QLRIL_GetSignalStrength
+30:	QLRIL_GetPhoneNumber
+31:	QLRIL_SupplyIccPin
+32:	QLRIL_SupplyIccPuk
+33:	QLRIL_ChangeIccPin
+34:	QLRIL_QueryFacilityLockForApp
+35:	QLRIL_SetFacilityLockForApp
+36:	QLRIL_IccIOForApp
+37:	QLRIL_GetNetworkSelectionMode
+38:	QLRIL_GetBasebandVersion
+39:	QLRIL_GetSimIccId
+140:	QLRIL_GetNITZTime
+========================================
+Voice Call
+========================================
+40:	QLRIL_GetVoiceRegistrationState
+41:	QLRIL_GetVoiceRadioTechnology
+42:	QLRIL_GetImsRegistrationState
+43:	QLRIL_Dial
+44:	QLRIL_AcceptCall
+45:	QLRIL_RejectCall
+46:	QLRIL_GetCurrentCalls
+47:	QLRIL_HangupConnection
+48:	QLRIL_HangupWaitingOrBackground
+49:	QLRIL_HangupForegroundResumeBackground
+50:	QLRIL_GetMute
+51:	QLRIL_SetMute
+52:	QLRIL_SwitchWaitingOrHoldingAndActive
+53:	QLRIL_Conference
+54:	QLRIL_GetCurrentCallsByAtCmd
+56:	QLRIL_IMSServerState
+57:	QLRIL_IMSServerEnable
+58:	QLRIL_IMSSendImsRegistrationState
+59:	QLRIL_IMSSendRoamingRegistrationState
+========================================
+Send SMS
+========================================
+60:	QLRIL_SendSms
+61:	QLRIL_SendSmsByPDU
+62:	QLRIL_SendImsGsmSms
+63:	QLRIL_SendImsGsmSmsByPDU
+========================================
+Data Network
+========================================
+70:	QLRIL_GetDataRegistrationState
+71:	QLRIL_SetupDataCall
+72:	QLRIL_SetDataAllowed
+73:	QLRIL_GetDataCallList
+74:	QLRIL_DeactivateDataCall
+75:	QLRIL_GetPreferredNetworkType
+76:	QLRIL_SetPreferredNetworkType
+77:	QLRIL_AppendDNSForIPV4V6
+78:	QLRIL_ClearResolvConfFile
+79:	QLRIL_EnableRNDIS
+80:	QLRIL_DisableRNDIS
+81:	QLRIL_IMSSendDataAllowedStatus
+82:	QLRIL_SetRouteForIPV6
+83:	QLRIL_SetDNSByInterface
+========================================
+GNSS Functions For Qrb
+========================================
+90:	QLRIL_GNSS_CLIENT_OPEN
+91:	QLRIL_GNSS_NEMA_TYPE
+92:	QLRIL_GNSS_START_FIX
+93:	QLRIL_GNSS_STOP_FIX
+94:	QLRIL_GNSS_CLIENT_CLOSE
+95:	QLRIL_GNSS_NEMA_GetLocation
+-1:	Exit!

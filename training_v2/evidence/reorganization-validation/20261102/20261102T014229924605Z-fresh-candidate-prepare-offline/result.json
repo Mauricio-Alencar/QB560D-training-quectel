@@ -1,0 +1,13 @@
+{
+  "label": "fresh-candidate-prepare-offline",
+  "script": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\.qa\\aibox_training\\training_v2\\provision_target\\provision.py",
+  "args": [
+    "prepare",
+    "--offline"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 2.594,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T014229924605Z-fresh-candidate-prepare-offline\\console.log"
+}

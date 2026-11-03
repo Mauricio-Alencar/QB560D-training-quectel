@@ -1,0 +1,2 @@
+Logging started for program DebugLog on host qcs6490-odk at Sun Nov 01 2026 10:21:45.992864 (this log file is /tmp/qb560d-training/evidence/rebuild_check_cpu/DebugLog.00.txt)
+Logging stopped at Sun Nov 01 2026 10:21:46.321888

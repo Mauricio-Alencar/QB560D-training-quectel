@@ -1,0 +1,17 @@
+---
+timestamp: 12414088174
+command: /tmp/update-qiart-251-mobilenet-validation/bin/qnn-net-run --model /tmp/update-qiart-251-mobilenet-validation/lib/libQnnModelDlc.so --dlc_path /tmp/update-qiart-251-mobilenet-validation/model/mobilenet_v2.dlc --backend /tmp/update-qiart-251-mobilenet-validation/lib/libQnnCpu.so --input_list /tmp/update-qiart-251-mobilenet-validation/input/input_list.txt --output_dir /tmp/update-qiart-251-mobilenet-validation/results/20261101T022857617912Z/cpu --profiling_level detailed --log_level info --num_inferences 5 --keep_num_outputs 1
+execution_mode: synchronous
+inferences_completed: 5
+graphs:
+  - graph_name: graph_7qmdmfsj
+    input_tensors:
+    - tensor_name: image_tensor
+      id: 1
+      datatype: QNN_DATATYPE_UFIXED_POINT_8
+      dimensions: [1,224,224,3]
+    output_tensors:
+    - tensor_name: class_logits
+      id: 2
+      datatype: QNN_DATATYPE_UFIXED_POINT_8
+      dimensions: [1,1000]

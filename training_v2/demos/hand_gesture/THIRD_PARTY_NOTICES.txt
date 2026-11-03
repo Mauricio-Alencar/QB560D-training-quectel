@@ -1,0 +1,17 @@
+geometry.py adapts the Qualcomm AI Hub MediaPipe application geometry using
+NumPy and Pillow. Reference source snapshots and origin URLs are in assets/.
+Copyright (c) 2025 Qualcomm Technologies, Inc. and/or its subsidiaries.
+BSD-3-Clause terms: assets/licenses/QAI_HUB_MODELS_LICENSE.txt.
+
+The original trained model license is identified by the Qualcomm model card
+as the Google MediaPipe license. Copies of the pointer and original Apache 2.0
+license are in assets/licenses/MODEL_LICENSE_POINTER.txt and
+assets/licenses/MEDIAPIPE_LICENSE.txt.
+
+Photo credits, original source URLs and applicable Creative Commons licenses:
+see ../GUIA_WORKSHOP_HAND_GESTURE.txt, FONTES E CREDITOS.
+Original photo files are preserved. prediction.png adds experimental model
+annotations. Preserve the source photo attribution and applicable license.
+All downloaded assets have source URLs and SHA-256 in assets.lock.json.
+
+QAIRT runtime terms: ../cache/sdk/qairt/2.51.40.260930/LICENSE.pdf.

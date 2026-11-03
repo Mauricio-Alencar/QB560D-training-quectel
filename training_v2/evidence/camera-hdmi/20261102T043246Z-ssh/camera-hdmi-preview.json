@@ -1,0 +1,7 @@
+{
+  "command": "timeout -k 3s -s INT 35s env XDG_RUNTIME_DIR=/run/user/root WAYLAND_DISPLAY=wayland-0 gst-launch-1.0 -e v4l2src device=/dev/video0 num-buffers=500 ! video/x-raw,format=YUY2,width=640,height=480,framerate=25/1 ! videoconvert ! waylandsink",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true,
+  "video_recorded": false
+}

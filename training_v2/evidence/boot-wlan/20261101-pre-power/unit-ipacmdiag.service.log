@@ -1,0 +1,51 @@
+Result=exit-code
+ExecMainStatus=255
+Requires=system.slice
+Wants=
+Before=ipacm.service
+After=system.slice start_stop_ipa_fws.service systemd-journald.socket
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/ipacmdiag.service
+# /lib/systemd/system/ipacmdiag.service
+[Unit]
+Description=start IPA configuration manager diag
+DefaultDependencies=no
+After=start_stop_ipa_fws.service
+Before=ipacm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ipacmdiag
+ExecStop=/sbin/start-stop-daemon -K -n ipacmdiag
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:39 CST. --
+Nov 02 02:46:13 qcs6490-odk ipacmdiag[4281]: Error binding the socket, errno: 2
+Nov 02 02:46:13 qcs6490-odk systemd[1]: ipacmdiag.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 02:46:13 qcs6490-odk systemd[1]: ipacmdiag.service: Failed with result 'exit-code'.
+Nov 02 02:46:14 qcs6490-odk systemd[1]: ipacmdiag.service: Scheduled restart job, restart counter is at 3.
+Nov 02 02:46:14 qcs6490-odk systemd[1]: Stopped start IPA configuration manager diag.
+Nov 02 02:46:14 qcs6490-odk systemd[1]: Started start IPA configuration manager diag.
+Nov 02 02:46:14 qcs6490-odk ipacmdiag[4295]: diag:successfully connected to socket 3
+Nov 02 02:46:14 qcs6490-odk ipacmdiag[4295]: server create ipacm_log socket successfully (6)
+Nov 02 02:46:14 qcs6490-odk ipacmdiag[4295]: Error binding the socket, errno: 2
+Nov 02 02:46:14 qcs6490-odk systemd[1]: ipacmdiag.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 02:46:14 qcs6490-odk systemd[1]: ipacmdiag.service: Failed with result 'exit-code'.
+Nov 02 02:46:15 qcs6490-odk systemd[1]: ipacmdiag.service: Scheduled restart job, restart counter is at 4.
+Nov 02 02:46:15 qcs6490-odk systemd[1]: Stopped start IPA configuration manager diag.
+Nov 02 02:46:15 qcs6490-odk systemd[1]: Started start IPA configuration manager diag.
+Nov 02 02:46:15 qcs6490-odk ipacmdiag[4300]: diag:successfully connected to socket 3
+Nov 02 02:46:15 qcs6490-odk ipacmdiag[4300]: server create ipacm_log socket successfully (6)
+Nov 02 02:46:15 qcs6490-odk ipacmdiag[4300]: Error binding the socket, errno: 2
+Nov 02 02:46:15 qcs6490-odk systemd[1]: ipacmdiag.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 02:46:15 qcs6490-odk systemd[1]: ipacmdiag.service: Failed with result 'exit-code'.
+Nov 02 02:46:17 qcs6490-odk systemd[1]: ipacmdiag.service: Scheduled restart job, restart counter is at 5.
+Nov 02 02:46:17 qcs6490-odk systemd[1]: Stopped start IPA configuration manager diag.
+Nov 02 02:46:17 qcs6490-odk systemd[1]: ipacmdiag.service: Start request repeated too quickly.
+Nov 02 02:46:17 qcs6490-odk systemd[1]: ipacmdiag.service: Failed with result 'exit-code'.
+Nov 02 02:46:17 qcs6490-odk systemd[1]: Failed to start start IPA configuration manager diag.
+

@@ -1,0 +1,58 @@
+Result=exit-code
+ExecMainStatus=0
+Requires=system.slice sysinit.target
+Wants=
+Before=shutdown.target multi-user.target
+After=sysinit.target systemd-journald.socket basic.target system.slice
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/fs-scrub-daemon.service
+# /lib/systemd/system/fs-scrub-daemon.service
+# Copyright (c) 2019,2021 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+[Unit]
+Description=fs-scrub-daemon Service
+SourcePath=/sbin/fs-scrub-daemon
+
+[Service]
+User=system
+Group=system
+SupplementaryGroups=ubi
+Restart=on-failure
+RemainAfterExit=yes
+ExecStartPre=+/bin/sh /usr/bin/recoveryfs-mtd.sh
+ExecStart=/sbin/fs-scrub-daemon
+CapabilityBoundingSet=CAP_SYS_RESOURCE
+AmbientCapabilities=CAP_SYS_RESOURCE
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:39 CST. --
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Control process exited, code=exited, status=1/FAILURE
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Failed with result 'exit-code'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Failed to start fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Scheduled restart job, restart counter is at 3.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Stopped fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Starting fs-scrub-daemon Service...
+Nov 02 02:46:10 qcs6490-odk sh[3795]: cat: /proc/mtd: No such file or directory
+Nov 02 02:46:10 qcs6490-odk sh[3808]: chmod: cannot access '/dev/ubi_ctrl': No such file or directory
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Control process exited, code=exited, status=1/FAILURE
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Failed with result 'exit-code'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Failed to start fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Scheduled restart job, restart counter is at 4.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Stopped fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Starting fs-scrub-daemon Service...
+Nov 02 02:46:10 qcs6490-odk sh[3829]: cat: /proc/mtd: No such file or directory
+Nov 02 02:46:10 qcs6490-odk sh[3835]: chmod: cannot access '/dev/ubi_ctrl': No such file or directory
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Control process exited, code=exited, status=1/FAILURE
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Failed with result 'exit-code'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Failed to start fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Scheduled restart job, restart counter is at 5.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Stopped fs-scrub-daemon Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Start request repeated too quickly.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: fs-scrub-daemon.service: Failed with result 'exit-code'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Failed to start fs-scrub-daemon Service.
+

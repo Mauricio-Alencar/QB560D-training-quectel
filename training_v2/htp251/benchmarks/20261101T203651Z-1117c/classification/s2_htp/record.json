@@ -1,0 +1,100 @@
+{
+  "backend": "htp",
+  "passed": true,
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "median_ms": 1.5,
+  "p95_ms": 1.5701,
+  "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+  "samples_ms": [
+    1.469,
+    1.455,
+    1.474,
+    1.466,
+    1.468,
+    1.492,
+    1.494,
+    1.496,
+    1.438,
+    1.538,
+    1.461,
+    1.477,
+    1.483,
+    1.492,
+    1.426,
+    1.448,
+    1.471,
+    1.475,
+    1.461,
+    1.449,
+    1.495,
+    1.44,
+    1.457,
+    1.526,
+    1.487,
+    1.426,
+    1.473,
+    1.571,
+    1.514,
+    1.504,
+    1.531,
+    1.574,
+    1.566,
+    1.511,
+    1.519,
+    1.562,
+    1.543,
+    1.519,
+    1.583,
+    1.569,
+    1.527,
+    1.505,
+    1.505,
+    1.554,
+    1.518,
+    1.508,
+    1.519,
+    1.563,
+    1.505,
+    1.508
+  ],
+  "discarded_warmup_ms": [
+    1.799,
+    1.454,
+    1.484,
+    1.451,
+    1.46,
+    1.475,
+    1.464,
+    1.456,
+    1.461,
+    1.51
+  ],
+  "result": {
+    "top3": [
+      {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.87109375
+      },
+      {
+        "class_id": 907,
+        "label": "Windsor tie",
+        "score": 0.05078125
+      },
+      {
+        "class_id": 466,
+        "label": "bulletproof vest",
+        "score": 0.01171875
+      }
+    ]
+  },
+  "task": "classification",
+  "session": 2,
+  "runs": 50,
+  "warmup": 10,
+  "input_png_sha256": "c2661ab898dc0d977f2eb5d650608546c4e53012c1b4e3f8fe5191e184a81fca",
+  "comparison_to_tflite_cpu": {
+    "passed": true,
+    "criterion": "same top-1 as original TFLite CPU"
+  }
+}

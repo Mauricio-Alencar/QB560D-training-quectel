@@ -1,0 +1,42 @@
+Result=exit-code
+ExecMainStatus=1
+Requires=system.slice sysinit.target
+Wants=
+Before=shutdown.target multi-user.target
+After=sysinit.target systemd-journald.socket system.slice time-sync.target basic
+.target network.target
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/dhcpd6.service
+# /lib/systemd/system/dhcpd6.service
+[Unit]
+Description=DHCPv6 Server Daemon
+Documentation=man:dhcpd(8) man:dhcpd.conf(5)
+After=network.target
+After=time-sync.target
+
+[Service]
+PIDFile=/var/run/dhcpd6.pid
+EnvironmentFile=/etc/default/dhcp-server
+EnvironmentFile=-/etc/sysconfig/dhcpd6
+ExecStartPre=/bin/touch /var/lib/dhcp/dhcpd6.leases
+ExecStart=/usr/sbin/dhcpd -f -6 -cf /etc/dhcp/dhcpd6.conf -pf /var/run/dhcpd6.pi
+d $DHCPDARGS -q $INTERFACES
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:39 CST. --
+Nov 02 02:46:59 qcs6490-odk systemd[1]: Starting DHCPv6 Server Daemon...
+Nov 02 02:46:59 qcs6490-odk systemd[1]: Started DHCPv6 Server Daemon.
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: Can't open /etc/dhcp/dhcpd6.conf: No such file or directory
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: If you think you have received this message due to a bug rather
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: than a configuration issue please read the section on submitting
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: bugs on either our web page at www.isc.org or in the README file
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: before submitting a bug.  These pages explain the proper
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: process and the information we find helpful for debugging.
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: 
+Nov 02 02:46:59 qcs6490-odk dhcpd[4670]: exiting.
+Nov 02 02:46:59 qcs6490-odk systemd[1]: dhcpd6.service: Main process exited, code=exited, status=1/FAILURE
+Nov 02 02:46:59 qcs6490-odk systemd[1]: dhcpd6.service: Failed with result 'exit-code'.
+

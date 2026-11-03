@@ -1,0 +1,62 @@
+total 0
+drwxr-xr-x 3 root root    0 Jun 18  2024 .
+drwxr-xr-x 7 root root    0 Jun 18  2024 ..
+lrwxrwxrwx 1 root root    0 Nov  2 12:32 driver -> ../../../../../../bus/i2c/drivers/lt9611uxd
+-r--r--r-- 1 root root 4096 Nov  2 12:33 modalias
+-r--r--r-- 1 root root 4096 Jun 18  2024 name
+lrwxrwxrwx 1 root root    0 Nov  2 12:32 of_node -> ../../../../../../firmware/devicetree/base/soc/i2c@990000/lt9611uxd@41
+drwxr-xr-x 2 root root    0 Nov  2 12:33 power
+lrwxrwxrwx 1 root root    0 Jun 18  2024 subsystem -> ../../../../../../bus/i2c
+lrwxrwxrwx 1 root root    0 Nov  2 12:33 supplier:f000000.pinctrl -> ../../../../../virtual/devlink/f000000.pinctrl--2-0041
+-rw-r--r-- 1 root root 4096 Jun 18  2024 uevent
+
+DT PROPERTIES
+total 0
+-r--r--r-- 1 root root 18 Nov  2 12:32 compatible
+-r--r--r-- 1 root root 12 Nov  2 12:33 hdmi5v0-gpios
+-r--r--r-- 1 root root 12 Nov  2 12:33 interrupt-gpios
+-r--r--r-- 1 root root 14 Nov  2 12:33 interrupt-names
+-r--r--r-- 1 root root  4 Nov  2 12:33 interrupt-parent
+-r--r--r-- 1 root root  8 Nov  2 12:33 interrupts
+-r--r--r-- 1 root root 10 Nov  2 12:33 name
+-r--r--r-- 1 root root  4 Nov  2 12:33 phandle
+-r--r--r-- 1 root root  4 Nov  2 12:33 reg
+-r--r--r-- 1 root root 12 Nov  2 12:33 reset-gpios
+-r--r--r-- 1 root root  5 Nov  2 12:33 status
+-r--r--r-- 1 root root 12 Nov  2 12:33 vcc1v2-gpios
+-r--r--r-- 1 root root 12 Nov  2 12:33 vcc3v3-gpios
+compatible: lontium,lt9611uxd
+status: okay
+
+MODULE
+filename:       /lib/modules/5.4.219-perf/kernel/drivers/gpu/drm/bridge/lt9611uxd/lt9611uxd.ko
+author:         Tony <syyang@lontium.com>
+description:    LT9611UXD driver
+license:        GPL
+alias:          of:N*T*Clontium,lt9611uxdC*
+alias:          of:N*T*Clontium,lt9611uxd
+alias:          i2c:lontium,lt9611uxd
+depends:        
+intree:         Y
+name:           lt9611uxd
+vermagic:       5.4.219-perf SMP preempt mod_unload modversions aarch64
+
+KERNEL LOG SIZE
+192127
+
+KERNEL JOURNAL
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x10: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x12: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x14: 10
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD_Change_Swing: swing reg 0x16: 10
+Nov 02 06:34:23 qcs6490-odk kernel: firmware_class: BDF download filepath :/lib/firmware/lt9611uxd_fw.bin
+Nov 02 06:34:23 qcs6490-odk kernel: LT9611UXD.bin CRC: 0x46
+Nov 02 06:34:24 qcs6490-odk kernel: [drm:dsi_display_set_mode [msm_drm]] [msm-dsi-info]: mdp_transfer_time=0, hactive=1920, vactive=1080, fps=60
+Nov 02 06:34:24 qcs6490-odk kernel: msm-dai-q6-hdmi soc:qcom,msm-dai-q6-dp: DAI driver id is not set
+Nov 02 06:34:24 qcs6490-odk kernel: msm-dai-q6-hdmi soc:qcom,msm-dai-q6-dp1: ASoC: sink widget Display Port1 Playback overwritten
+Nov 02 06:34:24 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)
+Nov 02 06:34:25 qcs6490-odk kernel: msm_ext_disp_update_audio_ops: Display not found (EXT_DISPLAY_TYPE_HDMI) ctld (0) stream (0)

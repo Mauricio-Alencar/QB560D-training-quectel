@@ -1,0 +1,50 @@
+Logging started for program DebugLog on host qcs6490-odk at Sun Nov 01 2026 09:03:20.089309 (this log file is /tmp/qb560d-training/evidence/snpe-probe-confirmed-logs/DebugLog.00.txt)
+09:03:20.113985547 [USER_INFO:SNPE] DEFAULT:0 Logging initialized
+09:03:20.114075234 [USER_INFO:SNPE] DEFAULT:1 SNPE isRuntimeAvailable runtime - 2, option - 2
+09:03:20.114269348 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:2 QnnDsp <V> RouterRpc isPrepareLibLoaded
+09:03:20.114269921 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:3 QnnDsp <V> HTP Prepare backend not loaded
+09:03:20.114271587 [USER_INFO:DNN_RUNTIME] DEFAULT:4 QnnDsp <I> QnnHtpLog_create exit.
+09:03:20.114286379 [USER_INFO:DNN_RUNTIME] DEFAULT:5 QnnDsp <I> addClient started.
+09:03:20.114415962 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:6 QnnDsp <V> Backend handle created: 1
+09:03:20.114416899 [USER_INFO:DNN_RUNTIME] DEFAULT:7 QnnDsp <I> addClient done (1). status = 0x0
+09:03:20.114428045 [USER_INFO:DNN_RUNTIME] DEFAULT:8 QnnDsp <I> QnnHtpDevice_getPlatformInfo started.
+09:03:20.114448983 [USER_INFO:DNN_RUNTIME] DEFAULT:9 QnnDsp <I> exit with 0
+09:03:20.114449295 [USER_INFO:DNN_RUNTIME] DEFAULT:10 QnnDsp <I> exit with 0
+09:03:20.114449712 [USER_INFO:DNN_RUNTIME] DEFAULT:11 QnnDsp <I> exit with 0
+09:03:20.114450285 [USER_INFO:DNN_RUNTIME] DEFAULT:12 QnnDsp <I> exit with 0
+09:03:20.114452524 [USER_INFO:DNN_RUNTIME] DEFAULT:13 QnnDsp <I> QnnHtpDevice_getPlatformInfo done. status 0x0
+09:03:20.114456118 [USER_INFO:DNN_RUNTIME] DEFAULT:14 QnnDsp <I> QnnHtpDevice_create started. device = 0x1
+09:03:20.114458201 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:15 QnnDsp <V> Setting default value for unsigned PD usage
+09:03:20.114460858 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:16 QnnDsp <V> skel file path file:///libSnpeHtpV68Skel.so?snpe_skel_handle_invoke&_modver=1.0&_dom=cdsp
+09:03:20.114877158 [USER_INFO:DNN_RUNTIME] DEFAULT:17 QnnDsp <I> First connection to QNN stub established!
+09:03:20.114879189 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:18 QnnDsp <V> Loading remote funcs
+09:03:20.114901897 [USER_INFO:DNN_RUNTIME] DEFAULT:19 QnnDsp <I> exits with 2, successfully initialized rpc memory
+09:03:20.114903199 [USER_INFO:DNN_RUNTIME] DEFAULT:20 QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+09:03:20.114922522 [USER_INFO:DNN_RUNTIME] DEFAULT:21 QnnDsp <I> rpcMemoryAlloc 136 isInit 1
+09:03:20.216527892 [USER_INFO:DNN_RUNTIME] DEFAULT:22 QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+09:03:20.216559975 [USER_INFO:DNN_RUNTIME] DEFAULT:23 QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+09:03:20.217508044 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:24 QnnDsp <V> DeviceId 0 coreId 0 not present, insert a new entry 0x5e55410
+09:03:20.217516950 [USER_INFO:DNN_RUNTIME] DEFAULT:25 QnnDsp <I> Polling not supported in createDevicePollingContext
+09:03:20.217521586 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:26 QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+09:03:20.219775535 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:27 QnnDsp <V> setSkelLogLevel return 0
+09:03:20.219777098 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:28 QnnDsp <V> exits device initialization with  0
+09:03:20.219783191 [USER_INFO:DNN_RUNTIME] DEFAULT:29 QnnDsp <I> QnnHtpDevice_create done. status 0x0
+09:03:20.226800611 [USER_INFO:DNN_RUNTIME] DEFAULT:30 BackendTerminate triggered
+09:03:20.226826288 [USER_INFO:DNN_RUNTIME] DEFAULT:31 QnnDsp <I> terminateClient started. 0x1
+09:03:20.226828215 [USER_WARNING:DNN_RUNTIME] DEFAULT:32 QnnDsp <W> Backend 1 free cleanup called during process exit
+09:03:20.226844361 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:33 QnnDsp <V> RouterRpc isPrepareLibLoaded
+09:03:20.226845454 [USER_WARNING:DNN_RUNTIME] DEFAULT:34 QnnDsp <W> Final clean up, free device id 1
+09:03:20.226846444 [USER_INFO:DNN_RUNTIME] DEFAULT:35 QnnDsp <I> QnnHtpDevice_free started. device = 0x1
+09:03:20.226849725 [USER_INFO:DNN_RUNTIME] DEFAULT:36 QnnDsp <I> rpcMemoryAlloc 8 isInit 1
+09:03:20.226894777 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:37 QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+09:03:20.227985346 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:38 QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+09:03:20.227986856 [USER_INFO:DNN_RUNTIME] DEFAULT:39 QnnDsp <I> Polling not supported in terminateDeviceWorkerThread
+09:03:20.227988106 [USER_INFO:DNN_RUNTIME] DEFAULT:40 QnnDsp <I> rpcMemoryAlloc 16 isInit 1
+09:03:20.228003575 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:41 QnnDsp <V> Get htp transport instance for deviceId 0 coreId 0 transport instance 0x5e55410
+09:03:20.228180605 [USER_INFO:DNN_RUNTIME] DEFAULT:42 QnnDsp <I> Polling not supported in clearDevicePollingContext
+09:03:20.238692333 [USER_VERBOSE:DNN_RUNTIME] DEFAULT:43 QnnDsp <V> DeviceId 0 coreId 0 present, update transport instance from 0x5e55410 to (nil)
+09:03:20.238707698 [USER_INFO:DNN_RUNTIME] DEFAULT:44 QnnDsp <I> exits with 4, successfully deinitialized rpc memory
+09:03:20.238711396 [USER_INFO:DNN_RUNTIME] DEFAULT:45 QnnDsp <I> QnnHtpDevice_free done. status 0x0
+09:03:20.238712698 [USER_INFO:DNN_RUNTIME] DEFAULT:46 QnnDsp <I> Polling not supported in terminateWorkerThreads
+09:03:20.238713375 [USER_INFO:DNN_RUNTIME] DEFAULT:47 QnnDsp <I> Polling not supported in clearAllContexts
+Logging stopped at Sun Nov 01 2026 09:03:20.269912

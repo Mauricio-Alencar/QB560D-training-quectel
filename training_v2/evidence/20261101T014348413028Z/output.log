@@ -1,0 +1,14 @@
+[USER_INFO] Logging initialized
+[USER_INFO] SNPE isRuntimeAvailable runtime - 0, option - 2
+[USER_INFO] Checking signed PD session
+[USER_ERROR] error code = 2006; QnnBackend_create() failed; QNN_COMMON_ERROR_PLATFORM_NOT_SUPPORTED: Attempt to use QNN API on an unsupported platform
+Traceback (most recent call last):
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 209, in <module>
+    main()
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 174, in main
+    engine = Snpe(library, model, args.backend, output, {'off': 0, 'basic': 1, 'detailed': 2}[args.profiling])
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 73, in __init__
+    raise RuntimeError('Requested SNPE runtime is unavailable; no CPU retry')
+RuntimeError: Requested SNPE runtime is unavailable; no CPU retry
+
+__QB560D_EXIT__=1

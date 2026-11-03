@@ -1,0 +1,57 @@
+Result=exit-code
+ExecMainStatus=255
+Requires=sysinit.target system.slice
+Wants=
+Before=multi-user.target shutdown.target
+After=system.slice sysinit.target basic.target systemd-journald.socket
+ActiveState=failed
+SubState=failed
+FragmentPath=/lib/systemd/system/chg-policy.service
+# /lib/systemd/system/chg-policy.service
+# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+[Unit]
+Description=Charger Policy Service
+SourcePath=/usr/bin/chg-policy
+
+[Service]
+User=system
+Group=system
+SupplementaryGroups=wakelock kmsg
+Restart=always
+RemainAfterExit=yes
+CapabilityBoundingSet=CAP_BLOCK_SUSPEND CAP_WAKE_ALARM
+AmbientCapabilities=CAP_BLOCK_SUSPEND CAP_WAKE_ALARM
+ExecStart=/usr/bin/chg-policy
+
+[Install]
+WantedBy=multi-user.target
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 06:34:43 CST. --
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Stopped Charger Policy Service.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: Started Charger Policy Service.
+Nov 02 06:23:53 qcs6490-odk systemd[1]: chg-policy.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 06:23:53 qcs6490-odk systemd[1]: chg-policy.service: Failed with result 'exit-code'.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Scheduled restart job, restart counter is at 2.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Stopped Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Started Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Failed with result 'exit-code'.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Scheduled restart job, restart counter is at 3.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Stopped Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Started Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Failed with result 'exit-code'.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Scheduled restart job, restart counter is at 4.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Stopped Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Started Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Failed with result 'exit-code'.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Scheduled restart job, restart counter is at 5.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Stopped Charger Policy Service.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Start request repeated too quickly.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: chg-policy.service: Failed with result 'exit-code'.
+Nov 02 06:34:23 qcs6490-odk systemd[1]: Failed to start Charger Policy Service.
+

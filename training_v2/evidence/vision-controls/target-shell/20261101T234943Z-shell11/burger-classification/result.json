@@ -1,0 +1,43 @@
+{
+  "top3": [
+    {
+      "class_id": 934,
+      "label": "cheeseburger",
+      "score": 0.99609375
+    },
+    {
+      "class_id": 1000,
+      "label": "toilet tissue",
+      "score": 0.0
+    },
+    {
+      "class_id": 327,
+      "label": "lycaenid",
+      "score": 0.0
+    }
+  ],
+  "case": "burger-classification",
+  "task": "classification",
+  "backend": "htp",
+  "runtime": "QAIRT/QNN 2.51.40.260930",
+  "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
+  "source_image_sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+  "prepared_tensor_sha256": "6661fd202e7d619f265978a867ebc7032c0f72893fb242524f230b955b93d364",
+  "profile": {
+    "accelerator_events": 3,
+    "positive_cycle_events": 99,
+    "execute_us": [
+      4236.0,
+      3155.0,
+      3167.0
+    ]
+  },
+  "comparison_to_saved_cpu": {
+    "passed": true,
+    "criterion": "Same top-1 as saved original CPU and expected cheeseburger"
+  },
+  "passed": true,
+  "execution_location": "All preparation, CNN inference, decoding, NMS/rules and rendering on target",
+  "cpu_reference": "Saved original TFLite CPU output; no live CPU inference",
+  "scope": "Functional controls on reviewed images. No dataset accuracy or latency benchmark."
+}

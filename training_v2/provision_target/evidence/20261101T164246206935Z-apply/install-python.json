@@ -1,0 +1,4 @@
+{
+  "command": "python3 /opt/qb560d-workshop/target_install.py python",
+  "exit_code": 0
+}

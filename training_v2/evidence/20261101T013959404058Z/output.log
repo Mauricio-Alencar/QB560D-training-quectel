@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 207, in <module>
+    main()
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 172, in main
+    engine = Snpe(library, model, args.backend, output, {'off': 0, 'basic': 1, 'detailed': 2}[args.profiling])
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 83, in __init__
+    self.handle = self.own('SNPE', self.lib.Snpe_SNPEBuilder_Build(builder))
+  File "/tmp/qb560d-training/ai/run_snpe.py", line 104, in own
+    raise RuntimeError(kind + ' creation failed: ' + (self.lib.Snpe_Util_GetLastError() or b'').decode(errors='replace'))
+RuntimeError: SNPE creation failed: 
+
+__QB560D_EXIT__=1

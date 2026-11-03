@@ -1,0 +1,24 @@
+uid=0(root) gid=0(root) groups=0(root)
+mainversion=QDPA_Ubuntu20.04.003.51.303
+subversion=V01
+Linux qcs6490-odk 5.4.219-perf #1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+ 10:09:40 up  3:35,  2 users,  load average: 3.77, 3.43, 3.24
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        20G   10G  9.6G  52% /
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     qb560d-training-wlan
+IP4.ADDRESS[1]:                         192.168.0.26/24
+IP4.GATEWAY:                            192.168.0.1
+IP4.DNS[1]:                             181.213.132.2
+IP4.DNS[2]:                             181.213.132.3
+14: rmnet_data0@rmnet_ipa0: <UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN group default qlen 1000
+    inet 100.84.199.38/30 scope global rmnet_data0
+       valid_lft forever preferred_lft forever
+default via 192.168.0.1 dev wlan0  proto dhcp  metric 600 
+100.84.199.36/30 dev rmnet_data0  proto kernel  scope link  src 100.84.199.38 
+181.213.132.2 via 192.168.0.1 dev wlan0  proto static  metric 600 
+181.213.132.3 via 192.168.0.1 dev wlan0  proto static  metric 600 
+192.168.0.0/24 dev wlan0  proto kernel  scope link  src 192.168.0.26  metric 600 
+192.168.225.0/24 dev bridge0  proto kernel  scope link  src 192.168.225.1 
+inactive
+disabled

@@ -1,0 +1,18 @@
+Model upload skipped: workbench_demo.onnx already exists in Workbench.
+Scheduled compile job (j57n9nnrp) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/j57n9nnrp/
+
+COMPILE_JOB: https://workbench.aihub.qualcomm.com/jobs/j57n9nnrp/
+Waiting for compile job (j57n9nnrp) completion. Type Ctrl+C to stop waiting at any time.
+Traceback (most recent call last):
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\ai\workbench.py", line 94, in <module>
+    main()
+  File "C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\ai\workbench.py", line 42, in main
+    if not compile_job.wait().success:
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\.venvs\qb560d-aihub\Lib\site-packages\qai_hub\client.py", line 2146, in wait
+    print(f"    {status_text(status)} {dots_str}", end="\r")
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u23f3' in position 4: character maps to <undefined>

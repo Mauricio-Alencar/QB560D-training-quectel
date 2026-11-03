@@ -1,0 +1,4 @@
+{
+  "command": ". /opt/qb560d-workshop/env.sh\niperf3 -s -1 -B 127.0.0.1 -p 45201 > /opt/qb560d-workshop/iperf-loopback-server.log 2>&1 &\nprovision_pid=$!\ntrap 'kill \"$provision_pid\" 2>/dev/null || :' EXIT\nsleep 1\niperf3 -c 127.0.0.1 -p 45201 -t 1 -J\nwait \"$provision_pid\"",
+  "exit_code": 0
+}

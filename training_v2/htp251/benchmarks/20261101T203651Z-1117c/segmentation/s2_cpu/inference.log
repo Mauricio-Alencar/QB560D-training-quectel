@@ -1,0 +1,92 @@
+{
+  "inputs": [
+    {
+      "name": "sub_7",
+      "shape": [
+        1,
+        257,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "ResizeBilinear_3",
+      "shape": [
+        1,
+        257,
+        257,
+        21
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "foreground_fraction": 0.618873866371936,
+  "class_fractions": {
+    "background": 0.381126133628064,
+    "person": 0.618873866371936
+  },
+  "demo_id": "D2-09",
+  "backend": "CPU",
+  "runtime": "vendor.tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+  "image_sha256": "c911f9d829e97a18dd4fc0b4f84e2deb1fa1796b9459449c4b22bb607b80c4ac",
+  "runs": 50,
+  "warmup": 10,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 179.92592400014473,
+  "inference_ms_p95": 182.5336912504099,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "sub_7",
+        "shape": [
+          1,
+          257,
+          257,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "ResizeBilinear_3",
+        "shape": [
+          1,
+          257,
+          257,
+          21
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)

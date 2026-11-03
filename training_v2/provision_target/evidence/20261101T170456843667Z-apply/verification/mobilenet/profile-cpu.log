@@ -1,0 +1,321 @@
+Input Log File Location: /opt/qairt-isolated/2.51.40.260930/results/20261101T170602921681Z/cpu/qnn-profiling-data_0.log
+Log File Created: Tue Jun 18 06:43:50 2024
+Time Scale: 1e-06
+Epoch Timestamp: 1718664230570718 Steady Clock Timestamp: 8053938300
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 60163 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 56689 us
+
+Finalize Stats:
+---------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 3405 us
+    Backend (GRAPH_FINALIZE): 1869 us
+        _node_sub: 15 us
+        _node_div: 2 us
+        _node_Conv_239: 6 us
+        _node_Conv_240: 205 us
+        _node_Conv_241: 3 us
+        _node_Conv_242: 3 us
+        _node_Conv_243: 354 us
+        _node_Conv_244: 4 us
+        _node_Conv_245: 5 us
+        _node_Conv_246: 230 us
+        _node_Conv_247: 6 us
+        _node_add: 3 us
+        _node_Conv_248: 5 us
+        _node_Conv_249: 147 us
+        _node_Conv_250: 6 us
+        _node_Conv_251: 5 us
+        _node_Conv_252: 87 us
+        _node_Conv_253: 4 us
+        _node_add_1: 2 us
+        _node_Conv_254: 5 us
+        _node_Conv_255: 86 us
+        _node_Conv_256: 5 us
+        _node_add_2: 2 us
+        _node_Conv_257: 5 us
+        _node_Conv_258: 49 us
+        _node_Conv_259: 5 us
+        _node_Conv_260: 8 us
+        _node_Conv_261: 34 us
+        _node_Conv_262: 4 us
+        _node_add_3: 1 us
+        _node_Conv_263: 7 us
+        _node_Conv_264: 46 us
+        _node_Conv_265: 5 us
+        _node_add_4: 1 us
+        _node_Conv_266: 6 us
+        _node_Conv_267: 42 us
+        _node_Conv_268: 4 us
+        _node_add_5: 1 us
+        _node_Conv_269: 7 us
+        _node_Conv_270: 45 us
+        _node_Conv_271: 5 us
+        _node_Conv_272: 8 us
+        _node_Conv_273: 64 us
+        _node_Conv_274: 4 us
+        _node_add_6: 1 us
+        _node_Conv_275: 8 us
+        _node_Conv_276: 64 us
+        _node_Conv_277: 4 us
+        _node_add_7: 2 us
+        _node_Conv_278: 9 us
+        _node_Conv_279: 36 us
+        _node_Conv_280: 5 us
+        _node_Conv_281: 12 us
+        _node_Conv_282: 16 us
+        _node_Conv_283: 4 us
+        _node_add_8: 2 us
+        _node_Conv_284: 11 us
+        _node_Conv_285: 15 us
+        _node_Conv_286: 5 us
+        _node_add_9: 1 us
+        _node_Conv_287: 12 us
+        _node_Conv_288: 14 us
+        _node_Conv_289: 7 us
+        _node_Conv_290: 14 us
+        _node_ReduceMean_293: 4 us
+        _node_linear: 3 us
+
+De-Init Stats:
+--------------
+    NetRun: 1638 us
+    Backend (null): 0 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 43.0671 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 22028 us
+    Backend (GRAPH_EXECUTE): 21886 us
+        _node_sub: 488 us
+        _node_div: 4626 us
+        _node_Conv_239: 422 us
+        _node_Conv_240: 1665 us
+        _node_Conv_241: 152 us
+        _node_Conv_242: 404 us
+        _node_Conv_243: 1764 us
+        _node_Conv_244: 96 us
+        _node_Conv_245: 177 us
+        _node_Conv_246: 1901 us
+        _node_Conv_247: 146 us
+        _node_add: 120 us
+        _node_Conv_248: 195 us
+        _node_Conv_249: 666 us
+        _node_Conv_250: 46 us
+        _node_Conv_251: 73 us
+        _node_Conv_252: 637 us
+        _node_Conv_253: 53 us
+        _node_add_1: 42 us
+        _node_Conv_254: 73 us
+        _node_Conv_255: 636 us
+        _node_Conv_256: 50 us
+        _node_add_2: 41 us
+        _node_Conv_257: 72 us
+        _node_Conv_258: 221 us
+        _node_Conv_259: 29 us
+        _node_Conv_260: 62 us
+        _node_Conv_261: 320 us
+        _node_Conv_262: 45 us
+        _node_add_3: 22 us
+        _node_Conv_263: 62 us
+        _node_Conv_264: 316 us
+        _node_Conv_265: 45 us
+        _node_add_4: 22 us
+        _node_Conv_266: 62 us
+        _node_Conv_267: 318 us
+        _node_Conv_268: 45 us
+        _node_add_5: 22 us
+        _node_Conv_269: 62 us
+        _node_Conv_270: 313 us
+        _node_Conv_271: 60 us
+        _node_Conv_272: 97 us
+        _node_Conv_273: 473 us
+        _node_Conv_274: 87 us
+        _node_add_6: 32 us
+        _node_Conv_275: 98 us
+        _node_Conv_276: 469 us
+        _node_Conv_277: 82 us
+        _node_add_7: 32 us
+        _node_Conv_278: 101 us
+        _node_Conv_279: 169 us
+        _node_Conv_280: 48 us
+        _node_Conv_281: 79 us
+        _node_Conv_282: 200 us
+        _node_Conv_283: 86 us
+        _node_add_8: 15 us
+        _node_Conv_284: 78 us
+        _node_Conv_285: 200 us
+        _node_Conv_286: 70 us
+        _node_add_9: 15 us
+        _node_Conv_287: 77 us
+        _node_Conv_288: 210 us
+        _node_Conv_289: 152 us
+        _node_Conv_290: 189 us
+        _node_ReduceMean_293: 783 us
+        _node_linear: 1341 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 20417 us
+    Backend (GRAPH_EXECUTE): 20253 us
+        _node_sub: 490 us
+        _node_div: 4586 us
+        _node_Conv_239: 347 us
+        _node_Conv_240: 1649 us
+        _node_Conv_241: 132 us
+        _node_Conv_242: 331 us
+        _node_Conv_243: 1785 us
+        _node_Conv_244: 89 us
+        _node_Conv_245: 154 us
+        _node_Conv_246: 1895 us
+        _node_Conv_247: 129 us
+        _node_add: 120 us
+        _node_Conv_248: 156 us
+        _node_Conv_249: 691 us
+        _node_Conv_250: 42 us
+        _node_Conv_251: 65 us
+        _node_Conv_252: 638 us
+        _node_Conv_253: 47 us
+        _node_add_1: 43 us
+        _node_Conv_254: 65 us
+        _node_Conv_255: 632 us
+        _node_Conv_256: 46 us
+        _node_add_2: 41 us
+        _node_Conv_257: 64 us
+        _node_Conv_258: 220 us
+        _node_Conv_259: 27 us
+        _node_Conv_260: 53 us
+        _node_Conv_261: 314 us
+        _node_Conv_262: 42 us
+        _node_add_3: 23 us
+        _node_Conv_263: 53 us
+        _node_Conv_264: 315 us
+        _node_Conv_265: 43 us
+        _node_add_4: 22 us
+        _node_Conv_266: 53 us
+        _node_Conv_267: 312 us
+        _node_Conv_268: 41 us
+        _node_add_5: 22 us
+        _node_Conv_269: 52 us
+        _node_Conv_270: 314 us
+        _node_Conv_271: 55 us
+        _node_Conv_272: 90 us
+        _node_Conv_273: 494 us
+        _node_Conv_274: 80 us
+        _node_add_6: 32 us
+        _node_Conv_275: 90 us
+        _node_Conv_276: 471 us
+        _node_Conv_277: 75 us
+        _node_add_7: 32 us
+        _node_Conv_278: 89 us
+        _node_Conv_279: 168 us
+        _node_Conv_280: 45 us
+        _node_Conv_281: 72 us
+        _node_Conv_282: 198 us
+        _node_Conv_283: 68 us
+        _node_add_8: 15 us
+        _node_Conv_284: 73 us
+        _node_Conv_285: 200 us
+        _node_Conv_286: 67 us
+        _node_add_9: 15 us
+        _node_Conv_287: 71 us
+        _node_Conv_288: 199 us
+        _node_Conv_289: 133 us
+        _node_Conv_290: 173 us
+        _node_ReduceMean_293: 793 us
+        _node_linear: 204 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_7qmdmfsj):
+    NetRun: 23184 us
+    Backend (GRAPH_EXECUTE): 23084 us
+        _node_sub: 511 us
+        _node_div: 4612 us
+        _node_Conv_239: 751 us
+        _node_Conv_240: 1681 us
+        _node_Conv_241: 282 us
+        _node_Conv_242: 682 us
+        _node_Conv_243: 1793 us
+        _node_Conv_244: 128 us
+        _node_Conv_245: 269 us
+        _node_Conv_246: 1904 us
+        _node_Conv_247: 240 us
+        _node_add: 124 us
+        _node_Conv_248: 349 us
+        _node_Conv_249: 660 us
+        _node_Conv_250: 66 us
+        _node_Conv_251: 108 us
+        _node_Conv_252: 639 us
+        _node_Conv_253: 77 us
+        _node_add_1: 43 us
+        _node_Conv_254: 108 us
+        _node_Conv_255: 634 us
+        _node_Conv_256: 65 us
+        _node_add_2: 41 us
+        _node_Conv_257: 107 us
+        _node_Conv_258: 221 us
+        _node_Conv_259: 38 us
+        _node_Conv_260: 103 us
+        _node_Conv_261: 331 us
+        _node_Conv_262: 59 us
+        _node_add_3: 23 us
+        _node_Conv_263: 102 us
+        _node_Conv_264: 314 us
+        _node_Conv_265: 60 us
+        _node_add_4: 23 us
+        _node_Conv_266: 101 us
+        _node_Conv_267: 315 us
+        _node_Conv_268: 60 us
+        _node_add_5: 23 us
+        _node_Conv_269: 100 us
+        _node_Conv_270: 313 us
+        _node_Conv_271: 80 us
+        _node_Conv_272: 132 us
+        _node_Conv_273: 466 us
+        _node_Conv_274: 125 us
+        _node_add_6: 32 us
+        _node_Conv_275: 135 us
+        _node_Conv_276: 469 us
+        _node_Conv_277: 109 us
+        _node_add_7: 33 us
+        _node_Conv_278: 136 us
+        _node_Conv_279: 172 us
+        _node_Conv_280: 63 us
+        _node_Conv_281: 104 us
+        _node_Conv_282: 201 us
+        _node_Conv_283: 155 us
+        _node_add_8: 16 us
+        _node_Conv_284: 105 us
+        _node_Conv_285: 200 us
+        _node_Conv_286: 90 us
+        _node_add_9: 16 us
+        _node_Conv_287: 103 us
+        _node_Conv_288: 198 us
+        _node_Conv_289: 225 us
+        _node_Conv_290: 246 us
+        _node_ReduceMean_293: 783 us
+        _node_linear: 523 us

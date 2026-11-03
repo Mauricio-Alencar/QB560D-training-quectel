@@ -1,0 +1,4 @@
+{
+  "command": "date -u; command -V date; readlink -f /bin/date; env | sort; ps -ef | grep -E \"timesync|chrony|ntp|time_daemon\"; systemctl list-units --type=service --state=running --no-pager",
+  "exit_code": 0
+}

@@ -1,0 +1,144 @@
+Mapa dos slides — revisão de 03/11/2026
+Arquivo: slides/QB560D_EU_Training.pptx
+Total: 140 slides
+
+001 - QB560D-EU AI Box
+002 - Training outcomes
+003 - Confirmed training platform
+004 - Day 1 agenda and slide map
+005 - Day 2 agenda and slide map
+006 - Day 1
+007 - Yocto build environment
+008 - Platform responsibilities
+009 - SDK directory map
+010 - Build host preparation
+011 - SDK checkout and revision record
+012 - SDK Docker environment
+013 - Docker dependency baseline
+014 - Cellular and WF build setup
+015 - Environment verification
+016 - Build configuration files
+017 - Downloads and cache preparation
+018 - BitBake tasks and development loop
+019 - Image build and output discovery
+020 - Source reference map: setup and image
+021 - Host and target setup
+022 - Host prerequisites
+023 - Target installation from the host
+024 - Platform inventory
+025 - Root filesystem layout
+026 - Mounts and persistent application data
+027 - Packages and direct deployment
+028 - Boot and diagnostics
+029 - ADB lab workflow
+030 - Boot and service diagnostics
+031 - Kernel events and crash evidence
+032 - Ubuntu runtime and WLAN
+033 - Ubuntu runtime and logs
+034 - Journal storage and retention checks
+035 - Host WLAN control
+036 - SSH access for USB-A demos
+037 - Cellular connectivity
+038 - Manual cellular bring-up with RIL
+039 - Routing and DNS
+040 - RMNET and routing
+041 - IP reachability and DNS
+042 - Network performance
+043 - Cellular throughput
+044 - Network fault diagnosis
+045 - Day 1 lab acceptance
+046 - Day 2
+047 - Day 2 agenda and slide map
+048 - Application development
+049 - Cross-compilation and SDK alignment
+050 - Recipe and package structure
+051 - Existing native example: helloworld
+052 - Native application recipe patterns
+053 - Application development
+054 - Yocto application integration
+055 - Application deployment options
+056 - USB application migration
+057 - Training application files
+058 - Training application script
+059 - Training service and configuration
+060 - Training recipe: metadata
+061 - Training recipe: installation
+062 - Custom layer and package build
+063 - Generated configuration and overrides
+064 - Application inclusion in the image
+065 - Quectel packagegroup and variants
+066 - Package transfer and installation
+067 - systemd services
+068 - Existing systemd service example
+069 - systemd service behavior
+070 - Service management commands
+071 - Application service operation
+072 - Application log collection
+073 - Controlled failure and service recovery
+074 - Application troubleshooting
+075 - Evidence bundle for application issues
+076 - Application lifecycle review
+077 - Yocto integration review
+078 - Source reference map: applications
+079 - Docker containers
+080 - Docker application deployment
+081 - Docker HTTP checks
+082 - Native and container execution
+083 - Edge AI concepts
+084 - Edge AI on the QB560D-EU
+085 - The software layers of Edge AI
+086 - Workflow from trained model to deployment
+087 - CPU, GPU and NPU acceleration
+088 - Model formats and execution routes
+089 - Two routes through Qualcomm AI Hub
+090 - Our demos connect the layers
+091 - AI execution paths
+092 - Model input and output contracts
+093 - Expected model inspection output
+094 - QAIRT runtime and acceleration
+095 - Persistent QAIRT 2.51
+096 - Legacy SNPE 2.26 comparison
+097 - CPU/GPU vs HTP 2.51 latency
+098 - CPU revalidation results
+099 - Qualcomm AI Hub
+100 - Models used in this training
+101 - AI Hub assets and preparation
+102 - The Workbench model
+103 - Qualcomm AI Hub Workbench
+104 - AI Hub Models and Workbench
+105 - What the Workbench demo inferred
+106 - Vision demos
+107 - Vision demos: agenda and slide map
+108 - Five demos on HTP 2.51
+109 - Vision controls: cases and inputs
+110 - Vision controls: deploy and reproduce
+111 - HTP from the host: all 11 vision cases
+112 - HTP on target: setup and results
+113 - HTP in the target shell: 11 cases
+114 - Image classification
+115 - Image classification
+116 - Object detection
+117 - Object detection
+118 - Pose estimation
+119 - Pose estimation
+120 - Hand gesture recognition
+121 - Cropped-hand gesture
+122 - Hand gestures: fist, palm, pointing
+123 - Hand gestures: down, victory, ILY
+124 - Seven-image validation
+125 - Semantic segmentation
+126 - Semantic segmentation
+127 - HTP 2.51 validation results
+128 - Reading an HTP execution profile
+129 - USB camera inference
+130 - USB camera capture and inference
+131 - Troubleshooting and Q&A
+132 - Day 2 troubleshooting
+133 - Final lab and Q&A
+134 - Hand gesture setup reference
+135 - Hand gesture model
+136 - Host download
+137 - Deploy to /opt
+138 - First NPU inference
+139 - New photos and troubleshooting
+140 - Thank you (corporate artwork)

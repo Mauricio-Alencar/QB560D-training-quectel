@@ -1,0 +1,5 @@
+{
+  "command": "cd /tmp/update-qiart-251-mobilenet-validation\nenv LD_LIBRARY_PATH=/tmp/update-qiart-251-mobilenet-validation/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu ADSP_LIBRARY_PATH='/tmp/update-qiart-251-mobilenet-validation/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib' /usr/bin/timeout 120s /tmp/update-qiart-251-mobilenet-validation/bin/qnn-net-run --model /tmp/update-qiart-251-mobilenet-validation/lib/libQnnModelDlc.so --dlc_path /tmp/update-qiart-251-mobilenet-validation/model/mobilenet_v2.dlc --backend /tmp/update-qiart-251-mobilenet-validation/lib/libQnnHtp.so --input_list /tmp/update-qiart-251-mobilenet-validation/input/input_list.txt --output_dir /tmp/update-qiart-251-mobilenet-validation/results/20261101T022857617912Z/htp --profiling_level detailed --log_level info --num_inferences 5 --keep_num_outputs 1",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T02:28:58.596888+00:00"
+}

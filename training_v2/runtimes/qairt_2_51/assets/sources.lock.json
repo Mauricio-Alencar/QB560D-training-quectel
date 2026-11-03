@@ -1,0 +1,38 @@
+[
+  {
+    "name": "mobilenet_v2-qnn_dlc-w8a8.zip",
+    "url": "https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a8.zip",
+    "bytes": 3780811,
+    "sha256": "9bd10c231bed605a0e859bedc44e50d3cb354b0902b2b931ec2ac75d8b86d270"
+  },
+  {
+    "name": "dog.jpg",
+    "url": "https://raw.githubusercontent.com/pytorch/hub/master/images/dog.jpg",
+    "bytes": 661378,
+    "sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a"
+  },
+  {
+    "name": "imagenet_classes.txt",
+    "url": "https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt",
+    "bytes": 10472,
+    "sha256": "1f386e0d1cb6e28b9c2dac651c3dea6801e98ad1b41a14ce6bb1a093d72069f5"
+  },
+  {
+    "name": "aihub-model-source.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/models/templates/imagenet_classifier/model.py",
+    "bytes": 6708,
+    "sha256": "66f795301b48a08eb20d4f897ce042725738ab69292a9399308938ab68ebc177"
+  },
+  {
+    "name": "aihub-preprocessing-source.py.txt",
+    "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/main/src/qai_hub_models/utils/image_processing.py",
+    "bytes": 27552,
+    "sha256": "6aa60a4bf99b2f43a19e5f492bc0ead19e90394144a6891175a0670c51d9d00a"
+  },
+  {
+    "name": "model-card.md.txt",
+    "url": "https://huggingface.co/qualcomm/MobileNet-v2/raw/main/README.md",
+    "bytes": 20379,
+    "sha256": "c1b724f5179a1c211f92e1de1e94e253bf68a68eebfa167ec81550b0f4a324f9"
+  }
+]

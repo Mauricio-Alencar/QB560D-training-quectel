@@ -1,0 +1,4 @@
+{
+  "command": "lsusb; v4l2-ctl --list-devices 2>&1 || true; for n in /sys/class/video4linux/video*; do [ -e \"$n\" ] || continue; printf '\\n%s: ' \"$n\"; cat \"$n/name\"; done; ls -l /dev/video* 2>/dev/null || true; lsmod | head -n 30",
+  "exit_code": 0
+}

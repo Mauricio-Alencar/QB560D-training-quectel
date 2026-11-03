@@ -1,0 +1,17 @@
+[Unit]
+Description=QB560D training telemetry demo
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/qb560d-training/telemetry.py --host 127.0.0.1 --port 8080
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+Environment=APP_VERSION=1.0.0
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "expected_exit_code": 2,
+  "exit_code": 2,
+  "actual_account_configuration_modified": false
+}

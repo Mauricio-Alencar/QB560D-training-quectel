@@ -1,0 +1,4 @@
+{
+  "command": "nmcli radio wifi on",
+  "exit_code": 0
+}

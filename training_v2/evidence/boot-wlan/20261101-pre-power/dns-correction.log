@@ -1,0 +1,6 @@
+
+Connection successfully reapplied to device 'wlan0'.
+181.213.132.2 via 192.168.0.1 dev wlan0  src 192.168.0.26 
+    cache 
+FAIL: DNS resolution failed
+

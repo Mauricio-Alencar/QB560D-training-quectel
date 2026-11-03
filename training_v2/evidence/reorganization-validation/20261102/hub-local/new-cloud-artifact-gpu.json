@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload && sh target/ai.sh tensor --model /opt/qb560d-training-payload/evidence/reorg-aihub-20261102/model.tflite --input /opt/qb560d-training-payload/evidence/reorg-aihub-20261102/input.npy --expected /opt/qb560d-training-payload/evidence/reorg-aihub-20261102/expected.npy --backend gpu --runs 50 --warmup 10 --output /opt/qb560d-training-payload/evidence/reorg-aihub-20261102/gpu.json",
+  "exit_code": 0
+}

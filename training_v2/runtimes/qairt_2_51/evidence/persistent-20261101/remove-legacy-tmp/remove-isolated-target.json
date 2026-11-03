@@ -1,0 +1,5 @@
+{
+  "command": "/usr/bin/python3 /tmp/update-qiart-251-mobilenet-validation/cleanup_target.py /tmp/update-qiart-251-mobilenet-validation",
+  "exit_code": 0,
+  "at_utc": "2026-11-01T03:16:23.204331+00:00"
+}

@@ -1,0 +1,94 @@
+{
+  "inputs": [
+    {
+      "name": "sub_7",
+      "shape": [
+        1,
+        257,
+        257,
+        3
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "slot": 0,
+      "name": "ResizeBilinear_3",
+      "shape": [
+        1,
+        257,
+        257,
+        21
+      ],
+      "dtype": "<class 'numpy.float32'>",
+      "quantization": [
+        0.0,
+        0
+      ]
+    }
+  ]
+}
+{
+  "foreground_fraction": 0.618873866371936,
+  "class_fractions": {
+    "background": 0.381126133628064,
+    "person": 0.618873866371936
+  },
+  "demo_id": "D2-09",
+  "backend": "CPU",
+  "runtime": "vendor_tflite_c_api",
+  "platform": "Linux-5.4.219-perf-aarch64-with-glibc2.29",
+  "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "runs": 20,
+  "warmup": 3,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 166.38898450014494,
+  "inference_ms_p95": 168.5443281500966,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "sub_7",
+        "shape": [
+          1,
+          257,
+          257,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "ResizeBilinear_3",
+        "shape": [
+          1,
+          257,
+          257,
+          21
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  },
+  "runtime_version": "2.8.4"
+}
+RESULT: INFERENCE_EXECUTED (check visual correctness before acceptance)
+
+__QB560D_EXIT__=0

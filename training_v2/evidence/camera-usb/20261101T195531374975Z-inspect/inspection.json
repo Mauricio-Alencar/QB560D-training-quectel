@@ -1,0 +1,11 @@
+{
+  "host_utc": "20261101T195531374975Z",
+  "command": "id -u\ndate -u\nprintf '\nUSB LIST (bounded)\n'\ncommand -v lsusb >/dev/null 2>&1 && timeout -k 1s 4s lsusb\nprintf '\nVIDEO NODES\n'\nls -l /dev/video* 2>&1\nfor entry in /sys/class/video4linux/*; do\n  [ -e \"$entry\" ] || continue\n  printf '\nSYSFS %s\n' \"$entry\"\n  cat \"$entry/name\"\n  readlink -f \"$entry/device\"\ndone\nprintf '\nUSB CAMERA KERNEL MESSAGES\n'\ndmesg | grep -iE 'uvc|webcam|usb.*camera|video[0-9]' | tail -n 35\nprintf '\nBOUNDED CAMERA QUERY\n'\nfor node in /dev/video*; do\n  [ -c \"$node\" ] || continue\n  printf '\n=== %s INFO ===\n' \"$node\"\n  timeout -k 1s 3s v4l2-ctl -d \"$node\" --info 2>&1\ndone\nprintf '\nPROCESS STATES\n'\nps -eo pid,ppid,stat,comm | grep -E 'v4l2|lsusb|gst|timeout' || :\n",
+  "exit_code": 0,
+  "auth": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  }
+}

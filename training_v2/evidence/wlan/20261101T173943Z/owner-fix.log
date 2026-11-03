@@ -1,0 +1,5 @@
+Updated global denyinterfaces: preserved bridge0 and added wlan0
+Backup: /etc/dhcpcd.conf.qb560d-training-20261101T173944Z.bak
+Before SHA256: 098eedaa104c4a8a2c3359fac21ef1ccea0aee6b6d3789111be025d1fc11a6c9
+After SHA256: fe8c3d9c1f999b9c56befdf08d257a00403c5a6894ca8815cea0760ce1b5de7b
+

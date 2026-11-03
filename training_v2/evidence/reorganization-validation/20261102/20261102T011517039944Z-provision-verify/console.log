@@ -1,0 +1,173 @@
+installation-prerequisites: exit 0
+network-versions: exit 0
+iperf-loopback: exit 0
+native-ai-contracts: exit 0
+docker-offline-http: exit 0
+ownership-check: exit 0
+before-test: exit 0
+mobilenet-cpu: exit 0
+mobilenet-htp: exit 0
+profile-cpu: exit 0
+profile-htp: exit 0
+/opt/qairt-isolated/2.51.40.260930/results/20261102T011531287721Z/: 18 files pulled, 0 skipped. 2.3 MB/s (232606 bytes in 0.098s)
+after-test: exit 0
+MobileNet V2 / QAIRT 2.51.40 - resultado da validacao
+
+PASS_RUNTIME_AND_SINGLE_IMAGE_CLASSIFICATION
+
+CPU: 5 inferencias; 5 saidas salvas; top-1 Samoyed (85.8701%); media do perfil 26.7380 ms.
+HTP: 5 inferencias; 5 saidas salvas; top-1 Samoyed (75.5413%); media do perfil 5.0510 ms.
+
+Maior diferenca absoluta dos logits CPU/HTP: 2.87494278.
+Top-1 coincide; os vetores de scores NAO sao equivalentes.
+Tempo apenas informativo: sem aquecimento/controlar frequencias/condicoes termicas.
+Bibliotecas originais preservadas: True
+
+Results collected: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\mobilenet
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 6.7 MB/s (786432 bytes in 0.112s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.005s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g01-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 5.2 MB/s (277704 bytes in 0.051s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.9 MB/s (602112 bytes in 0.065s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g01-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.2 MB/s (30611 bytes in 0.024s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g01-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.006s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g01-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.5 MB/s (29760 bytes in 0.019s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g01-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\closed_fist.jpg", "image_sha256": "0e9b6332547e6fd3ba39be1dd5d10d3710eaf44d8217a5bedde8bcb803475fc9", "prediction": "Closed_Fist", "confidence": 0.8359375, "expected": "Closed_Fist", "passed": true, "probabilities": {"None": 0.1640625, "Closed_Fist": 0.8359375, "Open_Palm": 0.0, "Pointing_Up": 0.0, "Thumb_Down": 0.0, "Thumb_Up": 0.0, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [802.2037353515625, 1445.64794921875, 1435.912353515625, 2079.356689453125], "roi_corners": [[-149.48980712890625, 1264.3814697265625], [713.9200439453125, 2592.7041015625], [1178.832275390625, 400.9718017578125], [2042.2421875, 1729.2943115234375]], "rotation_radians": -0.5763753652572632, "palm_threshold": 0.75, "landmark_score": 0.99609375, "handedness": 0.0}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [22350.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5301.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2607.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 7.6 MB/s (786432 bytes in 0.099s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.006s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g02-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 4.5 MB/s (277704 bytes in 0.058s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.3 MB/s (602112 bytes in 0.069s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g02-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.3 MB/s (30614 bytes in 0.022s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.002s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g02-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.006s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g02-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.2 MB/s (29759 bytes in 0.023s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g02-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\full_open_palm.png", "image_sha256": "2456fd263914f7b6c9109edc5056d994c7ca140fad3c567d2edf0f5422a42e22", "prediction": "Open_Palm", "confidence": 0.66796875, "expected": "Open_Palm", "passed": true, "probabilities": {"None": 0.33203125, "Closed_Fist": 0.0, "Open_Palm": 0.66796875, "Pointing_Up": 0.0, "Thumb_Down": 0.0, "Thumb_Up": 0.0, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [241.064697265625, 1826.305419921875, 1861.5892333984375, 3446.829833984375], "roi_corners": [[-562.9796142578125, -452.0771484375], [-1122.8551025390625, 3560.361328125], [3449.458984375, 107.79833984375], [2889.58349609375, 4120.23681640625]], "rotation_radians": 0.13863980770111084, "palm_threshold": 0.75, "landmark_score": 0.984375, "handedness": 0.890625}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [22170.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5354.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2634.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 6.8 MB/s (786432 bytes in 0.110s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.005s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g03-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 3.8 MB/s (277706 bytes in 0.069s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.4 MB/s (602112 bytes in 0.069s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g03-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.2 MB/s (30615 bytes in 0.025s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.0 MB/s (256 bytes in 0.005s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g03-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.007s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g03-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.3 MB/s (29760 bytes in 0.022s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g03-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\pointing_up.jpg", "image_sha256": "f4a701316b63dd8fa56e622f2b3042766369ccc189f0d89513f803cd985b993b", "prediction": "Pointing_Up", "confidence": 0.96484375, "expected": "Pointing_Up", "passed": true, "probabilities": {"None": 0.03515625, "Closed_Fist": 0.0, "Open_Palm": 0.0, "Pointing_Up": 0.96484375, "Thumb_Down": 0.0, "Thumb_Up": 0.0, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [303.6370849609375, 85.98572540283203, 354.6911315917969, 137.0397491455078], "roi_corners": [[248.30953979492188, 37.23175048828125], [274.60369873046875, 162.12899780273438], [373.20684814453125, 10.93756103515625], [399.5010070800781, 135.83480834960938]], "rotation_radians": -0.20749640464782715, "palm_threshold": 0.75, "landmark_score": 0.99609375, "handedness": 0.00390625}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [19287.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5781.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2645.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 7.7 MB/s (786432 bytes in 0.097s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.008s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g04-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 4.6 MB/s (277705 bytes in 0.058s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.6 MB/s (602112 bytes in 0.067s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.005s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g04-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 0.8 MB/s (30614 bytes in 0.038s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g04-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.007s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g04-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.5 MB/s (29759 bytes in 0.019s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g04-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\thumbs_down.jpg", "image_sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9", "prediction": "Thumb_Down", "confidence": 0.7109375, "expected": "Thumb_Down", "passed": true, "probabilities": {"None": 0.28125, "Closed_Fist": 0.0, "Open_Palm": 0.0, "Pointing_Up": 0.0, "Thumb_Down": 0.7109375, "Thumb_Up": 0.00390625, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.94140625, "palm_box_xyxy": [212.63778686523438, 209.32086181640625, 327.5590515136719, 320.1377868652344], "roi_corners": [[486.3143310546875, 153.84512329101562], [212.75152587890625, 110.07510375976562], [440.9232177734375, 437.5399475097656], [167.3603973388672, 393.7699279785156]], "rotation_radians": 1.7294514179229736, "palm_threshold": 0.75, "landmark_score": 0.6875, "handedness": 0.96484375}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [21816.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5387.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2514.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 7.3 MB/s (786432 bytes in 0.103s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.007s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g05-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 3.7 MB/s (277705 bytes in 0.071s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.0 MB/s (602112 bytes in 0.072s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g05-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.2 MB/s (30615 bytes in 0.025s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g05-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.007s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g05-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.5 MB/s (29760 bytes in 0.019s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g05-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\thumbs_up.jpg", "image_sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba", "prediction": "Thumb_Up", "confidence": 0.8203125, "expected": "Thumb_Up", "passed": true, "probabilities": {"None": 0.17578125, "Closed_Fist": 0.0, "Open_Palm": 0.0, "Pointing_Up": 0.0, "Thumb_Down": 0.0, "Thumb_Up": 0.8203125, "Victory": 0.0, "ILoveYou": 0.0}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [253.1859130859375, 250.492431640625, 298.9748229980469, 296.2813720703125], "roi_corners": [[282.52374267578125, 175.1251220703125], [210.0355682373047, 263.72186279296875], [371.12042236328125, 247.6132354736328], [298.63226318359375, 336.2099914550781]], "rotation_radians": 0.6857289671897888, "palm_threshold": 0.75, "landmark_score": 0.9921875, "handedness": 0.98828125}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [22138.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5389.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2565.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 6.8 MB/s (786432 bytes in 0.110s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.006s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g06-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 4.5 MB/s (277704 bytes in 0.059s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.6 MB/s (602112 bytes in 0.067s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g06-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.2 MB/s (30616 bytes in 0.025s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g06-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.005s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g06-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.4 MB/s (29761 bytes in 0.021s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g06-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\test_victory.jpg", "image_sha256": "84cb8853e3df614e0cb5c93a25e3e2f38ea5e4f92fd428ee7d867ed3479d5764", "prediction": "Victory", "confidence": 0.7734375, "expected": "Victory", "passed": true, "probabilities": {"None": 0.22265625, "Closed_Fist": 0.0, "Open_Palm": 0.0, "Pointing_Up": 0.0, "Thumb_Down": 0.0, "Thumb_Up": 0.0, "Victory": 0.7734375, "ILoveYou": 0.0}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [80.6405258178711, 176.43492126464844, 212.9667205810547, 306.4395751953125], "roi_corners": [[-78.94865417480469, 72.07048034667969], [17.384506225585938, 382.4774475097656], [237.00135803222656, -25.982940673828125], [333.33453369140625, 284.42401123046875]], "rotation_radians": -0.30092012882232666, "palm_threshold": 0.75, "landmark_score": 0.99609375, "handedness": 0.9921875}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [21767.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5379.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2545.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}
+new-run: exit 0
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\palm_detector\image.raw: 1 file pushed, 0 skipped. 7.4 MB/s (786432 bytes in 0.101s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\palm_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (104 bytes in 0.006s)
+inference: exit 0
+profile-palm_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g07-7bca1563/palm_detector/output/: 6 files pulled, 0 skipped. 4.5 MB/s (277704 bytes in 0.059s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\hand_landmark_detector\image.raw: 1 file pushed, 0 skipped. 8.4 MB/s (602112 bytes in 0.068s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\hand_landmark_detector\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (113 bytes in 0.006s)
+inference: exit 0
+profile-hand_landmark_detector: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g07-7bca1563/hand_landmark_detector/output/: 8 files pulled, 0 skipped. 1.2 MB/s (30614 bytes in 0.025s)
+mkdir: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\canned_gesture_classifier\hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\canned_gesture_classifier\mirrored_hand.raw: 1 file pushed, 0 skipped. 0.2 MB/s (256 bytes in 0.001s)
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\provision_target\evidence\20261102T011517285847Z-verify\g07-7bca1563\canned_gesture_classifier\input_list.txt: 1 file pushed, 0 skipped. 0.0 MB/s (245 bytes in 0.005s)
+inference: exit 0
+profile-canned_gesture_classifier: exit 0
+/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g07-7bca1563/canned_gesture_classifier/output/: 5 files pulled, 0 skipped. 1.4 MB/s (29760 bytes in 0.020s)
+PREDICTION {"runtime_version": "2.51.40.260930", "runtime": "/opt/qairt-isolated/2.51.40.260930", "target_run": "/opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/g07-7bca1563", "backend": "htp", "image": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2\\demos\\hand_gesture\\assets\\images\\iloveyou.jpg", "image_sha256": "24dd7901df3ec8de7ba2cbf801e36d6bfc8264f4a8d9d2e231e320289fdce593", "prediction": "ILoveYou", "confidence": 0.86328125, "expected": "ILoveYou", "passed": true, "probabilities": {"None": 0.1328125, "Closed_Fist": 0.0, "Open_Palm": 0.0, "Pointing_Up": 0.0, "Thumb_Down": 0.0, "Thumb_Up": 0.0, "Victory": 0.0, "ILoveYou": 0.86328125}, "details": {"palm_score": 0.99609375, "palm_box_xyxy": [362.2331848144531, 734.611083984375, 640.8787841796875, 1025.92236328125], "roi_corners": [[348.7740783691406, 287.4350891113281], [97.00430297851562, 970.8098754882812], [1002.43701171875, 528.2583618164062], [750.667236328125, 1211.6331787109375]], "rotation_radians": 0.3529905080795288, "palm_threshold": 0.75, "landmark_score": 0.99609375, "handedness": 0.9921875}, "stages": [{"graph": "palm_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [19445.0], "accelerator_events": 1, "positive_cycle_events": 156}, "model_sha256": "31e090477bd215396627a9d64047022f84f35fe312966a45777842dc155bd31b"}, {"graph": "hand_landmark_detector", "backend": "libQnnHtp.so", "profile": {"execute_us": [5310.0], "accelerator_events": 1, "positive_cycle_events": 65}, "model_sha256": "2d3a09c6ab8f9c9e9336b2fa787ca06a61135322eddaf717fd237a758fab6d1c"}, {"graph": "canned_gesture_classifier", "backend": "libQnnHtp.so", "profile": {"execute_us": [2619.0], "accelerator_events": 1, "positive_cycle_events": 68}, "model_sha256": "fc22318b9e78580afe5e9728bab2ab6b5ec86b6988d33255f7760b885f768c8d"}], "scope": "Three DLC graphs execute on target. Image transforms, ROI and feature assembly execute on host. Single hand, still image."}

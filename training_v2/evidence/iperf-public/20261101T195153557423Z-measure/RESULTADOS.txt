@@ -1,0 +1,95 @@
+D1-06 — ENSAIO DE DESEMPENHO CELULAR COM SERVIDOR PÚBLICO
+Data: 01/11/2026, aproximadamente 16:52–16:53, America/Sao_Paulo.
+Resultado técnico: APROVADO — três pares upload/download e controle de falha.
+
+AMBIENTE E MÉTODO
+- QB560D-EU, Ubuntu 20.04.3, BSP QDPA_Ubuntu20.04.003.51.303 V01.
+- Kernel 5.4.219-perf; iperf3 3.22 em /opt/qb560d-workshop/bin/iperf3.
+- Interface: rmnet_data0; IPv4 de origem confirmado: 100.65.195.62.
+- Servidor: 103.230.142.1, porta TCP 5201, publicado pela ServerSP.
+  Fonte do serviço: https://lg.serversp.com.br/.
+- Três rodadas, um fluxo TCP, 10 segundos por direção, UL seguido de DL.
+- Download usa -R; cada direção gera JSON separado.
+- Taxa da tabela: end.sum_received.bits_per_second / 1.000.000.
+- O runner performance.sh e common.sh foram copiados sem alteração para
+  um harness exclusivo dentro do diretório de evidência do target.
+- O config/lab.env compartilhado, o estado do rádio e as rotas foram preservados.
+- Houve antes um par de 3 segundos para confirmar a disponibilidade do serviço.
+
+RESULTADOS
+Rodada   Upload (Mb/s)   Download (Mb/s)   RX delta (bytes)   TX delta (bytes)
+1              9,365             7,130          9.811.383         12.742.708
+2              9,957            14,993         20.138.612         13.695.585
+3             20,441             8,178         11.371.007         27.371.454
+
+Mediana UL: 9,957 Mb/s.
+Mediana DL: 8,178 Mb/s.
+Faixa UL: 9,365–20,441 Mb/s.
+Faixa DL: 7,130–14,993 Mb/s.
+
+ICMP até o mesmo servidor: quatro respostas, perda de 0% nesta amostra.
+RTT mínimo/médio/máximo: 115,153 / 123,468 / 139,073 ms.
+O ping não estava vinculado por -I, opção ausente nesta imagem. A rota padrão
+observada era RMNET, sem rota WLAN no inventário. Os testes TCP foram
+explicitamente vinculados por --bind-dev e seus JSONs confirmam o IP celular.
+
+VERIFICAÇÕES
+- As seis execuções TCP terminaram com retorno zero e JSON sem campo error.
+- Todos os IPs locais de conexão nos JSONs correspondem à rmnet_data0.
+- Os contadores RX/TX cresceram nas três rodadas.
+- Hashes dos scripts executados, carga, rotas e horários estão no summary.json.
+- Controle negativo: o mesmo runner, em harness isolado, tentou uma porta
+  local sem listener, por lo/127.0.0.1. UL e DL registraram Connection refused,
+  e o runner retornou 1 / UL_DL_FAIL. Isso testa tratamento de falha sem
+  depender da disponibilidade do endpoint público ou consultar outras portas.
+
+LIMITES DA MEDIÇÃO
+- O resultado descreve o caminho completo caixa/rede/Internet/servidor público.
+  Carga do servidor, rota, RTT, rádio e condições momentâneas podem limitá-lo.
+- Um fluxo TCP de 10 segundos não determina a capacidade máxima do modem
+  nem a velocidade contratada da operadora.
+- Não houve alteração de preferência de rádio nem exigência de registro 5G NR.
+- A carga de sistema foi registrada; a caixa compartilhava o ambiente dos
+  outros ensaios. Não é uma qualificação de throughput máximo isolado.
+- Não foi estabelecido requisito mínimo de Mbps para aprovação.
+
+COMANDOS MANUAIS PARA REPRODUZIR NA CAIXA
+No adb shell, após o login root:
+
+  . /opt/qb560d-workshop/env.sh
+  ip -4 addr show dev rmnet_data0
+  ip -4 route get 103.230.142.1
+  ip -s link show dev rmnet_data0
+
+  iperf3 -4 -c 103.230.142.1 -p 5201 --bind-dev rmnet_data0 -t 10 -P 1 -J
+  iperf3 -4 -c 103.230.142.1 -p 5201 --bind-dev rmnet_data0 -t 10 -P 1 -R -J
+
+  ip -s link show dev rmnet_data0
+
+Para gerar os arquivos automaticamente, revisar config/lab.env e executar
+sh target/performance.sh a partir da raiz do laboratório. Configuração:
+
+  CELL_IF=rmnet_data0
+  IPERF_SERVER=103.230.142.1
+  IPERF_PORT=5201
+  SECONDS_PER_TEST=10
+  PARALLEL_STREAMS=1
+
+O servidor público pode estar ocupado ou indisponível em outra ocasião.
+Quando isso ocorrer, guardar a falha e conferir um endpoint publicado
+alternativo antes de atribuir o erro ao modem. Os comandos manuais usam
+os timeouts padrão do iperf3; o coletor deste ensaio limitou cada par a
+50 segundos e encerra apenas o grupo de processos do próprio teste.
+
+EVIDÊNCIAS
+- summary.json: três rodadas, JSONs completos e metadados.
+- target/: scripts/configuração isolados e arquivos brutos coletados da caixa.
+- ../20261101T195111939739Z-measure/: teste preliminar de 3 segundos.
+- ../20261101T195327804932Z-negative/: controle negativo local aprovado.
+- ../20261101T195019862873Z-inspect/: versão, IP, rotas e inventário inicial.
+
+Referência dos parâmetros de interface, direção e JSON:
+https://software.es.net/iperf/invoking.html
+
+Consolidação na apresentação, guias gerais e pacote final: item 7 da checklist
+PENDENCIAS_TREINAMENTO_TEMP.txt. O PPTX não foi alterado neste ensaio.

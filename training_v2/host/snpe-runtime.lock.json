@@ -1,0 +1,42 @@
+{
+  "release": "2.26.0.240828",
+  "public_source": "https://softwarecenter.qualcomm.com/api/download/software/qualcomm_neural_processing_sdk/v2.26.0.240828.zip",
+  "files": {
+    "LICENSE.pdf": {
+      "bytes": 163076,
+      "sha256": "217c959d7cf5059e567d42efb310416816b2f629dc369371b9dbb47d8ac65ad6"
+    },
+    "lib/aarch64-ubuntu-gcc9.4/libSNPE.so": {
+      "bytes": 19395592,
+      "sha256": "cfa5bac52fc15e8bcb7fcd8476f8dc57fd9ffde271cd9eed1f2b9c9ba499460c"
+    },
+    "lib/aarch64-ubuntu-gcc9.4/libSnpeHtpV68Stub.so": {
+      "bytes": 186304,
+      "sha256": "a23f4ad63b611657644c0d6db0ee39977d19ddccb4de33f55951dd6dd2f615bd"
+    },
+    "lib/aarch64-ubuntu-gcc9.4/libSnpeHtpPrepare.so": {
+      "bytes": 38091080,
+      "sha256": "45ffa7e0a530e2c7b8dad312c80110d079292048cce2a78b9de62b3dc917128e"
+    },
+    "lib/hexagon-v68/unsigned/libSnpeHtpV68Skel.so": {
+      "bytes": 7353512,
+      "sha256": "416d7f28c51b3e0a2e27d46fe19a5b7863b55f44b95fdb474ce28d44a68aabc7"
+    },
+    "bin/x86_64-windows-msvc/snpe-diagview.exe": {
+      "bytes": 241152,
+      "sha256": "6917e83b16404b9e108bf24e7c2811f2cc47548f616914cbcad2226fd85cfea4"
+    },
+    "lib/x86_64-windows-msvc/SNPE.dll": {
+      "bytes": 9794048,
+      "sha256": "7274decd7a77f37996950c01824616236b4ed6ef7c244fe83095c927cec88869"
+    },
+    "lib/x86_64-windows-msvc/QnnCpu.dll": {
+      "bytes": 3791872,
+      "sha256": "7f03e852c9479a9bfb1af177442fa04abead67cbc2969ce1518ab51b7e147f00"
+    },
+    "lib/x86_64-windows-msvc/QnnModelDlc.dll": {
+      "bytes": 1440768,
+      "sha256": "1121b089dffc6b183b4330a7b3865ddf6ad5abb0d398b8f88e4f6ded9d1554eb"
+    }
+  }
+}

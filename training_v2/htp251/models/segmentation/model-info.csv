@@ -1,0 +1,994 @@
+DLC info of: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\models\segmentation\model.w8a16.dlc
+""
+Model Version: 
+""
+Model Copyright: 
+""
+"Converter command: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\sdk251-host\qairt\2.51.40.260930\bin\x86_64-windows-msvc\qairt-converter; adjust_nms_features_dims=True; export_format=DLC_DEFAULT; dump_exported_onnx=False; align_matmul_ranks=True; backend=HTP; io_config=; enable_tensor_deduplication=False; apply_masked_softmax=uncompressed; disable_batchnorm_folding=False; converter_op_package_lib=; batch=None; calc_static_encodings=False; dump_custom_io_config_template=; copyright_file=None; multi_time_steps_gru=False; custom_op_config_paths=None; debug=-1; defer_loading=False; match_caffe_ssd_to_tf=False; disable_dynamic_16_bit_weights=False; define_symbol=None; lora_weight_list=None; desired_io_layout=[['ResizeBilinear_3', 'NHWC']]; disable_defer_loading=True; disable_match_lstms=False; disable_preserve_io=False; disable_qnn_op_config_validation=False; input_type=[]; quantizer_log_level=LogLevel.NONE; keep_disconnected_nodes=False; disable_transform_tracking=False; dry_run=None; dump_pass_trace_info=False; dumpIR=False; enable_experimental_feature=[]; dump_inferred_model=False; validate_models=False; no_optimization=False; dump_io_config_template=; dump_ir=; float_bitwidth=32; dump_ir_optimizer_config_template=False; dump_optimization_pass_mode_config=False; dump_relay=None; dump_value_info=False; input_dim=None; enable_Layout_Transform_v1=False; enable_framework_trace=False; use_onnx_relay=False; enable_match_gathernd=False; float_bias_bitwidth=0; pack_4_bit_weights=False; enable_match_topk=False; ir_optimizer_config=; enable_rope_fusion=False; force_prune_cast_ops=False; expand_gru_op_structure=True; expand_sparse_op_structure=False; expand_lstm_op_structure=False; extract_color_transform=True; gguf_config=None; handle_gather_negative_indices=True; inject_cast_for_gather=True; input_dtype=[['sub_7', 'float32']]; input_encoding=[]; input_layout=[['sub_7', 'NHWC']]; keep_int64_inputs=False; keep_quant_nodes=False; unroll_gru_time_steps=True; model_version=None; multi_time_steps_lstm=False; no_simplification=True; onnx_summary=False; optimization_pass_mode=ir_optimizer_mainline; optimization_pass_mode_config=; out_names=[]; perform_sequence_construct_optimizer=False; output_layout=[['ResizeBilinear_3', 'NHWC']]; package_name=None; packed_masked_softmax_inputs=[]; packed_max_seq=1; partial_graph_input_name=None; perform_axes_to_spatial_first_order=False; perform_layout_transformation=True; prepare_inputs_as_params=False; preprocess_roi_pool_inputs=True; preserve_io=[['layout']]; preserve_io_datatype=[]; preserve_onnx_output_order=False; pytorch_custom_op_lib=; quant_updatable_mode=None; quantization_overrides=; quantizer_log=None; remove_unused_inputs=False; saved_model_signature_key=serving_default; saved_model_tag=serve; show_unconsumed_nodes=False; signature_name=; skip_validation=False; tf_summary=False; soc_model=; squash_box_decoder=True; transforms_metadata=None; unroll_lstm_time_steps=True; use_convert_quantization_nodes=False; use_quantize_v2=False; user_custom_io=[{'IOName': 'ResizeBilinear_3', 'Layout': {'Model': 'NHWC', 'Custom': 'NHWC'}}]"
+""
+Quantizer command: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\.build\sdk251-host\qairt\2.51.40.260930\bin\x86_64-windows-msvc\qairt-quantizer; act_bitwidth=16; act_quantizer=tf; percentile_calibration_value=99.99; backend=HTP; act_quantizer_calibration=min-max; float_fallback=False; input_list=C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\htp251\calibration\segmentation\input_list.txt; restrict_quantization_steps=[]; algorithms=[]; act_quantizer_schema=asymmetric; soc_model=; adjust_bias_encoding=False; use_per_channel_quantization=False; keep_weights_quantized=False; dump_encoding_json=False; bias_bitwidth=32; calc_static_encodings=False; config_file=None; debug=-1; disable_dynamic_16_bit_weights=False; float_bitwidth=32; dump_ir=; dump_ir_optimizer_config_template=False; use_native_output_files=False; dump_optimization_pass_mode_config=False; include_data_invariant_ops=False; dump_pass_trace_info=False; use_per_row_quantization=False; enable_per_row_quantized_bias=False; export_stripped_dlc=False; pack_4_bit_weights=False; ir_optimizer_config=; float_bias_bitwidth=0; ignore_encodings=False; quantizer_log=None; param_quantizer_calibration=min-max; op_package_lib=; optimization_pass_mode=ir_optimizer_mainline; optimization_pass_mode_config=; param_quantizer=None; param_quantizer_schema=asymmetric; preserve_io_datatype=[]; quantizer_log_level=LogLevel.NONE; use_aimet_quantizer=False; use_dynamic_16_bit_weights=True; use_native_input_files=False; use_quantize_v2=False; weights_bitwidth=8
+""
+DLC created with converter version: 2.51.40.260930230134
+Info of graph: model.float
+Id,Name,Type,Inputs,Outputs,Out Dims,Runtimes,Parameters
+0,MobilenetV2/Conv/Relu6,Conv2d,"sub_7 (data type: uFxp_16; tensor dimension: [1,257,257,3]; tensor type: APP_WRITE) [NW Input]","MobilenetV2/Conv/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)",1x129x129x16,A D G C,"sub_7 encoding : bitwidth 16, min -1.000015258789, max 0.999984741211, scale 0.000030518044, offset -32768.000000000000"
+,,,"const_fold_opt__2662 (data type: uFxp_8; tensor dimension: [3,3,3,16]; tensor type: STATIC)",,,,"const_fold_opt__2662 encoding : bitwidth 8, min -9.014307022095, max 10.632260322571, scale 0.077045358717, offset -117.000000000000"
+,,,MobilenetV2/Conv/Conv2D_bias (data type: sFxp_32; tensor dimension: [16]; tensor type: STATIC),,,,"MobilenetV2/Conv/Conv2D_bias encoding : bitwidth 32, min -5.443069458008, max 5.443069458008, scale 0.000000002535, offset 0.000000000000"
+,,,,,,,"MobilenetV2/Conv/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/Conv/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [2, 2]"
+,,,,,,,param count: 448 (0.0686%)
+,,,,,,,MACs per inference: 7M (0.973%)
+1,Relu6__2188,ElementWiseNeuron,"MobilenetV2/Conv/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)","Relu6__2188:0 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)",1x129x129x16,A D G C,"Relu6__2188:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 266k (0.036%)
+2,MobilenetV2/expanded_conv/depthwise/Relu6,DepthWiseConv2d,"Relu6__2188:0 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)",1x129x129x16,A D G C,"const_fold_opt__2701 encoding : bitwidth 8, min -11.761619567871, max 4.717572689056, scale 0.064624287188, offset -182.000000000000"
+,,,"const_fold_opt__2701 (data type: uFxp_8; tensor dimension: [3,3,1,16]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv/depthwise/depthwise_bias encoding : bitwidth 32, min -6.072278022766, max 6.072278022766, scale 0.000000002828, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [16]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 2M (0.324%)
+3,Relu6__2190,ElementWiseNeuron,"MobilenetV2/expanded_conv/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)","Relu6__2190:0 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)",1x129x129x16,A D G C,"Relu6__2190:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 266k (0.036%)
+4,MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2190:0 (data type: uFxp_16; tensor dimension: [1,129,129,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,129,129,8]; tensor type: NATIVE)",1x129x129x8,A D G C,"const_fold_opt__2655 encoding : bitwidth 8, min -7.997906684875, max 7.452594757080, scale 0.060590200126, offset -132.000000000000"
+,,,"const_fold_opt__2655 (data type: uFxp_8; tensor dimension: [1,1,16,8]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv/project/Conv2D_bias encoding : bitwidth 32, min -36.078529357910, max 36.078529357910, scale 0.000000016800, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [8]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -47.070816040039, max 42.817462921143, scale 0.001371607184, offset -34318.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 136 (0.0208%)
+,,,,,,,MACs per inference: 2M (0.288%)
+5,MobilenetV2/expanded_conv_1/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,129,129,8]; tensor type: NATIVE)","MobilenetV2/expanded_conv_1/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,48]; tensor type: NATIVE)",1x129x129x48,A D G C,"const_fold_opt__2695 encoding : bitwidth 8, min -0.450668215752, max 0.483643949032, scale 0.003663969226, offset -123.000000000000"
+,,,"const_fold_opt__2695 (data type: uFxp_8; tensor dimension: [1,1,8,48]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_1/expand/Conv2D_bias encoding : bitwidth 32, min -3.978368520737, max 3.978368520737, scale 0.000000001853, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_1/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [48]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_1/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_1/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 432 (0.0662%)
+,,,,,,,MACs per inference: 6M (0.865%)
+6,Relu6__2193,ElementWiseNeuron,"MobilenetV2/expanded_conv_1/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,129,129,48]; tensor type: NATIVE)","Relu6__2193:0 (data type: uFxp_16; tensor dimension: [1,129,129,48]; tensor type: NATIVE)",1x129x129x48,A D G C,"Relu6__2193:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 798k (0.108%)
+7,MobilenetV2/expanded_conv_1/depthwise/Relu6,DepthWiseConv2d,"Relu6__2193:0 (data type: uFxp_16; tensor dimension: [1,129,129,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_1/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,48]; tensor type: NATIVE)",1x65x65x48,A D G C,"const_fold_opt__2698 encoding : bitwidth 8, min -3.475215435028, max 2.279199838638, scale 0.022566335276, offset -154.000000000000"
+,,,"const_fold_opt__2698 (data type: uFxp_8; tensor dimension: [3,3,1,48]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_1/depthwise/depthwise_bias encoding : bitwidth 32, min -9.713134765625, max 9.713134765625, scale 0.000000004523, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_1/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [48]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_1/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_1/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 1M (0.247%)
+8,Relu6__2195,ElementWiseNeuron,"MobilenetV2/expanded_conv_1/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,48]; tensor type: NATIVE)","Relu6__2195:0 (data type: uFxp_16; tensor dimension: [1,65,65,48]; tensor type: NATIVE)",1x65x65x48,A D G C,"Relu6__2195:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 202k (0.0275%)
+9,MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2195:0 (data type: uFxp_16; tensor dimension: [1,65,65,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)",1x65x65x12,A D G C,"const_fold_opt__2692 encoding : bitwidth 8, min -2.918957948685, max 3.232564926147, scale 0.024123618379, offset -121.000000000000"
+,,,"const_fold_opt__2692 (data type: uFxp_8; tensor dimension: [1,1,48,12]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_1/project/Conv2D_bias encoding : bitwidth 32, min -19.447628021240, max 19.447628021240, scale 0.000000009056, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_1/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [12]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -39.516365051270, max 41.036842346191, scale 0.001229163143, offset -32149.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_1/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 588 (0.0901%)
+,,,,,,,MACs per inference: 2M (0.329%)
+10,MobilenetV2/expanded_conv_2/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)","MobilenetV2/expanded_conv_2/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"const_fold_opt__2676 encoding : bitwidth 8, min -0.729719996452, max 0.679966390133, scale 0.005528181791, offset -132.000000000000"
+,,,"const_fold_opt__2676 (data type: uFxp_8; tensor dimension: [1,1,12,72]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_2/expand/Conv2D_bias encoding : bitwidth 32, min -5.049355506897, max 5.049355506897, scale 0.000000002351, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_2/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [72]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_2/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_2/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 936 (0.143%)
+,,,,,,,MACs per inference: 3M (0.494%)
+11,Relu6__2198,ElementWiseNeuron,"MobilenetV2/expanded_conv_2/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","Relu6__2198:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"Relu6__2198:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 304k (0.0412%)
+12,MobilenetV2/expanded_conv_2/depthwise/Relu6,DepthWiseConv2d,"Relu6__2198:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","MobilenetV2/expanded_conv_2/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"const_fold_opt__2722 encoding : bitwidth 8, min -3.568290233612, max 2.706978797913, scale 0.024608898908, offset -145.000000000000"
+,,,"const_fold_opt__2722 (data type: uFxp_8; tensor dimension: [3,3,1,72]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_2/depthwise/depthwise_bias encoding : bitwidth 32, min -15.437354087830, max 15.437354087830, scale 0.000000007189, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_2/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [72]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_2/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_2/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 2M (0.371%)
+13,Relu6__2200,ElementWiseNeuron,"MobilenetV2/expanded_conv_2/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","Relu6__2200:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"Relu6__2200:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 304k (0.0412%)
+14,MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2200:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)",1x65x65x12,A D G C,"const_fold_opt__2716 encoding : bitwidth 8, min -4.706243038177, max 7.175856113434, scale 0.046596467495, offset -101.000000000000"
+,,,"const_fold_opt__2716 (data type: uFxp_8; tensor dimension: [1,1,72,12]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_2/project/Conv2D_bias encoding : bitwidth 32, min -37.220413208008, max 37.220413208008, scale 0.000000017332, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_2/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [12]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -62.236305236816, max 89.787857055664, scale 0.002319739899, offset -26829.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_2/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 876 (0.134%)
+,,,,,,,MACs per inference: 3M (0.494%)
+15,MobilenetV2/expanded_conv_2/add,Eltwise_Binary,"MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)","MobilenetV2/expanded_conv_2/add (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)",1x65x65x12,A D G C,"MobilenetV2/expanded_conv_2/add encoding : bitwidth 16, min -57.901279449463, max 65.982505798340, scale 0.001890345360, offset -30630.000000000000"
+,,,"MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 50k (0.00686%)
+16,MobilenetV2/expanded_conv_3/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_2/add (data type: uFxp_16; tensor dimension: [1,65,65,12]; tensor type: NATIVE)","MobilenetV2/expanded_conv_3/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"const_fold_opt__2683 encoding : bitwidth 8, min -2.379740953445, max 0.624387502670, scale 0.011780896224, offset -202.000000000000"
+,,,"const_fold_opt__2683 (data type: uFxp_8; tensor dimension: [1,1,12,72]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_3/expand/Conv2D_bias encoding : bitwidth 32, min -4.727467536926, max 4.727467536926, scale 0.000000002201, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_3/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [72]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_3/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_3/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 936 (0.143%)
+,,,,,,,MACs per inference: 3M (0.494%)
+17,Relu6__2203,ElementWiseNeuron,"MobilenetV2/expanded_conv_3/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","Relu6__2203:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)",1x65x65x72,A D G C,"Relu6__2203:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 304k (0.0412%)
+18,MobilenetV2/expanded_conv_3/depthwise/Relu6,DepthWiseConv2d,"Relu6__2203:0 (data type: uFxp_16; tensor dimension: [1,65,65,72]; tensor type: NATIVE)","MobilenetV2/expanded_conv_3/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,72]; tensor type: NATIVE)",1x33x33x72,A D G C,"const_fold_opt__2686 encoding : bitwidth 8, min -2.095454692841, max 1.748724699020, scale 0.015075213276, offset -139.000000000000"
+,,,"const_fold_opt__2686 (data type: uFxp_8; tensor dimension: [3,3,1,72]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_3/depthwise/depthwise_bias encoding : bitwidth 32, min -8.002971649170, max 8.002971649170, scale 0.000000003727, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_3/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [72]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_3/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_3/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [2, 2]"
+,,,,,,,MACs per inference: 705k (0.0955%)
+19,Relu6__2205,ElementWiseNeuron,"MobilenetV2/expanded_conv_3/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,72]; tensor type: NATIVE)","Relu6__2205:0 (data type: uFxp_16; tensor dimension: [1,33,33,72]; tensor type: NATIVE)",1x33x33x72,A D G C,"Relu6__2205:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 78k (0.0106%)
+20,MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2205:0 (data type: uFxp_16; tensor dimension: [1,33,33,72]; tensor type: NATIVE)","MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",1x33x33x16,A D G C,"const_fold_opt__2665 encoding : bitwidth 8, min -3.018571853638, max 3.090442657471, scale 0.023956919089, offset -126.000000000000"
+,,,"const_fold_opt__2665 (data type: uFxp_8; tensor dimension: [1,1,72,16]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_3/project/Conv2D_bias encoding : bitwidth 32, min -19.800767898560, max 19.800767898560, scale 0.000000009220, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_3/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [16]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -34.066734313965, max 34.408405303955, scale 0.001044863602, offset -32604.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_3/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.179%)
+,,,,,,,MACs per inference: 1M (0.17%)
+21,MobilenetV2/expanded_conv_4/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv_4/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2619 encoding : bitwidth 8, min -0.203496173024, max 0.192622318864, scale 0.001553405891, offset -131.000000000000"
+,,,"const_fold_opt__2619 (data type: uFxp_8; tensor dimension: [1,1,16,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_4/expand/Conv2D_bias encoding : bitwidth 32, min -3.766211748123, max 3.766211748123, scale 0.000000001754, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_4/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_4/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_4/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.25%)
+,,,,,,,MACs per inference: 1M (0.226%)
+22,Relu6__2208,ElementWiseNeuron,"MobilenetV2/expanded_conv_4/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2208:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2208:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+23,MobilenetV2/expanded_conv_4/depthwise/Relu6,DepthWiseConv2d,"Relu6__2208:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_4/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2717 encoding : bitwidth 8, min -8.443820953369, max 12.460783958435, scale 0.081978842616, offset -103.000000000000"
+,,,"const_fold_opt__2717 (data type: uFxp_8; tensor dimension: [3,3,1,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_4/depthwise/depthwise_bias encoding : bitwidth 32, min -31.929637908936, max 31.929637908936, scale 0.000000014868, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_4/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_4/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_4/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 940k (0.127%)
+24,Relu6__2210,ElementWiseNeuron,"MobilenetV2/expanded_conv_4/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2210:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2210:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+25,MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2210:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",1x33x33x16,A D G C,"const_fold_opt__2690 encoding : bitwidth 8, min -1.443005561829, max 1.995933055878, scale 0.013486034237, offset -107.000000000000"
+,,,"const_fold_opt__2690 (data type: uFxp_8; tensor dimension: [1,1,96,16]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_4/project/Conv2D_bias encoding : bitwidth 32, min -7.192969799042, max 7.192969799042, scale 0.000000003349, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_4/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [16]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -27.217464447021, max 28.610284805298, scale 0.000851876859, offset -31950.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_4/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.238%)
+,,,,,,,MACs per inference: 1M (0.226%)
+26,MobilenetV2/expanded_conv_4/add,Eltwise_Binary,"MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv_4/add (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",1x33x33x16,A D G C,"MobilenetV2/expanded_conv_4/add encoding : bitwidth 16, min -51.948383331299, max 35.456935882568, scale 0.001333719702, offset -38950.000000000000"
+,,,"MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 17k (0.00236%)
+27,MobilenetV2/expanded_conv_5/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_4/add (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv_5/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2725 encoding : bitwidth 8, min -0.200887143612, max 0.212227553129, scale 0.001620057621, offset -124.000000000000"
+,,,"const_fold_opt__2725 (data type: uFxp_8; tensor dimension: [1,1,16,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_5/expand/Conv2D_bias encoding : bitwidth 32, min -3.052324295044, max 3.052324295044, scale 0.000000001421, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_5/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_5/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_5/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.25%)
+,,,,,,,MACs per inference: 1M (0.226%)
+28,Relu6__2213,ElementWiseNeuron,"MobilenetV2/expanded_conv_5/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2213:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2213:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+29,MobilenetV2/expanded_conv_5/depthwise/Relu6,DepthWiseConv2d,"Relu6__2213:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_5/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2704 encoding : bitwidth 8, min -6.374939918518, max 3.659687757492, scale 0.039351481944, offset -162.000000000000"
+,,,"const_fold_opt__2704 (data type: uFxp_8; tensor dimension: [3,3,1,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_5/depthwise/depthwise_bias encoding : bitwidth 32, min -5.238246440887, max 5.238246440887, scale 0.000000002439, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_5/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_5/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_5/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 940k (0.127%)
+30,Relu6__2215,ElementWiseNeuron,"MobilenetV2/expanded_conv_5/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2215:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2215:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+31,MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2215:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",1x33x33x16,A D G C,"const_fold_opt__2680 encoding : bitwidth 8, min -2.137372970581, max 2.293766260147, scale 0.017377017066, offset -123.000000000000"
+,,,"const_fold_opt__2680 (data type: uFxp_8; tensor dimension: [1,1,96,16]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_5/project/Conv2D_bias encoding : bitwidth 32, min -15.620152473450, max 15.620152473450, scale 0.000000007274, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_5/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [16]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -32.174732208252, max 22.974376678467, scale 0.000841521425, offset -38234.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_5/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.238%)
+,,,,,,,MACs per inference: 1M (0.226%)
+32,MobilenetV2/expanded_conv_5/add,Eltwise_Binary,"MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv_5/add (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",1x33x33x16,A D G C,"MobilenetV2/expanded_conv_5/add encoding : bitwidth 16, min -62.457218170166, max 41.927505493164, scale 0.001592808752, offset -39212.000000000000"
+,,,"MobilenetV2/expanded_conv_4/add (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 17k (0.00236%)
+33,MobilenetV2/expanded_conv_6/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_5/add (data type: uFxp_16; tensor dimension: [1,33,33,16]; tensor type: NATIVE)","MobilenetV2/expanded_conv_6/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2666 encoding : bitwidth 8, min -0.223313048482, max 0.186361968517, scale 0.001606568694, offset -139.000000000000"
+,,,"const_fold_opt__2666 (data type: uFxp_8; tensor dimension: [1,1,16,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_6/expand/Conv2D_bias encoding : bitwidth 32, min -3.147611618042, max 3.147611618042, scale 0.000000001466, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_6/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_6/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_6/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 1k (0.25%)
+,,,,,,,MACs per inference: 1M (0.226%)
+34,Relu6__2218,ElementWiseNeuron,"MobilenetV2/expanded_conv_6/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2218:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2218:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+35,MobilenetV2/expanded_conv_6/depthwise/Relu6,DepthWiseConv2d,"Relu6__2218:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_6/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"const_fold_opt__2728 encoding : bitwidth 8, min -1.226269006729, max 1.379552721977, scale 0.010218909010, offset -120.000000000000"
+,,,"const_fold_opt__2728 (data type: uFxp_8; tensor dimension: [3,3,1,96]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_6/depthwise/depthwise_bias encoding : bitwidth 32, min -7.565336227417, max 7.565336227417, scale 0.000000003523, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_6/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [96]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_6/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_6/depthwise/depthwise_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[1, 1], [1, 1]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 940k (0.127%)
+36,Relu6__2220,ElementWiseNeuron,"MobilenetV2/expanded_conv_6/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","Relu6__2220:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)",1x33x33x96,A D G C,"Relu6__2220:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 104k (0.0142%)
+37,MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2220:0 (data type: uFxp_16; tensor dimension: [1,33,33,96]; tensor type: NATIVE)","MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"const_fold_opt__2627 encoding : bitwidth 8, min -1.951647043228, max 3.232415437698, scale 0.020329656079, offset -96.000000000000"
+,,,"const_fold_opt__2627 (data type: uFxp_8; tensor dimension: [1,1,96,32]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_6/project/Conv2D_bias encoding : bitwidth 32, min -20.106773376465, max 20.106773376465, scale 0.000000009363, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_6/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -28.529935836792, max 33.874835968018, scale 0.000952235772, offset -29961.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_6/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 3k (0.476%)
+,,,,,,,MACs per inference: 3M (0.453%)
+38,MobilenetV2/expanded_conv_7/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_7/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2679 encoding : bitwidth 8, min -0.205381959677, max 0.185456842184, scale 0.001532701193, offset -134.000000000000"
+,,,"const_fold_opt__2679 (data type: uFxp_8; tensor dimension: [1,1,32,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_7/expand/Conv2D_bias encoding : bitwidth 32, min -3.331688404083, max 3.331688404083, scale 0.000000001551, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_7/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_7/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_7/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.971%)
+,,,,,,,MACs per inference: 6M (0.906%)
+39,Relu6__2223,ElementWiseNeuron,"MobilenetV2/expanded_conv_7/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2223:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2223:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+40,MobilenetV2/expanded_conv_7/depthwise/Relu6,DepthWiseConv2d,"Relu6__2223:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_7/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2715 encoding : bitwidth 8, min -7.247587680817, max 30.469449996948, scale 0.147909954190, offset -49.000000000000"
+,,,"const_fold_opt__2715 (data type: uFxp_8; tensor dimension: [3,3,1,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_7/depthwise/depthwise_bias encoding : bitwidth 32, min -79.450408935547, max 79.450408935547, scale 0.000000036997, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_7/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_7/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_7/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 1M (0.255%)
+41,Relu6__2225,ElementWiseNeuron,"MobilenetV2/expanded_conv_7/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2225:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2225:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+42,MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2225:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"const_fold_opt__2675 encoding : bitwidth 8, min -1.639628887177, max 1.759601712227, scale 0.013330316171, offset -123.000000000000"
+,,,"const_fold_opt__2675 (data type: uFxp_8; tensor dimension: [1,1,192,32]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_7/project/Conv2D_bias encoding : bitwidth 32, min -9.769053459167, max 9.769053459167, scale 0.000000004549, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_7/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -23.603685379028, max 37.431175231934, scale 0.000931332237, offset -25344.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_7/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.946%)
+,,,,,,,MACs per inference: 6M (0.906%)
+43,MobilenetV2/expanded_conv_7/add,Eltwise_Binary,"MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_7/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"MobilenetV2/expanded_conv_7/add encoding : bitwidth 16, min -26.698070526123, max 35.140411376953, scale 0.000943594787, offset -28294.000000000000"
+,,,"MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 34k (0.00472%)
+44,MobilenetV2/expanded_conv_8/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_7/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_8/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2699 encoding : bitwidth 8, min -0.159417480230, max 0.155710101128, scale 0.001235794392, offset -129.000000000000"
+,,,"const_fold_opt__2699 (data type: uFxp_8; tensor dimension: [1,1,32,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_8/expand/Conv2D_bias encoding : bitwidth 32, min -2.313085317612, max 2.313085317612, scale 0.000000001077, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_8/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_8/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_8/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.971%)
+,,,,,,,MACs per inference: 6M (0.906%)
+45,Relu6__2228,ElementWiseNeuron,"MobilenetV2/expanded_conv_8/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2228:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2228:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+46,MobilenetV2/expanded_conv_8/depthwise/Relu6,DepthWiseConv2d,"Relu6__2228:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_8/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2726 encoding : bitwidth 8, min -7.926021099091, max 10.447937011719, scale 0.072054736316, offset -110.000000000000"
+,,,"const_fold_opt__2726 (data type: uFxp_8; tensor dimension: [3,3,1,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_8/depthwise/depthwise_bias encoding : bitwidth 32, min -24.797554016113, max 24.797554016113, scale 0.000000011547, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_8/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_8/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_8/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 1M (0.255%)
+47,Relu6__2230,ElementWiseNeuron,"MobilenetV2/expanded_conv_8/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2230:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2230:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+48,MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2230:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"const_fold_opt__2700 encoding : bitwidth 8, min -1.946107268333, max 1.362275004387, scale 0.012974048033, offset -150.000000000000"
+,,,"const_fold_opt__2700 (data type: uFxp_8; tensor dimension: [1,1,192,32]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_8/project/Conv2D_bias encoding : bitwidth 32, min -5.855400562286, max 5.855400562286, scale 0.000000002727, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_8/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -23.043302536011, max 23.080602645874, scale 0.000703805650, offset -32741.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_8/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.946%)
+,,,,,,,MACs per inference: 6M (0.906%)
+49,MobilenetV2/expanded_conv_8/add,Eltwise_Binary,"MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_8/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"MobilenetV2/expanded_conv_8/add encoding : bitwidth 16, min -34.242660522461, max 31.322326660156, scale 0.001000457560, offset -34227.000000000000"
+,,,"MobilenetV2/expanded_conv_7/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 34k (0.00472%)
+50,MobilenetV2/expanded_conv_9/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_8/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_9/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2703 encoding : bitwidth 8, min -0.144062787294, max 0.164643198252, scale 0.001210611663, offset -119.000000000000"
+,,,"const_fold_opt__2703 (data type: uFxp_8; tensor dimension: [1,1,32,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_9/expand/Conv2D_bias encoding : bitwidth 32, min -1.859550714493, max 1.859550714493, scale 0.000000000866, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_9/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_9/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_9/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.971%)
+,,,,,,,MACs per inference: 6M (0.906%)
+51,Relu6__2233,ElementWiseNeuron,"MobilenetV2/expanded_conv_9/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2233:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2233:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+52,MobilenetV2/expanded_conv_9/depthwise/Relu6,DepthWiseConv2d,"Relu6__2233:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_9/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2721 encoding : bitwidth 8, min -6.665085792542, max 5.220206737518, scale 0.046608991921, offset -143.000000000000"
+,,,"const_fold_opt__2721 (data type: uFxp_8; tensor dimension: [3,3,1,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_9/depthwise/depthwise_bias encoding : bitwidth 32, min -6.374997138977, max 6.374997138977, scale 0.000000002969, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_9/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_9/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_9/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 1M (0.255%)
+53,Relu6__2235,ElementWiseNeuron,"MobilenetV2/expanded_conv_9/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2235:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2235:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+54,MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2235:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"const_fold_opt__2651 encoding : bitwidth 8, min -2.250437259674, max 2.377477884293, scale 0.018148686737, offset -124.000000000000"
+,,,"const_fold_opt__2651 (data type: uFxp_8; tensor dimension: [1,1,192,32]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_9/project/Conv2D_bias encoding : bitwidth 32, min -8.627384185791, max 8.627384185791, scale 0.000000004017, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_9/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [32]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -26.157766342163, max 26.115489959717, scale 0.000797638786, offset -32794.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_9/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.946%)
+,,,,,,,MACs per inference: 6M (0.906%)
+55,MobilenetV2/expanded_conv_9/add,Eltwise_Binary,"MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_9/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",1x33x33x32,A D G C,"MobilenetV2/expanded_conv_9/add encoding : bitwidth 16, min -36.302417755127, max 30.219196319580, scale 0.001015054761, offset -35764.000000000000"
+,,,"MobilenetV2/expanded_conv_8/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 34k (0.00472%)
+56,MobilenetV2/expanded_conv_10/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_9/add (data type: uFxp_16; tensor dimension: [1,33,33,32]; tensor type: NATIVE)","MobilenetV2/expanded_conv_10/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2707 encoding : bitwidth 8, min -0.238573983312, max 0.199097722769, scale 0.001716359635, offset -139.000000000000"
+,,,"const_fold_opt__2707 (data type: uFxp_8; tensor dimension: [1,1,32,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_10/expand/Conv2D_bias encoding : bitwidth 32, min -3.212788105011, max 3.212788105011, scale 0.000000001496, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_10/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_10/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_10/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 6k (0.971%)
+,,,,,,,MACs per inference: 6M (0.906%)
+57,Relu6__2238,ElementWiseNeuron,"MobilenetV2/expanded_conv_10/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2238:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2238:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+58,MobilenetV2/expanded_conv_10/depthwise/Relu6,DepthWiseConv2d,"Relu6__2238:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_10/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"const_fold_opt__2720 encoding : bitwidth 8, min -3.845397472382, max 3.999213218689, scale 0.030763179064, offset -125.000000000000"
+,,,"const_fold_opt__2720 (data type: uFxp_8; tensor dimension: [3,3,1,192]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_10/depthwise/depthwise_bias encoding : bitwidth 32, min -10.391876220703, max 10.391876220703, scale 0.000000004839, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_10/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [192]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_10/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_10/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 1M (0.255%)
+59,Relu6__2240,ElementWiseNeuron,"MobilenetV2/expanded_conv_10/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","Relu6__2240:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)",1x33x33x192,A D G C,"Relu6__2240:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 209k (0.0283%)
+60,MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2240:0 (data type: uFxp_16; tensor dimension: [1,33,33,192]; tensor type: NATIVE)","MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",1x33x33x48,A D G C,"const_fold_opt__2671 encoding : bitwidth 8, min -1.707370996475, max 1.316098451614, scale 0.011856743135, offset -144.000000000000"
+,,,"const_fold_opt__2671 (data type: uFxp_8; tensor dimension: [1,1,192,48]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_10/project/Conv2D_bias encoding : bitwidth 32, min -12.386563301086, max 12.386563301086, scale 0.000000005768, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_10/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [48]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -21.085336685181, max 24.622112274170, scale 0.000697450945, offset -30232.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_10/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 9k (1.42%)
+,,,,,,,MACs per inference: 10M (1.36%)
+61,MobilenetV2/expanded_conv_11/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_11/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2674 encoding : bitwidth 8, min -0.191681951284, max 0.233351930976, scale 0.001666799537, offset -115.000000000000"
+,,,"const_fold_opt__2674 (data type: uFxp_8; tensor dimension: [1,1,48,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_11/expand/Conv2D_bias encoding : bitwidth 32, min -2.368241310120, max 2.368241310120, scale 0.000000001103, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_11/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_11/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_11/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 14k (2.16%)
+,,,,,,,MACs per inference: 15M (2.04%)
+62,Relu6__2243,ElementWiseNeuron,"MobilenetV2/expanded_conv_11/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2243:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2243:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+63,MobilenetV2/expanded_conv_11/depthwise/Relu6,DepthWiseConv2d,"Relu6__2243:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_11/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2723 encoding : bitwidth 8, min -6.843014717102, max 16.737644195557, scale 0.092473171651, offset -74.000000000000"
+,,,"const_fold_opt__2723 (data type: uFxp_8; tensor dimension: [3,3,1,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_11/depthwise/depthwise_bias encoding : bitwidth 32, min -24.620164871216, max 24.620164871216, scale 0.000000011465, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_11/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_11/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_11/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 2M (0.382%)
+64,Relu6__2245,ElementWiseNeuron,"MobilenetV2/expanded_conv_11/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2245:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2245:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+65,MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2245:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",1x33x33x48,A D G C,"const_fold_opt__2608 encoding : bitwidth 8, min -1.469293236732, max 1.062259197235, scale 0.009927656502, offset -148.000000000000"
+,,,"const_fold_opt__2608 (data type: uFxp_8; tensor dimension: [1,1,288,48]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_11/project/Conv2D_bias encoding : bitwidth 32, min -9.267787933350, max 9.267787933350, scale 0.000000004316, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_11/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [48]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -21.694141387939, max 22.278566360474, scale 0.000670980487, offset -32332.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_11/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 13k (2.13%)
+,,,,,,,MACs per inference: 15M (2.04%)
+66,MobilenetV2/expanded_conv_11/add,Eltwise_Binary,"MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_11/add (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",1x33x33x48,A D G C,"MobilenetV2/expanded_conv_11/add encoding : bitwidth 16, min -32.288730621338, max 28.311588287354, scale 0.000924701570, offset -34918.000000000000"
+,,,"MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 52k (0.00708%)
+67,MobilenetV2/expanded_conv_12/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_11/add (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_12/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2709 encoding : bitwidth 8, min -0.187082141638, max 0.171609193087, scale 0.001406632713, offset -133.000000000000"
+,,,"const_fold_opt__2709 (data type: uFxp_8; tensor dimension: [1,1,48,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_12/expand/Conv2D_bias encoding : bitwidth 32, min -2.557085990906, max 2.557085990906, scale 0.000000001191, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_12/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_12/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_12/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 14k (2.16%)
+,,,,,,,MACs per inference: 15M (2.04%)
+68,Relu6__2248,ElementWiseNeuron,"MobilenetV2/expanded_conv_12/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2248:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2248:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+69,MobilenetV2/expanded_conv_12/depthwise/Relu6,DepthWiseConv2d,"Relu6__2248:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_12/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2710 encoding : bitwidth 8, min -4.640968799591, max 6.117640495300, scale 0.042190626264, offset -110.000000000000"
+,,,"const_fold_opt__2710 (data type: uFxp_8; tensor dimension: [3,3,1,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_12/depthwise/depthwise_bias encoding : bitwidth 32, min -12.063034057617, max 12.063034057617, scale 0.000000005617, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_12/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_12/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_12/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 2M (0.382%)
+70,Relu6__2250,ElementWiseNeuron,"MobilenetV2/expanded_conv_12/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2250:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2250:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+71,MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2250:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",1x33x33x48,A D G C,"const_fold_opt__2706 encoding : bitwidth 8, min -1.441583991051, max 2.026377439499, scale 0.013599848375, offset -106.000000000000"
+,,,"const_fold_opt__2706 (data type: uFxp_8; tensor dimension: [1,1,288,48]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_12/project/Conv2D_bias encoding : bitwidth 32, min -20.984586715698, max 20.984586715698, scale 0.000000009772, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_12/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [48]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -27.737380981445, max 27.802639007568, scale 0.000847486372, offset -32729.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_12/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 13k (2.13%)
+,,,,,,,MACs per inference: 15M (2.04%)
+72,MobilenetV2/expanded_conv_12/add,Eltwise_Binary,"MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_12/add (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",1x33x33x48,A D G C,"MobilenetV2/expanded_conv_12/add encoding : bitwidth 16, min -41.153839111328, max 38.319782257080, scale 0.001212689676, offset -33936.000000000000"
+,,,"MobilenetV2/expanded_conv_11/add (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 52k (0.00708%)
+73,MobilenetV2/expanded_conv_13/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_12/add (data type: uFxp_16; tensor dimension: [1,33,33,48]; tensor type: NATIVE)","MobilenetV2/expanded_conv_13/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2667 encoding : bitwidth 8, min -0.211936533451, max 0.388550311327, scale 0.002354850527, offset -90.000000000000"
+,,,"const_fold_opt__2667 (data type: uFxp_8; tensor dimension: [1,1,48,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_13/expand/Conv2D_bias encoding : bitwidth 32, min -3.612715244293, max 3.612715244293, scale 0.000000001682, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_13/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_13/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_13/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 14k (2.16%)
+,,,,,,,MACs per inference: 15M (2.04%)
+74,Relu6__2253,ElementWiseNeuron,"MobilenetV2/expanded_conv_13/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2253:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2253:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+75,MobilenetV2/expanded_conv_13/depthwise/Relu6,DepthWiseConv2d,"Relu6__2253:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_13/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"const_fold_opt__2711 encoding : bitwidth 8, min -1.844547390938, max 2.635067701340, scale 0.017567118630, offset -105.000000000000"
+,,,"const_fold_opt__2711 (data type: uFxp_8; tensor dimension: [3,3,1,288]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_13/depthwise/depthwise_bias encoding : bitwidth 32, min -6.598835945129, max 6.598835945129, scale 0.000000003073, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_13/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [288]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_13/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_13/depthwise/depthwise_bias
+,,,,,,,"dilation: [2, 2]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[2, 2], [2, 2]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 2M (0.382%)
+76,Relu6__2255,ElementWiseNeuron,"MobilenetV2/expanded_conv_13/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","Relu6__2255:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)",1x33x33x288,A D G C,"Relu6__2255:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 313k (0.0425%)
+77,MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2255:0 (data type: uFxp_16; tensor dimension: [1,33,33,288]; tensor type: NATIVE)","MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",1x33x33x80,A D G C,"const_fold_opt__2708 encoding : bitwidth 8, min -1.233171105385, max 0.965840280056, scale 0.008623573929, offset -143.000000000000"
+,,,"const_fold_opt__2708 (data type: uFxp_8; tensor dimension: [1,1,288,80]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_13/project/Conv2D_bias encoding : bitwidth 32, min -20.403392791748, max 20.403392791748, scale 0.000000009501, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_13/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [80]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -20.733636856079, max 17.997875213623, scale 0.000591004966, offset -35082.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_13/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 23k (3.54%)
+,,,,,,,MACs per inference: 25M (3.4%)
+78,MobilenetV2/expanded_conv_14/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)","MobilenetV2/expanded_conv_14/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2670 encoding : bitwidth 8, min -0.233077451587, max 0.412952423096, scale 0.002533450490, offset -92.000000000000"
+,,,"const_fold_opt__2670 (data type: uFxp_8; tensor dimension: [1,1,80,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_14/expand/Conv2D_bias encoding : bitwidth 32, min -3.453812122345, max 3.453812122345, scale 0.000000001608, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_14/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_14/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_14/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 38k (5.96%)
+,,,,,,,MACs per inference: 41M (5.66%)
+79,Relu6__2258,ElementWiseNeuron,"MobilenetV2/expanded_conv_14/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2258:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2258:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+80,MobilenetV2/expanded_conv_14/depthwise/Relu6,DepthWiseConv2d,"Relu6__2258:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_14/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2705 encoding : bitwidth 8, min -4.931094646454, max 5.460881233215, scale 0.040752846748, offset -121.000000000000"
+,,,"const_fold_opt__2705 (data type: uFxp_8; tensor dimension: [3,3,1,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_14/depthwise/depthwise_bias encoding : bitwidth 32, min -8.530250549316, max 8.530250549316, scale 0.000000003972, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_14/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_14/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_14/depthwise/depthwise_bias
+,,,,,,,"dilation: [4, 4]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[4, 4], [4, 4]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 4M (0.637%)
+81,Relu6__2260,ElementWiseNeuron,"MobilenetV2/expanded_conv_14/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2260:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2260:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+82,MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2260:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",1x33x33x80,A D G C,"const_fold_opt__2677 encoding : bitwidth 8, min -0.893732964993, max 0.915012300014, scale 0.007093118504, offset -126.000000000000"
+,,,"const_fold_opt__2677 (data type: uFxp_8; tensor dimension: [1,1,480,80]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_14/project/Conv2D_bias encoding : bitwidth 32, min -6.687854290009, max 6.687854290009, scale 0.000000003114, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_14/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [80]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -16.429523468018, max 17.958034515381, scale 0.000524720526, offset -31311.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_14/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 38k (5.9%)
+,,,,,,,MACs per inference: 41M (5.66%)
+83,MobilenetV2/expanded_conv_14/add,Eltwise_Binary,"MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)","MobilenetV2/expanded_conv_14/add (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",1x33x33x80,A D G C,"MobilenetV2/expanded_conv_14/add encoding : bitwidth 16, min -25.418190002441, max 21.298614501953, scale 0.000712852750, offset -35657.000000000000"
+,,,"MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 87k (0.0118%)
+84,MobilenetV2/expanded_conv_15/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_14/add (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)","MobilenetV2/expanded_conv_15/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2664 encoding : bitwidth 8, min -0.184073701501, max 0.197542518377, scale 0.001496534212, offset -123.000000000000"
+,,,"const_fold_opt__2664 (data type: uFxp_8; tensor dimension: [1,1,80,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_15/expand/Conv2D_bias encoding : bitwidth 32, min -2.061877250671, max 2.061877250671, scale 0.000000000960, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_15/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_15/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_15/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 38k (5.96%)
+,,,,,,,MACs per inference: 41M (5.66%)
+85,Relu6__2263,ElementWiseNeuron,"MobilenetV2/expanded_conv_15/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2263:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2263:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+86,MobilenetV2/expanded_conv_15/depthwise/Relu6,DepthWiseConv2d,"Relu6__2263:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_15/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2684 encoding : bitwidth 8, min -3.475481987000, max 4.367419719696, scale 0.030756477267, offset -113.000000000000"
+,,,"const_fold_opt__2684 (data type: uFxp_8; tensor dimension: [3,3,1,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_15/depthwise/depthwise_bias encoding : bitwidth 32, min -13.018468856812, max 13.018468856812, scale 0.000000006062, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_15/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_15/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_15/depthwise/depthwise_bias
+,,,,,,,"dilation: [4, 4]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[4, 4], [4, 4]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 4M (0.637%)
+87,Relu6__2265,ElementWiseNeuron,"MobilenetV2/expanded_conv_15/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2265:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2265:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+88,MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2265:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",1x33x33x80,A D G C,"const_fold_opt__2687 encoding : bitwidth 8, min -3.044171810150, max 2.096647977829, scale 0.020160077140, offset -151.000000000000"
+,,,"const_fold_opt__2687 (data type: uFxp_8; tensor dimension: [1,1,480,80]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_15/project/Conv2D_bias encoding : bitwidth 32, min -11.062760353088, max 11.062760353088, scale 0.000000005151, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_15/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [80]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -22.171237945557, max 28.526321411133, scale 0.000773595180, offset -28660.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_15/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 38k (5.9%)
+,,,,,,,MACs per inference: 41M (5.66%)
+89,MobilenetV2/expanded_conv_15/add,Eltwise_Binary,"MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)","MobilenetV2/expanded_conv_15/add (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",1x33x33x80,A D G C,"MobilenetV2/expanded_conv_15/add encoding : bitwidth 16, min -30.015754699707, max 35.177711486816, scale 0.000994788483, offset -30173.000000000000"
+,,,"MobilenetV2/expanded_conv_14/add (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)",,,,operation: 0
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 87k (0.0118%)
+90,MobilenetV2/expanded_conv_16/expand/Relu6,Conv2d,"MobilenetV2/expanded_conv_15/add (data type: uFxp_16; tensor dimension: [1,33,33,80]; tensor type: NATIVE)","MobilenetV2/expanded_conv_16/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2727 encoding : bitwidth 8, min -0.217117637396, max 0.178346633911, scale 0.001550840330, offset -140.000000000000"
+,,,"const_fold_opt__2727 (data type: uFxp_8; tensor dimension: [1,1,80,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_16/expand/Conv2D_bias encoding : bitwidth 32, min -2.632982730865, max 2.632982730865, scale 0.000000001226, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_16/expand/Conv2D_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_16/expand/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_16/expand/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 38k (5.96%)
+,,,,,,,MACs per inference: 41M (5.66%)
+91,Relu6__2268,ElementWiseNeuron,"MobilenetV2/expanded_conv_16/expand/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2268:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2268:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+92,MobilenetV2/expanded_conv_16/depthwise/Relu6,DepthWiseConv2d,"Relu6__2268:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_16/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"const_fold_opt__2724 encoding : bitwidth 8, min -19.103509902954, max 7.228355407715, scale 0.103262215853, offset -185.000000000000"
+,,,"const_fold_opt__2724 (data type: uFxp_8; tensor dimension: [3,3,1,480]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_16/depthwise/depthwise_bias encoding : bitwidth 32, min -8.029705047607, max 8.029705047607, scale 0.000000003739, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_16/depthwise/depthwise_bias (data type: sFxp_32; tensor dimension: [480]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_16/depthwise/Relu6 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_16/depthwise/depthwise_bias
+,,,,,,,"dilation: [4, 4]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[4, 4], [4, 4]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,"stride: [1, 1]"
+,,,,,,,MACs per inference: 4M (0.637%)
+93,Relu6__2270,ElementWiseNeuron,"MobilenetV2/expanded_conv_16/depthwise/Relu6 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","Relu6__2270:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)",1x33x33x480,A D G C,"Relu6__2270:0 encoding : bitwidth 16, min 0.000000000000, max 6.000000000000, scale 0.000091554131, offset 0.000000000000"
+,,,,,,,max_value: 6
+,,,,,,,min_value: 0
+,,,,,,,operation: 5
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 522k (0.0708%)
+94,MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm,Conv2d,"Relu6__2270:0 (data type: uFxp_16; tensor dimension: [1,33,33,480]; tensor type: NATIVE)","MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,160]; tensor type: NATIVE)",1x33x33x160,A D G C,"const_fold_opt__2688 encoding : bitwidth 8, min -0.808060765266, max 0.776981532574, scale 0.006215852220, offset -130.000000000000"
+,,,"const_fold_opt__2688 (data type: uFxp_8; tensor dimension: [1,1,480,160]; tensor type: STATIC)",,,,"MobilenetV2/expanded_conv_16/project/Conv2D_bias encoding : bitwidth 32, min -15.477341651917, max 15.477341651917, scale 0.000000007207, offset 0.000000000000"
+,,,MobilenetV2/expanded_conv_16/project/Conv2D_bias (data type: sFxp_32; tensor dimension: [160]; tensor type: STATIC),,,,"MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm encoding : bitwidth 16, min -16.397563934326, max 17.535125732422, scale 0.000517779670, offset -31669.000000000000"
+,,,,,,,bias_op_name: MobilenetV2/expanded_conv_16/project/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 76k (11.8%)
+,,,,,,,MACs per inference: 83M (11.3%)
+95,aspp0/Relu,Conv2d,"MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,160]; tensor type: NATIVE)","aspp0/Relu (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",1x33x33x256,A D G C,"const_fold_opt__2640 encoding : bitwidth 8, min -0.114373609424, max 0.113480068743, scale 0.000893543824, offset -128.000000000000"
+,,,"const_fold_opt__2640 (data type: uFxp_8; tensor dimension: [1,1,160,256]; tensor type: STATIC)",,,,"aspp0/Conv2D_bias encoding : bitwidth 32, min -0.174993038177, max 0.174993038177, scale 0.000000000081, offset 0.000000000000"
+,,,aspp0/Conv2D_bias (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"aspp0/Relu encoding : bitwidth 16, min 0.000000000000, max 5.926050186157, scale 0.000090425732, offset 0.000000000000"
+,,,,,,,bias_op_name: aspp0/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 41k (6.31%)
+,,,,,,,MACs per inference: 44M (6.04%)
+96,Relu__2275,ElementWiseNeuron,"aspp0/Relu (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)","Relu__2275:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",1x33x33x256,A D G C,"Relu__2275:0 encoding : bitwidth 16, min 0.000000000000, max 5.926050186157, scale 0.000090425732, offset 0.000000000000"
+,,,,,,,operation: 4
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 278k (0.0377%)
+97,AvgPool2D/AvgPool,Pool,"MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm (data type: uFxp_16; tensor dimension: [1,33,33,160]; tensor type: NATIVE)","image_pooling/Relu__2540:0 (data type: uFxp_16; tensor dimension: [1,1,1,160]; tensor type: NATIVE)",1x1x1x160,A D G C,"image_pooling/Relu__2540:0 encoding : bitwidth 16, min -5.494753837585, max 4.263753890991, scale 0.000148905281, offset -36901.000000000000"
+,,,,,,,count_pad_for_edges: False
+,,,,,,,"filter_size: [33, 33]"
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,pool_type: PoolAvg2d
+,,,,,,,"stride: [33, 33]"
+,,,,,,,MACs per inference: 174k (0.0236%)
+98,image_pooling/Relu,Conv2d,"image_pooling/Relu__2540:0 (data type: uFxp_16; tensor dimension: [1,1,1,160]; tensor type: NATIVE)","image_pooling/Relu (data type: uFxp_16; tensor dimension: [1,1,1,256]; tensor type: NATIVE)",1x1x1x256,A D G C,"const_fold_opt__2696 encoding : bitwidth 8, min -0.328669160604, max 0.321025699377, scale 0.002547822893, offset -129.000000000000"
+,,,"const_fold_opt__2696 (data type: uFxp_8; tensor dimension: [1,1,160,256]; tensor type: STATIC)",,,,"image_pooling/Conv2D_bias encoding : bitwidth 32, min -0.303029447794, max 0.303029447794, scale 0.000000000141, offset 0.000000000000"
+,,,image_pooling/Conv2D_bias (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"image_pooling/Relu encoding : bitwidth 16, min 0.000000000000, max 4.818033218384, scale 0.000073518473, offset 0.000000000000"
+,,,,,,,bias_op_name: image_pooling/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 41k (6.31%)
+,,,,,,,MACs per inference: 40k (0.00555%)
+99,Relu__2273,ElementWiseNeuron,"image_pooling/Relu (data type: uFxp_16; tensor dimension: [1,1,1,256]; tensor type: NATIVE)","Transpose__2544:0 (data type: uFxp_16; tensor dimension: [1,1,1,256]; tensor type: NATIVE)",1x1x1x256,A D G C,"Transpose__2544:0 encoding : bitwidth 16, min 0.000000000000, max 4.818033218384, scale 0.000073518473, offset 0.000000000000"
+,,,,,,,operation: 4
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 256 (3.47e-05%)
+100,Resize__2546,Resize,"Transpose__2544:0 (data type: uFxp_16; tensor dimension: [1,1,1,256]; tensor type: NATIVE)","Resize__2546:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",1x33x33x256,A D G C,"Resize__2546:0 encoding : bitwidth 16, min 0.000000000000, max 4.818033218384, scale 0.000073518473, offset 0.000000000000"
+,,,,,,,align_corners: True
+,,,,,,,antialias: False
+,,,,,,,half_pixel_centers: False
+,,,,,,,interpolation_mode: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,scale_height: 33
+,,,,,,,scale_width: 33
+,,,,,,,transformation_mode: 2
+,,,,,,,MACs per inference: 278k (0.0377%)
+101,concat,Concat,"Resize__2546:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)","concat (data type: uFxp_16; tensor dimension: [1,33,33,512]; tensor type: NATIVE)",1x33x33x512,A D G C,"concat encoding : bitwidth 16, min 0.000000000000, max 5.926050186157, scale 0.000090425732, offset 0.000000000000"
+,,,"Relu__2275:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",,,,axis: 3
+,,,,,,,packageName: qti.aisw
+102,concat_projection/Relu,Conv2d,"concat (data type: uFxp_16; tensor dimension: [1,33,33,512]; tensor type: NATIVE)","concat_projection/Relu (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",1x33x33x256,A D G C,"const_fold_opt__2694 encoding : bitwidth 8, min -0.328542351723, max 0.310986667871, scale 0.002507956931, offset -131.000000000000"
+,,,"const_fold_opt__2694 (data type: uFxp_8; tensor dimension: [1,1,512,256]; tensor type: STATIC)",,,,"concat_projection/Conv2D_bias encoding : bitwidth 32, min -2.254519462585, max 2.254519462585, scale 0.000000001050, offset 0.000000000000"
+,,,concat_projection/Conv2D_bias (data type: sFxp_32; tensor dimension: [256]; tensor type: STATIC),,,,"concat_projection/Relu encoding : bitwidth 16, min 0.000000000000, max 6.645856380463, scale 0.000101409270, offset 0.000000000000"
+,,,,,,,bias_op_name: concat_projection/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 131k (20.1%)
+,,,,,,,MACs per inference: 142M (19.3%)
+103,Relu__2277,ElementWiseNeuron,"concat_projection/Relu (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)","Relu__2277:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)",1x33x33x256,A D G C,"Relu__2277:0 encoding : bitwidth 16, min 0.000000000000, max 6.645856380463, scale 0.000101409270, offset 0.000000000000"
+,,,,,,,operation: 4
+,,,,,,,packageName: qti.aisw
+,,,,,,,MACs per inference: 278k (0.0377%)
+104,logits/semantic/BiasAdd,Conv2d,"Relu__2277:0 (data type: uFxp_16; tensor dimension: [1,33,33,256]; tensor type: NATIVE)","logits/semantic/BiasAdd (data type: uFxp_16; tensor dimension: [1,33,33,21]; tensor type: NATIVE)",1x33x33x21,A D G C,"const_fold_opt__2697 encoding : bitwidth 8, min -0.561275601387, max 0.583726644516, scale 0.004490205087, offset -125.000000000000"
+,,,"const_fold_opt__2697 (data type: uFxp_8; tensor dimension: [1,1,256,21]; tensor type: STATIC)",,,,"logits/semantic/Conv2D_bias encoding : bitwidth 32, min -1.646205782890, max 1.646205782890, scale 0.000000000767, offset 0.000000000000"
+,,,logits/semantic/Conv2D_bias (data type: sFxp_32; tensor dimension: [21]; tensor type: STATIC),,,,"logits/semantic/BiasAdd encoding : bitwidth 16, min -7.235136032104, max 27.757825851440, scale 0.000533958373, offset -13550.000000000000"
+,,,,,,,bias_op_name: logits/semantic/Conv2D_bias
+,,,,,,,"dilation: [1, 1]"
+,,,,,,,group: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,"pad_amount: [[0, 0], [0, 0]]"
+,,,,,,,padding_size_strategy: 5
+,,,,,,,reuse_sparse_indices: False
+,,,,,,,"stride: [1, 1]"
+,,,,,,,param count: 5k (0.827%)
+,,,,,,,MACs per inference: 5M (0.793%)
+105,Resize__2556,Resize,"logits/semantic/BiasAdd (data type: uFxp_16; tensor dimension: [1,33,33,21]; tensor type: NATIVE)","Resize__2556:0 (data type: uFxp_16; tensor dimension: [1,33,33,21]; tensor type: NATIVE)",1x33x33x21,A D G C,"Resize__2556:0 encoding : bitwidth 16, min -7.235136032104, max 27.757825851440, scale 0.000533958373, offset -13550.000000000000"
+,,,,,,,align_corners: True
+,,,,,,,antialias: False
+,,,,,,,half_pixel_centers: False
+,,,,,,,interpolation_mode: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,scale_height: 1
+,,,,,,,scale_width: 1
+,,,,,,,transformation_mode: 2
+,,,,,,,MACs per inference: 22k (0.0031%)
+106,Resize__2560,Resize,"Resize__2556:0 (data type: uFxp_16; tensor dimension: [1,33,33,21]; tensor type: NATIVE)","ResizeBilinear_3 (data type: uFxp_16; tensor dimension: [1,257,257,21]; tensor type: APP_READ)",1x257x257x21,A D G C,"ResizeBilinear_3 encoding : bitwidth 16, min -7.235136032104, max 27.757825851440, scale 0.000533958373, offset -13550.000000000000"
+,,,,,,,align_corners: True
+,,,,,,,antialias: False
+,,,,,,,half_pixel_centers: False
+,,,,,,,interpolation_mode: 1
+,,,,,,,packageName: qti.aisw
+,,,,,,,scale_height: 7.788
+,,,,,,,scale_width: 7.788
+,,,,,,,transformation_mode: 2
+,,,,,,,MACs per inference: 1M (0.188%)
+Note: The supported runtimes column assumes a processor target of Snapdragon 855
+Key : A:AIP
+      D:DSP
+      G:GPU
+      C:CPU
+""
+Input Name,Dimensions,Type,Encoding Info
+sub_7,"1,257,257,3",uFxp_16,"bitwidth 16, min -1.000015258789, max 0.999984741211, scale 0.000030518044, offset -32768.000000000000"
+Output Name,Dimensions,Type,Encoding Info
+ResizeBilinear_3,"1,257,257,21",uFxp_16,"bitwidth 16, min -7.235136032104, max 27.757825851440, scale 0.000533958373, offset -13550.000000000000"
+Total parameters: 652677 (2 MB assuming single precision float. This does not represent the actual memory requirement for the model. It provides a rough estimate of the contribution from the parameters 4xNo of Params in bytes)
+Total MACs per inference: 738M (100%)
+"Ops used by Graph: Concat, Conv2d, DepthWiseConv2d, ElementWiseNeuron, Eltwise_Binary, Pool, Resize"
+Est. Steady-State Memory Needed to Run: 40.2 MiB
+""
+------------------------------------------------------------
+Cache Info:
+------------------------------------------------------------

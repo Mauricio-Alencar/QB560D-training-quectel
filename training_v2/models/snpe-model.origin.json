@@ -1,0 +1,19 @@
+{
+  "source_model": "mobilenet_v1.tflite",
+  "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "target_model": "mobilenet_v1_snpe_int8.dlc",
+  "target_sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+  "converter": "QAIRT 2.26.0.240828, Windows x86_64/Python3.8",
+  "pipeline": [
+    "tf2onnx 1.16.1 opset13 preserving Q/DQ",
+    "Explicit axis0 for rank1 scalar dequantization; outputs unchanged",
+    "snpe-onnx-to-dlc --input_layout input NHWC --input_dtype input float32 -n --strict",
+    "snpe-dlc-quant --weights_bitwidth 8 --act_bitwidth 8 --bias_bitwidth 32 --override_params"
+  ],
+  "input_mode": "(RGB uint8 pixels - 128) / 128 as float32 NHWC",
+  "calibration": [
+    "media/grace_hopper.jpg",
+    "media/right_hands.jpg"
+  ],
+  "accuracy_note": "Converted container and quantization have measured numerical differences. Reference-image functional demo; not a dataset accuracy claim."
+}

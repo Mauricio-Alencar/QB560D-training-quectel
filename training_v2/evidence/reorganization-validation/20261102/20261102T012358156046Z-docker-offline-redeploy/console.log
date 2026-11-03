@@ -1,0 +1,183 @@
+{"uid": 0, "architecture": "aarch64", "kernel": "5.4.219-perf", "kernel_build": "#1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026", "glibc": "glibc 2.31", "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n", "target_utc": "2026-11-02T01:23:59.811538+00:00", "free_bytes_opt": 10418900992, "tools": {"sh": "/usr/bin/sh", "base64": "/usr/bin/base64", "python3": "/usr/bin/python3", "tar": "/usr/bin/tar", "gzip": "/usr/bin/gzip", "sha256sum": "/usr/bin/sha256sum", "systemctl": "/usr/bin/systemctl", "mount": "/usr/bin/mount", "iptables": "/usr/sbin/iptables"}, "docker_demo_already_present": true}
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012358785670Z-classroom-platform-probe
+OWNED_TARGET_DIRECTORY_READY
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012359046581Z-stage-directory
+C:\Users\mauri\AppData\Local\Temp\qb-adb-4m4_gepb\app\: 2 files pushed, 0 skipped. 0.4 MB/s (2030 bytes in 0.005s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-e9a132r1\target\: 8 files pushed, 0 skipped. 0.5 MB/s (15113 bytes in 0.028s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-ru8l91sp\config\: 3 files pushed, 0 skipped. 0.1 MB/s (896 bytes in 0.015s)
+C:\Users\mauri\AppData\Local\Temp\qb-adb-u3cmssns\offline\: 7 files pushed, 0 skipped. 6.4 MB/s (188760072 bytes in 28.045s)
+Staged offline resources at /opt/qb560d-docker-demo
+offline/runtime/docker-29.9.2.tgz: OK
+offline/runtime/buildx-v0.38.1.linux-arm64: OK
+configuration OK
+Client:
+ Version:           29.9.2
+ API version:       1.56
+ Go version:        go1.26.10
+ Git commit:        a82e528
+ Built:             Tue Oct 20 18:43:37 2026
+ OS/Arch:           linux/arm64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          29.9.2
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.10
+  Git commit:       0367cbe
+  Built:            Tue Oct 20 18:44:59 2026
+  OS/Arch:          linux/arm64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.2
+  GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc:
+  Version:          1.5.2
+  GitCommit:        v1.5.2-0-g29dd3dc
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+github.com/docker/buildx v0.38.1 0dbe87f36ed472fe36b6796c3f70b4210a731fc5
+RESULT: ENGINE_READY
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012427437576Z-install-offline-runtime
+offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz: OK
+Loaded image: qb560d-telemetry:1.0.0
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012428975281Z-load-offline-image
+CREATE
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012430316175Z-owned-container-check
+7e27d165c97b767b149905a5955d82f7a76035b855546179e03e985140121bc4
+{
+  "/health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 10218.06,
+      "process_uptime_s": 3.019
+    }
+  },
+  "/missing": {
+    "http": 404,
+    "body": null
+  }
+}
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012430425152Z-run-classroom-demo
+{
+  "/health": {
+    "http": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/telemetry": {
+    "http": 200,
+    "body": {
+      "application": "qb560d-training",
+      "version": "1.0.0",
+      "machine": "aarch64",
+      "system_uptime_s": 10218.16,
+      "process_uptime_s": 3.117
+    }
+  },
+  "/missing": {
+    "http": 404,
+    "body": null
+  }
+}
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012434571584Z-classroom-http-tests
+Flag --time has been deprecated, use --timeout instead
+qb560d-docker-demo
+qb560d-docker-demo
+
+
+Evidence: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\20261102T012434670774Z-classroom-stop
+/opt/qb560d-docker-demo/evidence/: 45 files pulled, 0 skipped. 1.1 MB/s (120893 bytes in 0.101s)
+Collected target evidence at C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\collected\20261102T012440023036Z
+Deployment record: C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\demos\docker\evidence\deployment-20261102T012358591589Z.json
+{
+  "result": "PASS_AUTHENTICATED_OFFLINE_CLASSROOM_DEPLOY",
+  "host_utc": "2026-11-02T01:23:58.591589+00:00",
+  "unit_label": "classroom-box",
+  "image_id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+  "archive_sha256": "cd0c23929d9b698a1e824d1f735cad94112c9eeef6e9e1b60648e13ccc638550",
+  "network_downloads": "NONE; only cached local files and ADB",
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "4"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "platform": {
+    "uid": 0,
+    "architecture": "aarch64",
+    "kernel": "5.4.219-perf",
+    "kernel_build": "#1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026",
+    "glibc": "glibc 2.31",
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n",
+    "target_utc": "2026-11-02T01:23:59.811538+00:00",
+    "free_bytes_opt": 10418900992,
+    "tools": {
+      "sh": "/usr/bin/sh",
+      "base64": "/usr/bin/base64",
+      "python3": "/usr/bin/python3",
+      "tar": "/usr/bin/tar",
+      "gzip": "/usr/bin/gzip",
+      "sha256sum": "/usr/bin/sha256sum",
+      "systemctl": "/usr/bin/systemctl",
+      "mount": "/usr/bin/mount",
+      "iptables": "/usr/sbin/iptables"
+    },
+    "docker_demo_already_present": true
+  },
+  "http": {
+    "/health": {
+      "http": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    "/telemetry": {
+      "http": 200,
+      "body": {
+        "application": "qb560d-training",
+        "version": "1.0.0",
+        "machine": "aarch64",
+        "system_uptime_s": 10218.16,
+        "process_uptime_s": 3.117
+      }
+    },
+    "/missing": {
+      "http": 404,
+      "body": null
+    }
+  },
+  "deployment": "CREATED_REVIEWED_CONTAINER",
+  "final_container_state": "removed",
+  "collected_evidence": "evidence\\collected\\20261102T012440023036Z"
+}

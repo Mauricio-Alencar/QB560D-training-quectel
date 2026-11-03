@@ -1,0 +1,70 @@
+[
+  {
+    "path": "pose.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/pose.jpg",
+    "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+    "bytes": 44100,
+    "size": [
+      1000,
+      667
+    ]
+  },
+  {
+    "path": "fist.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/fist.jpg",
+    "sha256": "43fa1cabf3f90d574accc9a56986e2ee48638ce59fc65af1846487f73bb2ef24",
+    "bytes": 71355,
+    "size": [
+      358,
+      354
+    ]
+  },
+  {
+    "path": "cat.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/cat.jpg",
+    "sha256": "2533197401eebe9410ea4d063f86c43fbd2666f3e8165a38aca155c0d09c21be",
+    "bytes": 32362,
+    "size": [
+      600,
+      400
+    ]
+  },
+  {
+    "path": "burger.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/burger.jpg",
+    "sha256": "97c15bbbf3cf3615063b1031c85d669de55839f59262bbe145d15ca75b36ecbf",
+    "bytes": 30300,
+    "size": [
+      480,
+      325
+    ]
+  },
+  {
+    "path": "male_full_height_hands.jpg",
+    "url": "https://storage.googleapis.com/mediapipe-assets/male_full_height_hands.jpg",
+    "sha256": "8a7fe5be8b90d6078b09913ca28f7e5d342f8d3cde856ab4e3327d2970b887f8",
+    "bytes": 55658,
+    "size": [
+      638,
+      1000
+    ]
+  },
+  {
+    "path": "tfjs_pose.jpg",
+    "url": "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/pose-detection/test_data/pose.jpg",
+    "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+    "bytes": 44100,
+    "size": [
+      1000,
+      667
+    ]
+  },
+  {
+    "path": "pose_lower_body_occluded.png",
+    "derived_from": "pose.jpg",
+    "source_sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b",
+    "sha256": "1f02ac8dd8b7223f678d90bb6af31059c0fe593f02f4e8916530e2676b0fc18d",
+    "operation": "Test-fixture occlusion rectangle RGB127 at x300,y390,x740,y666; original unchanged",
+    "scope": "Synthetic control, not an independent photograph"
+  }
+]

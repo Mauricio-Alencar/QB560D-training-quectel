@@ -1,0 +1,58 @@
+Result=exit-code
+ExecMainStatus=203
+Requires=system.slice sysinit.target
+Wants=
+Before=shutdown.target multi-user.target
+After=system.slice systemd-journald.socket sysinit.target basic.target
+ActiveState=failed
+SubState=failed
+FragmentPath=/etc/systemd/system/thermal-engine.service
+# Warning: thermal-engine.service changed on disk, the version systemd h
+as loaded is outdated.
+# This output shows the current version of the unit's original fragment 
+and drop-in files.
+# If fragments or drop-ins were added or removed, they are not properly 
+reflected in this output.
+# Run 'systemctl daemon-reload' to reload units.
+# /etc/systemd/system/thermal-engine.service
+# Copyright (c) 2017 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+[Unit]
+Description=Thermal Engine Service
+SourcePath=/usr/bin/thermal-engine
+
+[Service]
+User=root
+Restart=always
+RemainAfterExit=yes
+ExecStart=/usr/bin/thermal-engine
+
+--More---- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 05:29:44 CST. --
+Nov 02 02:46:10 qcs6490-odk systemd[3871]: thermal-engine.service: Failed at step EXEC spawning /usr/bin/thermal-engine: No such file or directory
+Nov 02 02:46:10 qcs6490-odk systemd[1]: thermal-engine.service: Main process exited, code=exited, status=203/EXEC
+Nov 02 02:46:10 qcs6490-odk systemd[1]: thermal-engine.service: Failed with result 'exit-code'.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: thermal-engine.service: Scheduled restart job, restart counter is at 3.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Stopped Thermal Engine Service.
+Nov 02 02:46:10 qcs6490-odk systemd[1]: Starting Thermal Engine Service...
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Started Thermal Engine Service.
+Nov 02 02:46:11 qcs6490-odk systemd[3959]: thermal-engine.service: Failed to execute command: No such file or directory
+Nov 02 02:46:11 qcs6490-odk systemd[3959]: thermal-engine.service: Failed at step EXEC spawning /usr/bin/thermal-engine: No such file or directory
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Main process exited, code=exited, status=203/EXEC
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Failed with result 'exit-code'.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Scheduled restart job, restart counter is at 4.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Stopped Thermal Engine Service.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Starting Thermal Engine Service...
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Started Thermal Engine Service.
+Nov 02 02:46:11 qcs6490-odk systemd[4009]: thermal-engine.service: Failed to execute command: No such file or directory
+Nov 02 02:46:11 qcs6490-odk systemd[4009]: thermal-engine.service: Failed at step EXEC spawning /usr/bin/thermal-engine: No such file or directory
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Main process exited, code=exited, status=203/EXEC
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Failed with result 'exit-code'.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Scheduled restart job, restart counter is at 5.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Stopped Thermal Engine Service.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Start request repeated too quickly.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: thermal-engine.service: Failed with result 'exit-code'.
+Nov 02 02:46:11 qcs6490-odk systemd[1]: Failed to start Thermal Engine Service.
+

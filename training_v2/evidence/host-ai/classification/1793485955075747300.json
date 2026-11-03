@@ -1,0 +1,65 @@
+{
+  "top3": [
+    {
+      "class_id": 653,
+      "label": "military uniform",
+      "score": 0.8984375
+    },
+    {
+      "class_id": 907,
+      "label": "Windsor tie",
+      "score": 0.03125
+    },
+    {
+      "class_id": 466,
+      "label": "bulletproof vest",
+      "score": 0.01171875
+    }
+  ],
+  "demo_id": "D2-05",
+  "backend": "CPU",
+  "runtime": "ai_edge_litert.interpreter",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "model_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "runs": 3,
+  "warmup": 3,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 11.311799986287951,
+  "inference_ms_p95": 11.360400015837513,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "input",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.0078125,
+          128
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "MobilenetV1/Predictions/Reshape_1",
+        "shape": [
+          1,
+          1001
+        ],
+        "dtype": "<class 'numpy.uint8'>",
+        "quantization": [
+          0.00390625,
+          0
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+Input Log File Location: /opt/qairt-isolated/2.51.40.260930/demos/hand_gesture/runs/20261101T030625238619Z-cpu-iloveyou/canned_gesture_classifier/output/qnn-profiling-data_0.log
+Log File Created: Sun Nov  1 11:06:40 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793502400363531 Steady Clock Timestamp: 14676451108
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 29366 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 28560 us
+
+Finalize Stats:
+---------------
+Graph 0 (graph_bzue1h_3):
+    NetRun: 580 us
+    Backend (GRAPH_FINALIZE): 159 us
+        _node_linear: 13 us
+        _node_linear_8: 1 us
+        _node_mul: 2 us
+        _node_mul_7: 1 us
+        _node_add: 1 us
+        _node_add_14: 1 us
+        _node_Sigmoid_0: 6 us
+        _node_Sigmoid_7: 3 us
+        _node_silu: 1 us
+        _node_silu_7: 1 us
+        _node_linear_1: 1 us
+        _node_linear_9: 0 us
+        _node_add_1: 0 us
+        _node_add_15: 0 us
+        _node_mul_1: 0 us
+        _node_mul_8: 0 us
+        _node_add_2: 0 us
+        _node_add_16: 0 us
+        _node_Sigmoid_1: 3 us
+        _node_Sigmoid_8: 3 us
+        _node_silu_1: 1 us
+        _node_silu_8: 1 us
+        _node_linear_2: 0 us
+        _node_linear_10: 1 us
+        _node_add_3: 1 us
+        _node_add_17: 0 us
+        _node_mul_2: 1 us
+        _node_mul_9: 0 us
+        _node_add_4: 0 us
+        _node_add_18: 0 us
+        _node_Sigmoid_2: 3 us
+        _node_Sigmoid_9: 3 us
+        _node_silu_2: 1 us
+        _node_silu_9: 1 us
+        _node_linear_3: 1 us
+        _node_linear_11: 1 us
+        _node_add_5: 1 us
+        _node_add_19: 1 us
+        _node_mul_3: 1 us
+        _node_mul_10: 1 us
+        _node_add_6: 1 us
+        _node_add_20: 1 us
+        _node_Sigmoid_3: 3 us
+        _node_Sigmoid_10: 3 us
+        _node_silu_3: 1 us
+        _node_silu_10: 1 us
+        _node_linear_4: 1 us
+        _node_linear_12: 1 us
+        _node_add_7: 0 us
+        _node_add_21: 0 us
+        _node_mul_4: 1 us
+        _node_mul_11: 1 us
+        _node_add_8: 1 us
+        _node_add_22: 1 us
+        _node_Sigmoid_4: 3 us
+        _node_Sigmoid_11: 3 us
+        _node_silu_4: 0 us
+        _node_silu_11: 0 us
+        _node_linear_5: 1 us
+        _node_linear_13: 1 us
+        _node_add_9: 1 us
+        _node_add_23: 1 us
+        _node_mul_5: 1 us
+        _node_mul_12: 0 us
+        _node_add_10: 0 us
+        _node_add_24: 0 us
+        _node_Sigmoid_5: 3 us
+        _node_Sigmoid_12: 3 us
+        _node_silu_5: 0 us
+        _node_silu_12: 0 us
+        _node_linear_6: 0 us
+        _node_linear_14: 1 us
+        _node_add_11: 1 us
+        _node_add_25: 1 us
+        _node_mul_6: 0 us
+        _node_mul_13: 0 us
+        _node_add_12: 0 us
+        _node_add_26: 0 us
+        _node_Sigmoid_6: 2 us
+        _node_Sigmoid_13: 3 us
+        _node_silu_6: 0 us
+        _node_silu_13: 1 us
+        _node_linear_7: 1 us
+        _node_linear_15: 1 us
+        _node_add_13: 1 us
+        _node_add_27: 1 us
+        _node_add_28: 1 us
+        _node_mul_14: 0 us
+        _node_add_29: 0 us
+        _node_Sigmoid_14: 3 us
+        _node_silu_14: 1 us
+        _node_linear_16: 1 us
+        _node_mul_15: 1 us
+        _node_add_30: 1 us
+        _node_linear_17: 1 us
+        _node_softmax: 2 us
+
+De-Init Stats:
+--------------
+    NetRun: 591 us
+    Backend (null): 0 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 1639.3442 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_bzue1h_3):
+    NetRun: 435 us
+    Backend (GRAPH_EXECUTE): 352 us
+        _node_linear: 18 us
+        _node_linear_8: 6 us
+        _node_mul: 10 us
+        _node_mul_7: 2 us
+        _node_add: 6 us
+        _node_add_14: 2 us
+        _node_Sigmoid_0: 2 us
+        _node_Sigmoid_7: 2 us
+        _node_silu: 3 us
+        _node_silu_7: 2 us
+        _node_linear_1: 7 us
+        _node_linear_9: 6 us
+        _node_add_1: 2 us
+        _node_add_15: 2 us
+        _node_mul_1: 1 us
+        _node_mul_8: 2 us
+        _node_add_2: 2 us
+        _node_add_16: 2 us
+        _node_Sigmoid_1: 2 us
+        _node_Sigmoid_8: 2 us
+        _node_silu_1: 2 us
+        _node_silu_8: 2 us
+        _node_linear_2: 6 us
+        _node_linear_10: 6 us
+        _node_add_3: 2 us
+        _node_add_17: 2 us
+        _node_mul_2: 2 us
+        _node_mul_9: 1 us
+        _node_add_4: 2 us
+        _node_add_18: 2 us
+        _node_Sigmoid_2: 2 us
+        _node_Sigmoid_9: 2 us
+        _node_silu_2: 2 us
+        _node_silu_9: 2 us
+        _node_linear_3: 7 us
+        _node_linear_11: 6 us
+        _node_add_5: 2 us
+        _node_add_19: 2 us
+        _node_mul_3: 2 us
+        _node_mul_10: 1 us
+        _node_add_6: 2 us
+        _node_add_20: 2 us
+        _node_Sigmoid_3: 1 us
+        _node_Sigmoid_10: 1 us
+        _node_silu_3: 2 us
+        _node_silu_10: 3 us
+        _node_linear_4: 7 us
+        _node_linear_12: 7 us
+        _node_add_7: 3 us
+        _node_add_21: 3 us
+        _node_mul_4: 2 us
+        _node_mul_11: 2 us
+        _node_add_8: 2 us
+        _node_add_22: 2 us
+        _node_Sigmoid_4: 1 us
+        _node_Sigmoid_11: 1 us
+        _node_silu_4: 2 us
+        _node_silu_11: 2 us
+        _node_linear_5: 7 us
+        _node_linear_13: 7 us
+        _node_add_9: 3 us
+        _node_add_23: 2 us
+        _node_mul_5: 1 us
+        _node_mul_12: 2 us
+        _node_add_10: 2 us
+        _node_add_24: 2 us
+        _node_Sigmoid_5: 2 us
+        _node_Sigmoid_12: 2 us
+        _node_silu_5: 2 us
+        _node_silu_12: 2 us
+        _node_linear_6: 6 us
+        _node_linear_14: 6 us
+        _node_add_11: 2 us
+        _node_add_25: 3 us
+        _node_mul_6: 2 us
+        _node_mul_13: 2 us
+        _node_add_12: 2 us
+        _node_add_26: 2 us
+        _node_Sigmoid_6: 1 us
+        _node_Sigmoid_13: 1 us
+        _node_silu_6: 3 us
+        _node_silu_13: 2 us
+        _node_linear_7: 6 us
+        _node_linear_15: 7 us
+        _node_add_13: 3 us
+        _node_add_27: 3 us
+        _node_add_28: 2 us
+        _node_mul_14: 2 us
+        _node_add_29: 2 us
+        _node_Sigmoid_14: 1 us
+        _node_silu_14: 2 us
+        _node_linear_16: 6 us
+        _node_mul_15: 2 us
+        _node_add_30: 2 us
+        _node_linear_17: 2 us
+        _node_softmax: 3 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_bzue1h_3):
+    NetRun: 435 us
+    Backend (GRAPH_EXECUTE): 352 us
+        _node_linear: 18 us
+        _node_linear_8: 6 us
+        _node_mul: 10 us
+        _node_mul_7: 2 us
+        _node_add: 6 us
+        _node_add_14: 2 us
+        _node_Sigmoid_0: 2 us
+        _node_Sigmoid_7: 2 us
+        _node_silu: 3 us
+        _node_silu_7: 2 us
+        _node_linear_1: 7 us
+        _node_linear_9: 6 us
+        _node_add_1: 2 us
+        _node_add_15: 2 us
+        _node_mul_1: 1 us
+        _node_mul_8: 2 us
+        _node_add_2: 2 us
+        _node_add_16: 2 us
+        _node_Sigmoid_1: 2 us
+        _node_Sigmoid_8: 2 us
+        _node_silu_1: 2 us
+        _node_silu_8: 2 us
+        _node_linear_2: 6 us
+        _node_linear_10: 6 us
+        _node_add_3: 2 us
+        _node_add_17: 2 us
+        _node_mul_2: 2 us
+        _node_mul_9: 1 us
+        _node_add_4: 2 us
+        _node_add_18: 2 us
+        _node_Sigmoid_2: 2 us
+        _node_Sigmoid_9: 2 us
+        _node_silu_2: 2 us
+        _node_silu_9: 2 us
+        _node_linear_3: 7 us
+        _node_linear_11: 6 us
+        _node_add_5: 2 us
+        _node_add_19: 2 us
+        _node_mul_3: 2 us
+        _node_mul_10: 1 us
+        _node_add_6: 2 us
+        _node_add_20: 2 us
+        _node_Sigmoid_3: 1 us
+        _node_Sigmoid_10: 1 us
+        _node_silu_3: 2 us
+        _node_silu_10: 3 us
+        _node_linear_4: 7 us
+        _node_linear_12: 7 us
+        _node_add_7: 3 us
+        _node_add_21: 3 us
+        _node_mul_4: 2 us
+        _node_mul_11: 2 us
+        _node_add_8: 2 us
+        _node_add_22: 2 us
+        _node_Sigmoid_4: 1 us
+        _node_Sigmoid_11: 1 us
+        _node_silu_4: 2 us
+        _node_silu_11: 2 us
+        _node_linear_5: 7 us
+        _node_linear_13: 7 us
+        _node_add_9: 3 us
+        _node_add_23: 2 us
+        _node_mul_5: 1 us
+        _node_mul_12: 2 us
+        _node_add_10: 2 us
+        _node_add_24: 2 us
+        _node_Sigmoid_5: 2 us
+        _node_Sigmoid_12: 2 us
+        _node_silu_5: 2 us
+        _node_silu_12: 2 us
+        _node_linear_6: 6 us
+        _node_linear_14: 6 us
+        _node_add_11: 2 us
+        _node_add_25: 3 us
+        _node_mul_6: 2 us
+        _node_mul_13: 2 us
+        _node_add_12: 2 us
+        _node_add_26: 2 us
+        _node_Sigmoid_6: 1 us
+        _node_Sigmoid_13: 1 us
+        _node_silu_6: 3 us
+        _node_silu_13: 2 us
+        _node_linear_7: 6 us
+        _node_linear_15: 7 us
+        _node_add_13: 3 us
+        _node_add_27: 3 us
+        _node_add_28: 2 us
+        _node_mul_14: 2 us
+        _node_add_29: 2 us
+        _node_Sigmoid_14: 1 us
+        _node_silu_14: 2 us
+        _node_linear_16: 6 us
+        _node_mul_15: 2 us
+        _node_add_30: 2 us
+        _node_linear_17: 2 us
+        _node_softmax: 3 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (graph_bzue1h_3):
+    NetRun: 435 us
+    Backend (GRAPH_EXECUTE): 352 us
+        _node_linear: 18 us
+        _node_linear_8: 6 us
+        _node_mul: 10 us
+        _node_mul_7: 2 us
+        _node_add: 6 us
+        _node_add_14: 2 us
+        _node_Sigmoid_0: 2 us
+        _node_Sigmoid_7: 2 us
+        _node_silu: 3 us
+        _node_silu_7: 2 us
+        _node_linear_1: 7 us
+        _node_linear_9: 6 us
+        _node_add_1: 2 us
+        _node_add_15: 2 us
+        _node_mul_1: 1 us
+        _node_mul_8: 2 us
+        _node_add_2: 2 us
+        _node_add_16: 2 us
+        _node_Sigmoid_1: 2 us
+        _node_Sigmoid_8: 2 us
+        _node_silu_1: 2 us
+        _node_silu_8: 2 us
+        _node_linear_2: 6 us
+        _node_linear_10: 6 us
+        _node_add_3: 2 us
+        _node_add_17: 2 us
+        _node_mul_2: 2 us
+        _node_mul_9: 1 us
+        _node_add_4: 2 us
+        _node_add_18: 2 us
+        _node_Sigmoid_2: 2 us
+        _node_Sigmoid_9: 2 us
+        _node_silu_2: 2 us
+        _node_silu_9: 2 us
+        _node_linear_3: 7 us
+        _node_linear_11: 6 us
+        _node_add_5: 2 us
+        _node_add_19: 2 us
+        _node_mul_3: 2 us
+        _node_mul_10: 1 us
+        _node_add_6: 2 us
+        _node_add_20: 2 us
+        _node_Sigmoid_3: 1 us
+        _node_Sigmoid_10: 1 us
+        _node_silu_3: 2 us
+        _node_silu_10: 3 us
+        _node_linear_4: 7 us
+        _node_linear_12: 7 us
+        _node_add_7: 3 us
+        _node_add_21: 3 us
+        _node_mul_4: 2 us
+        _node_mul_11: 2 us
+        _node_add_8: 2 us
+        _node_add_22: 2 us
+        _node_Sigmoid_4: 1 us
+        _node_Sigmoid_11: 1 us
+        _node_silu_4: 2 us
+        _node_silu_11: 2 us
+        _node_linear_5: 7 us
+        _node_linear_13: 7 us
+        _node_add_9: 3 us
+        _node_add_23: 2 us
+        _node_mul_5: 1 us
+        _node_mul_12: 2 us
+        _node_add_10: 2 us
+        _node_add_24: 2 us
+        _node_Sigmoid_5: 2 us
+        _node_Sigmoid_12: 2 us
+        _node_silu_5: 2 us
+        _node_silu_12: 2 us
+        _node_linear_6: 6 us
+        _node_linear_14: 6 us
+        _node_add_11: 2 us
+        _node_add_25: 3 us
+        _node_mul_6: 2 us
+        _node_mul_13: 2 us
+        _node_add_12: 2 us
+        _node_add_26: 2 us
+        _node_Sigmoid_6: 1 us
+        _node_Sigmoid_13: 1 us
+        _node_silu_6: 3 us
+        _node_silu_13: 2 us
+        _node_linear_7: 6 us
+        _node_linear_15: 7 us
+        _node_add_13: 3 us
+        _node_add_27: 3 us
+        _node_add_28: 2 us
+        _node_mul_14: 2 us
+        _node_add_29: 2 us
+        _node_Sigmoid_14: 1 us
+        _node_silu_14: 2 us
+        _node_linear_16: 6 us
+        _node_mul_15: 2 us
+        _node_add_30: 2 us
+        _node_linear_17: 2 us
+        _node_softmax: 3 us
+
+
+__QA251_EXIT__=0

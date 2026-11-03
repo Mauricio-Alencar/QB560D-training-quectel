@@ -1,0 +1,10 @@
+Unit weston.service could not be found.
+-- Logs begin at Mon 2026-11-02 01:38:26 CST, end at Mon 2026-11-02 12:32:52 CST. --
+-- No entries --
+
+DISPLAY SERVICES
+  gdm.service                                                                                                                                                                                       loaded      inactive dead      GNOME Display Manager                                                                                                                               
+  init_display.service                                                                                                                                                                              loaded      active   exited    Init-display Service                                                                                                                                
+● display-manager.target                                                                                                                                                                            not-found   inactive dead      display-manager.target                                                                                                                              
+
+LOGCAT

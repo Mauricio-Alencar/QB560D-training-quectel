@@ -1,0 +1,257 @@
+{
+  "at_host_utc": "2026-11-01T19:34:42.275430+00:00",
+  "observation_start_host_utc": "2026-11-01T19:26:26.175486+00:00",
+  "observation_end_host_utc": "2026-11-01T19:31:32.567956+00:00",
+  "result": "LTE_LTE_CA_OBSERVED_NR5G_NOT_CONFIRMED",
+  "board": "QB560D-EU / QCM6490",
+  "bsp_reference": "QDPA_Ubuntu20.04.003.51.303 V01 (current firmware inventory)",
+  "executable": "/usr/bin/qlril-api-test",
+  "library_version": "202411060822",
+  "ril_70_samples": [
+    {
+      "at_host_utc": "2026-11-01T19:26:26.175486+00:00",
+      "phase": "outside_bound_transfer",
+      "registration": 1,
+      "reported_data_rat": 19
+    },
+    {
+      "at_host_utc": "2026-11-01T19:29:50.251889+00:00",
+      "phase": "outside_bound_transfer",
+      "registration": 1,
+      "reported_data_rat": 19
+    },
+    {
+      "at_host_utc": "2026-11-01T19:30:08.679180+00:00",
+      "phase": "during_bound_transfer",
+      "registration": 1,
+      "reported_data_rat": 19
+    },
+    {
+      "at_host_utc": "2026-11-01T19:31:26.456646+00:00",
+      "phase": "outside_bound_transfer",
+      "registration": 1,
+      "reported_data_rat": 19
+    }
+  ],
+  "preferred_network_type_raw": 11,
+  "preference_interpretation": "AOSP RIL_PreferredNetworkType defines11 as LTE_ONLY. This is an indication to review against the vendor BSP mapping, not proof of this vendor implementation or serving RAT. No preference was changed.",
+  "ril_73_before_and_after": {
+    "active": "up",
+    "call_id": 0,
+    "interface": "rmnet_data0",
+    "address": "100.65.195.62/30",
+    "status": 0
+  },
+  "at_queries": [
+    {
+      "command": "AT+QNWINFO",
+      "at_host_utc": "2026-11-01T19:27:18.715794+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "ERROR"
+    },
+    {
+      "command": "AT+QENG=\"servingcell\"",
+      "at_host_utc": "2026-11-01T19:27:27.654168+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-98(rsrp),-10(rsrq),-67(rssi),12(sinr),-\nOK"
+    },
+    {
+      "command": "AT+C5GREG?",
+      "at_host_utc": "2026-11-01T19:27:39.205147+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "+C5GREG: 0,0\nOK"
+    },
+    {
+      "command": "AT+QENDC",
+      "at_host_utc": "2026-11-01T19:27:44.688487+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "ERROR"
+    },
+    {
+      "command": "AT+QCAINFO",
+      "at_host_utc": "2026-11-01T19:28:05.649626+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "ERROR"
+    },
+    {
+      "command": "AT+QNWPREFCFG=\"mode_pref\"",
+      "at_host_utc": "2026-11-01T19:28:15.341240+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "ERROR"
+    },
+    {
+      "command": "AT+QENG=\"servingcell\"",
+      "at_host_utc": "2026-11-01T19:28:48.139108+00:00",
+      "phase": "during_bound_transfer",
+      "response": "+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-97(rsrp),-11(rsrq),-66(rssi),10(sinr),-\nOK"
+    },
+    {
+      "command": "AT+COPS?",
+      "at_host_utc": "2026-11-01T19:28:51.127435+00:00",
+      "phase": "during_bound_transfer",
+      "response": "+COPS: 0,0,\"TIM TIM\",7\nOK"
+    },
+    {
+      "command": "AT+C5GREG?",
+      "at_host_utc": "2026-11-01T19:28:54.673896+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "+C5GREG: 0,0\nOK"
+    },
+    {
+      "command": "AT+CEREG?",
+      "at_host_utc": "2026-11-01T19:28:58.198515+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "+CEREG: 0,1\nOK"
+    },
+    {
+      "command": "AT+QENG=\"servingcell\"",
+      "at_host_utc": "2026-11-01T19:29:01.194899+00:00",
+      "phase": "outside_bound_transfer",
+      "response": "+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-100(rsrp),-12(rsrq),-67(rssi),11(sinr),-\nOK"
+    },
+    {
+      "command": "AT+QENG=\"servingcell\"",
+      "at_host_utc": "2026-11-01T19:30:14.997197+00:00",
+      "phase": "during_bound_transfer",
+      "response": "+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-98(rsrp),-11(rsrq),-68(rssi),11(sinr),-\nOK"
+    },
+    {
+      "command": "AT+C5GREG?",
+      "at_host_utc": "2026-11-01T19:30:18.021001+00:00",
+      "phase": "during_bound_transfer",
+      "response": "+C5GREG: 0,0\nOK"
+    },
+    {
+      "command": "AT+QENG=\"servingcell\"",
+      "at_host_utc": "2026-11-01T19:30:20.993173+00:00",
+      "phase": "during_bound_transfer",
+      "response": "+QENG: \"servingcell\",\"NOCONN\"(net_state),\"LTE\"(net_des),\"FDD\"(mode),724,002(mcc,mnc),<cell_id>(cell_id),364(pci),3150(earfcn),7(freq_band_ind),5(ul_bandwidth),5(dl_bandwidth),<tac>(tac),-97(rsrp),-12(rsrq),-66(rssi),10(sinr),-\nOK"
+    }
+  ],
+  "traffic": [
+    {
+      "start_target_utc": "2026-11-01T19:28:21.197907+00:00",
+      "end_target_utc": "2026-11-01T19:28:53.084408+00:00",
+      "command": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--noproxy",
+        "*",
+        "--interface",
+        "rmnet_data0",
+        "-4",
+        "--fail",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "40",
+        "--limit-rate",
+        "64k",
+        "--max-filesize",
+        "2097152",
+        "-o",
+        "/dev/null",
+        "-w",
+        "HTTP=%{http_code} local=%{local_ip} size=%{size_download} total_s=%{time_total}\n",
+        "https://speed.cloudflare.com/__down?bytes=2097152"
+      ],
+      "exit_code": 0,
+      "stdout": "HTTP=200 local=100.65.195.62 size=2097152 total_s=31.860399\n",
+      "stderr": "",
+      "before": {
+        "rx": 103335,
+        "tx": 175663
+      },
+      "after": {
+        "rx": 2272435,
+        "tx": 196447
+      },
+      "delta": {
+        "rx": 2169100,
+        "tx": 20784
+      },
+      "start_host_utc": "2026-11-01T19:28:20.141732+00:00",
+      "end_host_utc": "2026-11-01T19:28:52.106690+00:00",
+      "purpose": "Bounded radio activity while reading RIL/AT, not throughput acceptance"
+    },
+    {
+      "start_target_utc": "2026-11-01T19:29:55.819730+00:00",
+      "end_target_utc": "2026-11-01T19:30:27.707110+00:00",
+      "command": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--noproxy",
+        "*",
+        "--interface",
+        "rmnet_data0",
+        "-4",
+        "--fail",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "40",
+        "--limit-rate",
+        "64k",
+        "--max-filesize",
+        "2097152",
+        "-o",
+        "/dev/null",
+        "-w",
+        "HTTP=%{http_code} local=%{local_ip} size=%{size_download} total_s=%{time_total}\n",
+        "https://speed.cloudflare.com/__down?bytes=2097152"
+      ],
+      "exit_code": 0,
+      "stdout": "HTTP=200 local=100.65.195.62 size=2097152 total_s=31.860918\n",
+      "stderr": "",
+      "before": {
+        "rx": 2274831,
+        "tx": 200871
+      },
+      "after": {
+        "rx": 4429768,
+        "tx": 216606
+      },
+      "delta": {
+        "rx": 2154937,
+        "tx": 15735
+      },
+      "start_host_utc": "2026-11-01T19:29:54.763581+00:00",
+      "end_host_utc": "2026-11-01T19:30:26.727996+00:00",
+      "purpose": "Bounded radio activity while reading RIL/AT, not throughput acceptance"
+    }
+  ],
+  "serving_cell_samples": 5,
+  "serving_cell_samples_during_traffic": 3,
+  "serving_observation": {
+    "rat": "LTE",
+    "duplex": "FDD",
+    "band": 7,
+    "earfcn": 3150,
+    "pci": 364,
+    "nr_component_reported": false
+  },
+  "conclusion": "The exposed RIL/AT observations report LTE/LTE_CA in this window. 5G SA was not reported registered and no valid NR NSA serving component appeared, including during bound data traffic. 5G NR cannot be confirmed for this session.",
+  "limitations": [
+    "A bounded observation cannot exclude later/transient NSA operation or prove absence of coverage",
+    "C5GREG queries5GS registration;0,0 alone does not exclude EPS-anchored NSA",
+    "QNWINFO,QENDC,QCAINFO and QNWPREFCFG mode_pref returned ERROR on this BSP/path; no EN-DC diagnostic data obtained",
+    "The returned NOCONN label was retained as printed, not used to deny the successful IP transfer",
+    "Two rate-limited2MiB downloads provide activity, not throughput acceptance or proof of the bearer used by each byte",
+    "Vendor-specific preferred-network mapping has not been independently established"
+  ],
+  "preserved": {
+    "existing_data_call": true,
+    "no_setup_or_teardown": true,
+    "no_network_preference_change": true,
+    "no_apn_radio_or_route_changes": true,
+    "clean_exit": true
+  },
+  "raw_trace_sha256": "5b32d29a8c2a82cb70e2aa4c27900ef2debe104191abdcbf924337289c7c4c29",
+  "sources": {
+    "rat_and_preference": "https://android.googlesource.com/device/generic/goldfish/+/bf3559a47ee8a4937035596a0a5c64273bbb0923/radio/ril/ril.h",
+    "quectel_reference_other_module_family": "https://www.quectel.com/content/uploads/2024/05/Quectel_RG50xQRM5xxQ_Series_AT_Commands_Manual_V1.2.pdf",
+    "bounded_payload_endpoint": "https://github.com/cloudflare/speedtest"
+  }
+}

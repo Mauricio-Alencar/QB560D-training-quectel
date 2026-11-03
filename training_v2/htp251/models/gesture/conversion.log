@@ -1,0 +1,49 @@
+2026-11-01 16:44:23,565 - 278 - INFO - INFO_INITIALIZATION_SUCCESS: 
+2026-11-01 16:44:23,720 - 283 - WARNING - Unable to register converter supported Operation [Inverse:Version 1] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:44:23,751 - 283 - WARNING - Unable to register converter supported Operation [RMSNormalization:Version 23] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:44:23,788 - 283 - WARNING - Unable to register converter supported Operation [RotaryEmbedding:Version 23] with your Onnx installation. Converter will bail if Model contains this Op.
+2026-11-01 16:44:24,734 - 283 - WARNING - --desired_input_shape and -d are deprecated. Use --source_model_input_shape or -s for achieving this functionality
+2026-11-01 16:44:24,734 - 278 - INFO - Input shape info 
+2026-11-01 16:44:25,620 - 278 - INFO - FuseRotaryEmbedding: RoPE fusion skipped (--onnx_enable_rope_fusion not set).
+2026-11-01 16:44:25,621 - 283 - WARNING - WARNING_OPSET_VERSION: Warning multiple opset versions specified, using highest.
+2026-11-01 16:44:25,699 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,703 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,707 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,710 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,721 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,725 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,731 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,734 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,737 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,740 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,745 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,748 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,752 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,755 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,761 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,764 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,770 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,773 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,777 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,780 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,786 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,789 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,796 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,799 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,804 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,807 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,813 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,816 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,821 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,825 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,832 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,835 - 283 - WARNING - WARNING_OP_VERSION_NOT_SUPPORTED: Operation Clip Not Supported. Expected operator version: [1, 6, 11, 12], instead got version: [13]
+2026-11-01 16:44:25,846 - 283 - WARNING - GEMM operation is not supported in the general case, attempting to interpret as FC
+2026-11-01 16:44:25,862 - 283 - WARNING - GEMM operation is not supported in the general case, attempting to interpret as FC
+2026-11-01 16:44:25,892 - 283 - WARNING - Unused Input nodes found: []
+2026-11-01 16:44:26,037 - 278 - INFO - INFO_INITIALIZATION_SUCCESS: 
+modeltools::IrGraph::reEvalMacsParams: Re-evaluated graph statistics after IrOptimizer optimization passes:
+modeltools::IrGraph::reEvalMacsParams: Total MACs: 149690577
+modeltools::IrGraph::reEvalMacsParams: Total Params Count: 968640
+2026-11-01 16:44:26,126 - 278 - INFO - INFO_CONVERSION_SUCCESS: Conversion completed successfully
+2026-11-01 16:44:26,254 - 278 - INFO - INFO_WRITE_SUCCESS: 

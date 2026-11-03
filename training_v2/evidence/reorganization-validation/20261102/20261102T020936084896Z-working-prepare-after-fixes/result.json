@@ -1,0 +1,13 @@
+{
+  "label": "working-prepare-after-fixes",
+  "script": "provision_target\\provision.py",
+  "args": [
+    "prepare",
+    "--offline"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 2.453,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T020936084896Z-working-prepare-after-fixes\\console.log"
+}

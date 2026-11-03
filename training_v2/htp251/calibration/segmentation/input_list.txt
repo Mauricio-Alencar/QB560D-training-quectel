@@ -1,0 +1,5 @@
+calibration/segmentation/00.raw
+calibration/segmentation/01.raw
+calibration/segmentation/02.raw
+calibration/segmentation/03.raw
+calibration/segmentation/04.raw

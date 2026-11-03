@@ -1,0 +1,2 @@
+Logging started for program DebugLog on host qcs6490-odk at Tue Jun 18 2024 07:10:07.238815 (this log file is /opt/qb560d-training-payload/evidence/htp-comparison/20261101T173204Z/session_3_snpe_cpu_fixed/DebugLog.00.txt)
+Logging stopped at Tue Jun 18 2024 07:10:07.982139

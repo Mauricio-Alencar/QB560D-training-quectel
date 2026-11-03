@@ -1,0 +1,12 @@
+{
+  "label": "htp-five-test-all",
+  "script": "host\\htp251_workshop.py",
+  "args": [
+    "test-all"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 15.828,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012233806687Z-htp-five-test-all\\console.log"
+}

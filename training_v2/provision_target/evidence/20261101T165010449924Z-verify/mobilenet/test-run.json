@@ -1,0 +1,12 @@
+{
+  "remote": "/opt/qairt-isolated/2.51.40.260930",
+  "remote_output": "/opt/qairt-isolated/2.51.40.260930/results/20261101T165043974016Z",
+  "result_id": "20261101T165043974016Z",
+  "version": "2.51.40.260930",
+  "runs": 5,
+  "originals_unchanged": true,
+  "device": "? device product:qcm6490-Ubuntu transport_id:1",
+  "execution_pass": true,
+  "error": null,
+  "collection_error": null
+}

@@ -1,0 +1,55 @@
+{
+  "foreground_fraction": 0.618873866371936,
+  "class_fractions": {
+    "background": 0.381126133628064,
+    "person": 0.618873866371936
+  },
+  "demo_id": "D2-09",
+  "backend": "CPU",
+  "runtime": "ai_edge_litert.interpreter",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "model_sha256": "68a539782c2c6a72f8aac3724600124a85ed977162b44e84cbae5db717c933c6",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "runs": 3,
+  "warmup": 3,
+  "threads": 2,
+  "crop": null,
+  "inference_ms_median": 12.831900006858632,
+  "inference_ms_p95": 13.29603000485804,
+  "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
+  "tensor_contract": {
+    "inputs": [
+      {
+        "name": "sub_7",
+        "shape": [
+          1,
+          257,
+          257,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "slot": 0,
+        "name": "ResizeBilinear_3",
+        "shape": [
+          1,
+          257,
+          257,
+          21
+        ],
+        "dtype": "<class 'numpy.float32'>",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ]
+  }
+}

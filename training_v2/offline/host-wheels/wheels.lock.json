@@ -1,0 +1,15 @@
+{
+  "source": "Previously downloaded pip wheels; fixed training host versions, CPython 3.12 Windows x64",
+  "files": [
+    {
+      "file": "numpy-2.3.5-cp312-cp312-win_amd64.whl",
+      "sha256": "86945f2ee6d10cdfd67bcb4069c1662dd711f7e2a4343db5cecec06b87cf31aa",
+      "bytes": 12782922
+    },
+    {
+      "file": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+      "sha256": "a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09",
+      "bytes": 7227137
+    }
+  ]
+}

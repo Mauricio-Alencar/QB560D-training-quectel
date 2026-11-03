@@ -1,0 +1,12 @@
+{
+  "label": "docker-offline-redeploy",
+  "script": "demos\\docker\\host\\deploy_offline.py",
+  "args": [
+    "--stop-after-test"
+  ],
+  "cwd": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\training_v2",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 42.156,
+  "log": "evidence\\reorganization-validation\\20261102\\20261102T012358156046Z-docker-offline-redeploy\\console.log"
+}

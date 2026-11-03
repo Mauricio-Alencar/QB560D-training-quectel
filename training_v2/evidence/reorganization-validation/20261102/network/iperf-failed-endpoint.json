@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload && . /opt/qb560d-workshop/env.sh && CELL_IF=lo IPERF_SERVER=127.0.0.1 IPERF_PORT=45999 SECONDS_PER_TEST=1 PARALLEL_STREAMS=1 sh target/performance.sh",
+  "exit_code": 1
+}

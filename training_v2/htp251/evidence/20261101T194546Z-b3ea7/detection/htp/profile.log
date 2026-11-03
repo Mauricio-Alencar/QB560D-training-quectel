@@ -1,0 +1,323 @@
+Input Log File Location: /opt/qb560d-ai-htp251/runs/radbc6ea1dc154e/htp/qnn-profiling-data_0.log
+Log File Created: Mon Nov  2 03:46:32 2026
+Time Scale: 1e-06
+Epoch Timestamp: 1793562392251246 Steady Clock Timestamp: 3627910398
+Generated using: 
+qnn-profile-viewer: v2.51.40.260930230134
+qnn-net-run: v2.51.40.260930230134
+Backend: v2.51.40.260930230134
+
+Qnn Init/Prepare/Finalize/De-Init/Execute/Lib-Load Statistics:
+------------------------------------------------------------
+Init Stats:
+-----------
+    NetRun: 316798 us
+
+Compose Graphs Stats:
+--------------
+    NetRun: 143345 us
+
+Finalize Stats:
+---------------
+Graph 0 (model_float):
+    NetRun: 173234 us
+    Backend (RPC (finalize) time): 2965 us
+    Backend (QNN accelerator (finalize) time): 2744 us
+    Backend (Accelerator (finalize) time): 2589 us
+    Backend (QNN (finalize) time): 173111 us
+        Graph Preparation Initializing: 415 us
+        Graph Optimizations: 114317 us
+        Post Graph Optimization: 5556 us
+        Graph Sequencing for Target: 16112 us
+        VTCM Allocation: 4488 us
+        Parallelization Optimization: 2289 us
+        Finalizing Graph Sequence: 2964 us
+        Completion: 149 us
+
+De-Init Stats:
+--------------
+    NetRun: 7145 us
+    Backend (RPC (deinit) time): 1944 us
+    Backend (QNN Accelerator (deinit) time): 1767 us
+    Backend (Accelerator (deinit) time): 1740 us
+    Backend (QNN (deinit) time): 7033 us
+
+Execute Stats (Overall):
+------------------------
+    NetRun IPS (includes IO and misc. time): 73.3030 inf/sec 
+
+Execute Stats (Average):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 3863 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 3427 us
+    Backend (QNN accelerator (execute) time): 3096 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2572 us
+    Backend (Time for HVX + HMX power on and acquire): 2567 us
+    Backend (Accelerator (execute) time (cycles)): 1291387 cycles
+        Input OpId_2 (cycles): 0 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 191862 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 45268 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 13775 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 112022 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 9006 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 45972 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 17647 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 60975 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 7866 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 23647 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 15723 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 39716 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 12351 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 20183 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 23153 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 23182 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 25280 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 22210 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 22902 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 20315 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 22920 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 20555 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 23260 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 44400 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 19633 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 19817 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 44186 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant:OpId_211 (cycles): 9802 cycles
+        Relu6__488:OpId_214 (cycles): 28415 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant:OpId_226 (cycles): 51950 cycles
+        Relu6__490:OpId_229 (cycles): 1734 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant:OpId_241 (cycles): 973 cycles
+        Relu6__492:OpId_244 (cycles): 676 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant:OpId_256 (cycles): 7479 cycles
+        Relu6__494:OpId_259 (cycles): 869 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant:OpId_271 (cycles): 0 cycles
+        Relu6__496:OpId_274 (cycles): 562 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant:OpId_286 (cycles): 11622 cycles
+        Relu6__498:OpId_289 (cycles): 817 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant:OpId_301 (cycles): 0 cycles
+        Relu6__500:OpId_304 (cycles): 956 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant:OpId_316 (cycles): 6124 cycles
+        Relu6__502:OpId_319 (cycles): 707 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_prequant:OpId_331 (cycles): 0 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_0123:OpId_335 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_1_prequant:OpId_336 (cycles): 12635 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant:OpId_342 (cycles): 0 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123:OpId_346 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_prequant:OpId_347 (cycles): 837 cycles
+        BoxPredictor_4/ClassPredictor/BiasAdd_prequant:OpId_353 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_1_prequant:OpId_356 (cycles): 10073 cycles
+        BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant:OpId_362 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_prequant:OpId_365 (cycles): 609 cycles
+        BoxPredictor_3/ClassPredictor/BiasAdd_prequant:OpId_371 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_1_prequant:OpId_374 (cycles): 7905 cycles
+        BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant:OpId_380 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_prequant:OpId_383 (cycles): 779 cycles
+        BoxPredictor_2/ClassPredictor/BiasAdd_prequant:OpId_389 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_1_prequant:OpId_392 (cycles): 22228 cycles
+        BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant:OpId_398 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_prequant:OpId_401 (cycles): 968 cycles
+        BoxPredictor_1/ClassPredictor/BiasAdd_prequant:OpId_407 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_1_prequant:OpId_410 (cycles): 36907 cycles
+        BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant:OpId_416 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_prequant:OpId_419 (cycles): 16359 cycles
+        BoxPredictor_0/ClassPredictor/BiasAdd_prequant:OpId_425 (cycles): 0 cycles
+        BoxPredictor_0/Reshape_1_prequant:OpId_428 (cycles): 32498 cycles
+        concat_1_prequant:OpId_429 (cycles): 0 cycles
+        convert_scores_prequant:OpId_432 (cycles): 56183 cycles
+        BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant:OpId_444 (cycles): 9445 cycles
+        BoxPredictor_0/Reshape_prequant:OpId_447 (cycles): 0 cycles
+        concat_prequant:OpId_448 (cycles): 0 cycles
+        Squeeze_prequant:OpId_450 (cycles): 0 cycles
+        Output OpId_3 (cycles): 13436 cycles
+    Backend (Accelerator (execute) time): 1506 us
+    Backend (Accelerator (execute excluding wait) time): 824 us
+    Backend (QNN (execute) time): 3758 us
+
+Execute Stats (Min):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 3170 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 2809 us
+    Backend (QNN accelerator (execute) time): 2510 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2388 us
+    Backend (Time for HVX + HMX power on and acquire): 1534 us
+    Backend (Accelerator (execute) time (cycles)): 1282454 cycles
+        Input OpId_2 (cycles): 0 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 180411 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 46456 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 13673 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 113936 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 8946 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 46169 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 17538 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 61336 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 7730 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 23761 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 15809 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 37765 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 13006 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 20128 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 22509 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 24286 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 25516 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 24282 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 23494 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 22400 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 24041 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 21368 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 24870 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 45791 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 19528 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 19847 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 39164 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant:OpId_211 (cycles): 9791 cycles
+        Relu6__488:OpId_214 (cycles): 28285 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant:OpId_226 (cycles): 56800 cycles
+        Relu6__490:OpId_229 (cycles): 1801 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant:OpId_241 (cycles): 971 cycles
+        Relu6__492:OpId_244 (cycles): 664 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant:OpId_256 (cycles): 6100 cycles
+        Relu6__494:OpId_259 (cycles): 856 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant:OpId_271 (cycles): 0 cycles
+        Relu6__496:OpId_274 (cycles): 566 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant:OpId_286 (cycles): 11321 cycles
+        Relu6__498:OpId_289 (cycles): 838 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant:OpId_301 (cycles): 0 cycles
+        Relu6__500:OpId_304 (cycles): 423 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant:OpId_316 (cycles): 6044 cycles
+        Relu6__502:OpId_319 (cycles): 717 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_prequant:OpId_331 (cycles): 0 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_0123:OpId_335 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_1_prequant:OpId_336 (cycles): 11862 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant:OpId_342 (cycles): 0 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123:OpId_346 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_prequant:OpId_347 (cycles): 816 cycles
+        BoxPredictor_4/ClassPredictor/BiasAdd_prequant:OpId_353 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_1_prequant:OpId_356 (cycles): 10668 cycles
+        BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant:OpId_362 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_prequant:OpId_365 (cycles): 656 cycles
+        BoxPredictor_3/ClassPredictor/BiasAdd_prequant:OpId_371 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_1_prequant:OpId_374 (cycles): 5754 cycles
+        BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant:OpId_380 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_prequant:OpId_383 (cycles): 796 cycles
+        BoxPredictor_2/ClassPredictor/BiasAdd_prequant:OpId_389 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_1_prequant:OpId_392 (cycles): 15280 cycles
+        BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant:OpId_398 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_prequant:OpId_401 (cycles): 1051 cycles
+        BoxPredictor_1/ClassPredictor/BiasAdd_prequant:OpId_407 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_1_prequant:OpId_410 (cycles): 35566 cycles
+        BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant:OpId_416 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_prequant:OpId_419 (cycles): 19440 cycles
+        BoxPredictor_0/ClassPredictor/BiasAdd_prequant:OpId_425 (cycles): 0 cycles
+        BoxPredictor_0/Reshape_1_prequant:OpId_428 (cycles): 33096 cycles
+        concat_1_prequant:OpId_429 (cycles): 0 cycles
+        convert_scores_prequant:OpId_432 (cycles): 57360 cycles
+        BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant:OpId_444 (cycles): 10267 cycles
+        BoxPredictor_0/Reshape_prequant:OpId_447 (cycles): 0 cycles
+        concat_prequant:OpId_448 (cycles): 0 cycles
+        Squeeze_prequant:OpId_450 (cycles): 0 cycles
+        Output OpId_3 (cycles): 10905 cycles
+    Backend (Accelerator (execute) time): 1433 us
+    Backend (Accelerator (execute excluding wait) time): 823 us
+    Backend (QNN (execute) time): 3080 us
+
+Execute Stats (Max):
+------------------------
+Total Inference Time: 
+---------------------
+Graph 0 (model_float):
+    NetRun: 4997 us
+    Backend (Number of HVX threads used): 2 count
+    Backend (RPC (execute) time): 4664 us
+    Backend (QNN accelerator (execute) time): 4321 us
+    Backend (Num times yield occured): 0 count
+    Backend (Time for initial VTCM acquire): 2828 us
+    Backend (Time for HVX + HMX power on and acquire): 4693 us
+    Backend (Accelerator (execute) time (cycles)): 1342664 cycles
+        Input OpId_2 (cycles): 0 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6_prequant:OpId_21 (cycles): 178973 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6_prequant:OpId_29 (cycles): 46298 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6_prequant:OpId_35 (cycles): 13812 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6_prequant:OpId_43 (cycles): 114824 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6_prequant:OpId_49 (cycles): 9096 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6_prequant:OpId_57 (cycles): 45584 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6_prequant:OpId_63 (cycles): 17855 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6_prequant:OpId_71 (cycles): 61087 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6_prequant:OpId_77 (cycles): 7730 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6_prequant:OpId_85 (cycles): 23268 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6_prequant:OpId_91 (cycles): 15645 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6_prequant:OpId_99 (cycles): 42178 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6_prequant:OpId_105 (cycles): 11238 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6_prequant:OpId_113 (cycles): 20607 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6_prequant:OpId_119 (cycles): 22426 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6_prequant:OpId_127 (cycles): 20078 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6_prequant:OpId_133 (cycles): 22246 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6_prequant:OpId_141 (cycles): 19936 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6_prequant:OpId_147 (cycles): 22602 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6_prequant:OpId_155 (cycles): 19163 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6_prequant:OpId_161 (cycles): 22185 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6_prequant:OpId_169 (cycles): 20104 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6_prequant:OpId_175 (cycles): 22261 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6_prequant:OpId_183 (cycles): 46674 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6_prequant:OpId_189 (cycles): 19711 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6_prequant:OpId_197 (cycles): 19671 cycles
+        FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6_prequant:OpId_203 (cycles): 54283 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_192/Relu6_prequant:OpId_211 (cycles): 9812 cycles
+        Relu6__488:OpId_214 (cycles): 41598 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_384/Relu6_prequant:OpId_226 (cycles): 70797 cycles
+        Relu6__490:OpId_229 (cycles): 1796 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_96/Relu6_prequant:OpId_241 (cycles): 979 cycles
+        Relu6__492:OpId_244 (cycles): 660 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_192/Relu6_prequant:OpId_256 (cycles): 11028 cycles
+        Relu6__494:OpId_259 (cycles): 855 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_96/Relu6_prequant:OpId_271 (cycles): 0 cycles
+        Relu6__496:OpId_274 (cycles): 558 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_192/Relu6_prequant:OpId_286 (cycles): 6303 cycles
+        Relu6__498:OpId_289 (cycles): 782 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_48/Relu6_prequant:OpId_301 (cycles): 0 cycles
+        Relu6__500:OpId_304 (cycles): 2047 cycles
+        FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_96/Relu6_prequant:OpId_316 (cycles): 6375 cycles
+        Relu6__502:OpId_319 (cycles): 732 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_prequant:OpId_331 (cycles): 0 cycles
+        BoxPredictor_5/ClassPredictor/BiasAdd_0123:OpId_335 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_1_prequant:OpId_336 (cycles): 11918 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_prequant:OpId_342 (cycles): 0 cycles
+        BoxPredictor_5/BoxEncodingPredictor/BiasAdd_0123:OpId_346 (cycles): 0 cycles
+        BoxPredictor_5/Reshape_prequant:OpId_347 (cycles): 1112 cycles
+        BoxPredictor_4/ClassPredictor/BiasAdd_prequant:OpId_353 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_1_prequant:OpId_356 (cycles): 8762 cycles
+        BoxPredictor_4/BoxEncodingPredictor/BiasAdd_prequant:OpId_362 (cycles): 0 cycles
+        BoxPredictor_4/Reshape_prequant:OpId_365 (cycles): 579 cycles
+        BoxPredictor_3/ClassPredictor/BiasAdd_prequant:OpId_371 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_1_prequant:OpId_374 (cycles): 7547 cycles
+        BoxPredictor_3/BoxEncodingPredictor/BiasAdd_prequant:OpId_380 (cycles): 0 cycles
+        BoxPredictor_3/Reshape_prequant:OpId_383 (cycles): 790 cycles
+        BoxPredictor_2/ClassPredictor/BiasAdd_prequant:OpId_389 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_1_prequant:OpId_392 (cycles): 24218 cycles
+        BoxPredictor_2/BoxEncodingPredictor/BiasAdd_prequant:OpId_398 (cycles): 0 cycles
+        BoxPredictor_2/Reshape_prequant:OpId_401 (cycles): 905 cycles
+        BoxPredictor_1/ClassPredictor/BiasAdd_prequant:OpId_407 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_1_prequant:OpId_410 (cycles): 39167 cycles
+        BoxPredictor_1/BoxEncodingPredictor/BiasAdd_prequant:OpId_416 (cycles): 0 cycles
+        BoxPredictor_1/Reshape_prequant:OpId_419 (cycles): 23571 cycles
+        BoxPredictor_0/ClassPredictor/BiasAdd_prequant:OpId_425 (cycles): 0 cycles
+        BoxPredictor_0/Reshape_1_prequant:OpId_428 (cycles): 33958 cycles
+        concat_1_prequant:OpId_429 (cycles): 0 cycles
+        convert_scores_prequant:OpId_432 (cycles): 72195 cycles
+        BoxPredictor_0/BoxEncodingPredictor/BiasAdd_prequant:OpId_444 (cycles): 11784 cycles
+        BoxPredictor_0/Reshape_prequant:OpId_447 (cycles): 0 cycles
+        concat_prequant:OpId_448 (cycles): 0 cycles
+        Squeeze_prequant:OpId_450 (cycles): 0 cycles
+        Output OpId_3 (cycles): 12301 cycles
+    Backend (Accelerator (execute) time): 1650 us
+    Backend (Accelerator (execute excluding wait) time): 829 us
+    Backend (QNN (execute) time): 4920 us

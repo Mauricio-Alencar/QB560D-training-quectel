@@ -1,0 +1,12 @@
+{
+  "result": "PASS_FIRST_INSTALL_AND_REPEAT_FROM_RELOCATED_PACKAGE",
+  "student_folder_with_spaces_and_unicode": "C:\\Users\\mauri\\OneDrive - Quectel Wireless Solutions\\Masterclass - Trainings\\aibox_training\\demos\\docker\\.build\\Aluno Treinamento \u2013 Turma 01\\Docker_Demo",
+  "first_deploy": "evidence/classroom-portability/d848650c8c_deployment-20261101T155401266130Z.json",
+  "repeat_deploy": "evidence/classroom-portability/f7df31b1fa_deployment-20261101T161407481418Z.json",
+  "login": "root / prompt-based password / uid0 verified",
+  "downloads_required": false,
+  "long_windows_paths": "PASS using short temporary ADB transfers and extended local paths; failed earlier collections retained in INDEX",
+  "image_id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+  "final_container_state": "removed",
+  "evidence_index": "evidence/classroom-portability/INDEX.json"
+}

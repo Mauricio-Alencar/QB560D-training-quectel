@@ -1,0 +1,7 @@
+{
+  "source": "training_v2\\.build\\hdmi_baseline.sh",
+  "host_utc": "20261101T200630389010Z",
+  "transport": "SSH/WLAN",
+  "host": "192.168.0.26",
+  "exit_code": 0
+}

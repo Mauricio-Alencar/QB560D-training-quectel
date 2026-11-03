@@ -1,0 +1,6 @@
+{
+  "command": "python3 - <<'PY'\nfrom pathlib import Path\nimport struct\nroot=Path('/sys/firmware/devicetree/base')\nfor comp in root.rglob('compatible'):\n try: data=comp.read_bytes()\n except OSError: continue\n if any(x in data.lower() for x in (b'lt9611', b'hdmi', b'dsi-panel')):\n  n=comp.parent; print('NODE',str(n)); print('compatible',data.replace(b'\\0',b'|').decode('ascii','replace'))\n  for prop in n.iterdir():\n   if prop.is_file() and any(x in prop.name for x in ['status','gpio','interrupt','supply','panel-name']):\n    b=prop.read_bytes(); print(prop.name,b.hex() if b'\\0' in b or any(v<32 and v!=0 for v in b) else b.decode('ascii','replace'))\nPY",
+  "exit_code": 0,
+  "transport": "SSH",
+  "host_key_verified": true
+}

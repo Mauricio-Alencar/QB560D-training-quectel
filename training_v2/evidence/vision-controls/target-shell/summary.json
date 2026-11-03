@@ -1,0 +1,267 @@
+{
+  "result": "PASS_11_TARGET_ONLY_HTP_CONTROLS",
+  "target_summary": {
+    "status": "PASS_TARGET_HTP_CONTROLS",
+    "location": "target only; no ADB/host calls",
+    "cpu_reference": "Bundled saved TFLite CPU outputs",
+    "fresh_cpu_inferences": 0,
+    "gpu_inferences": 0,
+    "cases": 11,
+    "records": [
+      {
+        "case": "burger-classification",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 99,
+          "execute_us": [
+            4236.0,
+            3155.0,
+            3167.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "criterion": "Same top-1 as saved original CPU and expected cheeseburger"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/burger-classification/result.json"
+      },
+      {
+        "case": "full-body-detection",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 153,
+          "execute_us": [
+            8027.0,
+            5660.0,
+            5641.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "person_box_iou": 0.958930717582244,
+          "criterion": "Person IoU >=0.7 versus saved CPU, bounded extra detections"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/full-body-detection/result.json"
+      },
+      {
+        "case": "no-person-detection",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 153,
+          "execute_us": [
+            8079.0,
+            5790.0,
+            5791.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "criterion": "No person >=0.5 in HTP or saved CPU reference"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/no-person-detection/result.json"
+      },
+      {
+        "case": "full-body-pose",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 93,
+          "execute_us": [
+            5190.0,
+            3323.0,
+            3235.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "median_visible_joint_distance": 0.013987389063853868,
+          "criterion": "Visible joint displacement <=0.12; full_body needs >=12 visible points in both"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/full-body-pose/result.json"
+      },
+      {
+        "case": "standing-full-body-pose",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 93,
+          "execute_us": [
+            5243.0,
+            4081.0,
+            3857.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "median_visible_joint_distance": 0.014591357743377591,
+          "criterion": "Visible joint displacement <=0.12; full_body needs >=12 visible points in both"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/standing-full-body-pose/result.json"
+      },
+      {
+        "case": "occluded-pose",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 93,
+          "execute_us": [
+            5390.0,
+            3872.0,
+            3878.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "median_visible_joint_distance": 0.011498321480781545,
+          "criterion": "Visible joint displacement <=0.12; full_body needs >=12 visible points in both"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/occluded-pose/result.json"
+      },
+      {
+        "case": "closed-fist",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 195,
+          "execute_us": [
+            5388.0,
+            3399.0,
+            3183.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "criterion": "Same gesture/presence as saved original CPU and expected label"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/closed-fist/result.json"
+      },
+      {
+        "case": "no-hand",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 195,
+          "execute_us": [
+            5388.0,
+            3420.0,
+            3300.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "criterion": "Same gesture/presence as saved original CPU and expected label"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/no-hand/result.json"
+      },
+      {
+        "case": "person-segmentation",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 210,
+          "execute_us": [
+            19833.0,
+            10138.0,
+            11626.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "person_mask_iou": 0.75,
+          "criterion": "Person-mask IoU >=0.70 versus saved original CPU"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/person-segmentation/result.json"
+      },
+      {
+        "case": "standing-boundary-segmentation",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 210,
+          "execute_us": [
+            19403.0,
+            9364.0,
+            9334.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "person_mask_iou": 0.9624227618910763,
+          "criterion": "Person-mask IoU >=0.70 versus saved original CPU"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/standing-boundary-segmentation/result.json"
+      },
+      {
+        "case": "no-person-segmentation",
+        "passed": true,
+        "profile": {
+          "accelerator_events": 3,
+          "positive_cycle_events": 210,
+          "execute_us": [
+            20021.0,
+            9713.0,
+            10057.0
+          ]
+        },
+        "comparison": {
+          "passed": true,
+          "actual_person_fraction": 0.0,
+          "criterion": "Person fraction <=1% in HTP and saved CPU"
+        },
+        "result": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11/no-person-segmentation/result.json"
+      }
+    ],
+    "runtime_integrity": {
+      "passed": true,
+      "files_checked": 21,
+      "changed": []
+    },
+    "environment": {
+      "result": "TARGET_HTP_READY",
+      "runtime": "/opt/qairt-isolated/2.51.40.260930",
+      "version": "qnn-net-run pid:17854\nQNN SDK v2.51.40.260930230134",
+      "python": "3.8.10",
+      "numpy": "1.24.4",
+      "pillow": "10.4.0",
+      "cases": 11,
+      "package_files_verified": 39,
+      "inference_backend": "HTP only",
+      "cpu_reference": "Saved TFLite CPU results; no CPU inference in this runner"
+    },
+    "evidence": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11"
+  },
+  "launch": {
+    "remote": "/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11",
+    "run": "20261101T234943Z-shell11",
+    "pid": 17844,
+    "launch_command": "nohup sh /opt/qb560d-ai-htp251/htp-controls/run.sh run-all --output /opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11 >/opt/qb560d-ai-htp251/htp-controls/runs/20261101T234943Z-shell11.console.log 2>&1 </dev/null & echo TARGET_PID=$!",
+    "authenticated_session_closed_before_collection": true
+  },
+  "original_runtime_and_model_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": []
+  },
+  "disconnection_scope": "The launching authenticated ADB shell was closed. Execution completed on target before collection; physical USB/power were not removed.",
+  "offline_bundle": {
+    "package": "qb560d-htp-controls-target-v1",
+    "archive": "offline/htp-controls-target.tar.gz",
+    "sha256": "bfd81d4c1083c14991b0c92a4b2ccb45a883c2d47ffeeacdb5ce614bc0a8f223",
+    "bytes": 9139019,
+    "files": 40,
+    "cases": 11,
+    "runtime_version": "2.51.40.260930"
+  },
+  "single_case_test": {
+    "case": "closed-fist",
+    "exit_code": 0
+  },
+  "negative_control": {
+    "missing_runtime_exit_code": 1,
+    "cpu_retry": false
+  },
+  "repeat_deployment": "SAME_OFFLINE_BUNDLE_ALREADY_INSTALLED; native preflight exit0"
+}

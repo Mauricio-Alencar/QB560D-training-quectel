@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-docker-demo\nsh target/docker.sh info\ntrap 'sh target/demo.sh stop' EXIT\nsh target/demo.sh load\nsh target/demo.sh run\nsh target/demo.sh check",
+  "exit_code": 0
+}

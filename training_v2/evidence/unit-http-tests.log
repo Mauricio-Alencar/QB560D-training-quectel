@@ -1,0 +1,28 @@
+test_bad_wheel_hash_does_not_create_dependency_tree (test_classroom_setup.PillowPreparation.test_bad_wheel_hash_does_not_create_dependency_tree) ... ok
+test_existing_modified_dependency_is_refused_and_preserved (test_classroom_setup.PillowPreparation.test_existing_modified_dependency_is_refused_and_preserved) ... ok
+test_first_prepare_and_repeat_preserve_reviewed_bytes (test_classroom_setup.PillowPreparation.test_first_prepare_and_repeat_preserve_reviewed_bytes) ... ok
+test_other_roots_and_traversal_are_refused (test_classroom_setup.TargetPaths.test_other_roots_and_traversal_are_refused) ... ok
+test_persistent_and_transient_labs_are_explicit (test_classroom_setup.TargetPaths.test_persistent_and_transient_labs_are_explicit) ... ok
+test_health_and_telemetry (test_lab.ApplicationHTTP.test_health_and_telemetry) ... 127.0.0.1 - - [01/Nov/2026 14:52:24] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:52:24] "GET /telemetry HTTP/1.1" 200 -
+ok
+test_unknown_route_returns_404 (test_lab.ApplicationHTTP.test_unknown_route_returns_404) ... 127.0.0.1 - - [01/Nov/2026 14:52:24] code 404, message Not Found
+127.0.0.1 - - [01/Nov/2026 14:52:24] "GET /missing HTTP/1.1" 404 -
+ok
+test_multiple_devices_are_rejected (test_lab.LegacyADB.test_multiple_devices_are_rejected) ... ok
+test_remote_failure_survives_local_adb_success (test_lab.LegacyADB.test_remote_failure_survives_local_adb_success) ... ok
+test_unknown_serial_uses_transport (test_lab.LegacyADB.test_unknown_serial_uses_transport) ... ok
+test_archive_reads_only_exact_member (test_lab.ModelContracts.test_archive_reads_only_exact_member) ... ok
+test_dequantized_scores (test_lab.ModelContracts.test_dequantized_scores) ... ok
+test_detection_threshold_and_background_offset (test_lab.ModelContracts.test_detection_threshold_and_background_offset) ... ok
+test_low_presence_does_not_claim_gesture (test_lab.ModelContracts.test_low_presence_does_not_claim_gesture) ... ok
+test_normalization_and_quantization (test_lab.ModelContracts.test_normalization_and_quantization) ... ok
+test_open_hand_rule (test_lab.ModelContracts.test_open_hand_rule) ... ok
+test_posenet_offsets_use_model_dimensions (test_lab.ModelContracts.test_posenet_offsets_use_model_dimensions) ... ok
+test_raw_rgb_quantized_input_preserves_pixels (test_lab.ModelContracts.test_raw_rgb_quantized_input_preserves_pixels) ... ok
+test_segmentation_argmax_and_shape (test_lab.ModelContracts.test_segmentation_argmax_and_shape) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.813s
+
+OK

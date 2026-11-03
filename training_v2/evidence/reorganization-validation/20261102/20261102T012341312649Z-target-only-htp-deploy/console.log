@@ -1,0 +1,6 @@
+target-guard: exit 0
+C:\Users\mauri\OneDrive - Quectel Wireless Solutions\Masterclass - Trainings\aibox_training\training_v2\offline\htp-controls-target.tar.gz: 1 file pushed, 0 skipped. 6.6 MB/s (9139019 bytes in 1.314s)
+install: exit 0
+native-preflight: exit 0
+TARGET_BUNDLE_READY: /opt/qb560d-ai-htp251/htp-controls
+Shell command: cd /opt/qb560d-ai-htp251/htp-controls && sh run.sh run-all
