@@ -67,7 +67,7 @@ Nas cinco demos CPU, a referência retornou `military uniform`, pessoa detectada
 
 ## Reproduzir no host
 
-Use a árvore completa do treinamento ou extraia os ZIPs v2 e Docker lado a lado. Para uma caixa recém-gravada, prepare primeiro as dependências conforme `provision_target/README.txt`. Dentro de `training_v2`, execute:
+Use a árvore completa do treinamento ou extraia os ZIPs v2 e Docker lado a lado. Para uma caixa recém-gravada, prepare primeiro as dependências conforme `provision_target/README.md`. Dentro de `training_v2`, execute:
 
 ```powershell
 python host/adb_lab.py inventory

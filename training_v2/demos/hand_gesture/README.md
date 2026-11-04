@@ -4,7 +4,7 @@ Esta demo usa três DLCs w8a8 do Qualcomm AI Hub: detector de palma, 21 landmark
 
 ## Preparação
 
-Use o workspace completo e uma caixa preparada conforme [provision_target/README.txt](../../provision_target/README.txt). No PowerShell, na raiz `training_v2`:
+Use o workspace completo e uma caixa preparada conforme [provision_target/README.md](../../provision_target/README.md). No PowerShell, na raiz `training_v2`:
 
 ```powershell
 $py = (Resolve-Path './provision_target/.venv/Scripts/python.exe').Path

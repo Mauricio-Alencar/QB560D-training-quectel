@@ -4,6 +4,10 @@ Esta é a entrada única do treinamento. Abra PowerShell nesta pasta `training_v
 
 No Windows, extraia o pacote em uma pasta curta, por exemplo `C:\QB560D`, para evitar o limite de caminhos de ferramentas e os nomes longos dos PDFs do fabricante. Crie o ambiente Python depois da extração; não copie uma `.venv` de outra pasta.
 
+## Download desta versão
+
+[Pacote completo v0.12.1](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip) e [SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip.sha256). Os [detalhes da release](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/tag/v0.12.1) identificam a versão publicada.
+
 ## 1. Preparar o computador
 
 Windows x64, Python 3.12 x64, driver Quectel ADB e cabo USB de dados. O cliente ADB está em `tools/platform-tools`. Não é necessário Docker Desktop, WSL ou SDK Yocto para os labs locais.
@@ -19,7 +23,7 @@ O helper recria o ambiente local e instala NumPy/Pillow nas versões fixadas. Os
 
 ## 2. Preparar uma caixa nova
 
-Leia o [procedimento de provisionamento](provision_target/README.txt). Conecte uma caixa e execute:
+Leia o [procedimento de provisionamento](provision_target/README.md). Conecte uma caixa e execute:
 
 ```powershell
 & $py provision_target/provision.py inspect --adb $adb

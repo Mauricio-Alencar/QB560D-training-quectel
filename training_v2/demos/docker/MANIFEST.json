@@ -1,5 +1,5 @@
 {
-  "revision": "0.12.0-student-package",
+  "revision": "0.12.1",
   "packaged_host_utc": "2026-11-01T16:30:13.263172+00:00",
   "target": "QB560D-EU / QCM6490 / Ubuntu20.04.3 / kernel5.4.219-perf",
   "runtime": {

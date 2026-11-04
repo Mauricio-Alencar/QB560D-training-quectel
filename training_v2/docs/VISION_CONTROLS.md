@@ -71,7 +71,7 @@ O modo local compara a saída com **referências TFLite CPU já gravadas e inclu
 
 Na caixa atual, o pacote já está instalado e validado em `/opt/qb560d-ai-htp251/htp-controls`. Pode ir direto ao passo 2.
 
-Para outra caixa, prepare primeiro o target conforme [provision_target/README.txt](../provision_target/README.txt). Mesmo firmware não garante que os recursos de treinamento já tenham sido copiados. São necessários:
+Para outra caixa, prepare primeiro o target conforme [provision_target/README.md](../provision_target/README.md). Mesmo firmware não garante que os recursos de treinamento já tenham sido copiados. São necessários:
 
 - Python 3.8; NumPy 1.24.4 e Pillow 10.4.0 privados em `/opt/qb560d-training-payload/.python-deps`;
 - QAIRT/QNN ARM64 e bibliotecas HTP v68 em `/opt/qairt-isolated/2.51.40.260930`;

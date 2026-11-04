@@ -8,7 +8,7 @@ All application development in this package runs directly on the target. No Yoct
 
 Current measured BSP: `QDPA_Ubuntu20.04.003.51.303 V01`, kernel build 2 April 2026. The 1 November revalidation passed the native/CPU/GPU/HTP/WLAN paths with Linux root login. Cellular and iperf3 are deferred by the owner while the physical SIM setup is prepared. See [current results](TARGET_RESULTS.md).
 
-For a newly flashed box, follow `provision_target/README.txt` from the complete training tree first. The native payload is installed in `/opt/qb560d-training-payload`, private dependencies in its `.python-deps`, network wrappers in `/opt/qb560d-workshop/bin`, and QAIRT 2.51 in its separate owned directory. These tools do not appear in a plain global PATH. Use the environment file only for a lab that needs those wrappers: `. /opt/qb560d-workshop/env.sh`.
+For a newly flashed box, follow `provision_target/README.md` from the complete training tree first. The native payload is installed in `/opt/qb560d-training-payload`, private dependencies in its `.python-deps`, network wrappers in `/opt/qb560d-workshop/bin`, and QAIRT 2.51 in its separate owned directory. These tools do not appear in a plain global PATH. Use the environment file only for a lab that needs those wrappers: `. /opt/qb560d-workshop/env.sh`.
 
 ## Preparation order
 

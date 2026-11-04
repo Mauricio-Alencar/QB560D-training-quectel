@@ -35,7 +35,7 @@ Os dois outros fluxos do treinamento, MobileNet V2 e MediaPipe de sete gestos, j
 
 ## Hands-on pelo computador host
 
-Use o pacote completo `aibox_training`, uma caixa por vez e o preparo de host/target do `provision_target/README.txt`. São necessários Python 3.12 com NumPy/Pillow, ADB e os modelos/runtime do pacote. **O aluno não precisa instalar TensorFlow, ONNX ou conversores Qualcomm para executar os DLCs prontos.** A caixa não precisa acessar a Internet.
+Use o pacote completo `aibox_training`, uma caixa por vez e o preparo de host/target do `provision_target/README.md`. São necessários Python 3.12 com NumPy/Pillow, ADB e os modelos/runtime do pacote. **O aluno não precisa instalar TensorFlow, ONNX ou conversores Qualcomm para executar os DLCs prontos.** A caixa não precisa acessar a Internet.
 
 Abra PowerShell na raiz `training_v2`:
 

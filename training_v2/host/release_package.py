@@ -5,7 +5,7 @@ from validate_release import validate,validate_selection
 from release_policy import GIT_EXCLUSIONS,release_exclusion_reason
 TRAINING=Path(__file__).resolve().parents[1]
 PROJECT=TRAINING.parent
-REVISION='0.12.0-student-package'
+REVISION='0.12.1'
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def read(path):return json.loads(path.read_text(encoding='utf-8-sig'))
 def checked_input(path):
@@ -51,7 +51,7 @@ def collect():
     for name in ('fw-20261101-v2','persistent-20261101/mobilenet','persistent-20261101/stage'):tree('runtimes/qairt_2_51/evidence/'+name)
     provision=TRAINING/'provision_target'
     for path in provision.iterdir():
-        if path.is_file() and path.suffix in {'.py','.ps1','.txt','.json'} and not release_exclusion_reason(path.relative_to(PROJECT)):add(path)
+        if path.is_file() and path.suffix in {'.py','.ps1','.md','.txt','.json'} and not release_exclusion_reason(path.relative_to(PROJECT)):add(path)
     for row in read(provision/'sources.lock.json'):
         path=provision/'cache'/row['name']
         if sha(path)!=row['sha256']:raise ValueError('Locked provisioning input changed: '+row['name'])
@@ -61,8 +61,6 @@ def collect():
         path=TRAINING/'tools/platform-tools'/name
         if sha(path)!=spec['sha256']:raise ValueError('Locked ADB changed: '+name)
         add(path)
-    for path in (PROJECT/'references').iterdir():
-        if path.is_file():add(path)
     for name in ('README.md','AGENTS.md','LICENSE','LICENSE-CONTENT','LICENSING.md'):add(PROJECT/name)
     for module,filename in [(docker,'MANIFEST.json'),(runtime,'package-manifest.json')]:
         output=module/filename;old=read(output) if output.exists() else {}
@@ -77,7 +75,7 @@ def main():
     manifest={'schema':2,'revision':REVISION,'at_host_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'package_root':'aibox_training','file_paths_relative_to':'package root',
         'entrypoint':'training_v2/README.md','host_working_directory':'training_v2',
         'slides':{'canonical_file':'slides/QB560D_EU_Training.pptx','count':report['slides'],'sha256_at_packaging':deck_hash,'path_base':'training_v2'},
-        'modules':{'provisioning':'provision_target/README.txt','docker':'demos/docker/GUIA_ALUNO_OFFLINE.md','ai_hub':'Qualcomm_AI_Hub_Training/README.md','gestures':'demos/hand_gesture/README.md','qairt':'runtimes/qairt_2_51/README.md','htp':'htp251/README.md'},
+        'modules':{'provisioning':'provision_target/README.md','docker':'demos/docker/GUIA_ALUNO_OFFLINE.md','ai_hub':'Qualcomm_AI_Hub_Training/README.md','gestures':'demos/hand_gesture/README.md','qairt':'runtimes/qairt_2_51/README.md','htp':'htp251/README.md'},
         'adb':{'transport':'host/adb_transport.py','provisioning_api':'host/provision_session.py','windows_client':'tools/platform-tools/adb.exe','path_base':'training_v2'},
         'provisioning':{'offline_inputs_included':True,'fresh_inventory_and_plan_required':True,'saved_machine_inventory_or_plan_distributed':False},
         'yocto':'Conceptual slides only; no setup/build lab execution',

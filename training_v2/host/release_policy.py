@@ -7,6 +7,7 @@ from pathlib import PurePosixPath
 
 GIT_EXCLUSIONS = {
     '/firmware/': 'Private firmware; distributed separately with restricted access.',
+    '/references/': 'Confidential manufacturer documents; retain locally and exclude from publication.',
     '/archive/': 'Historical materials, backups, generators and old releases.',
     '/dist/': 'Generated versioned distributions, not repository source files.',
     '/training_v2/slides/fontes/': 'Presentation templates and authoring sources.',

@@ -24,7 +24,7 @@ def main():
     evidence=ROOT/'evidence/vision-controls/target-deploy'/digest[:12];evidence.mkdir(parents=True,exist_ok=True)
     password=getpass.getpass('Target root password (not saved): ')
     with Session(resolve_adb(a.adb),a.serial,password=password) as s:
-        guard="from pathlib import Path\nimport json\np=Path("+repr(REMOTE)+")\nassert p.resolve()==p\nr=Path('/opt/qairt-isolated/2.51.40.260930/bin/qnn-net-run')\nassert r.is_file(), 'Prepare the isolated QAIRT runtime first; see provision_target/README.txt'\nowner={'package':'qb560d-ai-htp251-v1'}\nif p.exists():\n assert (p/'.owner.json').is_file() and json.loads((p/'.owner.json').read_text())==owner,'Foreign HTP directory'\nelse:\n p.mkdir();(p/'.owner.json').write_text(json.dumps(owner))\nprint('RECOGNIZED_HTP_DIRECTORY')"
+        guard="from pathlib import Path\nimport json\np=Path("+repr(REMOTE)+")\nassert p.resolve()==p\nr=Path('/opt/qairt-isolated/2.51.40.260930/bin/qnn-net-run')\nassert r.is_file(), 'Prepare the isolated QAIRT runtime first; see provision_target/README.md'\nowner={'package':'qb560d-ai-htp251-v1'}\nif p.exists():\n assert (p/'.owner.json').is_file() and json.loads((p/'.owner.json').read_text())==owner,'Foreign HTP directory'\nelse:\n p.mkdir();(p/'.owner.json').write_text(json.dumps(owner))\nprint('RECOGNIZED_HTP_DIRECTORY')"
         s.python(guard,evidence,'target-guard')
         remote=REMOTE+'/htp-controls-target.tar.gz';s.push(a.archive,remote)
         install="""import hashlib,json,tarfile
