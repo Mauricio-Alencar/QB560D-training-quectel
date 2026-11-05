@@ -82,6 +82,10 @@ def validate(cli=True):
     for name,spec in platform['files'].items():
         if sha(TRAINING/'tools/platform-tools'/name)!=spec['sha256']:problems.append('ADB lock mismatch: '+name)
     import update_qairt
+    python38=TRAINING/'tools/python38'
+    for name,spec in json.loads((python38/'python38.lock.json').read_text(encoding='utf-8-sig'))['files'].items():
+        path=python38/name
+        if not path.is_file() or sha(path)!=spec['sha256'] or path.stat().st_size!=spec['bytes']:problems.append('Python 3.8 lock mismatch: '+name)
     update_qairt.check_lock()
     import gesture_demo
     gesture_demo.check_assets()

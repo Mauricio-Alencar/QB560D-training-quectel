@@ -197,13 +197,14 @@ O TFLite original permanece intacto:
 - [Proveniência e flags](../models/snpe-model.origin.json).
 - Imagem `media/grace_hopper.jpg`: SHA-256 `a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130`.
 
-A reconstrução ocorre no computador Windows, sem instalar TensorFlow ou conversor no target. Para reproduzir com Python 3.8 x64 em ambiente separado:
+A reconstrução ocorre no computador Windows, sem instalar TensorFlow ou conversor no target. Prepare o Python 3.8 completo e a venv local conforme a [seção de ambientes do guia manual](TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho); o instalador oficial acompanha o treinamento em `tools/python38`. Depois, a partir de `training_v2`:
 
 ```powershell
-py -3.8 -m venv .build/snpe-host-venv
-.build/snpe-host-venv/Scripts/python.exe -m pip install -r host/requirements-snpe-conversion.txt
-python host/fetch_snpe_sdk.py --mode conversion
-.build/snpe-host-venv/Scripts/python.exe host/rebuild_snpe_model.py
+$exporter = (Resolve-Path .build/manual-export-py38/Scripts/python.exe).Path
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $exporter -m pip install -r host/requirements-snpe-conversion.txt
+& $py host/fetch_snpe_sdk.py --mode conversion
+& $exporter host/rebuild_snpe_model.py
 ```
 
 Nesta estação já existe um Python 3.8 portátil preparado em `.build/python38-host/python.exe`. Ele não integra o ZIP distribuído. O script salva um **candidato novo** em `.build/snpe-conversion-rebuilt`, recusa sobrescrever pasta existente e não publica o DLC automaticamente. Use `--output` para escolher outra pasta. A receita foi executada nesta estação; o candidato reconstruído teve SHA diferente, mas suas saídas CPU e HTP foram exatamente iguais às do DLC publicado na imagem de referência. A evidência registra ambos os hashes.

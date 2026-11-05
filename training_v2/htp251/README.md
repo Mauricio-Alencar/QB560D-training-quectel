@@ -138,7 +138,7 @@ Para ensinar cada etapa, use o [roteiro manual TFLite → ONNX validado → DLC 
 
 Esta seção é para quem reconstrói os DLCs. Mantenha os dois ambientes Python separados. O Python 3.8/TensorFlow 2.13 usado na exportação segue `host/requirements-snpe-conversion.txt`. O SDK 2.51 usa outro ambiente Python 3.12, definido em `host/requirements-qairt251-conversion.txt`. Nada precisa ser instalado no Python global ou no target.
 
-1. Prepare o Python 3.8 isolado, conforme `docs/HTP_DSP.md`, e confira os arquivos originais de `models/`.
+1. Instale/verifique o Python 3.8 completo e crie `.build/manual-export-py38` conforme a [preparação do guia manual](../docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho). O instalador oficial acompanha `tools/python38`; os comandos não dependem do launcher `py` nem da pasta privada `.build/python38-host` do instrutor. Confira os arquivos originais de `models/`.
 2. Baixe o subconjunto oficial do SDK 2.51. O downloader usa HTTP Range, CRC do ZIP e registra SHA-256 dos membros em `.build/sdk251-host/receipt.json`.
 
 ```powershell
@@ -152,7 +152,7 @@ $site = '\\?\' + (Resolve-Path '.build/qairt251-py312/Lib/site-packages').Path
 O prefixo de caminho longo evita o limite do Windows durante a instalação dos testes internos do ONNX nesta raiz OneDrive. O wrapper `qairt251_entry.py` configura PATH/DLLs/temporários somente no processo. As ferramentas originais do SDK permanecem sem alteração.
 
 ```powershell
-$exporter = (Resolve-Path '.build/python38-host/python.exe').Path
+$exporter = (Resolve-Path '.build/manual-export-py38/Scripts/python.exe').Path
 & $exporter host/inspect_htp251_sources.py
 & $exporter host/export_htp251_models.py
 & $converter host/convert_htp251_models.py

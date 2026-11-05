@@ -62,6 +62,12 @@ def collect():
         path=TRAINING/'tools/platform-tools'/name
         if sha(path)!=spec['sha256']:raise ValueError('Locked ADB changed: '+name)
         add(path)
+    python38=TRAINING/'tools/python38'
+    add(python38/'README.md');add(python38/'python38.lock.json')
+    for name,spec in read(python38/'python38.lock.json')['files'].items():
+        path=python38/name
+        if sha(path)!=spec['sha256'] or path.stat().st_size!=spec['bytes']:raise ValueError('Locked Python 3.8 input changed: '+name)
+        add(path)
     for name in ('README.md','AGENTS.md','LICENSE','LICENSE-CONTENT','LICENSING.md'):add(PROJECT/name)
     for module,filename in [(docker,'MANIFEST.json'),(runtime,'package-manifest.json')]:
         output=module/filename;old=read(output) if output.exists() else {}

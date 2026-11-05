@@ -25,16 +25,56 @@ Os dois casos são distintos dos DLCs prontos de MobileNet V2 e dos sete gestos 
 
 ## 1. Ambientes e pasta de trabalho
 
-Instale Python **3.8 x64 completo**, com pip/venv, e Python **3.12 x64**. O launcher `py` abaixo precisa reconhecer ambas as instalações; se não estiver disponível, substitua `py -3.8`/`py -3.12` pelo executável completo da instalação correspondente. O Python 3.8 portátil da estação original não acompanha a distribuição.
+**A pasta `.build` não vem do Git nem do ZIP.** Ela é criada localmente pelos comandos abaixo, assim como as duas venvs. A base necessária é um Python **3.8 x64 completo**, com `venv`/`ensurepip`, para exportar os TFLites, e um Python **3.12 x64** para as ferramentas QAIRT. O Python 3.8 embeddable/portátil usado na preparação histórica não tem `venv`/`pip` e não serve de base para estes comandos. Nenhuma `.venv` pronta é distribuída.
+
+O preparo normal instala/verifica apenas o Python 3.12. Comece por ele se ainda não executou essa etapa; o helper pode ser repetido para conferir o ambiente do treinamento:
 
 ```powershell
-py -3.8 --version
-py -3.12 --version
-py -3.8 -m venv .build/manual-export-py38
-py -3.12 -m venv .build/manual-qairt-py312
+powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1 -InstallPython
+if ($LASTEXITCODE -ne 0) { throw 'Concluir o preparo normal do host antes da conversão' }
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py -c "import sys,struct,venv; assert sys.version_info[:2]==(3,12) and struct.calcsize('P')*8==64; print(sys.executable,sys.version)"
+if ($LASTEXITCODE -ne 0) { throw 'O ambiente do treinamento precisa de Python 3.12 x64' }
+```
+
+O pacote inclui o [instalador completo oficial Python 3.8.10 x64](../tools/python38/README.md), seu hash e sua licença. Ele é um pré-requisito opcional para reconstruir os modelos; os alunos que executam os DLCs prontos continuam usando somente Python 3.12. Para instalá-lo apenas para o usuário, sem alterar o PATH nem depender do launcher `py`:
+
+```powershell
+$python38Directory = Join-Path $env:LOCALAPPDATA 'Programs/Python/Python38'
+$python38 = Join-Path $python38Directory 'python.exe'
+$installer38 = (Resolve-Path tools/python38/python-3.8.10-amd64.exe).Path
+$installer38Lock = Get-Content tools/python38/python38.lock.json -Raw | ConvertFrom-Json
+$expected38 = $installer38Lock.files.'python-3.8.10-amd64.exe'
+if ((Get-FileHash $installer38 -Algorithm SHA256).Hash.ToLower() -ne $expected38.sha256) { throw 'Hash do instalador Python 3.8 divergente' }
+$signature38 = Get-AuthenticodeSignature -LiteralPath $installer38
+if ($signature38.Status -ne 'Valid' -or $signature38.SignerCertificate.Subject -notlike '*Python Software Foundation*') { throw 'Conferir assinatura do instalador Python' }
+
+if (-not (Test-Path -LiteralPath $python38 -PathType Leaf)) {
+    $installer38Args = @('/quiet','/norestart','InstallAllUsers=0','Include_launcher=0','Include_pip=1','Include_test=0','PrependPath=0',('TargetDir="{0}"' -f $python38Directory))
+    $installation38 = Start-Process -FilePath $installer38 -ArgumentList $installer38Args -Wait -PassThru -WindowStyle Hidden
+    if ($installation38.ExitCode -notin @(0,3010)) { throw ('Instalação Python 3.8 falhou: ' + $installation38.ExitCode) }
+    if ($installation38.ExitCode -eq 3010) { Write-Output 'O instalador solicitou reinicialização do Windows; não foi executada automaticamente.' }
+}
+& $python38 -c "import sys,struct,venv,ensurepip; assert sys.version_info[:2]==(3,8) and struct.calcsize('P')*8==64; print(sys.executable,sys.version)"
+if ($LASTEXITCODE -ne 0) { throw 'Selecionar Python 3.8 x64 completo com venv/ensurepip; a versão embeddable não atende' }
+```
+
+Se já instalou o Python 3.8 completo em outro local, atribua esse caminho a `$python38` e execute a verificação final acima; não use o caminho privado do instrutor em `.build/python38-host`. O `py -0p` pode ajudar a listar instalações registradas, mas este roteiro não depende dele. A [release oficial 3.8.10](https://www.python.org/downloads/release/python-3810/) fornece o instalador completo usado aqui. Python 3.8 é uma dependência legada deste exportador fixado; mantenha o ambiente de uso normal do treinamento em Python 3.12.
+
+Agora crie os ambientes **no próprio computador e no destino onde o treinamento foi extraído**:
+
+```powershell
+New-Item -ItemType Directory -Force -Path .build | Out-Null
+& $python38 -m venv .build/manual-export-py38
+if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar venv de exportação; verificar Python 3.8 completo' }
+& $py -m venv .build/manual-qairt-py312
+if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar venv QAIRT 3.12' }
 $exporter = (Resolve-Path .build/manual-export-py38/Scripts/python.exe).Path
 $converter = (Resolve-Path .build/manual-qairt-py312/Scripts/python.exe).Path
-$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $exporter -c "import sys,struct,pip,venv; assert sys.version_info[:2]==(3,8) and struct.calcsize('P')*8==64; print(sys.executable)"
+if ($LASTEXITCODE -ne 0) { throw 'Venv de exportação inválida' }
+& $converter -c "import sys,struct,pip,venv; assert sys.version_info[:2]==(3,12) and struct.calcsize('P')*8==64; print(sys.executable)"
+if ($LASTEXITCODE -ne 0) { throw 'Venv QAIRT inválida' }
 
 & $exporter -m pip install -r host/requirements-snpe-conversion.txt
 if ($LASTEXITCODE -ne 0) { throw 'Falha nas dependências de exportação' }
@@ -43,6 +83,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Falha nas dependências QAIRT' }
 ```
 
 O primeiro ambiente fixa TensorFlow 2.13.0, tf2onnx 1.16.1, ONNX 1.14.1 e ONNX Runtime 1.16.3. O segundo fixa as dependências do conversor QAIRT Windows/Python 3.12. Não misture os dois conjuntos de versões.
+
+O instalador Python 3.8 acompanha o ZIP, mas os pacotes de exportação acima e o SDK de conversão da seção 6 precisam ser preparados/baixados no host. Isso não transforma a reconstrução dos modelos em um laboratório totalmente offline. O fluxo de execução dos modelos prontos mantém suas dependências offline e não exige instalar o Python 3.8. Para repetir uma preparação que falhou parcialmente, revise as pastas locais antes de reutilizá-las ou escolha nomes novos; não copie venvs de outra estação.
 
 ```powershell
 $training = (Get-Location).Path
@@ -165,7 +207,7 @@ NHWC significa lote, altura, largura e canais. A entrada TFLite uint8 recebe os 
 
 ```powershell
 # A API abaixo é a mesma chamada da classificação no exportador homologado.
-& $exporter -c 'import os,tf2onnx; from pathlib import Path; p=Path(os.environ["MANUAL_LAB"])/"classification"; tf2onnx.convert.from_tflite(str(p/"source.tflite"), output_names=["MobilenetV1/Predictions/Reshape_1"], opset=13, output_path=str(p/"export.onnx"))'
+& $exporter -c "import os,tf2onnx; from pathlib import Path; p=Path(os.environ['MANUAL_LAB'])/'classification'; tf2onnx.convert.from_tflite(str(p/'source.tflite'), output_names=['MobilenetV1/Predictions/Reshape_1'], opset=13, output_path=str(p/'export.onnx'))"
 if ($LASTEXITCODE -ne 0) { throw 'Exportação MobileNet falhou' }
 
 & $exporter -m tf2onnx.convert --tflite (Join-Path $lab detection/source.tflite) --outputs 'Squeeze,convert_scores' --opset 13 --dequantize --output (Join-Path $lab detection/export.onnx)
@@ -308,7 +350,7 @@ $env:TEMP = $env:QAIRT_TMP_DIR
 $env:TMP = $env:QAIRT_TMP_DIR
 
 # Somente carrega as DLLs do SDK e entrega os argumentos à ferramenta escolhida.
-$launch = 'import os,runpy,sys; from pathlib import Path; root=Path(os.environ["QAIRT_SDK_ROOT"]); dll=os.add_dll_directory(str(root/"lib/x86_64-windows-msvc")); entry=root/"bin/x86_64-windows-msvc"/sys.argv[1]; sys.argv=[str(entry)]+sys.argv[2:]; runpy.run_path(str(entry),run_name="__main__")'
+$launch = "import os,runpy,sys; from pathlib import Path; root=Path(os.environ['QAIRT_SDK_ROOT']); dll=os.add_dll_directory(str(root/'lib/x86_64-windows-msvc')); entry=root/'bin/x86_64-windows-msvc'/sys.argv[1]; sys.argv=[str(entry)]+sys.argv[2:]; runpy.run_path(str(entry),run_name='__main__')"
 & $converter -X utf8 -c $launch qairt-converter --help
 if ($LASTEXITCODE -ne 0) { throw 'Conversor/DLLs não carregaram' }
 & $converter -X utf8 -c $launch qairt-quantizer --help
@@ -616,7 +658,7 @@ Referências: [documentação pública do SDK QAIRT](https://docs.qualcomm.com/b
 
 Os blocos Python foram extraídos deste documento e executados com os TFLites locais, conferidos pelos hashes oficiais da seção 2. Foram gerados ONNX, inputs de calibração, DLCs intermediários e DLCs quantizados novos. Os comandos Qualcomm foram executados nos ambientes de preparação já existentes. A nova classificação e o novo SSD foram enviados a diretórios de execução novos na caixa e comparados com referências TFLite CPU novas; o validador da seção 11 foi executado sem importar funções do runner.
 
-Resultado: classificação com o mesmo top-1 CPU (`military uniform`), três eventos HTP e 99 eventos de ciclos positivos; SSD com IoU de pessoa **0,9973126**, três eventos HTP e 153 eventos de ciclos positivos. A conferência de 48 arquivos dos runtimes/modelos existentes não encontrou alterações. Os 19 blocos PowerShell passaram na análise sintática. A criação de ambientes e o download externo não foram repetidos neste ensaio; foram usados os ambientes e as cópias offline já disponíveis.
+Resultado: classificação com o mesmo top-1 CPU (`military uniform`), três eventos HTP e 99 eventos de ciclos positivos; SSD com IoU de pessoa **0,9973126**, três eventos HTP e 153 eventos de ciclos positivos. A conferência de 48 arquivos dos runtimes/modelos existentes não encontrou alterações. Os 19 blocos PowerShell da receita inicial passaram na análise sintática; a atualização do preparo de Python passou com 21 blocos e teve o lançador SDK/argumentos verificados no Windows PowerShell 5.1. A criação de ambientes de exportação e a instalação de Python 3.8 não foram repetidas nesse ensaio de conversão; foram usados os ambientes e as cópias de modelos já disponíveis. O instalador oficial agora incluído teve sua assinatura Authenticode e seu SHA-256 conferidos.
 
 O [recibo de validação](../evidence/demo-regression/20261105T003157Z/release/MANUAL_CONVERSION.json) registra hashes dos candidatos, comparações e perfis. O diretório da estação pode usar data UTC de 05/11, correspondente à noite de 04/11 em São Paulo. Esse resultado aprova os casos didáticos descritos, sem estabelecer acurácia em dataset ou homologar outra versão de SDK/BSP.
 

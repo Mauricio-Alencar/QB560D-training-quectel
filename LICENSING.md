@@ -21,6 +21,7 @@ Estas licenças cobrem somente as contribuições autorais cujos direitos perten
 
 - PDFs, documentação, template, logotipos e ilustrações de Quectel, Qualcomm e outros fornecedores conservam os direitos e termos dos titulares originais.
 - Modelos, pesos, datasets, imagens de referência, SDKs, runtimes, bibliotecas, drivers, ferramentas e wheels conservam suas próprias licenças e condições de redistribuição.
+- O instalador oficial Python 3.8.10 Windows x64, opcional para a exportação dos modelos, conserva os termos da Python Software Foundation e os avisos incluídos no instalador. A [licença original do CPython](training_v2/tools/python38/LICENSE.txt) e o [registro de origem e SHA-256](training_v2/tools/python38/python38.lock.json) acompanham o pacote; a licença MIT/CC do treinamento não o relicencia.
 - Os créditos e as origens do treinamento estão em [SOURCES.md](training_v2/docs/SOURCES.md). Os módulos e dependências incluem seus próprios avisos, como [THIRD_PARTY_NOTICES.txt](training_v2/demos/hand_gesture/THIRD_PARTY_NOTICES.txt) e as licenças que acompanham os componentes.
 - A inclusão de um componente e o registro de seu hash não concedem novos direitos de redistribuição. Os termos aplicáveis ao componente continuam valendo.
 

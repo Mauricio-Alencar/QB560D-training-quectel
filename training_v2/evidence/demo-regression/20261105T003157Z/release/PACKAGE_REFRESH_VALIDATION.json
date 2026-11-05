@@ -1,0 +1,15 @@
+{
+  "result": "PASS_FRESH_EXTRACTION",
+  "archive": "QB560D_EU_Training_0.12.2_20261104-full-r3.zip",
+  "archive_sha256": "17636936fe8a5128b8a981e7cefc7d7082e4e5f79d810aeae5668b467d85f7cf",
+  "files_verified": 3666,
+  "venv_recreated_at_destination": true,
+  "downloads_required": false,
+  "working_tree_inputs_used": false,
+  "commands_executed_from_outside_training": true,
+  "provisioning_tests": 19,
+  "manual_guide_and_origin_tables_present": true,
+  "python38_full_installer_included_and_verified": true,
+  "python38_installed_on_validation_host": false,
+  "manual_conversion_receipt": "PASS_MANUAL_DOCUMENTED_PIPELINE"
+}

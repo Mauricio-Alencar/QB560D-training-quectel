@@ -2,18 +2,20 @@
 
 ## Download para os alunos
 
-- [Baixar o treinamento completo v0.12.2 (ZIP)](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-release.zip)
-- [Baixar o SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-release.zip.sha256)
+- [Baixar o treinamento completo v0.12.2 (ZIP)](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-full-r3.zip)
+- [Baixar o SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-full-r3.zip.sha256)
 - [Notas da release v0.12.2](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/tag/v0.12.2)
 
 Extraia o pacote em uma pasta curta, como `C:\QB560D`, e abra `training_v2/README.md`. O ZIP inclui as dependências offline selecionadas para a aula.
 
 Esta release corrige o provisionamento Docker e o layout do QAIRT no Windows. Consulte o [diagnóstico de download e extração](training_v2/docs/DOWNLOAD_DIAGNOSTICS.md) antes de usar uma cópia extraída em Downloads/OneDrive.
 
+O pacote completo atualizado (`full-r3`) inclui o [guia manual de conversão TFLite → ONNX → DLC → HTP](training_v2/docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md), as tabelas de origem/download dos modelos e o [instalador oficial Python 3.8 x64](training_v2/tools/python38/README.md), opcional para reconstrução dos modelos. Os links acima apontam para essa atualização da release 0.12.2.
+
 Para conferir o download no PowerShell, execute o comando abaixo e compare o resultado com o arquivo `.sha256`:
 
 ```powershell
-Get-FileHash .\QB560D_EU_Training_0.12.2_20261104-release.zip -Algorithm SHA256
+Get-FileHash .\QB560D_EU_Training_0.12.2_20261104-full-r3.zip -Algorithm SHA256
 ```
 
 Comece pelo [guia único do treinamento](training_v2/README.md). Os comandos do host partem da pasta `training_v2`.
