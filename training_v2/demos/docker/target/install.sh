@@ -6,15 +6,25 @@ root=/opt/qb560d-docker-demo
 [ "$(uname -m)" = aarch64 ] || { echo 'This runtime is ARM64 only'; exit 1; }
 cd "$root"
 sha256sum -c offline/runtime.sha256
-mkdir -p runtime client/cli-plugins evidence
+restart_daemon=false
+mkdir -p runtime client/cli-plugins evidence data/tmp
 if [ ! -x runtime/docker/dockerd ]; then tar -xzf offline/runtime/docker-29.9.2.tgz -C runtime; fi
 cp offline/runtime/buildx-v0.38.1.linux-arm64 client/cli-plugins/docker-buildx
 chmod 755 client/cli-plugins/docker-buildx
 runtime/docker/dockerd --validate --config-file config/daemon.json
+if [ ! -d data/containers ] && systemctl is-active --quiet qb560d-docker-demo.service; then
+  containers=$(sh target/docker.sh ps -aq) || { echo 'Cannot inspect existing containers; refusing daemon restart'; exit 1; }
+  [ -z "$containers" ] || { echo 'Docker data directory is missing while containers exist; inspect them before recovery'; exit 1; }
+  restart_daemon=true
+fi
 unit=/etc/systemd/system/qb560d-docker-demo.service
 if [ -e "$unit" ]; then cmp -s "$unit" config/qb560d-docker-demo.service || { echo 'Existing unit differs; inspect it first'; exit 1; }; else cp config/qb560d-docker-demo.service "$unit"; fi
 systemctl daemon-reload
-systemctl start qb560d-docker-demo.service
+if [ "$restart_daemon" = true ]; then
+  systemctl restart qb560d-docker-demo.service
+else
+  systemctl start qb560d-docker-demo.service
+fi
 attempt=0
 while [ "$attempt" -lt 30 ]; do
   if sh target/docker.sh info > evidence/docker-info.txt 2>&1; then

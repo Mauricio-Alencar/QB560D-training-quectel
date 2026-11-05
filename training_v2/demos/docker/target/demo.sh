@@ -32,6 +32,8 @@ case "${1:-status}" in
     ;;
   load)
     sha256sum -c offline/image.sha256
+    [ "$(cat "$root/.owner")" = qb560d-training-docker-v1 ] || { echo 'Unrecognized lab directory'; exit 1; }
+    mkdir -p "$root/data/tmp"
     d load -i offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz
     [ "$(d image inspect "$image" --format '{{.Os}}/{{.Architecture}}')" = linux/arm64 ]
     expected=$(python3 -c 'import json; print(json.load(open("offline/image.lock.json"))["image_id"])')

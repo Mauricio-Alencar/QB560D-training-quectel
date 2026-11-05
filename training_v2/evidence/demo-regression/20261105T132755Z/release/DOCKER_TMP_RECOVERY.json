@@ -1,0 +1,7 @@
+{
+  "status": "PASS_DOCKER_TMP_AND_DELETED_DATA_RECOVERY",
+  "fixture_tests": 5,
+  "real_image_load_and_http_passed": true,
+  "network_configuration_changed": false,
+  "evidence": "evidence/demo-regression/20261105T132755Z/docker-tmp-final"
+}

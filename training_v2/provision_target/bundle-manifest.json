@@ -226,14 +226,14 @@
     {
       "path": "demos/docker/target/daemon.sh",
       "component": "docker",
-      "sha256": "ad890ec6ce4d0d63b693bf7beda45f9e4d782cbdb62d2b228cf65a89beddb309",
-      "bytes": 165
+      "sha256": "3d56b534379454f9e2cfb192fcc7f7528543d3fc290a92c9ddf38b3d4af6fb81",
+      "bytes": 297
     },
     {
       "path": "demos/docker/target/demo.sh",
       "component": "docker",
-      "sha256": "0d110242c4f3e197547037e281b2eec8a7ce2e56d1be9cb44e098782ccd39f43",
-      "bytes": 2054
+      "sha256": "35b096c07c12accd7cb59429271c7a6711b3225d510bb2e93ac7757e163cecfe",
+      "bytes": 2194
     },
     {
       "path": "demos/docker/target/docker.sh",
@@ -244,8 +244,8 @@
     {
       "path": "demos/docker/target/install.sh",
       "component": "docker",
-      "sha256": "eb9d1e3330caab31638d3f91146484bb1ecc731f0f3fc7bc2ce1a4a9d2b2cb58",
-      "bytes": 1315
+      "sha256": "98a939f8a932f51727593d6d2365a341307a71c53429013665326de05d0ccc1f",
+      "bytes": 1815
     },
     {
       "path": "demos/docker/target/preflight.sh",
@@ -1094,5 +1094,5 @@
       "bytes": 36874
     }
   ],
-  "total_bytes": 498827603
+  "total_bytes": 498828375
 }

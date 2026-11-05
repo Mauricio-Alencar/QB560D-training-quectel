@@ -20,8 +20,10 @@ class FirstInstallation(unittest.TestCase):
             (root/'config/qb560d-docker-demo.service').write_text('fixture unit')
             (root/'offline/runtime.sha256').write_text('fixture checksums')
             scripts = {'fake-bin/id': 'echo 0', 'fake-bin/uname': 'echo aarch64',
-                       'fake-bin/sha256sum': 'exit 0', 'fake-bin/systemctl': 'exit 0',
-                       'runtime/docker/dockerd': 'exit 0', 'target/docker.sh': 'echo fixture-docker-ready'}
+                       'fake-bin/sha256sum': 'exit 0',
+                       'fake-bin/systemctl': '[ "$1" != is-active ]',
+                       'runtime/docker/dockerd': 'exit 0',
+                       'target/docker.sh': 'test -d '+shlex.quote(str(root/'data/tmp'))+' || exit 42\necho fixture-docker-ready'}
             for name, body in scripts.items():
                 path = root/name
                 path.write_text('#!/bin/sh\n'+body+'\n')
