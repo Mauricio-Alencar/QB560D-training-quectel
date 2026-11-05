@@ -1,0 +1,224 @@
+{
+  "status": "PASS_MANUAL_DOCUMENTED_PIPELINE",
+  "cases": [
+    {
+      "task": "classification",
+      "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+      "dlc_sha256": "9142d45ce61c5d637c2ef13cb227783e6f78d633c649cbb66175dc639351fed1",
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 99
+      },
+      "result": {
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87109375
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "criterion": "Mesmo top-1 da refer\u00eancia TFLite CPU"
+      },
+      "passed": true,
+      "scope": "Refer\u00eancia did\u00e1tica; n\u00e3o \u00e9 acur\u00e1cia de dataset nem benchmark de lat\u00eancia",
+      "artifacts": {
+        "source.tflite": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+        "model.onnx": "5b881a0deea8400adee372965ca3d535adb8353b33335f57c996b884d8767dbd",
+        "model.float.dlc": "5e6d11c5822649558b75765ce60ecc33e15e65ab75d4e5a4026e0fd4efd4570e",
+        "model.w8a16.dlc": "9142d45ce61c5d637c2ef13cb227783e6f78d633c649cbb66175dc639351fed1",
+        "input.raw": "07a9fc00c426a691936d455e3d603bfae947362db0de65bc467a2109f8e68cbd"
+      },
+      "onnx_validation": {
+        "status": "ONNX_EXPORT_VALIDATED",
+        "records": [
+          {
+            "image": "media/grace_hopper.jpg",
+            "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+            "raw_sha256": "07a9fc00c426a691936d455e3d603bfae947362db0de65bc467a2109f8e68cbd",
+            "comparisons": [
+              {
+                "output": "MobilenetV1/Predictions/Reshape_1",
+                "max_abs_error": 0.0,
+                "mean_abs_error": 0.0,
+                "limit": 4.0
+              }
+            ]
+          },
+          {
+            "image": "media/right_hands.jpg",
+            "image_sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f",
+            "raw_sha256": "8d1e6cdde67ca51df4b6845924d24851b21f955ccced002055e049c4bb013514",
+            "comparisons": [
+              {
+                "output": "MobilenetV1/Predictions/Reshape_1",
+                "max_abs_error": 0.0,
+                "mean_abs_error": 0.0,
+                "limit": 4.0
+              }
+            ]
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/thumbs_down.jpg",
+            "image_sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+            "raw_sha256": "6756f3f60ab7417b1a20f8d1a49279feff93f5e104a32c9d3e2a6ec8d5151dff",
+            "comparisons": []
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/thumbs_up.jpg",
+            "image_sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba",
+            "raw_sha256": "e9e6776be5cb00e1a15903ea386aca67ee8a0d2895a5b509809821f7146086e7",
+            "comparisons": []
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/victory.jpg",
+            "image_sha256": "6ac265f3ace6a6c4ac4a9079b63fcce4ab6517272afb1e430857f55ef324fde6",
+            "raw_sha256": "459c19b2ec2a2c87877b40c8043a2ce643593da6dcc216ae5200127ec50cf744",
+            "comparisons": []
+          }
+        ]
+      }
+    },
+    {
+      "task": "detection",
+      "source_sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+      "dlc_sha256": "faf641ef40a1aadcc5f10094b923abe52673f81b9c5e10a7c63a9468873f1ca5",
+      "profile": {
+        "accelerator_events": 3,
+        "positive_cycle_events": 153
+      },
+      "result": {
+        "detections": [
+          {
+            "class_id": 0,
+            "label": "person",
+            "score": 0.71490478515625,
+            "box_yxyx": [
+              0.05627182126045227,
+              0.0,
+              0.98447585105896,
+              1.0
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.652801513671875,
+            "box_yxyx": [
+              0.7068232893943787,
+              0.43900689482688904,
+              0.8993536829948425,
+              0.5655232667922974
+            ]
+          },
+          {
+            "class_id": 31,
+            "label": "tie",
+            "score": 0.579498291015625,
+            "box_yxyx": [
+              0.723975658416748,
+              0.4540180265903473,
+              0.8747111558914185,
+              0.5489736795425415
+            ]
+          }
+        ]
+      },
+      "comparison": {
+        "passed": true,
+        "person_box_iou": 0.9973125865673838,
+        "criterion": "Pessoa com IoU >=0.70 e limite de caixas extras"
+      },
+      "passed": true,
+      "scope": "Refer\u00eancia did\u00e1tica; n\u00e3o \u00e9 acur\u00e1cia de dataset nem benchmark de lat\u00eancia",
+      "artifacts": {
+        "source.tflite": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+        "model.onnx": "658380102ad53fad859b83e7f232f361cf311ed04975e47073f136a439344dbd",
+        "model.float.dlc": "c13d634285006531112bf21c9bda7b477b62f3c9e593eb017bf8e824c232b5f6",
+        "model.w8a16.dlc": "faf641ef40a1aadcc5f10094b923abe52673f81b9c5e10a7c63a9468873f1ca5",
+        "input.raw": "ea9f4517776e6b346b77544e1eed939f1ce12e4e187d775ec67d11fd8e0319ba"
+      },
+      "onnx_validation": {
+        "status": "ONNX_EXPORT_VALIDATED",
+        "records": [
+          {
+            "image": "media/grace_hopper.jpg",
+            "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+            "raw_sha256": "ea9f4517776e6b346b77544e1eed939f1ce12e4e187d775ec67d11fd8e0319ba",
+            "comparisons": [
+              {
+                "output": "Squeeze",
+                "max_abs_error": 0.6378154754638672,
+                "mean_abs_error": 0.035895455265875585,
+                "limit": 2.0
+              },
+              {
+                "output": "convert_scores",
+                "max_abs_error": 0.015125185251235962,
+                "mean_abs_error": 0.001047835076277637,
+                "limit": 0.1
+              }
+            ]
+          },
+          {
+            "image": "media/right_hands.jpg",
+            "image_sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f",
+            "raw_sha256": "4dfd492e0880b508705af3cb30d20f1866d52603fdd3e2792ab0151755b1c5d0",
+            "comparisons": [
+              {
+                "output": "Squeeze",
+                "max_abs_error": 0.7159641981124878,
+                "mean_abs_error": 0.03909977168975768,
+                "limit": 2.0
+              },
+              {
+                "output": "convert_scores",
+                "max_abs_error": 0.02556133270263672,
+                "mean_abs_error": 0.0010864388369588379,
+                "limit": 0.1
+              }
+            ]
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/thumbs_down.jpg",
+            "image_sha256": "080b589bf3b91ba10cc6c03645be3b5b491a8ca8c8f7d65b5f32c563ae266af9",
+            "raw_sha256": "b8d75948384c652b9f4d8336753c72818c47cddacaa62b5de136c03e2eb92af1",
+            "comparisons": []
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/thumbs_up.jpg",
+            "image_sha256": "2aee0e3a69ba5f0d3287597e61d265f4f3ac2a44ccec198dddd2639b0c8ef7ba",
+            "raw_sha256": "f98bc35cbe905962932c705a8a99c6359f04b9e4303e0a30ef7873e017cef55e",
+            "comparisons": []
+          },
+          {
+            "image": "demos/hand_gesture/assets/images/victory.jpg",
+            "image_sha256": "6ac265f3ace6a6c4ac4a9079b63fcce4ab6517272afb1e430857f55ef324fde6",
+            "raw_sha256": "b7f01d6444c359d19d5d5281e15b47c9d6f6846889b1e0e28ddaa8e613423071",
+            "comparisons": []
+          }
+        ]
+      }
+    }
+  ],
+  "original_runtime_model_hashes_unchanged": true,
+  "files_checked": 48,
+  "scope": "Downloaded-model hashes checked using offline source copies; code blocks exported ONNX, converted/quantized candidate DLCs, ran CPU references and HTP, decoded outputs and checked profiles",
+  "date_local": "2026-11-04",
+  "document": "docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md",
+  "powershell_blocks_syntax_checked": 19,
+  "python_blocks_syntax_checked": 5,
+  "new_venv_or_external_download_tested": false
+}

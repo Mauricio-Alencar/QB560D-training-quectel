@@ -59,6 +59,7 @@ Revise `provision_target/plan.json`: o estado deve ser `READY_TO_REVIEW`, sem bl
 | Runtime QAIRT 2.51 e MobileNet V2 | [Guia do runtime](runtimes/qairt_2_51/README.md) |
 | Sete gestos no HTP | [Guia de gestos](demos/hand_gesture/README.md) |
 | Cinco demos HTP e comparação CPU/GPU/HTP | [HTP 2.51](htp251/README.md) |
+| Conversão manual para o instrutor: TFLite → ONNX → DLC → HTP | [Classificação passo a passo e estudo do SSD](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md) |
 | Onze controles de visão e execução local | [Guia de reprodução](docs/VISION_CONTROLS.md) |
 
 O módulo AI Hub pertence ao Dia 2. Os PDFs e o replay são material complementar e contingência desse módulo.

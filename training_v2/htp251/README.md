@@ -120,6 +120,8 @@ Não usamos esses scores ou IoUs como acurácia de dataset. Os perfis detalhados
 
 ## Conversão reproduzível, somente para preparação
 
+Para ensinar cada etapa, use o [roteiro manual TFLite → ONNX validado → DLC → HTP](../docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md). Ele abre os comandos de download/hash, exportação, ajustes ONNX, calibração, conversor/quantizador, transferência, execução e aceitação, com classificação acompanhada e estudo do SSD. Os candidatos ficam em uma pasta nova, preservando os modelos homologados.
+
 Esta seção é para quem reconstrói os DLCs. Mantenha os dois ambientes Python separados. O Python 3.8/TensorFlow 2.13 usado na exportação segue `host/requirements-snpe-conversion.txt`. O SDK 2.51 usa outro ambiente Python 3.12, definido em `host/requirements-qairt251-conversion.txt`. Nada precisa ser instalado no Python global ou no target.
 
 1. Prepare o Python 3.8 isolado, conforme `docs/HTP_DSP.md`, e confira os arquivos originais de `models/`.
