@@ -4,6 +4,14 @@ Este pacote preserva o modelo, os tensores, os executores e as evidencias do flu
 
 Pre-requisito: caixa ja preparada pelo treinamento, BSP QDPA_Ubuntu20.04.003.51.303 V01, Python3.8, NumPy privado em /opt/qb560d-training-payload/.python-deps, TFLite C API2.8.4 e OpenCL do BSP. O pacote nao instala firmware, drivers, Python, NumPy ou SDK Qualcomm. Os helpers ADB e o cliente Windows acompanham o treinamento principal em host/ e tools/.
 
+## Origem do modelo do laboratório
+
+| Demo/modelo | Origem e tratamento | Download / artefato |
+|---|---|---|
+| Tiny / `aihub_tiny_6a569f3f9ea3.tflite` | **Sintético, sem treinamento, criado por nós** em ONNX. Compilado no AI Hub Workbench e baixado como TFLite; executado localmente em CPU/GPU. | [ONNX de entrada](../../models/workbench_demo.onnx) · [TFLite gerado](models/aihub_tiny_6a569f3f9ea3.tflite) · [Job de compilação](https://workbench.aihub.qualcomm.com/jobs/j5q1v4l7g/) |
+
+Esse exercício ensina envio, compilação, inferência/profile e deploy; o modelo não vem do catálogo pré-treinado e seus quatro valores de saída não são classes semânticas. IDs, opções e hashes estão em [jobs.json](evidence/jobs.json). Os links de jobs podem exigir login/acesso à conta AI Hub; o TFLite preservado no pacote permite repetir a parte local offline. As duas demos do catálogo com DLCs prontos são MobileNet V2 e MediaPipe sete gestos, conforme o [mapa geral](../../README.md#origem-dos-modelos-e-das-demos).
+
 ## Repetir na caixa ja usada neste ensaio
 
 Depois do login root em adb shell:

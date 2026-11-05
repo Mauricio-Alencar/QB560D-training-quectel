@@ -64,6 +64,23 @@ Revise `provision_target/plan.json`: o estado deve ser `READY_TO_REVIEW`, sem bl
 
 O módulo AI Hub pertence ao Dia 2. Os PDFs e o replay são material complementar e contingência desse módulo.
 
+## Origem dos modelos e das demos
+
+| Demo/modelo | Origem e tratamento | Download / artefato |
+|---|---|---|
+| Classificação / MobileNet V2 | Pronto do catálogo Qualcomm AI Hub: **1 DLC w8a8**, release v0.65.0. | [Pacote QNN DLC pronto](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mobilenet_v2/releases/v0.65.0/mobilenet_v2-qnn_dlc-w8a8.zip) |
+| MediaPipe / sete gestos | Pronto do catálogo Qualcomm AI Hub: **3 DLCs w8a8** (palma, landmarks e classificador), release v0.65.0. | [Pacote com os três DLCs](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/mediapipe_hand_gesture/releases/v0.65.0/mediapipe_hand_gesture-qnn_dlc-w8a8.zip) |
+| Classificação / MobileNet V1 | Pesos pré-treinados Google/MediaPipe; **DLC convertido e quantizado por nós no host**. | [TFLite de origem](https://storage.googleapis.com/download.tensorflow.org/models/mobilenet_v1_2018_08_02/mobilenet_v1_1.0_224_quant.tgz) |
+| Detecção / SSD MobileNet V1 | Pesos pré-treinados Google/MediaPipe; **DLC convertido e quantizado por nós no host**. | [TFLite de origem](https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip) |
+| Pose / PoseNet | Pesos pré-treinados Google/MediaPipe; **DLC convertido e quantizado por nós no host**. | [TFLite de origem](https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/multi_person_mobilenet_v1_075_float.tflite) |
+| Mão recortada / Hand Landmark Lite | Pesos pré-treinados Google/MediaPipe; **DLC convertido e quantizado por nós no host**. | [TFLite de origem](https://storage.googleapis.com/mediapipe-assets/hand_landmark_lite.tflite) |
+| Segmentação / DeepLabV3 | Pesos pré-treinados Google/MediaPipe; **DLC convertido e quantizado por nós no host**. | [TFLite de origem](https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/deeplabv3_257_mv_gpu.tflite) |
+| AI Hub Workbench / exemplo tiny | Modelo **sintético, sem treinamento**, criado por nós em ONNX; compilado no serviço AI Hub e baixado como TFLite para CPU/GPU. | [ONNX autoral](models/workbench_demo.onnx) · [TFLite retornado pelo job](Qualcomm_AI_Hub_Training/demo_offline/models/aihub_tiny_6a569f3f9ea3.tflite) |
+
+Os dois pacotes prontos do catálogo somam **quatro DLCs**, não sete modelos de gestos: sete são os gestos da demo, reconhecidos por uma pipeline de três redes. Os links Google/MediaPipe da tabela são downloads dos **TFLites de entrada**; os DLCs dessas cinco demos foram gerados por nós. A comparação CPU/GPU/HTP usa **MobileNet V1** e a **mão recortada**, fluxos diferentes de MobileNet V2 e da pipeline completa dos sete gestos.
+
+As URLs e os hashes estão em [MobileNet V2: fontes](runtimes/qairt_2_51/assets/sources.lock.json), [sete gestos: assets.lock.json](demos/hand_gesture/assets.lock.json) e [TFLites: models.lock.json](models/models.lock.json). O [manifesto dos DLCs convertidos](htp251/models.json) registra arquivos, hashes e comandos. Para baixar os resultados já convertidos deste treinamento, use o ZIP completo da release no início deste README; para reconstruí-los, siga o [guia manual](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md). O [job do tiny](Qualcomm_AI_Hub_Training/demo_offline/evidence/jobs.json) documenta a compilação na nuvem.
+
 ## 4. Executar e coletar
 
 Depois do provisionamento, os scripts principais usam `/opt/qb560d-training-payload`. `/data` tem `noexec` neste BSP. Os demais runtimes mantêm suas pastas privadas em `/opt`.

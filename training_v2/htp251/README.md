@@ -6,6 +6,20 @@ Abra a [galeria de resultados reais](results/index.html). Ela mostra entrada pre
 
 Na apresentação atual, use os sumários clicáveis dos **slides 4** (Dia 1), **40** (Dia 2) e **91** (visão). O runner compartilhado está no **92**; os controles e os dois fluxos de execução nos **93–97**; classificação no **98**; detecção no **99**; pose no **100**; mão recortada no **101**; galeria de sete gestos nos **102–104**; segmentação no **105**; validação HTP no **106**. No bloco anterior de runtime, a comparação legada SNPE 2.26 está no **82**, a latência QAIRT 2.51 no **83** e a referência CPU no **84**. O material de preparação MediaPipe está nos **111–115**, sem novo bloco na agenda. Consulte o [mapa completo](../docs/MAPA_SLIDES.txt) após futuras inserções manuais.
 
+## Origem dos cinco modelos
+
+| Demo/modelo | Origem e tratamento | Download / artefato |
+|---|---|---|
+| Classificação / MobileNet V1 | **Conversão e quantização locais por nós**: TFLite → ONNX → DLC. | [TFLite original](https://storage.googleapis.com/download.tensorflow.org/models/mobilenet_v1_2018_08_02/mobilenet_v1_1.0_224_quant.tgz) · [DLC convertido](models/classification/model.w8a16.dlc) |
+| Detecção / SSD MobileNet V1 | **Conversão e quantização locais por nós**: TFLite → ONNX → DLC. | [TFLite original](https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip) · [DLC convertido](models/detection_requant/model.w8a16.dlc) |
+| Pose / PoseNet | **Conversão e quantização locais por nós**: TFLite → ONNX → DLC. | [TFLite original](https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/multi_person_mobilenet_v1_075_float.tflite) · [DLC convertido](models/pose/model.w8a16.dlc) |
+| Mão recortada / Hand Landmark Lite | **Conversão e quantização locais por nós**: TFLite → ONNX → DLC. | [TFLite original](https://storage.googleapis.com/mediapipe-assets/hand_landmark_lite.tflite) · [DLC convertido](models/gesture/model.w8a16.dlc) |
+| Segmentação / DeepLabV3 | **Conversão e quantização locais por nós**: TFLite → ONNX → DLC. | [TFLite original](https://storage.googleapis.com/download.tensorflow.org/models/tflite/gpu/deeplabv3_257_mv_gpu.tflite) · [DLC convertido](models/segmentation/model.w8a16.dlc) |
+
+Os pesos de origem já eram treinados pelo projeto de origem Google/TensorFlow/MediaPipe. Nosso trabalho foi exportar, ajustar o grafo, calibrar, converter/quantizar e validar os DLCs no HTP. **Esses cinco DLCs não foram baixados prontos do catálogo Qualcomm AI Hub.** A precisão efetiva é registrada em `models/<demo>/model-info.csv`; o nome do arquivo não substitui a inspeção dos encodings.
+
+Os hashes/URLs dos originais estão em [models.lock.json](../models/models.lock.json); os hashes e comandos dos DLCs estão em [models.json](models.json). O [roteiro manual](../docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md) explica a reconstrução. As demos de MobileNet **V2** e de **sete gestos**, baixadas prontas do AI Hub, aparecem separadamente no [mapa geral](../README.md#origem-dos-modelos-e-das-demos). A MobileNet V1 do exercício legado SNPE 2.26 também foi convertida por nós, conforme [registro de origem](../models/snpe-model.origin.json).
+
 ## Execução inteiramente no target
 
 O pacote offline `../offline/htp-controls-target.tar.gz` acrescenta um fluxo independente do host para os 11 controles das cinco demos. Após uma cópia inicial com `host/deploy_htp_target.py`, no shell Linux da caixa:

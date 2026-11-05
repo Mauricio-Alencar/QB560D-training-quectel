@@ -8,6 +8,14 @@ O [guia de uso e deploy](GUIA_DEPLOY_AIBOX.md) reúne o contexto anterior. Ele c
 
 O guia também inclui [configuração WLAN](../docs/WLAN.md) e o [laboratório HTP/DSP](../docs/HTP_DSP.md): MobileNet convertida em DLC INT8, CPU 6,748 ms e HTP 1,130 ms, com profile DSP confirmado e diferenças numéricas documentadas.
 
+## Origem do modelo do laboratório
+
+| Demo/modelo | Origem e tratamento | Download / artefato |
+|---|---|---|
+| Tiny / `aihub_tiny_6a569f3f9ea3.tflite` | **Sintético, sem treinamento, criado por nós** em ONNX. Compilado no AI Hub Workbench e baixado como TFLite; executado localmente em CPU/GPU. | [ONNX de entrada](../models/workbench_demo.onnx) · [TFLite gerado](demo_offline/models/aihub_tiny_6a569f3f9ea3.tflite) · [Job de compilação](https://workbench.aihub.qualcomm.com/jobs/j5q1v4l7g/) |
+
+Esse exercício ensina envio, compilação, inferência/profile e deploy; o modelo não vem do catálogo pré-treinado e seus quatro valores de saída não são classes semânticas. IDs, opções e hashes estão em [jobs.json](demo_offline/evidence/jobs.json). Os links de jobs podem exigir login/acesso à conta AI Hub; o TFLite preservado no pacote permite repetir a parte local offline. As duas demos do catálogo com DLCs prontos são MobileNet V2 e MediaPipe sete gestos, conforme o [mapa geral](../README.md#origem-dos-modelos-e-das-demos).
+
 ## Apresentações baixadas
 
 Os arquivos são os PDFs originais, sem alterações. São apresentações em formato PDF; os arquivos-fonte PPTX dessas palestras não estavam disponíveis nos links públicos consultados.

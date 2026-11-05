@@ -14,6 +14,15 @@ Neste roteiro, **HTP é o caminho de execução no acelerador Hexagon/NPU**: a a
 
 Use uma cópia completa do treinamento em um caminho curto, como `C:\QB560D\aibox_training\training_v2`. O target precisa estar provisionado conforme [README principal](../README.md). Cada execução abaixo cria um candidato novo, sem substituir os modelos, manifests ou evidências homologados. As ferramentas de conversão e seus ambientes são preparação do instrutor; o ZIP dos alunos fornece os DLCs prontos e os inputs de runtime, mas não distribui os ambientes `.venv` nem todo o SDK de conversão.
 
+## Origem dos modelos deste roteiro
+
+| Demo/modelo | Origem e tratamento | Download / artefato |
+|---|---|---|
+| Classificação / MobileNet V1 | TFLite pré-treinado Google; **DLC convertido e quantizado por nós** neste roteiro. | [Download original](https://storage.googleapis.com/download.tensorflow.org/models/mobilenet_v1_2018_08_02/mobilenet_v1_1.0_224_quant.tgz) |
+| Detecção / SSD MobileNet V1 | TFLite pré-treinado Google; **DLC convertido e quantizado por nós** neste roteiro. | [Download original](https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip) |
+
+Os dois casos são distintos dos DLCs prontos de MobileNet V2 e dos sete gestos distribuídos pelo catálogo Qualcomm AI Hub. Consulte o [mapa completo de origem](../README.md#origem-dos-modelos-e-das-demos); a seção 2 abaixo detalha os membros dos arquivos de download e os hashes.
+
 ## 1. Ambientes e pasta de trabalho
 
 Instale Python **3.8 x64 completo**, com pip/venv, e Python **3.12 x64**. O launcher `py` abaixo precisa reconhecer ambas as instalações; se não estiver disponível, substitua `py -3.8`/`py -3.12` pelo executável completo da instalação correspondente. O Python 3.8 portátil da estação original não acompanha a distribuição.
