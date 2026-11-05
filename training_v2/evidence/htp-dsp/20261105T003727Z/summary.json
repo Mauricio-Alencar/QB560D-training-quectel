@@ -1,0 +1,120 @@
+{
+  "recorded_at_host_utc": "2026-11-05T00:37:32.772651+00:00",
+  "model_inference": "PASS_REFERENCE_IMAGE_HTP",
+  "source_model": "MobileNet V1 from the original reviewed TFLite; converted to a separate INT8 DLC",
+  "model_hashes": {
+    "tflite_cpu": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "tflite_gpu": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+    "snpe_cpu_fixed": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+    "htp": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359"
+  },
+  "snpe_htp_runtime": {
+    "result": "INFERENCE_EXECUTED_DSP_PROFILE_CONFIRMED",
+    "version": "2.26.0.240827110523_99241",
+    "model_loaded": true
+  },
+  "sessions_per_backend": 1,
+  "runs_per_session": 10,
+  "warmup_per_session": 2,
+  "median_of_session_medians_ms": {
+    "tflite_cpu": 27.47200500004965,
+    "tflite_gpu": 9.644844000035846,
+    "snpe_cpu_fixed": 7.540313000049537,
+    "htp": 0.9205209998981445
+  },
+  "speedup_same_dlc_cpu_over_htp": 8.191353593110717,
+  "latency_ratio_tflite_cpu_over_htp": 29.843974230994643,
+  "timing_scope": "invoke/ExecuteITensors only; excludes preprocessing, output copies, rendering, compilation and ADB",
+  "cpu_thread_policy": {
+    "tflite_cpu": "2 threads",
+    "snpe_cpu_fixed": "SNPE runtime default"
+  },
+  "profile": {
+    "dsp_entries": 34,
+    "cpu_entries": 0,
+    "includes_input_output_entries": true,
+    "file": "htp-profile.txt",
+    "timing_sessions_profiling": "off; detailed placement collected in a separate run"
+  },
+  "correctness": [
+    {
+      "session": 1,
+      "backend": "tflite_gpu",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.00390625,
+      "mean_abs_vs_tflite_cpu": 7.804695087543223e-06,
+      "max_abs_vs_same_dlc_cpu": 0.00390625
+    },
+    {
+      "session": 1,
+      "backend": "snpe_cpu_fixed",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0078125,
+      "mean_abs_vs_tflite_cpu": 1.5609390175086446e-05,
+      "max_abs_vs_same_dlc_cpu": 0.0
+    },
+    {
+      "session": 1,
+      "backend": "htp",
+      "top1_equal": true,
+      "max_abs_vs_tflite_cpu": 0.0234375,
+      "mean_abs_vs_tflite_cpu": 4.292582525522448e-05,
+      "max_abs_vs_same_dlc_cpu": 0.015625
+    }
+  ],
+  "accuracy_scope": "Top-1 agreement on the supplied image; full numerical differences reported. Not a dataset accuracy benchmark. DLC quantization/runtime differ from the TFLite baselines.",
+  "records": [
+    {
+      "session": 1,
+      "backend": "tflite_cpu",
+      "name": "session_1_tflite_cpu",
+      "result": "target/session_1_tflite_cpu/classification/1793839048232847366.json",
+      "median_ms": 27.47200500004965,
+      "p95_ms": 28.549416200030464,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.88671875
+      }
+    },
+    {
+      "session": 1,
+      "backend": "tflite_gpu",
+      "name": "session_1_tflite_gpu",
+      "result": "target/session_1_tflite_gpu/classification/1793839049211898251.json",
+      "median_ms": 9.644844000035846,
+      "p95_ms": 9.899002649990507,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.8828125
+      }
+    },
+    {
+      "session": 1,
+      "backend": "snpe_cpu_fixed",
+      "name": "session_1_snpe_cpu_fixed",
+      "result": "target/session_1_snpe_cpu_fixed/result.json",
+      "median_ms": 7.540313000049537,
+      "p95_ms": 8.199390549862072,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.87890625
+      }
+    },
+    {
+      "session": 1,
+      "backend": "htp",
+      "name": "session_1_htp",
+      "result": "target/session_1_htp/result.json",
+      "median_ms": 0.9205209998981445,
+      "p95_ms": 1.1603538998656404,
+      "top1": {
+        "class_id": 653,
+        "label": "military uniform",
+        "score": 0.86328125
+      }
+    }
+  ]
+}

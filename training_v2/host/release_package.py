@@ -5,7 +5,7 @@ from validate_release import validate,validate_selection
 from release_policy import GIT_EXCLUSIONS,release_exclusion_reason
 TRAINING=Path(__file__).resolve().parents[1]
 PROJECT=TRAINING.parent
-REVISION='0.12.1'
+REVISION='0.12.2'
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def read(path):return json.loads(path.read_text(encoding='utf-8-sig'))
 def checked_input(path):
@@ -32,6 +32,7 @@ def collect():
     for path in read(TRAINING/'config/release-evidence.json')['files']:add(TRAINING/path)
     # Only explicitly prepared public summaries, never the raw network/RIL logs.
     for path in TRAINING.glob('evidence/reorganization-validation/*/release/*.json'):add(path)
+    for path in TRAINING.glob('evidence/demo-regression/*/release/*.json'):add(path)
     docker=TRAINING/'demos/docker'
     for name in ('app','config','host','target','offline','tests','evidence'):tree('demos/docker/'+name)
     for name in ('README.md','GUIA_ALUNO_OFFLINE.md','deploy-offline.ps1'):add(docker/name)

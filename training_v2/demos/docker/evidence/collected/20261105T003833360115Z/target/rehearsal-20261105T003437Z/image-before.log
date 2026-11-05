@@ -1,0 +1,79 @@
+[
+    {
+        "Id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+        "RepoTags": [
+            "qb560d-telemetry:1.0.0"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-01T11:25:12.150563184+08:00",
+        "Config": {
+            "User": "65534:65534",
+            "ExposedPorts": {
+                "8081/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.18",
+                "PYTHON_SHA256=9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "APP_VERSION=1.0.0"
+            ],
+            "Cmd": [
+                "python3",
+                "/app/telemetry.py",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8081"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "com.quectel.training.demo": "qb560d-docker",
+                "org.opencontainers.image.version": "1.0.0"
+            },
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python3",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health', timeout=2).read()"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 3000000000,
+                "Retries": 3
+            }
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 155045534,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/opt/qb560d-docker-demo/data/overlay2/2da7481c7e4b3ceeeacf81c93124d9e1dc9eee242c109569f5e94b7e6a93f836/diff:/opt/qb560d-docker-demo/data/overlay2/e6cc6b69c6602e00f908ebfb4ff028e0be53b82f68ebe437e25b16760b0465d5/diff:/opt/qb560d-docker-demo/data/overlay2/27a3e01518830d5f30ec89238b0176e94f4ab237b44ddbe7b0d5299811a65bf4/diff:/opt/qb560d-docker-demo/data/overlay2/fcb4c6ac7feda65fdf466f506f81ba2f2581aecbd45e12b45ec94443dc5f310c/diff:/opt/qb560d-docker-demo/data/overlay2/de7aeeea17d2790317c8b1a4c2db23f125d78be2e2d7b6396be89467866b630b/diff",
+                "MergedDir": "/opt/qb560d-docker-demo/data/overlay2/f83918d40d60e1d702397e93095f51494a420faf861260998bf027d820c08e72/merged",
+                "UpperDir": "/opt/qb560d-docker-demo/data/overlay2/f83918d40d60e1d702397e93095f51494a420faf861260998bf027d820c08e72/diff",
+                "WorkDir": "/opt/qb560d-docker-demo/data/overlay2/f83918d40d60e1d702397e93095f51494a420faf861260998bf027d820c08e72/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:8197d9c14b22d4cd79198c0722a18035760a85613211f2127ee6f5888735ca98",
+                "sha256:3b25b4762d3a2e7ec40bbecf336171c9c6cdbc444da1aad81cb4d0b59ffdd6e1",
+                "sha256:f0dfdf5c1d4f6ed1be3ba94267b20d74b753acd3affd15cb090a18122b05220c",
+                "sha256:ebcc1a78dcd919578bad3ead18b1f08937cc5cba4cf0a943fb788449ba93b6e0",
+                "sha256:072bcc09f64d2fcfca9689b3aacfa6a8aeabfa153ea56cd505d7616563ae2efe",
+                "sha256:2d56ae6270683562e096eb105144ab70fe088507fe20637ecd8472115ae985f7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

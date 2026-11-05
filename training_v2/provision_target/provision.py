@@ -119,10 +119,14 @@ def apply(a):
         own(session,DOCKER,evidence,True)
         docker_files=[p for name in ['target','config','app','offline'] for p in rows(REPO/'demos/docker'/name)]
         stage_files(session,REPO/'demos/docker',DOCKER,docker_files,evidence)
-        session.run("printf 'qb560d-training-docker-v1\\n' > "+DOCKER+'/.owner\nsh '+DOCKER+'/target/install.sh',evidence,'install-docker',180)
-        _,status=session.run('test -d '+QROOT,evidence,'qairt-directory-status',10,False)
-        if status:q.stage(adapter,QROOT,evidence/'qairt-stage')
-        else:q.require_owner(adapter,QROOT,evidence/'qairt-existing')
+        # The installer writes relative evidence paths. Create their parent in
+        # the Docker workspace before its readiness check redirects docker info.
+        session.run(
+            'set -e\ncd '+shlex.quote(DOCKER)+'\nmkdir -p evidence\n'
+            "printf 'qb560d-training-docker-v1\\n' > .owner\n"
+            'sh target/install.sh',
+            evidence,'install-docker',180)
+        q.ensure_staged(adapter,QROOT,evidence/'qairt-stage')
         h.deploy(adapter,QROOT,evidence/'gesture-deploy')
         session.run('python3 '+WORK+'/target_install.py wrappers',evidence,'install-wrappers',30)
         verify(session,evidence/'verification')

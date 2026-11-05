@@ -320,6 +320,8 @@ a instalação. Após atualizar os scripts, refaça o bundle/plano e retome:
 Confira READY_TO_REVIEW e blockers vazio antes de executar apply. O modo
 --offline pressupõe que todos os pacotes já estejam no cache do host.
 
+Na revisão 0.12.2, o instalador Docker cria `evidence/` antes de consultar o daemon. O estágio QAIRT usa um TAR com SHA-256 para evitar a alteração da semântica de `payload/.` pelo transporte Windows. Uma instalação existente com `payload/` é validada e recebe links de compatibilidade no diretório do runtime; os arquivos e identificadores existentes são preservados. Diretórios sem propriedade reconhecida, manifests incompletos e arquivos alterados continuam sendo recusados. Após atualizar os scripts, repita `prepare --offline` e `plan` para vincular o bundle às novas fontes.
+
 Câmera, vídeo em tempo real, sessão celular, APN, WLAN e servidor externo de
 iperf exigem configuração/ensaio próprios. O teste de loopback não mede 5G.
 As bibliotecas de GPU/HTP presentes não comprovam captura ou inferência funcional

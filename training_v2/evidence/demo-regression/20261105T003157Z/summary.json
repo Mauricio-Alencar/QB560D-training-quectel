@@ -1,0 +1,80 @@
+{
+  "at_host_utc": "2026-11-05T00:31:57.451422+00:00",
+  "checks": [
+    {
+      "name": "QAIRT owned layout and checksums",
+      "passed": true
+    },
+    {
+      "name": "Provisioning verify: MobileNet CPU/HTP, seven gestures, Docker, loopback",
+      "passed": true
+    },
+    {
+      "name": "Core application, systemd, five CPU demos repeated three times",
+      "passed": true
+    },
+    {
+      "name": "Docker standalone offline deployment",
+      "passed": true
+    },
+    {
+      "name": "Docker three sessions, offline load, restrictions and rollback",
+      "passed": true
+    },
+    {
+      "name": "Five HTP demos with fresh CPU references",
+      "passed": true
+    },
+    {
+      "name": "Eleven CPU/GPU/HTP vision controls",
+      "passed": true
+    },
+    {
+      "name": "Target-only HTP bundle deployment",
+      "passed": true
+    },
+    {
+      "name": "Eleven target-only HTP controls",
+      "passed": true
+    },
+    {
+      "name": "Legacy SNPE 2.26 staging",
+      "passed": true
+    },
+    {
+      "name": "Legacy TFLite CPU/GPU and SNPE CPU/HTP comparison",
+      "passed": true
+    },
+    {
+      "name": "AI Hub offline tensor cpu",
+      "passed": true
+    },
+    {
+      "name": "AI Hub offline tensor gpu",
+      "passed": true
+    },
+    {
+      "name": "Camera prerequisite reporting",
+      "passed": true
+    },
+    {
+      "name": "Fresh Docker installer creates evidence without prior state (POSIX target fixture)",
+      "passed": true
+    }
+  ],
+  "excluded": [
+    "Wi-Fi",
+    "5G",
+    "Yocto builds",
+    "hosted AI Hub jobs"
+  ],
+  "result": "PASS_AVAILABLE_LOCAL_DEMOS",
+  "camera": "NOT_EXECUTED: only codec nodes video32/video33; missing capture device, expected exit 78 checked",
+  "runtime_integrity": {
+    "passed": true,
+    "files_checked": 48,
+    "changed": [],
+    "installed_optional_trees": []
+  },
+  "final_services": "Private Docker daemon active; demo containers removed; native training service inactive; display service active"
+}

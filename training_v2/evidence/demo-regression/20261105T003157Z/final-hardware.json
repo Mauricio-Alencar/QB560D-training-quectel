@@ -1,0 +1,4 @@
+{
+  "command": "ls /dev/video*; v4l2-ctl --list-devices; systemctl is-active init_display.service; ls /sys/class/drm; systemctl is-active qb560d-docker-demo.service; sh /opt/qb560d-docker-demo/target/docker.sh ps -a",
+  "exit_code": 1
+}

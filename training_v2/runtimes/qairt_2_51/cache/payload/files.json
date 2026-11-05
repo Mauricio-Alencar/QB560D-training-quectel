@@ -5,7 +5,7 @@
   },
   {
     "path": "ownership.json",
-    "sha256": "8c98c8a1b2e1b55fd52f22e8aea38ce9112402925d96b59b71d430e72dab1144"
+    "sha256": "3c2489ba5fba8530cb00a8d0dd37b504695e4e9c7b6f47ee26d36a6a420cc96e"
   },
   {
     "path": "probe_runtime.py",

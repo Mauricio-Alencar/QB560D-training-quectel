@@ -244,8 +244,8 @@
     {
       "path": "demos/docker/target/install.sh",
       "component": "docker",
-      "sha256": "9ce7205adc1a70efe8566616bc347590857b8256ffc55634800fad5738ac752c",
-      "bytes": 1306
+      "sha256": "eb9d1e3330caab31638d3f91146484bb1ecc731f0f3fc7bc2ce1a4a9d2b2cb58",
+      "bytes": 1315
     },
     {
       "path": "demos/docker/target/preflight.sh",
@@ -412,8 +412,8 @@
     {
       "path": "config/release-evidence.json",
       "component": "training",
-      "sha256": "f4a95e0f6d880e25580ac3151a0988acb66359edceb8e3aff0659a81f3ef12c4",
-      "bytes": 89474
+      "sha256": "6a54783fba187ed49eac5f397f9e37de36dca5220532715dc07390f792ee6efc",
+      "bytes": 106105
     },
     {
       "path": "app/qb560d-hello.c",
@@ -898,8 +898,8 @@
     {
       "path": "provision_target/provision.py",
       "component": "installer",
-      "sha256": "c35284f8450b2da46ead2053b6b3774e1ede78ccc9b322f6940c72e71edc3820",
-      "bytes": 18023
+      "sha256": "5469b0ea45146e211d7f50101492a0a23c17a3f5565c5d1a7ed7fb5a63ff5c78",
+      "bytes": 18110
     },
     {
       "path": "provision_target/target_install.py",
@@ -912,6 +912,12 @@
       "component": "installer",
       "sha256": "cfee5b59d8143bfaa985faa4e48d7f9a0ef5f08d9ad2a8b1fab657facbce3e2d",
       "bytes": 9467
+    },
+    {
+      "path": "provision_target/test_qairt_staging.py",
+      "component": "installer",
+      "sha256": "43c5c42654bcc82ecbed82bf4cc4b63ee173cccb5662083898dba9d5c446cc0b",
+      "bytes": 5319
     },
     {
       "path": "provision_target/write_report.py",
@@ -982,8 +988,8 @@
     {
       "path": "runtimes/qairt_2_51/update_qairt.py",
       "component": "installer",
-      "sha256": "d0f6d523e8e579665aa5fd58d31fd79bcdc1b88e765c331b5fa21e65c2bec393",
-      "bytes": 14523
+      "sha256": "b8a2c38c5c64cb4f923873f6188e729947ca858bee993d2a09c94b1d2a9f8013",
+      "bytes": 18756
     },
     {
       "path": "runtimes/qairt_2_51/verify_reversibility.py",
@@ -1052,5 +1058,5 @@
       "bytes": 28
     }
   ],
-  "total_bytes": 470093741
+  "total_bytes": 470120020
 }

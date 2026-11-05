@@ -8,6 +8,8 @@ No Windows, extraia o pacote em uma pasta curta, por exemplo `C:\QB560D`, para e
 
 [Pacote completo v0.12.1](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip) e [SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip.sha256). Os [detalhes da release](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/tag/v0.12.1) identificam a versão publicada.
 
+Esses links são da versão anterior às correções Docker/QAIRT da revisão 0.12.2 dos fontes. O novo pacote é produzido por `host/build_release.py`. Para conferir uma cópia recebida e entender falhas de extração no Windows, consulte [download e extração](docs/DOWNLOAD_DIAGNOSTICS.md).
+
 ## 1. Preparar o computador
 
 Windows x64, Python 3.12 x64, driver Quectel ADB e cabo USB de dados. O cliente ADB está em `tools/platform-tools`. Não é necessário Docker Desktop, WSL ou SDK Yocto para os labs locais.
@@ -77,6 +79,8 @@ Esses comandos autenticam a sessão e gravam resultados novos em `evidence`. Nã
 ## 5. Resultados e limites
 
 Consulte [resultados atuais](docs/TARGET_RESULTS.md), [status](docs/STATUS.md), [boot/WLAN](docs/BOOT_WLAN.md), [plano de testes](docs/TEST_PLAN.md) e [fontes/créditos](docs/SOURCES.md). Os caminhos CPU/GPU/HTP, Docker e AI Hub possuem evidências preservadas. Câmera, disponibilidade dos serviços hospedados e a aceitação por caixa têm os limites descritos nesses guias. O Yocto não tem homologação de build de imagem neste treinamento.
+
+A [revalidação de 04/11/2026](docs/DEMO_REGRESSION_20261104.md) registra a execução das demos locais, as correções Docker/QAIRT, os controles adicionais e os limites de câmera/Wi-Fi/5G desta sessão.
 
 A [validação após a reorganização](docs/VALIDACAO_POS_REORGANIZACAO.md) registra as novas execuções, as correções de scripts e a ressalva do retorno RIL `71/d`. O congelamento da entrega aguarda o OK dos slides.
 

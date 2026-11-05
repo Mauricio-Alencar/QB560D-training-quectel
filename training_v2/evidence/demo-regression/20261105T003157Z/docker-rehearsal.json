@@ -1,0 +1,4 @@
+{
+  "command": "sh /opt/qb560d-docker-demo/target/demo.sh test",
+  "exit_code": 0
+}

@@ -1,0 +1,4 @@
+{
+  "command": "python3 /opt/qb560d-docker-demo/tests/test_installer.py -v",
+  "exit_code": 0
+}

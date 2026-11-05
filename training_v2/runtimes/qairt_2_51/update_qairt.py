@@ -1,7 +1,7 @@
 """Prepare and validate QAIRT in an owned directory. Never replaces BSP files.
 Default action is plan. Python stdlib for download/staging; NumPy/Pillow for image preparation.
 """
-import argparse, base64, datetime as dt, hashlib, json, os, re, shlex, shutil, subprocess, sys, urllib.request
+import argparse, base64, datetime as dt, hashlib, json, os, re, shlex, shutil, subprocess, sys, tarfile, tempfile, urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 AUTH_HELPERS=ROOT.parents[1]/'host'
@@ -77,14 +77,59 @@ def snapshot(adb,evidence,name):
     result=json.loads(next(line[9:] for line in output.splitlines() if line.startswith("SNAPSHOT=")))
     write_json(evidence/(name+"-data.json"),result)
     return result
-def require_owner(adb,remote,evidence):
-    code="import json,os\np="+repr(remote)+"\n"
-    code+="assert os.path.realpath(p)==p, 'Unexpected remote symlink'\no=json.load(open(p+'/ownership.json'))\n"
-    code+="assert o['package']=='update_QIART' and o['version']=="+repr(VERSION)+" and o['remote']==p, 'Ownership mismatch'\n"
-    code+="import hashlib\nfor row in json.load(open(p+'/files.json')):\n f=os.path.realpath(p+'/'+row['path'])\n assert f.startswith(p+'/'), 'Unsafe manifest path'\n assert hashlib.sha256(open(f,'rb').read()).hexdigest()==row['sha256'], 'Target checksum mismatch: '+row['path']\nprint('OWNERSHIP_AND_CHECKSUMS_OK')"
+def require_owner(adb,remote,evidence,payload_root=None):
+    root=remote if payload_root is None else payload_root
+    if root not in (remote,remote+'/payload'):raise ValueError('Unexpected payload root')
+    required=(["bin/"+n for n in BIN_NAMES]+["lib/"+n for n in LIB_NAMES]+
+              ["dsp/"+n for n in DSP_NAMES]+["model/mobilenet_v2.dlc","input/dog.raw","input/input_list.txt","ownership.json","probe_runtime.py","cleanup_target.py"])
+    code="import json,os,hashlib\nfrom pathlib import Path\np="+repr(root)+"\nremote="+repr(remote)+"\n"
+    code+="assert os.path.realpath(remote)==remote and os.path.realpath(p)==p, 'Unexpected remote symlink'\no=json.loads(Path(p+'/ownership.json').read_text())\n"
+    code+="assert o['package']=='update_QIART' and o['version']=="+repr(VERSION)+" and o['remote']==remote, 'Ownership mismatch'\n"
+    code+="rows=json.loads(Path(p+'/files.json').read_text())\nassert set("+repr(required)+").issubset({r['path'] for r in rows}), 'Incomplete QAIRT manifest'\n"
+    code+="for row in rows:\n f=os.path.realpath(p+'/'+row['path'])\n assert f.startswith(p+'/'), 'Unsafe manifest path'\n assert hashlib.sha256(Path(f).read_bytes()).hexdigest()==row['sha256'], 'Target checksum mismatch: '+row['path']\nprint('OWNERSHIP_AND_CHECKSUMS_OK')"
     adb.python(code,evidence,"ownership-check")
 def environment(remote):
     return "env LD_LIBRARY_PATH="+shlex.quote(remote+"/lib:/usr/lib:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu")+" ADSP_LIBRARY_PATH="+shlex.quote(remote+"/dsp;/usr/lib/rfsa/adsp;/dsp;/usr/lib")
+def runtime_version(adb,remote,evidence,name):
+    binaries=' '.join(shlex.quote(remote+'/bin/'+n) for n in BIN_NAMES)
+    adb.shell('chmod 700 '+binaries+' &&\n'+environment(remote)+' '+shlex.quote(remote+'/bin/qnn-net-run')+' --version',evidence,name)
+def expose_payload(adb,remote,evidence):
+    """Keep payload/ in place and expose compatible paths at the runtime root."""
+    require_owner(adb,remote,evidence/'nested-payload',remote+'/payload')
+    names=['bin','lib','dsp','model','input','probe_runtime.py','cleanup_target.py','ownership.json','files.json']
+    code="import os\np="+repr(remote)+"\nnames="+repr(names)+"\n"
+    code+="assert os.path.realpath(p)==p and os.path.realpath(p+'/payload')==p+'/payload', 'Unexpected remote symlink'\n"
+    # Check every destination first. Never overwrite an existing file or folder.
+    code+="for name in names:\n dst=p+'/'+name\n rel='payload/'+name\n assert os.path.exists(p+'/'+rel), 'Missing payload entry: '+name\n if os.path.lexists(dst):\n  assert os.path.islink(dst) and os.readlink(dst)==rel, 'Conflicting QAIRT path: '+dst\n"
+    code+="for name in names:\n dst=p+'/'+name\n if not os.path.lexists(dst):os.symlink('payload/'+name,dst)\nprint('QAIRT_PAYLOAD_COMPATIBILITY_LINKS_OK')"
+    adb.python(code,evidence,'payload-compatibility-links')
+def ensure_staged(adb,remote,evidence):
+    """Reuse a verified runtime, preserving an existing nested payload tree."""
+    code="import os\np="+repr(remote)+"\nassert os.path.realpath(p)==p, 'Unexpected remote symlink'\n"
+    code+="if not os.path.lexists(p):layout='missing'\nelif os.path.isfile(p+'/payload/ownership.json'):layout='nested'\nelif os.path.isfile(p+'/ownership.json'):layout='flat'\nelse:raise RuntimeError('Existing QAIRT directory has no recognized ownership; preserve it for inspection')\nprint('QAIRT_LAYOUT='+layout)"
+    output=adb.python(code,evidence,'qairt-layout')
+    layout=next(line.split('=',1)[1] for line in output.splitlines() if line.startswith('QAIRT_LAYOUT='))
+    if layout=='missing':
+        stage(adb,remote,evidence)
+        return
+    if layout=='nested':
+        expose_payload(adb,remote,evidence)
+    require_owner(adb,remote,evidence)
+    runtime_version(adb,remote,evidence,'existing-runtime-version')
+def push_payload(adb,payload,remote,evidence):
+    # Transfer a regular archive: directory/. semantics can be lost when the
+    # Windows transport normalizes a source path into its temporary directory.
+    with tempfile.TemporaryDirectory(prefix='qairt-transfer-') as temp:
+        archive=Path(temp)/'qairt-payload.tar'
+        with tarfile.open(archive,'w') as bundle:
+            for path in sorted(payload.rglob('*')):
+                if path.is_file():bundle.add(path,arcname='payload/'+path.relative_to(payload).as_posix(),recursive=False)
+        digest=sha(archive)
+        adb.push(str(archive),remote+'/.qairt-payload.tar')
+    code="import hashlib,tarfile\nfrom pathlib import Path\np=Path("+repr(remote)+")\na=p/'.qairt-payload.tar'\nassert p.resolve()==p, 'Unexpected remote symlink'\n"
+    code+="assert hashlib.sha256(a.read_bytes()).hexdigest()=="+repr(digest)+", 'Transferred QAIRT archive checksum mismatch'\n"
+    code+="with tarfile.open(a,'r:') as bundle:\n members=bundle.getmembers()\n assert members, 'Empty QAIRT archive'\n for item in members:\n  f=(p/item.name).resolve()\n  assert p in f.parents and item.isfile(), 'Unsafe QAIRT archive entry'\n bundle.extractall(p)\na.unlink()\nprint('QAIRT_PAYLOAD_EXTRACTED')"
+    adb.python(code,evidence,'extract-qairt-payload')
 def download(offline):
     if not offline:
         import sdk_download
@@ -100,7 +145,7 @@ def download(offline):
 def stage(adb,remote,evidence):
     check_lock()
     if (evidence/"before-stage.log").exists():raise ValueError("Use a new --evidence folder to preserve the previous staging record")
-    fresh="import os,shutil\np="+repr(remote)+"\nassert not os.path.lexists(p), 'Target folder already exists; choose a new --remote'\nassert os.path.realpath(p)==p, 'Unexpected parent symlink'\nparent=os.path.dirname(p)\nwhile not os.path.exists(parent):parent=os.path.dirname(parent)\nassert shutil.disk_usage(parent).free>300*1024*1024, 'Need at least 300 MiB free on the destination filesystem'\nprint('FRESH_TARGET_PATH_OK')"
+    fresh="import os,shutil\np="+repr(remote)+"\nassert not os.path.lexists(p), 'Target folder already exists; choose a new --remote'\nassert os.path.realpath(p)==p, 'Unexpected parent symlink'\nparent=os.path.dirname(p)\nwhile not os.path.exists(parent):parent=os.path.dirname(parent)\nassert shutil.disk_usage(parent).free>600*1024*1024, 'Need at least 600 MiB free for the QAIRT archive and extracted payload'\nprint('FRESH_TARGET_PATH_OK')"
     adb.python(fresh,evidence,"fresh-target-check")
     before=snapshot(adb,evidence,"before-stage")
     if before["architecture"]!="aarch64":raise ValueError("This bundle is for AArch64 Linux")
@@ -121,8 +166,10 @@ def stage(adb,remote,evidence):
     # Only a fresh directory may be created. No reuse/overwrite of a different target tree.
     create="import os\np="+repr(remote)+"\nassert not os.path.lexists(p), 'Target folder already exists; choose a new --remote'\nassert os.path.realpath(p)==p, 'Unexpected parent symlink'\nos.makedirs(p,exist_ok=False)\nprint('CREATED '+p)"
     adb.python(create,evidence,"create-isolated-target")
-    adb.push(str(payload)+"/.",remote+"/")
-    adb.shell("chmod 700 "+remote+"/bin/*\n"+environment(remote)+" "+remote+"/bin/qnn-net-run --version",evidence,"staged-runtime-version")
+    push_payload(adb,payload,remote,evidence)
+    expose_payload(adb,remote,evidence)
+    require_owner(adb,remote,evidence)
+    runtime_version(adb,remote,evidence,"staged-runtime-version")
     after=snapshot(adb,evidence,"after-stage")
     if before["original_hashes"]!=after["original_hashes"]:raise RuntimeError("Original runtime hashes changed during staging")
     write_json(evidence/"stage-result.json",dict(remote=remote,version=VERSION,originals_unchanged=True,device=adb.identity))

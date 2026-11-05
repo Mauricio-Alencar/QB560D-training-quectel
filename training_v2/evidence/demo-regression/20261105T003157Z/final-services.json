@@ -1,0 +1,4 @@
+{
+  "command": "ls /dev/video*\nv4l2-ctl --list-devices || :\nsystemctl is-active init_display.service\nsystemctl is-active qb560d-docker-demo.service\nsh /opt/qb560d-docker-demo/target/docker.sh ps -a\nsystemctl is-active qb560d-training.service || :",
+  "exit_code": 0
+}

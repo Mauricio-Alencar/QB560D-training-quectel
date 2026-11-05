@@ -6,7 +6,7 @@ root=/opt/qb560d-docker-demo
 [ "$(uname -m)" = aarch64 ] || { echo 'This runtime is ARM64 only'; exit 1; }
 cd "$root"
 sha256sum -c offline/runtime.sha256
-mkdir -p runtime client/cli-plugins
+mkdir -p runtime client/cli-plugins evidence
 if [ ! -x runtime/docker/dockerd ]; then tar -xzf offline/runtime/docker-29.9.2.tgz -C runtime; fi
 cp offline/runtime/buildx-v0.38.1.linux-arm64 client/cli-plugins/docker-buildx
 chmod 755 client/cli-plugins/docker-buildx

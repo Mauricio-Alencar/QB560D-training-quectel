@@ -1,0 +1,10 @@
+/dev/video32  /dev/video33
+msm_vidc_vdec ():
+	/dev/video32
+	/dev/video33
+
+Cannot open device /dev/video0, exiting.
+active
+active
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+inactive

@@ -1,0 +1,4 @@
+{
+  "command": "cd /opt/qb560d-training-payload\nsh target/ai.sh tensor --model models/aihub_tiny_6a569f3f9ea3.tflite --input models/workbench_input.npy --expected models/workbench_expected.npy --backend cpu --output evidence/aihub-regression-20261105T003157Z-cpu.json",
+  "exit_code": 0
+}

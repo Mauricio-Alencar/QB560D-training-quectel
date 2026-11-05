@@ -89,7 +89,7 @@ def validate(cli=True):
     for spec in materials['materials']:
         p=TRAINING/'Qualcomm_AI_Hub_Training'/spec['file']
         if sha(p)!=spec['sha256']:problems.append('AI Hub PDF lock mismatch: '+spec['file'])
-    commands=[['host/adb_lab.py','--help'],['provision_target/provision.py','--help'],['host/htp251_workshop.py','--help'],['host/deploy_htp_target.py','--help'],['host/validate_vision_controls.py','--help'],['demos/docker/host/deploy_offline.py','--help'],['demos/hand_gesture/gesture_demo.py','--help'],['runtimes/qairt_2_51/update_qairt.py','--help'],['Qualcomm_AI_Hub_Training/host/account.py','--help']]
+    commands=[['host/adb_lab.py','--help'],['provision_target/provision.py','--help'],['host/htp251_workshop.py','--help'],['host/deploy_htp_target.py','--help'],['host/validate_vision_controls.py','--help'],['demos/docker/host/deploy_offline.py','--validate-only'],['demos/hand_gesture/gesture_demo.py','--help'],['runtimes/qairt_2_51/update_qairt.py','--help'],['Qualcomm_AI_Hub_Training/host/account.py','--help']]
     if cli:
         for command in commands:
             result=subprocess.run([sys.executable,'-B',str(TRAINING/command[0]),*command[1:]],cwd=PACKAGE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace')

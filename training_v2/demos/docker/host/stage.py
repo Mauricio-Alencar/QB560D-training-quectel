@@ -8,19 +8,35 @@ from adb_control import ROOT, add_connection_arguments, record, session_from_arg
 REMOTE = '/opt/qb560d-docker-demo'
 
 
+def verify_asset(source, digest, size, label):
+    if not source.is_file():
+        raise ValueError('Missing offline ' + label + ': ' + str(source) +
+                         '; extract the complete training release, not only demos/docker')
+    with source.open('rb') as stream:
+        pointer = stream.read(128).startswith(b'version https://git-lfs.github.com/spec/v1')
+    if pointer:
+        raise ValueError('Git LFS pointer instead of offline ' + label +
+                         '; download the complete training release or run git lfs pull in the clone')
+    if size is not None and source.stat().st_size != size:
+        raise ValueError('Incomplete/changed offline ' + label + ': expected ' + str(size) +
+                         ' bytes, found ' + str(source.stat().st_size) +
+                         '; download and fully extract the complete training release again')
+    if hashlib.sha256(source.read_bytes()).hexdigest() != digest:
+        raise ValueError('Checksum mismatch for offline ' + label +
+                         '; download and fully extract the complete training release again; keep the reviewed lock unchanged')
+
+
 def verify_local():
     runtime = json.loads((ROOT / 'offline/runtime.lock.json').read_text(encoding='utf-8'))
     checksums = []
     for name, spec in runtime['files'].items():
         source = ROOT / 'offline/runtime' / name
-        if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != spec['sha256']:
-            raise ValueError('Missing/changed offline runtime: ' + name)
+        verify_asset(source, spec['sha256'], spec.get('bytes'), 'runtime ' + name)
         checksums.append(spec['sha256'] + '  offline/runtime/' + name)
     (ROOT / 'offline/runtime.sha256').write_bytes(('\n'.join(checksums) + '\n').encode())
     image = json.loads((ROOT / 'offline/image.lock.json').read_text(encoding='utf-8'))
     archive = ROOT / image['archive']
-    if not archive.is_file() or hashlib.sha256(archive.read_bytes()).hexdigest() != image['archive_sha256']:
-        raise ValueError('Missing/changed offline image; extract the complete package first')
+    verify_asset(archive, image['archive_sha256'], image.get('archive_bytes'), 'image')
     if image['os'] != 'linux' or image['architecture'] != 'arm64':
         raise ValueError('The reviewed image must be linux/arm64')
     return image

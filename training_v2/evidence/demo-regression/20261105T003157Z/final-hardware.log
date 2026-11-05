@@ -1,0 +1,6 @@
+/dev/video32  /dev/video33
+msm_vidc_vdec ():
+	/dev/video32
+	/dev/video33
+
+Cannot open device /dev/video0, exiting.

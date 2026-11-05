@@ -39,6 +39,8 @@ python .\host\deploy_offline.py --validate-only
 
 Esperado: `PASS_LOCAL_OFFLINE_CACHE`. Essa verificação não acessa o target nem faz downloads. Se faltar arquivo ou houver divergência de hash, extraia novamente o pacote completo.
 
+Use uma pasta curta, como `C:\QB560D`, e aguarde o término da extração sem erros. Uma extração interrompida por caminhos longos pode deixar os arquivos offline ausentes, mesmo quando o ZIP está íntegro. O verificador distingue arquivo ausente, tamanho incorreto, divergência de SHA-256 e ponteiro Git LFS. Consulte o [diagnóstico de download](../../docs/DOWNLOAD_DIAGNOSTICS.md). O instalador revisado cria sua própria pasta de evidências, inclusive na primeira instalação.
+
 ## 4. Fazer o deploy completo
 
 Troque somente a etiqueta da caixa, se necessário:

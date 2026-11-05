@@ -1,0 +1,6 @@
+test_fresh_install_creates_readiness_log_directory (__main__.FirstInstallation) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.036s
+
+OK

@@ -1,0 +1,66 @@
+{
+  "result": "PASS_AUTHENTICATED_OFFLINE_CLASSROOM_DEPLOY",
+  "host_utc": "2026-11-05T00:33:45.319907+00:00",
+  "unit_label": "classroom-box",
+  "image_id": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+  "archive_sha256": "cd0c23929d9b698a1e824d1f735cad94112c9eeef6e9e1b60648e13ccc638550",
+  "network_downloads": "NONE; only cached local files and ADB",
+  "identity": {
+    "serial": "?",
+    "product": "qcm6490-Ubuntu",
+    "transport_id": "1"
+  },
+  "authentication": {
+    "user": "root",
+    "login_prompt": true,
+    "password_prompt": true,
+    "uid": 0
+  },
+  "platform": {
+    "uid": 0,
+    "architecture": "aarch64",
+    "kernel": "5.4.219-perf",
+    "kernel_build": "#1 SMP PREEMPT Thu Apr 2 23:17:04 UTC 2026",
+    "glibc": "glibc 2.31",
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n",
+    "target_utc": "2026-11-05T00:33:45.708323+00:00",
+    "free_bytes_opt": 11157508096,
+    "tools": {
+      "sh": "/usr/bin/sh",
+      "base64": "/usr/bin/base64",
+      "python3": "/usr/bin/python3",
+      "tar": "/usr/bin/tar",
+      "gzip": "/usr/bin/gzip",
+      "sha256sum": "/usr/bin/sha256sum",
+      "systemctl": "/usr/bin/systemctl",
+      "mount": "/usr/bin/mount",
+      "iptables": "/usr/sbin/iptables"
+    },
+    "docker_demo_already_present": true
+  },
+  "http": {
+    "/health": {
+      "http": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    "/telemetry": {
+      "http": 200,
+      "body": {
+        "application": "qb560d-training",
+        "version": "1.0.0",
+        "machine": "aarch64",
+        "system_uptime_s": 862.7,
+        "process_uptime_s": 3.084
+      }
+    },
+    "/missing": {
+      "http": 404,
+      "body": null
+    }
+  },
+  "deployment": "CREATED_REVIEWED_CONTAINER",
+  "final_container_state": "removed",
+  "collected_evidence": "evidence\\collected\\20261105T003437506487Z"
+}

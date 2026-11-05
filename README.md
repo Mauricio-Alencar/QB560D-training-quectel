@@ -8,6 +8,8 @@
 
 Extraia o pacote em uma pasta curta, como `C:\QB560D`, e abra `training_v2/README.md`. O ZIP inclui as dependências offline selecionadas para a aula.
 
+A revisão 0.12.2 dos fontes corrige o provisionamento Docker e o layout do QAIRT no Windows. Os links acima ainda identificam a release publicada 0.12.1, anterior a essas correções. O pacote revisado é gerado por `training_v2/host/build_release.py`. Consulte o [diagnóstico de download e extração](training_v2/docs/DOWNLOAD_DIAGNOSTICS.md) antes de usar uma cópia extraída em Downloads/OneDrive.
+
 Para conferir o download no PowerShell, execute o comando abaixo e compare o resultado com o arquivo `.sha256`:
 
 ```powershell

@@ -1,0 +1,4 @@
+{
+  "command": "mkdir -p /opt/qb560d-docker-demo/tests",
+  "exit_code": 0
+}

@@ -1,9 +1,11 @@
 """One-time authenticated copy/install of the offline target-only HTP bundle."""
 import argparse
+import datetime as dt
 import getpass
 import hashlib
 from pathlib import Path
 import shlex
+import uuid
 
 from adb_login import resolve_adb
 import sys
@@ -21,7 +23,8 @@ def main():
     a=p.parse_args();digest=hashlib.sha256(a.archive.read_bytes()).hexdigest()
     record=a.archive.with_name(a.archive.name+'.sha256').read_text(encoding='ascii').split()[0]
     if digest!=record:raise ValueError('Archive differs from its SHA-256 file')
-    evidence=ROOT/'evidence/vision-controls/target-deploy'/digest[:12];evidence.mkdir(parents=True,exist_ok=True)
+    stamp=dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    evidence=ROOT/'evidence/vision-controls/target-deploy'/(stamp+'-'+digest[:12]+'-'+uuid.uuid4().hex[:5]);evidence.mkdir(parents=True,exist_ok=False)
     password=getpass.getpass('Target root password (not saved): ')
     with Session(resolve_adb(a.adb),a.serial,password=password) as s:
         guard="from pathlib import Path\nimport json\np=Path("+repr(REMOTE)+")\nassert p.resolve()==p\nr=Path('/opt/qairt-isolated/2.51.40.260930/bin/qnn-net-run')\nassert r.is_file(), 'Prepare the isolated QAIRT runtime first; see provision_target/README.md'\nowner={'package':'qb560d-ai-htp251-v1'}\nif p.exists():\n assert (p/'.owner.json').is_file() and json.loads((p/'.owner.json').read_text())==owner,'Foreign HTP directory'\nelse:\n p.mkdir();(p/'.owner.json').write_text(json.dumps(owner))\nprint('RECOGNIZED_HTP_DIRECTORY')"

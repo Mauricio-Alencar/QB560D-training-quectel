@@ -13,9 +13,9 @@
     "accelerator_events": 3,
     "positive_cycle_events": 210,
     "execute_us": [
-      17581.0,
-      8573.0,
-      8540.0
+      16572.0,
+      8224.0,
+      8091.0
     ]
   },
   "comparison_to_original_tflite_cpu": {

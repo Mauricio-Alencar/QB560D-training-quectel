@@ -142,13 +142,13 @@
     "requirements-host.txt": "e32056a5263b5972e789540468f3d3e1e8e2d1649d21ef65e814317727be4897",
     "RESULTADOS_VALIDACAO.txt": "3fd58d33e64ec24312b026f2a8448c3058bfb7dd5b4a2a0da6ec2bdfad17fe6d",
     "sdk_download.py": "b24b92caf911ac398a941d4a2e7f5b50ca0f24d23b60bfa0af061912bf96dde3",
-    "update_qairt.py": "d0f6d523e8e579665aa5fd58d31fd79bcdc1b88e765c331b5fa21e65c2bec393",
+    "update_qairt.py": "b8a2c38c5c64cb4f923873f6188e729947ca858bee993d2a09c94b1d2a9f8013",
     "validation-summary.json": "8f743e820fb6ae595ebc4d06281aa6a43e2faa44a4b0f6b6bc6d8d77f63b1844",
     "verify_reversibility.py": "8732cfea4c713d038daa2a6c76f7b22e3260fd11b94653ff6b332dfffc45f23f",
     "versions.lock.json": "2f518dc0e36038f28106a5833c769ede8f3fa248e66503347b8f54444b199375"
   },
   "classroom_adb_helper": "../demos/docker/host/adb_transport.py or sibling ../Docker_Demo/host/adb_transport.py",
-  "revision": "0.12.1",
+  "revision": "0.12.2",
   "path_base": "module directory",
   "distribution": "Complete training archive; shared host/ and tools/ are included"
 }

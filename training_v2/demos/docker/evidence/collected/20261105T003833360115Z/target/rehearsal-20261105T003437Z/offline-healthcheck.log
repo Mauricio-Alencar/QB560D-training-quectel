@@ -1,0 +1,242 @@
+[
+    {
+        "Id": "302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12",
+        "Created": "2026-11-05T00:35:19.521301061Z",
+        "Path": "python3",
+        "Args": [
+            "/app/telemetry.py",
+            "--host",
+            "0.0.0.0",
+            "--port",
+            "8081"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 10632,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-05T00:35:20.034756686Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-11-05T08:35:23.035473039+08:00",
+                        "End": "2026-11-05T08:35:23.350608559+08:00",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:e0654346d8e08cd3657544ec36d91fc50344b5ace226386d5b3fb4ac4d330021",
+        "ResolvConfPath": "/opt/qb560d-docker-demo/data/containers/302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12/resolv.conf",
+        "HostnamePath": "/opt/qb560d-docker-demo/data/containers/302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12/hostname",
+        "HostsPath": "/opt/qb560d-docker-demo/data/containers/302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12/hosts",
+        "LogPath": "/opt/qb560d-docker-demo/data/containers/302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12/302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12-json.log",
+        "Name": "/qb560d-docker-offline",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "2",
+                    "max-size": "5m"
+                }
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,noexec,nosuid,size=16m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 134217728,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 268435456,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 64,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "302e4572f9a64aef126e1a0431ea270322f7492e74379b9b6745f4910060df12",
+                "LowerDir": "/opt/qb560d-docker-demo/data/overlay2/3c80a8628395c3886285359905c324e98b5764bc131f3e3c95a4840e1b8f5ca3-init/diff:/opt/qb560d-docker-demo/data/overlay2/e00aa714e33d792c3db786025d575bc200526cd53b6f5bf94c5377c37b4c28b4/diff:/opt/qb560d-docker-demo/data/overlay2/768a91de13fb0d2b7a0fa8454cc9835c64089ae9ea4b7f2df659469685c7d825/diff:/opt/qb560d-docker-demo/data/overlay2/449de28f87d27a56d79f6b982c60f438c8aa07a9bd9232e2bbc41ac2394ce0c8/diff:/opt/qb560d-docker-demo/data/overlay2/3d8e4a1ddad9825e78dc6a077536de46d3a84a1860b5b60ba0d7fa9f32a3717a/diff:/opt/qb560d-docker-demo/data/overlay2/2d6dc1c8abdc397217693da3ddb2b8ad16c4c37b49f9bf90dec4a286b0e50ff2/diff:/opt/qb560d-docker-demo/data/overlay2/96af1ddd79c7907ab9d59815f4d56959eb8e16fa8c9cc260b6569a76c03cdb18/diff",
+                "MergedDir": "/opt/qb560d-docker-demo/data/overlay2/3c80a8628395c3886285359905c324e98b5764bc131f3e3c95a4840e1b8f5ca3/merged",
+                "UpperDir": "/opt/qb560d-docker-demo/data/overlay2/3c80a8628395c3886285359905c324e98b5764bc131f3e3c95a4840e1b8f5ca3/diff",
+                "WorkDir": "/opt/qb560d-docker-demo/data/overlay2/3c80a8628395c3886285359905c324e98b5764bc131f3e3c95a4840e1b8f5ca3/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "302e4572f9a6",
+            "Domainname": "",
+            "User": "65534:65534",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8081/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "APP_VERSION=1.0.0",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.18",
+                "PYTHON_SHA256=9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1"
+            ],
+            "Cmd": [
+                "python3",
+                "/app/telemetry.py",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8081"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python3",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health', timeout=2).read()"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 3000000000,
+                "Retries": 3
+            },
+            "Image": "qb560d-telemetry:1.0.0",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "Labels": {
+                "com.quectel.training.demo": "qb560d-docker",
+                "org.opencontainers.image.version": "1.0.0"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "fde3e4c045e77de9e630db4392ac3724c910bd711ecac24a781cd566aa8b8d25",
+            "SandboxKey": "/run/qb560d-docker-demo/exec/netns/fde3e4c045e7",
+            "Ports": {},
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "be9b6e2e07372dfe1bf44c5a8b8cb254bd20039e03f4b88c5edfe7c2bd9348f5",
+                    "EndpointID": "96cf13a4def1401076b8abdea606c0e68aca557d8e40079cfc86e51dc211236f",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]

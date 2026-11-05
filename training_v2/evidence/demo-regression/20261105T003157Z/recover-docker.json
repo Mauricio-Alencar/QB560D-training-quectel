@@ -1,0 +1,4 @@
+{
+  "command": "echo 'eb9d1e3330caab31638d3f91146484bb1ecc731f0f3fc7bc2ce1a4a9d2b2cb58  /opt/qb560d-docker-demo/target/install.sh' | sha256sum -c -\nsh /opt/qb560d-docker-demo/target/install.sh",
+  "exit_code": 0
+}
