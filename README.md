@@ -10,7 +10,7 @@ Extraia o pacote em uma pasta curta, como `C:\QB560D`, e abra `training_v2/READM
 
 Esta release corrige o provisionamento Docker e o layout do QAIRT no Windows. Consulte o [diagnóstico de download e extração](training_v2/docs/DOWNLOAD_DIAGNOSTICS.md) antes de usar uma cópia extraída em Downloads/OneDrive.
 
-O pacote completo atualizado (`full-r3`) inclui o [guia manual de conversão TFLite → ONNX → DLC → HTP](training_v2/docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md), as tabelas de origem/download dos modelos e o [instalador oficial Python 3.8 x64](training_v2/tools/python38/README.md), opcional para reconstrução dos modelos. Os links acima apontam para essa atualização da release 0.12.2.
+A atualização disponível por clone em `main` inclui o [guia manual de conversão TFLite → ONNX → DLC → HTP](training_v2/docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md), as tabelas de origem/download dos modelos e os pacotes de [Python 3.8 portátil](training_v2/tools/python38/README.md), opcional para reconstrução dos modelos, e Python 3.12 portátil para o host. O ZIP disponível acima corresponde à revisão anterior; os links serão atualizados após a nova publicação.
 
 Para conferir o download no PowerShell, execute o comando abaixo e compare o resultado com o arquivo `.sha256`:
 

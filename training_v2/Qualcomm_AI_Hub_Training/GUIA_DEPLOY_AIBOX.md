@@ -28,13 +28,14 @@ Evidência completa: [summary.json](../evidence/acceleration/20261031T230843Z/su
 No PowerShell do computador, entre na raiz `training_v2`. Os comandos abaixo usam `python` do seu ambiente, com NumPy disponível. Os helpers descobrem o ADB portátil do pacote Docker e fazem o login root da caixa.
 
 ```powershell
-python host/adb_lab.py push
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py host/adb_lab.py push
 ```
 
 O envio copia os modelos, a imagem e os scripts para `/opt/qb560d-training-payload`. Prepare ou confira a dependência Pillow isolada:
 
 ```powershell
-python host/adb_lab.py run ai prepare
+& $py host/adb_lab.py run ai prepare
 ```
 
 Se `.python-deps` já existir, o comando verifica os membros do wheel fixado e reutiliza apenas conteúdo correspondente; diferenças são recusadas. A biblioteca TensorFlow Lite, OpenCL e os drivers continuam sendo os do BSP. O payload atual em `/opt` persiste. `/tmp` permanece uma alternativa transitória com `--remote` explícito; `/data` tem `noexec` nesta imagem.
@@ -42,20 +43,20 @@ Se `.python-deps` já existir, o comando verifica os membros do wheel fixado e r
 Execute primeiro em CPU e depois em GPU:
 
 ```powershell
-python host/adb_lab.py run ai classification --image media/grace_hopper.jpg --backend cpu --vendor-c-api --threads 2 --warmup 10 --runs 50 --output evidence/demo-cpu
-python host/adb_lab.py run ai classification --image media/grace_hopper.jpg --backend gpu --vendor-c-api --threads 2 --warmup 10 --runs 50 --output evidence/demo-gpu
+& $py host/adb_lab.py run ai classification --image media/grace_hopper.jpg --backend cpu --vendor-c-api --threads 2 --warmup 10 --runs 50 --output evidence/demo-cpu
+& $py host/adb_lab.py run ai classification --image media/grace_hopper.jpg --backend gpu --vendor-c-api --threads 2 --warmup 10 --runs 50 --output evidence/demo-gpu
 ```
 
 O wrapper escolhe a conexão ADB autorizada e trata corretamente o código de saída do `adbd` legado. Cada execução grava um log no computador e JSON/PNG/NPZ no target. Para coletar os arquivos:
 
 ```powershell
-python host/adb_lab.py pull
+& $py host/adb_lab.py pull
 ```
 
 Para repetir automaticamente as três sessões e gerar uma nova comparação:
 
 ```powershell
-python host/run_acceleration.py
+& $py host/run_acceleration.py
 ```
 
 O programa exige a confirmação de OpenCL e de kernel delegado nos logs, confere hashes do modelo/imagem/runtime e compara a saída numérica completa. Ele grava os resultados em `evidence/acceleration/<UTC>/`, preservando sessões anteriores, e atualiza `LATEST.json`.
@@ -90,7 +91,7 @@ Isso compara TFLite CPU/GPU e o mesmo DLC em CPU fixed point/HTP. O coletor veri
 Para uma apresentação rápida somente em HTP:
 
 ```powershell
-python host/adb_lab.py run ai snpe --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 50 --warmup 10 --profiling detailed --output evidence/htp-live-001
+& $py host/adb_lab.py run ai snpe --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 50 --warmup 10 --profiling detailed --output evidence/htp-live-001
 ```
 
 Escolha uma pasta de saída nova a cada execução. Para o controle CPU use `--backend cpu --cpu-fixed-point`. A entrada ITensor é float32 NHWC `(RGB - 128) / 128`, distinta dos bytes uint8 do TFLite. Não houve fallback CPU no HTP. Preparação da imagem continua na CPU.
@@ -108,9 +109,9 @@ Houve conflito DHCPv6 e disputa entre `dhcpcd` e NetworkManager. Deixamos IPv6 d
 Para conferir ou reativar a conexão salva:
 
 ```powershell
-python host/adb_lab.py run wlan status
-python host/adb_lab.py run wlan check
-python host/adb_lab.py run wlan up
+& $py host/adb_lab.py run wlan status
+& $py host/adb_lab.py run wlan check
+& $py host/adb_lab.py run wlan up
 ```
 
 Em outra unidade, abra `adb shell`, confira os perfis existentes e crie este perfil somente se ainda não existir:

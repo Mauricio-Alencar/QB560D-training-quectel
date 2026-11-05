@@ -14,6 +14,11 @@ def local_reference(value):
 def latest():return local_reference(read(ROOT/'LATEST.json')['inventory'])
 def stamp():return dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
 def rows(folder):return [p for p in Path(folder).rglob('*') if p.is_file() and not p.is_symlink() and '__pycache__' not in p.parts and p.suffix!='.pyc']
+def native_files():
+    # This release selection belongs to the host packager, not the target.
+    # Leave any previously staged copy untouched when resuming an installation.
+    host_only=REPO/'config/release-evidence.json'
+    return [p for name in ['target','config','app','ai','models','media','wheelhouse'] for p in rows(REPO/name) if p!=host_only]
 def fingerprint(inv):
     return dict(os=inv['os_release'].get('VERSION_ID'),arch=inv['identity']['architecture'],glibc=inv['identity']['glibc'],python_minor=inv['identity']['python'].split()[0].rsplit('.',1)[0],bsp=inv['build_files'].get('/etc/build_version'),kernel=inv['identity']['kernel'],vendor_hashes={r['path']:r['sha256'] for r in inv['ai_libraries'] if r['path'].startswith('/usr/') and 'sha256' in r})
 def modules():
@@ -38,10 +43,9 @@ def prepare(offline):
     files=[]
     def add(path,component):files.append(dict(path=Path(path).relative_to(REPO).as_posix(),component=component,sha256=sha(path),bytes=Path(path).stat().st_size))
     for row in q.check_lock()['files']:add(REPO/'runtimes/qairt_2_51'/row['path'],'qairt')
-    for component,names in [('docker',['app','target','config','offline']),('training',['target','config','app','ai','models','media','wheelhouse'])]:
-        base=(REPO/'demos/docker' if component=='docker' else REPO)
-        for name in names:
-            for p in rows(base/name):add(p,component)
+    for name in ['app','target','config','offline']:
+        for p in rows(REPO/'demos/docker'/name):add(p,'docker')
+    for p in native_files():add(p,'training')
     lock=read(REPO/'demos/docker/offline/runtime.lock.json')
     for name,spec in lock['files'].items():assert sha(REPO/'demos/docker/offline/runtime'/name)==spec['sha256']
     image=read(REPO/'demos/docker/offline/image.lock.json');image_path=REPO/'demos/docker/offline/images/qb560d-telemetry-1.0.0-arm64.tar.gz'
@@ -56,6 +60,11 @@ def prepare(offline):
         add(p,'installer-metadata')
     for p in [REPO/'host/adb_transport.py',REPO/'host/provision_session.py',ROOT/'setup_host.ps1',REPO/'runtimes/qairt_2_51/requirements-host.txt']:
         add(p,'host-support')
+    add(REPO/'host/prepare_portable_python.ps1','host-support')
+    for key in ('38','312'):
+        base=REPO/('tools/python'+key);lock_path=base/('python'+key+'.lock.json')
+        add(lock_path,'host-support')
+        for name in read(lock_path)['files']:add(base/name,'host-support')
     save(ROOT/'bundle-manifest.json',dict(schema=1,files=files,total_bytes=sum(r['bytes'] for r in files)))
     print('HOST_ONLY_PREPARED: '+str(len(files))+' locked files; '+str(sum(r['bytes'] for r in files))+' bytes')
 def plan(inventory,output):
@@ -88,7 +97,7 @@ def own(session,dest,evidence,adopt_docker=False):
 def stage_files(session,base,dest,files,evidence):
     # Refuse changed existing source files, but allow untracked runtime data/results.
     specs=[dict(path=p.relative_to(base).as_posix(),sha256=sha(p)) for p in files]
-    code="import os,hashlib\nfrom pathlib import Path\np=Path("+repr(dest)+")\nrows="+repr(specs)+"\nfor r in rows:\n f=p/r['path']\n assert str(f.resolve()).startswith(str(p)+'/')\n assert not f.exists() or hashlib.sha256(f.read_bytes()).hexdigest()==r['sha256'], 'Target file differs: '+str(f)\nprint('TARGET_SOURCE_GUARD_OK')"
+    code="import os,hashlib\nfrom pathlib import Path\np=Path("+repr(dest)+")\nrows="+repr(specs)+"\nfor r in rows:\n f=p/r['path']\n assert p in f.resolve().parents\n assert not f.exists() or hashlib.sha256(f.read_bytes()).hexdigest()==r['sha256'], 'Target file differs: '+str(f)\nprint('TARGET_SOURCE_GUARD_OK')"
     session.python(code,evidence,'guard-'+Path(dest).name)
     # Archive only manifest-listed files. Never upload __pycache__, evidence or host tools.
     expected={r['path']:r['sha256'] for r in read(ROOT/'bundle-manifest.json')['files']}
@@ -112,8 +121,7 @@ def apply(a):
         for row in assets:session.push(ROOT/'cache'/row['name'],WORK+'/downloads/'+row['name'])
         session.push(wheel,WORK+'/downloads/'+wheel.name);assets.append(dict(name=wheel.name,sha256=sha(wheel)))
         save(evidence/'files.json',assets);session.push(evidence/'files.json',WORK+'/downloads/files.json');session.push(ROOT/'target_install.py',WORK+'/target_install.py')
-        native=[p for name in ['target','config','app','ai','models','media','wheelhouse'] for p in rows(REPO/name)]
-        stage_files(session,REPO,LAB,native,evidence)
+        stage_files(session,REPO,LAB,native_files(),evidence)
         session.run('python3 '+WORK+'/target_install.py python',evidence,'install-python',120)
         session.run('python3 '+WORK+'/target_install.py network',evidence,'install-network',600)
         own(session,DOCKER,evidence,True)

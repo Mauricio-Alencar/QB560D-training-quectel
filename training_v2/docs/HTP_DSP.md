@@ -113,9 +113,10 @@ Essas diferenças de aritmética e quantização são reais. A demo passou como 
 Abra o PowerShell na raiz `training_v2`. É necessário Python com NumPy no computador, uma única QB560D autorizada por ADB e os arquivos do pacote `training_v2`. O ADB é descoberto no pacote Docker ou no PATH. Os helpers fazem login root e pedem a senha sem eco. Com várias caixas, informe o `--transport-id` atual.
 
 ```powershell
-python --version
-python -c "import numpy; print(numpy.__version__)"
-python host/adb_lab.py inventory
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py --version
+& $py -c "import numpy; print(numpy.__version__)"
+& $py host/adb_lab.py inventory
 ```
 
 O ZIP atualizado inclui os nove arquivos fixados em `offline/snpe226`, com licença, quatro bibliotecas ARM64 e decoder Windows. Não é necessário baixar o SDK para repetir esta demo. A inferência funciona localmente, sem conta AI Hub ou conexão com a nuvem. A [WLAN](WLAN.md) é útil para outros exercícios; a transferência desta demo usa ADB.
@@ -123,8 +124,8 @@ O ZIP atualizado inclui os nove arquivos fixados em `offline/snpe226`, com licen
 ### 2. Enviar o material e preparar o target
 
 ```powershell
-python host/adb_lab.py push
-python host/adb_lab.py run ai prepare
+& $py host/adb_lab.py push
+& $py host/adb_lab.py run ai prepare
 ```
 
 `push` envia scripts, modelos, imagens e o wheel para `/opt/qb560d-training-payload`. `ai prepare` extrai o Pillow isolado quando ausente ou verifica os arquivos fixados já existentes. O diretório privado preparado por `provision_target` pode ser reutilizado; diferenças ou conteúdo incompleto são recusados.
@@ -132,8 +133,8 @@ python host/adb_lab.py run ai prepare
 ### 3. Obter e enviar o runtime HTP correspondente
 
 ```powershell
-python host/stage_snpe_runtime.py --check-only
-python host/stage_snpe_runtime.py
+& $py host/stage_snpe_runtime.py --check-only
+& $py host/stage_snpe_runtime.py
 ```
 
 Os comandos usam primeiro `offline/snpe226` e conferem `host/snpe-runtime.lock.json`. Para reconstruir esse cache no computador de preparação, `fetch_snpe_sdk.py --mode demo` continua disponível; ele lê os membros selecionados do ZIP oficial por HTTP Range e confere CRC/SHA-256. O cache anterior em `.build` é uma alternativa; não é exigido pelo ZIP atual. `--sdk-root` permite selecionar outro cache completo correspondente ao lock.
@@ -150,7 +151,7 @@ O staging verifica também os hashes remotos. O conjunto Ubuntu gcc9.4 funcionou
 ### 4. Executar a comparação completa recomendada
 
 ```powershell
-python host/run_htp_comparison.py
+& $py host/run_htp_comparison.py
 ```
 
 O coletor alterna a ordem, confere hashes e os 1001 valores de saída, exige top-1 correspondente e registra as diferenças numéricas. Exige OpenCL nos logs GPU e somente DSP nas entradas do profile HTP. Salva nova evidência sem apagar sessões anteriores e atualiza `evidence/htp-dsp/LATEST.json`. A decodificação automática usa o executável Windows do SDK.
@@ -161,8 +162,8 @@ Crie uma identificação de sessão para evitar sobrescrever resultados e execut
 
 ```powershell
 $demoStamp = Get-Date -Format "yyyyMMdd-HHmmss"
-python host/adb_lab.py run ai snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 50 --warmup 10 --profiling off --output "evidence/htp-live-$demoStamp"
-python host/adb_lab.py run ai snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend cpu --cpu-fixed-point --input-mode normalized --runs 50 --warmup 10 --profiling off --output "evidence/cpu-dlc-live-$demoStamp"
+& $py host/adb_lab.py run ai snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 50 --warmup 10 --profiling off --output "evidence/htp-live-$demoStamp"
+& $py host/adb_lab.py run ai snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend cpu --cpu-fixed-point --input-mode normalized --runs 50 --warmup 10 --profiling off --output "evidence/cpu-dlc-live-$demoStamp"
 ```
 
 Esses dois comandos medem inferência com profiling desligado. Para comprovar a localização das operações em uma nova sessão, prefira o coletor da etapa 4: ele faz um ensaio adicional com `--profiling detailed`, decodifica o DiagLog e exige entradas somente DSP. Os mesmos argumentos da execução manual funcionam diretamente no target com `sh target/ai.sh snpe ...`, dentro de `/opt/qb560d-training-payload`.
@@ -172,7 +173,7 @@ Esses dois comandos medem inferência com profiling desligado. Para comprovar a 
 O coletor completo da etapa 4 já faz o download automático para `evidence/htp-dsp/<UTC>/`. Para as execuções manuais:
 
 ```powershell
-python host/adb_lab.py pull
+& $py host/adb_lab.py pull
 ```
 
 O material é copiado para uma pasta nova `evidence/<UTC>-target/`, com as subpastas de evidência do target. Na pasta de cada execução SNPE, confira:
@@ -197,7 +198,7 @@ O TFLite original permanece intacto:
 - [Proveniência e flags](../models/snpe-model.origin.json).
 - Imagem `media/grace_hopper.jpg`: SHA-256 `a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130`.
 
-A reconstrução ocorre no computador Windows, sem instalar TensorFlow ou conversor no target. Prepare o Python 3.8 completo e a venv local conforme a [seção de ambientes do guia manual](TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho); o instalador oficial acompanha o treinamento em `tools/python38`. Depois, a partir de `training_v2`:
+A reconstrução ocorre no computador Windows, sem instalar TensorFlow ou conversor no target. Prepare o Python 3.8 portátil e a venv local conforme a [seção de ambientes do guia manual](TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho); o pacote oficial CPython NuGet acompanha o treinamento em `tools/python38`, sem instalar Python no Windows. Depois, a partir de `training_v2`:
 
 ```powershell
 $exporter = (Resolve-Path .build/manual-export-py38/Scripts/python.exe).Path
@@ -207,7 +208,9 @@ $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
 & $exporter host/rebuild_snpe_model.py
 ```
 
-Nesta estação já existe um Python 3.8 portátil preparado em `.build/python38-host/python.exe`. Ele não integra o ZIP distribuído. O script salva um **candidato novo** em `.build/snpe-conversion-rebuilt`, recusa sobrescrever pasta existente e não publica o DLC automaticamente. Use `--output` para escolher outra pasta. A receita foi executada nesta estação; o candidato reconstruído teve SHA diferente, mas suas saídas CPU e HTP foram exatamente iguais às do DLC publicado na imagem de referência. A evidência registra ambos os hashes.
+O script salva um **candidato novo** em `.build/snpe-conversion-rebuilt`, recusa sobrescrever pasta existente e não publica o DLC automaticamente. Use `--output` para escolher outra pasta. A evidência histórica de reconstrução com o ambiente privado antigo permanece preservada.
+
+**Validação adicional em 05/11/2026:** o bloco acima foi executado com venvs novas criadas a partir dos pacotes oficiais CPython NuGet portáteis 3.8.10 e 3.12.10, em uma cópia curta dos arquivos do ZIP. Não foi necessário Python 3.8 instalado no Windows. Foram executados `pip install`, `fetch_snpe_sdk.py --mode conversion` e `rebuild_snpe_model.py`. O ONNX coincidiu exatamente com o TFLite TF2.13 na imagem de referência. O novo DLC teve os mesmos 1.001 scores do publicado, tanto em CPU-fixed quanto em HTP: diferença absoluta máxima **0,0** em cada backend. O profile separado confirmou **34 entradas DSP / zero CPU**, sem tentativa de CPU na execução HTP. Os hashes de 48 arquivos dos modelos/runtimes da caixa e os pacotes da venv principal existente permaneceram iguais. Consulte o [recibo da preparação portátil](../evidence/demo-regression/20261105T123847Z/release/SNPE_FRESH_VENV.json) e o [profile decodificado](../evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/htp-profile.txt). Esse teste é do fluxo **SNPE 2.26 INT8** desta seção; o capítulo manual QAIRT 2.51 w8a16 mantém sua evidência própria.
 
 Pipeline implementado e executado:
 

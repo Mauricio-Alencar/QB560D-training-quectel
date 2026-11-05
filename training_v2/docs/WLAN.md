@@ -29,8 +29,9 @@ O SSID usa a banda WLAN de 5 GHz. A sessão celular 5G continua com seu fluxo pr
 No computador, a partir da raiz `training_v2`:
 
 ```powershell
-python host/adb_lab.py run wlan status
-python host/adb_lab.py run wlan check
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py host/adb_lab.py run wlan status
+& $py host/adb_lab.py run wlan check
 ```
 
 Os comandos guardam evidência datada no computador. O teste usa `curl --interface wlan0` para conferir HTTPS por essa interface, consulta DNS e mostra a rota. A validação realizada retornou HTTP 204 no endpoint de conectividade e HTTPS 200 em `example.com`. O relógio sincronizou automaticamente pelo serviço NTP após a conexão: `NTPSynchronized=yes`.

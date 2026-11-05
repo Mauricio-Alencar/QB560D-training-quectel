@@ -44,23 +44,24 @@ Abra https://workbench.aihub.qualcomm.com/ e entre com sua Qualcomm ID. Na tela 
 
 Abra PowerShell na pasta `aibox_training/training_v2` do pacote extraído. O laboratório desta estação já foi preparado em uma pasta curta para evitar o limite de caminhos do Windows/OneDrive.
 
+Prepare primeiro o host portátil pelo README principal. Crie o ambiente do cliente dentro desta cópia do treinamento; o download dos pacotes AI Hub requer Internet:
+
 ```powershell
-$hubPy = Join-Path $env:USERPROFILE '.venvs/qb560d-aihub/Scripts/python.exe'
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py -m venv .build/aihub-client
+if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar o ambiente do cliente AI Hub' }
+$hubPy = (Resolve-Path .build/aihub-client/Scripts/python.exe).Path
+& $hubPy -m pip install -r Qualcomm_AI_Hub_Training/requirements.txt
+if ($LASTEXITCODE -ne 0) { throw 'Falha nas dependências do cliente AI Hub' }
 & $hubPy Qualcomm_AI_Hub_Training/host/account.py check
 & $hubPy Qualcomm_AI_Hub_Training/host/account.py configure
 ```
 
-O segundo comando pede o token com entrada oculta. Cole-o diretamente no terminal e pressione Enter. Se o ícone do portal copiar o comando inteiro `qai-hub configure --api_token ...`, o helper também aceita essa linha e extrai o token, sem executar o comando colado. Ele valida o acesso consultando dispositivos e grava a configuração padrão do SDK no perfil do usuário, fora da pasta de treinamento. Não imprime o token. Se houver uma configuração anterior, o helper a preserva. O esperado é `ACCOUNT_READY` e uma quantidade de dispositivos.
+O comando `configure` pede o token com entrada oculta. Cole-o diretamente no terminal e pressione Enter. Se o ícone do portal copiar o comando inteiro `qai-hub configure --api_token ...`, o helper também aceita essa linha e extrai o token, sem executar o comando colado. Ele valida o acesso consultando dispositivos e grava a configuração padrão do SDK no perfil do usuário, fora da pasta de treinamento. Não imprime o token. Se houver uma configuração anterior, o helper a preserva. O esperado é `ACCOUNT_READY` e uma quantidade de dispositivos.
 
 O comando oficial `qai-hub configure --api_token ...` existe. Neste laboratório usamos o helper para evitar o token no histórico e na saída do terminal durante a gravação. O cliente0.57.0 imprime o conteúdo da configuração ao executar seu comando configure.
 
-Para preparar outro computador, com Python 3.12 instalado:
-
-```powershell
-& $py -m venv (Join-Path $env:USERPROFILE '.venvs/qb560d-aihub')
-$hubPy = Join-Path $env:USERPROFILE '.venvs/qb560d-aihub/Scripts/python.exe'
-& $hubPy -m pip install -r Qualcomm_AI_Hub_Training/requirements.txt
-```
+Em uma nova extração, repita o preparo acima; crie a venv no destino em vez de copiar a venv de outra estação. Se já configurou o cliente, reutilize `.build/aihub-client/Scripts/python.exe` nesta cópia.
 
 ## 3. Escolher um dispositivo hospedado
 
@@ -127,7 +128,7 @@ Compare a saída completa, além dos quatro valores exibidos. Confira quais unid
 Com o job aprovado, mantendo `$run` e `$hubPy` na sessão:
 
 ```powershell
-$hubPy = Join-Path $env:USERPROFILE '.venvs/qb560d-aihub/Scripts/python.exe'
+$hubPy = (Resolve-Path .build/aihub-client/Scripts/python.exe).Path
 $run = 'Qualcomm_AI_Hub_Training/evidence/tiny-gpu-20261101-171619'
 $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
 $artifact = Join-Path $run 'model.tflite'

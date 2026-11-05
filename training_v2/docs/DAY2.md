@@ -4,7 +4,7 @@ All local labs run on the QB560D-EU Ubuntu target. Start from the package root. 
 
 Use the [Day 1 SSH guide](SSH.md) for manual target commands and SCP downloads. Open two SSH terminals when a foreground app and a separate test client are required. Complete ADB staging before removing USB-C for USB-A camera testing; existing automated ADB runners retain their ADB transport.
 
-Current root: `/opt/qb560d-training-payload`, prepared through `provision_target`. Authenticate root inside a manual `adb shell`, then enter this directory. Host runners authenticate automatically and default to this path. `python host/rehearse_local.py --repeat 3` from `training_v2` repeats the native/systemd/five-CPU-demo checks; GPU/HTP have separate comparison runners. See [current results](TARGET_RESULTS.md).
+Current root: `/opt/qb560d-training-payload`, prepared through `provision_target`. Authenticate root inside a manual `adb shell`, then enter this directory. Host runners authenticate automatically and default to this path. `& $py host/rehearse_local.py --repeat 3` from `training_v2` repeats the native/systemd/five-CPU-demo checks; GPU/HTP have separate comparison runners. See [current results](TARGET_RESULTS.md).
 
 ## D2-00 — Runtime inventory and AI concepts
 
@@ -136,7 +136,7 @@ Pass: valid JPEG from the intended sensor and plausible inference result. Fallba
 
 ## D2-11 — MobileNet on HTP v68, confirmed on this unit
 
-Use the converted INT8 DLC from the original MobileNet TFLite, with the private SNPE 2.26 Ubuntu runtime. The ZIP includes the pinned runtime subset and Windows profile decoder in `offline/snpe226`. Run `python host/stage_snpe_runtime.py --check-only`, then `python host/stage_snpe_runtime.py` on the host. No SDK download or converter is needed for this replay. Full setup and reconstruction instructions: [HTP/DSP guide](HTP_DSP.md).
+Use the converted INT8 DLC from the original MobileNet TFLite, with the private SNPE 2.26 Ubuntu runtime. The ZIP includes the pinned runtime subset and Windows profile decoder in `offline/snpe226`. Run `& $py host/stage_snpe_runtime.py --check-only`, then `& $py host/stage_snpe_runtime.py` on the host. No SDK download or converter is needed for this replay. Full setup and reconstruction instructions: [HTP/DSP guide](HTP_DSP.md).
 
 Inside `/opt/qb560d-training-payload` on the target:
 
@@ -145,7 +145,7 @@ sh target/ai.sh snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet
 sh target/ai.sh snpe --sdk-root runtime/qairt226-ubuntu --model models/mobilenet_v1_snpe_int8.dlc --image media/grace_hopper.jpg --backend dsp --input-mode normalized --warmup 10 --runs 50 --profiling off --output evidence/dlc-htp-live-001
 ```
 
-Use a new output directory for each run. From the host, `python host/run_htp_comparison.py` runs three alternating sessions for TFLite CPU/GPU and SNPE CPU-fixed/HTP, pulls outputs and decodes a separate detailed HTP profile.
+Use a new output directory for each run. From the host, `& $py host/run_htp_comparison.py` runs three alternating sessions for TFLite CPU/GPU and SNPE CPU-fixed/HTP, pulls outputs and decodes a separate detailed HTP profile.
 
 Measured medians with the same DLC: CPU fixed point **6.748 ms**, HTP **1.130 ms**, ratio **5.97×**. Profile: 34 DSP entries, zero CPU entries, including graph input/output. Runtime order contains DSP only, unsigned PD; no CPU retry. Preprocessing and Python control still execute on CPU.
 
@@ -164,7 +164,7 @@ sh target/ai.sh classification --image media/grace_hopper.jpg --backend cpu --ve
 sh target/ai.sh classification --image media/grace_hopper.jpg --backend gpu --vendor-c-api --threads 2 --warmup 10 --runs 50 --output evidence/demo-gpu
 ```
 
-On the preparation computer, from the `training_v2` directory, `python host/run_acceleration.py` repeats three alternating sessions and collects output arrays, logs, images and a comparison summary. Measured medians: CPU 25.41 ms, GPU 9.67 ms, speedup 2.63×. Top-1 matches; largest probability difference is 1/256. These are invoke-only timings, not end-to-end video FPS. One OpenCL GPU partition is confirmed in the runtime log. HTP/DSP execution is covered separately in D2-11 with the converted DLC and its CPU control.
+On the preparation computer, from the `training_v2` directory, `& $py host/run_acceleration.py` repeats three alternating sessions and collects output arrays, logs, images and a comparison summary. Measured medians: CPU 25.41 ms, GPU 9.67 ms, speedup 2.63×. Top-1 matches; largest probability difference is 1/256. These are invoke-only timings, not end-to-end video FPS. One OpenCL GPU partition is confirmed in the runtime log. HTP/DSP execution is covered separately in D2-11 with the converted DLC and its CPU control.
 
 The full Portuguese [AI Hub and deployment guide](../Qualcomm_AI_Hub_Training/GUIA_DEPLOY_AIBOX.md) provides the account setup, compile/inference/profile exercise, tiny ONNX reference and local TFLite deployment steps. The account/API is now configured; follow the [accompanied first-run guide](../Qualcomm_AI_Hub_Training/PASSO_A_PASSO_AIHUB.md) for the current hosted jobs, local deployment and recording.
 
@@ -174,7 +174,7 @@ The manually added slides use the persistent runtime `/opt/qairt-isolated/2.51.4
 
 ```powershell
 python runtimes/qairt_2_51/update_qairt.py test --runs 5
-python demos/hand_gesture/gesture_demo.py test-all --backend htp
+& $py demos/hand_gesture/gesture_demo.py test-all --backend htp
 ```
 
 The ADB client is discovered through the Docker package; `--transport-id` selects a box when serials repeat. Logs and prediction images stay under each extension's `evidence` directory. Host image transforms/ROI handling are separate from the three target DLC graphs. Keep HTP as the validated gesture backend; the earlier CPU result for this w8a8 model was not accepted. This extension is separate from the single cropped-hand CPU baseline D2-08 and does not add time to the five-hour agenda automatically.

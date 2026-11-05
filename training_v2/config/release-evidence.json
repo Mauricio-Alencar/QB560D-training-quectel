@@ -1277,6 +1277,21 @@
     "htp251/segmentation.input.png",
     "htp251/source-contracts.json",
     "htp251/ssd_anchors.npy",
-    "htp251/target/run.sh"
+    "htp251/target/run.sh",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/htp-profile.txt",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/htp-profile.csv",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/before-hashes.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/after-hashes.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-profile/SNPEDiag_0.log",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/published-cpu/result.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/published-cpu/outputs.npz",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-cpu/result.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-cpu/outputs.npz",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/published-htp/result.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/published-htp/outputs.npz",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-htp/result.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-htp/outputs.npz",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-profile/result.json",
+    "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv/target/qb560d-snpe-fresh-2aca1fabe999/candidate-profile/outputs.npz"
   ]
 }

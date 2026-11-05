@@ -147,35 +147,15 @@ NumPy 2.3.5 e Pillow 12.3.0, no host, diferentes dos wheels ARM64 do target.
 Abra PowerShell na raiz training_v2:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ./provision_target/setup_host.ps1 -InstallPython
+powershell -NoProfile -ExecutionPolicy Bypass -File ./provision_target/setup_host.ps1
 $py = (Resolve-Path './provision_target/.venv/Scripts/python.exe').Path
 & $py --version
 ```
 
 
-O helper procura um Python 3.12 x64 válido no ambiente do projeto, PATH,
-registro e diretórios usuais. Ignora os aliases WindowsApps que abrem a Store.
-Se não encontrar Python, -InstallPython instala-o para o usuário via winget.
-Depois cria provision_target/.venv, instala os pacotes fixados e valida as
-versões. Aguarde HOST_READY antes de continuar. Não se conecta ao target.
-ExecutionPolicy Bypass vale somente para esse processo PowerShell.
+O helper preserva uma venv principal 3.12 válida. Em uma extração nova, usa o pacote oficial CPython NuGet em `tools/python312`, confere seus hashes, extrai o runtime em `.build/portable-python312` e cria `provision_target/.venv`. Instala NumPy/Pillow usando os wheels offline e valida as versões. Aguarde HOST_READY antes de continuar.
 
-Se o Python estiver em outro diretório, informe o executável completo:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ./provision_target/setup_host.ps1 -PythonExe 'C:/caminho/Python312/python.exe'
-```
-
-
-Se winget não estiver disponível, instale Python 3.12 x64 pelo instalador
-completo oficial (com pip e venv), e execute o comando com -PythonExe acima:
-
-```text
-https://www.python.org/downloads/windows/
-```
-
-Não use o pacote embeddable. O erro "py não é reconhecido" indica que o
-launcher não está acessível; não comprova se o interpretador está instalado.
+Não instala Python no Windows, não usa winget, registro, Store ou launcher `py` e não altera o PATH global. A opção antiga `-InstallPython` é aceita por compatibilidade e agora também usa o runtime portátil. `-PythonExe` continua disponível para selecionar explicitamente um Python 3.12 x64 existente. O helper não se conecta ao target. ExecutionPolicy Bypass vale somente para esse processo PowerShell.
 
 Para somente verificar a localização/versão, sem instalar nem criar venv:
 
@@ -265,6 +245,14 @@ Esta é a única ação que instala. Ela pede a senha, coleta outro inventário,
 compara o firmware com o plano, verifica os hashes do host, exige espaço livre,
 cria diretórios identificados em /opt, transfere por ADB e instala por etapas.
 Arquivos de payload existentes com conteúdo diferente são recusados.
+
+`config/release-evidence.json` é uma lista usada apenas pelo empacotador no
+host e não faz parte do payload instalado. Uma cópia deixada por versões
+anteriores na caixa é preservada e não bloqueia a retomada de `apply`.
+Se um log antigo apontar divergência somente nesse arquivo, atualize os
+scripts, execute `prepare --offline` e `plan`, confira `READY_TO_REVIEW`
+sem blockers e repita `apply`. Os scripts, a configuração de execução,
+os modelos e seus locks continuam sujeitos à comparação de hashes.
 
 O relógio desatualizado da caixa não exige conexão WLAN nem bloqueia o build.
 O script não ajusta a data do sistema, RTC ou NTP. Quando os fontes do iperf3

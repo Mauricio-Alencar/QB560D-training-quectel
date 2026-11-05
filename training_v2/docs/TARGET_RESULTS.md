@@ -70,15 +70,16 @@ Nas cinco demos CPU, a referência retornou `military uniform`, pessoa detectada
 Use a árvore completa do treinamento ou extraia os ZIPs v2 e Docker lado a lado. Para uma caixa recém-gravada, prepare primeiro as dependências conforme `provision_target/README.md`. Dentro de `training_v2`, execute:
 
 ```powershell
-python host/adb_lab.py inventory
-python host/adb_lab.py push
-python host/rehearse_local.py --repeat 3 --unit-label Caixa-01
-python host/stage_snpe_runtime.py --check-only
-python host/stage_snpe_runtime.py
-python host/run_htp_comparison.py
-python host/run_acceleration.py
-python host/adb_lab.py run wlan status
-python host/adb_lab.py run wlan check
+$py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
+& $py host/adb_lab.py inventory
+& $py host/adb_lab.py push
+& $py host/rehearse_local.py --repeat 3 --unit-label Caixa-01
+& $py host/stage_snpe_runtime.py --check-only
+& $py host/stage_snpe_runtime.py
+& $py host/run_htp_comparison.py
+& $py host/run_acceleration.py
+& $py host/adb_lab.py run wlan status
+& $py host/adb_lab.py run wlan check
 ```
 
 Os helpers solicitam a senha Linux por processo; com várias caixas use o `--transport-id` atual. O comando de ensaio não testa celular/iperf3, cold boot, câmera ou jobs hospedados. Falhas reais mantêm retorno não zero. A comparação HTP usa o subconjunto offline e o decoder incluídos, sem SDK/conversor no target. As bibliotecas globais não foram substituídas.

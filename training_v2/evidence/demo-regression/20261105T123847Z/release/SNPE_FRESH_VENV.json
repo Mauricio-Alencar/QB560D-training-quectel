@@ -1,0 +1,569 @@
+{
+  "status": "PASS_FRESH_SNPE_EXPORT_VENV_CPU_AND_HTP",
+  "recorded_at_host_utc": "2026-11-05T12:39:56.448736+00:00",
+  "flow": "SNPE 2.26 / INT8; separate from QAIRT 2.51 w8a16 manual recipe",
+  "system_python_installation_required": false,
+  "python38_portable_package_sha256": "c63a2fc8fc62612b5abd391fda99ae1d90bad42ed8a9e99b1bd81c7ffdb4fefa",
+  "python312_portable_package_sha256": "0eb85c2dfccccf1b17352de4c397f69194035b7d37149eacc16f1147d93de3b8",
+  "portable_base_confirmed": true,
+  "main_portable_base_confirmed": true,
+  "target_validation_host_interpreter": "Python 3.12.10 venv created from local portable NuGet runtime",
+  "new_venv_created_at_documented_destination": true,
+  "conversion_sources": "78 conversion/preparation files verified from full-r3 ZIP; portable preparation helpers/packages added from reviewed sources; new venvs created locally in a short path",
+  "input_archive_sha256": "17636936fe8a5128b8a981e7cefc7d7082e4e5f79d810aeae5668b467d85f7cf",
+  "long_path_failure": {
+    "observed": true,
+    "windows_long_paths_enabled": false,
+    "error": "TensorFlow wheel installation failed with Errno 2 under the long OneDrive workspace path",
+    "correction": "Fresh source copy and new venvs at a short destination; no global Windows policy change"
+  },
+  "exporter": {
+    "version": "3.8.10",
+    "is_venv": true,
+    "system_site_packages": false
+  },
+  "exporter_packages": [
+    {
+      "name": "absl-py",
+      "version": "2.3.1"
+    },
+    {
+      "name": "astunparse",
+      "version": "1.6.3"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23"
+    },
+    {
+      "name": "cffi",
+      "version": "1.17.1"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    },
+    {
+      "name": "coloredlogs",
+      "version": "15.0.1"
+    },
+    {
+      "name": "cryptography",
+      "version": "45.0.7"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19"
+    },
+    {
+      "name": "gast",
+      "version": "0.4.0"
+    },
+    {
+      "name": "google-auth",
+      "version": "2.50.0"
+    },
+    {
+      "name": "google-auth-oauthlib",
+      "version": "1.0.0"
+    },
+    {
+      "name": "google-pasta",
+      "version": "0.2.0"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.70.0"
+    },
+    {
+      "name": "h5py",
+      "version": "3.11.0"
+    },
+    {
+      "name": "humanfriendly",
+      "version": "10.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.15"
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "8.5.0"
+    },
+    {
+      "name": "keras",
+      "version": "2.13.1"
+    },
+    {
+      "name": "libclang",
+      "version": "18.1.1"
+    },
+    {
+      "name": "mako",
+      "version": "1.3.10"
+    },
+    {
+      "name": "Markdown",
+      "version": "3.7"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "2.1.5"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0"
+    },
+    {
+      "name": "numpy",
+      "version": "1.24.3"
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.3.1"
+    },
+    {
+      "name": "onnx",
+      "version": "1.14.1"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.16.3"
+    },
+    {
+      "name": "opt-einsum",
+      "version": "3.4.0"
+    },
+    {
+      "name": "packaging",
+      "version": "24.2"
+    },
+    {
+      "name": "pandas",
+      "version": "1.5.3"
+    },
+    {
+      "name": "pillow",
+      "version": "10.4.0"
+    },
+    {
+      "name": "pip",
+      "version": "21.1.1"
+    },
+    {
+      "name": "protobuf",
+      "version": "3.20.3"
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.5"
+    },
+    {
+      "name": "pyasn1-modules",
+      "version": "0.4.2"
+    },
+    {
+      "name": "pycparser",
+      "version": "2.23"
+    },
+    {
+      "name": "pyreadline3",
+      "version": "3.5.6"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.6"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.2"
+    },
+    {
+      "name": "requests",
+      "version": "2.32.4"
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "2.0.0"
+    },
+    {
+      "name": "scipy",
+      "version": "1.10.1"
+    },
+    {
+      "name": "setuptools",
+      "version": "56.0.0"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "sympy",
+      "version": "1.13.3"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.13.0"
+    },
+    {
+      "name": "tensorboard-data-server",
+      "version": "0.7.2"
+    },
+    {
+      "name": "tensorflow",
+      "version": "2.13.0"
+    },
+    {
+      "name": "tensorflow-estimator",
+      "version": "2.13.0"
+    },
+    {
+      "name": "tensorflow-intel",
+      "version": "2.13.0"
+    },
+    {
+      "name": "tensorflow-io-gcs-filesystem",
+      "version": "0.31.0"
+    },
+    {
+      "name": "termcolor",
+      "version": "2.4.0"
+    },
+    {
+      "name": "tf2onnx",
+      "version": "1.16.1"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.5.0"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.2.3"
+    },
+    {
+      "name": "werkzeug",
+      "version": "3.0.6"
+    },
+    {
+      "name": "wheel",
+      "version": "0.45.1"
+    },
+    {
+      "name": "wrapt",
+      "version": "2.0.1"
+    },
+    {
+      "name": "zipp",
+      "version": "3.20.2"
+    }
+  ],
+  "documented_commands_executed": [
+    "& $python38 -m venv .build/manual-export-py38",
+    "& $exporter -m pip install -r host/requirements-snpe-conversion.txt",
+    "& $py host/fetch_snpe_sdk.py --mode conversion",
+    "& $exporter host/rebuild_snpe_model.py"
+  ],
+  "sdk_fetch_scope": "Fresh official SDK extraction in short student copy; members checked by ZIP CRC; pinned runtime members checked by SHA-256",
+  "sdk_members_extracted": 253,
+  "source_sha256": "ecc3a67c47c5a609ec35f6a58a7d97532834e43df4cb7d3f1204a8164b7d20dd",
+  "published_dlc_sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+  "candidate_dlc_sha256": "258f9e45b1650e584821b0eaa38742917354b1e6a2872938fa9d73b28d9ca2b6",
+  "onnx_validation": {
+    "tensorflow": "2.13.0",
+    "onnxruntime": "1.16.3",
+    "scope": "supplied image only; the old target TFLite 2.8.4 has separately measured rounding differences",
+    "records": [
+      {
+        "file": "mobilenet_v1.onnx",
+        "source_tflite_tf213_exact_output_match": true,
+        "top1": 653,
+        "top1_score": 0.8984375
+      },
+      {
+        "file": "mobilenet_v1_scalar.onnx",
+        "source_tflite_tf213_exact_output_match": true,
+        "top1": 653,
+        "top1_score": 0.8984375
+      }
+    ]
+  },
+  "comparisons": {
+    "cpu": {
+      "exact_output_match_to_published": true,
+      "max_abs_difference": 0.0
+    },
+    "htp": {
+      "exact_output_match_to_published": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "profile": {
+    "dsp_entries": 34,
+    "cpu_entries": 0,
+    "includes_input_output_entries": true,
+    "diaglog_sha256": "0fca2be3859cc5979037feab8781af6137ae0145748cb34ecf3dca74f00b1fad",
+    "decoded_profile_sha256": "cd41d7d8425fab2cb48806ce7c856735b89b8d9b4305b5280361c6592417e1d3"
+  },
+  "target_executions": {
+    "published-cpu": {
+      "receipt": {
+        "backend_requested": "cpu",
+        "runtime_order": [
+          "cpu"
+        ],
+        "cpu_retry": false,
+        "cpu_fixed_point": true,
+        "runtime_version": "2.26.0.240827110523_99241",
+        "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+        "model_sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+        "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+        "input_mode": "normalized",
+        "input_name": "input",
+        "input_shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "profiling": "off",
+        "runs": 10,
+        "warmup": 2,
+        "inference_ms_median": 7.5763009998581765,
+        "inference_ms_p95": 8.611771050050265,
+        "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87890625
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.04296875
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+      },
+      "npz_sha256": "77e604f8f8964782512308505955f65ec64b79eaf1158b029bb0028e4b824557"
+    },
+    "candidate-cpu": {
+      "receipt": {
+        "backend_requested": "cpu",
+        "runtime_order": [
+          "cpu"
+        ],
+        "cpu_retry": false,
+        "cpu_fixed_point": true,
+        "runtime_version": "2.26.0.240827110523_99241",
+        "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+        "model_sha256": "258f9e45b1650e584821b0eaa38742917354b1e6a2872938fa9d73b28d9ca2b6",
+        "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+        "input_mode": "normalized",
+        "input_name": "input",
+        "input_shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "profiling": "off",
+        "runs": 10,
+        "warmup": 2,
+        "inference_ms_median": 7.543443000145089,
+        "inference_ms_p95": 12.728463999928863,
+        "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.87890625
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.04296875
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+      },
+      "npz_sha256": "77e604f8f8964782512308505955f65ec64b79eaf1158b029bb0028e4b824557"
+    },
+    "published-htp": {
+      "receipt": {
+        "backend_requested": "dsp",
+        "runtime_order": [
+          "dsp"
+        ],
+        "cpu_retry": false,
+        "cpu_fixed_point": false,
+        "runtime_version": "2.26.0.240827110523_99241",
+        "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+        "model_sha256": "7890590e120f7a361643e06f51c12935b9890b660d261c382ee1bf302d97a359",
+        "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+        "input_mode": "normalized",
+        "input_name": "input",
+        "input_shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "profiling": "off",
+        "runs": 10,
+        "warmup": 2,
+        "inference_ms_median": 1.0363450001023011,
+        "inference_ms_p95": 1.057117749940062,
+        "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.86328125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+      },
+      "npz_sha256": "3a032b8f11a11f8077cfaafb642dde88ca588590567e3d8c6e66f19dabac9bd3"
+    },
+    "candidate-htp": {
+      "receipt": {
+        "backend_requested": "dsp",
+        "runtime_order": [
+          "dsp"
+        ],
+        "cpu_retry": false,
+        "cpu_fixed_point": false,
+        "runtime_version": "2.26.0.240827110523_99241",
+        "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+        "model_sha256": "258f9e45b1650e584821b0eaa38742917354b1e6a2872938fa9d73b28d9ca2b6",
+        "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+        "input_mode": "normalized",
+        "input_name": "input",
+        "input_shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "profiling": "off",
+        "runs": 10,
+        "warmup": 2,
+        "inference_ms_median": 0.9840120000035313,
+        "inference_ms_p95": 0.9919615500280088,
+        "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.86328125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+      },
+      "npz_sha256": "3a032b8f11a11f8077cfaafb642dde88ca588590567e3d8c6e66f19dabac9bd3"
+    },
+    "candidate-profile": {
+      "receipt": {
+        "backend_requested": "dsp",
+        "runtime_order": [
+          "dsp"
+        ],
+        "cpu_retry": false,
+        "cpu_fixed_point": false,
+        "runtime_version": "2.26.0.240827110523_99241",
+        "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+        "model_sha256": "258f9e45b1650e584821b0eaa38742917354b1e6a2872938fa9d73b28d9ca2b6",
+        "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+        "input_mode": "normalized",
+        "input_name": "input",
+        "input_shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "profiling": "detailed",
+        "runs": 1,
+        "warmup": 0,
+        "inference_ms_median": 2.885930999809716,
+        "inference_ms_p95": 2.885930999809716,
+        "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+        "top3": [
+          {
+            "class_id": 653,
+            "label": "military uniform",
+            "score": 0.86328125
+          },
+          {
+            "class_id": 907,
+            "label": "Windsor tie",
+            "score": 0.05078125
+          },
+          {
+            "class_id": 466,
+            "label": "bulletproof vest",
+            "score": 0.01171875
+          }
+        ],
+        "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+      },
+      "npz_sha256": "3a032b8f11a11f8077cfaafb642dde88ca588590567e3d8c6e66f19dabac9bd3"
+    }
+  },
+  "target_commands": {
+    "published-cpu": "sh /opt/qb560d-training-payload/target/ai.sh snpe --sdk-root /opt/qb560d-training-payload/runtime/qairt226-ubuntu --model /opt/qb560d-training-payload/models/mobilenet_v1_snpe_int8.dlc --image /opt/qb560d-training-payload/media/grace_hopper.jpg --backend cpu --input-mode normalized --runs 10 --warmup 2 --profiling off --output /tmp/qb560d-snpe-fresh-2aca1fabe999/published-cpu --cpu-fixed-point",
+    "candidate-cpu": "sh /opt/qb560d-training-payload/target/ai.sh snpe --sdk-root /opt/qb560d-training-payload/runtime/qairt226-ubuntu --model /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate.dlc --image /opt/qb560d-training-payload/media/grace_hopper.jpg --backend cpu --input-mode normalized --runs 10 --warmup 2 --profiling off --output /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate-cpu --cpu-fixed-point",
+    "published-htp": "sh /opt/qb560d-training-payload/target/ai.sh snpe --sdk-root /opt/qb560d-training-payload/runtime/qairt226-ubuntu --model /opt/qb560d-training-payload/models/mobilenet_v1_snpe_int8.dlc --image /opt/qb560d-training-payload/media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 10 --warmup 2 --profiling off --output /tmp/qb560d-snpe-fresh-2aca1fabe999/published-htp",
+    "candidate-htp": "sh /opt/qb560d-training-payload/target/ai.sh snpe --sdk-root /opt/qb560d-training-payload/runtime/qairt226-ubuntu --model /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate.dlc --image /opt/qb560d-training-payload/media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 10 --warmup 2 --profiling off --output /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate-htp",
+    "candidate-profile": "sh /opt/qb560d-training-payload/target/ai.sh snpe --sdk-root /opt/qb560d-training-payload/runtime/qairt226-ubuntu --model /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate.dlc --image /opt/qb560d-training-payload/media/grace_hopper.jpg --backend dsp --input-mode normalized --runs 1 --warmup 0 --profiling detailed --output /tmp/qb560d-snpe-fresh-2aca1fabe999/candidate-profile"
+  },
+  "original_target_runtime_and_model_hashes_unchanged": true,
+  "target_files_checked": 48,
+  "main_host_environment_packages_unchanged": true,
+  "host_locked_inputs_unchanged": 54,
+  "host_setup_changed_to_portable": true,
+  "scope": "Supplied Grace Hopper image, exact full-vector comparison on CPU-fixed and HTP; not dataset accuracy or latency benchmark",
+  "raw_evidence": "evidence/demo-regression/20261105T123847Z/snpe-fresh-venv"
+}

@@ -1,0 +1,19 @@
+{
+  "version": "3.12.10",
+  "architecture": "Windows x64",
+  "distribution": "Official CPython NuGet; extracted locally without installer, registry or PATH changes",
+  "archive": "python.3.12.10.nupkg",
+  "runtime_generated_in": ".build/portable-python312",
+  "files": {
+    "python.3.12.10.nupkg": {
+      "url": "https://api.nuget.org/v3-flatcontainer/python/3.12.10/python.3.12.10.nupkg",
+      "bytes": 14515433,
+      "sha256": "0eb85c2dfccccf1b17352de4c397f69194035b7d37149eacc16f1147d93de3b8"
+    },
+    "LICENSE.txt": {
+      "url": "https://www.nuget.org/packages/python/3.12.10",
+      "bytes": 36874,
+      "sha256": "e502c6b880ff58d614901495a9009c136539cd0b1e2a2abb8fc00b934c203419"
+    }
+  }
+}

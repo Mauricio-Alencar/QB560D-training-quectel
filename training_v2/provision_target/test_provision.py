@@ -1,5 +1,5 @@
 """Local checks of installer boundaries; never connects to ADB or installs software."""
-import contextlib,copy,io,json,os,stat,tempfile,unittest,zipfile
+import contextlib,copy,io,json,os,shutil,stat,tarfile,tempfile,unittest,zipfile
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock,patch
@@ -111,4 +111,61 @@ class Boundaries(unittest.TestCase):
             self.assertNotEqual(paths[0],paths[1])
             for path in paths:
                 self.assertLess(len(str(path/'canned_gesture_classifier/profile-canned_gesture_classifier.log')),260)
+class PayloadStaging(unittest.TestCase):
+    def setUp(self):
+        folder=tempfile.TemporaryDirectory(dir=provision.ROOT/'cache',prefix='payload-test-')
+        self.addCleanup(folder.cleanup)
+        self.root=Path(folder.name).resolve();self.base=self.root/'host';self.remote=self.root/'remote'
+        self.installer=self.root/'installer';(self.installer/'cache').mkdir(parents=True)
+        self.work=self.root/'work';(self.work/'downloads').mkdir(parents=True)
+        self.contents={'target/run.py':b'print("runtime")',
+                       'config/lab.env.example':b'LAB=example',
+                       'models/models.lock.json':b'{"sha256":"locked"}',
+                       'config/release-evidence.json':b'{"files":["host-evidence.json"]}'}
+        for name,data in self.contents.items():
+            path=self.base/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
+        self.old_metadata=self.remote/'config/release-evidence.json'
+        self.old_metadata.parent.mkdir(parents=True);self.old_metadata.write_bytes(b'previous host selection')
+        self.result=self.remote/'evidence/result.json';self.result.parent.mkdir();self.result.write_bytes(b'previous target result')
+        for name,value in [('ROOT',self.installer),('REPO',self.base),('WORK',self.work.as_posix())]:
+            patcher=patch.object(provision,name,value);patcher.start();self.addCleanup(patcher.stop)
+        files=provision.native_files()
+        provision.save(self.installer/'bundle-manifest.json',{'files':[
+            {'path':p.relative_to(self.base).as_posix(),'sha256':provision.sha(p)} for p in files]})
+        self.members=[]
+        self.session=SimpleNamespace(python=self.target_python,push=Mock(side_effect=self.push))
+    def target_python(self,code,evidence,label):
+        with contextlib.redirect_stdout(io.StringIO()) as output:exec(compile(code,label,'exec'),{})
+        return output.getvalue()
+    def push(self,source,destination):
+        with tarfile.open(source) as archive:self.members=archive.getnames()
+        shutil.copyfile(source,destination)
+    def stage(self):
+        provision.stage_files(self.session,self.base,self.remote.as_posix(),provision.native_files(),self.root/'evidence')
+    def test_new_install_stages_runtime_without_host_metadata(self):
+        self.remote=self.root/'fresh-remote';self.remote.mkdir()
+        self.stage()
+        self.assertFalse((self.remote/'config/release-evidence.json').exists())
+        for name in set(self.contents)-{'config/release-evidence.json'}:
+            self.assertEqual((self.remote/name).read_bytes(),self.contents[name])
+    def test_resume_preserves_old_host_metadata_and_target_results(self):
+        self.stage();self.stage()
+        self.assertNotIn('config/release-evidence.json',self.members)
+        self.assertEqual(set(self.members),set(self.contents)-{'config/release-evidence.json'})
+        self.assertEqual(self.old_metadata.read_bytes(),b'previous host selection')
+        self.assertEqual(self.result.read_bytes(),b'previous target result')
+        for name in self.members:self.assertEqual((self.remote/name).read_bytes(),self.contents[name])
+    def test_changed_target_script_config_and_model_lock_are_refused(self):
+        for name in ('target/run.py','config/lab.env.example','models/models.lock.json'):
+            with self.subTest(path=name):
+                path=self.remote/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b'manual target change')
+                with self.assertRaisesRegex(AssertionError,'Target file differs'):self.stage()
+                self.assertEqual(path.read_bytes(),b'manual target change');path.unlink()
+        self.session.push.assert_not_called()
+    def test_changed_host_file_still_fails_its_bundle_hash(self):
+        (self.base/'target/run.py').write_bytes(b'changed after prepare')
+        with self.assertRaises(AssertionError):self.stage()
+        self.session.push.assert_not_called()
+        self.assertFalse((self.remote/'target/run.py').exists())
+
 if __name__=='__main__':unittest.main(verbosity=2)

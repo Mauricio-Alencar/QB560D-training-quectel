@@ -3,7 +3,7 @@
     "title": "Classifica\u00e7\u00e3o \u2014 MobileNet V1",
     "passed": true,
     "model_sha256": "5df57d2d425c5cc77d6187485d82c2f2e35d0ff9681eaad5c200fb84985a5f10",
-    "evidence": "evidence/demo-regression/20261105T003157Z/htp",
+    "evidence": "htp251/evidence/20261105T123412Z-d6a84",
     "result": {
       "top3": [
         {
@@ -31,9 +31,9 @@
         "accelerator_events": 3,
         "positive_cycle_events": 99,
         "execute_us": [
-          3290.0,
-          2140.0,
-          2010.0
+          4413.0,
+          2871.0,
+          2390.0
         ]
       },
       "comparison_to_original_tflite_cpu": {
@@ -49,7 +49,7 @@
     "title": "Detec\u00e7\u00e3o \u2014 SSD MobileNet V1",
     "passed": true,
     "model_sha256": "97b57ae204fd4390ec785444ecb3f3da689f9cd26d7e3ed76b96e9c5abb521c5",
-    "evidence": "evidence/demo-regression/20261105T003157Z/htp",
+    "evidence": "htp251/evidence/20261105T123412Z-d6a84",
     "result": {
       "detections": [
         {
@@ -95,9 +95,9 @@
         "accelerator_events": 3,
         "positive_cycle_events": 153,
         "execute_us": [
-          6955.0,
-          4661.0,
-          4523.0
+          7236.0,
+          4891.0,
+          5536.0
         ]
       },
       "comparison_to_original_tflite_cpu": {
@@ -114,7 +114,7 @@
     "title": "Pose \u2014 PoseNet",
     "passed": true,
     "model_sha256": "e1ea8b912162249f51e05282f174c692b0eed5fac6c3bc66a2c8be5ba19b726a",
-    "evidence": "evidence/demo-regression/20261105T003157Z/htp",
+    "evidence": "htp251/evidence/20261105T123412Z-d6a84",
     "result": {
       "keypoints_yxs": [
         [
@@ -214,9 +214,9 @@
         "accelerator_events": 3,
         "positive_cycle_events": 93,
         "execute_us": [
-          4414.0,
-          2982.0,
-          2818.0
+          4572.0,
+          3112.0,
+          2971.0
         ]
       },
       "comparison_to_original_tflite_cpu": {
@@ -233,7 +233,7 @@
     "title": "M\u00e3o recortada \u2014 Hand Landmark Lite",
     "passed": true,
     "model_sha256": "2e32925538d73b45abfa93ea479c267ef311c99ad57f266ffd5d67fb354ab979",
-    "evidence": "evidence/demo-regression/20261105T003157Z/htp",
+    "evidence": "htp251/evidence/20261105T123412Z-d6a84",
     "result": {
       "presence": 0.998382568359375,
       "landmarks_xyz": [
@@ -354,9 +354,9 @@
         "accelerator_events": 3,
         "positive_cycle_events": 195,
         "execute_us": [
-          4415.0,
-          2864.0,
-          2742.0
+          4602.0,
+          3132.0,
+          2897.0
         ]
       },
       "comparison_to_original_tflite_cpu": {
@@ -372,7 +372,7 @@
     "title": "Segmenta\u00e7\u00e3o \u2014 DeepLabV3",
     "passed": true,
     "model_sha256": "9957bc2fd1a823595f637890c2eab8e18eb42b97441b6878a49e72c3ad93539e",
-    "evidence": "evidence/demo-regression/20261105T003157Z/htp",
+    "evidence": "htp251/evidence/20261105T123412Z-d6a84",
     "result": {
       "foreground_fraction": 0.6300171085103484,
       "class_fractions": {
@@ -388,9 +388,9 @@
         "accelerator_events": 3,
         "positive_cycle_events": 210,
         "execute_us": [
-          16572.0,
-          8224.0,
-          8091.0
+          17804.0,
+          8948.0,
+          8650.0
         ]
       },
       "comparison_to_original_tflite_cpu": {

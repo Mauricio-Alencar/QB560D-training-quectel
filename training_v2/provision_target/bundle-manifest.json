@@ -410,12 +410,6 @@
       "bytes": 227
     },
     {
-      "path": "config/release-evidence.json",
-      "component": "training",
-      "sha256": "6a54783fba187ed49eac5f397f9e37de36dca5220532715dc07390f792ee6efc",
-      "bytes": 106105
-    },
-    {
       "path": "app/qb560d-hello.c",
       "component": "training",
       "sha256": "934393e9721f6fd7405ff50b76ff6779fd8f6350f653fbd1126abe0c8ba94e12",
@@ -898,8 +892,8 @@
     {
       "path": "provision_target/provision.py",
       "component": "installer",
-      "sha256": "5469b0ea45146e211d7f50101492a0a23c17a3f5565c5d1a7ed7fb5a63ff5c78",
-      "bytes": 18110
+      "sha256": "a290268ff9b72b7c5db3e56ef228d2c1888d3e13275769b16779d51893df44de",
+      "bytes": 18491
     },
     {
       "path": "provision_target/target_install.py",
@@ -910,8 +904,8 @@
     {
       "path": "provision_target/test_provision.py",
       "component": "installer",
-      "sha256": "cfee5b59d8143bfaa985faa4e48d7f9a0ef5f08d9ad2a8b1fab657facbce3e2d",
-      "bytes": 9467
+      "sha256": "fe2f4751a07315cb6e08d360581e0963865183b583ea348b7f4497b78c119ad9",
+      "bytes": 13529
     },
     {
       "path": "provision_target/test_qairt_staging.py",
@@ -1048,15 +1042,57 @@
     {
       "path": "provision_target/setup_host.ps1",
       "component": "host-support",
-      "sha256": "7601ff6fff611a78a42985705470e5452bbb5a92ee80964852fb9189877d2068",
-      "bytes": 5834
+      "sha256": "fff02dd413aa833376e7b942bd35cd73a22e5add3dca80987c6dbb945f160747",
+      "bytes": 4353
     },
     {
       "path": "runtimes/qairt_2_51/requirements-host.txt",
       "component": "host-support",
       "sha256": "e32056a5263b5972e789540468f3d3e1e8e2d1649d21ef65e814317727be4897",
       "bytes": 28
+    },
+    {
+      "path": "host/prepare_portable_python.ps1",
+      "component": "host-support",
+      "sha256": "80128f6b90176a75101792b7e6e005827f0fe6c9d96ad1fd4da50956056bc436",
+      "bytes": 4701
+    },
+    {
+      "path": "tools/python38/python38.lock.json",
+      "component": "host-support",
+      "sha256": "6a5b0187c189f25f8f3cc2be2613954e2accc90460a96f09571f2944f29ec0eb",
+      "bytes": 719
+    },
+    {
+      "path": "tools/python38/python.3.8.10.nupkg",
+      "component": "host-support",
+      "sha256": "c63a2fc8fc62612b5abd391fda99ae1d90bad42ed8a9e99b1bd81c7ffdb4fefa",
+      "bytes": 14219645
+    },
+    {
+      "path": "tools/python38/LICENSE.txt",
+      "component": "host-support",
+      "sha256": "f830ec5b33c5ce41bf667d7fb4e395c5ee6fe20a108baebc99be565f0ef0907d",
+      "bytes": 32628
+    },
+    {
+      "path": "tools/python312/python312.lock.json",
+      "component": "host-support",
+      "sha256": "deb7401ecd6777d7a4964171d183a714133f76fe3eda0ba5bab64885b3a2d092",
+      "bytes": 726
+    },
+    {
+      "path": "tools/python312/python.3.12.10.nupkg",
+      "component": "host-support",
+      "sha256": "0eb85c2dfccccf1b17352de4c397f69194035b7d37149eacc16f1147d93de3b8",
+      "bytes": 14515433
+    },
+    {
+      "path": "tools/python312/LICENSE.txt",
+      "component": "host-support",
+      "sha256": "e502c6b880ff58d614901495a9009c136539cd0b1e2a2abb8fc00b934c203419",
+      "bytes": 36874
     }
   ],
-  "total_bytes": 470120020
+  "total_bytes": 498827603
 }

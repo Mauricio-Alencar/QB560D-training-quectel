@@ -44,8 +44,8 @@
   "warmup": 0,
   "threads": 2,
   "crop": null,
-  "inference_ms_median": 51.52448000001186,
-  "inference_ms_p95": 51.52448000001186,
+  "inference_ms_median": 55.81842800006598,
+  "inference_ms_p95": 55.81842800006598,
   "timing_scope": "interpreter.invoke only; excludes decode, preprocessing and rendering",
   "tensor_contract": {
     "inputs": [

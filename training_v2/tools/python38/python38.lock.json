@@ -1,21 +1,19 @@
 {
   "version": "3.8.10",
   "architecture": "Windows x64",
-  "purpose": "Optional authoring prerequisite for TensorFlow 2.13/TFLite to ONNX export; create venv locally",
-  "installer_signature_verified": {
-    "status": "Valid",
-    "signer": "Python Software Foundation"
-  },
+  "distribution": "Official CPython NuGet; extracted locally without installer, registry or PATH changes",
+  "archive": "python.3.8.10.nupkg",
+  "runtime_generated_in": ".build/portable-python38",
   "files": {
-    "python-3.8.10-amd64.exe": {
-      "url": "https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe",
-      "bytes": 28296784,
-      "sha256": "7628244cb53408b50639d2c1287c659f4e29d3dfdb9084b11aed5870c0c6a48a"
+    "python.3.8.10.nupkg": {
+      "url": "https://api.nuget.org/v3-flatcontainer/python/3.8.10/python.3.8.10.nupkg",
+      "bytes": 14219645,
+      "sha256": "c63a2fc8fc62612b5abd391fda99ae1d90bad42ed8a9e99b1bd81c7ffdb4fefa"
     },
     "LICENSE.txt": {
-      "url": "https://raw.githubusercontent.com/python/cpython/v3.8.10/LICENSE",
-      "bytes": 13925,
-      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70"
+      "url": "https://www.nuget.org/packages/python/3.8.10",
+      "bytes": 32628,
+      "sha256": "f830ec5b33c5ce41bf667d7fb4e395c5ee6fe20a108baebc99be565f0ef0907d"
     }
   }
 }

@@ -10,22 +10,22 @@ No Windows, extraia o pacote em uma pasta curta, por exemplo `C:\QB560D`, para e
 
 O pacote inclui as correções Docker/QAIRT da revisão 0.12.2 e foi validado em uma extração independente, com ambiente Python criado no destino e dependências offline. Para conferir uma cópia recebida e entender falhas de extração no Windows, consulte [download e extração](docs/DOWNLOAD_DIAGNOSTICS.md).
 
-A atualização do pacote completo `full-r3` inclui o [guia de conversão manual](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md), com classificação acompanhada e estudo do SSD, as [tabelas de origem dos modelos](#origem-dos-modelos-e-das-demos) também presentes nos guias das demos e o [instalador oficial Python 3.8](tools/python38/README.md), opcional para a reconstrução. Use os links acima para baixar essa versão atualizada da release 0.12.2.
+A atualização disponível por clone em `main` inclui o [guia de conversão manual](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md), com classificação acompanhada e estudo do SSD, as [tabelas de origem dos modelos](#origem-dos-modelos-e-das-demos) também presentes nos guias das demos e o [Python 3.8 portátil oficial](tools/python38/README.md), opcional para a reconstrução. Esta revisão também corrige a retomada de `apply` quando uma caixa possui uma lista antiga de evidências de distribuição; veja o [procedimento de provisionamento](provision_target/README.md#7-aplicação-futura-somente-quando-for-executar-a-instalação). Enquanto o ZIP atualizado é preparado, use `git pull` para obter esta revisão. O ZIP acima corresponde à revisão anterior.
 
 ## 1. Preparar o computador
 
-Windows x64, Python 3.12 x64, driver Quectel ADB e cabo USB de dados. O cliente ADB está em `tools/platform-tools`. Não é necessário Docker Desktop, WSL ou SDK Yocto para os labs locais.
+Windows x64, Python 3.12 portátil incluído, driver Quectel ADB e cabo USB de dados. O cliente ADB está em `tools/platform-tools`. Não é necessário Docker Desktop, WSL ou SDK Yocto para os labs locais.
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1 -InstallPython
+powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1
 $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
 $adb = (Resolve-Path tools/platform-tools/adb.exe).Path
 & $adb devices -l
 ```
 
-O helper recria o ambiente local e instala NumPy/Pillow nas versões fixadas. Os wheels Windows acompanham `offline/host-wheels`; instalar o próprio Python pode exigir Internet. O ambiente do cliente AI Hub é separado, conforme o guia do módulo.
+O helper recria o ambiente local e instala NumPy/Pillow nas versões fixadas. Os runtimes portáteis acompanham `tools/python38` e `tools/python312`; os wheels Windows estão em `offline/host-wheels`. O preparo normal funciona offline e não instala Python no Windows. O ambiente do cliente AI Hub é separado, conforme o guia do módulo.
 
-Para **executar as demos com os modelos prontos**, Python 3.12 é suficiente. Para **reconstruir os modelos**, o [guia manual](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho) também prepara Python 3.8 completo usando o [instalador oficial incluído](tools/python38/README.md). As pastas `.build` e as venvs são criadas localmente pelos comandos; elas não precisam vir do Git/ZIP. Os pacotes do conversor/exportador e o SDK exigem preparação própria no host.
+Para **executar as demos com os modelos prontos**, Python 3.12 é suficiente. Para **reconstruir os modelos**, o [guia manual](docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho) também prepara Python 3.8 portátil usando o [pacote oficial incluído](tools/python38/README.md). As pastas `.build` e as venvs são criadas localmente pelos comandos; elas não precisam vir do Git/ZIP. Os pacotes do conversor/exportador e o SDK exigem preparação própria no host.
 
 ## 2. Preparar uma caixa nova
 

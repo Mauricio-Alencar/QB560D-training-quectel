@@ -25,41 +25,30 @@ Os dois casos são distintos dos DLCs prontos de MobileNet V2 e dos sete gestos 
 
 ## 1. Ambientes e pasta de trabalho
 
+Para este laboratório, extraia o treinamento em um caminho curto, como `C:\QB560D\aibox_training\training_v2`, **antes de criar as venvs**. Na validação em Windows com caminhos longos desabilitados, o `pip install` do TensorFlow falhou com `OSError: [Errno 2]` ao extrair cabeçalhos `tensorflow/include/...` sob o caminho extenso do OneDrive. A correção é preparar uma cópia curta e criar as venvs novamente nesse destino; não é necessário alterar a política global do Windows. O preparo normal das demos em Python 3.12 permanece separado.
+
 **A pasta `.build` não vem do Git nem do ZIP.** Ela é criada localmente pelos comandos abaixo, assim como as duas venvs. A base necessária é um Python **3.8 x64 completo**, com `venv`/`ensurepip`, para exportar os TFLites, e um Python **3.12 x64** para as ferramentas QAIRT. O Python 3.8 embeddable/portátil usado na preparação histórica não tem `venv`/`pip` e não serve de base para estes comandos. Nenhuma `.venv` pronta é distribuída.
 
-O preparo normal instala/verifica apenas o Python 3.12. Comece por ele se ainda não executou essa etapa; o helper pode ser repetido para conferir o ambiente do treinamento:
+O preparo normal extrai o Python 3.12 portátil e prepara sua venv local. Comece por ele se ainda não executou essa etapa; o helper pode ser repetido para conferir o ambiente do treinamento:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1 -InstallPython
+powershell -NoProfile -ExecutionPolicy Bypass -File provision_target/setup_host.ps1
 if ($LASTEXITCODE -ne 0) { throw 'Concluir o preparo normal do host antes da conversão' }
 $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
 & $py -c "import sys,struct,venv; assert sys.version_info[:2]==(3,12) and struct.calcsize('P')*8==64; print(sys.executable,sys.version)"
 if ($LASTEXITCODE -ne 0) { throw 'O ambiente do treinamento precisa de Python 3.12 x64' }
 ```
 
-O pacote inclui o [instalador completo oficial Python 3.8.10 x64](../tools/python38/README.md), seu hash e sua licença. Ele é um pré-requisito opcional para reconstruir os modelos; os alunos que executam os DLCs prontos continuam usando somente Python 3.12. Para instalá-lo apenas para o usuário, sem alterar o PATH nem depender do launcher `py`:
+O pacote inclui os runtimes oficiais **CPython NuGet 3.8.10 e 3.12.10 portáteis**, com `venv` e `pip`. Para preparar a base de exportação sem instalar Python no Windows:
 
 ```powershell
-$python38Directory = Join-Path $env:LOCALAPPDATA 'Programs/Python/Python38'
-$python38 = Join-Path $python38Directory 'python.exe'
-$installer38 = (Resolve-Path tools/python38/python-3.8.10-amd64.exe).Path
-$installer38Lock = Get-Content tools/python38/python38.lock.json -Raw | ConvertFrom-Json
-$expected38 = $installer38Lock.files.'python-3.8.10-amd64.exe'
-if ((Get-FileHash $installer38 -Algorithm SHA256).Hash.ToLower() -ne $expected38.sha256) { throw 'Hash do instalador Python 3.8 divergente' }
-$signature38 = Get-AuthenticodeSignature -LiteralPath $installer38
-if ($signature38.Status -ne 'Valid' -or $signature38.SignerCertificate.Subject -notlike '*Python Software Foundation*') { throw 'Conferir assinatura do instalador Python' }
-
-if (-not (Test-Path -LiteralPath $python38 -PathType Leaf)) {
-    $installer38Args = @('/quiet','/norestart','InstallAllUsers=0','Include_launcher=0','Include_pip=1','Include_test=0','PrependPath=0',('TargetDir="{0}"' -f $python38Directory))
-    $installation38 = Start-Process -FilePath $installer38 -ArgumentList $installer38Args -Wait -PassThru -WindowStyle Hidden
-    if ($installation38.ExitCode -notin @(0,3010)) { throw ('Instalação Python 3.8 falhou: ' + $installation38.ExitCode) }
-    if ($installation38.ExitCode -eq 3010) { Write-Output 'O instalador solicitou reinicialização do Windows; não foi executada automaticamente.' }
-}
+$python38 = (& powershell -NoProfile -ExecutionPolicy Bypass -File host/prepare_portable_python.ps1 -Version 3.8).Trim()
+if ($LASTEXITCODE -ne 0) { throw 'Falha no preparo do Python 3.8 portátil' }
 & $python38 -c "import sys,struct,venv,ensurepip; assert sys.version_info[:2]==(3,8) and struct.calcsize('P')*8==64; print(sys.executable,sys.version)"
-if ($LASTEXITCODE -ne 0) { throw 'Selecionar Python 3.8 x64 completo com venv/ensurepip; a versão embeddable não atende' }
+if ($LASTEXITCODE -ne 0) { throw 'Python 3.8 portátil inválido' }
 ```
 
-Se já instalou o Python 3.8 completo em outro local, atribua esse caminho a `$python38` e execute a verificação final acima; não use o caminho privado do instrutor em `.build/python38-host`. O `py -0p` pode ajudar a listar instalações registradas, mas este roteiro não depende dele. A [release oficial 3.8.10](https://www.python.org/downloads/release/python-3810/) fornece o instalador completo usado aqui. Python 3.8 é uma dependência legada deste exportador fixado; mantenha o ambiente de uso normal do treinamento em Python 3.12.
+O helper confere o SHA-256 do pacote e de cada arquivo extraído e devolve o caminho de `.build/portable-python38/python.exe`. A licença e a origem estão em [tools/python38](../tools/python38/README.md). Não usa instalador, `py`, PATH global nem a cópia privada antiga `.build/python38-host`. O Python 3.12 normal também vem do pacote portátil em [tools/python312](../tools/python312/README.md); uma venv principal já válida é preservada. Python 3.8 fica reservado à exportação legada.
 
 Agora crie os ambientes **no próprio computador e no destino onde o treinamento foi extraído**:
 
@@ -84,7 +73,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Falha nas dependências QAIRT' }
 
 O primeiro ambiente fixa TensorFlow 2.13.0, tf2onnx 1.16.1, ONNX 1.14.1 e ONNX Runtime 1.16.3. O segundo fixa as dependências do conversor QAIRT Windows/Python 3.12. Não misture os dois conjuntos de versões.
 
-O instalador Python 3.8 acompanha o ZIP, mas os pacotes de exportação acima e o SDK de conversão da seção 6 precisam ser preparados/baixados no host. Isso não transforma a reconstrução dos modelos em um laboratório totalmente offline. O fluxo de execução dos modelos prontos mantém suas dependências offline e não exige instalar o Python 3.8. Para repetir uma preparação que falhou parcialmente, revise as pastas locais antes de reutilizá-las ou escolha nomes novos; não copie venvs de outra estação.
+Os pacotes dos dois runtimes Python portáteis acompanham o ZIP, mas os pacotes de exportação acima e o SDK de conversão da seção 6 precisam ser preparados/baixados no host. Isso não transforma a reconstrução dos modelos em um laboratório totalmente offline. O fluxo de execução dos modelos prontos mantém suas dependências offline e não exige preparar o Python 3.8. Para repetir uma preparação que falhou parcialmente, revise as pastas locais antes de reutilizá-las ou escolha nomes novos; não copie venvs de outra estação.
 
 ```powershell
 $training = (Get-Location).Path
@@ -635,6 +624,7 @@ Explique as falhas que motivaram o fluxo atual:
 - **Nome w8a16 sem precisão efetiva correspondente:** Q/DQ preservado pode manter encodings de 8 bits. Inspecione o DLC.
 - **DLC roda na CPU QNN, ou falha nela:** QNN CPU não substitui a referência TFLite CPU. Houve falhas de preparação de modelos w8a16 nesse backend no ensaio original; o critério principal continua sendo execução HTP com comparação TFLite.
 - **DLLs/caminhos longos no Windows:** use caminhos curtos, ambientes separados e o carregamento explícito de DLLs. Os temporários pertencem somente à pasta da sessão.
+- **Instalação do TensorFlow falha em `tensorflow/include/...` com `OSError: [Errno 2]`:** foi observado ao criar a venv no caminho extenso do OneDrive, com o suporte global a caminhos longos desabilitado. Extraia o treinamento em uma pasta curta e crie uma venv nova ali, seguindo a seção 1. Mantenha a pasta da tentativa incompleta separada para diagnóstico.
 - **Checksum no Linux procurando um nome com `\r`:** os arquivos enviados à caixa precisam de LF. Por isso o PowerShell usa `WriteAllText` com uma quebra LF explícita para lista e checksums; não substitua por um gravador que insira CRLF.
 
 ## 13. Relação com as automações existentes
@@ -658,9 +648,15 @@ Referências: [documentação pública do SDK QAIRT](https://docs.qualcomm.com/b
 
 Os blocos Python foram extraídos deste documento e executados com os TFLites locais, conferidos pelos hashes oficiais da seção 2. Foram gerados ONNX, inputs de calibração, DLCs intermediários e DLCs quantizados novos. Os comandos Qualcomm foram executados nos ambientes de preparação já existentes. A nova classificação e o novo SSD foram enviados a diretórios de execução novos na caixa e comparados com referências TFLite CPU novas; o validador da seção 11 foi executado sem importar funções do runner.
 
-Resultado: classificação com o mesmo top-1 CPU (`military uniform`), três eventos HTP e 99 eventos de ciclos positivos; SSD com IoU de pessoa **0,9973126**, três eventos HTP e 153 eventos de ciclos positivos. A conferência de 48 arquivos dos runtimes/modelos existentes não encontrou alterações. Os 19 blocos PowerShell da receita inicial passaram na análise sintática; a atualização do preparo de Python passou com 21 blocos e teve o lançador SDK/argumentos verificados no Windows PowerShell 5.1. A criação de ambientes de exportação e a instalação de Python 3.8 não foram repetidas nesse ensaio de conversão; foram usados os ambientes e as cópias de modelos já disponíveis. O instalador oficial agora incluído teve sua assinatura Authenticode e seu SHA-256 conferidos.
+Resultado: classificação com o mesmo top-1 CPU (`military uniform`), três eventos HTP e 99 eventos de ciclos positivos; SSD com IoU de pessoa **0,9973126**, três eventos HTP e 153 eventos de ciclos positivos. A conferência de 48 arquivos dos runtimes/modelos existentes não encontrou alterações. Os 19 blocos PowerShell da receita inicial passaram na análise sintática; a atualização do preparo de Python passou com 21 blocos e teve o lançador SDK/argumentos verificados no Windows PowerShell 5.1. A criação de ambientes de exportação e a instalação de Python 3.8 não foram repetidas nesse ensaio de conversão; foram usados os ambientes e as cópias de modelos já disponíveis. O ensaio histórico acima antecede a mudança para os runtimes portáteis; a validação adicional dessa preparação é registrada separadamente abaixo.
 
 O [recibo de validação](../evidence/demo-regression/20261105T003157Z/release/MANUAL_CONVERSION.json) registra hashes dos candidatos, comparações e perfis. O diretório da estação pode usar data UTC de 05/11, correspondente à noite de 04/11 em São Paulo. Esse resultado aprova os casos didáticos descritos, sem estabelecer acurácia em dataset ou homologar outra versão de SDK/BSP.
+
+### Preparação portátil e reconstrução SNPE em 05/11/2026
+
+Os dois runtimes agora são distribuídos como pacotes oficiais CPython NuGet portáteis. O preparo normal recriou a venv 3.12 com NumPy/Pillow offline; outra venv 3.8 foi criada do zero para exportação, sem depender da instalação Python do Windows. O erro de caminhos longos do TensorFlow foi reproduzido no OneDrive e corrigido com uma cópia curta e novas venvs nesse destino.
+
+O ensaio complementar executou o bloco de [reconstrução SNPE 2.26](HTP_DSP.md#origem-e-reconstrução-do-modelo): TFLite → ONNX validado → DLC intermediário → DLC INT8. O candidato produziu os mesmos 1.001 scores do DLC publicado nos respectivos backends CPU-fixed e HTP; diferença máxima 0,0. O profile confirmou 34 entradas DSP / zero CPU e os 48 hashes de modelos/runtimes permaneceram iguais. O [recibo da venv portátil](../evidence/demo-regression/20261105T123847Z/release/SNPE_FRESH_VENV.json) identifica comandos, versões, pacotes, hashes e limites. Essa execução adicional cobre SNPE 2.26 INT8; ela complementa a evidência histórica do roteiro QAIRT 2.51 w8a16 acima.
 
 ## 15. CPU, GPU e NPU/HTP: o que já foi medido
 

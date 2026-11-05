@@ -1,11 +1,13 @@
-# Python 3.8 para reconstruir os modelos
+# Python 3.8.10 portátil para Windows x64
 
-Este diretório distribui o **instalador completo oficial Python 3.8.10 Windows x64**, necessário somente para o ambiente de exportação TFLite/ONNX do instrutor. O preparo normal e a execução das demos usam Python 3.12; os DLCs prontos dispensam instalar Python 3.8.
+Este diretório distribui o **pacote oficial CPython NuGet 3.8.10**, com biblioteca padrão, `venv` e `ensurepip`. Ele é extraído localmente em `.build/portable-python38` pelo [helper compartilhado](../../host/prepare_portable_python.ps1). Não executa instalador Windows, não registra Python e não altera PATH, launcher ou associações de arquivos.
 
-O instalador não é um ambiente virtual e não é a cópia embeddable/portátil usada na preparação histórica. Instale-o no computador e crie a venv localmente, conforme a [seção de ambientes do guia manual](../../docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho). A pasta `.build` é criada pelos comandos no computador do aluno; não acompanha o Git/ZIP.
+Uso no treinamento: exportação TFLite/ONNX e conversão SNPE 2.26. As venvs são criadas no computador do aluno, no destino onde o treinamento foi extraído; elas não acompanham Git/ZIP. Use uma pasta curta, como `C:\QB560D`, antes de criá-las.
 
-- [Instalador oficial](python-3.8.10-amd64.exe), obtido da [Python Software Foundation](https://www.python.org/downloads/release/python-3810/).
-- [Origem, tamanho e SHA-256](python38.lock.json). A assinatura Authenticode da Python Software Foundation foi validada na preparação.
-- [Licença original do CPython](LICENSE.txt), preservada sem alteração.
+- [Pacote original](python.3.8.10.nupkg), obtido da [distribuição oficial CPython no NuGet](https://www.nuget.org/packages/python/3.8.10).
+- [URL, tamanho e SHA-256](python38.lock.json). O helper confere o pacote e cada arquivo extraído antes de reutilizar o runtime.
+- [Licenças originais incluídas no pacote](LICENSE.txt), preservadas sem alteração.
 
-Python 3.8 é uma dependência legada para reproduzir esta conversão fixada com TensorFlow 2.13. Os pacotes Python da exportação e o SDK de conversão ainda exigem preparação/download no host; incluir o instalador não torna a reconstrução dos modelos integralmente offline. As dependências offline para executar os modelos prontos continuam no treinamento.
+O formato NuGet é [documentado pelo CPython](https://docs.python.org/3/using/windows.html#the-nuget-org-packages). Não é o pacote embeddable mínimo e não exige instalar NuGet ou .NET SDK: o helper usa o ZIP e os recursos do PowerShell já disponíveis no Windows.
+
+Prepare este runtime conforme o [guia manual](../../docs/TFLITE_PARA_HTP_PASSO_A_PASSO.md#1-ambientes-e-pasta-de-trabalho). Os pacotes TensorFlow/exportação e o SDK de conversão ainda precisam ser baixados/preparados no host.

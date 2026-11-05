@@ -6,7 +6,6 @@ param(
 )
 # Prepares only the Windows host. Never opens an ADB session or installs on the target.
 $ErrorActionPreference = 'Stop'
-if ($CheckOnly -and $InstallPython) { throw 'Use CheckOnly or InstallPython, not both.' }
 $repository = Split-Path -Parent $PSScriptRoot
 $venvDirectory = Join-Path $PSScriptRoot '.venv'
 $venvPython = Join-Path $venvDirectory 'Scripts/python.exe'
@@ -25,51 +24,23 @@ function Test-Python312([string]$Candidate) {
     return $null
 }
 
-function Find-Python312 {
-    $candidates = @($venvPython)
-    foreach ($name in @('python.exe','python3.exe')) {
-        $command = Get-Command $name -ErrorAction SilentlyContinue
-        if ($command) { $candidates += $command.Source }
-    }
-    foreach ($key in @('HKCU:\Software\Python\PythonCore','HKLM:\Software\Python\PythonCore','HKLM:\Software\WOW6432Node\Python\PythonCore')) {
-        if (Test-Path -LiteralPath $key) {
-            foreach ($versionKey in Get-ChildItem -LiteralPath $key) {
-                $installKey = Join-Path $versionKey.PSPath 'InstallPath'
-                if (Test-Path -LiteralPath $installKey) {
-                    $item = Get-Item -LiteralPath $installKey
-                    $executable = $item.GetValue('ExecutablePath')
-                    if ($executable) { $candidates += $executable }
-                    $directory = $item.GetValue('')
-                    if ($directory) { $candidates += (Join-Path $directory 'python.exe') }
-                }
-            }
-        }
-    }
-    $candidates += (Join-Path $env:LOCALAPPDATA 'Programs/Python/Python312/python.exe')
-    $candidates += (Join-Path $env:ProgramFiles 'Python312/python.exe')
-    foreach ($candidate in ($candidates | Select-Object -Unique)) {
-        $info = Test-Python312 $candidate
-        if ($info) { return $info }
-    }
-    return $null
-}
-
+# InstallPython is retained for old command lines; preparation is now portable.
 if ($PythonExe) {
     $pythonInfo = Test-Python312 $PythonExe
     if (-not $pythonInfo) { throw 'PythonExe must point to a working Python 3.12 x64 executable.' }
-} else { $pythonInfo = Find-Python312 }
-
-if (-not $pythonInfo -and $InstallPython) {
-    if (-not (Get-Command winget.exe -ErrorAction SilentlyContinue)) {
-        throw 'Install Python 3.12 x64 from https://www.python.org/downloads/windows/ and rerun with -PythonExe FULL_PATH.'
+} elseif (Test-Path -LiteralPath $venvPython -PathType Leaf) {
+    $pythonInfo = Test-Python312 $venvPython
+    if (-not $pythonInfo) { throw 'The existing .venv must use Python 3.12 x64. Review it before retrying.' }
+} else {
+    $preparePortable = Join-Path $repository 'host/prepare_portable_python.ps1'
+    if ($CheckOnly) {
+        & $preparePortable -Version 3.12 -TrainingRoot $repository -CheckOnly
+        Write-Output 'CHECK_ONLY_OK: no environment created and no target connection.'
+        exit 0
     }
-    & winget.exe install --id Python.Python.3.12 --exact --source winget --scope user --architecture x64 --silent --accept-package-agreements --accept-source-agreements
-    if ($LASTEXITCODE -ne 0) { throw 'Python installation failed. Review the winget output.' }
-    # Discover from registry/paths immediately, without relying on a refreshed PATH.
-    $pythonInfo = Find-Python312
-}
-if (-not $pythonInfo) {
-    throw 'Python 3.12 x64 was not found. Rerun setup_host.ps1 with -InstallPython, or provide -PythonExe FULL_PATH. The py launcher is not required.'
+    $portablePython = & $preparePortable -Version 3.12 -TrainingRoot $repository
+    $pythonInfo = Test-Python312 $portablePython
+    if (-not $pythonInfo) { throw 'Portable Python 3.12 x64 failed validation.' }
 }
 Write-Output ('Python: ' + $pythonInfo.version + ' x64, ' + $pythonInfo.executable)
 if ($CheckOnly) { Write-Output 'CHECK_ONLY_OK: no software installed and no target connection.'; exit 0 }

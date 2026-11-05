@@ -1,0 +1,44 @@
+{
+  "backend_requested": "dsp",
+  "runtime_order": [
+    "dsp"
+  ],
+  "cpu_retry": false,
+  "cpu_fixed_point": false,
+  "runtime_version": "2.26.0.240827110523_99241",
+  "library": "/opt/qb560d-training-payload/runtime/qairt226-ubuntu/lib/aarch64-ubuntu-gcc9.4/libSNPE.so",
+  "model_sha256": "258f9e45b1650e584821b0eaa38742917354b1e6a2872938fa9d73b28d9ca2b6",
+  "image_sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+  "input_mode": "normalized",
+  "input_name": "input",
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "profiling": "detailed",
+  "runs": 1,
+  "warmup": 0,
+  "inference_ms_median": 2.885930999809716,
+  "inference_ms_p95": 2.885930999809716,
+  "timing_scope": "SNPE ExecuteITensors only; excludes host preprocessing and output copy",
+  "top3": [
+    {
+      "class_id": 653,
+      "label": "military uniform",
+      "score": 0.86328125
+    },
+    {
+      "class_id": 907,
+      "label": "Windsor tie",
+      "score": 0.05078125
+    },
+    {
+      "class_id": 466,
+      "label": "bulletproof vest",
+      "score": 0.01171875
+    }
+  ],
+  "placement_confirmation": "Inspect the associated SNPE DiagLog; runtime order alone is not per-layer evidence"
+}
