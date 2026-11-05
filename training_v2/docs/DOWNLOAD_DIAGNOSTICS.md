@@ -30,4 +30,4 @@ $py = (Resolve-Path provision_target/.venv/Scripts/python.exe).Path
 
 O primeiro comando deve informar `PASS_LOCAL_OFFLINE_CACHE`. Ele verifica os tamanhos e hashes antes de acessar a caixa. Os diagnósticos de arquivo ausente, arquivo truncado, checksum incorreto e ponteiro LFS têm mensagens distintas. Não altere locks para fazer uma cópia danificada passar.
 
-Se a cópia falhar, extraia novamente o pacote completo em uma pasta curta e confira de novo. A revisão 0.12.2 dos fontes também corrige o estágio QAIRT pelo Windows. Depois de atualizar os scripts, regenere `prepare --offline` e `plan` antes de aplicar o provisionamento. Os links para 0.12.1 no README identificam a release anterior; o novo pacote local precisa ser publicado para atualizar esses links.
+Se a cópia falhar, extraia novamente o pacote completo em uma pasta curta e confira de novo. A revisão 0.12.2 também corrige o estágio QAIRT pelo Windows. Depois de atualizar os scripts, regenere `prepare --offline` e `plan` antes de aplicar o provisionamento. Os links de download nos READMEs apontam para o pacote completo da release 0.12.2.

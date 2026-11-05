@@ -6,9 +6,9 @@ No Windows, extraia o pacote em uma pasta curta, por exemplo `C:\QB560D`, para e
 
 ## Download desta versão
 
-[Pacote completo v0.12.1](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip) e [SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.1/QB560D_EU_Training_0.12.1_20261103.zip.sha256). Os [detalhes da release](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/tag/v0.12.1) identificam a versão publicada.
+[Pacote completo v0.12.2](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-release.zip) e [SHA-256](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/download/v0.12.2/QB560D_EU_Training_0.12.2_20261104-release.zip.sha256). Os [detalhes da release](https://github.com/Mauricio-Alencar/QB560D-training-quectel/releases/tag/v0.12.2) identificam a versão publicada.
 
-Esses links são da versão anterior às correções Docker/QAIRT da revisão 0.12.2 dos fontes. O novo pacote é produzido por `host/build_release.py`. Para conferir uma cópia recebida e entender falhas de extração no Windows, consulte [download e extração](docs/DOWNLOAD_DIAGNOSTICS.md).
+O pacote inclui as correções Docker/QAIRT da revisão 0.12.2 e foi validado em uma extração independente, com ambiente Python criado no destino e dependências offline. Para conferir uma cópia recebida e entender falhas de extração no Windows, consulte [download e extração](docs/DOWNLOAD_DIAGNOSTICS.md).
 
 ## 1. Preparar o computador
 

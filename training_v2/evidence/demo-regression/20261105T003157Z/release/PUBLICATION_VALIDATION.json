@@ -1,0 +1,11 @@
+{
+  "result": "PASS_FRESH_EXTRACTION",
+  "archive": "QB560D_EU_Training_0.12.2_20261104-release.zip",
+  "archive_sha256": "ba0feb0daf279d4b29530d94e266a5c8a49ae82e00b63e48e9e97d92a2810cab",
+  "files_verified": 3659,
+  "venv_recreated_at_destination": true,
+  "downloads_required": false,
+  "working_tree_inputs_used": false,
+  "commands_executed_from_outside_training": true,
+  "provisioning_tests": 19
+}
