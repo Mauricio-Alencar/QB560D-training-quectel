@@ -1,0 +1,21 @@
+{
+  "result": "PASS_FRESH_PORTABLE_STUDENT_PACKAGE",
+  "archive": "QB560D_EU_Training_0.12.2_20261105-full-r5.zip",
+  "archive_sha256": "510f91cf5996bf0bd57ce6084c397c275716bffd6ba0dd8d69fae824565b9215",
+  "files_verified": 3689,
+  "system_python_used_for_training_setup": false,
+  "system_python_installation_required": false,
+  "installed_python_hidden_from_child_path": true,
+  "portable_python_versions": [
+    "3.8.10",
+    "3.12.10"
+  ],
+  "venvs_recreated_at_destination": true,
+  "core_setup_downloads_required": false,
+  "provisioning_tests": 23,
+  "portable_boundary_tests": 5,
+  "normal_cli_entrypoints": 9,
+  "snpe_fresh_venv_cpu_htp_proof_included": true,
+  "original_release_tag_preserved": true,
+  "controlling_extraction_tool": "Existing host Python; training setup/tests use only extracted portable runtimes"
+}
